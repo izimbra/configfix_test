@@ -1,4 +1,3 @@
-<---                              Common prefix                                    ---> <---                    per diagnosis                               --->
 Architecture;Configuration;Conflict;Conflict size;Resolution time;No. diagnoses;Comment;Diagnosis;No. symbols;Valid;Applied;Reset errors;Configs match;Deps. met
 i386;configfix_test/tests/i386/config.01/.config;configfix_test/tests/i386/config.01/conflict.02/conflict.txt;1;1,520765;0;;
 i386;configfix_test/tests/i386/config.01/.config;configfix_test/tests/i386/config.01/conflict.04/conflict.txt;1;6,136365;1;;1;2;YES;YES;NO;YES;YES;
