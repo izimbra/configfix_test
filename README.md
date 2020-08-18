@@ -5,6 +5,8 @@ Test data and results for _[configfix](https://bitbucket.org/easelab/configfix)_
 [tests](./tests) folder contains kernel configuration samples (`.config`) for various architectures supported by the kernel.
 The samples were generated using the _make randconfig_ configurator.
 
+[tests/results.csv](./tests/results.csv) contains test results that used in my bachelor thesis.
+
 To run _configfix_ with a particular sample, do the following:
 1. Point the `CONFIGFIX_PATH` environment variable to your _configfix_-enhanced kernel source tree e.g.  
    `export CONFIGFIX_PATH=/home/user/linux-5.3`
