@@ -1,0 +1,1 @@
+SND_SOC_ES8328_SPI => yes

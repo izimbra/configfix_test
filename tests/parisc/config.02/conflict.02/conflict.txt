@@ -1,0 +1,1 @@
+RIONET_RX_SIZE => yes

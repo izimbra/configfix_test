@@ -1,0 +1,1 @@
+SERIAL_HS_LPC32XX => yes

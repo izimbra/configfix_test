@@ -1,0 +1,1 @@
+REGULATOR_DA9052 => yes

@@ -1,0 +1,1 @@
+MTD_CFI_BE_BYTE_SWAP => yes

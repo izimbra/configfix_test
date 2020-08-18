@@ -1,0 +1,1 @@
+BT_HCIUART_AG6XX => yes

@@ -1,0 +1,1 @@
+PATA_RDC => yes

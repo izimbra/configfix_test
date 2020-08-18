@@ -1,0 +1,1 @@
+PARPORT_ATARI => yes

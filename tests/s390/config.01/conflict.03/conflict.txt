@@ -1,0 +1,1 @@
+PINCTRL_PFC_R8A7779 => yes

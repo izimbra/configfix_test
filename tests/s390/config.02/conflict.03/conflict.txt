@@ -1,0 +1,1 @@
+PATA_HPT3X3 => yes

@@ -1,0 +1,1 @@
+SCSI_UFS_CDNS_PLATFORM => yes

@@ -1,0 +1,1 @@
+AIC7XXX_DEBUG_ENABLE => yes

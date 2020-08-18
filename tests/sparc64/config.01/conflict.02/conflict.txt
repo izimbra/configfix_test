@@ -1,0 +1,1 @@
+HW_RANDOM_TIMERIOMEM => yes

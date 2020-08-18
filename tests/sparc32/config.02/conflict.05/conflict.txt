@@ -1,0 +1,1 @@
+SPI_SH_HSPI => yes

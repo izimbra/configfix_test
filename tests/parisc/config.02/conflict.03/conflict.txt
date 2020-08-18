@@ -1,0 +1,1 @@
+SCSI_SAS_ATTRS => yes

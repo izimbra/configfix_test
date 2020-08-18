@@ -1,0 +1,1 @@
+PARPORT_PC_FIFO => yes

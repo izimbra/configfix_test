@@ -1,0 +1,1 @@
+MOUSE_PC110PAD => yes

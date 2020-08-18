@@ -1,0 +1,1 @@
+VIDEO_SAMSUNG_S5P_MFC => yes
