@@ -1,0 +1,2 @@
+BLK_DEV_RBD: n => yes
+BLK_DEV_IDEPNP: m => yes

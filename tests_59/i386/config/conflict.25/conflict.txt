@@ -1,0 +1,2 @@
+AIRO_CS: n => yes
+SND_SOC_MT2701: n => yes

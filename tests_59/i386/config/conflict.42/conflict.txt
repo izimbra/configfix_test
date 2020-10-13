@@ -1,0 +1,2 @@
+DRM_I2C_SIL164: m => yes
+HZ_100: n => no

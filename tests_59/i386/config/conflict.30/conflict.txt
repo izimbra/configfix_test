@@ -1,0 +1,2 @@
+IP_NF_NAT: m => yes
+KEYBOARD_DAVINCI: n => mod

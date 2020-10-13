@@ -1,0 +1,3 @@
+ACPI_FAN: m => no
+XEN_BLKDEV_FRONTEND: n => yes
+INPUT_AB8500_PONKEY: n => mod

@@ -1,0 +1,2 @@
+NF_CONNTRACK_TIMESTAMP: n => yes
+PINCTRL_SIRF: n => yes

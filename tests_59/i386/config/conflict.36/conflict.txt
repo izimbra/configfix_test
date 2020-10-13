@@ -1,0 +1,3 @@
+JOYSTICK_GUILLEMOT: n => mod
+SERIAL_DZ_CONSOLE: n => yes
+VIDEO_DT3155: m => yes

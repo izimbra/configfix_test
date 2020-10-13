@@ -16,7 +16,7 @@ The samples were generated using the `make randconfig` configurator (via the [ge
 
 To test _configfix_ with a particular sample, do the following:
 1. Point the `CONFIGFIX_PATH` environment variable to your _configfix_-enhanced kernel source tree e.g.  
-   `export CONFIGFIX_PATH=/home/user/linux-5.3`
+   `export CONFIGFIX_PATH=/home/user/linux-5.9-rc6`
 2. Point the `CONFIGFIX_TEST_PATH` environment variable to the directory where you want save test results e.g.  
    `export CONFIGFIX_TEST_PATH=/home/user/configfix_test/tests_59`   
    The results will be either written to an existing CSV file, or a new file will be created.

@@ -1,0 +1,3 @@
+PATA_BK3710: n => yes
+INTEL_IOMMU_BROKEN_GFX_WA: n => yes
+HI8435: n => mod

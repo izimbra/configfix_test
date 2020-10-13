@@ -1,0 +1,1 @@
+CPU_SUP_TRANSMETA_32: n => yes
