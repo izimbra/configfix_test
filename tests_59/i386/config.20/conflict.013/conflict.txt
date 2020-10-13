@@ -1,0 +1,9 @@
+SERIAL_MVEBU_CONSOLE: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_MVEBU_UART [=n]
+
+SENSORS_UCD9200: n => yes
+    Direct dependencies:  HWMON [=n] && PMBUS [=n]
+
+DVB_USB: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && USB [=n] && I2C [=y] && RC_CORE [=n]
+

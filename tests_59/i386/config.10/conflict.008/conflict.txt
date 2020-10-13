@@ -1,0 +1,6 @@
+CAN_DEBUG_DEVICES: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n]
+
+CEPH_LIB_USE_DNS_RESOLVER: n => yes
+    Direct dependencies:  NET [=n] && CEPH_LIB [=n]
+

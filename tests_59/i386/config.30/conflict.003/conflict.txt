@@ -1,0 +1,3 @@
+PATA_PDC_OLD: n => yes
+    Direct dependencies:  ATA [=m] && ATA_SFF [=y] && ATA_BMDMA [=y] && PCI [=n]
+

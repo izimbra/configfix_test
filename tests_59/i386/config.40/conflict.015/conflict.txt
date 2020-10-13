@@ -1,0 +1,9 @@
+SCSI_DEBUG: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && SCSI [=n]
+
+MOUSE_PS2_TRACKPOINT: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSE [=n] && MOUSE_PS2 [=n]
+
+DRM_PANEL_ELIDA_KD35T133: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=n] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+

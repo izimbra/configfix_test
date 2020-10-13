@@ -1,0 +1,7 @@
+ARM_S3C2416_CPUFREQ_VCORESCALE: n => yes
+    Direct dependencies:  CPU_FREQ [=y] && (ARM || ARM64) && ARM_S3C2416_CPUFREQ [=n] && REGULATOR [=y]
+
+DVB_TDA10071: m => no
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_DVB [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_EM28XX [=m] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_CX23885 [=m] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=y] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=y] && I2C [=y] && INPUT [=y] && SND [=m] && RC_CORE [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+

@@ -1,0 +1,9 @@
+PCMCIA_FDOMAIN: n => mod
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI_LOWLEVEL_PCMCIA [=n] && SCSI [=y] && PCMCIA [=n] && m && MODULES [=y]
+
+RC32434_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=n] && MIKROTIK_RB532
+
+ROCKCHIP_ANALOGIX_DP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_ROCKCHIP [=n]
+

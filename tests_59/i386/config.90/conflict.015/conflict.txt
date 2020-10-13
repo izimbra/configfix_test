@@ -1,0 +1,3 @@
+SND_SOC_XILINX_AUDIO_FORMATTER: m => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=m] && SND_SOC [=m]
+

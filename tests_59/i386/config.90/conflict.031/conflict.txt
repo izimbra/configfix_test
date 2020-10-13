@@ -1,0 +1,10 @@
+ARM_PSCI_CHECKER: n => yes
+    Direct dependencies:  ARM_PSCI_FW [=n] && HOTPLUG_CPU [=n] && CPU_IDLE [=y] && !TORTURE_TEST [=y]
+
+NETFILTER_XT_TARGET_CHECKSUM: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=y] && (IP_NF_MANGLE [=m] || IP6_NF_MANGLE [=n]) && NETFILTER_ADVANCED [=n]
+
+DVB_ISL6423: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_ANYSEE [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_BUDGET [=m] && MEDIA_SUPPORT [=m] && PCI [=y] && MEDIA_PCI_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_BUDGET_CORE [=m] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+

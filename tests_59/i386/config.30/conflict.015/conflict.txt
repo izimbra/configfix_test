@@ -1,0 +1,9 @@
+BLK_DEV_SR: n => yes
+    Direct dependencies:  SCSI [=y] && BLK_DEV [=n]
+
+VMXNET3: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PCI [=n] && INET [=n] && !PAGE_SIZE_64KB && !ARM64_64K_PAGES && !IA64_PAGE_SIZE_64KB && !MICROBLAZE_64K_PAGES && !PARISC_PAGE_SIZE_64KB && !PPC_64K_PAGES
+
+SMS_SIANO_DEBUGFS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && SMS_SIANO_MDTV [=n] && DEBUG_FS [=y] && SMS_USB_DRV [=n]=SMS_SDIO_DRV [=n]
+

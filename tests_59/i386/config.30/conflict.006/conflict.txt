@@ -1,0 +1,6 @@
+ADIS16203: n => mod
+    Direct dependencies:  STAGING [=n] && IIO [=m] && SPI [=n]
+
+CLK_RCAR_USB2_CLOCK_SEL: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && CLK_RENESAS [=n] && (ARCH_RENESAS || COMPILE_TEST [=y])
+

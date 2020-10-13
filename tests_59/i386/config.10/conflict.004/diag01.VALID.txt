@@ -1,0 +1,7 @@
+MLXSW_I2C => yes
+ETHERNET => yes
+NETDEVICES => yes
+I2C => yes
+MLXSW_CORE => yes
+NET => yes
+NET_VENDOR_MELLANOX => yes

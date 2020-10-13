@@ -1,0 +1,6 @@
+ARM_PXA2xx_CPUFREQ: n => yes
+    Direct dependencies:  CPU_FREQ [=n] && (ARM || ARM64) && (PXA27x || PXA25x)
+
+MACVTAP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && MACVLAN [=n] && INET [=n]
+

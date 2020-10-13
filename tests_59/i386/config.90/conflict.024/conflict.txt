@@ -1,0 +1,6 @@
+SND_RIPTIDE: m => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=m] && SND_PCI [=y]
+
+VIRTIO_VDPA: n => yes
+    Direct dependencies:  VIRTIO_MENU [=y] && VDPA [=m]
+

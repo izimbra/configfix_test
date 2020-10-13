@@ -1,0 +1,9 @@
+HIX5HD2_GMAC: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_HISILICON [=n]
+
+MLX_WDT: n => mod
+    Direct dependencies:  WATCHDOG [=n] && MELLANOX_PLATFORM [=n]
+
+MV64X60_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=n] && (MV64X60 || COMPILE_TEST [=y])
+

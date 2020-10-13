@@ -1,0 +1,6 @@
+NETFILTER_XT_TARGET_AUDIT: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=y] && NETFILTER_XTABLES [=n] && AUDIT [=n] && NETFILTER_ADVANCED [=n]
+
+SCTP_DEFAULT_COOKIE_HMAC_MD5: n => yes
+    Direct dependencies:  <choice>
+

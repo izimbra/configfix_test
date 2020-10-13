@@ -1,0 +1,9 @@
+PCI_GOMMCONFIG: n => yes
+    Direct dependencies:  <choice>
+
+DEFAULT_CUBIC: n => yes
+    Direct dependencies:  <choice>
+
+USB_GL860: n => mod
+    Direct dependencies:  USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=n] && VIDEO_V4L2 [=n] && USB_GSPCA [=n]
+

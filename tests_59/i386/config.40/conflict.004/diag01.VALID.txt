@@ -1,0 +1,4 @@
+PPP_SYNC_TTY => yes
+NETDEVICES => yes
+TTY => yes
+PPP => yes

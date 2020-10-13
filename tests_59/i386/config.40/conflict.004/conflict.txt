@@ -1,0 +1,3 @@
+PPP_SYNC_TTY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && TTY [=n] && PPP [=n]
+

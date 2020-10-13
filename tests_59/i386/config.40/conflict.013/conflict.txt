@@ -1,0 +1,10 @@
+TCG_TIS_ST33ZP24_SPI: n => yes
+    Direct dependencies:  TCG_TPM [=n] && SPI [=y]
+
+IR_IMG_RAW: n => yes
+    Direct dependencies:  RC_CORE [=n] && RC_DEVICES [=n] && IR_IMG [=n]
+
+DVB_BCM3510: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_B2C2_FLEXCOP [=n] && MEDIA_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && (DVB_B2C2_FLEXCOP_PCI [=n] || DVB_B2C2_FLEXCOP_USB [=n]) && MEDIA_SUBDRV_AUTOSELECT [=n]
+

@@ -1,0 +1,10 @@
+VIDEO_XILINX_VTC: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_XILINX [=n]
+    Reverse dependencies: VIDEO_XILINX_TPG [=n] && MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_XILINX [=n]
+
+DRM_I915_LOW_LEVEL_TRACEPOINTS: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && EXPERT [=n] && DRM_I915 [=n]
+
+SND_SOC_FSL_EASRC: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_FSL_ASRC [=n]
+

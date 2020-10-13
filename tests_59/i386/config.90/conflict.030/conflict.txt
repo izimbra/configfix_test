@@ -1,0 +1,6 @@
+MFD_IPAQ_MICRO: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && (SA1100_H3100 || SA1100_H3600)
+
+REGULATOR_RN5T618: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_RN5T618 [=m]
+

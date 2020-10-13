@@ -1,0 +1,6 @@
+CYZ_INTR: n => yes
+    Direct dependencies:  TTY [=y] && CYCLADES [=n] && PCI [=y]
+
+PTP_1588_CLOCK: n => yes
+    Direct dependencies:  NET [=y] && POSIX_TIMERS [=n]
+

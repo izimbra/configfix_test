@@ -1,0 +1,10 @@
+FW_CFG_SYSFS_CMDLINE: n => yes
+    Direct dependencies:  FW_CFG_SYSFS [=n]
+
+INET6_ESP_OFFLOAD: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && IPV6 [=n] && INET6_ESP [=n]
+
+DVB_ZL10036: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_SAA7134_DVB [=n] && MEDIA_SUPPORT [=n] && PCI [=y] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_SAA7134 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

@@ -1,0 +1,6 @@
+IWLWIFI_DEBUGFS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTEL [=n] && IWLWIFI [=n] && MAC80211_DEBUGFS [=n]
+
+PCMCIA_WL3501: n => mod
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && CFG80211 [=n] && PCMCIA [=n]
+

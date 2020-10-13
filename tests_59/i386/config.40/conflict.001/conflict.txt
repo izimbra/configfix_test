@@ -1,0 +1,3 @@
+HOTPLUG_PCI_SHPC: n => yes
+    Direct dependencies:  PCI [=y] && HOTPLUG_PCI [=n]
+

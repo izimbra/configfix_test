@@ -1,0 +1,2 @@
+HOTPLUG_PCI_SHPC => yes
+HOTPLUG_PCI => yes

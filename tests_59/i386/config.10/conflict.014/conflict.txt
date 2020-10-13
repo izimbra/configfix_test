@@ -1,0 +1,9 @@
+ARM_S3C24XX_CPUFREQ_DEBUGFS: n => yes
+    Direct dependencies:  CPU_FREQ [=n] && (ARM || ARM64) && ARM_S3C24XX_CPUFREQ [=n] && DEBUG_FS [=n]
+
+ZSWAP_DEFAULT_ON: n => yes
+    Direct dependencies:  ZSWAP [=n]
+
+BCMA_DEBUG: n => yes
+    Direct dependencies:  BCMA [=n]
+

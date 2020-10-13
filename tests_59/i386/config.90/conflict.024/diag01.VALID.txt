@@ -1,0 +1,5 @@
+SND_RIPTIDE => yes
+VIRTIO_VDPA => yes
+X86_RDC321X => no
+SND => yes
+VDPA => yes

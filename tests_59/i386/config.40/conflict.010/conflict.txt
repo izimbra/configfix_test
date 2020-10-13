@@ -1,0 +1,7 @@
+NETFILTER_XT_MATCH_DEVGROUP: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n]
+
+NET_DSA_TAG_LAN9303: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_SMSC_LAN9303 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n]
+

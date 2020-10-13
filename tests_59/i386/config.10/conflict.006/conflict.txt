@@ -1,0 +1,6 @@
+EDAC_PPC4XX: n => yes
+    Direct dependencies:  EDAC [=n] && 4xx
+
+R8712U: n => yes
+    Direct dependencies:  STAGING [=n] && WLAN [=n] && USB [=n] && CFG80211 [=n]
+

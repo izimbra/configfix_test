@@ -1,0 +1,6 @@
+SMSGIUCV: n => yes
+    Direct dependencies:  NETDEVICES [=n] && S390 && IUCV [=n]
+
+B43_PHY_N: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_BROADCOM [=n] && B43 [=n]
+

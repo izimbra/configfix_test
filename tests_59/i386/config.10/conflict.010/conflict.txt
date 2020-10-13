@@ -1,0 +1,6 @@
+IPV6_SEG6_LWTUNNEL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+IP_NF_TARGET_SYNPROXY: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+

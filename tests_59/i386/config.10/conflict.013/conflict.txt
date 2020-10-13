@@ -1,0 +1,10 @@
+SERIAL_AMBA_PL010_CONSOLE: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_AMBA_PL010 [=n]=y
+
+GENERIC_ADC_BATTERY: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && IIO [=y]
+
+MFD_INTEL_MSIC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && INTEL_SCU [=n]
+    Reverse dependencies: X86_INTEL_MID [=n] && X86_EXTENDED_PLATFORM [=y] && X86_PLATFORM_DEVICES [=n] && PCI [=n] && (X86_64 [=n] || PCI_GOANY [=n] && X86_32 [=y]) && X86_IO_APIC [=n]
+

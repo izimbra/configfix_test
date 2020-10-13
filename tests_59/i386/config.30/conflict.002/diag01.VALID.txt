@@ -1,0 +1,7 @@
+NET_EMATCH_IPSET => yes
+INET => yes
+IP_SET_MAX => 65534
+IP_SET => yes
+NET_SCHED => yes
+NET_EMATCH => yes
+NET_EMATCH_STACK => 1

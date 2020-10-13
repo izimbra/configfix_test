@@ -1,0 +1,9 @@
+NFT_QUOTA => yes
+BRIDGE_EBT_PKTTYPE => yes
+NF_TABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+BRIDGE_NF_EBTABLES => yes
+NETFILTER_XTABLES => yes
+BRIDGE => yes

@@ -1,0 +1,4 @@
+NET_CORE: n => yes
+    Direct dependencies:  NETDEVICES [=n]
+    Reverse dependencies: ARM_MOXART_ETHER [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MOXART [=n] && ARM && ARCH_MOXART
+

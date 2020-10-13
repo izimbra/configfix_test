@@ -1,0 +1,6 @@
+C2PORT_DURAMAR_2150: m => yes
+    Direct dependencies:  C2PORT [=m] && X86 [=y]
+
+SND_SOC_MT2701: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=m] && SND_SOC [=m] && ARCH_MEDIATEK
+

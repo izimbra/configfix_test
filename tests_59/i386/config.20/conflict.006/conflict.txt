@@ -1,0 +1,6 @@
+COMEDI_ADDI_APCI_16XX: n => yes
+    Direct dependencies:  STAGING [=n] && COMEDI [=n] && COMEDI_PCI_DRIVERS [=n]
+
+IPQ_LCC_806X: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && COMMON_CLK_QCOM [=n]
+

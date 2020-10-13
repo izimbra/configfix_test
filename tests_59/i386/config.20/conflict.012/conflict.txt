@@ -1,0 +1,9 @@
+VIDEO_STI_HVA_DEBUGFS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_MEM2MEM_DRIVERS [=n] && VIDEO_STI_HVA [=n] && DEBUG_FS [=y]
+
+DRM_ROCKCHIP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && ROCKCHIP_IOMMU [=n]
+
+SND_SOC_P1022_RDK: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && SND_POWERPC_SOC [=n] && P1022_RDK && I2C [=y]
+

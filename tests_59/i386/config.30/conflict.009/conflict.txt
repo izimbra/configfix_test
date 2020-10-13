@@ -1,0 +1,6 @@
+X86_GX_SUSPMOD: n => mod
+    Direct dependencies:  CPU_FREQ [=n] && X86 [=y] && X86_32 [=y] && PCI [=n]
+
+PATA_NS87410: n => mod
+    Direct dependencies:  ATA [=m] && ATA_SFF [=y] && PCI [=n]
+

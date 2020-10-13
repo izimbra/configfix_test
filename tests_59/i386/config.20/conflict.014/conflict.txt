@@ -1,0 +1,9 @@
+POWERNV_CPUFREQ: n => yes
+    Direct dependencies:  CPU_FREQ [=y] && (PPC32 || PPC64) && PPC_POWERNV
+
+IP_MULTIPLE_TABLES: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IP_ADVANCED_ROUTER [=n]
+
+USB_M5602: n => yes
+    Direct dependencies:  USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=n] && VIDEO_V4L2 [=n] && USB_GSPCA [=n]
+

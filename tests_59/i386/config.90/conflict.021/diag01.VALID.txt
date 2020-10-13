@@ -1,0 +1,7 @@
+VIDEO_TDA1997X => yes
+X86_RDC321X => no
+SND_SOC => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUBDRV_AUTOSELECT => no
+VIDEO_DEV => yes
+SND => yes

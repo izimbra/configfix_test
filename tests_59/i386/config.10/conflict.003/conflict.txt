@@ -1,0 +1,3 @@
+SCSI_IPS: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n]
+

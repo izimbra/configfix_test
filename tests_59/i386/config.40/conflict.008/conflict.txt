@@ -1,0 +1,6 @@
+PCIE_BRCMSTB: n => yes
+    Direct dependencies:  PCI [=y] && (ARCH_BCM2835 || COMPILE_TEST [=y]) && OF [=n] && PCI_MSI_IRQ_DOMAIN [=n]
+
+NFTL: n => yes
+    Direct dependencies:  MTD [=n] && BLOCK [=n]
+

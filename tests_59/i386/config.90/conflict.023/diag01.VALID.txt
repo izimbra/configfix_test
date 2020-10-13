@@ -1,0 +1,7 @@
+CYZ_INTR => yes
+PTP_1588_CLOCK => yes
+X86_RDC321X => no
+SERIAL_NONSTANDARD => yes
+CYCLADES => yes
+PPS => yes
+POSIX_TIMERS => yes

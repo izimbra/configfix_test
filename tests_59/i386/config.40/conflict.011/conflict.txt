@@ -1,0 +1,9 @@
+MYRI10GE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MYRI [=n] && PCI [=y] && INET [=n]
+
+CEC_STM32: n => yes
+    Direct dependencies:  MEDIA_CEC_SUPPORT [=n] && (ARCH_STM32 || COMPILE_TEST [=y])
+
+DVB_USB_TECHNISAT_USB2: n => yes
+    Direct dependencies:  USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n]
+

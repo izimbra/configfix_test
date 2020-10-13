@@ -1,0 +1,2 @@
+NF_CONNTRACK_PPTP: n => mod
+    Direct dependencies: NET [=y] && INET [=y] && NETFILTER [=y] && NF_CONNTRACK [=y] && NETFILTER_ADVANCED [=n]

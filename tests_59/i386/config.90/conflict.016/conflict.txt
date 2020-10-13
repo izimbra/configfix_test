@@ -1,0 +1,4 @@
+CGROUP_NET_CLASSID: y => no
+    Direct dependencies:  NET [=y] && CGROUPS [=y]
+    Reverse dependencies: NETFILTER_XT_MATCH_CGROUP [=n] && NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=y] && NETFILTER_ADVANCED [=n] && CGROUPS [=y] || NET_CLS_CGROUP [=y] && NET [=y] && NET_SCHED [=y] && CGROUPS [=y]
+

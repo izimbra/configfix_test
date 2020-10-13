@@ -1,0 +1,7 @@
+WLCORE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_TI [=n] && MAC80211 [=n]
+    Reverse dependencies: WL12XX [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_TI [=n] && MAC80211 [=n] || WL18XX [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_TI [=n] && MAC80211 [=n]
+
+KEYBOARD_IMX_SC_KEY: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && IMX_SCU [=n]
+

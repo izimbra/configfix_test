@@ -1,0 +1,4 @@
+SND_SOC_XILINX_AUDIO_FORMATTER => yes
+X86_RDC321X => no
+SND_SOC => yes
+SND => yes

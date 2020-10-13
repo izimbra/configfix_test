@@ -1,0 +1,9 @@
+NET_DSA_SMSC_LAN9303_MDIO: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+BATTERY_DS2782: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=n]
+
+SENSORS_CORETEMP: n => yes
+    Direct dependencies:  HWMON [=n] && X86 [=y]
+

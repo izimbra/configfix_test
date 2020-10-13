@@ -1,0 +1,3 @@
+ARM_PXA2xx_CPUFREQ: n => yes
+    Direct dependencies: CPU_FREQ [=y] && (ARM || ARM64) && (PXA27x || PXA25x)
+

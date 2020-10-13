@@ -1,0 +1,3 @@
+SMC911X: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SMSC [=n] && (ARM || SUPERH)
+

@@ -1,0 +1,4 @@
+PNP: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && (ISA [=y] || ACPI [=y])
+    Reverse dependencies: ACPI [=y] && ARCH_SUPPORTS_ACPI [=y]
+

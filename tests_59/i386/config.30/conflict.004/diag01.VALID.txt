@@ -1,0 +1,5 @@
+TI_CPSW_PHY_SEL => yes
+ETHERNET => yes
+NETDEVICES => yes
+EISA => yes
+NET_VENDOR_TI => yes

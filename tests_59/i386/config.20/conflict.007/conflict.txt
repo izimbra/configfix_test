@@ -1,0 +1,6 @@
+PCI_ATMEL: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATMEL [=n] && ATMEL [=n] && PCI [=n]
+
+RT2X00_DEBUG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && RT2X00_LIB [=n]
+

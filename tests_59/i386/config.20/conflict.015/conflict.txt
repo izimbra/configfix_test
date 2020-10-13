@@ -1,0 +1,9 @@
+BLK_DEV_IDE_RAPIDE: n => yes
+    Direct dependencies:  IDE [=y] && ARM && ARCH_ACORN
+
+HDLC_PPP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WAN [=n] && HDLC [=n]
+
+VIDEO_EXYNOS4_FIMC_IS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_SAMSUNG_EXYNOS4_IS [=n] && I2C [=y] && HAS_DMA [=y] && OF [=y]
+

@@ -1,0 +1,3 @@
+VMSPLIT_2G: n => no
+    Direct dependencies: <choice>
+

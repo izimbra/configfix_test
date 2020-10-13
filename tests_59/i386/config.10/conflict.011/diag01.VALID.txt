@@ -1,0 +1,14 @@
+NET_DSA_SMSC_LAN9303_MDIO => yes
+BATTERY_DS2782 => yes
+SENSORS_CORETEMP => yes
+NET_SWITCHDEV => yes
+NETDEVICES => yes
+NET => yes
+INET => yes
+NET_DSA => yes
+NET_DSA_TAG_LAN9303 => yes
+PHYLIB => yes
+MDIO_DEVICE => yes
+POWER_SUPPLY => yes
+I2C => yes
+HWMON => yes

@@ -1,0 +1,6 @@
+APM_DISPLAY_BLANK: n => yes
+    Direct dependencies:  APM [=n]
+
+PATA_EP93XX: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && ATA_BMDMA [=n] && ARCH_EP93XX
+

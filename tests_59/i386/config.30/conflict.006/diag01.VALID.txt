@@ -1,0 +1,6 @@
+ADIS16203 => mod
+CLK_RCAR_USB2_CLOCK_SEL => yes
+SPI => yes
+STAGING => yes
+COMMON_CLK => yes
+CLK_RENESAS => yes

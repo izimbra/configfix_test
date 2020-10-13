@@ -1,0 +1,3 @@
+SERIAL_AR933X: n => mod
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && HAVE_CLK [=y] && ATH79
+

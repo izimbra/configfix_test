@@ -1,0 +1,6 @@
+CAIF_NETDEV: n => mod
+    Direct dependencies:  NET [=y] && CAIF [=n]
+
+PCIE_DW_PLAT_HOST: n => yes
+    Direct dependencies:  PCI [=n] && PCI_MSI_IRQ_DOMAIN [=n]
+

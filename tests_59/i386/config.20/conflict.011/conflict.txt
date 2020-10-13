@@ -1,0 +1,10 @@
+NET_VENDOR_EMULEX: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && PCI [=n]
+    Reverse dependencies: INFINIBAND_OCRDMA [=n] && INFINIBAND [=n] && (INFINIBAND_USER_ACCESS [=n] || !INFINIBAND_USER_ACCESS [=n]) && ETHERNET [=n] && NETDEVICES [=n] && PCI [=n] && INET [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+SENSORS_SMSC47B397: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+AT91RM9200_WATCHDOG: n => yes
+    Direct dependencies:  WATCHDOG [=y] && (SOC_AT91RM9200 && MFD_SYSCON [=n] || COMPILE_TEST [=n])
+

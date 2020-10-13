@@ -1,0 +1,1 @@
+SERIAL_SUNSAB_CONSOLE => yes

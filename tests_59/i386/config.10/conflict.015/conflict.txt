@@ -1,0 +1,9 @@
+AD525X_DPOT_I2C: n => yes
+    Direct dependencies:  AD525X_DPOT [=n] && I2C [=n]
+
+NORTEL_HERMES: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTERSIL [=n] && PCI [=n] && HERMES [=n]
+
+REGULATOR_MP5416: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n] && OF [=n]
+

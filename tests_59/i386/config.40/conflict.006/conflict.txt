@@ -1,0 +1,6 @@
+PWM_EP93XX: n => yes
+    Direct dependencies:  PWM [=n] && (ARCH_EP93XX || COMPILE_TEST [=y])
+
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+

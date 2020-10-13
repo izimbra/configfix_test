@@ -1,0 +1,9 @@
+SPARC_US3_CPUFREQ: n => yes
+    Direct dependencies:  CPU_FREQ [=y] && SPARC64
+
+VIDEO_TW5864: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=y] && MEDIA_CAMERA_SUPPORT [=y] && VIDEO_DEV [=m] && PCI [=y] && VIDEO_V4L2 [=m]
+
+DRM_INGENIC: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && (MIPS || COMPILE_TEST [=y]) && DRM [=m] && CMA [=y] && OF [=y]
+

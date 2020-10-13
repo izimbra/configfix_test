@@ -1,0 +1,8 @@
+BT_BNEP => yes
+BT_BREDR => yes
+NET => yes
+BT => yes
+CRYPTO_DRBG_MENU => yes
+CRYPTO_ECDH => yes
+CRYPTO_CMAC => yes
+CRYPTO_ECB => yes

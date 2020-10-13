@@ -1,0 +1,6 @@
+NFIT_SECURITY_DEBUG: n => yes
+    Direct dependencies:  ACPI [=n] && ACPI_NFIT [=n]
+
+SCSI_SYM53C8XX_2: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n]
+

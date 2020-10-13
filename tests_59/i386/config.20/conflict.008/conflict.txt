@@ -1,0 +1,6 @@
+BT_HCIUART_MRVL: n => yes
+    Direct dependencies:  NET [=n] && BT [=n] && BT_HCIUART [=n] && BT_HCIUART_SERDEV [=n]
+
+EISA_VLB_PRIMING: n => yes
+    Direct dependencies:  X86 [=y] && EISA [=n]
+

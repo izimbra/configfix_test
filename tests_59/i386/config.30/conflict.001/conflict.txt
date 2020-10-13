@@ -1,0 +1,3 @@
+LIB80211_DEBUG: n => yes
+    Direct dependencies:  NET [=y] && WIRELESS [=y] && LIB80211 [=n]
+

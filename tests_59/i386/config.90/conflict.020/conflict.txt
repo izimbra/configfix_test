@@ -1,0 +1,10 @@
+MAC_SCSI: n => mod
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && MAC && SCSI [=y]
+
+LIBERTAS_CS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_MARVELL [=y] && LIBERTAS [=m] && PCMCIA [=n] && HAS_IOPORT_MAP [=y]
+
+DVB_S921: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_DVB [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_EM28XX [=m] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y]
+

@@ -1,0 +1,3 @@
+PATA_ATP867X: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && ATA_BMDMA [=n] && PCI [=n]
+

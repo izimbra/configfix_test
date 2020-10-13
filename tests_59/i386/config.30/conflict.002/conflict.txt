@@ -1,0 +1,3 @@
+NET_EMATCH_IPSET: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n] && NET_EMATCH [=n] && IP_SET [=n]
+
