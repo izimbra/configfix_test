@@ -1,0 +1,6 @@
+CAN_MCBA_USB => yes
+PD6729 => yes
+CAN_DEV => yes
+PCMCIA => yes
+PCI => yes
+EXPERT => yes

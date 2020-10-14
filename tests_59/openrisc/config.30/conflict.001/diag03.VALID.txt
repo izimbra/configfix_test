@@ -1,0 +1,6 @@
+MTD_MAP_BANK_WIDTH_1 => yes
+MTD => yes
+MTD_CFI_ADV_OPTIONS => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_BE_BYTE_SWAP => yes
+MTD_CFI_I1 => yes

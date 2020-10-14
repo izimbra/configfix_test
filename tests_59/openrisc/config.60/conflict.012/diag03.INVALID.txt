@@ -1,0 +1,9 @@
+KERNEL_LZ4 => yes
+DRM_THINE_THC63LVD1024 => mod
+SND_BT87X => yes
+DRM => mod
+SOUND => yes
+PCI => yes
+SND_PCI => yes
+SND => yes
+SND_HDA_PREALLOC_SIZE => 0

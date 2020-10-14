@@ -1,0 +1,6 @@
+JOYSTICK_AMIGA: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && AMIGA
+
+INPUT_ADXL34X_SPI: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && INPUT_ADXL34X [=n] && SPI [=y]
+

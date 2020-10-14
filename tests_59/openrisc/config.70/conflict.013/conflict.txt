@@ -1,0 +1,9 @@
+BT_MSFTEXT: n => yes
+    Direct dependencies:  NET [=y] && BT [=n]
+
+VIDEO_IR_I2C: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y] && RC_CORE [=m]
+
+SND_USB_6FIRE: n => mod
+    Direct dependencies:  SOUND [=m] && !UML && SND [=n] && SND_USB [=n] && USB [=n]
+

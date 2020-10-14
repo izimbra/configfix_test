@@ -1,0 +1,3 @@
+PROC_EVENTS: n => yes
+    Direct dependencies:  CONNECTOR [=n]=y
+

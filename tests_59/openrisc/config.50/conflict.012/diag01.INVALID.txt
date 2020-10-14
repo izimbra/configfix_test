@@ -1,0 +1,9 @@
+KERNEL_LZ4 => yes
+SND_SOC_FSL_MQS => yes
+SND_SOC_TAS5720 => yes
+SND_SOC => yes
+SND_HDA_PREALLOC_SIZE => 1
+DEBUG_KERNEL => yes
+SND_SOC_FSL_SAI => yes
+SND => yes
+EXPERT => yes

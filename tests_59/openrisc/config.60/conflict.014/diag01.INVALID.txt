@@ -1,0 +1,11 @@
+RDS_RDMA => yes
+RFKILL => mod
+MTD_SHARPSL_PARTS => mod
+IRQ_POLL => yes
+RDS => yes
+INFINIBAND_ADDR_TRANS => yes
+NET => yes
+INET => yes
+INFINIBAND => yes
+KUNIT_ALL_TESTS => no
+MTD_NAND_TMIO => mod

@@ -1,0 +1,6 @@
+DEBUG_NOMMU_REGIONS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && !MMU [=y]
+
+NETFILTER_XT_MATCH_RECENT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n]
+

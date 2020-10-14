@@ -1,0 +1,6 @@
+SERIAL_EFM32_UART: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && ARM && (ARCH_EFM32 || COMPILE_TEST [=y])
+
+MONWRITER: n => yes
+    Direct dependencies:  S390
+

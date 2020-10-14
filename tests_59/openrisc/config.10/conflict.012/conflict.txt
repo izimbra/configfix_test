@@ -1,0 +1,9 @@
+KERNEL_LZMA: n => yes
+    Direct dependencies:  <choice> && HAVE_KERNEL_LZMA [=n]
+
+RADIO_RTRACK2: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && RADIO_ADAPTERS [=n] && V4L_RADIO_ISA_DRIVERS [=n] && (ISA || COMPILE_TEST [=n]) && VIDEO_V4L2 [=n]
+
+DRM_LOAD_EDID_FIRMWARE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]
+

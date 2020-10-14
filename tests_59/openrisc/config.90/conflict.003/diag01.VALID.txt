@@ -1,0 +1,2 @@
+JOYSTICK_GAMECON => yes
+PARPORT => yes

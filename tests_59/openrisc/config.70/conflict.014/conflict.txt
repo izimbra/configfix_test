@@ -1,0 +1,10 @@
+6LOWPAN_NHC_HOP: n => yes
+    Direct dependencies:  NET [=y] && 6LOWPAN_NHC [=n]
+
+PCMCIA_PXA2XX: n => mod
+    Direct dependencies:  PCCARD [=m] && ARM && ARCH_PXA && PCMCIA [=m] && (ARCH_LUBBOCK || MACH_MAINSTONE || PXA_SHARPSL || MACH_ARMCORE || ARCH_PXA_PALM || TRIZEPS_PCMCIA || ARCOM_PCMCIA || ARCH_PXA_ESERIES || MACH_STARGATE2 || MACH_VPAC270 || MACH_BALLOON3 || MACH_COLIBRI || MACH_COLIBRI320 || MACH_H4700)
+    Reverse dependencies: PCMCIA_SA1111 [=n] && PCCARD [=m] && ARM && PCMCIA [=m] && ARCH_LUBBOCK && SA1111
+
+SPI_NXP_SPIFI: n => mod
+    Direct dependencies:  MTD [=n] && MTD_SPI_NOR [=n] && OF [=y] && (ARCH_LPC18XX || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+

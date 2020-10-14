@@ -1,0 +1,9 @@
+MWIFIEX_SDIO: n => mod
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_MARVELL [=y] && MWIFIEX [=m] && MMC [=n]
+
+DRM_I2C_CH7006: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_KMS_HELPER [=m] && I2C [=y]
+
+DRM_TEGRA_STAGING: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_TEGRA [=n] && STAGING [=y]
+

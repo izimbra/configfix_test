@@ -1,0 +1,6 @@
+FCOE => yes
+LIBFCOE => yes
+PCI => yes
+SCSI => yes
+LIBFC => yes
+SCSI_FC_ATTRS => yes

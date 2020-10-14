@@ -1,0 +1,4 @@
+IIO_ST_PRESS => yes
+FORTIFY_SOURCE => yes
+IIO => yes
+IIO_KFIFO_BUF => yes

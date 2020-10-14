@@ -1,0 +1,9 @@
+8139CP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_REALTEK [=n] && PCI [=n]
+
+ZX2967_THERMAL: n => yes
+    Direct dependencies:  THERMAL [=n] && (ARCH_ZX || COMPILE_TEST [=n])
+
+INTEL_MEI_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=n] && INTEL_MEI [=n] && X86
+

@@ -1,0 +1,10 @@
+NET_SCH_MULTIQ => yes
+BT_LE => yes
+NET => yes
+NET_SCHED => yes
+MODULES => yes
+BT => mod
+CRC16 => mod
+CRYPTO_CMAC => mod
+CRYPTO_ECDH => yes
+CRYPTO_ECB => mod

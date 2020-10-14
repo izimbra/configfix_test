@@ -1,0 +1,3 @@
+NFC_ST_NCI_SPI: n => yes
+    Direct dependencies:  NET [=n] && NFC [=n] && NFC_NCI [=n] && SPI [=n]
+

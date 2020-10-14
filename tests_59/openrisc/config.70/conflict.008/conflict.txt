@@ -1,0 +1,6 @@
+PHANTOM: n => mod
+    Direct dependencies:  PCI [=n]
+
+SCSI_PROC_FS: n => yes
+    Direct dependencies:  SCSI [=n] && PROC_FS [=y]
+

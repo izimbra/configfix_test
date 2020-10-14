@@ -1,0 +1,10 @@
+DVB_DIB3000MC: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_DIB3000MC [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB [=n]
+
+LEDS_MAX77693: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS_FLASH [=m] && (V4L2_FLASH_LED_CLASS [=m] || !V4L2_FLASH_LED_CLASS [=m]) && MFD_MAX77693 [=y] && OF [=y]
+
+EXTCON_ARIZONA: n => yes
+    Direct dependencies:  EXTCON [=n] && MFD_ARIZONA [=y] && INPUT [=y] && SND_SOC [=n]
+

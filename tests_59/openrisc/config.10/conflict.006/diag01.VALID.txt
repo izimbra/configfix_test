@@ -1,0 +1,6 @@
+VDPA_SIM => yes
+CLK_RASPBERRYPI => yes
+RUNTIME_TESTING_MENU => yes
+VDPA => yes
+COMMON_CLK => yes
+COMPILE_TEST => yes

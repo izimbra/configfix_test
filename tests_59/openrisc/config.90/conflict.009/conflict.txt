@@ -1,0 +1,7 @@
+NF_REJECT_IPV6: y => no
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y]
+    Reverse dependencies: NFT_REJECT_IPV6 [=y] && NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && NF_TABLES [=y] && NF_TABLES_IPV6 [=y] || IP6_NF_TARGET_REJECT [=y] && NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && IP6_NF_IPTABLES [=y] && IP6_NF_FILTER [=y]
+
+TOUCHSCREEN_MX25: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] && MFD_MX25_TSADC [=m]
+

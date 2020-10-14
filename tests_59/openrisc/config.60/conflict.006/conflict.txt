@@ -1,0 +1,6 @@
+ARCH_R8A77980: n => yes
+    Direct dependencies:  SOC_RENESAS [=n] && ARM64
+
+PWM_ROCKCHIP: n => yes
+    Direct dependencies:  PWM [=y] && (ARCH_ROCKCHIP || COMPILE_TEST [=n])
+

@@ -1,0 +1,6 @@
+IPV6_SIT: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+PCNET32: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_AMD [=n] && PCI [=n]
+

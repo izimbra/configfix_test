@@ -1,0 +1,6 @@
+MTD_CFI_ADV_OPTIONS: n => yes
+    Direct dependencies:  MTD [=n] && MTD_GEN_PROBE [=n]
+
+MTD_NAND_MLC_LPC32XX: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && (ARCH_LPC32XX || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+

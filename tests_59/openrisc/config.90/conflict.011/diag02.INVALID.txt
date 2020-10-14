@@ -1,0 +1,5 @@
+SPI_TOPCLIFF_PCH => mod
+USB_SL811_CS => mod
+MMC_ARMMMCI => yes
+PCI => yes
+PCMCIA => mod

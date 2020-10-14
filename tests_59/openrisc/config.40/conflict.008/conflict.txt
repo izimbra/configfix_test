@@ -1,0 +1,6 @@
+SENSORS_LIS3_SPI: n => yes
+    Direct dependencies:  !ACPI && SPI_MASTER [=n] && INPUT [=y]
+
+SCSI_AHA152X: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && ISA && SCSI [=y]
+

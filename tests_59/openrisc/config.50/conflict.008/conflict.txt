@@ -1,0 +1,6 @@
+ATMEL_TCLIB: n => yes
+    Direct dependencies:  ARCH_AT91
+
+BLK_DEV_PALMCHIP_BK3710: n => yes
+    Direct dependencies:  IDE [=n] && ARCH_DAVINCI
+

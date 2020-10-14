@@ -1,0 +1,3 @@
+PROC_EVENTS => yes
+CONNECTOR => yes
+NET => yes

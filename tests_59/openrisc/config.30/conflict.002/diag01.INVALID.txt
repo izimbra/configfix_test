@@ -1,0 +1,5 @@
+PCIE_ECRC => yes
+PCIEAER => yes
+PCIEPORTBUS => yes
+PCI => yes
+RAS => yes

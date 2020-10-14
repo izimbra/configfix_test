@@ -1,0 +1,6 @@
+IPV6_MIP6: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+NET_VENDOR_AURORA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+

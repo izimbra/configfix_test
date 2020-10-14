@@ -1,0 +1,9 @@
+CAN_MSCAN: n => yes
+    Direct dependencies:  NET [=y] && CAN [=y] && CAN_DEV [=n] && PPC
+
+DVB_TTUSB_BUDGET: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && USB [=y] && I2C [=y] && PCI [=n]
+
+SND_POWERMAC_AUTO_DRC: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_PPC [=n] && SND_POWERMAC [=n]
+

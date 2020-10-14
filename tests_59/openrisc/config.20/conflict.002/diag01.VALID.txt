@@ -1,0 +1,5 @@
+NFC_ST_NCI_I2C => yes
+NFC => yes
+I2C => yes
+NET => yes
+NFC_NCI => yes

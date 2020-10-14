@@ -1,0 +1,6 @@
+BT_BNEP: n => yes
+    Direct dependencies:  NET [=y] && BT_BREDR [=n]
+
+PCI_MESON: n => yes
+    Direct dependencies:  PCI [=n] && PCI_MSI_IRQ_DOMAIN [=n]
+

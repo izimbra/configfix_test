@@ -1,0 +1,6 @@
+NF_CONNTRACK_SANE: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+YELLOWFIN: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_PACKET_ENGINES [=n] && PCI [=n]
+

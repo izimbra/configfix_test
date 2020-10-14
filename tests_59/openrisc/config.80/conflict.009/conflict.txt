@@ -1,0 +1,6 @@
+NF_CONNTRACK_IRC: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+
+IGB_DCA: n => no
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_INTEL [=n] && IGB [=n] && DCA [=n] && (IGB [=n]!=y || DCA [=n]!=m)
+

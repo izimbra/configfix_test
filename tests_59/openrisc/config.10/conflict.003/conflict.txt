@@ -1,0 +1,3 @@
+ATM_FORE200E_USE_TASKLET: n => yes
+    Direct dependencies:  ATM_DRIVERS [=n] && NETDEVICES [=n] && ATM [=n] && ATM_FORE200E [=n]
+

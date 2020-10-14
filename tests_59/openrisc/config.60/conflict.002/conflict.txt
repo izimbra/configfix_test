@@ -1,0 +1,3 @@
+PCI_PF_STUB: n => yes
+    Direct dependencies:  PCI [=n] && PCI_IOV [=n]
+

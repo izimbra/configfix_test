@@ -1,0 +1,9 @@
+SMSC9420: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SMSC [=n] && PCI [=n]
+
+MOXART_WDT: n => mod
+    Direct dependencies:  WATCHDOG [=n] && (ARCH_MOXART || COMPILE_TEST [=n])
+
+MFD_AC100: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SUNXI_RSB [=n]
+

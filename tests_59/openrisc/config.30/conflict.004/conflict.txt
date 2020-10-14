@@ -1,0 +1,3 @@
+WCN36XX: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && MAC80211 [=n] && HAS_DMA [=y] && (QCOM_WCNSS_CTRL [=n] || QCOM_WCNSS_CTRL [=n]=n) && (RPMSG [=n] || RPMSG [=n]=n)
+

@@ -1,0 +1,3 @@
+PARIDE_KTTI: n => mod
+    Direct dependencies:  BLK_DEV [=y] && PARIDE [=n]
+

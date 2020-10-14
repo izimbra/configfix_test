@@ -1,0 +1,6 @@
+MTD_CFI_I8 => yes
+MTD => yes
+MTD_CFI_ADV_OPTIONS => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_NOSWAP => yes
+MTD_MAP_BANK_WIDTH_16 => yes

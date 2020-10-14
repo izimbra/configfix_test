@@ -1,0 +1,3 @@
+WLAN_VENDOR_INTEL: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n]
+

@@ -1,0 +1,6 @@
+TCP_CONG_CUBIC: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && TCP_CONG_ADVANCED [=n] || NET [=n] && INET [=n] && !TCP_CONG_ADVANCED [=n]
+
+B53_SERDES: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && B53 [=n]
+

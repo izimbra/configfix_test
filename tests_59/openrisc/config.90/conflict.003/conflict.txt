@@ -1,0 +1,3 @@
+JOYSTICK_GAMECON: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && PARPORT [=m]
+

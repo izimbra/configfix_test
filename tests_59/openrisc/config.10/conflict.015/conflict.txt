@@ -1,0 +1,9 @@
+SENSORS_VT1211: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+SND_CMIPCI: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_PCI [=n]
+
+EDAC_LEGACY_SYSFS: n => yes
+    Direct dependencies:  EDAC [=n]
+

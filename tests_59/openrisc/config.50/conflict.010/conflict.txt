@@ -1,0 +1,6 @@
+CAN_TI_HECC: n => yes
+    Direct dependencies:  NET [=y] && CAN [=y] && CAN_DEV [=n] && ARM
+
+PCI_HOST_THUNDER_ECAM: n => yes
+    Direct dependencies:  PCI [=n] && (ARM64 || COMPILE_TEST [=n]) && (OF [=y] || ACPI && PCI_QUIRKS [=n])
+

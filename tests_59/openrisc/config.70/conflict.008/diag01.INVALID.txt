@@ -1,0 +1,4 @@
+PHANTOM => mod
+SCSI_PROC_FS => yes
+PCI => yes
+SCSI => yes

@@ -1,0 +1,9 @@
+L2TP_DEBUGFS: n => yes
+    Direct dependencies:  NET [=y] && L2TP [=n] && DEBUG_FS [=n]
+
+PCMCIA_ALCHEMY_DEVBOARD: n => yes
+    Direct dependencies:  PCCARD [=y] && MIPS_ALCHEMY && PCMCIA [=n]
+
+BLK_DEV_FD: n => yes
+    Direct dependencies:  BLK_DEV [=n] && ARCH_MAY_HAVE_PC_FDC
+

@@ -1,0 +1,8 @@
+IPV6_MIP6 => mod
+NET_VENDOR_AURORA => yes
+IPV6 => yes
+NET => yes
+INET => yes
+KUNIT_ALL_TESTS => no
+ETHERNET => yes
+NETDEVICES => yes

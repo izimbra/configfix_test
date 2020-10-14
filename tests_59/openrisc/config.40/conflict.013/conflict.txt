@@ -1,0 +1,10 @@
+SENSORS_DRIVETEMP: n => yes
+    Direct dependencies:  HWMON [=n] && SCSI [=y] && ATA [=y]
+
+DVB_TDA8261: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_BUDGET_AV [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_BUDGET_CORE [=n] && I2C [=y] && VIDEO_DEV [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+SND_RME32: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=y] && SND_PCI [=n]
+

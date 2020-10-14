@@ -1,0 +1,9 @@
+REGULATOR_STM32_BOOSTER: n => mod
+    Direct dependencies:  REGULATOR [=y] && (ARCH_STM32 || COMPILE_TEST [=n])
+
+SND_X86: n => yes
+    Direct dependencies:  SOUND [=m] && !UML && SND [=n] && X86
+
+COMMON_CLK_MT8183_IPU_ADL: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_MEDIATEK || COMPILE_TEST [=n]) && COMMON_CLK_MT8183 [=n]
+

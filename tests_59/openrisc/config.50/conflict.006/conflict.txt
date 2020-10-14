@@ -1,0 +1,6 @@
+SLIM_QCOM_NGD_CTRL: n => yes
+    Direct dependencies:  SLIMBUS [=n] && HAS_IOMEM [=y] && DMA_ENGINE [=y] && NET [=y] && (ARCH_QCOM || COMPILE_TEST [=n])
+
+DEBUG_INFO_BTF: n => yes
+    Direct dependencies:  DEBUG_INFO [=n] && !DEBUG_INFO_SPLIT [=n] && !DEBUG_INFO_REDUCED [=n] && (!GCC_PLUGIN_RANDSTRUCT [=n] || COMPILE_TEST [=n])
+

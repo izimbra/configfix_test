@@ -1,0 +1,6 @@
+MTD_NAND_QCOM: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n] && (ARCH_QCOM || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+
+BLK_DEV_RNBD_CLIENT: n => yes
+    Direct dependencies:  BLK_DEV [=n] && INFINIBAND_RTRS_CLIENT [=n]
+

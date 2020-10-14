@@ -1,0 +1,3 @@
+MTD_SA1100: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && MTD_CFI [=n] && ARCH_SA1100
+

@@ -1,0 +1,8 @@
+NF_CONNTRACK_IRC => yes
+IGB_DCA => no
+NET => yes
+INET => yes
+NETFILTER => yes
+NF_CONNTRACK => yes
+MPTCP_KUNIT_TESTS => yes
+MPTCP => yes

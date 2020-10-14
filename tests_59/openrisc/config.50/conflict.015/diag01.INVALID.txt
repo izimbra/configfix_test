@@ -1,0 +1,5 @@
+VIDEO_TW2804 => yes
+RTC_DRV_DS1347 => yes
+LTC1660 => yes
+SPI => yes
+RTC_CLASS => yes

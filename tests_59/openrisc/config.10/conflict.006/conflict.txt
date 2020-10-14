@@ -1,0 +1,6 @@
+VDPA_SIM: n => yes
+    Direct dependencies:  VDPA [=n] && RUNTIME_TESTING_MENU [=n] && HAS_DMA [=y]
+
+CLK_RASPBERRYPI: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && (RASPBERRYPI_FIRMWARE || COMPILE_TEST [=n] && !RASPBERRYPI_FIRMWARE)
+

@@ -1,0 +1,3 @@
+MTD_NAND_S3C2410_DEBUG: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n] && MTD_NAND_S3C2410 [=n]
+

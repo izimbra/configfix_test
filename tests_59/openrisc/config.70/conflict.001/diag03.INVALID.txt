@@ -1,0 +1,3 @@
+PARIDE_KTTI => mod
+PARIDE => mod
+PARPORT_PC => yes

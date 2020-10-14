@@ -1,0 +1,10 @@
+KERNEL_ZSTD: n => yes
+    Direct dependencies:  <choice> && HAVE_KERNEL_ZSTD [=n]
+
+SND_I2S_HI6210_I2S: n => mod
+    Direct dependencies:  SOUND [=m] && !UML && SND [=n] && SND_SOC [=n]
+
+SND_SOC_WM8750: n => yes
+    Direct dependencies:  SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_I2C_AND_SPI [=n]
+    Reverse dependencies: SND_PXA2XX_SOC_SPITZ [=n] && SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && SND_PXA2XX_SOC [=n] && PXA_SHARP_Cxx00 && I2C [=y] || SND_PXA2XX_SOC_Z2 [=n] && SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && SND_PXA2XX_SOC [=n] && MACH_ZIPIT2 && I2C [=y] || SND_SOC_SAMSUNG_JIVE_WM8750 [=n] && SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && MACH_JIVE && I2C [=y] || SND_SOC_SMARTQ [=n] && SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && (MACH_SMARTQ || COMPILE_TEST [=n]) && (GPIOLIB [=y] || COMPILE_TEST [=n]) && I2C [=y]
+

@@ -1,0 +1,3 @@
+MTD_NETSC520: n => mod
+    Direct dependencies:  MTD [=m] && HAS_IOMEM [=y] && (MELAN || COMPILE_TEST [=n]) && MTD_CFI [=m]
+

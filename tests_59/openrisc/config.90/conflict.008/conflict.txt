@@ -1,0 +1,6 @@
+MACINTOSH_DRIVERS: n => yes
+    Direct dependencies:  PPC || MAC || X86
+
+NET_DSA_SJA1105: m => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m] && SPI [=y]
+

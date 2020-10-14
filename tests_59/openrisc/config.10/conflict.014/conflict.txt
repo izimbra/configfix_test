@@ -1,0 +1,9 @@
+IP6_NF_MATCH_HL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && NETFILTER_ADVANCED [=n]
+
+BT_HCIBPA10X: n => yes
+    Direct dependencies:  NET [=n] && BT [=n] && USB [=n]
+
+PCMCIA_DEBUG: n => yes
+    Direct dependencies:  PCCARD [=n] && (PCMCIA_SA1111 [=n] || PCMCIA_SA1100 [=n] || PCMCIA_PXA2XX [=n])
+

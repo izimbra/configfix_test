@@ -1,0 +1,9 @@
+NET_CLS_FLOWER: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+HP_WATCHDOG: n => yes
+    Direct dependencies:  WATCHDOG [=y] && X86 && PCI [=n]
+
+OMAP2_DSS_COLLECT_IRQ_STATS: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_OMAP [=n] && OMAP2_DSS [=n] && OMAP2_DSS_DEBUGFS [=n]
+

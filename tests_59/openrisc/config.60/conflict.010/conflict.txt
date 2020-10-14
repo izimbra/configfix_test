@@ -1,0 +1,6 @@
+CLS_U32_PERF: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n] && NET_CLS_U32 [=n]
+
+BT_MTKUART: n => yes
+    Direct dependencies:  NET [=n] && BT [=n] && SERIAL_DEV_BUS [=y]
+

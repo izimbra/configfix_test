@@ -1,0 +1,10 @@
+CAN_MCBA_USB => yes
+PD6729 => yes
+CAN_DEV => yes
+PCMCIA => yes
+PCI => yes
+PCI_QUIRKS => yes
+VGA_ARB => yes
+VGA_ARB_MAX_GPUS => 0
+PCIEASPM => yes
+PCIEASPM_POWERSAVE => yes

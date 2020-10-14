@@ -1,0 +1,4 @@
+MTD_MAP_BANK_WIDTH_1: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_CFI_GEOMETRY [=n] && MTD [=n] && MTD_CFI_ADV_OPTIONS [=n] && !MTD_MAP_BANK_WIDTH_2 [=n] && !MTD_MAP_BANK_WIDTH_4 [=n] && !MTD_MAP_BANK_WIDTH_8 [=n] && !MTD_MAP_BANK_WIDTH_16 [=n] && !MTD_MAP_BANK_WIDTH_32 [=n]
+

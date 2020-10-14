@@ -1,0 +1,10 @@
+MT7603E: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_MEDIATEK [=y] && MAC80211 [=y] && PCI [=n]
+
+DVB_TDA8261: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y]
+    Reverse dependencies: DVB_BUDGET_AV [=n] && MEDIA_SUPPORT [=y] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_BUDGET_CORE [=n] && I2C [=y] && VIDEO_DEV [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+DRM_NOUVEAU_SVM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DEVICE_PRIVATE [=n] && DRM_NOUVEAU [=n] && MMU [=y] && STAGING [=y]
+

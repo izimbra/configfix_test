@@ -1,0 +1,7 @@
+KERNEL_ZSTD => yes
+SND_I2S_HI6210_I2S => mod
+SND_SOC_WM8750 => yes
+SND_SOC => yes
+SOUND => yes
+SND => yes
+SND_HDA_PREALLOC_SIZE => 32768

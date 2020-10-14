@@ -1,0 +1,9 @@
+KERNEL_LZ4: n => yes
+    Direct dependencies:  <choice> && HAVE_KERNEL_LZ4 [=n]
+
+DRM_THINE_THC63LVD1024: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+SND_BT87X: n => yes
+    Direct dependencies:  SOUND [=m] && !UML && SND [=n] && SND_PCI [=n]
+

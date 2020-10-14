@@ -1,0 +1,9 @@
+BRIDGE_EBT_PKTTYPE: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && BRIDGE_NF_EBTABLES [=n]
+
+MAC80211: n => mod
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && CFG80211 [=n]
+
+IMX_WEIM: n => yes
+    Direct dependencies:  ARCH_MXC
+

@@ -1,0 +1,9 @@
+IPV6_SIT => mod
+PCNET32 => mod
+IPV6 => mod
+NET => yes
+INET => yes
+ETHERNET => yes
+NETDEVICES => yes
+NET_VENDOR_AMD => yes
+PCI => yes

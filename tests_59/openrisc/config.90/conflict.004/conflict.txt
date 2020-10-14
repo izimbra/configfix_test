@@ -1,0 +1,3 @@
+SENSORS_VT8231: n => yes
+    Direct dependencies:  HWMON [=y] && PCI [=n]
+

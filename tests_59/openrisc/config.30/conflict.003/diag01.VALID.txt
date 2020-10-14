@@ -1,0 +1,7 @@
+PCMCIA_3C589 => yes
+ETHERNET => yes
+PCMCIA => yes
+NETDEVICES => yes
+PCCARD => yes
+NET => yes
+NET_VENDOR_3COM => yes

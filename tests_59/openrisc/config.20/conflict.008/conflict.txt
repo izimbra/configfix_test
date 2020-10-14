@@ -1,0 +1,6 @@
+MTD_SCx200_DOCFLASH: n => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && SCx200 && MTD_CFI [=n]
+
+PARPORT_SERIAL: n => yes
+    Direct dependencies:  PARPORT [=n] && SERIAL_8250_PCI [=n] && PARPORT_PC [=n] && PCI [=n]
+

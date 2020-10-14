@@ -1,0 +1,5 @@
+WLAN_VENDOR_INTEL => yes
+WLAN => yes
+NETDEVICES => yes
+NET => yes
+WIRELESS => yes

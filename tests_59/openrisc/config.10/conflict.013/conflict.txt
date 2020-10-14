@@ -1,0 +1,9 @@
+NET_SCH_RED: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+CHARGER_BQ2515X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+VIDEO_EM28XX: n => yes
+    Direct dependencies:  USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_DEV [=n] && I2C [=n]
+

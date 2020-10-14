@@ -1,0 +1,5 @@
+PCIE_UNIPHIER_EP => yes
+RAID_ATTRS => yes
+PATA_NETCELL => mod
+PCI => yes
+PCI_ENDPOINT => yes

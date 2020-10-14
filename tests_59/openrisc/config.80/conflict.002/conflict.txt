@@ -1,0 +1,4 @@
+PCI_HYPERV_INTERFACE: n => yes
+    Direct dependencies:  PCI [=n] && X86 && HYPERV [=n] && PCI_MSI [=n] && PCI_MSI_IRQ_DOMAIN [=n] && X86_64
+    Reverse dependencies: PCI_HYPERV [=n] && PCI [=n] && X86_64 && HYPERV [=n] && PCI_MSI [=n] && PCI_MSI_IRQ_DOMAIN [=n] && SYSFS [=y]
+

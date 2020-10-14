@@ -1,0 +1,9 @@
+RDS_RDMA: n => yes
+    Direct dependencies:  NET [=n] && RDS [=n] && INFINIBAND [=n] && INFINIBAND_ADDR_TRANS [=n]
+
+RFKILL: n => mod
+    Direct dependencies:  NET [=n]
+
+MTD_SHARPSL_PARTS: n => mod
+    Direct dependencies:  MTD [=m] && (MTD_NAND_SHARPSL [=n] || MTD_NAND_TMIO [=n] || COMPILE_TEST [=n])
+

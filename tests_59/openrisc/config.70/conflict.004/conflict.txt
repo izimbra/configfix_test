@@ -1,0 +1,3 @@
+INPUT_PMIC8XXX_PWRKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_PM8XXX [=n]
+

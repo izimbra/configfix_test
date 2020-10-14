@@ -1,0 +1,4 @@
+HDLC => yes
+NETDEVICES => yes
+WAN => yes
+NET => yes

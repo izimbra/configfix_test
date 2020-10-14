@@ -1,0 +1,7 @@
+NETFILTER_NETLINK_QUEUE: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NETFILTER_ADVANCED [=n]
+    Reverse dependencies: NETFILTER_XT_TARGET_NFQUEUE [=n] && NET [=y] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n]
+
+AX88796_93CX6: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && AX88796 [=n]
+

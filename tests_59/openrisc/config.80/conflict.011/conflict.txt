@@ -1,0 +1,10 @@
+USB_NET_CDCETHER: n => yes
+    Direct dependencies:  NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n]
+    Reverse dependencies: USB_NET_CDC_NCM [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_RNDIS_HOST [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_ZAURUS [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_RNDIS_WLAN [=n] && NETDEVICES [=n] && WLAN [=n] && USB [=y] && CFG80211 [=n]
+
+FB_AMIGA_AGA: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB_AMIGA [=n]
+
+FB_MB862XX_PCI_GDC: n => yes
+    Direct dependencies:  <choice> && PCI [=n]
+

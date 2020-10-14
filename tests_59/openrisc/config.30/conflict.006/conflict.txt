@@ -1,0 +1,6 @@
+DELL_RBU: n => mod
+    Direct dependencies:  X86_PLATFORM_DEVICES [=n] && X86
+
+SUN50I_IOMMU: n => yes
+    Direct dependencies:  IOMMU_SUPPORT [=n] && HAS_DMA [=y] && (ARCH_SUNXI || COMPILE_TEST [=n])
+

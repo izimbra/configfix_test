@@ -1,0 +1,3 @@
+TOUCHSCREEN_ATMEL_MXT: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && I2C [=y]
+

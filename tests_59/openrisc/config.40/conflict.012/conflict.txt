@@ -1,0 +1,10 @@
+SND_SOC_ROCKCHIP_I2S: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=y] && SND_SOC [=y] && CLKDEV_LOOKUP [=y] && SND_SOC_ROCKCHIP [=n]
+    Reverse dependencies: SND_SOC_ROCKCHIP_MAX98090 [=n] && SOUND [=y] && !UML && SND [=y] && SND_SOC [=y] && SND_SOC_ROCKCHIP [=n] && I2C [=y] && GPIOLIB [=y] && CLKDEV_LOOKUP [=y] || SND_SOC_ROCKCHIP_RT5645 [=n] && SOUND [=y] && !UML && SND [=y] && SND_SOC [=y] && SND_SOC_ROCKCHIP [=n] && I2C [=y] && GPIOLIB [=y] && CLKDEV_LOOKUP [=y] || SND_SOC_RK3288_HDMI_ANALOG [=n] && SOUND [=y] && !UML && SND [=y] && SND_SOC [=y] && SND_SOC_ROCKCHIP [=n] && I2C [=y] && GPIOLIB [=y] && CLKDEV_LOOKUP [=y] || SND_SOC_RK3399_GRU_SOUND [=n] && SOUND [=y] && !UML && SND [=y] && SND_SOC [=y] && SND_SOC_ROCKCHIP [=n] && I2C [=y] && GPIOLIB [=y] && CLKDEV_LOOKUP [=y] && SPI [=n]
+
+USB_SERIAL_ARK3116: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_SERIAL [=n]
+
+COMEDI_ADDI_APCI_16XX: n => yes
+    Direct dependencies:  STAGING [=y] && COMEDI [=y] && COMEDI_PCI_DRIVERS [=n]
+

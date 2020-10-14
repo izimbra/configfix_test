@@ -1,0 +1,11 @@
+MTD_DOCG3 => yes
+PARIDE_PD => yes
+MTD => yes
+PARIDE => yes
+BLOCK => yes
+PARPORT_PC => yes
+PARTITION_ADVANCED => yes
+PARPORT => yes
+BLK_DEV => yes
+EXT4_KUNIT_TESTS => yes
+EXT4_FS => yes

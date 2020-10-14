@@ -1,0 +1,9 @@
+MTD_NAND_S3C2410_CLKSTOP: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && MTD_NAND_S3C2410 [=n]
+
+SND_SOC_STM32_I2S: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && (ARCH_STM32 && OF [=y] || COMPILE_TEST [=y]) && SND_SOC [=n]
+
+MOST_VIDEO: m => yes
+    Direct dependencies:  STAGING [=y] && MOST_COMPONENTS [=y] && VIDEO_V4L2 [=m]
+

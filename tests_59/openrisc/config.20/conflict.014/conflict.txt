@@ -1,0 +1,10 @@
+NF_LOG_IPV6: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n]
+    Reverse dependencies: NETFILTER_XT_TARGET_LOG [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && IP6_NF_IPTABLES [=n]
+
+BT_HCIUART_BCM: n => yes
+    Direct dependencies:  NET [=n] && BT [=n] && BT_HCIUART [=n] && BT_HCIUART_SERDEV [=n] && (!ACPI || SERIAL_DEV_CTRL_TTYPORT [=n]) && GPIOLIB [=y]
+
+PCMCIA_ALCHEMY_DEVBOARD: n => yes
+    Direct dependencies:  PCCARD [=n] && MIPS_ALCHEMY && PCMCIA [=n]
+

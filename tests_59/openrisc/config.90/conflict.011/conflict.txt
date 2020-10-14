@@ -1,0 +1,9 @@
+SPI_TOPCLIFF_PCH: n => mod
+    Direct dependencies:  SPI [=y] && SPI_MASTER [=y] && PCI [=n] && (X86_32 || MIPS || COMPILE_TEST [=y])
+
+USB_SL811_CS: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_SL811_HCD [=y] && PCMCIA [=n]
+
+MMC_ARMMMCI: n => yes
+    Direct dependencies:  MMC [=y] && ARM_AMBA [=n]
+

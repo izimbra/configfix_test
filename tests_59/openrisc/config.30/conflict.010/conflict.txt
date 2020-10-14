@@ -1,0 +1,6 @@
+DEFAULT_CODEL: n => yes
+    Direct dependencies:  <choice>
+
+BT_HCIBPA10X: n => yes
+    Direct dependencies:  NET [=n] && BT [=n] && USB [=n]
+

@@ -1,0 +1,6 @@
+IIO_ST_PRESS: n => yes
+    Direct dependencies:  IIO [=m] && (I2C [=y] || SPI_MASTER [=y]) && SYSFS [=y]
+
+FORTIFY_SOURCE: n => yes
+    Direct dependencies:  ARCH_HAS_FORTIFY_SOURCE [=n]
+

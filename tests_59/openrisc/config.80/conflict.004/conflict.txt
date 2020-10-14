@@ -1,0 +1,3 @@
+HDLC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WAN [=n]
+

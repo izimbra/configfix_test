@@ -1,0 +1,9 @@
+NET_SCH_CHOKE: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+SENSORS_NCT7904: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n] && WATCHDOG [=n]
+
+VIDEO_SUN6I_CSI: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_V4L2 [=n] && COMMON_CLK [=n] && HAS_DMA [=y] && (ARCH_SUNXI || COMPILE_TEST [=n])
+

@@ -1,0 +1,7 @@
+CLS_U32_PERF => yes
+BT_MTKUART => yes
+NET_CLS_U32 => mod
+NET => yes
+NET_SCHED => yes
+BT => yes
+CRYPTO_CMAC => yes

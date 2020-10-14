@@ -1,0 +1,10 @@
+MTD_DOCG3 => yes
+PARIDE_PD => yes
+MTD => yes
+PARIDE => yes
+BLOCK => yes
+PARPORT_PC => yes
+PARTITION_ADVANCED => yes
+PARPORT => yes
+BLK_DEV => yes
+KUNIT_ALL_TESTS => no

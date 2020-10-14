@@ -1,0 +1,6 @@
+KEYBOARD_SNVS_PWRKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (ARCH_MXC || COMPILE_TEST [=n]) && OF [=y]
+
+TOUCHSCREEN_BU21029: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_TOUCHSCREEN [=n] && I2C [=y]
+

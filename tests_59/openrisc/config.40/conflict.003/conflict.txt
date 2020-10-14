@@ -1,0 +1,3 @@
+ARM_ETHERH: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && ARM && ARCH_ACORN
+

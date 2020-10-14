@@ -1,0 +1,8 @@
+USB_GSPCA_BENQ => yes
+VIDEO_MXB => mod
+MEDIA_SUPPORT => yes
+USB_GSPCA => yes
+MEDIA_SUBDRV_AUTOSELECT => no
+VIDEO_DEV => yes
+MEDIA_PCI_SUPPORT => yes
+PCI => yes

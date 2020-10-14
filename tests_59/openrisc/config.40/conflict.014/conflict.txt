@@ -1,0 +1,9 @@
+NETFILTER_XT_MATCH_CPU: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=y] && NETFILTER_ADVANCED [=n]
+
+NET_EMATCH_META: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n] && NET_EMATCH [=n]
+
+SND_ATIIXP_MODEM: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=y] && SND_PCI [=n]
+

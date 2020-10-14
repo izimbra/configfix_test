@@ -1,0 +1,3 @@
+FCOE: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI [=m] && PCI [=n] && LIBFCOE [=m]
+

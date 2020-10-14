@@ -1,0 +1,5 @@
+NFC_ST_NCI_SPI => yes
+SPI => yes
+NFC => yes
+NET => yes
+NFC_NCI => yes

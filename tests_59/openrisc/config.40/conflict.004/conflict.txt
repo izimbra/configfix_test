@@ -1,0 +1,3 @@
+TOUCHSCREEN_UCB1400: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && AC97_BUS [=n] && UCB1400_CORE [=n]
+

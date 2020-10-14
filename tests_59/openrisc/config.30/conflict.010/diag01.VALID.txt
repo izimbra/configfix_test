@@ -1,0 +1,14 @@
+DEFAULT_CODEL => yes
+BT_HCIBPA10X => yes
+NET_SCH_CODEL => yes
+NET_SCH_DEFAULT => yes
+NET => yes
+NET_SCHED => yes
+USB => yes
+BT => yes
+USB_SUPPORT => yes
+CRC16 => yes
+CRYPTO_ECB => yes
+USB_AUTOSUSPEND_DELAY => 1
+NLS => yes
+NLS_DEFAULT => 

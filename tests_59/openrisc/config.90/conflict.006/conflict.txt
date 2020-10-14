@@ -1,0 +1,6 @@
+WINDFARM_RM31: n => mod
+    Direct dependencies:  MACINTOSH_DRIVERS [=n] && WINDFARM [=n] && I2C [=y] && CPU_FREQ_PMAC64 && ADB_PMU [=n]
+
+USB_CATC: m => yes
+    Direct dependencies:  NETDEVICES [=y] && USB_NET_DRIVERS [=m]
+

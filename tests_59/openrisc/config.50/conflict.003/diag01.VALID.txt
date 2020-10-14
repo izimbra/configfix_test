@@ -1,0 +1,7 @@
+MSCC_OCELOT_SWITCH => yes
+NET_SWITCHDEV => yes
+ETHERNET => yes
+INET => yes
+NET_VENDOR_MICROSEMI => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

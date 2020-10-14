@@ -1,0 +1,6 @@
+SERIAL_QCOM_GENI: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && (ARCH_QCOM || COMPILE_TEST [=n]) && QCOM_GENI_SE [=n]
+
+R3964: n => yes
+    Direct dependencies:  TTY [=y] && BROKEN [=n]
+

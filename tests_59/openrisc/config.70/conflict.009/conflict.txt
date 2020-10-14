@@ -1,0 +1,6 @@
+NFT_COMPAT: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NETFILTER_XTABLES [=n]
+
+NFP_DEBUG: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_NETRONOME [=n] && NFP [=n]
+

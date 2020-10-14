@@ -1,0 +1,9 @@
+NET_VENDOR_TUNDRA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && TSI108_BRIDGE
+
+USB_GL860: n => mod
+    Direct dependencies:  USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=y] && VIDEO_V4L2 [=m] && USB_GSPCA [=n]
+
+STA2X11_VIP: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=y] && PCI [=n] && VIDEO_V4L2 [=m] && VIRT_TO_BUS [=n] && I2C [=y] && (STA2X11 || COMPILE_TEST [=n])
+

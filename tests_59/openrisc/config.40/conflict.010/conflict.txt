@@ -1,0 +1,6 @@
+CAN_MCBA_USB: n => yes
+    Direct dependencies:  NET [=y] && CAN [=y] && CAN_DEV [=n] && USB [=y]
+
+PD6729: n => yes
+    Direct dependencies:  PCCARD [=y] && PCMCIA [=n] && PCI [=n]
+

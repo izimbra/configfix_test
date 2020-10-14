@@ -1,0 +1,6 @@
+SERIAL_8250_CS: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && PCMCIA [=n] && SERIAL_8250 [=n]
+
+SERIAL_MXS_AUART: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && (ARCH_MXS || MACH_ASM9260 || COMPILE_TEST [=n])
+

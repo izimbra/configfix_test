@@ -1,0 +1,6 @@
+MTD_DOCG3: m => yes
+    Direct dependencies:  MTD [=m] && HAS_IOMEM [=y]
+
+PARIDE_PD: n => yes
+    Direct dependencies:  BLK_DEV [=n] && PARIDE [=n]
+

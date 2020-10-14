@@ -1,0 +1,3 @@
+HZ_PERIODIC: y => no
+    Direct dependencies:  <choice>
+

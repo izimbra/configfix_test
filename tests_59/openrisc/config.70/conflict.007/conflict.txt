@@ -1,0 +1,6 @@
+HW_RANDOM_ATMEL: n => yes
+    Direct dependencies:  HW_RANDOM [=m] && ARCH_AT91 && HAVE_CLK [=n] && OF [=y]
+
+I2C_AXXIA: n => mod
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && (ARCH_AXXIA || COMPILE_TEST [=n])
+

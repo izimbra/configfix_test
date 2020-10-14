@@ -1,0 +1,10 @@
+DRM_PANEL_SAMSUNG_S6E63M0: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+QLGE: n => yes
+    Direct dependencies:  STAGING [=y] && ETHERNET [=n] && PCI [=n]
+
+SECURITY_TOMOYO_OMIT_USERSPACE_LOADER: n => yes
+    Direct dependencies:  SECURITY_TOMOYO [=n]
+    Reverse dependencies: SECURITY_TOMOYO_INSECURE_BUILTIN_SETTING [=n] && SECURITY_TOMOYO [=n]
+

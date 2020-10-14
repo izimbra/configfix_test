@@ -1,0 +1,6 @@
+NET_SCH_MULTIQ: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+BT_LE: n => yes
+    Direct dependencies:  NET [=n] && BT [=n]
+

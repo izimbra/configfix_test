@@ -1,0 +1,6 @@
+MISDN_NETJET: n => yes
+    Direct dependencies:  ISDN [=n] && MISDN [=n] && PCI [=n] && TTY [=y]
+
+JOYSTICK_TWIDJOY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+

@@ -1,0 +1,10 @@
+SND_SOC_WM8960: n => mod
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && I2C [=y]
+    Reverse dependencies: SND_SOC_MT2701_WM8960 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_MT2701 [=n] && I2C [=y] || SND_SOC_P1022_RDK [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_POWERPC_SOC [=n] && P1022_RDK && I2C [=y]
+
+CIFS_DEBUG2: n => yes
+    Direct dependencies:  NETWORK_FILESYSTEMS [=y] && CIFS_DEBUG [=n]
+
+IDE_GENERIC: n => yes
+    Direct dependencies:  IDE [=n] && (ALPHA || X86 || IA64 || MIPS || ARCH_RPC)
+

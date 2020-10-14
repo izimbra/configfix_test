@@ -1,0 +1,6 @@
+VIDEO_IMX7_CSI: n => yes
+    Direct dependencies:  STAGING [=n] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=n] && VIDEO_IMX_MEDIA [=n] && VIDEO_DEV [=n] && I2C [=n]
+
+SUN9I_A80_CCU: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && SUNXI_CCU [=n] && (MACH_SUN9I || COMPILE_TEST [=n])
+

@@ -1,0 +1,9 @@
+KERNEL_BZIP2: n => yes
+    Direct dependencies:  <choice> && HAVE_KERNEL_BZIP2 [=n]
+
+HP_WIRELESS: n => mod
+    Direct dependencies:  X86 && X86_PLATFORM_DEVICES [=n] && ACPI && INPUT [=y]
+
+TEGRA124_EMC: n => yes
+    Direct dependencies:  MEMORY [=y] && TEGRA_MC [=n] && ARCH_TEGRA_124_SOC [=n]
+

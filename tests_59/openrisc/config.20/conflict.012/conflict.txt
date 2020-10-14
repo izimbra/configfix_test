@@ -1,0 +1,10 @@
+KERNEL_LZO: n => yes
+    Direct dependencies:  <choice> && HAVE_KERNEL_LZO [=n]
+
+VIDEO_TW9906: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=n] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+DRM_TEGRA_DEBUG: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_TEGRA [=n]
+

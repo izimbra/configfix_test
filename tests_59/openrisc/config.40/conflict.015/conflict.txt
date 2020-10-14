@@ -1,0 +1,9 @@
+TIGON3: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && PCI [=n]
+
+I2C_HYDRA: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && PCI [=n] && PPC_CHRP
+
+SND_SOC_INTEL_EHL_RT5660_MACH: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=y] && SND_SOC [=y] && SND_SOC_INTEL_MACH [=y] && SND_SOC_SOF_ELKHARTLAKE [=n] && I2C [=y] && ACPI && GPIOLIB [=y] && (MFD_INTEL_LPSS [=n] || COMPILE_TEST [=y]) && SND_HDA_CODEC_HDMI [=n] && SND_SOC_SOF_HDA_AUDIO_CODEC [=n]
+

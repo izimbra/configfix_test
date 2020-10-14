@@ -1,0 +1,9 @@
+VLAN_8021Q_GVRP: n => yes
+    Direct dependencies:  NET [=n] && VLAN_8021Q [=n]
+
+NFC_ST_NCI_SPI: n => yes
+    Direct dependencies:  NET [=n] && NFC [=n] && NFC_NCI [=n] && SPI [=n]
+
+MTD_L440GX: n => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && X86 && MTD_JEDECPROBE [=y]
+

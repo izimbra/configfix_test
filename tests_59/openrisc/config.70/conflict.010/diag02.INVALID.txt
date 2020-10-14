@@ -1,0 +1,7 @@
+BT_BNEP => yes
+PCI_MESON => yes
+BT_BREDR => yes
+BT => mod
+PCI_MSI => yes
+PCI => yes
+CRYPTO_ECDH => yes

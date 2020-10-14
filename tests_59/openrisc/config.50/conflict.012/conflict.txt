@@ -1,0 +1,9 @@
+KERNEL_LZ4: n => yes
+    Direct dependencies:  <choice> && HAVE_KERNEL_LZ4 [=n]
+
+SND_SOC_FSL_MQS: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_FSL_SAI [=n]
+
+SND_SOC_TAS5720: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && I2C [=y]
+

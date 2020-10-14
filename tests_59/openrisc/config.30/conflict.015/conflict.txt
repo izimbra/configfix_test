@@ -1,0 +1,9 @@
+TEGRA_SOCTHERM: n => mod
+    Direct dependencies:  THERMAL [=y] && ARCH_TEGRA
+
+SND_PXA2XX_SOC_IMOTE2: n => yes
+    Direct dependencies:  SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && SND_PXA2XX_SOC [=n] && MACH_INTELMOTE2 && I2C [=y]
+
+UIO_HV_GENERIC: n => yes
+    Direct dependencies:  UIO [=n] && HYPERV [=n]
+

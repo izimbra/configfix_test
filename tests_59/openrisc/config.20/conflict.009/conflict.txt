@@ -1,0 +1,7 @@
+TCP_CONG_LP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && TCP_CONG_ADVANCED [=n]
+
+NET_VENDOR_BROADCOM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (SSB_POSSIBLE [=y] && HAS_DMA [=y] || PCI [=n] || BCM63XX || SIBYTE_SB1xxx_SOC)
+    Reverse dependencies: SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=y] && NET [=n] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) || SCSI_BNX2X_FCOE [=n] && SCSI_LOWLEVEL [=n] && SCSI [=y] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) && LIBFC [=n] && LIBFCOE [=n] || INFINIBAND_BNXT_RE [=n] && INFINIBAND [=n] && (INFINIBAND_USER_ACCESS [=n] || !INFINIBAND_USER_ACCESS [=n]) && 64BIT && ETHERNET [=n] && NETDEVICES [=n] && PCI [=n] && INET [=n] && DCB [=n]
+

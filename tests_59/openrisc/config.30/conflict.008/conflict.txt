@@ -1,0 +1,6 @@
+MTD_TSUNAMI: n => mod
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && ALPHA_TSUNAMI && MTD_COMPLEX_MAPPINGS [=n]
+
+MTD_LPDDR2_NVM: n => yes
+    Direct dependencies:  MTD [=n] && ARM
+

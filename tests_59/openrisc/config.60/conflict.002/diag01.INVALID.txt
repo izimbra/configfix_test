@@ -1,0 +1,3 @@
+PCI_PF_STUB => yes
+PCI_IOV => yes
+PCI => yes

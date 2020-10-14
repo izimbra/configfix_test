@@ -1,0 +1,3 @@
+MTD_MAP_BANK_WIDTH_8: n => yes
+    Direct dependencies:  MTD [=y]
+

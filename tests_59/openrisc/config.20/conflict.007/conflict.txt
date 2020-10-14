@@ -1,0 +1,6 @@
+KEYBOARD_IPAQ_MICRO: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && MFD_IPAQ_MICRO [=n]
+
+TOUCHSCREEN_S6SY761: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && I2C [=n]
+

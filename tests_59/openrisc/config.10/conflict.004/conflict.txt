@@ -1,0 +1,3 @@
+ATH_REG_DYNAMIC_USER_REG_HINTS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && CFG80211_CERTIFICATION_ONUS [=n]
+

@@ -1,0 +1,6 @@
+MTD_POWERNV_FLASH: n => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && PPC_POWERNV
+
+BLK_DEV_AMD74XX: n => yes
+    Direct dependencies:  IDE [=n] && PCI [=n] && !ARM
+

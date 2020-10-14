@@ -1,0 +1,4 @@
+CRYPTO_DEFLATE => no
+UNUSED_SYMBOLS => yes
+INET_IPCOMP => no
+MODULES => yes

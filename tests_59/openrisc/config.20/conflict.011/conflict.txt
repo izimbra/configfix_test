@@ -1,0 +1,10 @@
+TI_DAVINCI_EMAC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_TI [=n] && (ARM && (ARCH_DAVINCI || ARCH_OMAP3) || COMPILE_TEST [=n])
+
+CPU5_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=n] && X86
+
+MFD_88PM860X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+    Reverse dependencies: SND_SOC_TTC_DKB [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_PXA910_SOC [=n] && MACH_TTC_DKB && I2C [=n]=y
+

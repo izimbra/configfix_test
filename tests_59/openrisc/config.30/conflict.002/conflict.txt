@@ -1,0 +1,3 @@
+PCIE_ECRC: n => yes
+    Direct dependencies:  PCI [=n] && PCIEAER [=n]
+

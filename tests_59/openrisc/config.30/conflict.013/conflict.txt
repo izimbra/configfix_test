@@ -1,0 +1,10 @@
+NET_CLS_MATCHALL: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+SENSORS_IIO_HWMON: n => yes
+    Direct dependencies:  HWMON [=m] && IIO [=n]
+
+VIDEO_TVP5150: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

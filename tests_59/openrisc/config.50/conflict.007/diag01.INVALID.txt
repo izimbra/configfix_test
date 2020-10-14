@@ -1,0 +1,4 @@
+SERIAL_QCOM_GENI => yes
+R3964 => yes
+QCOM_GENI_SE => yes
+COMPILE_TEST => yes
