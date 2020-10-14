@@ -1,0 +1,4 @@
+BLK_DEV_CMD640 => yes
+SCSI_UFS_BSG => yes
+IDE => yes
+SCSI_UFSHCD => yes

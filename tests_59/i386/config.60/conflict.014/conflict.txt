@@ -1,0 +1,9 @@
+EFI_BOOTLOADER_CONTROL: m => yes
+    Direct dependencies:  EFI [=y] && EFI_VARS [=m]
+
+NETFILTER_INGRESS: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+
+DRM_PANEL_NOVATEK_NT39016: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=m]
+

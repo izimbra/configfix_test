@@ -1,0 +1,6 @@
+CAN_MPC5XXX: n => yes
+    Direct dependencies:  NET [=y] && CAN [=m] && CAN_DEV [=n] && CAN_MSCAN [=n] && (PPC_MPC52xx || PPC_MPC512x)
+
+PCIE_UNIPHIER_EP: n => yes
+    Direct dependencies:  PCI [=n] && (ARCH_UNIPHIER || COMPILE_TEST [=y]) && OF [=y] && HAS_IOMEM [=y] && PCI_ENDPOINT [=n]
+

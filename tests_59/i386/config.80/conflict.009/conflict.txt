@@ -1,0 +1,6 @@
+TI_SCI_PROTOCOL: n => mod
+    Direct dependencies:  TI_MESSAGE_MANAGER [=n]
+
+USB_NET_MCS7830: m => yes
+    Direct dependencies:  NETDEVICES [=y] && USB_NET_DRIVERS [=m] && USB_USBNET [=m]
+

@@ -1,0 +1,10 @@
+TCG_XEN => yes
+XEN => yes
+PROC_VMCORE_DEVICE_DUMP => no
+OLPC => no
+CRASH_DUMP => no
+HIGHMEM4G => no
+X86_PAE => yes
+PROC_VMCORE => no
+NOHIGHMEM => yes
+USB_FUSB300 => yes

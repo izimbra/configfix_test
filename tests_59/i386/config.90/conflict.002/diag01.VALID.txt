@@ -1,0 +1,2 @@
+MTD_NAND_STM32_FMC2 => yes
+MTD_RAW_NAND => yes

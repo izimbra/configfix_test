@@ -1,0 +1,9 @@
+SCSI_AIC7XXX: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && (PCI [=n] || EISA [=y]) && SCSI [=n]
+
+MISDN: n => yes
+    Direct dependencies:  ISDN [=n]
+
+FB_MAXINE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=m]=y && MACH_DECSTATION
+

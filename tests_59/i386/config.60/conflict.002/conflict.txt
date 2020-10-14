@@ -1,0 +1,3 @@
+NET_IFE_SKBTCINDEX: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n] && NET_ACT_IFE [=n]
+

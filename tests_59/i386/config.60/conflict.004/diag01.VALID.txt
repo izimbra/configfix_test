@@ -1,0 +1,4 @@
+NET_VENDOR_VIA => yes
+ETHERNET => yes
+NETDEVICES => yes
+NET => yes

@@ -1,0 +1,3 @@
+PATA_PALMLD: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && MACH_PALMLD
+

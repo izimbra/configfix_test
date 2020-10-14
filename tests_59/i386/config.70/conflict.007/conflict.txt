@@ -1,0 +1,6 @@
+KEYBOARD_LOCOMO: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && SHARP_LOCOMO
+
+TOUCHSCREEN_USB_ZYTRONIC: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && TOUCHSCREEN_USB_COMPOSITE [=n]
+

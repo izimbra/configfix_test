@@ -1,0 +1,6 @@
+ARM_AT91_CPUIDLE: n => yes
+    Direct dependencies:  CPU_IDLE [=y] && (ARM || ARM64) && (ARCH_AT91 || COMPILE_TEST [=n]) && !ARM64
+
+EL3: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_3COM [=n] && (ISA [=y] || EISA [=y])
+

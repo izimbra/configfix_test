@@ -1,0 +1,6 @@
+IP_NF_FILTER => yes
+PROC_EVENTS => yes
+BLK_DEV_RZ1000 => yes
+IP_NF_IPTABLES => yes
+CONNECTOR => yes
+IDE => yes

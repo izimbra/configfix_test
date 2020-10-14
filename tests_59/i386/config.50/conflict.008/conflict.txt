@@ -1,0 +1,6 @@
+MAC80211_IBSS_DEBUG: n => yes
+    Direct dependencies:  NET [=y] && WIRELESS [=y] && MAC80211_DEBUG_MENU [=n]
+
+PCIE_IPROC_MSI: n => yes
+    Direct dependencies:  PCI [=n] && (PCIE_IPROC_PLATFORM [=n] || PCIE_IPROC_BCMA [=n]) && PCI_MSI_IRQ_DOMAIN [=n]
+

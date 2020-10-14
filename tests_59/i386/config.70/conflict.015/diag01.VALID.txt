@@ -1,0 +1,7 @@
+VIDEO_DW9807_VCM => yes
+COMEDI_ADV_PCI1723 => yes
+USB4 => yes
+MEDIA_CAMERA_SUPPORT => yes
+PCI => yes
+COMEDI_PCI_DRIVERS => yes
+PCI_GOBIOS => yes

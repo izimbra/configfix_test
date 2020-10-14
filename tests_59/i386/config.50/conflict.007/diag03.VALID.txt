@@ -1,0 +1,17 @@
+P54_COMMON => yes
+PC300TOO => mod
+WLAN => yes
+CRYPTO_NULL => yes
+CRYPTO_GCM => yes
+CRYPTO_CCM => yes
+WLAN_VENDOR_INTERSIL => yes
+CRYPTO_AES => yes
+CRYPTO_CTR => yes
+CRYPTO_CMAC => yes
+MAC80211 => yes
+CRC_CCITT => yes
+WAN => yes
+PCI => yes
+HDLC => mod
+PCI_GOMMCONFIG => yes
+PCI_MMCONFIG => yes

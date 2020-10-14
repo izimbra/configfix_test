@@ -1,0 +1,8 @@
+MPTCP => yes
+NET_SCH_FQ_PIE => yes
+PCIE_XILINX => yes
+INET => yes
+NET_SCHED => yes
+NET_SCH_PIE => yes
+PCI => yes
+PCI_GOBIOS => yes

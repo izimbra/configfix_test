@@ -1,0 +1,10 @@
+FB_PRE_INIT_FB: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=m] && FB_MB862XX_LIME [=n]
+
+SND_SOC_INTEL_CNL: n => yes
+    Direct dependencies:  SOUND [=m] && !UML && SND [=m] && SND_SOC [=m] && SND_SOC_INTEL_SST_TOPLEVEL [=y] && PCI [=n] && ACPI [=y] && COMMON_CLK [=y]
+    Reverse dependencies: SND_SOC_INTEL_SKYLAKE [=n] && SOUND [=m] && !UML && SND [=m] && SND_SOC [=m] && SND_SOC_INTEL_SST_TOPLEVEL [=y] && PCI [=n] && ACPI [=y] && COMMON_CLK [=y]
+
+USB_S3C2410_DEBUG: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && USB_S3C2410 [=n]
+

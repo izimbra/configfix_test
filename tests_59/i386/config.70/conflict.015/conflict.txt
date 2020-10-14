@@ -1,0 +1,9 @@
+VIDEO_DW9807_VCM: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && I2C [=y] && VIDEO_V4L2 [=y]
+
+COMEDI_ADV_PCI1723: n => yes
+    Direct dependencies:  STAGING [=y] && COMEDI [=y] && COMEDI_PCI_DRIVERS [=n]
+
+USB4: n => yes
+    Direct dependencies:  PCI [=n]
+

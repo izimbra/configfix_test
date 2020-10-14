@@ -1,0 +1,2 @@
+KERNEL_UNCOMPRESSED => yes
+KERNEL_LZO => no

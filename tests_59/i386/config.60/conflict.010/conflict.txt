@@ -1,0 +1,6 @@
+NETFILTER_XT_MATCH_PKTTYPE: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n]
+
+LAPB: n => yes
+    Direct dependencies:  NET [=n]
+

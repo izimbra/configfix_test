@@ -1,0 +1,10 @@
+MPTCP: n => yes
+    Direct dependencies:  NET [=y] && INET [=n]
+    Reverse dependencies: MPTCP_KUNIT_TESTS [=n] && NET [=y] && INET [=n] && KUNIT [=n]
+
+NET_SCH_FQ_PIE: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n] && NET_SCH_PIE [=n]
+
+PCIE_XILINX: n => yes
+    Direct dependencies:  PCI [=n] && (OF [=y] || COMPILE_TEST [=n])
+

@@ -1,0 +1,4 @@
+TIFM_CORE: n => mod
+    Direct dependencies:  PCI [=n]
+    Reverse dependencies: MMC_TIFM_SD [=n] && MMC [=y] && PCI [=n] || MEMSTICK_TIFM_MS [=n] && MEMSTICK [=m] && PCI [=n]
+

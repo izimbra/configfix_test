@@ -1,0 +1,3 @@
+TCG_XEN: n => yes
+    Direct dependencies:  TCG_TPM [=y] && XEN [=n]
+

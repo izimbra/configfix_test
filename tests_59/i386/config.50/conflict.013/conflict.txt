@@ -1,0 +1,11 @@
+NETFILTER_XT_CONNMARK: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=y] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=y]
+    Reverse dependencies: NETFILTER_XT_TARGET_CONNMARK [=n] && NET [=y] && INET [=n] && NETFILTER [=y] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=y] || NETFILTER_XT_MATCH_CONNMARK [=n] && NET [=y] && INET [=n] && NETFILTER [=y] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=y]
+
+SENSORS_IBMAEM: n => yes
+    Direct dependencies:  HWMON [=m] && IPMI_HANDLER [=n]
+
+MEDIA_TUNER_TDA9887: m => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=m] && MEDIA_SUPPORT [=m] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y] || MEDIA_TUNER_SIMPLE [=m] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+

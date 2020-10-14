@@ -1,0 +1,5 @@
+VIDEO_ATMEL_ISI => yes
+VIDEO_MT9P031 => yes
+MEDIA_SUPPORT => yes
+I2C_MUX => yes
+VIDEO_DEV => yes

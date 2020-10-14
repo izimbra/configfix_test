@@ -1,0 +1,6 @@
+POWER_RESET_BRCMSTB: n => yes
+    Direct dependencies:  POWER_RESET [=n] && (ARM || ARM64 || MIPS || COMPILE_TEST [=y]) && MFD_SYSCON [=y]
+
+SENSORS_JC42: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

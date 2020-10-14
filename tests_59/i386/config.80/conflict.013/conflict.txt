@@ -1,0 +1,9 @@
+DRM_I915: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && X86 [=y] && PCI [=n]
+
+HID_SENSOR_CUSTOM_SENSOR: n => mod
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_SENSOR_HUB [=n]
+
+XEN_ACPI_HOTPLUG_CPU: n => yes
+    Direct dependencies:  XEN [=n] && XEN_DOM0 [=n] && XEN_STUB [=n] && ACPI [=y]
+

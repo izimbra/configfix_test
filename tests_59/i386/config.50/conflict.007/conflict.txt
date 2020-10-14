@@ -1,0 +1,6 @@
+P54_COMMON: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_INTERSIL [=n] && MAC80211 [=n]
+
+PC300TOO: n => mod
+    Direct dependencies:  NETDEVICES [=y] && WAN [=n] && HDLC [=n] && PCI [=n]
+

@@ -1,0 +1,6 @@
+SH_CPU_FREQ: n => mod
+    Direct dependencies:  CPU_FREQ [=n] && SUPERH
+
+BCACHE_CLOSURES_DEBUG: n => yes
+    Direct dependencies:  MD [=n] && BCACHE [=n]
+

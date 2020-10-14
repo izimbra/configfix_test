@@ -1,0 +1,11 @@
+WILCO_EC => mod
+IIO_KFIFO_BUF => yes
+ACPI => yes
+NLS => yes
+CROS_EC_LPC => mod
+PNP => yes
+CROS_EC => mod
+CHROME_PLATFORMS => yes
+LEDS_CLASS => mod
+IIO => yes
+IIO_BUFFER => yes

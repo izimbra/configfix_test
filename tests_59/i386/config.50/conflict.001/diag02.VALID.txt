@@ -1,0 +1,3 @@
+AF_RXRPC_INJECT_LOSS => yes
+AF_RXRPC => mod
+INET => yes

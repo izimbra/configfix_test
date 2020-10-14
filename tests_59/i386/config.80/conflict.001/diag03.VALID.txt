@@ -1,0 +1,3 @@
+TIFM_CORE => mod
+PCI => yes
+PCI_GOOLPC => yes

@@ -1,0 +1,4 @@
+NET_L3_MASTER_DEV: n => yes
+    Direct dependencies:  NET [=y] && (INET [=n] || IPV6 [=n])
+    Reverse dependencies: IPVLAN_L3S [=n] && NETDEVICES [=n] && NET_CORE [=n] && NETFILTER [=n] && IPVLAN [=n]
+

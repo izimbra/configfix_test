@@ -1,0 +1,9 @@
+NETFILTER_XT_MATCH_OWNER: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n]
+
+VIDEO_IVTV_ALSA: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_IVTV [=n] && SND [=n]
+
+SND_PXA2XX_SOC_E740: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && SND_PXA2XX_SOC [=n] && MACH_E740 && AC97_BUS [=n]=n
+

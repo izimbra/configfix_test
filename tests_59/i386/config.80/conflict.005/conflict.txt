@@ -1,0 +1,3 @@
+KERNEL_LZO: n => no
+    Direct dependencies:  <choice> && HAVE_KERNEL_LZO [=y]
+

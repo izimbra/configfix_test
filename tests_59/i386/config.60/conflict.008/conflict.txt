@@ -1,0 +1,6 @@
+NFC_SHDLC: n => yes
+    Direct dependencies:  NET [=n] && NFC_HCI [=n]
+
+PCI_KEYSTONE_EP: n => yes
+    Direct dependencies:  PCI [=n] && (ARCH_KEYSTONE || ARCH_K3 || (ARM || ARM64) && COMPILE_TEST [=y]) && PCI_ENDPOINT [=n]
+

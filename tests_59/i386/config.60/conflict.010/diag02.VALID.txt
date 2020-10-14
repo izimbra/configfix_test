@@ -1,0 +1,9 @@
+NETFILTER_XT_MATCH_PKTTYPE => yes
+LAPB => yes
+MPTCP => yes
+NETFILTER_ADVANCED => yes
+NETFILTER_XTABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+MPTCP_KUNIT_TESTS => yes

@@ -1,0 +1,8 @@
+DWMAC_MESON => yes
+STMMAC_PLATFORM => yes
+ETHERNET => yes
+COMMON_CLK => yes
+NET_VENDOR_STMICRO => yes
+STMMAC_ETH => yes
+OF => yes
+MDIO_XPCS => yes

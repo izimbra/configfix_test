@@ -1,0 +1,2 @@
+ISI => yes
+SERIAL_NONSTANDARD => yes

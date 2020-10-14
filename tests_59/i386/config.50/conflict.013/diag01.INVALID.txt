@@ -1,0 +1,11 @@
+NETFILTER_XT_CONNMARK => yes, 
+SENSORS_IBMAEM => yes, 
+MEDIA_TUNER_TDA9887 => no, 
+NETFILTER_XTABLES => yes, 
+INET => yes, 
+NF_CONNTRACK => yes, 
+NF_CONNTRACK_MARK => yes, 
+HWMON => yes, 
+IPMI_HANDLER => yes, 
+IPMI_SI => yes, 
+MEDIA_TUNER_SIMPLE => yes

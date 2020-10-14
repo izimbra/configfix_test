@@ -1,0 +1,7 @@
+TCG_XEN => yes
+XEN => yes
+HIGHMEM64G => yes
+OLPC => no
+HIGHMEM4G => no
+X86_PAE => yes
+USB_FUSB300 => yes

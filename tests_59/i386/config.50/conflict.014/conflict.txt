@@ -1,0 +1,9 @@
+AF_RXRPC_INJECT_LOSS: n => yes
+    Direct dependencies:  NET [=y] && AF_RXRPC [=n]
+
+BAREUDP: n => yes
+    Direct dependencies:  NETDEVICES [=y] && NET_CORE [=n] && INET [=n] && (IPV6 [=n] || !IPV6 [=n])
+
+GPIO_MAX7301: n => yes
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n]
+

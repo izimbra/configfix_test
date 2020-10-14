@@ -1,0 +1,4 @@
+TIFM_CORE => mod
+PCI => yes
+PCI_GOANY => yes
+PCI_MMCONFIG => yes

@@ -1,0 +1,6 @@
+RAPIDIO_CHMAN: n => yes
+    Direct dependencies:  RAPIDIO [=n]
+
+MTD_NAND_S3C2410_CLKSTOP: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=y] && MTD_NAND_S3C2410 [=n]
+

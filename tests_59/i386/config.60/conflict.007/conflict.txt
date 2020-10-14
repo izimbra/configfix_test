@@ -1,0 +1,6 @@
+TMD_HERMES: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTERSIL [=n] && PCI [=n] && HERMES [=n]
+
+HDLC_CISCO: n => mod
+    Direct dependencies:  NETDEVICES [=n] && WAN [=n] && HDLC [=n]
+

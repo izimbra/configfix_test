@@ -1,0 +1,7 @@
+AF_RXRPC_INJECT_LOSS => yes
+BAREUDP => yes
+GPIO_MAX7301 => yes
+AF_RXRPC => mod
+INET => yes
+NET_CORE => yes
+SPI => yes

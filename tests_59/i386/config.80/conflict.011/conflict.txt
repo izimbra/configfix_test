@@ -1,0 +1,9 @@
+TOUCHSCREEN_USB_DMC_TSC10: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && TOUCHSCREEN_USB_COMPOSITE [=n]
+
+USB_OHCI_HCD_LPC32XX: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=m] && (ARCH_LPC32XX || COMPILE_TEST [=y]) && USB_ISP1301 [=y]
+
+USB_XUSBATM: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_ATM [=m]
+

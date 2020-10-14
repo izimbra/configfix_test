@@ -1,0 +1,9 @@
+SENSORS_IBMPOWERNV: n => mod
+    Direct dependencies:  HWMON [=y] && PPC_POWERNV
+
+COMEDI_FL512: m => yes
+    Direct dependencies:  STAGING [=y] && COMEDI [=m] && COMEDI_ISA_DRIVERS [=y]
+
+VIDEO_MESON_VDEC: n => yes
+    Direct dependencies:  STAGING [=y] && STAGING_MEDIA [=y] && MEDIA_SUPPORT [=m] && VIDEO_DEV [=m] && VIDEO_V4L2 [=m] && HAS_DMA [=y] && (ARCH_MESON || COMPILE_TEST [=y])
+

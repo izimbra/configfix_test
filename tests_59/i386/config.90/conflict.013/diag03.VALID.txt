@@ -1,0 +1,10 @@
+NET_EMATCH_IPSET => yes
+MMC_UNIPHIER => yes
+MPU3050_I2C => mod
+IP_SET => yes
+MMC => yes
+IIO_BUFFER => yes
+IIO => mod
+IIO_TRIGGER => yes
+IIO_CONSUMERS_PER_TRIGGER => 1
+IIO_KFIFO_BUF => mod

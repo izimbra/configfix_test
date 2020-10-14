@@ -1,0 +1,6 @@
+IMX_DSP: n => mod
+    Direct dependencies:  IMX_MBOX [=n]
+
+POWERNV_OP_PANEL: n => mod
+    Direct dependencies:  PPC_POWERNV
+

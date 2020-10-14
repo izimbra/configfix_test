@@ -1,0 +1,6 @@
+BLK_DEV_CMD640: m => yes
+    Direct dependencies:  IDE [=m] && X86 [=y]
+
+SCSI_UFS_BSG: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_UFSHCD [=n]
+

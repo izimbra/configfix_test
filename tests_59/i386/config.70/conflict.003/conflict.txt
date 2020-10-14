@@ -1,0 +1,3 @@
+NET_DSA_MICROCHIP_KSZ9477_SPI: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA_MICROCHIP_KSZ9477 [=n] && SPI [=y]
+

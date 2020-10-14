@@ -1,0 +1,9 @@
+I2C_PARPORT: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && PARPORT [=m]
+
+DVB_USB_A800: n => mod
+    Direct dependencies:  USB [=n] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB [=n]
+
+DRM_V3D: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && (ARCH_BCM || ARCH_BCMSTB || COMPILE_TEST [=y]) && DRM [=n] && COMMON_CLK [=y] && MMU [=y]
+

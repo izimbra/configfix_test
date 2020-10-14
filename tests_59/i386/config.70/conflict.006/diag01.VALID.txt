@@ -1,0 +1,6 @@
+EVM => yes
+M686 => no
+INTEGRITY => yes
+MULTIUSER => yes
+SECURITY => yes
+ENCRYPTED_KEYS => yes

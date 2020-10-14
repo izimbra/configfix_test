@@ -1,0 +1,10 @@
+FS_ENET_MDIO_FEC: n => mod
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FS_ENET [=n] && (CPM1 || FS_ENET_MPC5121_FEC [=n])
+    Reverse dependencies: FS_ENET_HAS_FEC [=n] && NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FS_ENET [=n] && (CPM1 || FS_ENET_MPC5121_FEC [=n])
+
+MT7621_WDT: n => mod
+    Direct dependencies:  WATCHDOG [=y] && (SOC_MT7620 || SOC_MT7621)
+
+REGULATOR_BD718XX: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_ROHM_BD718XX [=n]
+

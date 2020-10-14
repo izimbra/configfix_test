@@ -1,0 +1,3 @@
+NET_CLS_RSVP: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+

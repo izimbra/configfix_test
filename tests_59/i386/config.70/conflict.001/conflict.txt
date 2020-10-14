@@ -1,0 +1,3 @@
+PCIE_TEGRA194_EP: n => yes
+    Direct dependencies:  PCI [=n] && (ARCH_TEGRA_194_SOC [=n] || COMPILE_TEST [=n]) && PCI_ENDPOINT [=n]
+

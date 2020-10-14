@@ -1,0 +1,2 @@
+BLK_DEV_UMC8672 => yes
+IDE => yes

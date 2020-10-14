@@ -1,0 +1,10 @@
+PATA_IT8213 => yes
+ATA => yes
+BLOCK => yes
+PCI => yes
+EFI_PARTITION => yes
+ATA_SFF => yes
+PCI_GOBIOS => yes
+MSDOS_PARTITION => yes
+ATA_BMDMA => yes
+SCSI => yes

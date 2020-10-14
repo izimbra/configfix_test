@@ -1,0 +1,9 @@
+KERNEL_ZSTD: n => no
+    Direct dependencies:  <choice> && HAVE_KERNEL_ZSTD [=y]
+
+SND_SOC_SOF_HDA_PROBES: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SOF_TOPLEVEL [=n] && SND_SOC_SOF_INTEL_TOPLEVEL [=n] && SND_SOC_SOF_INTEL_PCI [=n] && SND_SOC_SOF_HDA_COMMON [=n] && SND_SOC_SOF_DEBUG_PROBES [=n]
+
+USB_SERIAL_GARMIN: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_SERIAL [=n]
+

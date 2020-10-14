@@ -1,0 +1,6 @@
+X86_SPEEDSTEP_RELAXED_CAP_CHECK: n => yes
+    Direct dependencies:  CPU_FREQ [=n] && X86 [=y] && X86_32 [=y] && (X86_SPEEDSTEP_SMI [=n] || X86_SPEEDSTEP_ICH [=n])
+
+PATA_VIA: n => mod
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && ATA_BMDMA [=n] && PCI [=n]
+

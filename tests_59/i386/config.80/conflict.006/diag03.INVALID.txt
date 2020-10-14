@@ -1,0 +1,5 @@
+IDEPCI_PCIBUS_ORDER => yes
+NET_VENDOR_DEC => yes
+PCI => yes
+IDE => yes
+PCI_GOBIOS => yes

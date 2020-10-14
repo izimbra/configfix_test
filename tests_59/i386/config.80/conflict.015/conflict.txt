@@ -1,0 +1,9 @@
+MVNETA_BM_ENABLE: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_MARVELL [=y] && MVNETA [=n] && !64BIT [=n]
+
+SENSORS_NSA320: m => yes
+    Direct dependencies:  HWMON [=m] && GPIOLIB [=y] && OF [=y] && (MACH_KIRKWOOD || COMPILE_TEST [=y])
+
+VIDEO_ATOMISP_MT9M114: n => yes
+    Direct dependencies:  STAGING [=n] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=y] && VIDEO_ATOMISP [=n] && ACPI [=y] && I2C [=y] && VIDEO_V4L2 [=y]
+

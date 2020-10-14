@@ -1,0 +1,2 @@
+NET_L3_MASTER_DEV => yes
+INET => yes

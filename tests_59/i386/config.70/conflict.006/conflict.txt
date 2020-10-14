@@ -1,0 +1,6 @@
+EVM: n => yes
+    Direct dependencies:  INTEGRITY [=n]
+
+M686: n => no
+    Direct dependencies:  <choice> && X86_32 [=y]
+

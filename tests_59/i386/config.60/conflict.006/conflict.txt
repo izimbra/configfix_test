@@ -1,0 +1,6 @@
+ARM_CCN: n => mod
+    Direct dependencies:  PERF_EVENTS [=y] && (ARM || ARM64)
+
+CRYPTO_DEV_TALITOS1: n => yes
+    Direct dependencies:  CRYPTO [=y] && CRYPTO_HW [=n] && CRYPTO_DEV_TALITOS [=n] && (PPC_8xx || PPC_82xx)
+

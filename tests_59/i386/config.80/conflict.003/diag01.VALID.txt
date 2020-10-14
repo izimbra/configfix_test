@@ -1,0 +1,2 @@
+USB_RTL8150 => yes
+USB_NET_DRIVERS => yes

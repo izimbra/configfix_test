@@ -1,0 +1,11 @@
+EFI_BOOTLOADER_CONTROL => yes
+NETFILTER_INGRESS => yes
+DRM_PANEL_NOVATEK_NT39016 => mod
+EFI_VARS => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+KUNIT_ALL_TESTS => no
+SPI => yes
+SYNC_FILE => yes
+DRM => mod

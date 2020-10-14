@@ -1,0 +1,3 @@
+MAC80211_OCB_DEBUG: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && MAC80211_DEBUG_MENU [=n]
+

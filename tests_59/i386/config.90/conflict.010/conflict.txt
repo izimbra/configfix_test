@@ -1,0 +1,6 @@
+NET_ACT_CT: m => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=y] && NET_CLS_ACT [=y] && NF_CONNTRACK [=y] && NF_NAT [=y] && NF_FLOW_TABLE [=m]
+
+ELECTRA_CF: n => yes
+    Direct dependencies:  PCCARD [=n] && PCMCIA [=n] && PPC_PASEMI
+

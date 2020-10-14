@@ -1,0 +1,9 @@
+CORE_DUMP_DEFAULT_ELF_HEADERS: n => yes
+    Direct dependencies:  BINFMT_ELF [=n] && ELF_CORE [=y]
+
+BRIDGE_EBT_NFLOG: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && BRIDGE_NF_EBTABLES [=m]
+
+CHARLCD_BL_OFF: n => no
+    Direct dependencies:  <choice>
+

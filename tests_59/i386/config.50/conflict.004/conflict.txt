@@ -1,0 +1,3 @@
+DWMAC_MESON: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_STMICRO [=n] && STMMAC_ETH [=n] && STMMAC_PLATFORM [=n] && OF [=n] && COMMON_CLK [=n] && (ARCH_MESON || COMPILE_TEST [=y])
+

@@ -1,0 +1,6 @@
+IDEPCI_PCIBUS_ORDER: n => yes
+    Direct dependencies:  PCI [=n] && IDE [=m]=y && BLK_DEV_IDEPCI [=n]
+
+NET_VENDOR_DEC: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && (PCI [=n] || EISA [=n] || CARDBUS [=n])
+

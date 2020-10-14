@@ -1,0 +1,10 @@
+UNISYS_VISORINPUT: n => mod
+    Direct dependencies:  STAGING [=n] && UNISYSSPAR [=n] && UNISYS_VISORBUS [=n] && INPUT [=y]
+
+ZX2967_PM_DOMAINS: n => yes
+    Direct dependencies:  SOC_ZTE [=n] && PM_GENERIC_DOMAINS [=y]
+
+CRYPTO_CURVE25519_X86: n => yes
+    Direct dependencies:  CRYPTO [=y] && X86 [=y] && 64BIT [=n]
+    Reverse dependencies: WIREGUARD [=y] && NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=y] && (IPV6 [=y] || !IPV6 [=y]) && X86 [=y] && 64BIT [=n]
+

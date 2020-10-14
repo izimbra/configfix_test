@@ -1,0 +1,4 @@
+POWER_RESET_BRCMSTB => yes
+SENSORS_JC42 => yes
+POWER_RESET => yes
+HWMON => yes

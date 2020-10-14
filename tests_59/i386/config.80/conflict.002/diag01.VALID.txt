@@ -1,0 +1,3 @@
+MTD_NETSC520 => yes
+MTD => yes
+MTD_CFI => yes

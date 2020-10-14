@@ -1,0 +1,3 @@
+USB_RTL8150: n => yes
+    Direct dependencies:  NETDEVICES [=y] && USB_NET_DRIVERS [=m]
+

@@ -1,0 +1,13 @@
+MVNETA_BM_ENABLE => yes
+SENSORS_NSA320 => yes
+VIDEO_ATOMISP_MT9M114 => yes
+MVNETA => yes
+HWMON => yes
+EFI => yes
+VIDEO_ATOMISP => yes
+INTEL_ATOMISP => yes
+PCI => yes
+STAGING_MEDIA => yes
+STAGING => yes
+PCI_GOBIOS => yes
+IOSF_MBI => yes

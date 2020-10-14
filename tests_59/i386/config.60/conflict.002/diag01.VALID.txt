@@ -1,0 +1,6 @@
+NET_IFE_SKBTCINDEX => yes
+NET_ACT_IFE => yes
+NET => yes
+NET_CLS_ACT => yes
+NET_SCHED => yes
+NET_IFE => yes

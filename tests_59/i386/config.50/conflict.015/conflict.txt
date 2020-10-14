@@ -1,0 +1,9 @@
+DWMAC_IMX8: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_STMICRO [=n] && STMMAC_ETH [=n] && STMMAC_PLATFORM [=n] && OF [=n] && (ARCH_MXC || COMPILE_TEST [=y])
+
+NET_VENDOR_TI: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=n] && (PCI [=n] || EISA [=y] || AR7 || ARCH_DAVINCI || ARCH_OMAP2PLUS || ARCH_KEYSTONE || ARCH_K3)
+
+IP_NF_TARGET_NETMAP: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=y] && IP_NF_IPTABLES [=n] && IP_NF_NAT [=n] && NETFILTER_ADVANCED [=y]
+

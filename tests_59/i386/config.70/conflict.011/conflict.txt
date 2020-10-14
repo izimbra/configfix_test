@@ -1,0 +1,9 @@
+SGI_O2MACE_ETH: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SGI [=n] && SGI_IP32=y
+
+DRM_ROCKCHIP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && ROCKCHIP_IOMMU [=n]
+
+FB_MAC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y]=y && MAC
+

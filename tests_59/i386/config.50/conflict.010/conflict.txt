@@ -1,0 +1,6 @@
+NFT_OSF: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=y] && NF_TABLES [=n] && NETFILTER_ADVANCED [=y]
+
+BRIDGE_EBT_REDIRECT: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && BRIDGE_NF_EBTABLES [=n]
+

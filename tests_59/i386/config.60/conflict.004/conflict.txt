@@ -1,0 +1,3 @@
+NET_VENDOR_VIA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
