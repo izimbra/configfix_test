@@ -1,0 +1,9 @@
+NF_CONNTRACK_FTP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+
+PINCTRL_SUN9I_A80_R: n => yes
+    Direct dependencies:  PINCTRL [=n] && ARCH_SUNXI && RESET_CONTROLLER [=n]
+
+REGULATOR_MT6397: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_MT6397 [=n]
+

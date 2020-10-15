@@ -1,0 +1,3 @@
+POSIX_MQUEUE: n => yes
+    Direct dependencies:  NET [=n]
+

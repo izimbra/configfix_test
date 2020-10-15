@@ -1,0 +1,6 @@
+KVM_GUEST: n => yes
+    Direct dependencies:  HYPERVISOR_GUEST [=n] && PARAVIRT [=n]
+
+MTD_NAND_ECC_SW_BCH: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n]
+

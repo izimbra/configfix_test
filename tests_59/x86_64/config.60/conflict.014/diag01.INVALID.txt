@@ -1,0 +1,16 @@
+EFI_ARMSTUB_DTB_LOADER => yes
+NF_LOG_NETDEV => mod
+SND_JZ4740_SOC_I2S => mod
+ACPI => yes
+EFI => yes
+PNP => yes
+X86_PLATFORM_DEVICES => yes
+ACPI_WMI => yes
+ACPI_VIDEO => mod
+MXM_WMI => yes
+INPUT => mod
+INET => yes
+NETFILTER => yes
+SND_SOC => mod
+SND_HDA_PREALLOC_SIZE => 1
+SND => mod

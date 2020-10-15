@@ -1,0 +1,9 @@
+SENSORS_G760A: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+DRM_I915_UNSTABLE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_I915 [=n] && EXPERT [=y] && STAGING [=n] && BROKEN [=n] && !COMPILE_TEST [=y]
+
+SND_SOC_INTEL_CHT_BSW_RT5645_MACH: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_INTEL_MACH [=n] && (SND_SST_ATOM_HIFI2_PLATFORM [=n] || SND_SOC_SOF_BAYTRAIL [=n]) && I2C [=y] && ACPI [=y] && (X86_INTEL_LPSS [=n] || COMPILE_TEST [=y])
+

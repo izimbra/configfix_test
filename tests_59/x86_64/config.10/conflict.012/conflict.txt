@@ -1,0 +1,9 @@
+KERNEL_ZSTD: n => no
+    Direct dependencies:  <choice> && HAVE_KERNEL_ZSTD [=y]
+
+IR_IMG_RC5: n => yes
+    Direct dependencies:  RC_CORE [=n] && RC_DEVICES [=n] && IR_IMG_HW [=n]
+
+VIDEO_SAA7110: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+

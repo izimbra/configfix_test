@@ -1,0 +1,3 @@
+IEEE802154_SOCKET => yes
+IEEE802154 => yes
+NET => yes

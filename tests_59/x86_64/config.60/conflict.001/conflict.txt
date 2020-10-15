@@ -1,0 +1,3 @@
+MTD_BLOCK: n => mod
+    Direct dependencies:  MTD [=y] && BLOCK [=n]
+

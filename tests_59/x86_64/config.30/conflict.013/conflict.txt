@@ -1,0 +1,9 @@
+BINFMT_FLAT_OLD: n => yes
+    Direct dependencies:  BINFMT_FLAT [=n]
+
+GAMEPORT_FM801: n => yes
+    Direct dependencies:  !UML && GAMEPORT [=y] && PCI [=n]
+
+SERIAL_SC16IS7XX_SPI: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_SC16IS7XX [=n] && SPI_MASTER [=n]
+

@@ -1,0 +1,6 @@
+USB_RTL8150: n => yes
+    Direct dependencies:  NETDEVICES [=n] && USB_NET_DRIVERS [=n]
+
+BRCMFMAC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_BROADCOM [=n] && CFG80211 [=n]
+

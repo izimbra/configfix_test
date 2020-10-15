@@ -1,0 +1,9 @@
+IP_SET_BITMAP_IP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_SET [=n]
+
+NET_SCH_DRR: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+PINCTRL_SH_PFC: n => yes
+    Direct dependencies:  PINCTRL [=y]
+

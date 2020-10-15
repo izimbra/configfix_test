@@ -1,0 +1,9 @@
+SND_SOC_DAVINCI_EVM: n => mod
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && (DMA_OMAP [=n] || TI_EDMA [=n] || TI_K3_UDMA [=n] || COMPILE_TEST [=y]) && ARCH_DAVINCI && I2C [=y]
+
+USB_S3C_HSUDC: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=y] && ARCH_S3C24XX
+
+BCM_VIDEOCORE: n => yes
+    Direct dependencies:  STAGING [=n] && OF [=y] && (RASPBERRYPI_FIRMWARE [=n] || COMPILE_TEST [=y] && !RASPBERRYPI_FIRMWARE [=n])
+

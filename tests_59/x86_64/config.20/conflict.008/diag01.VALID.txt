@@ -1,0 +1,8 @@
+CAN_SOFTING => yes
+RFKILL_GPIO => yes
+CAN => yes
+NET => yes
+CAN_DEV => yes
+RFKILL => yes
+EXPERT => yes
+ARCH_MMAP_RND_BITS => 28

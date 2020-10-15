@@ -1,0 +1,6 @@
+SERIAL_CLPS711X: n => yes
+    Direct dependencies:  TTY [=n] && HAS_IOMEM [=y] && (ARCH_CLPS711X || COMPILE_TEST [=y])
+
+SERIAL_NONSTANDARD: n => yes
+    Direct dependencies:  TTY [=n] && HAS_IOMEM [=y]
+

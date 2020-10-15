@@ -1,0 +1,5 @@
+RMNET => yes
+NET_VENDOR_QUALCOMM => yes
+ETHERNET => yes
+NETDEVICES => yes
+NET => yes

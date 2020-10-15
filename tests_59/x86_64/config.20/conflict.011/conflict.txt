@@ -1,0 +1,9 @@
+NET_VENDOR_ARC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+INTEL_POWERCLAMP: n => yes
+    Direct dependencies:  THERMAL [=n] && (X86 [=y] || X86_INTEL_QUARK [=n] || COMPILE_TEST [=n]) && X86 [=y] && CPU_SUP_INTEL [=y]
+
+WAFER_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=n] && X86 [=y]
+

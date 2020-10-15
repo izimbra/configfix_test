@@ -1,0 +1,6 @@
+CMA_DEBUG: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && CMA [=y]
+
+GPIO_IOP: n => yes
+    Direct dependencies:  GPIOLIB [=y] && HAS_IOMEM [=y] && (ARCH_IOP32X || COMPILE_TEST [=n])
+

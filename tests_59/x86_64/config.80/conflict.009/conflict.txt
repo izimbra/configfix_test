@@ -1,0 +1,6 @@
+ARM_MVEBU_V7_CPUIDLE: n => yes
+    Direct dependencies:  CPU_IDLE [=y] && (ARM || ARM64) && (ARCH_MVEBU || COMPILE_TEST [=y]) && !ARM64
+
+ATH6KL_DEBUG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH6KL [=n]
+

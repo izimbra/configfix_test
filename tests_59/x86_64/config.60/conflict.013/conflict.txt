@@ -1,0 +1,9 @@
+SCx200_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=y] && SCx200 [=n] && PCI [=y]
+
+DRM_PANEL_OLIMEX_LCD_OLINUXINO: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && I2C [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+SND_SOC_INTEL_SKL_HDA_DSP_GENERIC_MACH: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_INTEL_MACH [=n] && (SND_SOC_INTEL_SKYLAKE_HDAUDIO_CODEC [=n] || SND_SOC_SOF_HDA_AUDIO_CODEC [=n]) && SND_HDA_CODEC_HDMI [=n] && GPIOLIB [=y]
+

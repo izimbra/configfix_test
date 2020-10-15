@@ -1,0 +1,7 @@
+CAN_KVASER_USB => yes
+USB_AUTOSUSPEND_DELAY => 1
+CAN => yes
+USB => yes
+NET => yes
+USB_SUPPORT => yes
+CAN_DEV => yes

@@ -1,0 +1,5 @@
+CAN_SJA1000_PLATFORM => yes
+CAN => yes
+CAN_SJA1000 => yes
+NET => yes
+CAN_DEV => yes

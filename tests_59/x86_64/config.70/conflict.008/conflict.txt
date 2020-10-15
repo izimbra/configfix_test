@@ -1,0 +1,6 @@
+PCI_FTPCI100: n => yes
+    Direct dependencies:  PCI [=n] && OF [=y]
+
+SUNXI_RSB: n => yes
+    Direct dependencies:  ARCH_SUNXI
+

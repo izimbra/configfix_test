@@ -1,0 +1,11 @@
+VIDEO_MT9V011: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] && MEDIA_CAMERA_SUPPORT [=n]
+
+DRM_NWL_MIPI_DSI: n => yes
+    Direct dependencies:  DRM_BRIDGE [=n] && DRM [=n] && COMMON_CLK [=y] && OF [=n] && HAS_IOMEM [=y]
+
+SND_SAMSUNG_PCM: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n]
+    Reverse dependencies: SND_SOC_SMDK_WM8994_PCM [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && I2C [=y]=y
+

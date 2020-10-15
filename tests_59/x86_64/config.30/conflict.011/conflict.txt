@@ -1,0 +1,9 @@
+BT_HCIUART_RTL: n => yes
+    Direct dependencies:  NET [=n] && BT [=n] && BT_HCIUART [=n] && BT_HCIUART_SERDEV [=n] && GPIOLIB [=y] && (ACPI [=y] || SERIAL_DEV_CTRL_TTYPORT [=n])
+
+BONDING: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+GPIO_RCAR: n => yes
+    Direct dependencies:  GPIOLIB [=y] && HAS_IOMEM [=y] && (ARCH_RENESAS || COMPILE_TEST [=n])
+

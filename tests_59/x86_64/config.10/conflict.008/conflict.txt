@@ -1,0 +1,6 @@
+CAN_IFI_CANFD: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+
+MAC80211_MESSAGE_TRACING: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && MAC80211 [=n]
+

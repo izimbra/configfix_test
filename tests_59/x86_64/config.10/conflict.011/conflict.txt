@@ -1,0 +1,9 @@
+HPLANCE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_AMD [=n] && DIO
+
+AXP20X_POWER: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && MFD_AXP20X [=n] && IIO [=n]
+
+SENSORS_ADCXX: n => yes
+    Direct dependencies:  HWMON [=y] && SPI_MASTER [=n]
+

@@ -1,0 +1,9 @@
+SND_SOC_INTEL_BYT_RT5640_MACH: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_INTEL_MACH [=n] && SND_SOC_INTEL_BAYTRAIL [=n] && I2C [=y] && (X86_INTEL_LPSS [=n] || COMPILE_TEST [=n])
+
+HID_BETOP_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=n]
+
+RTC_DRV_STM32: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && (ARCH_STM32 || COMPILE_TEST [=n])
+

@@ -1,0 +1,8 @@
+ATA_SFF => yes
+RAPIDIO_ENUM_BASIC => no
+MODULES => yes
+MODULE_SIG_KEY => nonempty
+ATA => yes
+SCSI => yes
+MODULE_SIG => yes
+MODULE_SIG_SHA1 => yes

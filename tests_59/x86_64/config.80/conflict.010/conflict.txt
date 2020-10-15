@@ -1,0 +1,6 @@
+BT_HCIUART_INTEL: n => yes
+    Direct dependencies:  NET [=y] && BT [=n] && BT_HCIUART [=n] && GPIOLIB [=y]
+
+MTD_NAND_GPMI_NAND: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=y] && MXS_DMA [=n]
+

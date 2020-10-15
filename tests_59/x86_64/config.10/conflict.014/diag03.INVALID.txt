@@ -1,0 +1,10 @@
+XFRM_STATISTICS => yes
+SCTP_DBG_OBJCNT => yes
+CAN_VXCAN => yes
+NET => yes
+INET => yes
+IP_SCTP => yes
+SCTP_DEFAULT_COOKIE_HMAC_NONE => yes
+LIBCRC32C => yes
+CRYPTO_CRC32C => yes
+CAN => yes

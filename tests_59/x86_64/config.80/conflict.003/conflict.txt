@@ -1,0 +1,3 @@
+ATH9K_STATION_STATISTICS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH9K [=n] && ATH9K_DEBUGFS [=n] && DEBUG_FS [=y]
+

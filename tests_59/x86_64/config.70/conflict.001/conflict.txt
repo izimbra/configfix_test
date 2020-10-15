@@ -1,0 +1,3 @@
+PCIEAER_INJECT: n => mod
+    Direct dependencies:  PCI [=n] && PCIEAER [=n]
+

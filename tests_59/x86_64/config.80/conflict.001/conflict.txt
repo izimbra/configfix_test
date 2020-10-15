@@ -1,0 +1,3 @@
+ATA_SFF: n => yes
+    Direct dependencies:  ATA [=n]
+

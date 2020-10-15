@@ -1,0 +1,10 @@
+W1: y => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: BATTERY_DS2780 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y] || BATTERY_DS2781 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+COMEDI_NI_LABPC_ISA: n => mod
+    Direct dependencies:  STAGING [=n] && COMEDI [=n] && COMEDI_ISA_DRIVERS [=n]
+
+VIDEO_HANTRO_ROCKCHIP: n => yes
+    Direct dependencies:  STAGING [=n] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=m] && VIDEO_HANTRO [=n] && (ARCH_ROCKCHIP || COMPILE_TEST [=y])
+

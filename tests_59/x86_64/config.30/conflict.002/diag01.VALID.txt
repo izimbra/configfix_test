@@ -1,0 +1,3 @@
+NET_SCH_HHF => yes
+NET => yes
+NET_SCHED => yes

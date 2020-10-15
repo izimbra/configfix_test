@@ -1,0 +1,3 @@
+USB_NET_CX82310_ETH: n => yes
+    Direct dependencies:  NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n]
+

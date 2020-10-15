@@ -1,0 +1,9 @@
+SND_SOC_UX500: n => mod
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && MFD_DB8500_PRCMU [=n]
+
+USB_SERIAL: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && TTY [=n]
+
+AD7746: m => yes
+    Direct dependencies:  STAGING [=y] && IIO [=m] && I2C [=y]
+

@@ -1,0 +1,3 @@
+NET_SCH_ETS: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+

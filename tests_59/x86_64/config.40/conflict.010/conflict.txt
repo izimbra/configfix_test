@@ -1,0 +1,6 @@
+NETFILTER_XT_SET: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && IP_SET [=n] && NETFILTER_ADVANCED [=n]
+
+SCTP_DBG_OBJCNT: n => yes
+    Direct dependencies:  NET [=n] && IP_SCTP [=n] && PROC_FS [=n]
+

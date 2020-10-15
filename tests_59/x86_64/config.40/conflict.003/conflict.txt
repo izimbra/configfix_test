@@ -1,0 +1,3 @@
+SATA_AHCI: n => yes
+    Direct dependencies:  ATA [=n] && HAS_DMA [=y] && PCI [=n]
+

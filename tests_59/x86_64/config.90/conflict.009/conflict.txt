@@ -1,0 +1,6 @@
+GCC_PLUGIN_CYC_COMPLEXITY: n => yes
+    Direct dependencies:  GCC_PLUGINS [=n] && !COMPILE_TEST [=y]
+
+SERIAL_8250_OMAP: n => mod
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_8250 [=y] && (ARCH_OMAP2PLUS || ARCH_K3)
+

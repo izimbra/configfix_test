@@ -1,0 +1,6 @@
+THINKPAD_ACPI_ALSA_SUPPORT: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && THINKPAD_ACPI [=n] && SND [=n] && (SND [=n]=y || THINKPAD_ACPI [=n]=SND [=n])
+
+STM32_RPROC: n => yes
+    Direct dependencies:  ARCH_STM32 && REMOTEPROC [=n]
+

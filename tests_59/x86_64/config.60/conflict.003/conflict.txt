@@ -1,0 +1,3 @@
+SNI_82596: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_I825XX [=y] && SNI_RM
+

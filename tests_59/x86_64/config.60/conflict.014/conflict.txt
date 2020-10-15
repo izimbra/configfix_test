@@ -1,0 +1,9 @@
+EFI_ARMSTUB_DTB_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_GENERIC_STUB [=n]
+
+NF_LOG_NETDEV: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n]
+
+SND_JZ4740_SOC_I2S: n => mod
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && (MIPS || COMPILE_TEST [=y]) && OF [=y] && HAS_IOMEM [=y]
+

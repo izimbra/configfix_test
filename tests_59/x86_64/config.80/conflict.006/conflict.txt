@@ -1,0 +1,6 @@
+PINCTRL_ICELAKE: n => yes
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+DVB_MANTIS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_PCI_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && MANTIS_CORE [=n] && DVB_CORE [=n] && PCI [=y] && I2C [=y]
+

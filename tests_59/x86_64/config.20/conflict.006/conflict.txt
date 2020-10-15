@@ -1,0 +1,6 @@
+ADE7854_I2C: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=n] && ADE7854 [=n] && I2C [=y]
+
+CLK_SUNXI_CLOCKS: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_SUNXI [=n]
+

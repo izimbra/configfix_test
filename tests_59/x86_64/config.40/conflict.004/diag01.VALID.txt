@@ -1,0 +1,7 @@
+QED => yes
+ETHERNET => yes
+NETDEVICES => yes
+PCI => yes
+NET => yes
+NET_VENDOR_QLOGIC => yes
+CRC8 => yes

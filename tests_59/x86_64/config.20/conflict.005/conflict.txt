@@ -1,0 +1,3 @@
+PREEMPT_VOLUNTARY: y => no
+    Direct dependencies:  <choice> && !ARCH_NO_PREEMPT [=n]
+

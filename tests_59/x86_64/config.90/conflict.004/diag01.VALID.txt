@@ -1,0 +1,4 @@
+USB_GSPCA_JL2005BCD => yes
+MEDIA_SUPPORT => yes
+USB_GSPCA => yes
+VIDEO_DEV => yes

@@ -1,0 +1,9 @@
+USB_ALI_M5632: n => yes
+    Direct dependencies:  NETDEVICES [=y] && USB_NET_DRIVERS [=y] && USB_NET_CDC_SUBSET [=n]
+
+IWLWIFI_DEBUG: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_INTEL [=n] && IWLWIFI [=n]
+
+HOSTAP_CS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_INTERSIL [=n] && PCMCIA [=n] && HOSTAP [=n]
+

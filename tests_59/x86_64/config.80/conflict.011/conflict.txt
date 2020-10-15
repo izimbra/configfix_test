@@ -1,0 +1,11 @@
+SERIAL_8250: y => no
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && !S390
+    Reverse dependencies: MWAVE [=y] && X86 [=y] && TTY [=y]
+
+PCC: n => yes
+    Direct dependencies:  MAILBOX [=y] && ACPI [=n]
+    Reverse dependencies: ACPI_CPPC_LIB [=n] && ACPI [=n] && ACPI_PROCESSOR [=n]
+
+EXTCON_AXP288: n => yes
+    Direct dependencies:  EXTCON [=y] && MFD_AXP20X [=y] && USB_SUPPORT [=y] && X86 [=y] && ACPI [=n]
+

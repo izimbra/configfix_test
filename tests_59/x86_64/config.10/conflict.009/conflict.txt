@@ -1,0 +1,6 @@
+PM_AUTOSLEEP: n => yes
+    Direct dependencies:  PM_SLEEP [=n]
+
+SCSI_FDOMAIN_PCI: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n]
+

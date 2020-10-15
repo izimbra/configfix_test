@@ -1,0 +1,7 @@
+BT_HCIUART_INTEL: n => yes
+    Direct dependencies:  NET [=n] && BT [=n] && BT_HCIUART [=n] && GPIOLIB [=y]
+
+NET_IFE: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: NET_ACT_IFE [=n] && NET [=n] && NET_SCHED [=n] && NET_CLS_ACT [=n]
+

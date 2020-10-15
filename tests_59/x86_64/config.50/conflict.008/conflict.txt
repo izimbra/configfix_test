@@ -1,0 +1,7 @@
+KERNEL_XZ: n => no
+    Direct dependencies:  <choice> && HAVE_KERNEL_XZ [=y]
+
+CONFIGFS_FS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_CONFIGFS [=y] && ACPI [=y] || TARGET_CORE [=y] && BLOCK [=y] || PCI_ENDPOINT_CONFIGFS [=n] && PCI [=y] && PCI_ENDPOINT [=y] || BLK_DEV_NULL_BLK [=n] && BLK_DEV [=n] || USB_LIBCOMPOSITE [=n] && USB_SUPPORT [=y] && USB_GADGET [=n] || IIO_CONFIGFS [=y] && IIO [=y] || STM [=n]
+

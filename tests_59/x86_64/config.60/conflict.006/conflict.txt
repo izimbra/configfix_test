@@ -1,0 +1,6 @@
+TEST_LIVEPATCH: n => mod
+    Direct dependencies:  RUNTIME_TESTING_MENU [=y] && DYNAMIC_DEBUG [=n] && LIVEPATCH [=y] && m && MODULES [=y]
+
+SMC_DIAG: n => yes
+    Direct dependencies:  NET [=y] && SMC [=n]
+

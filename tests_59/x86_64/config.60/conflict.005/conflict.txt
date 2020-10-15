@@ -1,0 +1,3 @@
+CONTEXT_TRACKING_FORCE: n => yes
+    Direct dependencies:  GENERIC_CLOCKEVENTS [=y] && CONTEXT_TRACKING [=n]
+

@@ -1,0 +1,7 @@
+CAN_SOFTING => yes
+RFKILL_GPIO => yes
+CAN => yes
+NET => yes
+CAN_DEV => yes
+RFKILL => yes
+RFKILL_INPUT => yes

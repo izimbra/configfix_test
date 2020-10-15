@@ -1,0 +1,10 @@
+IP_NF_MATCH_TTL => yes
+NET_CLS_RSVP => yes
+NETFILTER_ADVANCED => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+IP_NF_IPTABLES => yes
+NETFILTER_XT_MATCH_HL => yes
+NETFILTER_XTABLES => yes
+NET_SCHED => yes

@@ -1,0 +1,4 @@
+MTD_BLOCK => mod
+BLOCK => yes
+EFI_PARTITION => yes
+MSDOS_PARTITION => yes

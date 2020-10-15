@@ -1,0 +1,9 @@
+PATA_PLATFORM: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && (EXPERT [=y] || PPC || HAVE_PATA_PLATFORM [=n])
+
+SERIAL_RDA: n => yes
+    Direct dependencies:  TTY [=n] && HAS_IOMEM [=y] && (ARCH_RDA || COMPILE_TEST [=y])
+
+SND_SOC_SOF_PCI: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SOF_TOPLEVEL [=n] && PCI [=y]
+

@@ -1,0 +1,9 @@
+SAMPLE_VFS: n => yes
+    Direct dependencies:  SAMPLES [=y] && CC_CAN_LINK [=y] && HEADERS_INSTALL [=n]
+
+EFI_TEST: n => yes
+    Direct dependencies:  EFI [=n]
+
+SCSI_MVSAS_TASKLET: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_MVSAS [=n]
+

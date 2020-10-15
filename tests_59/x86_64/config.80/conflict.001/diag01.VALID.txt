@@ -1,0 +1,6 @@
+ATA_SFF => yes
+RAPIDIO_ENUM_BASIC => no
+MODULES => yes
+CRYPTO_FIPS => no
+ATA => yes
+SCSI => yes

@@ -1,0 +1,9 @@
+DISCONTIGMEM_MANUAL: n => yes
+    Direct dependencies:  <choice> && ARCH_DISCONTIGMEM_ENABLE
+
+IP6_NF_MATCH_RT: m => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && IP6_NF_IPTABLES [=m] && NETFILTER_ADVANCED [=y]
+
+ARCH_R8A77995: n => yes
+    Direct dependencies:  SOC_RENESAS [=y] && ARM64
+

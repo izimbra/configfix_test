@@ -1,0 +1,6 @@
+CAN_GW: n => yes
+    Direct dependencies:  NET [=y] && CAN [=n]
+
+PROC_EVENTS: n => yes
+    Direct dependencies:  CONNECTOR [=m]=y
+

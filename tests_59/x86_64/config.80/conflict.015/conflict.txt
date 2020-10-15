@@ -1,0 +1,9 @@
+NET_VENDOR_SOLARFLARE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+USB_ZR364XX: n => yes
+    Direct dependencies:  USB [=y] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=y] && MEDIA_CAMERA_SUPPORT [=n] && VIDEO_V4L2 [=y]
+
+TEST_HMM: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=y] && TRANSPARENT_HUGEPAGE [=y] && DEVICE_PRIVATE [=n]
+

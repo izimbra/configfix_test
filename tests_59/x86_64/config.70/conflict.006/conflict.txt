@@ -1,0 +1,6 @@
+X86_INTEL_CE: n => yes
+    Direct dependencies:  PCI [=n] && PCI_GODIRECT [=n] && X86_IO_APIC [=y] && X86_32 [=n] && X86_EXTENDED_PLATFORM [=y]
+
+NF_FLOW_TABLE_INET: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_FLOW_TABLE [=n]
+

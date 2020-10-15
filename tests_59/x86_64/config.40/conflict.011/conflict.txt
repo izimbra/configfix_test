@@ -1,0 +1,9 @@
+BNXT_SRIOV: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && BNXT [=n] && PCI_IOV [=n]
+
+MOXART_WDT: n => mod
+    Direct dependencies:  WATCHDOG [=y] && (ARCH_MOXART || COMPILE_TEST [=n])
+
+MFD_INTEL_LPSS_PCI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && X86 [=y] && PCI [=n]
+

@@ -1,0 +1,8 @@
+ATM_ENI_BURST_RX_8W => yes
+ATM_ENI => mod
+NETDEVICES => yes
+ATM_ENI_TUNE_BURST => yes
+ATM_DRIVERS => yes
+PCI => yes
+NET => yes
+ATM => mod

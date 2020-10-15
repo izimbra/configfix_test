@@ -1,0 +1,12 @@
+BT_HCIUART_RTL => yes
+BONDING => yes
+NET => yes
+BT => mod
+BT_HCIUART => mod
+CRYPTO_CMAC => mod
+CRYPTO_DRBG_MENU => yes
+CRYPTO_ECDH => mod
+CRC16 => mod
+NETDEVICES => yes
+NET_CORE => yes
+INET => yes

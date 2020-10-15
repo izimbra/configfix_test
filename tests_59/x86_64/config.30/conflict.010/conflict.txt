@@ -1,0 +1,6 @@
+BT_CMTP: n => mod
+    Direct dependencies:  NET [=n] && BT_BREDR [=n] && ISDN_CAPI [=n]
+
+NFC_SHDLC: n => yes
+    Direct dependencies:  NET [=n] && NFC_HCI [=n]
+

@@ -1,0 +1,2 @@
+CAN_PLX_PCI => yes
+CAN_SJA1000 => yes

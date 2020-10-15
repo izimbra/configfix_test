@@ -1,0 +1,3 @@
+MTD_BLOCK => mod
+BLOCK => yes
+PARTITION_ADVANCED => yes

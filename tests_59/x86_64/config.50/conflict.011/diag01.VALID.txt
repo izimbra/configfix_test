@@ -1,0 +1,13 @@
+X86_INTEL_MID => yes
+EFI_CAPSULE_LOADER => yes
+PCMCIA_XIRC2PS => yes
+TCP_CONG_CUBIC => no
+X86_PLATFORM_DEVICES => yes
+DW_APB_TIMER => yes
+MFD_INTEL_MSIC => yes
+INTEL_SCU_PCI => yes
+SFI => yes
+APB_TIMER => yes
+EFI => yes
+PCMCIA => yes
+NET_VENDOR_XIRCOM => yes

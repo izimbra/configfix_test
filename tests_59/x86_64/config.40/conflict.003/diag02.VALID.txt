@@ -1,0 +1,8 @@
+SATA_AHCI => yes
+ATA => yes
+BLOCK => yes
+PCI => yes
+EFI_PARTITION => yes
+SCSI => yes
+SATA_MOBILE_LPM_POLICY => 1
+MSDOS_PARTITION => yes

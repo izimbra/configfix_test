@@ -1,0 +1,10 @@
+FB_CG3: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y]=y && SPARC && FB_SBUS [=n]
+
+MSM_GCC_8960: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: MSM_LCC_8960 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || MSM_MMCC_8960 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+CRYPTO_SHA1_S390: n => yes
+    Direct dependencies:  CRYPTO [=y] && CRYPTO_HW [=y] && S390
+

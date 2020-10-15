@@ -1,0 +1,9 @@
+W1_CON: n => yes
+    Direct dependencies:  W1 [=n] && CONNECTOR [=n]
+
+FB_SAVAGE_ACCEL: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB_SAVAGE [=n]
+
+MMC_STM32_SDMMC: n => yes
+    Direct dependencies:  MMC [=n] && MMC_ARMMMCI [=n]
+

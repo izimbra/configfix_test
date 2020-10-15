@@ -1,0 +1,7 @@
+BT_HCIUART_INTEL => yes
+NET_IFE => yes
+NET => yes
+BT => yes
+BT_HCIUART => mod
+CRYPTO_CMAC => yes
+CRC16 => yes

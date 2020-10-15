@@ -1,0 +1,5 @@
+BT_HCIBTSDIO => mod
+NET => yes
+BT => yes
+CRC16 => yes
+CRYPTO_CMAC => yes

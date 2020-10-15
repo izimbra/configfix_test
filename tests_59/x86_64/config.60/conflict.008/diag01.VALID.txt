@@ -1,0 +1,10 @@
+MTD_AMD76XROM => yes
+PARIDE_FRPW => yes
+MTD_JEDECPROBE => yes
+PARIDE => yes
+BLOCK => yes
+PARPORT_PC => yes
+EFI_PARTITION => yes
+PARPORT => yes
+MSDOS_PARTITION => yes
+BLK_DEV => yes

@@ -1,0 +1,6 @@
+ATH79_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=y] && (ATH79 || ARM && COMPILE_TEST [=y])
+
+IR_REDRAT3: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=y]
+

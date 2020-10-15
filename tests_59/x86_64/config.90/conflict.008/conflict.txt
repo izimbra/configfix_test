@@ -1,0 +1,6 @@
+AHCI_XGENE: m => yes
+    Direct dependencies:  ATA [=m] && HAS_DMA [=y] && PHY_XGENE [=m]
+
+DM_ERA: m => yes
+    Direct dependencies:  MD [=y] && BLK_DEV_DM [=m]
+

@@ -1,0 +1,2 @@
+PARPORT_SUNBPP => yes
+PARPORT => yes

@@ -1,0 +1,13 @@
+PATA_PLATFORM => yes
+SERIAL_RDA => yes
+SND_SOC_SOF_PCI => yes
+ATA => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+ATA_SFF => yes
+SCSI => yes
+TTY => yes
+SND_SOC => yes
+SND_HDA_PREALLOC_SIZE => 0
+SND => yes
+SND_SOC_SOF_TOPLEVEL => yes

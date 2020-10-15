@@ -1,0 +1,3 @@
+INPUT_CMA3000_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_CMA3000 [=n] && I2C [=y]
+

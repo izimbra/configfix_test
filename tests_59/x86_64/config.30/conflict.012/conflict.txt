@@ -1,0 +1,9 @@
+SFC_MCDI_MON: n => no
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SOLARFLARE [=n] && SFC [=n] && HWMON [=m] && (SFC [=n]!=y || HWMON [=m]!=m)
+
+SMSC911X: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SMSC [=n] && HAS_IOMEM [=y]
+
+MODULE_COMPRESS_GZIP: n => yes
+    Direct dependencies:  <choice>
+

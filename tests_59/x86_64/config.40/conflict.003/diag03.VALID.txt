@@ -1,0 +1,7 @@
+SATA_AHCI => yes
+ATA => yes
+BLOCK => yes
+PCI => yes
+PARTITION_ADVANCED => yes
+SCSI => yes
+SATA_MOBILE_LPM_POLICY => 4

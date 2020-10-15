@@ -1,0 +1,6 @@
+XEN_ACPI_HOTPLUG_MEMORY: n => mod
+    Direct dependencies:  XEN [=y] && XEN_DOM0 [=n] && XEN_STUB [=n] && ACPI [=y]
+
+COMMON_CLK_MT2712_IMGSYS: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_MEDIATEK || COMPILE_TEST [=n]) && COMMON_CLK_MT2712 [=n]
+

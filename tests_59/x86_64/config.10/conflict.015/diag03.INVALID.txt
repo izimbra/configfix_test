@@ -1,0 +1,17 @@
+W1_CON => yes
+FB_SAVAGE_ACCEL => yes
+MMC_STM32_SDMMC => yes
+CONNECTOR => mod
+MODULES => yes
+W1 => yes
+NET => yes
+FB_SAVAGE => mod
+PCI => yes
+PCI_QUIRKS => yes
+VGA_ARB => yes
+VGA_ARB_MAX_GPUS => 0
+PCIEASPM => yes
+FB_MODE_HELPERS => yes
+PCIEASPM_POWER_SUPERSAVE => yes
+MMC_ARMMMCI => yes
+MMC => yes

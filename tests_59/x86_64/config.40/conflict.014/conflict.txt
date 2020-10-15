@@ -1,0 +1,10 @@
+ARM_ZYNQ_CPUIDLE: n => yes
+    Direct dependencies:  CPU_IDLE [=y] && (ARM || ARM64) && (ARCH_ZYNQ || COMPILE_TEST [=n]) && !ARM64
+
+SYN_COOKIES: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: NFT_SYNPROXY [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n] || IP_NF_TARGET_SYNPROXY [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n] || IP6_NF_TARGET_SYNPROXY [=n] && NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+VIDEO_MEYE: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=n] && PCI [=n] && VIDEO_V4L2 [=n] && SONY_LAPTOP [=n] && (X86 [=y] || COMPILE_TEST [=n])
+

@@ -1,0 +1,9 @@
+SERIAL_MPS2_UART: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && (ARCH_MPS2 || COMPILE_TEST [=n])
+
+WATCHDOG_PRETIMEOUT_DEFAULT_GOV_PANIC: n => yes
+    Direct dependencies:  <choice> && WATCHDOG_PRETIMEOUT_GOV_PANIC [=n]
+
+DVB_B2C2_FLEXCOP_PCI: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+

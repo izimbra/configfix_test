@@ -1,0 +1,9 @@
+NET_VENDOR_RDC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && PCI [=y]
+
+ARM_ETHER3: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SEEQ [=n] && ARM && ARCH_ACORN
+
+RELR: n => yes
+    Direct dependencies:  ARCH_HAS_RELR [=n] && TOOLS_SUPPORT_RELR [=n]
+

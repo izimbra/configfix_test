@@ -1,0 +1,3 @@
+TOUCHSCREEN_CHIPONE_ICN8318: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_TOUCHSCREEN [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y]) && I2C [=y] && OF [=y]
+

@@ -1,0 +1,6 @@
+PATA_IMX: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && ATA_BMDMA [=n] && ARCH_MXC
+
+IPVTAP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && IPVLAN [=n] && INET [=y]
+

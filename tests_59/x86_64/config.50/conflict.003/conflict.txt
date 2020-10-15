@@ -1,0 +1,3 @@
+MYRI10GE_DCA: n => no
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_MYRI [=n] && MYRI10GE [=n] && DCA [=y] && (MYRI10GE [=n]!=y || DCA [=y]!=m)
+

@@ -1,0 +1,6 @@
+ATH9K_PCI_NO_EEPROM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH9K_PCI [=n]
+
+MWIFIEX_SDIO: n => mod
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_MARVELL [=n] && MWIFIEX [=n] && MMC [=m]
+

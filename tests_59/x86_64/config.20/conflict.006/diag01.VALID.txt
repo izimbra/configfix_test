@@ -1,0 +1,9 @@
+ADE7854_I2C => yes
+CLK_SUNXI_CLOCKS => yes
+IIO => yes
+STAGING => yes
+ADE7854 => yes
+GDB_SCRIPTS => no
+CLK_SUNXI => yes
+COMPILE_TEST => yes
+DEBUG_INFO => no

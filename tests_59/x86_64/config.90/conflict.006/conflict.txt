@@ -1,0 +1,6 @@
+SPI_QCOM_QSPI: n => mod
+    Direct dependencies:  SPI [=y] && SPI_MASTER [=y] && ARCH_QCOM
+
+VIDEO_EM28XX_DVB: m => yes
+    Direct dependencies:  USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_EM28XX [=m] && DVB_CORE [=m]
+

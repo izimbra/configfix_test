@@ -1,0 +1,3 @@
+BT_HCIBTSDIO: n => mod
+    Direct dependencies:  NET [=n] && BT [=n] && MMC [=m]
+

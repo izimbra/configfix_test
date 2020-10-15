@@ -1,0 +1,3 @@
+IEEE802154_SOCKET: n => yes
+    Direct dependencies:  NET [=n] && IEEE802154 [=n]
+

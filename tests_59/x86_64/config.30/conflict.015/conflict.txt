@@ -1,0 +1,9 @@
+NVME_TARGET_PASSTHRU: n => yes
+    Direct dependencies:  NVME_TARGET [=n] && (NVME_CORE [=y]=y || NVME_CORE [=y]=NVME_TARGET [=n])
+
+TULIP_NAPI_HW_MITIGATION: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_DEC [=n] && NET_TULIP [=n] && TULIP_NAPI [=n]
+
+LPC_ENET: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (ARCH_LPC32XX || COMPILE_TEST [=n])
+

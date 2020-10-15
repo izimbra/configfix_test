@@ -1,0 +1,10 @@
+TI_EQEP: m => yes
+    Direct dependencies:  COUNTER [=m] && (SOC_AM33XX || COMPILE_TEST [=y])
+
+SAMPLE_LIVEPATCH: n => mod
+    Direct dependencies:  SAMPLES [=y] && LIVEPATCH [=n] && m && MODULES [=y]
+
+NET_NSH: m => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: OPENVSWITCH [=m] && NET [=y] && INET [=y] && (!NF_CONNTRACK [=m] || NF_CONNTRACK [=m] && (!NF_DEFRAG_IPV6 [=m] || NF_DEFRAG_IPV6 [=m]) && (!NF_NAT [=m] || NF_NAT [=m]) && (!NETFILTER_CONNCOUNT [=m] || NETFILTER_CONNCOUNT [=m]))
+

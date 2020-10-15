@@ -1,0 +1,9 @@
+XFRM_STATISTICS: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && XFRM [=n] && PROC_FS [=y]
+
+SCTP_DBG_OBJCNT: n => yes
+    Direct dependencies:  NET [=n] && IP_SCTP [=n] && PROC_FS [=y]
+
+CAN_VXCAN: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n]
+

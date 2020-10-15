@@ -1,0 +1,5 @@
+USB_NET_CX82310_ETH => yes
+NETDEVICES => yes
+USB_NET_DRIVERS => yes
+NET => yes
+USB_USBNET => yes

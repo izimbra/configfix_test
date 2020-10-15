@@ -1,0 +1,5 @@
+AHCI_XGENE => yes
+DM_ERA => yes
+ATA => yes
+PHY_XGENE => yes
+BLK_DEV_DM => yes

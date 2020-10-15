@@ -1,0 +1,13 @@
+KERNEL_ZSTD => no
+IR_IMG_RC5 => yes
+VIDEO_SAA7110 => yes
+RC_CORE => yes
+RC_DEVICES => yes
+COMPILE_TEST => yes
+IR_IMG => yes
+IR_IMG_HW => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUPPORT_FILTER => yes
+I2C => yes
+VIDEO_DEV => yes
+MEDIA_TEST_SUPPORT => yes

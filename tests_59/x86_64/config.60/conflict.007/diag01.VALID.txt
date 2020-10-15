@@ -1,0 +1,3 @@
+SERIAL_CLPS711X => yes
+SERIAL_NONSTANDARD => yes
+TTY => yes

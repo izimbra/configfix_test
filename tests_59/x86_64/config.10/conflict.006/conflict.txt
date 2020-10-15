@@ -1,0 +1,6 @@
+RTC_DRV_MAX8907: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n] && (MFD_MAX8907 [=n] || COMPILE_TEST [=n])
+
+VIDEO_SUNXI: n => yes
+    Direct dependencies:  STAGING [=n] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=n] && (ARCH_SUNXI || COMPILE_TEST [=n])
+

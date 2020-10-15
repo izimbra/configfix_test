@@ -1,0 +1,12 @@
+SFC_MCDI_MON => no
+SMSC911X => mod
+MODULE_COMPRESS_GZIP => yes
+ETHERNET => yes
+NETDEVICES => yes
+PCMCIA => mod
+PCCARD => mod
+NET => yes
+NET_VENDOR_SMSC => yes
+PHYLIB => mod
+MDIO_DEVICE => mod
+MODULE_COMPRESS => yes

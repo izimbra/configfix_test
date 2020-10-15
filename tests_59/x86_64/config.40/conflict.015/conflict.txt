@@ -1,0 +1,9 @@
+BT_HCIBTSDIO: n => mod
+    Direct dependencies:  NET [=n] && BT [=n] && MMC [=m]
+
+TCM_PSCSI: n => yes
+    Direct dependencies:  TARGET_CORE [=n] && SCSI [=n]
+
+PINCTRL_SUN8I_A23_R: n => yes
+    Direct dependencies:  PINCTRL [=y] && ARCH_SUNXI && RESET_CONTROLLER [=y]
+

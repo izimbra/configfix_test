@@ -1,0 +1,9 @@
+MMAP_ALLOW_UNINITIALIZED: n => yes
+    Direct dependencies:  EXPERT [=y] && !MMU [=y]
+
+SCx200: n => mod
+    Direct dependencies:  X86_32 [=n]
+
+FB_MX3: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && MX3_IPU [=n]
+

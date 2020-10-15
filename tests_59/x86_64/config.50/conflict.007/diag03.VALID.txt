@@ -1,0 +1,6 @@
+MYRI10GE_DCA => no
+DRM_VMWGFX_FBCON => yes
+TCP_CONG_CUBIC => no
+DRM_VMWGFX => mod
+MODULES => yes
+DRM => mod

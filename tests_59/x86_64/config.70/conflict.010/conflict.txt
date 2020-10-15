@@ -1,0 +1,6 @@
+IP_NF_MATCH_TTL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NETFILTER_ADVANCED [=n]
+
+NET_CLS_RSVP: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+

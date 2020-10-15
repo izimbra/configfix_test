@@ -1,0 +1,10 @@
+VIDEO_SAMSUNG_EXYNOS_GSC: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_MEM2MEM_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n] && (ARCH_EXYNOS || COMPILE_TEST [=n])
+
+DRM_EXYNOS_SCALER: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_EXYNOS [=n]
+
+SND_SOC_IMX_AUDMUX: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n]
+    Reverse dependencies: SND_MXC_SOC_WM1133_EV1 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && MACH_MX31ADS_WM1133_EV1 || SND_SOC_MX27VIS_AIC32X4 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && MACH_IMX27_VISSTRIM_M10 && I2C [=y] || SND_SOC_PHYCORE_AC97 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && (MACH_PCM043 || MACH_PCA100) || SND_SOC_EUKREA_TLV320 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && ARCH_MXC && !ARM64 && I2C [=y] || SND_SOC_IMX_ES8328 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && OF [=n] && (I2C [=y] || SPI [=n]) || SND_SOC_IMX_SGTL5000 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && OF [=n] && I2C [=y] || SND_SOC_IMX_MC13783 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && MFD_MC13XXX [=n] && ARM || SND_SOC_FSL_ASOC_CARD [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_IMX_SOC [=n] && OF [=n] && I2C [=y] && (SND_AC97_CODEC [=n] || SND_AC97_CODEC [=n]=n)
+

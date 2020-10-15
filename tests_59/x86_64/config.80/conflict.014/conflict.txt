@@ -1,0 +1,10 @@
+OPROFILE: n => yes
+    Direct dependencies:  PROFILING [=n] && HAVE_OPROFILE [=y]
+
+NET_DSA_TAG_RTL4_A: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+CRYPTO_DEV_EXYNOS_HASH: n => no
+    Direct dependencies:  CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_S5P [=n] && !CRYPTO_DEV_EXYNOS_RNG [=y] && CRYPTO_DEV_EXYNOS_RNG [=y]!=m
+

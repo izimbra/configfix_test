@@ -1,0 +1,11 @@
+RT2800PCI_RT35XX => yes
+DRM_PANEL_SHARP_LS043T1LE01 => yes
+FB_CARILLO_RANCH => yes
+CFG80211 => yes
+DRM => yes
+AGP_VIA => yes
+AGP => yes
+RT2X00 => yes
+RT2800PCI => mod
+MAC80211 => yes
+FB_LE80578 => yes

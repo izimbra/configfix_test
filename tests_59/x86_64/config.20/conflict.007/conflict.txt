@@ -1,0 +1,6 @@
+ATH6KL_SDIO: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH6KL [=n] && MMC [=y]
+
+MT7615E: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_MEDIATEK [=n] && MAC80211 [=n] && PCI [=y]
+

@@ -1,0 +1,9 @@
+CAN_KVASER_USB: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && USB [=n]
+
+FIREWIRE_SBP2: n => yes
+    Direct dependencies:  (PCI [=y] || COMPILE_TEST [=n]) && FIREWIRE [=n] && SCSI [=n]
+
+PINCTRL_UNIPHIER_PRO4: n => yes
+    Direct dependencies:  PINCTRL [=n] && PINCTRL_UNIPHIER [=n]
+

@@ -1,0 +1,10 @@
+X86_INTEL_MID: n => yes
+    Direct dependencies:  X86_EXTENDED_PLATFORM [=y] && X86_PLATFORM_DEVICES [=n] && PCI [=y] && (X86_64 [=y] || PCI_GOANY [=n] && X86_32 [=n]) && X86_IO_APIC [=y]
+
+EFI_CAPSULE_LOADER: n => yes
+    Direct dependencies:  EFI [=n]
+    Reverse dependencies: EFI_CAPSULE_QUIRK_QUARK_CSH [=n] && EFI [=n] && X86 [=y] && !64BIT [=y]
+
+PCMCIA_XIRC2PS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_XIRCOM [=n] && PCMCIA [=n]
+

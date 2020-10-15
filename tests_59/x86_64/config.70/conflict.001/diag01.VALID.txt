@@ -1,0 +1,4 @@
+PCIEAER_INJECT => mod
+PCIEAER => yes
+PCIEPORTBUS => yes
+PCI => yes

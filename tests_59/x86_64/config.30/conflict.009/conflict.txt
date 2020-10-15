@@ -1,0 +1,6 @@
+ATH9K_AHB: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH9K [=n]
+
+LIBERTAS_CS: n => mod
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_MARVELL [=n] && LIBERTAS [=n] && PCMCIA [=n] && HAS_IOPORT_MAP [=y]
+

@@ -1,0 +1,6 @@
+NETWORK_PHY_TIMESTAMPING: n => yes
+    Direct dependencies:  NET [=n]
+
+IP_NF_TARGET_TTL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NETFILTER_ADVANCED [=n] && IP_NF_MANGLE [=n]
+

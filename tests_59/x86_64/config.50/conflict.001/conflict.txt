@@ -1,0 +1,3 @@
+PCIE_QCOM: n => yes
+    Direct dependencies:  PCI [=y] && OF [=n] && (ARCH_QCOM || COMPILE_TEST [=n]) && PCI_MSI_IRQ_DOMAIN [=y]
+

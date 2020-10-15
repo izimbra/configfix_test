@@ -1,0 +1,6 @@
+IPV6_RPL_LWTUNNEL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+IP_NF_TARGET_MASQUERADE: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && IP_NF_NAT [=n]
+

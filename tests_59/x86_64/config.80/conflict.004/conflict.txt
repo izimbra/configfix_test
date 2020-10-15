@@ -1,0 +1,3 @@
+PPS_CLIENT_KTIMER: n => yes
+    Direct dependencies:  PPS [=n]
+

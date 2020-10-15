@@ -1,0 +1,9 @@
+SATA_FSL: n => yes
+    Direct dependencies:  ATA [=m] && HAS_DMA [=y] && FSL_SOC
+
+SERIAL_SB1250_DUART: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SIBYTE_SB1xxx_SOC=y
+
+SND_SUN4I_I2S: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && (ARCH_SUNXI || COMPILE_TEST [=y])
+

@@ -1,0 +1,9 @@
+SND_DICE: m => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=m] && SND_FIREWIRE [=y] && FIREWIRE [=m]
+
+COMEDI_AMPLC_PC236_ISA: n => mod
+    Direct dependencies:  STAGING [=n] && COMEDI [=n] && COMEDI_ISA_DRIVERS [=n]
+
+HID_SENSOR_ACCEL_3D: n => yes
+    Direct dependencies:  IIO [=y] && HID_SENSOR_HUB [=n]
+

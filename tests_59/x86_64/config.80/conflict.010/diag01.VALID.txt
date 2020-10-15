@@ -1,0 +1,8 @@
+BT_HCIUART_INTEL => yes
+MTD_NAND_GPMI_NAND => yes
+RAPIDIO_ENUM_BASIC => no
+MODULES => yes
+CRYPTO_FIPS => no
+BT => mod
+BT_HCIUART => mod
+MXS_DMA => yes

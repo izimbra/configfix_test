@@ -1,0 +1,6 @@
+ARM_SPEAR_CPUFREQ: n => yes
+    Direct dependencies:  CPU_FREQ [=y] && (ARM || ARM64) && PLAT_SPEAR
+
+IGB_HWMON: n => no
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_INTEL [=y] && IGB [=n] && HWMON [=y] && (IGB [=n]!=y || HWMON [=y]!=m)
+

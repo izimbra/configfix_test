@@ -1,0 +1,10 @@
+IP_SET_BITMAP_IP => yes
+NET_SCH_DRR => yes
+PINCTRL_SH_PFC => yes
+TCP_CONG_CUBIC => no
+NETFILTER => yes
+IP_SET => yes
+IP_SET_MAX => 65534
+NET_SCHED => yes
+COMPILE_TEST => yes
+UBSAN_SANITIZE_ALL => no

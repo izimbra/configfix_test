@@ -1,0 +1,10 @@
+RTC_DRV_MAX8907 => yes
+VIDEO_SUNXI => yes
+RTC_CLASS => yes
+I2C => yes
+COMPILE_TEST => yes
+MEDIA_SUPPORT => mod
+MODULES => yes
+MEDIA_SUPPORT_FILTER => yes
+STAGING_MEDIA => yes
+STAGING => yes

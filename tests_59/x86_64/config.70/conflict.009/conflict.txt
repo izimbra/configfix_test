@@ -1,0 +1,6 @@
+SCx200HR_TIMER: n => mod
+    Direct dependencies:  X86_32 [=n] && SCx200 [=n]
+
+ATM_FORE200E: n => mod
+    Direct dependencies:  ATM_DRIVERS [=n] && NETDEVICES [=n] && ATM [=n] && (PCI [=n] || SBUS [=n])
+

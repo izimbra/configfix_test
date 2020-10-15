@@ -1,0 +1,13 @@
+BT_CMTP => mod
+NFC_SHDLC => yes
+CRYPTO_DRBG_MENU => yes
+BT_BREDR => yes
+NETDEVICES => yes
+ISDN => yes
+NET => yes
+BT => mod
+CRYPTO_CMAC => mod
+CRYPTO_ECDH => mod
+CRC16 => mod
+NFC => mod
+NFC_HCI => mod

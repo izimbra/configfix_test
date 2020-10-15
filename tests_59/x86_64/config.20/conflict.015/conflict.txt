@@ -1,0 +1,9 @@
+ACORN_PARTITION_POWERTEC: n => yes
+    Direct dependencies:  BLOCK [=y] && ACORN_PARTITION [=n]
+
+INPUT_PALMAS_PWRBUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_PALMAS [=n]
+
+SERIAL_21285_CONSOLE: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_21285 [=n]=y
+

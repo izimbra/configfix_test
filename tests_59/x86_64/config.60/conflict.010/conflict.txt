@@ -1,0 +1,6 @@
+NETFILTER_XT_MATCH_OSF: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n]
+
+6LOWPAN_NHC_HOP: n => yes
+    Direct dependencies:  NET [=y] && 6LOWPAN_NHC [=n]
+

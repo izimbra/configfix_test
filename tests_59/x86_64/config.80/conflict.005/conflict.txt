@@ -1,0 +1,3 @@
+UAPI_HEADER_TEST: n => yes
+    Direct dependencies:  HEADERS_INSTALL [=n] && CC_CAN_LINK [=y]
+

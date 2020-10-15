@@ -1,0 +1,9 @@
+SCSI_DC395x => yes
+PCI => yes
+PCI_QUIRKS => yes
+SCSI => yes
+VGA_ARB => yes
+SCSI_LOWLEVEL => yes
+PCIEASPM => yes
+VGA_ARB_MAX_GPUS => 1
+PCIEASPM_DEFAULT => yes

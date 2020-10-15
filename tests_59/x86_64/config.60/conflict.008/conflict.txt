@@ -1,0 +1,6 @@
+MTD_AMD76XROM: m => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && X86 [=y] && MTD_JEDECPROBE [=m]
+
+PARIDE_FRPW: n => yes
+    Direct dependencies:  BLK_DEV [=n] && PARIDE [=n]
+

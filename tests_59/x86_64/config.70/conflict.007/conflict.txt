@@ -1,0 +1,6 @@
+XEN_NETDEV_BACKEND: n => yes
+    Direct dependencies:  NETDEVICES [=n] && XEN_BACKEND [=y]
+
+INPUT_SOC_BUTTON_ARRAY: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && KEYBOARD_GPIO [=n] && ACPI [=y]
+

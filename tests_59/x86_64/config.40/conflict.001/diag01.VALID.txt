@@ -1,0 +1,3 @@
+BT_HCIBTSDIO => mod
+NET => yes
+BT => mod

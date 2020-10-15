@@ -1,0 +1,6 @@
+CMA_DEBUG => yes
+GPIO_IOP => yes
+TCP_CONG_CUBIC => no
+DEBUG_KERNEL => yes
+COMPILE_TEST => yes
+UBSAN_SANITIZE_ALL => no

@@ -1,0 +1,6 @@
+NFIT_SECURITY_DEBUG: n => yes
+    Direct dependencies:  ACPI [=n] && ACPI_NFIT [=n]
+
+PCMCIA_FDOMAIN: n => no
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && SCSI_LOWLEVEL_PCMCIA [=n] && SCSI [=n] && PCMCIA [=n] && m && MODULES [=n]
+

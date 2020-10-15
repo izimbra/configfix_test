@@ -1,0 +1,3 @@
+SCSI_ACORNSCSI_TAGGED_QUEUE: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_ACORNSCSI_3 [=n]
+

@@ -1,0 +1,9 @@
+QLCNIC_SRIOV: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_QLOGIC [=n] && QLCNIC [=n] && PCI_IOV [=n]
+
+DRM_VMWGFX: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && PCI [=n] && X86 [=y] && MMU [=y]
+
+FB_NVIDIA_I2C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB_NVIDIA [=n]
+

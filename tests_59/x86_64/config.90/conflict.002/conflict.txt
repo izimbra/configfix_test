@@ -1,0 +1,3 @@
+PARPORT_SUNBPP: n => yes
+    Direct dependencies:  PARPORT [=n] && SBUS [=n]
+

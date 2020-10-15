@@ -1,0 +1,3 @@
+ATM_ENI_BURST_RX_8W: n => yes
+    Direct dependencies:  ATM_DRIVERS [=n] && NETDEVICES [=n] && ATM [=n] && ATM_ENI_TUNE_BURST [=n]
+

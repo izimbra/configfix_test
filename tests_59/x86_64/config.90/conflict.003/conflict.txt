@@ -1,0 +1,3 @@
+SERIO_XILINX_XPS_PS2: n => yes
+    Direct dependencies:  !UML && SERIO [=y] && (PPC || MICROBLAZE)
+

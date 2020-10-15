@@ -1,0 +1,8 @@
+MYRI10GE_DCA => no
+DRM_VMWGFX_FBCON => yes
+TCP_CONG_ADVANCED => yes
+DRM_VMWGFX => mod
+DEFAULT_BIC => yes
+TCP_CONG_BIC => yes
+MODULES => yes
+DRM => yes

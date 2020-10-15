@@ -1,0 +1,6 @@
+CAN_SOFTING: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+
+RFKILL_GPIO: n => yes
+    Direct dependencies:  NET [=n] && RFKILL [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

@@ -1,0 +1,11 @@
+QLCNIC_SRIOV => yes
+DRM_VMWGFX => mod
+FB_NVIDIA_I2C => yes
+ETHERNET => yes
+PCI_IOV => yes
+NETDEVICES => yes
+PCI => yes
+NET => yes
+NET_VENDOR_QLOGIC => yes
+QLCNIC => yes
+FB_NVIDIA => mod

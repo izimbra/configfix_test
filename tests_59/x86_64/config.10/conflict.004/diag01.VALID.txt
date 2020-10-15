@@ -1,0 +1,6 @@
+ENCX24J600 => yes
+ETHERNET => yes
+NET_VENDOR_MICROCHIP => yes
+SPI => yes
+NETDEVICES => yes
+NET => yes

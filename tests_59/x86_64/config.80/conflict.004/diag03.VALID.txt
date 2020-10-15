@@ -1,0 +1,7 @@
+PPS_CLIENT_KTIMER => yes
+RAPIDIO_ENUM_BASIC => no
+MODULES => yes
+MODULE_SIG_KEY => nonempty
+MODULE_SIG => yes
+PPS => yes
+MODULE_SIG_SHA256 => yes
