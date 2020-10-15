@@ -1,0 +1,9 @@
+DMASOUND_PAULA: n => yes
+    Direct dependencies:  AMIGA && SOUND [=y]
+
+SND_SOC_QCOM: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_SOC [=n] && (ARCH_QCOM || COMPILE_TEST [=y])
+
+LEDS_DA903X: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && PMIC_DA903X [=n]
+

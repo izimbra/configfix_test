@@ -1,0 +1,4 @@
+IP6_NF_MATCH_RT => yes
+MOUSE_PS2_LOGIPS2PP => yes
+IP6_NF_IPTABLES => yes
+MOUSE_PS2 => mod

@@ -1,0 +1,15 @@
+IP_VS_IPV6 => yes
+I2C_AT91 => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+MODULES => yes
+IP_VS => mod
+IP_VS_SH_TAB_BITS => 20
+IP_VS_MH_TAB_INDEX => 17
+IP_VS_TAB_BITS => 20
+IPV6 => mod
+IP6_NF_IPTABLES => mod
+I2C => yes
+COMPILE_TEST => yes
+NETFILTER_XTABLES => yes

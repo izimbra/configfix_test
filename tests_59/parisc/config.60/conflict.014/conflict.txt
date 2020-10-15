@@ -1,0 +1,9 @@
+NFT_CONNLIMIT: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+IP_DCCP_DEBUG: n => yes
+    Direct dependencies:  NET [=n] && IP_DCCP [=n] && DEBUG_KERNEL [=y]
+
+VIDEO_CX23885: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=y] && I2C [=m] && INPUT [=y] && SND [=n] && RC_CORE [=n]
+

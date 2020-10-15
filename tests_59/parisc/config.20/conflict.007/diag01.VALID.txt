@@ -1,0 +1,13 @@
+PA7300LC => no
+MTD_NAND_JZ4780 => yes
+MTD => yes
+MTD_CFI_I2 => yes
+MTD_RAW_NAND => yes
+MTD_CFI_I1 => yes
+COMPILE_TEST => yes
+JZ4780_NEMC => yes
+MTD_MAP_BANK_WIDTH_1 => yes
+MTD_MAP_BANK_WIDTH_2 => yes
+MEMORY => yes
+OF => yes
+MTD_MAP_BANK_WIDTH_4 => yes

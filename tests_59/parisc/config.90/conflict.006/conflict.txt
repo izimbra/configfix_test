@@ -1,0 +1,6 @@
+SERIAL_MCF_CONSOLE: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_MCF [=n]
+
+ORION_WATCHDOG: n => yes
+    Direct dependencies:  WATCHDOG [=y] && (ARCH_ORION5X || ARCH_DOVE || MACH_DOVE || ARCH_MVEBU || COMPILE_TEST [=y] && !ARCH_EBSA110) && ARM
+

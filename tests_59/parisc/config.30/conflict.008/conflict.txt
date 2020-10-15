@@ -1,0 +1,6 @@
+DEBUG_RSEQ: n => yes
+    Direct dependencies:  RSEQ [=n] && DEBUG_KERNEL [=n]
+
+NFT_QUOTA: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+

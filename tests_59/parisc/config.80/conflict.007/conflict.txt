@@ -1,0 +1,6 @@
+IE6XX_WDT: n => yes
+    Direct dependencies:  WATCHDOG [=y] && X86 && PCI [=y]
+
+MFD_T7L66XB: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && ARM && HAVE_CLK [=y]
+

@@ -1,0 +1,9 @@
+PCH_GBE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_OKI [=n] && PCI [=n] && (X86_32 || COMPILE_TEST [=y])
+
+NET_VENDOR_WIZNET: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && HAS_IOMEM [=y]
+
+XILINX_AXI_EMAC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_XILINX [=n]
+

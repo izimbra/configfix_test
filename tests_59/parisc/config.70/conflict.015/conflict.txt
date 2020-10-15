@@ -1,0 +1,9 @@
+SND_SOC_TEGRA_ALC5632: n => mod
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_TEGRA [=n] && I2C [=y] && GPIOLIB [=y]
+
+TEGRA30_EMC: n => yes
+    Direct dependencies:  MEMORY [=y] && TEGRA_MC [=n] && ARCH_TEGRA_3x_SOC [=n]
+
+BRIDGE_EBT_T_FILTER: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && BRIDGE_NF_EBTABLES [=n]
+

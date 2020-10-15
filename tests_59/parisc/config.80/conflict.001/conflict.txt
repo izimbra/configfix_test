@@ -1,0 +1,3 @@
+SATA_ZPODD: n => yes
+    Direct dependencies:  ATA [=m] && ATA_ACPI [=n] && PM [=n]
+

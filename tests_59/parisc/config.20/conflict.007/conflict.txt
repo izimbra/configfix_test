@@ -1,0 +1,6 @@
+PA7300LC: n => no
+    Direct dependencies:  <choice>
+
+MTD_NAND_JZ4780: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && (MIPS || COMPILE_TEST [=n]) && JZ4780_NEMC [=n]
+

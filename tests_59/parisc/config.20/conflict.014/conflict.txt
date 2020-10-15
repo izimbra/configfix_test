@@ -1,0 +1,10 @@
+IPV6_VTI: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+NF_TABLES_IPV6: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && NF_TABLES [=n]
+    Reverse dependencies: NF_TABLES_INET [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && IPV6 [=n]
+
+IR_IMG_RC5: n => yes
+    Direct dependencies:  RC_CORE [=y] && RC_DEVICES [=n] && IR_IMG_HW [=n]
+

@@ -1,0 +1,9 @@
+BAREUDP => mod
+WLAN_VENDOR_ATH => yes
+TCP_CONG_ADVANCED => yes
+NETDEVICES => yes
+DEFAULT_VENO => yes
+NET_CORE => yes
+WLAN => yes
+TCP_CONG_VENO => yes
+WIRELESS => yes

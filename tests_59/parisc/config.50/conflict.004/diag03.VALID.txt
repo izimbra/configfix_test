@@ -1,0 +1,8 @@
+WANXL_BUILD_FIRMWARE => yes
+TCP_CONG_ADVANCED => yes
+NETDEVICES => yes
+DEFAULT_RENO => yes
+WAN => yes
+WANXL => mod
+PREVENT_FIRMWARE_BUILD => no
+HDLC => yes

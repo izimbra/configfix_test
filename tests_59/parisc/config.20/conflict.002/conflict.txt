@@ -1,0 +1,3 @@
+NFC_PN533_I2C: n => yes
+    Direct dependencies:  NET [=n] && NFC [=n] && I2C [=n]
+

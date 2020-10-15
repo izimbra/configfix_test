@@ -1,0 +1,3 @@
+NET_TULIP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_DEC [=n] && (PCI [=n] || EISA [=n] || CARDBUS [=n])
+

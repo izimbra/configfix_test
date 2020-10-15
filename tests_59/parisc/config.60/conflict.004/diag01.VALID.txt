@@ -1,0 +1,15 @@
+B43_DEBUG => yes
+WLAN => yes
+CFG80211 => yes
+NETDEVICES => yes
+B43 => mod
+WLAN_VENDOR_BROADCOM => yes
+NET => yes
+WIRELESS => yes
+MAC80211 => mod
+CFG80211_REQUIRE_SIGNED_REGDB => yes
+CFG80211_USE_KERNEL_REGDB_KEYS => yes
+B43_BUSES_BCMA => yes
+CORDIC => yes
+BCMA => yes
+CRYPTO_CMAC => yes

@@ -1,0 +1,6 @@
+IP6_NF_MATCH_RT: m => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && IP6_NF_IPTABLES [=m] && NETFILTER_ADVANCED [=y]
+
+MOUSE_PS2_LOGIPS2PP: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=y] && MOUSE_PS2 [=n]
+

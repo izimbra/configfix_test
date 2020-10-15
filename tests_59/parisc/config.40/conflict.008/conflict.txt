@@ -1,0 +1,6 @@
+IO_URING: y => no
+    Direct dependencies:  y
+
+NF_FLOW_TABLE_INET: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_FLOW_TABLE [=n]
+

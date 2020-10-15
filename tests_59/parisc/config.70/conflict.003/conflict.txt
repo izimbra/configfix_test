@@ -1,0 +1,3 @@
+PPP_ASYNC: m => yes
+    Direct dependencies:  NETDEVICES [=y] && TTY [=y] && PPP [=m]
+

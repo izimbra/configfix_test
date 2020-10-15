@@ -1,0 +1,8 @@
+IP_SET_BITMAP_IP => yes
+SERIAL_FSL_LPUART_CONSOLE => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+IP_SET => yes
+IP_SET_MAX => 2
+SERIAL_FSL_LPUART => yes

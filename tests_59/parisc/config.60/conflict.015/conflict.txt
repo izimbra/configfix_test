@@ -1,0 +1,10 @@
+PATA_NS87410: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && PCI [=y]
+
+TOUCHSCREEN_SIS_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && I2C [=m] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+VIDEO_SAA6752HS: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=m]
+    Reverse dependencies: VIDEO_SAA7134 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_DEV [=m] && PCI [=y] && I2C [=m] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

@@ -1,0 +1,9 @@
+NET_VENDOR_I825XX: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_INTEL [=n]
+
+XSURF100: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && ZORRO
+
+STNIC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && SUPERH
+

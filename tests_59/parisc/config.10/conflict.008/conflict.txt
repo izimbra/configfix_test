@@ -1,0 +1,7 @@
+KALLSYMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: KPROBES [=n] && MODULES [=n] && HAVE_KPROBES [=y] || LATENCYTOP [=n] && DEBUG_KERNEL [=n] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || DEBUG_KMEMLEAK [=n] && DEBUG_KERNEL [=n] && HAVE_DEBUG_KMEMLEAK [=n] || LOCKDEP [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=n] || FUNCTION_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=y] || STACK_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=y] || FTRACE_SYSCALLS [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_SYSCALL_TRACEPOINTS [=y]
+
+NFT_CONNLIMIT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+

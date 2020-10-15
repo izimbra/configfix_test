@@ -1,0 +1,3 @@
+SCSI_SNIC: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && PCI [=y] && SCSI [=m]
+

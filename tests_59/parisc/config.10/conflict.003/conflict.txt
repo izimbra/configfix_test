@@ -1,0 +1,3 @@
+B53_MMAP_DRIVER: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && B53 [=n] && HAS_IOMEM [=y]
+

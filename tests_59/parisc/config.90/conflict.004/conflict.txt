@@ -1,0 +1,3 @@
+USB_GSPCA_SPCA506: n => yes
+    Direct dependencies:  USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && MEDIA_CAMERA_SUPPORT [=y] && VIDEO_V4L2 [=m] && USB_GSPCA [=m]
+

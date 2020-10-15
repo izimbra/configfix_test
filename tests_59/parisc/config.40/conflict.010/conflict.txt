@@ -1,0 +1,6 @@
+HWPOISON_INJECT: n => yes
+    Direct dependencies:  MEMORY_FAILURE [=n] && DEBUG_KERNEL [=y] && PROC_FS [=y]
+
+IWLEGACY_DEBUG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTEL [=n] && IWLEGACY [=n]
+

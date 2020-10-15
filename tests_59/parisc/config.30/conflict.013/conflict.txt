@@ -1,0 +1,9 @@
+PINCTRL_COH901: n => yes
+    Direct dependencies:  PINCTRL [=y] && GPIOLIB [=y] && ARCH_U300 && PINCTRL_U300 [=n]
+
+MFD_MAX8998: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+VIDEO_MEM2MEM_DEINTERLACE: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_MEM2MEM_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n] && HAS_DMA [=y]
+

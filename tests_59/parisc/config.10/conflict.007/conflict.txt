@@ -1,0 +1,6 @@
+HZ_100: y => no
+    Direct dependencies:  <choice>
+
+MTD_NAND_FSMC: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && OF [=n] && HAS_IOMEM [=y] && (PLAT_SPEAR || ARCH_NOMADIK || ARCH_U8500 || MACH_U300 || COMPILE_TEST [=n])
+

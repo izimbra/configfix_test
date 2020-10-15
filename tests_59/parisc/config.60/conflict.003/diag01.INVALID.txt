@@ -1,0 +1,7 @@
+LANCE => yes
+ETHERNET => yes
+NETDEVICES => yes
+EISA => yes
+NET_VENDOR_AMD => yes
+NET => yes
+ISA => yes

@@ -1,0 +1,5 @@
+DM_DUST => yes
+NET_DSA_SMSC_LAN9303_MDIO => yes
+BLK_DEV_DM => yes
+NET_DSA => yes
+NET_DSA_TAG_LAN9303 => yes

@@ -1,0 +1,6 @@
+IP_VS_PE_SIP: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n] && IP_VS_PROTO_UDP [=n] && NF_CONNTRACK_SIP [=n]
+
+CDNS_I3C_MASTER: n => yes
+    Direct dependencies:  I3C [=n] && HAS_IOMEM [=y] && !ALPHA && !PARISC [=y]
+

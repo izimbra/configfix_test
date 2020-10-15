@@ -1,0 +1,9 @@
+KERNEL_LZO: n => no
+    Direct dependencies:  <choice> && HAVE_KERNEL_LZO [=y]
+
+VFIO_PCI_VGA: n => yes
+    Direct dependencies:  VFIO_PCI [=m] && X86 && VGA_ARB [=n]
+
+INTEL_ATOMISP2_PM: n => yes
+    Direct dependencies:  X86 && X86_PLATFORM_DEVICES [=n] && PCI [=y] && IOSF_MBI && PM [=n] && !INTEL_ATOMISP [=n]
+

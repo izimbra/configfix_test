@@ -1,0 +1,3 @@
+COMMON_CLK_MT2712_VENCSYS: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && (ARCH_MEDIATEK || COMPILE_TEST [=n]) && COMMON_CLK_MT2712 [=n]
+

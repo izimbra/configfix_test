@@ -1,0 +1,6 @@
+SCSI_OAK1: n => mod
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && ARCH_ACORN && SCSI [=y]
+
+PATA_RADISYS: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && ATA_BMDMA [=n] && PCI [=y]
+

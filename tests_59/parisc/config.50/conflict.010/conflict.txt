@@ -1,0 +1,6 @@
+ZSMALLOC_PGTABLE_MAPPING: n => yes
+    Direct dependencies:  ZSMALLOC [=m]=y
+
+RT73USB: n => mod
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && USB [=y]
+

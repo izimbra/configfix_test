@@ -1,0 +1,6 @@
+MTD_NETtel: n => mod
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && X86 && MTD_JEDECPROBE [=n]
+
+PATA_TOSHIBA: m => yes
+    Direct dependencies:  ATA [=m] && ATA_SFF [=y] && ATA_BMDMA [=y] && PCI [=y]
+

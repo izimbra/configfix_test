@@ -1,0 +1,2 @@
+PREEMPT_NONE => no
+PREEMPT_VOLUNTARY => yes

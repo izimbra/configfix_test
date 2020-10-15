@@ -1,0 +1,10 @@
+NETLABEL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && SECURITY [=y]
+    Reverse dependencies: SECURITY_SMACK [=n] && NET [=n] && INET [=n] && SECURITY [=y]
+
+IP6_NF_MATCH_IPV6HEADER: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n]
+
+USB_GSPCA: n => yes
+    Direct dependencies:  USB [=n] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=y] && VIDEO_V4L2 [=n] && (INPUT [=y] || INPUT [=y]=n)
+

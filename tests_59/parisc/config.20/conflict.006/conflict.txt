@@ -1,0 +1,6 @@
+IP_SET_BITMAP_IP: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+SERIAL_FSL_LPUART_CONSOLE: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_FSL_LPUART [=n]=y
+

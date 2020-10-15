@@ -1,0 +1,4 @@
+USB_GSPCA_SPCA506 => yes
+MEDIA_SUPPORT => yes
+USB_GSPCA => yes
+VIDEO_DEV => yes

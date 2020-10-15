@@ -1,0 +1,13 @@
+IXGBEVF_IPSEC => yes
+QLCNIC_SRIOV => yes
+QCA7000_UART => mod
+ETHERNET => yes
+PCI_MSI => yes
+NETDEVICES => yes
+NET => yes
+IXGBEVF => mod
+NET_VENDOR_INTEL => yes
+NET_VENDOR_QLOGIC => yes
+QLCNIC => yes
+NET_VENDOR_QUALCOMM => yes
+OF => yes

@@ -1,0 +1,9 @@
+NFT_CT => mod
+USB_RTL8152 => mod
+NF_TABLES => mod
+INET => yes
+NF_CONNTRACK => yes
+USB_AUTOSUSPEND_DELAY => 1
+USB => mod
+USB_NET_DRIVERS => mod
+USB_SUPPORT => yes

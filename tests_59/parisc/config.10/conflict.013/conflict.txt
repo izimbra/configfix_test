@@ -1,0 +1,9 @@
+I2C_SH_MOBILE: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && (ARCH_SHMOBILE || ARCH_RENESAS || COMPILE_TEST [=n])
+
+SOFT_WATCHDOG: n => yes
+    Direct dependencies:  WATCHDOG [=n]
+
+DVB_USB_DIBUSB_MB: n => yes
+    Direct dependencies:  USB [=n] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB [=n] && (DVB_DIB3000MC [=n] || !DVB_DIB3000MC [=n])
+

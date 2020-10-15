@@ -1,0 +1,3 @@
+PATA_ACPI: n => mod
+    Direct dependencies:  ATA [=m] && ATA_SFF [=y] && ATA_ACPI [=n] && ATA_BMDMA [=y] && PCI [=y]
+

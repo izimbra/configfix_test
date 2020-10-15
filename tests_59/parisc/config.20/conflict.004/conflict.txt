@@ -1,0 +1,3 @@
+ATH9K_HWRNG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH9K [=n] && (HW_RANDOM [=y]=y || HW_RANDOM [=y]=ATH9K [=n])
+

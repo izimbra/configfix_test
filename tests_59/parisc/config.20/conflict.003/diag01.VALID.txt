@@ -1,0 +1,11 @@
+NET_DSA_MICROCHIP_KSZ9477_I2C => yes
+NET_SWITCHDEV => yes
+NET_DSA_MICROCHIP_KSZ9477 => yes
+NETDEVICES => yes
+I2C => yes
+NET => yes
+INET => yes
+NET_DSA => yes
+NET_DSA_TAG_KSZ => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

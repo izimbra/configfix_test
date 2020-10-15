@@ -1,0 +1,6 @@
+NFC_ST21NFCA_I2C => yes
+NFC => yes
+NFC_HCI => yes
+NET => yes
+NFC_SHDLC => yes
+CRC_CCITT => yes

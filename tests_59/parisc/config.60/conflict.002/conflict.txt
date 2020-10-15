@@ -1,0 +1,3 @@
+NFC_NXP_NCI_I2C: n => yes
+    Direct dependencies:  NET [=n] && NFC [=n] && NFC_NXP_NCI [=n] && I2C [=m]
+

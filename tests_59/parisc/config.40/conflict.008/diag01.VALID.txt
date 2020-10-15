@@ -1,0 +1,11 @@
+IO_URING => no
+NF_FLOW_TABLE_INET => yes
+SERIAL_SH_SCI_NR_UARTS => 1
+EXPERT => yes
+NF_FLOW_TABLE => yes
+NF_TABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+NETFILTER_INGRESS => yes
+NF_CONNTRACK => yes

@@ -1,0 +1,9 @@
+PINCTRL_SUN5I: n => yes
+    Direct dependencies:  PINCTRL [=y] && ARCH_SUNXI
+
+USB_GSPCA_ZC3XX: n => yes
+    Direct dependencies:  USB [=y] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=y] && VIDEO_V4L2 [=y] && USB_GSPCA [=n]
+
+FB_SAVAGE_I2C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB_SAVAGE [=n]
+

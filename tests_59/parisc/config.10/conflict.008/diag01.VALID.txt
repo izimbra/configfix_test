@@ -1,0 +1,10 @@
+KALLSYMS => no
+NFT_CONNLIMIT => yes
+DEBUG_KERNEL => yes
+EXPERT => yes
+NETFILTER_ADVANCED => yes
+NF_TABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+NF_CONNTRACK => yes

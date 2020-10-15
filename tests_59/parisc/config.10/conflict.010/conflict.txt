@@ -1,0 +1,7 @@
+LDM_PARTITION: n => yes
+    Direct dependencies:  BLOCK [=y] && PARTITION_ADVANCED [=n]
+
+USB_NET_DRIVERS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && USB [=n] && NET [=n]
+    Reverse dependencies: USB_NET_RNDIS_WLAN [=n] && NETDEVICES [=n] && WLAN [=n] && USB [=n] && CFG80211 [=n]
+

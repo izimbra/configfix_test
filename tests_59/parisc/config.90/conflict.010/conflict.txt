@@ -1,0 +1,6 @@
+MTD_SOLUTIONENGINE: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && SOLUTION_ENGINE && MTD_CFI [=n] && MTD_REDBOOT_PARTS [=n]
+
+INTEL_MIC_HOST: n => yes
+    Direct dependencies:  64BIT [=n] && PCI [=y] && X86 && INTEL_MIC_BUS [=n] && SCIF_BUS [=n] && MIC_COSM [=n] && VOP_BUS [=m]
+

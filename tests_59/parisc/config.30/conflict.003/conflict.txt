@@ -1,0 +1,3 @@
+BE2NET_BE3: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_EMULEX [=n] && BE2NET [=n]
+

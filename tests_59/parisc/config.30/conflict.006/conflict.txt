@@ -1,0 +1,6 @@
+IP_VS_IPV6: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n] && (IPV6 [=n]=y || IP_VS [=n]=IPV6 [=n])
+
+I2C_AT91: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && (ARCH_AT91 || COMPILE_TEST [=n])
+

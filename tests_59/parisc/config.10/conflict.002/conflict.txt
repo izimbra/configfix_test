@@ -1,0 +1,3 @@
+NFC_ST21NFCA_I2C: n => yes
+    Direct dependencies:  NET [=n] && NFC [=n] && NFC_HCI [=n] && I2C [=y] && NFC_SHDLC [=n]
+

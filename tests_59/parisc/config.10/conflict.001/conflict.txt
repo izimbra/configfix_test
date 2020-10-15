@@ -1,0 +1,3 @@
+FSL_MC_BUS: n => yes
+    Direct dependencies:  OF [=n] && (ARCH_LAYERSCAPE || COMPILE_TEST [=n] && (ARM || ARM64 || X86_LOCAL_APIC || PPC))
+

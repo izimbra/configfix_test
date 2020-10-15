@@ -1,0 +1,9 @@
+GNSS_SIRF_SERIAL: n => yes
+    Direct dependencies:  GNSS [=y] && SERIAL_DEV_BUS [=n]
+
+SND_SOC_IMG: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n]
+
+RTC_DRV_PXA: n => mod
+    Direct dependencies:  RTC_CLASS [=y] && ARCH_PXA
+

@@ -1,0 +1,6 @@
+BE2NET_BE3 => yes
+ETHERNET => yes
+NETDEVICES => yes
+NET_VENDOR_EMULEX => yes
+NET => yes
+BE2NET => yes

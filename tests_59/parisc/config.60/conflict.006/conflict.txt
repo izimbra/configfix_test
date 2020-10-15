@@ -1,0 +1,6 @@
+IP_VS_PE_SIP: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n] && IP_VS_PROTO_UDP [=n] && NF_CONNTRACK_SIP [=n]
+
+R3964: n => yes
+    Direct dependencies:  TTY [=y] && BROKEN [=n]
+

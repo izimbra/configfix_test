@@ -1,0 +1,9 @@
+DEBUG_RSEQ => yes
+NFT_QUOTA => yes
+RSEQ => yes
+DEBUG_KERNEL => yes
+EXPERT => yes
+NF_TABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes

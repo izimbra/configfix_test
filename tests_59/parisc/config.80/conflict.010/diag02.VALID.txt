@@ -1,0 +1,10 @@
+RAPIDIO_CHMAN => yes
+MTD_QINFO_PROBE => yes
+RAPIDIO => yes
+MTD => yes
+MTD_CFI_ADV_OPTIONS => yes
+MTD_LPDDR => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_LE_BYTE_SWAP => yes
+MTD_MAP_BANK_WIDTH_4 => yes
+MTD_CFI_I1 => yes

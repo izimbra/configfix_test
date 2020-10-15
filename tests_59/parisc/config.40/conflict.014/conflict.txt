@@ -1,0 +1,9 @@
+NFT_COUNTER: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+
+IP_DCCP_DEBUG: n => yes
+    Direct dependencies:  NET [=n] && IP_DCCP [=n] && DEBUG_KERNEL [=y]
+
+FB_N411: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n] && X86 && MMU [=y]
+

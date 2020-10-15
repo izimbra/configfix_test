@@ -1,0 +1,6 @@
+DM_EBS: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+NATIONAL_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+

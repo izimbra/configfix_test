@@ -1,0 +1,14 @@
+BFQ_GROUP_IOSCHED => yes
+USB_NET_RNDIS_HOST => yes
+BLK_CGROUP => yes
+CGROUPS => yes
+MODULES => yes
+IOSCHED_BFQ => mod
+USB_AUTOSUSPEND_DELAY => 1
+USB => yes
+NETDEVICES => yes
+USB_NET_DRIVERS => yes
+NET => yes
+USB_SUPPORT => yes
+USB_USBNET => yes
+USB_NET_CDCETHER => yes

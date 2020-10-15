@@ -1,0 +1,3 @@
+SCSI_FLASHPOINT: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_BUSLOGIC [=n] && PCI [=y]
+

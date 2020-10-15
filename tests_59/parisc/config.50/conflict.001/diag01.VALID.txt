@@ -1,0 +1,10 @@
+PARIDE_BPCK6 => mod
+TCP_CONG_ADVANCED => yes
+TCP_CONG_DCTCP => yes
+PARIDE => mod
+BLOCK => yes
+DEFAULT_DCTCP => yes
+PARPORT_PC => yes
+PARTITION_ADVANCED => yes
+PARPORT => yes
+BLK_DEV => yes

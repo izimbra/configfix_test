@@ -1,0 +1,3 @@
+KEYBOARD_TEGRA: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && ARCH_TEGRA && OF [=n]
+

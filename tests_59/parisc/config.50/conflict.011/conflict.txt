@@ -1,0 +1,9 @@
+SGI_O2MACE_ETH: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SGI [=n] && SGI_IP32=y
+
+BCM87XX_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+DP83822_PHY: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+

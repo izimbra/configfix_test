@@ -1,0 +1,9 @@
+SATA_ULI: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && ATA_BMDMA [=n] && PCI [=n]
+
+TOUCHSCREEN_FUJITSU: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n]
+
+VIDEO_DAVINCI_VPIF_CAPTURE: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_PLATFORM_SUPPORT [=y] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_V4L2 [=n] && (ARCH_DAVINCI || COMPILE_TEST [=n]) && I2C [=y]
+

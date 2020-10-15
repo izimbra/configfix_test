@@ -1,0 +1,6 @@
+SLOB: n => yes
+    Direct dependencies:  <choice> && EXPERT [=n]
+
+BLK_DEV_RAM: n => yes
+    Direct dependencies:  BLK_DEV [=n]
+

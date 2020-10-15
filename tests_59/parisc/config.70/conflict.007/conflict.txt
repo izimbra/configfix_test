@@ -1,0 +1,6 @@
+GPIO_IT87: n => yes
+    Direct dependencies:  GPIOLIB [=y] && X86
+
+SENSORS_ARM_SCMI: n => mod
+    Direct dependencies:  HWMON [=y] && ARM_SCMI_PROTOCOL && (THERMAL [=y] || !THERMAL_OF [=y])
+

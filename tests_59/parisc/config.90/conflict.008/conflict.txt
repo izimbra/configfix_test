@@ -1,0 +1,6 @@
+DM_DUST: n => yes
+    Direct dependencies:  MD [=y] && BLK_DEV_DM [=m]
+
+NET_DSA_SMSC_LAN9303_MDIO: m => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m]
+

@@ -1,0 +1,7 @@
+RAPIDIO_CHMAN: m => yes
+    Direct dependencies:  RAPIDIO [=m]
+
+MTD_QINFO_PROBE: n => yes
+    Direct dependencies:  MTD [=n] && MTD_LPDDR [=n]
+    Reverse dependencies: MTD_LPDDR [=n] && MTD [=n]
+

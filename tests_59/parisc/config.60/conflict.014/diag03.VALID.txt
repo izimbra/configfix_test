@@ -1,0 +1,17 @@
+NFT_CONNLIMIT => mod
+IP_DCCP_DEBUG => yes
+VIDEO_CX23885 => mod
+NETFILTER_ADVANCED => yes
+NF_TABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+NF_CONNTRACK => yes
+IP_DCCP => yes
+RC_CORE => mod
+MEDIA_PCI_SUPPORT => yes
+SOUND => yes
+SND => mod
+SND_HDA_PREALLOC_SIZE => 0
+VIDEO_CS3308 => mod
+VIDEO_CX25840 => mod

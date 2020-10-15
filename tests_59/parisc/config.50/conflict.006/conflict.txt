@@ -1,0 +1,6 @@
+IP6_NF_MATCH_RPFILTER: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=n] && NETFILTER [=y] && IP6_NF_IPTABLES [=n] && NETFILTER_ADVANCED [=n] && (IP6_NF_MANGLE [=n] || IP6_NF_RAW [=n])
+
+I2C_VIAPRO: n => yes
+    Direct dependencies:  I2C [=m] && HAS_IOMEM [=y] && PCI [=y]
+

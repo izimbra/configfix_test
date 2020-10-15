@@ -1,0 +1,9 @@
+VIDEO_DAVINCI_VPBE_DISPLAY: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_V4L2 [=n] && (ARCH_DAVINCI || COMPILE_TEST [=n]) && I2C [=n]
+
+NOUVEAU_PLATFORM_DRIVER: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_NOUVEAU [=n] && ARCH_TEGRA
+
+SND_SOC_ADI_AXI_SPDIF: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_ADI [=n]
+

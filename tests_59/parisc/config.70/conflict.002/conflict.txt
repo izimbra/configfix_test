@@ -1,0 +1,3 @@
+PNPBIOS_PROC_FS: n => yes
+    Direct dependencies:  PNP [=n] && PNPBIOS [=n] && PROC_FS [=y]
+

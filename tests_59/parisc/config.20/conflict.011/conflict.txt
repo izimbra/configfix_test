@@ -1,0 +1,9 @@
+SNI_82596: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_I825XX [=n] && SNI_RM
+
+NE2000: n => no
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && (ISA [=n] || Q40 && m && MODULES [=n] || MACH_TX49XX || ATARI_ETHERNEC)
+
+FORCEDETH: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_NVIDIA [=n] && PCI [=n]
+

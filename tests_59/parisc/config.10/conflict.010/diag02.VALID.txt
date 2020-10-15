@@ -1,0 +1,10 @@
+LDM_PARTITION => yes
+USB_NET_DRIVERS => yes
+PARTITION_ADVANCED => yes
+USB_AUTOSUSPEND_DELAY => 1
+USB => yes
+NETDEVICES => yes
+NET => yes
+USB_SUPPORT => yes
+NLS => yes
+NLS_DEFAULT => nonempty

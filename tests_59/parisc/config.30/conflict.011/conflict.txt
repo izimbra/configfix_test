@@ -1,0 +1,10 @@
+ATP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_REALTEK [=n] && PARPORT [=n] && X86
+
+MDIO_BITBANG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && MDIO_DEVICE [=n] && MDIO_BUS [=n]
+    Reverse dependencies: FS_ENET_MDIO_FCC [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FS_ENET [=n] && CPM2 || AX88796 [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && (ARM || MIPS || SUPERH || ZORRO || COMPILE_TEST [=n]) || SH_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_RENESAS [=n] && (ARCH_RENESAS || SUPERH || COMPILE_TEST [=n]) || RAVB [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_RENESAS [=n] && (ARCH_RENESAS || COMPILE_TEST [=n])
+
+MDIO_IPQ8064: n => yes
+    Direct dependencies:  NETDEVICES [=n] && MDIO_DEVICE [=n] && MDIO_BUS [=n] && HAS_IOMEM [=y] && OF_MDIO [=n] && MFD_SYSCON [=n]
+

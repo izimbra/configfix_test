@@ -1,0 +1,6 @@
+IP6_NF_MATCH_RT => yes
+MOUSE_PS2_LOGIPS2PP => yes
+IP6_NF_IPTABLES => yes
+SERIO_GSCPS2 => yes
+SERIO_LIBPS2 => yes
+MOUSE_PS2 => yes

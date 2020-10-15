@@ -1,0 +1,6 @@
+FUSION_SPI: n => yes
+    Direct dependencies:  FUSION [=n] && PCI [=y] && SCSI [=y]
+
+LCS: n => yes
+    Direct dependencies:  S390 && CCW && NETDEVICES [=n] && (ETHERNET [=n] || FDDI [=n])
+

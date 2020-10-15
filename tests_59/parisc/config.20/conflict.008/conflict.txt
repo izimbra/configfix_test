@@ -1,0 +1,6 @@
+PRINTK: y => no
+    Direct dependencies:  y
+
+NF_CONNTRACK_SIP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+

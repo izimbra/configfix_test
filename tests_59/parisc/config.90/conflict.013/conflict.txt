@@ -1,0 +1,9 @@
+MTD_UCLINUX: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && (MTD_RAM [=n]=y || MTD_ROM [=n]=y) && (!MMU [=y] || COLDFIRE)
+
+GADGET_UAC1_LEGACY: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=y] && GADGET_UAC1 [=n]
+
+CPCAP_ADC: m => yes
+    Direct dependencies:  IIO [=y] && MFD_CPCAP [=m]
+

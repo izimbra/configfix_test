@@ -1,0 +1,9 @@
+IXGBEVF_IPSEC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_INTEL [=n] && IXGBEVF [=n] && XFRM_OFFLOAD [=n]
+
+QLCNIC_SRIOV: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_QLOGIC [=n] && QLCNIC [=n] && PCI_IOV [=y]
+
+QCA7000_UART: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_QUALCOMM [=n] && SERIAL_DEV_BUS [=y] && OF [=n]
+

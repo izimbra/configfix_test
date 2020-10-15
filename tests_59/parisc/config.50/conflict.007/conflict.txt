@@ -1,0 +1,6 @@
+STRICT_KERNEL_RWX: y => no
+    Direct dependencies:  ARCH_HAS_STRICT_KERNEL_RWX [=y]
+
+BLK_DEV_IDEPNP: n => mod
+    Direct dependencies:  IDE [=n] && PNP [=n]
+

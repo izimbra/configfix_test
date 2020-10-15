@@ -1,0 +1,13 @@
+PATA_NS87410 => yes
+TOUCHSCREEN_SIS_I2C => yes
+VIDEO_SAA6752HS => yes
+ATA => yes
+BLOCK => yes
+EFI_PARTITION => yes
+MSDOS_PARTITION => yes
+ATA_SFF => yes
+SCSI => yes
+I2C => yes
+INPUT_TOUCHSCREEN => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

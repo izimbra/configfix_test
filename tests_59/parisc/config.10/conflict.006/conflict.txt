@@ -1,0 +1,6 @@
+IP_SET_HASH_IPMAC: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+SERIAL_XILINX_PS_UART_CONSOLE: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_XILINX_PS_UART [=n]=y
+

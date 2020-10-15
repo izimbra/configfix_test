@@ -1,0 +1,9 @@
+PINCTRL_IMX6UL: n => yes
+    Direct dependencies:  PINCTRL [=y] && SOC_IMX6UL
+
+REGULATOR_CROS_EC: n => mod
+    Direct dependencies:  REGULATOR [=n] && CROS_EC [=n] && OF [=y]
+
+VIDEO_MT9P031: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=m] && VIDEO_V4L2 [=n]
+

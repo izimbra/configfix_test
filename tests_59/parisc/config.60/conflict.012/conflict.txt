@@ -1,0 +1,9 @@
+VIDEO_MT9M111: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=m] && VIDEO_V4L2 [=m]
+
+DRM_TOSHIBA_TC358764: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=n]
+
+SND_SOC_SAMSUNG_H1940_UDA1380: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && ARCH_H1940 && I2C [=m]
+

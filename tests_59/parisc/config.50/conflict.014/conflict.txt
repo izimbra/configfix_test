@@ -1,0 +1,9 @@
+NETFILTER_XT_MATCH_IPVS: n => mod
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=m] && IP_VS [=n] && NETFILTER_ADVANCED [=n] && NF_CONNTRACK [=m]
+
+NET_SCH_HHF: n => mod
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+VIDEO_TW9910: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=n] && I2C [=m]
+

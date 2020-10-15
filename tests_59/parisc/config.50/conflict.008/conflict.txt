@@ -1,0 +1,6 @@
+HZ_300: n => no
+    Direct dependencies:  <choice>
+
+NETFILTER_XT_MATCH_PKTTYPE: n => mod
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=m] && NETFILTER_ADVANCED [=n]
+

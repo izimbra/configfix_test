@@ -1,0 +1,3 @@
+WANXL_BUILD_FIRMWARE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WAN [=n] && WANXL [=n] && !PREVENT_FIRMWARE_BUILD [=y]
+

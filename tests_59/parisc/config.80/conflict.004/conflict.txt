@@ -1,0 +1,3 @@
+GPIO_SNPS_CREG: n => yes
+    Direct dependencies:  GPIOLIB [=y] && HAS_IOMEM [=y] && (ARC || COMPILE_TEST [=y]) && OF_GPIO [=n]
+

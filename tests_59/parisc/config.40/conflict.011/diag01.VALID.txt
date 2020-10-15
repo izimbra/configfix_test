@@ -1,0 +1,17 @@
+PCH_GBE => yes
+NET_VENDOR_WIZNET => yes
+XILINX_AXI_EMAC => yes
+ETHERNET => yes
+SERIAL_SH_SCI_NR_UARTS => 64
+NETDEVICES => yes
+NET_VENDOR_OKI => yes
+PCI => yes
+NET => yes
+EXPERT => yes
+PA7200 => no
+PA8X00 => yes
+PTP_1588_CLOCK_PCH => yes
+64BIT => yes
+NET_VENDOR_XILINX => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

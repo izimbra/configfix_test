@@ -1,0 +1,9 @@
+I2C_STM32F4: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && (ARCH_STM32 || COMPILE_TEST [=n])
+
+WATCHDOG_PRETIMEOUT_DEFAULT_GOV_NOOP: n => yes
+    Direct dependencies:  <choice> && WATCHDOG_PRETIMEOUT_GOV_NOOP [=n]
+
+USB_GSPCA_SPCA506: n => yes
+    Direct dependencies:  USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=n] && VIDEO_V4L2 [=n] && USB_GSPCA [=n]
+

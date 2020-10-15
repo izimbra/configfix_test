@@ -1,0 +1,3 @@
+MOXA_SMARTIO: n => yes
+    Direct dependencies:  TTY [=y] && SERIAL_NONSTANDARD [=n] && (PCI [=y] || EISA [=y] || ISA [=y])
+

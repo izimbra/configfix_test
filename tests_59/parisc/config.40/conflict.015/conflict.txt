@@ -1,0 +1,9 @@
+ANSLCD: n => yes
+    Direct dependencies:  MACINTOSH_DRIVERS [=n] && ADB_CUDA [=n] && PPC_PMAC
+
+SERIAL_8250_MT6577: n => yes
+    Direct dependencies:  TTY [=y] && HAS_IOMEM [=y] && SERIAL_8250 [=n] && ARCH_MEDIATEK
+
+SND_MIXER_OSS: n => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=n] && SND_OSSEMUL [=n]
+

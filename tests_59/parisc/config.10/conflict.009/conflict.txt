@@ -1,0 +1,6 @@
+AHCI_IMX: n => yes
+    Direct dependencies:  ATA [=n] && HAS_DMA [=y] && MFD_SYSCON [=n] && (ARCH_MXC || COMPILE_TEST [=n]) && (HWMON [=n] && (THERMAL [=n] || !THERMAL_OF [=n]) || !HWMON [=n])
+
+DWMAC_GENERIC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_STMICRO [=n] && STMMAC_ETH [=n] && STMMAC_PLATFORM [=n]
+

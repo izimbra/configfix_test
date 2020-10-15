@@ -1,0 +1,2 @@
+MOXA_SMARTIO => yes
+SERIAL_NONSTANDARD => yes

@@ -1,0 +1,9 @@
+DRM_AMDGPU_USERPTR: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_AMDGPU [=n] && MMU [=y]
+
+FB_S3C2410: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n] && ARCH_S3C24XX
+
+SND_SOC_MAX98088: n => yes
+    Direct dependencies:  SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && I2C [=m]
+

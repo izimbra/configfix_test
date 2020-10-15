@@ -1,0 +1,3 @@
+ATH9K_WOW: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH9K [=n] && PM [=n]
+

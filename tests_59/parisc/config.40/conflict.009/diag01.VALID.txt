@@ -1,0 +1,8 @@
+DM_EBS => yes
+NATIONAL_PHY => yes
+BLK_DEV_DM => yes
+MD => yes
+NETDEVICES => yes
+NET => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

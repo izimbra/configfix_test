@@ -1,0 +1,13 @@
+SLOB => yes
+BLK_DEV_RAM => yes
+FAILSLAB => no
+SERIAL_SH_SCI_NR_UARTS => 64
+SLAB_FREELIST_HARDENED => no
+EXPERT => yes
+SLAB => no
+PA7200 => no
+BLK_DEV => yes
+BLK_DEV_RAM_COUNT => 1
+PA8X00 => yes
+BLK_DEV_RAM_SIZE => 1
+64BIT => yes

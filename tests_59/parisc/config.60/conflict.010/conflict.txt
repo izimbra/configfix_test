@@ -1,0 +1,6 @@
+ZSWAP_COMPRESSOR_DEFAULT_LZO: n => yes
+    Direct dependencies:  <choice>
+
+ATH9K_PCI_NO_EEPROM: n => mod
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_ATH [=n] && ATH9K_PCI [=n]
+

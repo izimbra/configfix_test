@@ -1,0 +1,6 @@
+NFT_CT: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=y] && NF_TABLES [=n] && NF_CONNTRACK [=n]
+
+USB_RTL8152: n => mod
+    Direct dependencies:  NETDEVICES [=y] && USB_NET_DRIVERS [=n]
+

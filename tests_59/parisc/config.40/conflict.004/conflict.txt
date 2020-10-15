@@ -1,0 +1,3 @@
+MWIFIEX_USB: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_MARVELL [=n] && MWIFIEX [=n] && USB [=y]
+

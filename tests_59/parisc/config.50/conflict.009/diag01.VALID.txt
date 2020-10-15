@@ -1,0 +1,8 @@
+BAREUDP => mod
+WLAN_VENDOR_ATH => yes
+TCP_CONG_ADVANCED => yes
+NETDEVICES => yes
+DEFAULT_RENO => yes
+NET_CORE => yes
+WLAN => yes
+WIRELESS => yes

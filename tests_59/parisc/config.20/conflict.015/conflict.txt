@@ -1,0 +1,9 @@
+PATA_CS5536: n => yes
+    Direct dependencies:  ATA [=y] && ATA_SFF [=n] && ATA_BMDMA [=n] && PCI [=n] && (X86_32 || MIPS || COMPILE_TEST [=n])
+
+TOUCHSCREEN_MAX11801: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && I2C [=n]
+
+USB_MR800: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && RADIO_ADAPTERS [=n] && USB [=n] && VIDEO_V4L2 [=n]
+

@@ -1,0 +1,3 @@
+PARIDE_BPCK6: n => mod
+    Direct dependencies:  BLK_DEV [=n] && PARIDE [=n] && !64BIT [=n]
+

@@ -1,0 +1,8 @@
+SLUB_MEMCG_SYSFS_ON => yes
+PARPORT_PC_SUPERIO => yes
+MEMCG => yes
+DEBUG_KERNEL => yes
+EXPERT => yes
+PARPORT_PC => yes
+PARPORT => yes
+COMPILE_TEST => yes

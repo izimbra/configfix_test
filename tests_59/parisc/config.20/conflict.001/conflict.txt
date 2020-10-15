@@ -1,0 +1,3 @@
+TI_SYSC: n => yes
+    Direct dependencies:  ARCH_OMAP2PLUS
+

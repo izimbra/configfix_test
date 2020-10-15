@@ -1,0 +1,12 @@
+IP_VS_PE_SIP => yes
+R3964 => yes
+NF_CONNTRACK_SIP => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+IP_VS => yes
+NF_CONNTRACK => yes
+IP_VS_PROTO_UDP => yes
+IP_VS_SH_TAB_BITS => 20
+IP_VS_TAB_BITS => 8
+IP_VS_MH_TAB_INDEX => 8

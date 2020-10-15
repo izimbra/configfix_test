@@ -1,0 +1,3 @@
+COMEDI_DT2817: n => yes
+    Direct dependencies:  STAGING [=n] && COMEDI [=n] && COMEDI_ISA_DRIVERS [=n]
+

@@ -1,0 +1,9 @@
+NFC_PORT100: n => yes
+    Direct dependencies:  NET [=y] && NFC [=m] && USB [=y] && NFC_DIGITAL [=n]
+
+BLK_DEV_CRYPTOLOOP: n => mod
+    Direct dependencies:  BLK_DEV [=y] && BLK_DEV_LOOP [=n]
+
+SCSI_DEBUG: m => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI [=m]
+

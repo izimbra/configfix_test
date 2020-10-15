@@ -1,0 +1,3 @@
+HW_RANDOM_MXC_RNGA: n => yes
+    Direct dependencies:  HW_RANDOM [=m] && SOC_IMX31
+

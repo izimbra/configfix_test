@@ -1,0 +1,9 @@
+NFC_PN544_I2C: m => yes
+    Direct dependencies:  NET [=y] && NFC [=m] && NFC_HCI [=m] && I2C [=y] && NFC_SHDLC [=y]
+
+INTEL_MEI_TXE: n => mod
+    Direct dependencies:  X86 && PCI [=y]
+
+PDC_ADMA: m => yes
+    Direct dependencies:  ATA [=m] && ATA_SFF [=y] && PCI [=y]
+

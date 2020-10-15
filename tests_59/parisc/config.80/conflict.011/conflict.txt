@@ -1,0 +1,9 @@
+I2C_TEGRA: n => mod
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && (ARCH_TEGRA || COMPILE_TEST [=y] && (ARC || ARM || ARM64 || M68K || RISCV || SUPERH || SPARC))
+
+SND_SOC_AK5386: n => mod
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n]
+
+SND_SOC_MT6660: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && I2C [=y]
+

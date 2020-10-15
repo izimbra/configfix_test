@@ -1,0 +1,3 @@
+CROS_EC_ISHTP: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && CROS_EC [=n] && INTEL_ISH_HID [=n]
+

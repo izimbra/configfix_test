@@ -1,0 +1,9 @@
+KERNEL_LZ4: n => no
+    Direct dependencies:  <choice> && HAVE_KERNEL_LZ4 [=y]
+
+SPEAKUP_SYNTH_KEYPC: n => mod
+    Direct dependencies:  ACCESSIBILITY [=n] && SPEAKUP [=n] && SPEAKUP_SERIALIO [=n]
+
+FB_OLPC_DCON: n => yes
+    Direct dependencies:  STAGING [=y] && OLPC && FB [=m] && I2C [=y] && GPIO_CS5535 [=n] && ACPI
+

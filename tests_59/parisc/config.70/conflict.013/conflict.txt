@@ -1,0 +1,9 @@
+BT_HCIUART_MRVL: n => yes
+    Direct dependencies:  NET [=y] && BT [=y] && BT_HCIUART [=m] && BT_HCIUART_SERDEV [=n]
+
+SND_SOC_INTEL_BDW_RT5677_MACH: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_INTEL_MACH [=n] && (SND_SOC_INTEL_HASWELL [=n] || SND_SOC_SOF_BROADWELL [=n]) && I2C [=y] && (I2C_DESIGNWARE_PLATFORM [=y] || COMPILE_TEST [=y]) && (GPIOLIB [=y] || COMPILE_TEST [=y]) && (X86_INTEL_LPSS || COMPILE_TEST [=y]) && SPI_MASTER [=y]
+
+LEDS_LM3530: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && I2C [=y]
+

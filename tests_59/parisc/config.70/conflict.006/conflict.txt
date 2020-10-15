@@ -1,0 +1,6 @@
+OMAP_INTERCONNECT: n => mod
+    Direct dependencies:  ARCH_OMAP2PLUS
+
+PATA_ISAPNP: n => yes
+    Direct dependencies:  ATA [=n] && ATA_SFF [=n] && ISAPNP [=n]
+

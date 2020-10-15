@@ -1,0 +1,9 @@
+COPS: n => yes
+    Direct dependencies:  NET [=y] && DEV_APPLETALK [=m] && (ISA [=n] || EISA [=n])
+
+MTD_POWERNV_FLASH: n => mod
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && PPC_POWERNV
+
+BLK_DEV_IDE_TX4939: n => mod
+    Direct dependencies:  IDE [=m] && SOC_TX4939
+

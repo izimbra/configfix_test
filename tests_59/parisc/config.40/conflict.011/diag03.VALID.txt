@@ -1,0 +1,17 @@
+PCH_GBE => yes
+NET_VENDOR_WIZNET => yes
+XILINX_AXI_EMAC => yes
+ETHERNET => yes
+VGA_ARB => yes
+NETDEVICES => yes
+NET_VENDOR_OKI => yes
+PCI => yes
+NET => yes
+VGA_ARB_MAX_GPUS => 1
+PCI_QUIRKS => yes
+PTP_1588_CLOCK_PCH => yes
+NET_VENDOR_XILINX => yes
+PHYLIB => yes
+PCIEASPM => yes
+MDIO_DEVICE => yes
+PCIEASPM_PERFORMANCE => yes

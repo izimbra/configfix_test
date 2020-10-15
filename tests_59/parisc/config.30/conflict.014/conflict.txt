@@ -1,0 +1,9 @@
+NF_CONNTRACK_H323: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n] && (IPV6 [=n] || IPV6 [=n]=n) && NETFILTER_ADVANCED [=n]
+
+BRIDGE_EBT_IP6: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && BRIDGE_NF_EBTABLES [=n] && IPV6 [=n]
+
+RADIO_TERRATEC: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && RADIO_ADAPTERS [=n] && V4L_RADIO_ISA_DRIVERS [=n] && (ISA [=n] || COMPILE_TEST [=n]) && VIDEO_V4L2 [=n]
+

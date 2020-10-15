@@ -1,0 +1,3 @@
+NFC_NCI_UART: n => yes
+    Direct dependencies:  NET [=n] && NFC_NCI [=n] && TTY [=y]
+

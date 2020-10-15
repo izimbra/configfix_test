@@ -1,0 +1,4 @@
+NFC_PN533_I2C => yes
+NFC => yes
+I2C => yes
+NET => yes

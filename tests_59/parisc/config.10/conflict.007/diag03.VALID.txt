@@ -1,0 +1,12 @@
+HZ_100 => no
+MTD_NAND_FSMC => yes
+HZ_1000 => yes
+MTD => yes
+MTD_CFI_ADV_OPTIONS => yes
+MTD_RAW_NAND => yes
+COMPILE_TEST => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_BE_BYTE_SWAP => yes
+OF => yes
+MTD_MAP_BANK_WIDTH_8 => yes
+MTD_CFI_I1 => yes

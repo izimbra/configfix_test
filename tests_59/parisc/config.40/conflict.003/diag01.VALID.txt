@@ -1,0 +1,8 @@
+NET_TULIP => yes
+ETHERNET => yes
+NETDEVICES => yes
+SERIAL_SH_SCI_NR_UARTS => 2
+PCI => yes
+NET => yes
+NET_VENDOR_DEC => yes
+EXPERT => yes

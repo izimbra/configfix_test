@@ -1,0 +1,10 @@
+ANSLCD: n => yes
+    Direct dependencies:  MACINTOSH_DRIVERS [=n] && ADB_CUDA [=n] && PPC_PMAC
+
+UNIX98_PTYS: y => no
+    Direct dependencies:  TTY [=y]
+
+MEDIA_TUNER_TDA18250: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_DIB0700 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

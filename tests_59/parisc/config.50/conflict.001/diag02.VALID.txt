@@ -1,0 +1,10 @@
+PARIDE_BPCK6 => mod
+TCP_CONG_ADVANCED => yes
+DEFAULT_CUBIC => yes
+PARIDE => mod
+BLOCK => yes
+PARPORT_PC => mod
+EFI_PARTITION => yes
+PARPORT => mod
+BLK_DEV => yes
+MSDOS_PARTITION => yes

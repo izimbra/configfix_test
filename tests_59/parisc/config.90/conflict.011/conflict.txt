@@ -1,0 +1,9 @@
+SENSORS_DRIVETEMP: m => yes
+    Direct dependencies:  HWMON [=y] && SCSI [=m] && ATA [=m]
+
+RTC_DRV_AB8500: n => mod
+    Direct dependencies:  RTC_CLASS [=y] && AB8500_CORE [=n]
+
+XEN_MCE_LOG: n => yes
+    Direct dependencies:  XEN && XEN_DOM0 && X86_MCE
+

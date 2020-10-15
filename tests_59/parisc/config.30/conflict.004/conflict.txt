@@ -1,0 +1,3 @@
+RT2800USB_RT3573: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && RT2800USB [=n]
+

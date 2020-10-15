@@ -1,0 +1,6 @@
+SLUB_MEMCG_SYSFS_ON: n => yes
+    Direct dependencies:  SLUB [=y] && SYSFS [=y] && MEMCG [=n]
+
+PARPORT_PC_SUPERIO: n => yes
+    Direct dependencies:  PARPORT [=n] && PARPORT_PC [=n] && !PARISC [=y]
+

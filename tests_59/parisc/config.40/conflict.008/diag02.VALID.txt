@@ -1,0 +1,14 @@
+IO_URING => no
+NF_FLOW_TABLE_INET => yes
+SERIAL_SH_SCI_NR_UARTS => 64
+EXPERT => yes
+NF_FLOW_TABLE => yes
+PA7200 => no
+NF_TABLES => yes
+NET => yes
+PA8X00 => yes
+INET => yes
+NETFILTER => yes
+64BIT => yes
+NETFILTER_INGRESS => yes
+NF_CONNTRACK => yes

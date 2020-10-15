@@ -1,0 +1,3 @@
+T5403: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

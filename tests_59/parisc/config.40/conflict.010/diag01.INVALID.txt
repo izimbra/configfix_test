@@ -1,0 +1,9 @@
+HWPOISON_INJECT => yes
+IWLEGACY_DEBUG => yes
+MEMORY_FAILURE => yes
+WLAN => yes
+WLAN_VENDOR_INTEL => yes
+NETDEVICES => yes
+NET => yes
+WIRELESS => yes
+MAC80211_LEDS => yes

@@ -1,0 +1,14 @@
+B43_DEBUG => yes
+WLAN => yes
+CFG80211 => mod
+NETDEVICES => yes
+B43 => mod
+WLAN_VENDOR_BROADCOM => yes
+NET => yes
+WIRELESS => yes
+MAC80211 => mod
+CFG80211_CERTIFICATION_ONUS => yes
+B43_BUSES_BCMA_AND_SSB => yes
+CORDIC => mod
+BCMA => mod
+CRYPTO_CMAC => mod

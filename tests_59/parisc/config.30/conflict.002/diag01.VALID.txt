@@ -1,0 +1,4 @@
+NFC_NCI_UART => yes
+NFC => yes
+NET => yes
+NFC_NCI => yes

@@ -1,0 +1,10 @@
+SND_SOC_SOF_JASPERLAKE_SUPPORT: n => yes
+    Direct dependencies:  SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SOF_TOPLEVEL [=n] && SND_SOC_SOF_INTEL_TOPLEVEL [=n] && SND_SOC_SOF_INTEL_PCI [=n]
+
+HID_SENSOR_IIO_COMMON: n => yes
+    Direct dependencies:  IIO [=n] && HID_SENSOR_HUB [=n]
+    Reverse dependencies: RTC_DRV_HID_SENSOR_TIME [=n] && RTC_CLASS [=y] && USB_HID [=n] && HID_SENSOR_HUB [=n] && IIO [=n] || HID_SENSOR_ACCEL_3D [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_GYRO_3D [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_HUMIDITY [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_ALS [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_PROX [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_MAGNETOMETER_3D [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_INCLINOMETER_3D [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_DEVICE_ROTATION [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_PRESS [=n] && IIO [=n] && HID_SENSOR_HUB [=n] || HID_SENSOR_TEMP [=n] && IIO [=n] && HID_SENSOR_HUB [=n]
+
+NET_ACT_SIMP: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=y] && NET_CLS_ACT [=n]
+

@@ -1,0 +1,9 @@
+NFC_PORT100 => yes
+BLK_DEV_CRYPTOLOOP => mod
+SCSI_DEBUG => yes
+NFC => yes
+RFKILL => yes
+NFC_DIGITAL => yes
+BLK_DEV_LOOP_MIN_COUNT => 0
+BLK_DEV_LOOP => yes
+SCSI => yes

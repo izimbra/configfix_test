@@ -1,0 +1,7 @@
+BFQ_GROUP_IOSCHED: n => yes
+    Direct dependencies:  BLOCK [=y] && IOSCHED_BFQ [=n] && BLK_CGROUP [=n]
+
+USB_NET_RNDIS_HOST: n => yes
+    Direct dependencies:  NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n]
+    Reverse dependencies: USB_NET_RNDIS_WLAN [=n] && NETDEVICES [=n] && WLAN [=n] && USB [=n] && CFG80211 [=n]
+

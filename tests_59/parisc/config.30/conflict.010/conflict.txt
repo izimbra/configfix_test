@@ -1,0 +1,6 @@
+OSF4_COMPAT: n => yes
+    Direct dependencies:  ALPHA && BINFMT_AOUT [=n]
+
+PCMCIA_HERMES: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTERSIL [=n] && PCMCIA [=y] && HERMES [=n] && HAS_IOPORT_MAP [=y]
+

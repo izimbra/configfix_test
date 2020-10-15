@@ -1,0 +1,11 @@
+ATM_TCP: n => yes
+    Direct dependencies:  ATM_DRIVERS [=n] && NETDEVICES [=n] && ATM [=m] && INET [=y]
+
+TTY: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PARISC [=y]
+
+DVB_AU8522_DTV: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=m]
+    Reverse dependencies: VIDEO_AU0828 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && I2C [=m] && INPUT [=n] && DVB_CORE [=m] && USB [=y] && VIDEO_V4L2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=y]
+

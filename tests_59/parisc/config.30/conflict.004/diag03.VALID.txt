@@ -1,0 +1,16 @@
+RT2800USB_RT3573 => yes
+WLAN => yes
+CFG80211 => yes
+WLAN_VENDOR_RALINK => yes
+NETDEVICES => yes
+RT2X00 => mod
+MODULES => yes
+RT2800USB => mod
+NET => yes
+WIRELESS => yes
+DEBUG_KERNEL => yes
+MAC80211 => mod
+CFG80211_CERTIFICATION_ONUS => yes
+EXPERT => yes
+CRC_CCITT => mod
+CRYPTO_GCM => mod

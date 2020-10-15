@@ -1,0 +1,3 @@
+B43_DEBUG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_BROADCOM [=n] && B43 [=n]
+

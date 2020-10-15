@@ -1,0 +1,14 @@
+IPV6_VTI => yes
+NF_TABLES_IPV6 => yes
+IR_IMG_RC5 => yes
+IPV6 => yes
+NET => yes
+INET => yes
+IPV6_TUNNEL => yes
+NF_TABLES => mod
+NETFILTER => yes
+MODULES => yes
+RC_DEVICES => yes
+COMPILE_TEST => yes
+IR_IMG_HW => yes
+IR_IMG => mod

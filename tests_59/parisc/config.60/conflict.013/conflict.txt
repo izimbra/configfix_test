@@ -1,0 +1,9 @@
+SPI_OCTEON: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && CAVIUM_OCTEON_SOC
+
+BCM2835_WDT: n => mod
+    Direct dependencies:  WATCHDOG [=n] && (ARCH_BCM2835 || OF [=n] && COMPILE_TEST [=n])
+
+RADIO_SI476X: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && RADIO_ADAPTERS [=n] && I2C [=m] && VIDEO_V4L2 [=m] && MFD_SI476X_CORE [=n] && SND_SOC [=n]
+

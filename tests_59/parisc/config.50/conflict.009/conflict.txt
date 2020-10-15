@@ -1,0 +1,6 @@
+BAREUDP: n => mod
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=y] && (IPV6 [=n] || !IPV6 [=n])
+
+WLAN_VENDOR_ATH: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n]
+

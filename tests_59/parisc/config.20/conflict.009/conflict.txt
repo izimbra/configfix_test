@@ -1,0 +1,6 @@
+AHCI_DA850: n => yes
+    Direct dependencies:  ATA [=y] && HAS_DMA [=y] && ARCH_DAVINCI_DA850
+
+DWMAC_IPQ806X: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_STMICRO [=n] && STMMAC_ETH [=n] && STMMAC_PLATFORM [=n] && OF [=n] && (ARCH_QCOM || COMPILE_TEST [=n])
+

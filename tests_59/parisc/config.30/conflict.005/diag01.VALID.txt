@@ -1,0 +1,5 @@
+CROS_EC_ISHTP => yes
+INTEL_ISH_HID => yes
+COMPILE_TEST => yes
+CROS_EC => yes
+CHROME_PLATFORMS => yes

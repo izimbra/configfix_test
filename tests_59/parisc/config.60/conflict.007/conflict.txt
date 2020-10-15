@@ -1,0 +1,6 @@
+OPROFILE_EVENT_MULTIPLEX: n => yes
+    Direct dependencies:  OPROFILE [=n] && X86
+
+BLK_DEV: n => yes
+    Direct dependencies:  BLOCK [=n]
+
