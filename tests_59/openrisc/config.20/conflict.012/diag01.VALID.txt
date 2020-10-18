@@ -1,0 +1,7 @@
+BRIDGE => yes
+SENSORS_SMSC47B397 => yes
+LV0104CS => yes
+NET => yes
+HWMON => yes
+I2C => yes
+IIO => yes

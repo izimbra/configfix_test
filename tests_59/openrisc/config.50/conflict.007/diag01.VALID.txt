@@ -1,0 +1,6 @@
+TCM_IBLOCK => yes
+MMC_SDHCI_CADENCE => yes
+CRC_T10DIF => yes
+TARGET_CORE => yes
+MMC_SDHCI => yes
+MMC_SDHCI_PLTFM => yes

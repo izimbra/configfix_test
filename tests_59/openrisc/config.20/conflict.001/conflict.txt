@@ -1,0 +1,3 @@
+AD2S1200: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

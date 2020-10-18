@@ -1,0 +1,7 @@
+CAN_CALC_BITTIMING => yes
+JOYSTICK_TWIDJOY => yes
+CAN => yes
+NET => yes
+INPUT_JOYSTICK => yes
+CAN_DEV => yes
+SERIO => yes

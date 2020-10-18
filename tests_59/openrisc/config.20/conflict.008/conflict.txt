@@ -1,0 +1,6 @@
+JOLIET: n => yes
+    Direct dependencies:  BLOCK [=y] && ISO9660_FS [=n]
+
+TEST_HEXDUMP: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+

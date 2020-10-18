@@ -1,0 +1,7 @@
+CRYPTO_CTR => no
+ENVELOPE_DETECTOR => mod
+IQS624_POS => yes
+CRYPTO_DRBG_CTR => no
+CRYPTO_GCM => yes
+IIO => yes
+MFD_IQS62X => yes

@@ -1,0 +1,3 @@
+INPUT_TPS65218_PWRBUTTON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_TPS65217 [=n] || MFD_TPS65218 [=n])
+

@@ -1,0 +1,6 @@
+VIDEO_ADV7393: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+LTC2496: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+

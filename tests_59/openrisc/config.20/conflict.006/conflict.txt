@@ -1,0 +1,6 @@
+NETWORK_PHY_TIMESTAMPING: n => yes
+    Direct dependencies:  NET [=n]
+
+REGULATOR_TPS6507X: n => yes
+    Direct dependencies:  REGULATOR [=y] && I2C [=n]
+

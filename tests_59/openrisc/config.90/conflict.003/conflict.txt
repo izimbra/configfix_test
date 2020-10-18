@@ -1,0 +1,3 @@
+MPL115_SPI: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+

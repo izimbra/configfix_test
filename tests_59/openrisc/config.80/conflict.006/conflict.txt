@@ -1,0 +1,6 @@
+NL80211_TESTMODE: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && CFG80211 [=n]
+
+SCSI_FC_ATTRS: n => yes
+    Direct dependencies:  SCSI [=y] && NET [=n]
+

@@ -1,0 +1,3 @@
+SLOB: n => no
+    Direct dependencies:  <choice> && EXPERT [=y]
+

@@ -1,0 +1,8 @@
+VIDEO_S5C73M3 => yes
+HP03 => yes
+SENSORS_RM3100_I2C => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUBDRV_AUTOSELECT => no
+VIDEO_DEV => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

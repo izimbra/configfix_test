@@ -1,0 +1,5 @@
+GPIO_PISOSR => yes
+SPI_FSI => yes
+SPI => yes
+CRC4 => yes
+FSI => yes

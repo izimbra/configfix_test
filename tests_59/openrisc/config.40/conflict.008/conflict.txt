@@ -1,0 +1,6 @@
+INPUT_DA9063_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+
+SENSORS_GSC: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_GATEWORKS_GSC [=n]
+

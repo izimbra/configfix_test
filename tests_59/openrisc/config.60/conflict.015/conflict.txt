@@ -1,0 +1,10 @@
+ADIS16130: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+CONNECTOR: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: DM_LOG_USERSPACE [=n] && MD [=n] && DM_MIRROR [=n] && NET [=n]
+
+SENSORS_TMP102: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

@@ -1,0 +1,4 @@
+PPS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PTP_1588_CLOCK [=y] && NET [=y] && POSIX_TIMERS [=y]
+

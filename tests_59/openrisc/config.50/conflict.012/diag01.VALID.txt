@@ -1,0 +1,5 @@
+DVB_MXL5XX => yes
+DEBUG_RWSEMS => yes
+IQS624_POS => yes
+DEBUG_KERNEL => yes
+COMPILE_TEST => yes

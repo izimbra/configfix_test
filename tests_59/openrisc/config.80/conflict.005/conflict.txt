@@ -1,0 +1,3 @@
+MODULE_SRCVERSION_ALL: n => yes
+    Direct dependencies:  MODULES [=n]
+

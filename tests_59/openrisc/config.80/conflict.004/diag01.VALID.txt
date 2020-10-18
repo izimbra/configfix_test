@@ -1,0 +1,2 @@
+MAX11100 => yes
+SPI => yes

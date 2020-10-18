@@ -1,0 +1,2 @@
+LEDS_AS3645A => yes
+LEDS_CLASS_FLASH => yes

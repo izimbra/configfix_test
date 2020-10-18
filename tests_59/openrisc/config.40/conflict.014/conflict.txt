@@ -1,0 +1,9 @@
+MFD_WM5102: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_ARIZONA [=n]
+
+TINYDRM_ST7735R: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+SENSORS_LM3533: n => yes
+    Direct dependencies:  IIO [=n] && MFD_LM3533 [=n]
+

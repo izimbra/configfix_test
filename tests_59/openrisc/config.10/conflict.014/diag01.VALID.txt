@@ -1,0 +1,7 @@
+REGULATOR_MAX1586 => yes
+HID_SUNPLUS => yes
+BME680 => yes
+REGULATOR => yes
+I2C => yes
+HID => yes
+IIO => yes

@@ -1,0 +1,12 @@
+PREEMPT_NONE => no
+LTC2496 => yes
+BLOCK => no
+SPI => yes
+IIO => yes
+EFI_PARTITION => no
+DEBUG_KERNEL => yes
+BTRFS_FS => no
+EXPERT => yes
+MSDOS_PARTITION => no
+IOSCHED_BFQ => no
+BTRFS_DEBUG => no

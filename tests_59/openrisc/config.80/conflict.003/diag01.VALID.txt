@@ -1,0 +1,3 @@
+I2C_FSI => yes
+CRC4 => yes
+FSI => yes

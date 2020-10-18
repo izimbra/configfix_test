@@ -1,0 +1,10 @@
+BRIDGE: n => yes
+    Direct dependencies:  NET [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+CRYPTO_USER: n => yes
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+
+MPLS: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: OPENVSWITCH [=n] && NET [=n] && INET [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n] && (!NF_DEFRAG_IPV6 [=n] || NF_DEFRAG_IPV6 [=n]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=n] || NETFILTER_CONNCOUNT [=n]))
+

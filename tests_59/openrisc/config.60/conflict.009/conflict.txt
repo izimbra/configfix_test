@@ -1,0 +1,6 @@
+SENSORS_MAX6621: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+FRONTSWAP: n => yes
+    Direct dependencies:  SWAP [=n]
+

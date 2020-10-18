@@ -1,0 +1,3 @@
+KEYBOARD_IQS62X: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && MFD_IQS62X [=m]
+

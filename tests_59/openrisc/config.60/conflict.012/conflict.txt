@@ -1,0 +1,9 @@
+DVB_PLATFORM_DRIVERS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n]
+
+LTC2496: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+VIDEO_MT9M111: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+

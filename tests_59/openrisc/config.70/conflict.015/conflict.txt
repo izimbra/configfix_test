@@ -1,0 +1,9 @@
+CAN_M_CAN: m => yes
+    Direct dependencies:  NET [=y] && CAN [=m] && CAN_DEV [=m]
+
+COMMON_CLK_SI514: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && I2C [=y] && OF [=y]
+
+CXD2880_SPI_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && DVB_CORE [=m] && SPI [=y]
+

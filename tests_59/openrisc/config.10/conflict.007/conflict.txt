@@ -1,0 +1,6 @@
+CAN_CALC_BITTIMING: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n]
+
+JOYSTICK_TWIDJOY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+

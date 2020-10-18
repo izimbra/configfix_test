@@ -1,0 +1,9 @@
+BATTERY_LEGO_EV3: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && OF [=y] && IIO [=n] && GPIOLIB [=y]
+
+MEDIA_PLATFORM_SUPPORT: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+STK3310: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

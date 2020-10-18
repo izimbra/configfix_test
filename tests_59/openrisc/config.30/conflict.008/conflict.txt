@@ -1,0 +1,7 @@
+DEBUG_KERNEL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: EXPERT [=y]
+
+CAN_VCAN: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n]
+

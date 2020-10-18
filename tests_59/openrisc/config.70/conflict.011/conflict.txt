@@ -1,0 +1,9 @@
+BMI160_SPI: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+DRM_PANEL_SONY_ACX565AKM: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+
+COMMON_CLK_SI514: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && I2C [=y] && OF [=y]
+

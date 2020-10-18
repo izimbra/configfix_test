@@ -1,0 +1,6 @@
+BACKLIGHT_ADP8870: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m] && I2C [=y]
+
+STK8BA50: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

@@ -1,0 +1,6 @@
+MXC4005: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+VIDEO_TVP514X: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+

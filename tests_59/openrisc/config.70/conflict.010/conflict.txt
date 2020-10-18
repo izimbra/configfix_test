@@ -1,0 +1,6 @@
+PA12203001: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+MAC80211_RC_DEFAULT_MINSTREL: y => no
+    Direct dependencies:  <choice> && MAC80211_RC_MINSTREL [=y]
+

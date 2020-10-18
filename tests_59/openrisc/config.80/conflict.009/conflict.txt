@@ -1,0 +1,6 @@
+SMS_SDIO_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_PLATFORM_SUPPORT [=y] && DVB_CORE [=y] && HAS_DMA [=y] && MMC [=n] && (!RC_CORE [=n] || RC_CORE [=n])
+
+TCM_IBLOCK: n => yes
+    Direct dependencies:  TARGET_CORE [=n]
+

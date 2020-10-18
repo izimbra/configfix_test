@@ -1,0 +1,12 @@
+ADIS16130 => yes
+CONNECTOR => yes
+SENSORS_TMP102 => yes
+ADIS16203 => yes
+ADIS16480 => yes
+ADIS16201 => yes
+IIO => yes
+ADIS16260 => yes
+ADIS16240 => yes
+ADIS16209 => yes
+NET => yes
+HWMON => yes

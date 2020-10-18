@@ -1,0 +1,4 @@
+BRIDGE => yes
+CRYPTO_USER => yes
+MPLS => yes
+NET => yes

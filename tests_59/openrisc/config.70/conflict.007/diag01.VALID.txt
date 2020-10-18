@@ -1,0 +1,6 @@
+BACKLIGHT_ADP8870 => yes
+STK8BA50 => yes
+BACKLIGHT_CLASS_DEVICE => yes
+LEDS_CLASS => yes
+IIO => yes
+IIO_KFIFO_BUF => yes

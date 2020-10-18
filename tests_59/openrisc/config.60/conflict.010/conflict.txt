@@ -1,0 +1,6 @@
+LEDS_LM36274: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TI_LMU_COMMON [=n] && MFD_TI_LMU [=n]
+
+SX9500: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

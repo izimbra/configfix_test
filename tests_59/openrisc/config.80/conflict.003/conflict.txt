@@ -1,0 +1,3 @@
+I2C_FSI: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && FSI [=n]
+

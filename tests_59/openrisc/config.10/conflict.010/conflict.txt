@@ -1,0 +1,6 @@
+CXD2880_SPI_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && DVB_CORE [=n] && SPI [=n]
+
+HID_DRAGONRISE: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+

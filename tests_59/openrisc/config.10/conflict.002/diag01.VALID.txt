@@ -1,0 +1,4 @@
+RTC_DRV_PALMAS => yes
+RTC_CLASS => yes
+I2C => yes
+MFD_PALMAS => yes

@@ -1,0 +1,9 @@
+DRM_PANEL_JDI_LT070ME05000: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+SI1145: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+PCF50633_ADC: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_PCF50633 [=m]
+

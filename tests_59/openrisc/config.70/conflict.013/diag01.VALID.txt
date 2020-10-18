@@ -1,0 +1,6 @@
+VIDEO_OV5640 => yes
+DVB_M88RS2000 => yes
+INPUT_DA9063_ONKEY => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes
+INPUT_MISC => yes

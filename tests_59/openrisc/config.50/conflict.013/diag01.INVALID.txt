@@ -1,0 +1,6 @@
+DVB_TDA1004X => yes
+RTC_DRV_MAX6902 => yes
+REGULATOR_MAX77686 => yes
+SPI => yes
+RTC_CLASS => yes
+MFD_MAX77686 => yes

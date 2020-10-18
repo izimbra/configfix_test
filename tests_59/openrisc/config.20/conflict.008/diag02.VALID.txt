@@ -1,0 +1,5 @@
+JOLIET => yes
+TEST_HEXDUMP => yes
+MODULES => yes
+RUNTIME_TESTING_MENU => yes
+ISO9660_FS => mod

@@ -1,0 +1,4 @@
+ZEROPLUS_FF => yes
+HID_ZEROPLUS => yes
+HID => yes
+INPUT_FF_MEMLESS => yes

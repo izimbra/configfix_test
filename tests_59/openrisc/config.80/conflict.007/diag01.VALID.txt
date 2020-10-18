@@ -1,0 +1,5 @@
+INPUT_ADXL34X_SPI => yes
+LCD_LTV350QV => yes
+INPUT_ADXL34X => yes
+SPI => yes
+ADXL345_I2C => no

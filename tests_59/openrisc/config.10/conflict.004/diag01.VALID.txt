@@ -1,0 +1,3 @@
+MCP4018 => yes
+I2C => yes
+IIO => yes

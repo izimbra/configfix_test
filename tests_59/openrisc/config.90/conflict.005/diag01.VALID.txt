@@ -1,0 +1,4 @@
+VIDEO_MT9M032 => yes
+MEDIA_SUPPORT => yes
+I2C_MUX => yes
+VIDEO_DEV => yes

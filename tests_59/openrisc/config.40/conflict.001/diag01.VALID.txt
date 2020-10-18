@@ -1,0 +1,3 @@
+KEYBOARD_NEWTON => yes
+INPUT_KEYBOARD => yes
+SERIO => yes

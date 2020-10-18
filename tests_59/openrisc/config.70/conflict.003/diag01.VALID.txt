@@ -1,0 +1,3 @@
+DVB_DRX39XYJ => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

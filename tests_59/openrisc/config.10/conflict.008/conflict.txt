@@ -1,0 +1,6 @@
+VL6180: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+NLS_ISO8859_4: n => yes
+    Direct dependencies:  NLS [=n]
+

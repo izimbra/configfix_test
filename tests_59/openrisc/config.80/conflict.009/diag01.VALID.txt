@@ -1,0 +1,4 @@
+SMS_SDIO_DRV => yes
+TCM_IBLOCK => yes
+MMC => yes
+TARGET_CORE => yes

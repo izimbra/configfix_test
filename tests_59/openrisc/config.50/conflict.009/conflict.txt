@@ -1,0 +1,6 @@
+JOYSTICK_ADI: n => no
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && ADI [=n]!=m
+
+LINEAR_RANGES_TEST: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n] && KUNIT [=n]
+

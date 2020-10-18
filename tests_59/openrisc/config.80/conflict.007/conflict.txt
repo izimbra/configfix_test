@@ -1,0 +1,6 @@
+INPUT_ADXL34X_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_ADXL34X [=n] && SPI [=n]
+
+LCD_LTV350QV: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=y] && SPI_MASTER [=n]
+

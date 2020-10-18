@@ -1,0 +1,5 @@
+DRM_PANEL_ARM_VERSATILE => yes
+LEDS_AN30259A => yes
+DRM => yes
+FB => yes
+LEDS_CLASS => yes

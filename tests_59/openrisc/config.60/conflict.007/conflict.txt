@@ -1,0 +1,6 @@
+SENSORS_RM3100_I2C: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRYPTO_USER_API_RNG: n => mod
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+

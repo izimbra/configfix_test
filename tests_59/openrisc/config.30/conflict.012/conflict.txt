@@ -1,0 +1,10 @@
+SPARSE_IRQ: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OPENRISC [=y] || ATMEL_AIC_IRQ [=n] || ATMEL_AIC5_IRQ [=n] || FARADAY_FTINTC010 [=n] || IXP4XX_IRQ [=n] || CLPS711X_IRQCHIP [=n] && ARCH_CLPS711X
+
+SENSORS_INA2XX: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+RTC_DRV_DS1672: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+

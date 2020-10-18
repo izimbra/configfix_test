@@ -1,0 +1,5 @@
+SENSORS_RM3100_I2C => yes
+CRYPTO_USER_API_RNG => mod
+IIO => yes
+IIO_KFIFO_BUF => yes
+NET => yes

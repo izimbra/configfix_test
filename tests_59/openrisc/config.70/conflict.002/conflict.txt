@@ -1,0 +1,3 @@
+DM_LOG_USERSPACE: m => yes
+    Direct dependencies:  MD [=y] && DM_MIRROR [=m] && NET [=y]
+

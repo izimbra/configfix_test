@@ -1,0 +1,7 @@
+ADIS16130 => yes
+CONNECTOR => yes
+SENSORS_TMP102 => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+NET => yes
+HWMON => yes

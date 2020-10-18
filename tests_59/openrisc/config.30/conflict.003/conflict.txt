@@ -1,0 +1,3 @@
+LEDS_AS3645A: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && I2C [=y] && LEDS_CLASS_FLASH [=n] && (V4L2_FLASH_LED_CLASS [=n] || !V4L2_FLASH_LED_CLASS [=n])
+

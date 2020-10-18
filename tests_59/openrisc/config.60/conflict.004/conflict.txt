@@ -1,0 +1,3 @@
+ZEROPLUS_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=m] && HID_ZEROPLUS [=n]
+

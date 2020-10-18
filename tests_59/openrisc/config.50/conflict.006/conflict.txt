@@ -1,0 +1,7 @@
+LCD_ILI922X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=n] && SPI [=n]
+
+PPS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PTP_1588_CLOCK [=y] && NET [=y] && POSIX_TIMERS [=y]
+

@@ -1,0 +1,5 @@
+DM_INTEGRITY => yes
+MEDIA_TUNER_FC0012 => no
+BLK_DEV_DM => yes
+MD => yes
+DVB_USB_RTL28XXU => no

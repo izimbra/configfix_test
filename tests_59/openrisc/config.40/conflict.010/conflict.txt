@@ -1,0 +1,6 @@
+RTC_DRV_RS5C372: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+STK3310: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

@@ -1,0 +1,4 @@
+JOLIET => yes
+TEST_HEXDUMP => yes
+ISO9660_FS => yes
+RUNTIME_TESTING_MENU => yes

@@ -1,0 +1,11 @@
+DVB_MXL5XX: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y]
+    Reverse dependencies: DVB_DDBRIDGE [=n] && MEDIA_SUPPORT [=y] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+DEBUG_RWSEMS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y]
+
+IQS624_POS: n => yes
+    Direct dependencies:  IIO [=y] && (MFD_IQS62X [=n] || COMPILE_TEST [=n])
+

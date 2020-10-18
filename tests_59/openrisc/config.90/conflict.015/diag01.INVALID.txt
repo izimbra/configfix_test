@@ -1,0 +1,10 @@
+DRM_ANALOGIX_ANX78XX => yes
+DVB_MT312 => yes
+DRM_DW_HDMI_CEC => yes
+FB => yes
+DRM => yes
+MEDIA_SUPPORT => yes
+I2C_MUX => yes
+DVB_MMAP => no
+MEDIA_SUPPORT_FILTER => no
+MEDIA_TEST_SUPPORT => yes

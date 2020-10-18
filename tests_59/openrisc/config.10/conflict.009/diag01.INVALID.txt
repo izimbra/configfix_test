@@ -1,0 +1,8 @@
+SPI_MEM => yes
+VIDEO_CS3308 => yes
+SPI => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUPPORT_FILTER => yes
+I2C => yes
+VIDEO_DEV => yes
+MEDIA_SDR_SUPPORT => yes

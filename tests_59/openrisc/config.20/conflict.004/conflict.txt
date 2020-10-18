@@ -1,0 +1,3 @@
+TEST_BLACKHOLE_DEV: n => no
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n] && m && MODULES [=n] && NET [=n]
+

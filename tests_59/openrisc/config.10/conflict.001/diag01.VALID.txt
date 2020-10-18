@@ -1,0 +1,4 @@
+INV_ICM42600_I2C => yes
+I2C => yes
+IIO => yes
+IIO_BUFFER => yes

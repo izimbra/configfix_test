@@ -1,0 +1,3 @@
+INV_ICM42600_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

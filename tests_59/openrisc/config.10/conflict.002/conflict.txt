@@ -1,0 +1,3 @@
+RTC_DRV_PALMAS: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n] && MFD_PALMAS [=n]
+

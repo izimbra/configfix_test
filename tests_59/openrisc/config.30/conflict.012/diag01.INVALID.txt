@@ -1,0 +1,5 @@
+SPARSE_IRQ => no
+SENSORS_INA2XX => yes
+RTC_DRV_DS1672 => yes
+HWMON => yes
+RTC_CLASS => yes

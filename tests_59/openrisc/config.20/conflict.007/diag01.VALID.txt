@@ -1,0 +1,8 @@
+PINCTRL_PALMAS => yes
+SENSORS_LM83 => yes
+PINCTRL => yes
+I2C => yes
+MFD_PALMAS => yes
+PINMUX => yes
+PINCONF => yes
+HWMON => yes

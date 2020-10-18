@@ -1,0 +1,3 @@
+RD_BZIP2 => yes
+BLK_DEV_INITRD => yes
+INITRAMFS_SOURCE => 

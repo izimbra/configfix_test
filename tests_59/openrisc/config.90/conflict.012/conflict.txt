@@ -1,0 +1,9 @@
+VIDEO_S5C73M3: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && SPI [=y] && VIDEO_V4L2 [=m]
+
+HP03: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SENSORS_RM3100_I2C: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

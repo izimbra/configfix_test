@@ -1,0 +1,6 @@
+MXC4005 => yes
+VIDEO_TVP514X => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

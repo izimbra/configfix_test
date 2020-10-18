@@ -1,0 +1,4 @@
+IAQCORE => yes
+DPS310 => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

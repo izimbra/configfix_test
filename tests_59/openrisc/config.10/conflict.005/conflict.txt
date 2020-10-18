@@ -1,0 +1,3 @@
+RD_BZIP2: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+

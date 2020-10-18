@@ -1,0 +1,8 @@
+SENSORS_MAX6621 => yes
+FRONTSWAP => yes
+HWMON => yes
+BLOCK => yes
+EFI_PARTITION => yes
+MSDOS_PARTITION => yes
+KUNIT_ALL_TESTS => no
+SWAP => yes

@@ -1,0 +1,3 @@
+AD9467: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+

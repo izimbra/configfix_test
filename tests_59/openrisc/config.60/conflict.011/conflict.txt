@@ -1,0 +1,9 @@
+VIDEO_THS8200: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+HID_EZKEY: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=m]
+
+TI_ADS7950: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y] && GPIOLIB [=y]
+

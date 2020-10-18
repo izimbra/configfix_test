@@ -1,0 +1,4 @@
+VIDEO_LM3646 => yes
+DVB_HELENE => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

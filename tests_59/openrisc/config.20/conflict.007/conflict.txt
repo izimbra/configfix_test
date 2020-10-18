@@ -1,0 +1,6 @@
+PINCTRL_PALMAS: n => yes
+    Direct dependencies:  PINCTRL [=n] && OF [=y] && MFD_PALMAS [=n]
+
+SENSORS_LM83: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

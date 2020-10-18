@@ -1,0 +1,5 @@
+CFG80211 => yes
+MAX44009 => yes
+RFKILL => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

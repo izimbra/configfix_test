@@ -1,0 +1,11 @@
+RTC_DRV_RV3028 => mod
+DM_SNAPSHOT => yes
+INPUT_RETU_PWRBUTTON => yes
+RTC_CLASS => yes
+BLK_DEV_DM => yes
+BLOCK => yes
+MD => yes
+PARTITION_ADVANCED => yes
+INPUT_MISC => yes
+MFD_RETU => yes
+INPUT => yes

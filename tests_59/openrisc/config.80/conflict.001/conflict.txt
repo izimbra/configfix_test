@@ -1,0 +1,3 @@
+TINYDRM_ILI9486: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+

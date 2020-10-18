@@ -1,0 +1,7 @@
+INV_MPU6050_SPI => yes
+IIO_KFIFO_BUF => yes
+SPI => yes
+IIO => yes
+IIO_BUFFER => yes
+IIO_TRIGGER => yes
+IIO_CONSUMERS_PER_TRIGGER => 1

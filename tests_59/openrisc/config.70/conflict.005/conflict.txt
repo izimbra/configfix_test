@@ -1,0 +1,3 @@
+MODULE_SIG_SHA256: n => no
+    Direct dependencies:  <choice>
+

@@ -1,0 +1,2 @@
+ZEROPLUS_FF => yes
+HID_ZEROPLUS => mod

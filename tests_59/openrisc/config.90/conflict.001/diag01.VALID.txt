@@ -1,0 +1,3 @@
+SD_ADC_MODULATOR => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

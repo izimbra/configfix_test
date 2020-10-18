@@ -1,0 +1,9 @@
+AD5755: n => yes
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=y]
+
+CXD2880_SPI_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && DVB_CORE [=n] && SPI [=y]
+
+DRM_PANEL_SITRONIX_ST7701: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+

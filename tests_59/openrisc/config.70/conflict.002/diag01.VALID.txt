@@ -1,0 +1,2 @@
+DM_LOG_USERSPACE => yes
+DM_MIRROR => yes

@@ -1,0 +1,5 @@
+VIDEO_TW9910 => yes
+RTC_DRV_V3020 => yes
+SENSORS_LM90 => yes
+RTC_CLASS => yes
+HWMON => yes

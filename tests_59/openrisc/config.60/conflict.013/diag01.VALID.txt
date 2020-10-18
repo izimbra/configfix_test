@@ -1,0 +1,9 @@
+DRM_PANEL_TPO_TD043MTEA1 => yes
+DVB_SI2168 => mod
+CAN_CC770 => yes
+DRM => yes
+MEDIA_DIGITAL_TV_SUPPORT => yes
+DVB_MAX_ADAPTERS => 1
+CAN => yes
+NET => yes
+CAN_DEV => yes

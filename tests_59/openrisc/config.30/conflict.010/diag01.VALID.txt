@@ -1,0 +1,5 @@
+FB_LITTLE_ENDIAN => yes
+IIO_BUFFER => yes
+FB_FOREIGN_ENDIAN => yes
+FB => yes
+IIO => mod

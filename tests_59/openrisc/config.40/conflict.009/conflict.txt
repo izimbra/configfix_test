@@ -1,0 +1,6 @@
+SENSORS_MENF21BMC_HWMON: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_MENF21BMC [=n]
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+

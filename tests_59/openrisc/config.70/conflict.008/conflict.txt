@@ -1,0 +1,6 @@
+DRM_PANEL_ARM_VERSATILE: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && MFD_SYSCON [=y]
+
+LEDS_AN30259A: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && I2C [=y] && OF [=y]
+

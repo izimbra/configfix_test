@@ -1,0 +1,8 @@
+CAN_M_CAN => yes
+COMMON_CLK_SI514 => yes
+CXD2880_SPI_DRV => yes
+CAN => yes
+CAN_DEV => yes
+COMMON_CLK => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

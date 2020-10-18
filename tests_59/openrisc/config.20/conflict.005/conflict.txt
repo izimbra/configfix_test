@@ -1,0 +1,3 @@
+SGETMASK_SYSCALL: n => yes
+    Direct dependencies:  y
+

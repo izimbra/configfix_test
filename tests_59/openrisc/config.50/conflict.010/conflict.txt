@@ -1,0 +1,6 @@
+GPIO_PISOSR: n => yes
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n]
+
+SPI_FSI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && FSI [=n]
+

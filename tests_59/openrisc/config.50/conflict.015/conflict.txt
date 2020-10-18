@@ -1,0 +1,9 @@
+SPI_NXP_FLEXSPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_LAYERSCAPE || HAS_IOMEM [=y])
+
+MUX_ADGS1408: n => yes
+    Direct dependencies:  MULTIPLEXER [=y] && SPI [=n]
+
+FB_SM501: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && MFD_SM501 [=n]
+

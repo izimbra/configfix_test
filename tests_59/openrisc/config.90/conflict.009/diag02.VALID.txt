@@ -1,0 +1,7 @@
+DRM_PANEL_FEIYANG_FY07024DI26A30D => yes
+DVB_TC90522 => yes
+DRM => yes
+FB => yes
+MEDIA_SUPPORT => yes
+I2C_MUX => yes
+VIDEO_DEV => yes

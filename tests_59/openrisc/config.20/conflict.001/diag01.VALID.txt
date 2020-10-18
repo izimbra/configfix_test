@@ -1,0 +1,2 @@
+AD2S1200 => yes
+IIO => yes

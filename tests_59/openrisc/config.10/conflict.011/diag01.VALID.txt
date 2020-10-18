@@ -1,0 +1,8 @@
+LEDS_TI_LMU_COMMON => yes
+W1_SLAVE_DS2438 => yes
+SENSORS_W83793 => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes
+W1 => yes
+HWMON => yes
+I2C => yes

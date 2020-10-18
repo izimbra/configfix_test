@@ -1,0 +1,5 @@
+AD5449 => yes
+DAX => no
+SPI => yes
+IIO => yes
+FS_DAX => no

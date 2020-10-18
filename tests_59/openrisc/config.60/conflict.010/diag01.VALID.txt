@@ -1,0 +1,6 @@
+LEDS_LM36274 => yes
+SX9500 => yes
+LEDS_TI_LMU_COMMON => yes
+MFD_TI_LMU => yes
+IIO => yes
+IIO_KFIFO_BUF => yes

@@ -1,0 +1,2 @@
+MODULE_SRCVERSION_ALL => yes
+MODULES => yes

@@ -1,0 +1,3 @@
+PREEMPT_NONE => no
+EXPERT => yes
+PREEMPT_RT => yes

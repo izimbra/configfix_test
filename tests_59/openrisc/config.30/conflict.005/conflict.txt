@@ -1,0 +1,3 @@
+CC_OPTIMIZE_FOR_SIZE: y => no
+    Direct dependencies:  <choice>
+

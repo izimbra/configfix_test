@@ -1,0 +1,6 @@
+INPUT_DA9063_ONKEY => yes
+SENSORS_GSC => yes
+MFD_DA9062 => yes
+INPUT_MISC => yes
+HWMON => yes
+MFD_GATEWORKS_GSC => yes

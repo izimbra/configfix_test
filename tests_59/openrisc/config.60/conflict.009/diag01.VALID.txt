@@ -1,0 +1,7 @@
+SENSORS_MAX6621 => yes
+FRONTSWAP => yes
+HWMON => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+KUNIT_ALL_TESTS => no
+SWAP => yes

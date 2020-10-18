@@ -1,0 +1,3 @@
+REISERFS_FS_XATTR: n => yes
+    Direct dependencies:  BLOCK [=y] && REISERFS_FS [=n]
+

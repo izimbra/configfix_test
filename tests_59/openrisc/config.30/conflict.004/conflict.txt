@@ -1,0 +1,3 @@
+JOYSTICK_SIDEWINDER: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n]
+

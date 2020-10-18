@@ -1,0 +1,9 @@
+VIDEO_MT9M032: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+AD7192: n => mod
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+NLS_CODEPAGE_775: n => mod
+    Direct dependencies:  NLS [=n]
+

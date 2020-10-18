@@ -1,0 +1,6 @@
+VL6180 => yes
+NLS_ISO8859_4 => yes
+I2C => yes
+IIO => yes
+NLS => yes
+NLS_DEFAULT => nonempty

@@ -1,0 +1,4 @@
+RTC_DRV_RS5C372 => yes
+STK3310 => yes
+RTC_CLASS => yes
+IIO => yes

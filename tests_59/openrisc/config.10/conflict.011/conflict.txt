@@ -1,0 +1,9 @@
+LEDS_TI_LMU_COMMON: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && REGMAP [=y]
+
+W1_SLAVE_DS2438: n => yes
+    Direct dependencies:  W1 [=n]
+
+SENSORS_W83793: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

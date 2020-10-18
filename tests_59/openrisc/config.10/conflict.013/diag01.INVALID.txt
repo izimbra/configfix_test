@@ -1,0 +1,11 @@
+MEDIA_TUNER_QT1010 => yes
+CAN => yes
+RTC_DRV_M48T35 => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUPPORT_FILTER => yes
+I2C => yes
+MEDIA_ANALOG_TV_SUPPORT => yes
+VIDEO_DEV => yes
+NET => yes
+MEDIA_CONTROLLER => yes
+RTC_CLASS => yes

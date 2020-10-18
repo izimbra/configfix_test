@@ -1,0 +1,5 @@
+IPMI_DEVICE_INTERFACE => yes
+HID_SAITEK => mod
+IPMI_HANDLER => yes
+HID => mod
+INPUT => yes

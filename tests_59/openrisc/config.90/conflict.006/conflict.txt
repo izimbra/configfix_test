@@ -1,0 +1,6 @@
+IAQCORE: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+DPS310: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

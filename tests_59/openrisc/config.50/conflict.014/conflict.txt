@@ -1,0 +1,9 @@
+VIDEO_TW9910: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && VIDEO_V4L2 [=y] && I2C [=y]
+
+RTC_DRV_V3020: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+SENSORS_LM90: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+

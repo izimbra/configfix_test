@@ -1,0 +1,9 @@
+RTC_DRV_RV3028: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+DM_SNAPSHOT: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+INPUT_RETU_PWRBUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && MFD_RETU [=n]
+

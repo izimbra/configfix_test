@@ -1,0 +1,7 @@
+CRYPTO_CTR => no
+ENVELOPE_DETECTOR => mod
+IQS624_POS => yes
+CRYPTO_DRBG_CTR => no
+CRYPTO_GCM => yes
+IIO => yes
+COMPILE_TEST => yes

@@ -1,0 +1,4 @@
+HID_AUREAL => yes
+ELF_CORE => no
+HID => yes
+EXPERT => yes

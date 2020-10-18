@@ -1,0 +1,2 @@
+TINYDRM_ILI9486 => yes
+SPI => yes

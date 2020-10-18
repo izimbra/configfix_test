@@ -1,0 +1,4 @@
+NETWORK_PHY_TIMESTAMPING => yes
+REGULATOR_TPS6507X => yes
+NET => yes
+I2C => yes

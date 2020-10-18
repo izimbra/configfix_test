@@ -1,0 +1,6 @@
+IPMI_DEVICE_INTERFACE: n => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+HID_SAITEK: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

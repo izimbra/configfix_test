@@ -1,0 +1,6 @@
+HID_AUREAL: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+ELF_CORE: y => no
+    Direct dependencies:  COREDUMP [=y]
+

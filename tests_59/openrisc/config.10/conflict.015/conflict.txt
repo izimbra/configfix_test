@@ -1,0 +1,10 @@
+I2C_KEMPLD: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && MFD_KEMPLD [=n]
+
+VIDEO_HI556: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+MFD_STMFX: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && (OF [=y] || COMPILE_TEST [=n])
+    Reverse dependencies: PINCTRL_STMFX [=n] && PINCTRL [=y] && I2C [=n] && OF_GPIO [=y]
+

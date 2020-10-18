@@ -1,0 +1,9 @@
+CFG80211 => yes
+MAX44009 => yes
+USB_HSO => yes
+RFKILL => yes
+IIO_KFIFO_BUF => yes
+RFKILL_GPIO => yes
+ATH9K_RFKILL => no
+RFKILL_INPUT => no
+IIO => yes

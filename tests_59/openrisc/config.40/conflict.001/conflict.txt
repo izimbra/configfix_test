@@ -1,0 +1,3 @@
+KEYBOARD_NEWTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n]
+

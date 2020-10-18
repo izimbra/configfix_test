@@ -1,0 +1,3 @@
+TEST_UBSAN: n => mod
+    Direct dependencies:  UBSAN [=n] && m && MODULES [=y]
+

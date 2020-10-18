@@ -1,0 +1,8 @@
+VIDEO_THS8200 => yes
+HID_EZKEY => yes
+TI_ADS7950 => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes
+HID => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

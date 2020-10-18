@@ -1,0 +1,2 @@
+REISERFS_FS_XATTR => yes
+REISERFS_FS => yes

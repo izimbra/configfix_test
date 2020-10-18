@@ -1,0 +1,6 @@
+MFD_WM5102 => yes
+TINYDRM_ST7735R => yes
+SENSORS_LM3533 => yes
+SPI => yes
+MFD_LM3533 => yes
+IIO => yes

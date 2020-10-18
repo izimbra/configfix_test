@@ -1,0 +1,6 @@
+CFG80211: m => yes
+    Direct dependencies:  NET [=y] && WIRELESS [=y] && (RFKILL [=m] || !RFKILL [=m])
+
+MAX44009: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

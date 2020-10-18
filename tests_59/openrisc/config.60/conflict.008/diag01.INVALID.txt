@@ -1,0 +1,4 @@
+I2C_ALGOPCA => no
+SENSORS_SHT21 => yes
+I2C_PCA_PLATFORM => yes
+HWMON => yes

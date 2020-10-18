@@ -1,0 +1,5 @@
+SPI_NXP_FLEXSPI => yes
+MUX_ADGS1408 => yes
+FB_SM501 => yes
+SPI => yes
+MFD_SM501 => yes

@@ -1,0 +1,6 @@
+TCM_IBLOCK: n => yes
+    Direct dependencies:  TARGET_CORE [=n]
+
+MMC_SDHCI_CADENCE: n => yes
+    Direct dependencies:  MMC [=y] && MMC_SDHCI_PLTFM [=n] && OF [=y]
+

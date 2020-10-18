@@ -1,0 +1,9 @@
+BMI160_SPI => yes
+DRM_PANEL_SONY_ACX565AKM => yes
+COMMON_CLK_SI514 => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+BACKLIGHT_CLASS_DEVICE => yes
+FB => yes
+DRM => yes
+COMMON_CLK => yes

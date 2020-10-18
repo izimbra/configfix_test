@@ -1,0 +1,3 @@
+JOYSTICK_SIDEWINDER => yes
+INPUT_JOYSTICK => yes
+INPUT => yes

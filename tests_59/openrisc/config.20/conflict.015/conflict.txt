@@ -1,0 +1,10 @@
+THERMAL_GOV_USER_SPACE: n => yes
+    Direct dependencies:  THERMAL [=n]
+    Reverse dependencies: THERMAL_DEFAULT_GOV_USER_SPACE [=n] && <choice> || X86_PKG_TEMP_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86_THERMAL_VECTOR || INT340X_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86 && ACPI && PCI [=n]
+
+SENSORS_TMP102: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+RD_BZIP2: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+

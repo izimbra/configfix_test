@@ -1,0 +1,10 @@
+REGULATOR_HI6421V530: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_HI6421_PMIC [=m] && OF [=y]
+
+DRM_PANEL_XINPENG_XPP055C272: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+ISCSI_BOOT_SYSFS: n => mod
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && SCSI [=n]
+    Reverse dependencies: BE2ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || QEDI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && UIO [=m] && QED [=n]
+

@@ -1,0 +1,8 @@
+SPI_MEM: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+    Reverse dependencies: MTD_SPI_NOR [=n] && MTD [=n] && SPI_MASTER [=n] || MTD_SPI_NAND [=n] && MTD [=n] && SPI_MASTER [=n]
+
+VIDEO_CS3308: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=n] && INPUT [=y] && SND [=n] && RC_CORE [=y]
+

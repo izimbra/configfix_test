@@ -1,0 +1,4 @@
+CAN_FLEXCAN => yes
+CAN => yes
+NET => yes
+CAN_DEV => yes

@@ -1,0 +1,7 @@
+VIDEO_ADV7393 => yes
+LTC2496 => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUBDRV_AUTOSELECT => no
+VIDEO_DEV => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

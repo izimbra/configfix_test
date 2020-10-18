@@ -1,0 +1,9 @@
+BRIDGE: n => yes
+    Direct dependencies:  NET [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+SENSORS_SMSC47B397: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+LV0104CS: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

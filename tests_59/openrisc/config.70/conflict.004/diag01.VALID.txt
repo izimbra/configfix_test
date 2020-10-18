@@ -1,0 +1,2 @@
+KEYBOARD_IQS62X => yes
+MFD_IQS62X => yes

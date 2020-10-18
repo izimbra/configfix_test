@@ -1,0 +1,6 @@
+HID_CYPRESS: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+SECONDARY_TRUSTED_KEYRING: n => yes
+    Direct dependencies:  CRYPTO [=y] && SYSTEM_TRUSTED_KEYRING [=n]
+

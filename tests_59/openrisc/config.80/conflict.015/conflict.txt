@@ -1,0 +1,11 @@
+TI_ADS7950: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n] && GPIOLIB [=y]
+
+HID_LED: y => no
+    Direct dependencies:  INPUT [=y] && HID [=y] && LEDS_CLASS [=y]
+    Reverse dependencies: HID_THINGM [=y] && INPUT [=y] && HID [=y] && LEDS_CLASS [=y]
+
+PINCTRL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: MFD_MADERA [=y] && HAS_IOMEM [=y]
+
