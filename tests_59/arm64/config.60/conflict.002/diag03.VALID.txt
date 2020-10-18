@@ -1,0 +1,5 @@
+I2C_RIIC => yes
+SOC_RENESAS => yes
+PINCTRL_SH_PFC => yes
+ARCH_RENESAS => yes
+CLK_RENESAS => yes

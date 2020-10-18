@@ -1,0 +1,10 @@
+INPUT_CMA3000_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_CMA3000 [=y] && I2C [=n]
+
+FPGA_BRIDGE: n => yes
+    Direct dependencies:  FPGA [=n]
+    Reverse dependencies: FPGA_DFL [=n] && FPGA [=n]
+
+SENSORS_VEXPRESS: n => yes
+    Direct dependencies:  HWMON [=n] && VEXPRESS_CONFIG [=n]
+

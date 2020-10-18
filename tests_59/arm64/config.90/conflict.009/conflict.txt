@@ -1,0 +1,7 @@
+SENSORS_MC13783_ADC: m => yes
+    Direct dependencies:  HWMON [=y] && MFD_MC13XXX [=m]
+
+SCSI_SRP_ATTRS: y => no
+    Direct dependencies:  SCSI [=y]
+    Reverse dependencies: SCSI_IBMVSCSI [=n] && SCSI_LOWLEVEL [=y] && SCSI [=y] && PPC_PSERIES || INFINIBAND_SRP [=m] && INFINIBAND [=m] && SCSI [=y] && INFINIBAND_ADDR_TRANS [=y]
+

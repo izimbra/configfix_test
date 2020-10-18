@@ -1,0 +1,6 @@
+EXT3_FS_POSIX_ACL => yes
+BLOCK => yes
+EXT3_FS => mod
+EFI_PARTITION => yes
+MSDOS_PARTITION => yes
+EXT4_FS => yes

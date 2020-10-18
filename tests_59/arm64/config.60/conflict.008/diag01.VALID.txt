@@ -1,0 +1,8 @@
+HID_MULTITOUCH => yes
+EDAC_LEGACY_SYSFS => yes
+HID => yes
+INPUT => yes
+MODULES => yes
+EDAC => mod
+ARM64_MODULE_PLTS => yes
+CRYPTO_FIPS => no

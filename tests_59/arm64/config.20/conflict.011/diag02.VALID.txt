@@ -1,0 +1,15 @@
+INFTL => yes
+SLAB_FREELIST_RANDOM => yes
+SENSORS_LIS3_I2C => yes
+MTD => yes
+BLOCK => yes
+MTD_CFI_ADV_OPTIONS => yes
+EFI_PARTITION => yes
+MSDOS_PARTITION => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_BE_BYTE_SWAP => yes
+MTD_MAP_BANK_WIDTH_2 => yes
+MTD_CFI_I8 => yes
+SLOB => no
+SLUB => yes
+INPUT => yes

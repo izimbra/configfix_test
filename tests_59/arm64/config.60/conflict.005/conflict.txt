@@ -1,0 +1,3 @@
+CGROUP_DEBUG: n => yes
+    Direct dependencies:  CGROUPS [=n] && DEBUG_KERNEL [=y]
+

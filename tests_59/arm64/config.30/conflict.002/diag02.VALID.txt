@@ -1,0 +1,7 @@
+LEDS_LM355x => yes
+DEBUG_LOCK_ALLOC => no
+I2C => yes
+NEW_LEDS => yes
+PROVE_LOCKING => no
+LEDS_CLASS => yes
+DEBUG_WW_MUTEX_SLOWPATH => no

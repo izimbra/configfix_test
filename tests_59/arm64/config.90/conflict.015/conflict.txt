@@ -1,0 +1,10 @@
+IOMMU_SUPPORT: y => no
+    Direct dependencies:  MMU [=y]
+    Reverse dependencies: DRM_PANFROST [=y] && HAS_IOMEM [=y] && DRM [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y] && !GENERIC_ATOMIC64 [=n]) && MMU [=y]
+
+CROS_EC_SYSFS: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=m] && SYSFS [=y]
+
+TAHVO_USB: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && MFD_RETU [=m] && (USB_GADGET [=y] || !USB_GADGET [=y])
+

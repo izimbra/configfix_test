@@ -1,0 +1,4 @@
+PHY_BRCM_USB => yes
+CGROUP_PERF => yes
+ARCH_BRCMSTB => yes
+CGROUPS => yes

@@ -1,0 +1,2 @@
+EXTCON_GPIO => yes
+EXTCON => yes

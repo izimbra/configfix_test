@@ -1,0 +1,3 @@
+CGROUP_PERF => yes
+CGROUPS => yes
+PERF_EVENTS => yes

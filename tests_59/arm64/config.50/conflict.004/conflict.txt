@@ -1,0 +1,3 @@
+DRM_PANEL_LG_LB035Q02: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=n]
+

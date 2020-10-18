@@ -1,0 +1,6 @@
+PHY_BRCM_USB => yes
+CGROUP_PERF => yes
+OMAP_USB2 => no
+COMPILE_TEST => yes
+LOCALVERSION_AUTO => no
+CGROUPS => yes

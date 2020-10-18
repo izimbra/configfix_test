@@ -1,0 +1,7 @@
+INTEGRITY: n => yes
+    Direct dependencies:  SECURITY [=n]
+
+SLUB_DEBUG: y => no
+    Direct dependencies:  SLUB [=y] && SYSFS [=y]
+    Reverse dependencies: KASAN_GENERIC [=y] && <choice> && HAVE_ARCH_KASAN [=y] && CC_HAS_KASAN_GENERIC [=y] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y] || KASAN_SW_TAGS [=n] && <choice> && HAVE_ARCH_KASAN_SW_TAGS [=y] && CC_HAS_KASAN_SW_TAGS [=n] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y]
+

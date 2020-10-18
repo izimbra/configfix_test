@@ -1,0 +1,3 @@
+RTC_DRV_DS1689: n => no
+    Direct dependencies:  <choice>
+

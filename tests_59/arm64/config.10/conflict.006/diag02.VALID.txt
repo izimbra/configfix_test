@@ -1,0 +1,10 @@
+HID_BETOP_FF => yes
+JFS_POSIX_ACL => yes
+USB_AUTOSUSPEND_DELAY => 0
+USB => yes
+USB_HID => yes
+HID => yes
+USB_SUPPORT => yes
+INPUT_FF_MEMLESS => yes
+JFS_FS => mod
+MODULES => yes

@@ -1,0 +1,5 @@
+TINYDRM_REPAPER => yes
+SC_LPASS_CORECC_7180 => yes
+DRM => yes
+COMMON_CLK_QCOM => yes
+SC_GCC_7180 => yes

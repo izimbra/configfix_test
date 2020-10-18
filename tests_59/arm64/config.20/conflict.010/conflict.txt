@@ -1,0 +1,6 @@
+USB_RENESAS_USB3: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && (ARCH_RENESAS [=n] || COMPILE_TEST [=n]) && EXTCON [=y]
+
+COMMON_CLK_PWM: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && PWM [=n]
+

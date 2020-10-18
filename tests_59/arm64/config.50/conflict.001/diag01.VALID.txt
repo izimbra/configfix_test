@@ -1,0 +1,2 @@
+FB_MODE_HELPERS => yes
+FB => yes

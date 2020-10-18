@@ -1,0 +1,6 @@
+USB_MICROTEK: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && SCSI [=n]
+
+LEDS_LM36274: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TI_LMU_COMMON [=n] && MFD_TI_LMU [=n]
+

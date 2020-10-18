@@ -1,0 +1,3 @@
+SDM_GPUCC_845 => yes
+SDM_GCC_845 => yes
+COMMON_CLK_QCOM => yes

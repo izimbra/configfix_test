@@ -1,0 +1,5 @@
+ARM64_VA_BITS_48 => no
+TINYDRM_ILI9341 => yes
+MEDIA_CEC_RC => no
+SYNC_FILE => yes
+DRM => yes

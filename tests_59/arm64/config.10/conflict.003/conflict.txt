@@ -1,0 +1,3 @@
+MFD_CS47L35: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n]
+

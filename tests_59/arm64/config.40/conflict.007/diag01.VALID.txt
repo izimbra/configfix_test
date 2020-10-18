@@ -1,0 +1,5 @@
+MTD_TESTS => no
+JOYSTICK_AS5011 => yes
+TCP_CONG_CUBIC => no
+DEBUG_RT_MUTEXES => yes
+I2C => yes

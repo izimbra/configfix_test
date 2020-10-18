@@ -1,0 +1,3 @@
+RTC_DRV_MAX8997: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_MAX8997 [=n]
+

@@ -1,0 +1,9 @@
+VIRTIO_MMIO_CMDLINE_DEVICES: n => yes
+    Direct dependencies:  VIRTIO_MENU [=n] && VIRTIO_MMIO [=n]
+
+MTD_OTP: n => yes
+    Direct dependencies:  MTD [=m] && MTD_CFI_ADV_OPTIONS [=n]
+
+CORESIGHT_CATU: n => yes
+    Direct dependencies:  CORESIGHT [=y] && CORESIGHT_LINK_AND_SINK_TMC [=n]
+

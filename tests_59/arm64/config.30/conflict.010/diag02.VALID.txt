@@ -1,0 +1,10 @@
+DRM_DEBUG_MM => yes
+USB_LEGOTOWER => yes
+DEBUG_RT_MUTEXES => yes
+I2C => yes
+I2C_ALGOBIT => yes
+SYNC_FILE => yes
+DRM => yes
+USB => yes
+USB_SUPPORT => yes
+USB_AUTOSUSPEND_DELAY => 1

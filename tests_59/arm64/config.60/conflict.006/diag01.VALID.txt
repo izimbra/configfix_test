@@ -1,0 +1,4 @@
+FB_MODE_HELPERS => no
+SCSI_DH_HP_SW => yes
+FB_UDL => no
+SCSI_DH => yes

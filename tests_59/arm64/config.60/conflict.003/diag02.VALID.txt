@@ -1,0 +1,2 @@
+USB_OHCI_HCD_PLATFORM => no
+USB_OHCI_HCD => no

@@ -1,0 +1,5 @@
+LEDS_LM355x => yes
+DEBUG_RT_MUTEXES => yes
+I2C => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes

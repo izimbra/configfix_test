@@ -1,0 +1,7 @@
+PWM_ATMEL_HLCDC_PWM: m => yes
+    Direct dependencies:  PWM [=y] && MFD_ATMEL_HLCDC [=m] && HAVE_CLK [=y]
+
+CRYPTO_LZ4HC: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_LZ4HC [=n] && <choice> || PSTORE_LZ4HC_COMPRESS [=m] && MISC_FILESYSTEMS [=y] && PSTORE [=m]
+

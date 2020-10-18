@@ -1,0 +1,8 @@
+INTEGRITY => yes
+SLUB_DEBUG => no
+MULTIUSER => yes
+SECURITY => yes
+SLUB_DEBUG_ON => no
+KASAN_GENERIC => no
+KASAN => no
+KASAN_OUTLINE => no

@@ -1,0 +1,3 @@
+MEMBARRIER => no
+RSEQ => no
+DEBUG_RSEQ => no

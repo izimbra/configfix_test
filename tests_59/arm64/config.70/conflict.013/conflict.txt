@@ -1,0 +1,9 @@
+DRM_PANEL_NOVATEK_NT39016: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+
+PWM_ATMEL_HLCDC_PWM: m => yes
+    Direct dependencies:  PWM [=y] && MFD_ATMEL_HLCDC [=m] && HAVE_CLK [=y]
+
+MMC_REALTEK_USB: n => yes
+    Direct dependencies:  MMC [=m] && MISC_RTSX_USB [=n]
+

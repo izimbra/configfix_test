@@ -1,0 +1,6 @@
+SENSORS_AD7418: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+LEDS_TRIGGER_BACKLIGHT: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=n]
+

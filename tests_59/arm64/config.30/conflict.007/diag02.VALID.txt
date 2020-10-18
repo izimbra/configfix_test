@@ -1,0 +1,8 @@
+RMI4_SMB => yes
+PINCTRL_PFC_R8A77961 => yes
+DEBUG_RT_MUTEXES => yes
+I2C => yes
+RMI4_CORE => yes
+INPUT => yes
+COMPILE_TEST => yes
+LOCALVERSION_AUTO => no

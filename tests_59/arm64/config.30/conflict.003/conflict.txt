@@ -1,0 +1,3 @@
+IR_IMON_RAW: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=n] && RC_CORE [=n]
+

@@ -1,0 +1,4 @@
+IPMI_DEVICE_INTERFACE => yes
+RC_CORE => yes
+IPMI_HANDLER => yes
+INPUT => yes

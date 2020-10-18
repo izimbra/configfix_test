@@ -1,0 +1,3 @@
+POWER_RESET_VEXPRESS: n => yes
+    Direct dependencies:  POWER_RESET [=y] && (ARM || ARM64 [=y]) && VEXPRESS_CONFIG [=n]=y
+

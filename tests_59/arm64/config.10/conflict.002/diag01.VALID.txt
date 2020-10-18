@@ -1,0 +1,4 @@
+LEDS_PCA9532 => yes
+I2C => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes

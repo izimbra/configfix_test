@@ -1,0 +1,10 @@
+SENSORS_MAX34440: n => yes
+    Direct dependencies:  HWMON [=n] && PMBUS [=n]
+
+MLXREG_IO: n => yes
+    Direct dependencies:  MELLANOX_PLATFORM [=n] && REGMAP [=y] && HWMON [=n]
+
+RENESAS_IRQC: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN3 [=y] && SOC_RENESAS [=y] || ARCH_R8A73A4 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS [=y]
+

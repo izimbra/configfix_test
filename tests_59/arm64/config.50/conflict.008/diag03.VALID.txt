@@ -1,0 +1,12 @@
+USB_DWC3_ULPI => yes
+MLXREG_IO => yes
+USB_DWC3_ST => no
+HWMON => yes
+USB_DWC3_OF_SIMPLE => no
+MELLANOX_PLATFORM => yes
+USB_DWC3_KEYSTONE => no
+MODULES => yes
+ARM64_MODULE_PLTS => yes
+USB_DWC3_OMAP => no
+USB_DWC3 => mod
+USB_ULPI_BUS => mod

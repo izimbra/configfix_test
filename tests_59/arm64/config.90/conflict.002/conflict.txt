@@ -1,0 +1,3 @@
+PPDEV: n => yes
+    Direct dependencies:  PARPORT [=n]
+

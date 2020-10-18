@@ -1,0 +1,10 @@
+BLK_DEV_BSGLIB: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: SCSI_FC_ATTRS [=n] && SCSI [=n] && NET [=y] || SCSI_ISCSI_ATTRS [=n] && SCSI [=n] && NET [=y] || SCSI_SAS_ATTRS [=n] && SCSI [=n] || SCSI_SAS_LIBSAS [=n] && SCSI [=n] || SCSI_UFS_BSG [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_UFSHCD [=n]
+
+RTC_DRV_DA9063: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+
+QCS_Q6SSTOP_404: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+

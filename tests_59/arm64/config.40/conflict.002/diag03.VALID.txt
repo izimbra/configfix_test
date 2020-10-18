@@ -1,0 +1,6 @@
+MLXREG_IO => yes
+TCP_CONG_ADVANCED => yes
+DEFAULT_BBR => yes
+HWMON => yes
+TCP_CONG_BBR => yes
+MELLANOX_PLATFORM => yes

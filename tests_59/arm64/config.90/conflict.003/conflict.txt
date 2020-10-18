@@ -1,0 +1,4 @@
+FB: y => mod
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: DRM_KMS_FB_HELPER [=y] && HAS_IOMEM [=y] && DRM_KMS_HELPER [=y] || DRM_VMWGFX [=n] && HAS_IOMEM [=y] && DRM [=y] && PCI [=y] && X86 && MMU [=y]
+

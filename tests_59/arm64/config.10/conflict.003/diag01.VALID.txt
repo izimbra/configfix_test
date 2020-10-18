@@ -1,0 +1,3 @@
+MFD_CS47L35 => yes
+MODULES => yes
+MFD_MADERA => mod

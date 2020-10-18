@@ -1,0 +1,9 @@
+ARCH_R8A77995: n => yes
+    Direct dependencies:  SOC_RENESAS [=n] && ARM64 [=y]
+
+EFI_GENERIC_STUB_INITRD_CMDLINE_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_STUB [=n] && (EFI_GENERIC_STUB [=n] || X86)
+
+IPMMU_VMSA: n => yes
+    Direct dependencies:  IOMMU_SUPPORT [=y] && (ARCH_RENESAS [=n] || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n])
+

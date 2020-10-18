@@ -1,0 +1,7 @@
+INPUT_SC27XX_VIBRA: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=n])
+
+THERMAL_GOV_USER_SPACE: n => yes
+    Direct dependencies:  THERMAL [=n]
+    Reverse dependencies: THERMAL_DEFAULT_GOV_USER_SPACE [=n] && <choice> || X86_PKG_TEMP_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86_THERMAL_VECTOR || INT340X_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86 && ACPI [=n] && PCI [=n]
+

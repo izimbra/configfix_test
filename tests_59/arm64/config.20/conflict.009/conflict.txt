@@ -1,0 +1,7 @@
+I2C_MUX_PINCTRL: n => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=n] && PINCTRL [=y] && (OF [=y] || COMPILE_TEST [=n])
+
+APQ_GCC_8084: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: APQ_MMCC_8084 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+

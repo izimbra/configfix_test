@@ -1,0 +1,12 @@
+INPUT_CMA3000_I2C => yes
+FPGA_BRIDGE => yes
+SENSORS_VEXPRESS => yes
+TCP_CONG_ADVANCED => yes
+DEFAULT_BBR => yes
+DEBUG_LOCK_ALLOC => no
+I2C => yes
+LOCK_STAT => no
+TCP_CONG_BBR => yes
+FPGA => yes
+HWMON => yes
+VEXPRESS_CONFIG => yes

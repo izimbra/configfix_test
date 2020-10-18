@@ -1,0 +1,4 @@
+MTD_CFI_I8 => yes
+MTD_CFI_ADV_OPTIONS => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_BE_BYTE_SWAP => yes

@@ -1,0 +1,9 @@
+AMLOGIC_THERMAL: n => yes
+    Direct dependencies:  THERMAL [=y] && OF [=y] && ARCH_MESON [=n]
+
+TYPEC_TCPM: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && TYPEC [=n] && USB [=y]
+
+USB_CONFIGFS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+

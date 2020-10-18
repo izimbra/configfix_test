@@ -1,0 +1,7 @@
+CRYPTO_CRC32C: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: NVME_TCP [=n] && INET [=y] && BLK_DEV_NVME [=n] || ISCSI_TCP [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && INET [=y] || ISCSI_TARGET [=n] && TARGET_CORE [=n] && INET [=y] || EXT4_FS [=n] && BLOCK [=n] || JBD2 [=n] && BLOCK [=n] || BTRFS_FS [=n] && BLOCK [=n] || LIBCRC32C [=y]
+
+VIRTIO_PMEM: n => yes
+    Direct dependencies:  VIRTIO_MENU [=n] && VIRTIO [=n] && LIBNVDIMM [=n]
+

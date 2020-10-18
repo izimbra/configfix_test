@@ -1,0 +1,14 @@
+MQ_IOSCHED_KYBER => yes
+ND_BLK => yes
+CLK_RENESAS => yes
+TCP_CONG_ADVANCED => yes
+TCP_CONG_BBR => yes
+BLOCK => yes
+DEFAULT_BBR => yes
+PARTITION_ADVANCED => yes
+LIBNVDIMM => yes
+BLK_DEV => yes
+SOC_RENESAS => yes
+PINCTRL_SH_PFC => yes
+USB_XHCI_RCAR => yes
+ARCH_RENESAS => yes

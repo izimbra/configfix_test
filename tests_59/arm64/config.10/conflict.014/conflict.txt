@@ -1,0 +1,9 @@
+PINCTRL_AS3722: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_AS3722 [=n] && GPIOLIB [=y]
+
+MFD_BD9571MWV: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+LOGO: n => yes
+    Direct dependencies:  FB [=n] || SGI_NEWPORT_CONSOLE [=n]
+

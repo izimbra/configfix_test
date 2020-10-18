@@ -1,0 +1,3 @@
+TEST_LOCKUP => no
+REGULATOR_SY8824X => yes
+REGULATOR => yes

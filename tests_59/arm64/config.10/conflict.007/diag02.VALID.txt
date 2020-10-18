@@ -1,0 +1,8 @@
+ARM64_PA_BITS_48 => no
+DS1682 => yes
+ARM64_VA_BITS_47 => no
+ARM64_64K_PAGES => yes
+ARM64_16K_PAGES => no
+ARM64_VA_BITS_48 => yes
+ARM64_PA_BITS_52 => yes
+I2C => yes

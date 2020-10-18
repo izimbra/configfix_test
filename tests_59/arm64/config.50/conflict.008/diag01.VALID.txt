@@ -1,0 +1,5 @@
+USB_DWC3_ULPI => yes
+MLXREG_IO => yes
+USB_ULPI_BUS => yes
+HWMON => yes
+MELLANOX_PLATFORM => yes

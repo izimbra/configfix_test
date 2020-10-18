@@ -1,0 +1,4 @@
+SYSC_RCAR => yes
+SOC_RENESAS => yes
+COMPILE_TEST => yes
+LOCALVERSION_AUTO => no

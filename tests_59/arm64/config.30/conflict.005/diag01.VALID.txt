@@ -1,0 +1,3 @@
+RD_LZO => yes
+BLK_DEV_INITRD => yes
+INITRAMFS_SOURCE => 

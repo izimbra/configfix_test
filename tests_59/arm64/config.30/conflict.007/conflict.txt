@@ -1,0 +1,7 @@
+RMI4_SMB: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && RMI4_CORE [=n] && I2C [=n]
+
+PINCTRL_PFC_R8A77961: n => yes
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=n] && PINCTRL [=y] && ARCH_R8A77961 [=n]
+

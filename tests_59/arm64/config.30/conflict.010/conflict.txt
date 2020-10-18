@@ -1,0 +1,7 @@
+DRM_DEBUG_MM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]=y && STACKTRACE_SUPPORT [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n] && DRM [=n]=y
+
+USB_LEGOTOWER: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n]
+

@@ -1,0 +1,7 @@
+BLK_DEV_PMEM => yes
+BLOCK => yes
+LIBNVDIMM => yes
+EFI_PARTITION => yes
+BLK_DEV => yes
+MSDOS_PARTITION => yes
+DAX => yes

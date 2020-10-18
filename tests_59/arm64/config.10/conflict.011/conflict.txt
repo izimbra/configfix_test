@@ -1,0 +1,9 @@
+MMC_MESON_GX: n => yes
+    Direct dependencies:  ARCH_MESON [=n] && MMC [=n]
+
+I2C_XLP9XX: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && (CPU_XLP || ARCH_THUNDER2 [=n] || COMPILE_TEST [=n])
+
+BATTERY_ACT8945A: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && (MFD_ACT8945A [=n] || COMPILE_TEST [=n])
+

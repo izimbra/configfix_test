@@ -1,0 +1,3 @@
+CGROUP_DEBUG => yes
+DEBUG_KERNEL => yes
+CGROUPS => yes

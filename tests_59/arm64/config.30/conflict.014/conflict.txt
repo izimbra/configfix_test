@@ -1,0 +1,9 @@
+SPI_CADENCE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+THERMAL_MMIO: n => yes
+    Direct dependencies:  THERMAL [=n] && (OF [=y] || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+
+XEN_GRANT_DEV_ALLOC: n => yes
+    Direct dependencies:  XEN [=n]
+

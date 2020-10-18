@@ -1,0 +1,7 @@
+CRYPTO_NULL: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_AUTHENC [=y] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_SEQIV [=y] && CRYPTO [=y] || CRYPTO_ECHAINIV [=y] && CRYPTO [=y] || CRYPTO_USER_API_AEAD [=n] && CRYPTO [=y] && NET [=n]
+
+MOUSE_PS2: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n]
+

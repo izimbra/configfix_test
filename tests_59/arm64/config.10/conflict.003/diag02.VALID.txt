@@ -1,0 +1,2 @@
+MFD_CS47L35 => yes
+MFD_MADERA => yes

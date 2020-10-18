@@ -1,0 +1,8 @@
+HIBERNATION => yes
+BLK_DEV_NULL_BLK => yes
+BLOCK => yes
+PM_STD_PARTITION => 
+EFI_PARTITION => yes
+SWAP => yes
+MSDOS_PARTITION => yes
+BLK_DEV => yes

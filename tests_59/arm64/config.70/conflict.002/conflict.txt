@@ -1,0 +1,3 @@
+TINYDRM_ST7586: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+

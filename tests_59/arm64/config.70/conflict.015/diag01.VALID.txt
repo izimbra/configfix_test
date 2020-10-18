@@ -1,0 +1,8 @@
+TYPEC_FUSB302 => yes
+USB_EHCI_HCD_PLATFORM => yes
+FPGA_REGION => yes
+TYPEC => yes
+TYPEC_TCPM => yes
+USB_EHCI_HCD => yes
+FPGA => yes
+FPGA_BRIDGE => yes

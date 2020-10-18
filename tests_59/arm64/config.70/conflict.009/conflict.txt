@@ -1,0 +1,6 @@
+DRM_PANEL_TPO_TD043MTEA1: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && REGULATOR [=y] && SPI [=y]
+
+SAMPLE_VFIO_MDEV_MBOCHS: n => mod
+    Direct dependencies:  SAMPLES [=y] && VFIO_MDEV_DEVICE [=n] && m && MODULES [=y]
+

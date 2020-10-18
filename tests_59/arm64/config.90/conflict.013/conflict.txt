@@ -1,0 +1,9 @@
+IPMI_DEVICE_INTERFACE: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+HSI_CHAR: n => yes
+    Direct dependencies:  HSI [=n]
+
+CHARGER_MAX77693: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MAX77693 [=m]
+

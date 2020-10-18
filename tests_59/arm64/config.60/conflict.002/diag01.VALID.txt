@@ -1,0 +1,4 @@
+I2C_RIIC => yes
+OMAP_CONTROL_PHY => yes
+COMPILE_TEST => yes
+LOCALVERSION_AUTO => no

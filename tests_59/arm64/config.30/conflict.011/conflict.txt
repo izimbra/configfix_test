@@ -1,0 +1,10 @@
+PARPORT_PANEL: y => no
+    Direct dependencies:  AUXDISPLAY [=y] && PARPORT [=y]
+    Reverse dependencies: PANEL [=y] && PARPORT [=y]
+
+MFD_ARIZONA_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+DRM_PANEL_SONY_ACX565AKM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+

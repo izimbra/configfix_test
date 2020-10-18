@@ -1,0 +1,6 @@
+USB_DWC3_ULPI: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_DWC3 [=y] && (USB_ULPI_BUS [=n]=y || USB_ULPI_BUS [=n]=USB_DWC3 [=y])
+
+MLXREG_IO: n => yes
+    Direct dependencies:  MELLANOX_PLATFORM [=n] && REGMAP [=y] && HWMON [=n]
+

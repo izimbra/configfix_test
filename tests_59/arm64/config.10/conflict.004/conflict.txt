@@ -1,0 +1,3 @@
+EXTCON_GPIO: n => yes
+    Direct dependencies:  EXTCON [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

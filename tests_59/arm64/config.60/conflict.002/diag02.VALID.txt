@@ -1,0 +1,4 @@
+I2C_RIIC => yes
+OMAP_USB2 => no
+COMPILE_TEST => yes
+LOCALVERSION_AUTO => no

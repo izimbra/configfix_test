@@ -1,0 +1,2 @@
+PPDEV => yes
+PARPORT => yes

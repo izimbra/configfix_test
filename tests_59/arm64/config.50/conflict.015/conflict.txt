@@ -1,0 +1,9 @@
+SENSORS_ADT7462: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+MTD_UBI_FASTMAP: n => yes
+    Direct dependencies:  MTD [=y] && MTD_UBI [=n]
+
+MTD_SWAP: n => yes
+    Direct dependencies:  MTD [=y] && SWAP [=n]
+

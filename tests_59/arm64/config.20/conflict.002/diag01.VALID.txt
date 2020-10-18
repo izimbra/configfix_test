@@ -1,0 +1,6 @@
+BLK_DEV_PMEM => yes
+BLOCK => yes
+LIBNVDIMM => yes
+PARTITION_ADVANCED => yes
+BLK_DEV => yes
+DAX => yes

@@ -1,0 +1,9 @@
+INFTL: n => yes
+    Direct dependencies:  MTD [=n] && BLOCK [=n]
+
+SLAB_FREELIST_RANDOM: n => yes
+    Direct dependencies:  SLAB [=n] || SLUB [=n]
+
+SENSORS_LIS3_I2C: n => yes
+    Direct dependencies:  I2C [=y] && INPUT [=n]
+

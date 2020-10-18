@@ -1,0 +1,7 @@
+HIBERNATION => yes
+BLK_DEV_NULL_BLK => yes
+BLOCK => yes
+PM_STD_PARTITION => 
+PARTITION_ADVANCED => yes
+SWAP => yes
+BLK_DEV => yes

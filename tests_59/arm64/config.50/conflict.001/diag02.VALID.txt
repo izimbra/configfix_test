@@ -1,0 +1,4 @@
+FB_MODE_HELPERS => yes
+MODULES => yes
+ARM64_MODULE_PLTS => yes
+FB => mod

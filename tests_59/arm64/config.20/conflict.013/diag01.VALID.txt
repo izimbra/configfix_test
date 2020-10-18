@@ -1,0 +1,5 @@
+INPUT_MISC => yes
+VIRT_CPU_ACCOUNTING_GEN => no
+HID_KYE => yes
+INPUT => yes
+HID => yes

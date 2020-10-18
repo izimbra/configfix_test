@@ -1,0 +1,10 @@
+JOYSTICK_TMDC => yes
+SCSI_DH_EMC => yes
+PINCTRL_MESON => yes
+INPUT_JOYSTICK => yes
+SCSI_DH => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+SCSI => yes
+MESON_IRQ_GPIO => yes
+ARCH_MESON => yes

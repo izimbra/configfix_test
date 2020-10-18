@@ -1,0 +1,6 @@
+ARM_PSCI_CPUIDLE: n => yes
+    Direct dependencies:  CPU_IDLE [=n] && (ARM || ARM64 [=y]) && ARM_PSCI_FW [=y]
+
+SENSORS_VEXPRESS: n => yes
+    Direct dependencies:  HWMON [=y] && VEXPRESS_CONFIG [=n]
+

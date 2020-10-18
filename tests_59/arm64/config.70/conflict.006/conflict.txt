@@ -1,0 +1,7 @@
+NVMEM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: USB4 [=m] && PCI [=y] || EEPROM_AT24 [=y] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=y] && SYSFS [=y] || EEPROM_93XX46 [=m] && SPI [=y] && SYSFS [=y] || RTC_NVMEM [=n] && RTC_CLASS [=y]
+
+USB_RENESAS_USBHS_HCD: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_RENESAS_USBHS [=n]
+

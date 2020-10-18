@@ -1,0 +1,3 @@
+DRM_PANEL_TRULY_NT35597_WQXGA: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n]
+

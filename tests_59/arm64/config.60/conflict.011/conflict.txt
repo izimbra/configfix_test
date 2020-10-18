@@ -1,0 +1,10 @@
+MTD_NAND_ECC_SW_HAMMING_SMC: n => yes
+    Direct dependencies:  MTD [=n] && MTD_NAND_ECC_SW_HAMMING [=n]
+    Reverse dependencies: MTD_NAND_NDFC [=n] && MTD [=n] && MTD_RAW_NAND [=n] && 4xx
+
+MODULE_SRCVERSION_ALL: n => yes
+    Direct dependencies:  MODULES [=n]
+
+INPUT_E3X0_BUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n]
+

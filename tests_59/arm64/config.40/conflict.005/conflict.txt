@@ -1,0 +1,3 @@
+FB_SH_MOBILE_LCDC: n => yes
+    Direct dependencies:  FB [=y] && HAVE_CLK [=y] && HAS_IOMEM [=y] && (SUPERH || ARCH_RENESAS [=n] || COMPILE_TEST [=n])
+

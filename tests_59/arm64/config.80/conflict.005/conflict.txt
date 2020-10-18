@@ -1,0 +1,4 @@
+EXPERT: y => no
+    Direct dependencies:  y
+    Reverse dependencies: EMBEDDED [=y]
+

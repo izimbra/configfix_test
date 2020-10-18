@@ -1,0 +1,4 @@
+SENSORS_MAX31785 => yes
+FB_EFI => yes
+PMBUS => yes
+FB => yes

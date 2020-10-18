@@ -1,0 +1,9 @@
+HID_ELO: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m]
+
+EXT3_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT3_FS [=n]
+
+USB_CHIPIDEA: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && (USB_EHCI_HCD [=m] && USB_GADGET [=n] || USB_EHCI_HCD [=m] && !USB_GADGET [=n] || !USB_EHCI_HCD [=m] && USB_GADGET [=n]) && HAS_DMA [=y]
+

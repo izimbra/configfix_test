@@ -1,0 +1,9 @@
+GPIO_TQMX86: n => yes
+    Direct dependencies:  GPIOLIB [=y] && (MFD_TQMX86 [=n] || COMPILE_TEST [=n])
+
+HID_WALTOP: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+FB_SMSCUFX: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && USB [=n]
+

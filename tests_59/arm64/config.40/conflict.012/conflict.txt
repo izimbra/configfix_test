@@ -1,0 +1,10 @@
+GPIO_BD70528: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_ROHM_BD70528 [=n]
+
+CLK_R8A77961: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=n]
+    Reverse dependencies: CLK_RENESAS [=n] && COMMON_CLK [=y] && ARCH_R8A77961 [=n]
+
+SOC_RENESAS: n => yes
+    Direct dependencies:  y
+

@@ -1,0 +1,12 @@
+GPIO_TQMX86 => yes
+HID_WALTOP => yes
+FB_SMSCUFX => yes
+MFD_TQMX86 => yes
+HID => yes
+INPUT => yes
+USB_AUTOSUSPEND_DELAY => 0
+USB => yes
+USB_SUPPORT => yes
+FB_MODE_HELPERS => yes
+NLS => yes
+NLS_DEFAULT => 

@@ -1,0 +1,4 @@
+IR_TOY => yes
+MTD_CFI_STAA => yes
+RC_CORE => yes
+MTD => yes

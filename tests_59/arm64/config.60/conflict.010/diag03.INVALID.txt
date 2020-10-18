@@ -1,0 +1,15 @@
+OF_FPGA_REGION => yes
+MTD_NAND_ECC_SW_HAMMING_SMC => yes
+FPGA_REGION => yes
+FPGA_BRIDGE => yes
+MTD => mod
+MTD_CFI_I2 => yes
+MODULES => yes
+MTD_CFI_I1 => yes
+MODULE_SIG_KEY => nonempty
+MTD_MAP_BANK_WIDTH_1 => yes
+MODULE_SIG => yes
+MODULE_SIG_SHA384 => yes
+RANDOMIZE_BASE => no
+MTD_MAP_BANK_WIDTH_2 => yes
+MTD_MAP_BANK_WIDTH_4 => yes

@@ -1,0 +1,14 @@
+MMC_MESON_GX => yes
+I2C_XLP9XX => yes
+BATTERY_ACT8945A => yes
+MESON_IRQ_GPIO => yes
+PINCTRL_MESON => yes
+ARCH_MESON => yes
+MMC => yes
+RESET_CONTROLLER => yes
+RESET_SIMPLE => yes
+I2C => yes
+RESET_BERLIN => yes
+RESET_MESON => yes
+ARCH_THUNDER2 => yes
+MFD_ACT8945A => yes

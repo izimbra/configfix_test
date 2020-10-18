@@ -1,0 +1,6 @@
+CHARGER_QCOM_SMBB: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && (MFD_SPMI_PMIC [=n] || COMPILE_TEST [=n]) && OF [=y] && EXTCON [=y] && REGULATOR [=y]
+
+USB_CONFIGFS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+

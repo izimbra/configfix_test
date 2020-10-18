@@ -1,0 +1,3 @@
+TINYDRM_ST7586 => yes
+SYNC_FILE => yes
+DRM => yes

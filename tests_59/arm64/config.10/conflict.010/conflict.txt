@@ -1,0 +1,6 @@
+REGULATOR_PV88060: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+I2C_HID: n => yes
+    Direct dependencies:  I2C [=n] && INPUT [=y]
+

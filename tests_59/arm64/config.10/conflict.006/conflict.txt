@@ -1,0 +1,6 @@
+HID_BETOP_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && USB_HID [=n]
+
+JFS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=y] && JFS_FS [=n]
+

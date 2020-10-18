@@ -1,0 +1,5 @@
+USB_ROLE_SWITCH => no
+SPI_SPRD_ADI => yes
+PHY_TEGRA_XUSB => no
+USB_CONN_GPIO => no
+SPI => yes

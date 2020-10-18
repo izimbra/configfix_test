@@ -1,0 +1,6 @@
+MTD_TESTS: n => no
+    Direct dependencies:  MTD [=n] && m && MODULES [=n]
+
+JOYSTICK_AS5011: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && I2C [=n]
+

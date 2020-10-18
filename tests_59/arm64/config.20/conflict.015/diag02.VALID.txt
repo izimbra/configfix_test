@@ -1,0 +1,12 @@
+USB_MAX3421_HCD => yes
+RTC_DRV_PCF8583 => yes
+LEDS_LM3532 => yes
+USB_AUTOSUSPEND_DELAY => 1
+USB => yes
+SPI => yes
+USB_SUPPORT => yes
+NLS => yes
+NLS_DEFAULT => nonempty
+RTC_CLASS => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes

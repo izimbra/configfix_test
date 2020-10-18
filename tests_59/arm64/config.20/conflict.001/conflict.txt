@@ -1,0 +1,4 @@
+KALLSYMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: KPROBES [=n] && MODULES [=n] && HAVE_KPROBES [=y] || LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=n] || DEBUG_KMEMLEAK [=y] && DEBUG_KERNEL [=y] && HAVE_DEBUG_KMEMLEAK [=y] || LOCKDEP [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || FUNCTION_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=y] || STACK_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=y] || FTRACE_SYSCALLS [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_SYSCALL_TRACEPOINTS [=y]
+

@@ -1,0 +1,9 @@
+F2FS_FAULT_INJECTION: n => yes
+    Direct dependencies:  BLOCK [=n] && F2FS_FS [=n]
+
+MTD_UBI_BLOCK: n => yes
+    Direct dependencies:  MTD [=y] && MTD_UBI [=n] && BLOCK [=n]
+
+NTFS_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+

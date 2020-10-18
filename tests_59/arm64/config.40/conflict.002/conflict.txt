@@ -1,0 +1,3 @@
+MLXREG_IO: n => yes
+    Direct dependencies:  MELLANOX_PLATFORM [=n] && REGMAP [=y] && HWMON [=n]
+

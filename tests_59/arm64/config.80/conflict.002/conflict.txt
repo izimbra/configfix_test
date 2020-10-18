@@ -1,0 +1,3 @@
+DRM_PANFROST: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && (ARM || ARM64 [=y] || COMPILE_TEST [=y] && !GENERIC_ATOMIC64 [=n]) && MMU [=y]
+

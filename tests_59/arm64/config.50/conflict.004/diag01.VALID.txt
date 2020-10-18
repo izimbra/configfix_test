@@ -1,0 +1,2 @@
+DRM_PANEL_LG_LB035Q02 => yes
+SPI => yes

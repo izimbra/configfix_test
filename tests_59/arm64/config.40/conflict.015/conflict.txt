@@ -1,0 +1,9 @@
+MQ_IOSCHED_KYBER: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+ND_BLK: n => yes
+    Direct dependencies:  LIBNVDIMM [=n]
+
+CLK_RENESAS: n => yes
+    Direct dependencies:  COMMON_CLK [=y]
+

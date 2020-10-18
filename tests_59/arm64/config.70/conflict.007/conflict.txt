@@ -1,0 +1,6 @@
+SENSORS_MAX31785: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+FB_EFI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=m]=y && !IA64 && EFI [=y]
+

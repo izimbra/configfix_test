@@ -1,0 +1,3 @@
+CGROUP_PERF: n => yes
+    Direct dependencies:  CGROUPS [=n] && PERF_EVENTS [=n]
+

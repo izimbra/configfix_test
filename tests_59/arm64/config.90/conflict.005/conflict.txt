@@ -1,0 +1,4 @@
+MEMBARRIER: y => no
+    Direct dependencies:  y
+    Reverse dependencies: RSEQ [=y] && HAVE_RSEQ [=y]
+

@@ -1,0 +1,11 @@
+CHARGER_BQ2515X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+W1_SLAVE_DS2781: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2781 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+PKCS7_MESSAGE_PARSER: n => yes
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y] && X509_CERTIFICATE_PARSER [=n]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=n] || IMA_APPRAISE_MODSIG [=n] && INTEGRITY [=n] && IMA_APPRAISE [=n] && INTEGRITY_ASYMMETRIC_KEYS [=n]
+

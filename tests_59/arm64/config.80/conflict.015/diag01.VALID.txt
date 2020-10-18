@@ -1,0 +1,7 @@
+CLK_VEXPRESS_OSC => yes
+SDM_GCC_660 => yes
+BLK_DEV => yes
+VEXPRESS_CONFIG => yes
+COMMON_CLK_QCOM => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes

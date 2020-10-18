@@ -1,0 +1,9 @@
+PINCTRL_AS3722: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_AS3722 [=n] && GPIOLIB [=y]
+
+INPUT_E3X0_BUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n]
+
+LEDS_TRIGGER_GPIO: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

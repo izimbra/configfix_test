@@ -1,0 +1,3 @@
+SDM_GPUCC_845: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+

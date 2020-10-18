@@ -1,0 +1,13 @@
+HID_ELO => yes
+EXT3_FS_POSIX_ACL => yes
+USB_CHIPIDEA => yes
+USB_HID => yes
+USB_MOUSE => no
+USB_KBD => yes
+BLOCK => yes
+EXT3_FS => mod
+PARTITION_ADVANCED => yes
+EXT4_FS => mod
+USB_EHCI_HCD => yes
+USB_CNS3XXX_EHCI => no
+USB_ULPI_BUS => yes

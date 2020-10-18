@@ -1,0 +1,4 @@
+CRYPTO_CCM: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MAC802154 [=m] && NET [=y] && IEEE802154 [=m] || LIB80211_CRYPT_CCMP [=m] && NET [=y] && WIRELESS [=y] || MAC80211 [=n] && NET [=y] && WIRELESS [=y] && CFG80211 [=m] || RTL8192U [=n] && STAGING [=y] && PCI [=y] && WLAN [=y] && USB [=y] && m && MODULES [=y] || RTLLIB_CRYPTO_CCMP [=m] && STAGING [=y] && RTLLIB [=m] || CIFS [=y] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx || CRYPTO_DEV_NX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_NX [=n] && PPC_PSERIES && IBMVIO && !CPU_LITTLE_ENDIAN [=y]
+

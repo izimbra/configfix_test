@@ -1,0 +1,4 @@
+CROS_EC_SPI => yes
+SPI => yes
+CROS_EC => yes
+CHROME_PLATFORMS => yes

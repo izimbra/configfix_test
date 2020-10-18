@@ -1,0 +1,3 @@
+USB_RENESAS_USBHS_HCD: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_RENESAS_USBHS [=n]
+

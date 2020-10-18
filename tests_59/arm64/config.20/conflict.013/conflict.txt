@@ -1,0 +1,10 @@
+INPUT_MISC: n => yes
+    Direct dependencies:  !UML && INPUT [=n]
+
+VIRT_CPU_ACCOUNTING_GEN: n => no
+    Direct dependencies:  <choice> && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y] && GENERIC_CLOCKEVENTS [=y]
+    Reverse dependencies: NO_HZ_FULL [=n] && <choice> && !ARCH_USES_GETTIMEOFFSET [=n] && GENERIC_CLOCKEVENTS [=y] && SMP [=y] && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y]
+
+HID_KYE: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

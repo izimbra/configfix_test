@@ -1,0 +1,9 @@
+CLK_VEXPRESS_OSC: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_INTEGRATOR || ARCH_REALVIEW || ARCH_VERSATILE || ARCH_VEXPRESS [=y] || COMPILE_TEST [=y]) && VEXPRESS_CONFIG [=n]
+
+SDM_GCC_660: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+BLK_DEV: n => yes
+    Direct dependencies:  BLOCK [=n]
+

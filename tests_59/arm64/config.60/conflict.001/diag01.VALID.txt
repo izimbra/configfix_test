@@ -1,0 +1,2 @@
+BACKLIGHT_88PM860X => yes
+MFD_88PM860X => yes

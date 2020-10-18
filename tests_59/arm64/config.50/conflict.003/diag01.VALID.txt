@@ -1,0 +1,2 @@
+DRM_PANEL_SAMSUNG_S6E63M0 => yes
+SPI => yes

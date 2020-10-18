@@ -1,0 +1,9 @@
+RTC_DRV_DS1374: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+
+I2C_SIMTEC: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y]
+
+REGULATOR_VEXPRESS: n => yes
+    Direct dependencies:  REGULATOR [=n] && VEXPRESS_CONFIG [=n]
+

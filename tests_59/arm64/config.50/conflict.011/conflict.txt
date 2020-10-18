@@ -1,0 +1,10 @@
+JOYSTICK_TMDC: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+SCSI_DH_EMC: n => yes
+    Direct dependencies:  SCSI_DH [=n] && SCSI [=n]
+
+PINCTRL_MESON: n => yes
+    Direct dependencies:  PINCTRL [=y] && ARCH_MESON [=n] && OF [=y]
+    Reverse dependencies: ARCH_MESON [=n]
+

@@ -1,0 +1,3 @@
+MTD_CFI_I8: n => yes
+    Direct dependencies:  MTD [=m]
+

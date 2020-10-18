@@ -1,0 +1,10 @@
+CRYPTO_CRCT10DIF: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRC_T10DIF [=m]
+
+TINYDRM_ILI9486: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+FB_GOLDFISH: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=m] && (GOLDFISH [=n] || COMPILE_TEST [=y])
+

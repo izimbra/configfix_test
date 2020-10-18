@@ -1,0 +1,7 @@
+CRYPTO_CHACHA20POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=n] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+MODULE_COMPRESS_XZ: n => yes
+    Direct dependencies:  <choice>
+

@@ -1,0 +1,5 @@
+REGULATOR_PV88060 => yes
+I2C_HID => yes
+REGULATOR => yes
+I2C => yes
+HID => yes

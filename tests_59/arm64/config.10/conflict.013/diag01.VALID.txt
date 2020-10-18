@@ -1,0 +1,7 @@
+FB_OPENCORES => yes
+I2C_ARB_GPIO_CHALLENGE => yes
+HID_SMARTJOYPLUS => yes
+FB => yes
+I2C_MUX => yes
+I2C => yes
+HID => yes

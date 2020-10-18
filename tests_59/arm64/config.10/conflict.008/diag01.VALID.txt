@@ -1,0 +1,6 @@
+SYSC_R8A77980 => yes
+SECURITY_YAMA => yes
+SOC_RENESAS => yes
+COMPILE_TEST => yes
+SYSC_RCAR => yes
+SECURITY => yes

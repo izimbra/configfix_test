@@ -1,0 +1,9 @@
+BLK_DEV_BSGLIB => yes
+RTC_DRV_DA9063 => yes
+QCS_Q6SSTOP_404 => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+BLK_DEV_BSG => yes
+MFD_DA9063 => yes
+COMMON_CLK_QCOM => yes
+QCS_GCC_404 => yes

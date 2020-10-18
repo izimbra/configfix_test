@@ -1,0 +1,4 @@
+MTD_CFI: m => yes
+    Direct dependencies:  MTD [=m]
+    Reverse dependencies: MTD_HYPERBUS [=m] && MTD [=m] && HAS_IOMEM [=y]
+

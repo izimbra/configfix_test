@@ -1,0 +1,6 @@
+CRYPTO_STREEBOG => no
+SENSORS_AD7418 => yes
+CRYPTO_ECRDSA => no
+DEBUG_RT_MUTEXES => yes
+HWMON => yes
+I2C => yes

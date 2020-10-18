@@ -1,0 +1,6 @@
+ARM64_PA_BITS_48: y => no
+    Direct dependencies:  <choice>
+
+DS1682: n => yes
+    Direct dependencies:  I2C [=n]
+

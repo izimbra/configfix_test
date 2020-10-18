@@ -1,0 +1,10 @@
+PINCTRL_AS3722: m => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_AS3722 [=m] && GPIOLIB [=y]
+
+SRAM: y => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: VIDEO_CODA [=n] && MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=y] && V4L_MEM2MEM_DRIVERS [=n] && VIDEO_DEV [=m] && VIDEO_V4L2 [=m] && (ARCH_MXC [=y] || COMPILE_TEST [=y]) || TEGRA_VDE [=m] && STAGING [=y] && STAGING_MEDIA [=y] && MEDIA_SUPPORT [=m] && (ARCH_TEGRA [=y] || COMPILE_TEST [=y]) || CRYPTO_DEV_MARVELL_CESA [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (PLAT_ORION || ARCH_MVEBU [=y])
+
+IR_STREAMZAP: m => yes
+    Direct dependencies:  RC_DEVICES [=y] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=m]
+

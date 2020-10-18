@@ -1,0 +1,10 @@
+SWAP: n => yes
+    Direct dependencies:  MMU [=y] && BLOCK [=n] && !ARCH_NO_SWAP [=n]
+
+PINCTRL_PFC_R8A77961: n => yes
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=n] && PINCTRL [=y] && ARCH_R8A77961 [=n]
+
+VIRTIO_MMIO_CMDLINE_DEVICES: n => yes
+    Direct dependencies:  VIRTIO_MENU [=y] && VIRTIO_MMIO [=n]
+

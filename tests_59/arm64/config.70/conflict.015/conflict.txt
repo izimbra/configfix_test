@@ -1,0 +1,11 @@
+TYPEC_FUSB302: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && TYPEC [=m] && TYPEC_TCPM [=m] && I2C [=y] && (EXTCON [=y] || !EXTCON [=y])
+
+USB_EHCI_HCD_PLATFORM: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m]
+    Reverse dependencies: USB_HCD_BCMA [=n] && USB_SUPPORT [=y] && USB [=y] && BCMA [=n] && USB_EHCI_HCD [=m] || USB_HCD_SSB [=n] && USB_SUPPORT [=y] && USB [=y] && SSB [=y] && USB_EHCI_HCD [=m] || USB_EHCI_HCD_STI [=m] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && (ARCH_STI || COMPILE_TEST [=y]) && OF [=y] || USB_CNS3XXX_EHCI [=y] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && (ARCH_CNS3XXX || COMPILE_TEST [=y]) || USB_OCTEON_EHCI [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && CAVIUM_OCTEON_SOC
+
+FPGA_REGION: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_BRIDGE [=n]
+    Reverse dependencies: FPGA_DFL [=n] && FPGA [=n]
+

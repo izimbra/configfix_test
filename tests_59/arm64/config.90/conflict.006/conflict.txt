@@ -1,0 +1,7 @@
+RTC_DRV_RV3029_HWMON: n => no
+    Direct dependencies:  RTC_CLASS [=y] && RTC_DRV_RV3029C2 [=n] && HWMON [=y] && (RTC_DRV_RV3029C2 [=n]!=y || HWMON [=y]!=m)
+
+SDM_GCC_845: y => mod
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: SDM_CAMCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_GPUCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_VIDEOCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_DISPCC_845 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_LPASSCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+

@@ -1,0 +1,7 @@
+SYSC_R8A77980: n => yes
+    Direct dependencies:  SOC_RENESAS [=n]
+    Reverse dependencies: ARCH_R8A77980 [=n] && SOC_RENESAS [=n] && ARM64 [=y]
+
+SECURITY_YAMA: n => yes
+    Direct dependencies:  SECURITY [=n]
+

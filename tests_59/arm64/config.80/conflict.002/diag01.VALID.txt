@@ -1,0 +1,2 @@
+DRM_PANFROST => yes
+DRM => yes

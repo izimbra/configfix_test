@@ -1,0 +1,6 @@
+IR_TOY: n => yes
+    Direct dependencies:  RC_DEVICES [=y] && RC_CORE [=m] && USB_ARCH_HAS_HCD [=y]
+
+MTD_CFI_STAA: m => yes
+    Direct dependencies:  MTD [=m] && MTD_GEN_PROBE [=m]
+

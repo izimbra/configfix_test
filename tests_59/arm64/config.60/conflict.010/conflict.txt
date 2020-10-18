@@ -1,0 +1,7 @@
+OF_FPGA_REGION: n => yes
+    Direct dependencies:  FPGA [=y] && OF [=y] && FPGA_REGION [=n]
+
+MTD_NAND_ECC_SW_HAMMING_SMC: n => yes
+    Direct dependencies:  MTD [=n] && MTD_NAND_ECC_SW_HAMMING [=n]
+    Reverse dependencies: MTD_NAND_NDFC [=n] && MTD [=n] && MTD_RAW_NAND [=n] && 4xx
+

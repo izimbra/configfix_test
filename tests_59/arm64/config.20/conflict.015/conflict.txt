@@ -1,0 +1,9 @@
+USB_MAX3421_HCD: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && SPI [=n]
+
+RTC_DRV_PCF8583: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+LEDS_LM3532: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=y]
+

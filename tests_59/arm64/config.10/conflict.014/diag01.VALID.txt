@@ -1,0 +1,7 @@
+PINCTRL_AS3722 => yes
+MFD_BD9571MWV => yes
+LOGO => yes
+I2C => yes
+MFD_AS3722 => yes
+MODULES => yes
+FB => mod

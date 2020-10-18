@@ -1,0 +1,3 @@
+INPUT_PM8XXX_VIBRATOR: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && (MFD_PM8XXX [=n] || MFD_SPMI_PMIC [=n])
+

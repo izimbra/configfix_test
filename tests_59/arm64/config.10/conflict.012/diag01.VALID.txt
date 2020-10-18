@@ -1,0 +1,10 @@
+EDAC_QCOM => yes
+DEBUG_PAGEALLOC => yes
+REGULATOR_HI6421V530 => yes
+ARCH_QCOM => yes
+RAS => yes
+QCOM_LLCC => yes
+EDAC => yes
+DEBUG_KERNEL => yes
+MFD_HI6421_PMIC => yes
+REGULATOR => yes

@@ -1,0 +1,10 @@
+MTD_RAM: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_PLATRAM [=n] && MTD [=n] && HAS_IOMEM [=y]
+
+MTD_BLOCK2MTD: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && BLOCK [=n]
+
+IR_REDRAT3: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+

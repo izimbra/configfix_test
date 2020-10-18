@@ -1,0 +1,8 @@
+DRM_PANEL_SAMSUNG_S6E8AA0 => yes
+LEDS_LM3532 => yes
+TCP_CONG_CUBIC => no
+DEBUG_RT_MUTEXES => yes
+I2C => yes
+I2C_ALGOBIT => yes
+DRM => yes
+LEDS_CLASS => yes

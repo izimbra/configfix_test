@@ -1,0 +1,8 @@
+ARM_PSCI_CPUIDLE => yes
+SENSORS_VEXPRESS => yes
+CPU_IDLE => yes
+NO_HZ_IDLE => no
+VEXPRESS_CONFIG => yes
+HZ_PERIODIC => yes
+NO_HZ => no
+CPU_IDLE_GOV_LADDER => yes

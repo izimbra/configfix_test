@@ -1,0 +1,6 @@
+TEST_LOCKUP: n => no
+    Direct dependencies:  m && MODULES [=n]
+
+REGULATOR_SY8824X: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=y] && (OF [=y] || COMPILE_TEST [=n])
+

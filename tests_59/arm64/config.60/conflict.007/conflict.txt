@@ -1,0 +1,6 @@
+PHY_BRCM_USB: n => yes
+    Direct dependencies:  (ARCH_BRCMSTB [=n] || COMPILE_TEST [=n]) && OF [=y]
+
+CGROUP_PERF: n => yes
+    Direct dependencies:  CGROUPS [=n] && PERF_EVENTS [=y]
+

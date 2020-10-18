@@ -1,0 +1,10 @@
+PINCTRL_PFC_R8A77960: n => yes
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=n] && PINCTRL [=y] && ARCH_R8A77960 [=n]
+
+EFI_ARMSTUB_DTB_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_GENERIC_STUB [=n]
+
+NO_HZ_IDLE: y => no
+    Direct dependencies:  <choice> && !ARCH_USES_GETTIMEOFFSET [=n] && GENERIC_CLOCKEVENTS [=y]
+

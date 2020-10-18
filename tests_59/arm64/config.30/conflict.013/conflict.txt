@@ -1,0 +1,10 @@
+LEDS_IS31FL32XX: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=n] && OF [=y]
+
+MFD_MAX14577: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+CLK_RENESAS_DIV6: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=n]
+    Reverse dependencies: CLK_R8A73A4 [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n] || CLK_R8A7740 [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n] || CLK_SH73A0 [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n] || CLK_RENESAS_CPG_MSSR [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n]
+

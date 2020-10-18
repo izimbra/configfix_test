@@ -1,0 +1,6 @@
+HID_MULTITOUCH: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+EDAC_LEGACY_SYSFS: n => yes
+    Direct dependencies:  EDAC [=n]
+

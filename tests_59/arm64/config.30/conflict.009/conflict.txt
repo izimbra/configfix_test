@@ -1,0 +1,6 @@
+IPMI_DEVICE_INTERFACE: n => yes
+    Direct dependencies:  IPMI_HANDLER [=n]
+
+RC_CORE: n => yes
+    Direct dependencies:  INPUT [=n]
+

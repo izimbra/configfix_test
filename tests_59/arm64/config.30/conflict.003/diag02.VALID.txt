@@ -1,0 +1,7 @@
+IR_IMON_RAW => yes
+RC_CORE => yes
+RC_DEVICES => yes
+USB_SUPPORT => yes
+INPUT => yes
+USB => yes
+USB_AUTOSUSPEND_DELAY => 1

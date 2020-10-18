@@ -1,0 +1,6 @@
+MLXREG_IO => yes
+TCP_CONG_ADVANCED => yes
+TCP_CONG_CDG => yes
+DEFAULT_CDG => yes
+HWMON => yes
+MELLANOX_PLATFORM => yes

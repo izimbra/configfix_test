@@ -1,0 +1,10 @@
+HID_U2FZERO: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && LEDS_CLASS [=y] && HW_RANDOM [=y]
+
+NVDIMM_PFN: n => yes
+    Direct dependencies:  LIBNVDIMM [=n] && ZONE_DEVICE [=y]
+
+DEBUG_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+

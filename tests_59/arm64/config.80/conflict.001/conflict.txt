@@ -1,0 +1,3 @@
+EXT3_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT3_FS [=n]
+

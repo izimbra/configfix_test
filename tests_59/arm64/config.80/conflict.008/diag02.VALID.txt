@@ -1,0 +1,10 @@
+INTEGRITY => yes
+SLUB_DEBUG => no
+MULTIUSER => yes
+SECURITY => yes
+SLUB_DEBUG_ON => no
+SLUB_CPU_PARTIAL => no
+SLUB_MEMCG_SYSFS_ON => no
+SLUB => no
+SLUB_STATS => no
+SLAB => yes

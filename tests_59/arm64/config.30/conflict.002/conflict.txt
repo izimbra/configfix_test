@@ -1,0 +1,3 @@
+LEDS_LM355x: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=n]
+

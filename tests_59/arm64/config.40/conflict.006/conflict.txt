@@ -1,0 +1,6 @@
+SENSORS_MAX20730: n => yes
+    Direct dependencies:  HWMON [=n] && PMBUS [=n]
+
+VIRTIO_PMEM: n => yes
+    Direct dependencies:  VIRTIO_MENU [=n] && VIRTIO [=n] && LIBNVDIMM [=n]
+

@@ -1,0 +1,2 @@
+RTC_DRV_MAX8997 => yes
+MFD_MAX8997 => yes

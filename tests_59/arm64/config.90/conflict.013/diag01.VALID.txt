@@ -1,0 +1,6 @@
+IPMI_DEVICE_INTERFACE => yes
+HSI_CHAR => yes
+CHARGER_MAX77693 => yes
+IPMI_HANDLER => yes
+HSI => yes
+MFD_MAX77693 => yes

@@ -1,0 +1,10 @@
+SDM_GCC_660: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+MTD_NAND_DISKONCHIP_BBTWRITE: n => yes
+    Direct dependencies:  MTD [=m] && MTD_RAW_NAND [=n] && MTD_NAND_DISKONCHIP [=n]
+
+POWER_SUPPLY: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARM64 [=y] || ACPI_AC [=n] && ACPI [=n] || ACPI_BATTERY [=n] && ACPI [=n] || ACPI_SBS [=n] && ACPI [=n] && X86 || AB8500_CORE [=n] && HAS_IOMEM [=y] && ABX500_CORE [=y] && MFD_DB8500_PRCMU [=n] || DRM_RADEON [=n] && HAS_IOMEM [=y] && DRM [=m] && PCI [=y] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=m] && PCI [=y] && MMU [=y] || DRM_NOUVEAU [=m] && HAS_IOMEM [=y] && DRM [=m] && PCI [=y] && MMU [=y] || HID_BATTERY_STRENGTH [=y] && INPUT [=y] && HID [=y] || HID_ASUS [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] && LEDS_CLASS [=y] && (ASUS_WMI [=n] || ASUS_WMI [=n]=n) || HID_LOGITECH_HIDPP [=m] && INPUT [=y] && HID [=y] && HID_LOGITECH [=m] || HID_SONY [=n] && INPUT [=y] && HID [=y] && USB_HID [=m] && NEW_LEDS [=y] && LEDS_CLASS [=y] || HID_STEAM [=y] && INPUT [=y] && HID [=y] || HID_WACOM [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] || HID_WIIMOTE [=m] && INPUT [=y] && HID [=y] && LEDS_CLASS [=y] || USB_CONN_GPIO [=y] && USB_SUPPORT [=y] && GPIOLIB [=y] || APPLE_MFI_FASTCHARGE [=y] && USB_SUPPORT [=y] && USB [=y] || TYPEC_TCPM [=m] && USB_SUPPORT [=y] && TYPEC [=y] && USB [=y] || DELL_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && DMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=y] || RFKILL [=y]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n]
+

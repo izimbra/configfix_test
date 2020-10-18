@@ -1,0 +1,6 @@
+SPI_FSL_SPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && OF [=y]
+
+USB_MV_U3D: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && HAS_DMA [=y]
+

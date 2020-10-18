@@ -1,0 +1,9 @@
+EDAC_QCOM: n => yes
+    Direct dependencies:  EDAC [=n] && ARCH_QCOM [=n] && QCOM_LLCC [=n]
+
+DEBUG_PAGEALLOC: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && (!HIBERNATION [=n] || ARCH_SUPPORTS_DEBUG_PAGEALLOC [=y] && !PPC && !SPARC)
+
+REGULATOR_HI6421V530: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_HI6421_PMIC [=n] && OF [=y]
+

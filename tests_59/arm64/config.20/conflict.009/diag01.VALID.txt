@@ -1,0 +1,5 @@
+I2C_MUX_PINCTRL => yes
+APQ_GCC_8084 => yes
+I2C_MUX => yes
+RESET_CONTROLLER => yes
+COMMON_CLK_QCOM => yes

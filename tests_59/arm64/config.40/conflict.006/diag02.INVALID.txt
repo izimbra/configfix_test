@@ -1,0 +1,12 @@
+SENSORS_MAX20730 => yes
+VIRTIO_PMEM => yes
+TCP_CONG_CUBIC => no
+DEBUG_RT_MUTEXES => yes
+HWMON => yes
+PMBUS => yes
+I2C => yes
+BLOCK => yes
+LIBNVDIMM => yes
+PARTITION_ADVANCED => yes
+BLK_DEV => yes
+VIRTIO_MENU => yes

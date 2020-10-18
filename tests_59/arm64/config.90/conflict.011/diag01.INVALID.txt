@@ -1,0 +1,7 @@
+PINCTRL_AS3722 => yes
+SRAM => no
+IR_STREAMZAP => yes
+MFD_AS3722 => yes
+TEGRA_VDE => yes
+CRYPTO_DEV_MARVELL_CESA => no
+RC_CORE => yes

@@ -1,0 +1,6 @@
+DRM_PANEL_SAMSUNG_S6E8AA0: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y]
+
+LEDS_LM3532: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=n] && I2C [=n]
+

@@ -1,0 +1,10 @@
+HID_MULTITOUCH => yes
+EDAC_LEGACY_SYSFS => yes
+HID => yes
+INPUT => yes
+MODULES => yes
+EDAC => mod
+ARM64_MODULE_PLTS => yes
+MODULE_SIG_KEY => nonempty
+MODULE_SIG => yes
+MODULE_SIG_SHA384 => yes
