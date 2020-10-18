@@ -29,6 +29,8 @@ export srctree=. #$CONFIGFIX_PATH
 export CONFIGFIX_TEST_CONFIG_DIR=$PWD
 export CONFIGFIX_TEST_PROBABILITY=50
 
+# Copy base config
+cp ../.config.base $CONFIGFIX_PATH
 # Copy configuration sample - must be in the source tree
 cp .config.50 $CONFIGFIX_PATH/.config
 # Point KCONFIG_CONFIG to configuration sample
