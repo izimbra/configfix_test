@@ -1,4 +1,4 @@
-Architecture,Configuration,KCONFIG_PROBABILITY,Symbol count,Tristates,No. symbols = YES | MOD,No. conflict candidates,Conflict,Conflict size,Resolution time,No. diagnoses,Comment,Diag. index,Diag. size,Resolved,Applied
+Architecture,Configuration,KCONFIG_PROBABILITY,Symbol count,Tristates,No. symbols = YES | MOD,No. conflict candidates,Conflict,Conflict size,Resolution time,No. diagnoses,Comment,Diag. index,Diag. size,Resolved,Applied,
 x86_64,.config,10,15845,NO,530,2424,/home/delta/kernel/test_new/x86_64/config.10/conflict.001/conflict.txt,1,80.740242,3,,1,16,YES,YES,
 x86_64,.config,10,15845,NO,530,2424,/home/delta/kernel/test_new/x86_64/config.10/conflict.001/conflict.txt,1,80.740242,3,,2,16,YES,NO,
 x86_64,.config,10,15845,NO,530,2424,/home/delta/kernel/test_new/x86_64/config.10/conflict.001/conflict.txt,1,80.740242,3,,3,16,YES,YES,
