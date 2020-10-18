@@ -1,0 +1,8 @@
+CRYPTO_TWOFISH_X86_64_3WAY: y => no
+    Direct dependencies:  CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+    Reverse dependencies: CRYPTO_TWOFISH_AVX_X86_64 [=m] && CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+
+IPV6_TUNNEL: y => mod
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y]
+    Reverse dependencies: IPV6_VTI [=y] && NET [=y] && INET [=y] && IPV6 [=y] || IPV6_GRE [=m] && NET [=y] && INET [=y] && IPV6 [=y] && NET_IPGRE_DEMUX [=m] || IPV6_FOU_TUNNEL [=n] && NET [=y] && INET [=y] && IPV6 [=y]
+

@@ -1,0 +1,3 @@
+NET_DSA_BCM_SF2: m => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && HAS_IOMEM [=y] && NET_DSA [=m]
+

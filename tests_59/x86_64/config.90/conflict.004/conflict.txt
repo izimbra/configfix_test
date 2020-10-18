@@ -1,0 +1,3 @@
+PPPOATM: m => yes
+    Direct dependencies:  NETDEVICES [=y] && ATM [=y] && PPP [=m]
+

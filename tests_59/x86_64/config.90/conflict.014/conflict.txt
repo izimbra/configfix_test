@@ -1,0 +1,10 @@
+REGULATOR_WM8400: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_WM8400 [=n]
+
+CRYPTO_POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y]
+
+IEEE802154_FAKELB: n => mod
+    Direct dependencies:  NETDEVICES [=y] && IEEE802154_DRIVERS [=n] && MAC802154 [=n]
+

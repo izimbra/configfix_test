@@ -1,0 +1,8 @@
+NF_REJECT_IPV4: y => no
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y]
+    Reverse dependencies: NFT_REJECT_IPV4 [=y] && NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=y] && NF_TABLES_IPV4 [=y] || IP_NF_TARGET_REJECT [=n] && NET [=y] && INET [=y] && NETFILTER [=y] && IP_NF_IPTABLES [=n] && IP_NF_FILTER [=n]
+
+MAGIC_SYSRQ: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: KGDB_SERIAL_CONSOLE [=y] && KGDB [=y] && TTY [=y] && HW_CONSOLE [=y]
+

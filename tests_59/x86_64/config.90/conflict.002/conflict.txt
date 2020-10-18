@@ -1,0 +1,3 @@
+DRM_I2C_CH7006: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_KMS_HELPER [=m] && I2C [=y]
+

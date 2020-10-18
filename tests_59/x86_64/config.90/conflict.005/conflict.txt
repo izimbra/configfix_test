@@ -1,0 +1,4 @@
+KALLSYMS_ALL: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && KALLSYMS [=y]
+    Reverse dependencies: LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+

@@ -1,0 +1,5 @@
+NET_DSA_BCM_SF2 => yes
+NET_DSA_TAG_BRCM_PREPEND => yes
+NET_DSA => yes
+NET_DSA_TAG_BRCM => yes
+B53 => yes

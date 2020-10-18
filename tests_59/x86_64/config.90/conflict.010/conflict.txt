@@ -1,0 +1,8 @@
+CRYPTO_CRC32C: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: NVME_TCP [=m] && INET [=y] && BLK_DEV_NVME [=m] || ISCSI_TCP [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && INET [=y] || ISCSI_TARGET [=y] && TARGET_CORE [=y] && INET [=y] || EXT4_FS [=y] && BLOCK [=y] || JBD2 [=y] && BLOCK [=y] || BTRFS_FS [=m] && BLOCK [=y] || LIBCRC32C [=y]
+
+NET_DSA_TAG_MTK: m => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=m]
+    Reverse dependencies: NET_DSA_MT7530 [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m]
+

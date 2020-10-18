@@ -1,0 +1,6 @@
+ROMFS_BACKED_BY_MTD => no
+I2C_PARPORT => yes
+VIDEO_SAA7127 => yes
+PARPORT => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

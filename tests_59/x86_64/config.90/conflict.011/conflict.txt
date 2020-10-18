@@ -1,0 +1,10 @@
+QUOTA: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OCFS2_FS [=y] && BLOCK [=y] && INET [=y] && SYSFS [=y] && CONFIGFS_FS [=y]
+
+SENSORS_IR35221: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+RTC_DRV_DA9055: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && MFD_DA9055 [=n]
+

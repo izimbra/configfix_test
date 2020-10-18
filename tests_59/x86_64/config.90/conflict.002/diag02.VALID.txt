@@ -1,0 +1,7 @@
+DRM_I2C_CH7006 => yes
+DRM => yes
+AGP_INTEL => yes
+AGP => yes
+AGP_SIS => yes
+AGP_VIA => yes
+AGP_AMD64 => yes

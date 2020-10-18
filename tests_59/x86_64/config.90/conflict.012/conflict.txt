@@ -1,0 +1,10 @@
+ROMFS_BACKED_BY_MTD: n => no
+    Direct dependencies:  <choice> && (MTD [=y]=y || ROMFS_FS [=n]=m && MTD [=y])
+
+I2C_PARPORT: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && PARPORT [=n]
+
+VIDEO_SAA7127: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=m] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=y] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=y] && I2C [=y] && RC_CORE [=y]
+

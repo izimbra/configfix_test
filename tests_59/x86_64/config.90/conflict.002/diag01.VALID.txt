@@ -1,0 +1,3 @@
+DRM_I2C_CH7006 => yes
+DRM => yes
+AGP => yes

@@ -1,0 +1,11 @@
+KALLSYMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: KPROBES [=y] && MODULES [=y] && HAVE_KPROBES [=y] || LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || DEBUG_KMEMLEAK [=y] && DEBUG_KERNEL [=y] && HAVE_DEBUG_KMEMLEAK [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || FUNCTION_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y] || STACK_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y] || FTRACE_SYSCALLS [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_SYSCALL_TRACEPOINTS [=y]
+
+VIDEO_ADV7343: m => no
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_DAVINCI_VPIF_DISPLAY [=m] && MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=y] && V4L_PLATFORM_DRIVERS [=y] && VIDEO_V4L2 [=m] && (ARCH_DAVINCI || COMPILE_TEST [=y]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+INTEL_SOC_PMIC_BXTWC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_INTEL_PMC_BXT [=n]
+
