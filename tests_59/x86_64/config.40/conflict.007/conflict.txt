@@ -1,0 +1,6 @@
+INPUT_AD714X_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_AD714X [=m] && SPI [=n]
+
+MFD_WCD934X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SLIMBUS [=m]
+

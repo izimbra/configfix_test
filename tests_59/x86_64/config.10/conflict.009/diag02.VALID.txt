@@ -1,0 +1,9 @@
+BATMAN_ADV_SYSFS => yes
+ROCKCHIP_PHY => yes
+BATMAN_ADV => yes
+NET => yes
+LIBCRC32C => yes
+CRYPTO_CRC32C => yes
+NETDEVICES => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

@@ -1,0 +1,6 @@
+INFINIBAND_OPA_VNIC: n => mod
+    Direct dependencies:  X86_64 [=y] && INFINIBAND [=n]
+
+STRICT_KERNEL_RWX: y => no
+    Direct dependencies:  ARCH_HAS_STRICT_KERNEL_RWX [=y]
+

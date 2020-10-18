@@ -1,0 +1,9 @@
+IP_VS_PROTO_AH: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+REGULATOR_ISL6271A: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+LEDS_TI_LMU_COMMON: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && REGMAP [=n]
+

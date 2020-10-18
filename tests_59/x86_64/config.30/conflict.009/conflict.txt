@@ -1,0 +1,6 @@
+MTD_NAND_DISKONCHIP_PROBE_HIGH: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && MTD_NAND_DISKONCHIP_PROBE_ADVANCED [=n]
+
+FB_TFT_S6D1121: n => yes
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+

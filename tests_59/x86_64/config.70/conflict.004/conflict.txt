@@ -1,0 +1,3 @@
+PPP_DEFLATE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PPP [=n]
+

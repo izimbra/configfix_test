@@ -1,0 +1,9 @@
+DEBUG_OBJECTS_WORK: n => yes
+    Direct dependencies:  DEBUG_OBJECTS [=n]
+
+TRACE_ROUTER: n => yes
+    Direct dependencies:  TTY [=y] && TRACE_SINK [=n]
+
+DEFAULT_SECURITY_DAC: y => no
+    Direct dependencies:  <choice>
+

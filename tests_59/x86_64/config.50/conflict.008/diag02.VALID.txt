@@ -1,0 +1,7 @@
+NET_FOU => no
+SPI_XCOMM => yes
+TCP_CONG_ADVANCED => yes
+NET_FOU_IP_TUNNELS => no
+TCP_CONG_CDG => yes
+SPI => yes
+DEFAULT_CDG => yes

@@ -1,0 +1,10 @@
+DEFAULT_SECURITY_DAC: n => no
+    Direct dependencies:  <choice>
+
+GPIO_BD9571MWV: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_BD9571MWV [=n]
+
+LEDS_TRIGGERS: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n]
+    Reverse dependencies: BT_LEDS [=n] && NET [=y] && BT [=n] && LEDS_CLASS [=n] || CAN_LEDS [=n] && NET [=y] && CAN [=n] && CAN_DEV [=n] && LEDS_CLASS [=n] && BROKEN [=n] || MAC80211_LEDS [=n] && NET [=y] && WIRELESS [=y] && MAC80211 [=n] && LEDS_CLASS [=n] || ADB_PMU_LED_DISK [=n] && MACINTOSH_DRIVERS [=n] && ADB_PMU_LED [=n] && LEDS_CLASS [=n] || IWLEGACY [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTEL [=n] || IWLWIFI_LEDS [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTEL [=n] && IWLWIFI [=n] && (LEDS_CLASS [=n]=y || LEDS_CLASS [=n]=IWLWIFI [=n]) && (IWLMVM [=n] || IWLDVM [=n]) || SND_HDA_GENERIC [=n] && SOUND [=n] && !UML && SND [=n] && SND_HDA [=n] && SND_HDA_GENERIC_LEDS [=n] || HID_WACOM [=n] && INPUT [=y] && HID [=n] && USB_HID [=n] || LEDS_COBALT_RAQ [=n] && NEW_LEDS [=n] && LEDS_CLASS [=n]=y && MIPS_COBALT || LEDS_SUNFIRE [=n] && NEW_LEDS [=n] && LEDS_CLASS [=n] && SPARC64 || HUAWEI_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=y] || DELL_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && DMI [=y] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=n] || RFKILL [=n]=n) && SERIO_I8042 [=y] && DELL_SMBIOS [=n] || THINKPAD_ACPI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y] || SYSTEM76_ACPI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n]
+

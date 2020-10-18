@@ -1,0 +1,7 @@
+MARVELL_10G_PHY => yes
+RAPIDIO_ENUM_BASIC => no
+MODULES => yes
+CRYPTO_FIPS => no
+NETDEVICES => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

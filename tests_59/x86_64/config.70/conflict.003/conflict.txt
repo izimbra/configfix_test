@@ -1,0 +1,3 @@
+CROS_EC_SENSORHUB: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=m]
+

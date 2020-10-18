@@ -1,0 +1,3 @@
+RTC_DRV_MAX6916 => yes
+SPI => yes
+RTC_CLASS => yes

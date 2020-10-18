@@ -1,0 +1,3 @@
+INV_MPU6050_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

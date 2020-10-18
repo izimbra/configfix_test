@@ -1,0 +1,6 @@
+TOSHIBA_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=y]
+
+MTD_PHYSMAP: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && (MTD_CFI [=n] || MTD_JEDECPROBE [=n] || MTD_ROM [=n] || MTD_RAM [=n] || MTD_LPDDR [=n])
+

@@ -1,0 +1,9 @@
+ACPI_BGRT: n => yes
+    Direct dependencies:  ACPI [=y] && EFI [=n] && (X86 [=y] || ARM64)
+
+PALMAS_GPADC: n => mod
+    Direct dependencies:  IIO [=n] && MFD_PALMAS [=n]
+
+MTD_NAND_MXIC: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && (HAS_IOMEM [=y] || COMPILE_TEST [=n])
+

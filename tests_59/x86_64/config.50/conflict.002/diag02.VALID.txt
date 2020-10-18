@@ -1,0 +1,4 @@
+SMC_DIAG => yes
+TCP_CONG_ADVANCED => yes
+DEFAULT_CUBIC => yes
+SMC => yes

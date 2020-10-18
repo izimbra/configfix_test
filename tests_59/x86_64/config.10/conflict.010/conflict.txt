@@ -1,0 +1,6 @@
+GPIO_WHISKEY_COVE: n => yes
+    Direct dependencies:  GPIOLIB [=n] && (X86 [=y] || COMPILE_TEST [=n]) && INTEL_SOC_PMIC_BXTWC [=n]
+
+REGULATOR_GPIO: n => yes
+    Direct dependencies:  REGULATOR [=n] && (GPIOLIB [=n] || COMPILE_TEST [=n])
+

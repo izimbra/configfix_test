@@ -1,0 +1,6 @@
+NET_SCH_GRED: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+BACKLIGHT_AAT2870: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_AAT2870_CORE [=n]
+

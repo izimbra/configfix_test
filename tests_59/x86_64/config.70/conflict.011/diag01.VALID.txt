@@ -1,0 +1,8 @@
+NETFILTER_NETLINK_LOG => mod
+NF_CT_NETLINK => mod
+NET_SCH_CAKE => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+NF_CONNTRACK => yes
+NET_SCHED => yes

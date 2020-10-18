@@ -1,0 +1,6 @@
+CEPH_LIB_USE_DNS_RESOLVER: n => yes
+    Direct dependencies:  NET [=n] && CEPH_LIB [=n]
+
+DHT11: n => yes
+    Direct dependencies:  IIO [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+

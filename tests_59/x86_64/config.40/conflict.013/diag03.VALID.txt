@@ -1,0 +1,13 @@
+ACPI_BGRT => yes
+PALMAS_GPADC => mod
+MTD_NAND_MXIC => yes
+EFI => yes
+MFD_PALMAS => yes
+IIO => mod
+MTD => yes
+MTD_CFI_ADV_OPTIONS => yes
+MTD_RAW_NAND => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_LE_BYTE_SWAP => yes
+MTD_CFI_I4 => yes
+MTD_MAP_BANK_WIDTH_16 => yes

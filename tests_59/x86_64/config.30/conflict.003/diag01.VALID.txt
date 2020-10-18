@@ -1,0 +1,2 @@
+SENSORS_VIA_CPUTEMP => yes
+HWMON => yes

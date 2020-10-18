@@ -1,0 +1,5 @@
+NET_FOU => no
+SPI_XCOMM => yes
+TCP_CONG_CUBIC => no
+NET_FOU_IP_TUNNELS => no
+SPI => yes

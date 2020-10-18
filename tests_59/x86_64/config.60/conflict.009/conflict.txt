@@ -1,0 +1,6 @@
+INFINIBAND_USER_MAD: n => mod
+    Direct dependencies:  INFINIBAND [=n]
+
+NET_DSA_VITESSE_VSC73XX_PLATFORM: n => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=n] && NET_DSA [=n] && HAS_IOMEM [=y]
+

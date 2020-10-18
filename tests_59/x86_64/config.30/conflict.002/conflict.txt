@@ -1,0 +1,3 @@
+RTC_DRV_MAX6916: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+

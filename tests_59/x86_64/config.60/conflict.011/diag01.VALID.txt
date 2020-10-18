@@ -1,0 +1,10 @@
+MEMBARRIER => no
+NETFILTER_XT_TARGET_LOG => yes
+IP_SET => mod
+RSEQ => no
+DEBUG_RSEQ => no
+NF_LOG_IPV4 => yes
+NETFILTER_XTABLES => yes
+INET => yes
+NETFILTER => yes
+IP_SET_MAX => 2

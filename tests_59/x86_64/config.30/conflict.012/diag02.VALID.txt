@@ -1,0 +1,10 @@
+INET_UDP_DIAG => mod
+ICPLUS_PHY => yes
+TI_DAC082S085 => yes
+NET => yes
+INET => yes
+INET_DIAG => mod
+NETDEVICES => yes
+PHYLIB => yes
+MDIO_DEVICE => yes
+SPI => yes

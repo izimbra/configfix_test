@@ -1,0 +1,10 @@
+SENSORS_CORSAIR_CPRO: n => yes
+    Direct dependencies:  HWMON [=m] && HID [=y]
+
+AD5360: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+SPARSE_IRQ: y => no
+    Direct dependencies:  y
+    Reverse dependencies: X86 [=y] || ATMEL_AIC_IRQ [=n] || ATMEL_AIC5_IRQ [=n] || FARADAY_FTINTC010 [=n] || IXP4XX_IRQ [=n] || CLPS711X_IRQCHIP [=n] && ARCH_CLPS711X
+

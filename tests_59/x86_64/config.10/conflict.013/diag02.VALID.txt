@@ -1,0 +1,13 @@
+BCM54140_PHY => yes
+MTD_DATAFLASH => yes
+PHYLIB => yes
+NETDEVICES => yes
+NET => yes
+MDIO_DEVICE => yes
+MTD => yes
+SPI => yes
+MTD_CFI_ADV_OPTIONS => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_NOSWAP => yes
+MTD_MAP_BANK_WIDTH_1 => yes
+MTD_CFI_I1 => yes

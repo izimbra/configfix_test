@@ -1,0 +1,2 @@
+CRYPTO_USER_API_AEAD => mod
+NET => yes

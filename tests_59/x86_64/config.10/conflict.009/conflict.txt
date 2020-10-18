@@ -1,0 +1,6 @@
+BATMAN_ADV_SYSFS: n => yes
+    Direct dependencies:  NET [=n] && BATMAN_ADV [=n]
+
+ROCKCHIP_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+

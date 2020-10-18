@@ -1,0 +1,7 @@
+CAIF_DEBUG => yes
+SERIO_PARKBD => mod
+MAX1118 => mod
+CAIF => yes
+NET => yes
+PARPORT => yes
+SPI => yes

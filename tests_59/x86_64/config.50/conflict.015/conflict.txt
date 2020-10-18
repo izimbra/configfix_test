@@ -1,0 +1,10 @@
+ELF_CORE: y => no
+    Direct dependencies:  COREDUMP [=y]
+
+REGULATOR_WM831X: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_WM831X [=n]
+
+BINFMT_ELF: y => no
+    Direct dependencies:  MMU [=y]
+    Reverse dependencies: IA32_EMULATION [=y] && X86_64 [=y]
+

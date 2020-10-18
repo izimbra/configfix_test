@@ -1,0 +1,9 @@
+PPPOE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PPP [=n]
+
+NATIONAL_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+ACPI_HOTPLUG_MEMORY: n => yes
+    Direct dependencies:  ACPI [=n] && MEMORY_HOTPLUG [=y]
+

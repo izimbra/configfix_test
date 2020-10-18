@@ -1,0 +1,5 @@
+SMC_DIAG => yes
+TCP_CONG_ADVANCED => yes
+TCP_CONG_HTCP => yes
+SMC => yes
+DEFAULT_HTCP => yes

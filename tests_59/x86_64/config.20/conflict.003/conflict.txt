@@ -1,0 +1,3 @@
+CHARGER_ADP5061: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=y]
+

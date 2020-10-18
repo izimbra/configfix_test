@@ -1,0 +1,10 @@
+NET_VENDOR_3COM => yes
+MEDIA_TUNER_IT913X => yes
+SENSORS_ADT7470 => yes
+ETHERNET => yes
+NETDEVICES => yes
+PCI => yes
+NET => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes
+HWMON => yes

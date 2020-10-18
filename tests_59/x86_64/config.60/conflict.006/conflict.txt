@@ -1,0 +1,6 @@
+SENSORS_ADCXX: n => yes
+    Direct dependencies:  HWMON [=y] && SPI_MASTER [=n]
+
+BT_HCIDTL1: n => yes
+    Direct dependencies:  NET [=y] && BT [=y] && PCMCIA [=m]
+

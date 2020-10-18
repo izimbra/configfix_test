@@ -1,0 +1,6 @@
+HP206C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+MTD_ONENAND_GENERIC: n => yes
+    Direct dependencies:  MTD [=n] && MTD_ONENAND [=n]
+

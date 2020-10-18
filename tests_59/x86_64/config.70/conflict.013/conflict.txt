@@ -1,0 +1,10 @@
+NET_VENDOR_3COM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (ISA [=n] || EISA [=n] || PCI [=n] || PCMCIA [=n])
+
+MEDIA_TUNER_IT913X: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9035 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+SENSORS_ADT7470: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

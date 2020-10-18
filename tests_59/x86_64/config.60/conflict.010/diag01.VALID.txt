@@ -1,0 +1,4 @@
+IP_DCCP => yes
+SENSORS_NTC_THERMISTOR => yes
+INET => yes
+IIO => yes

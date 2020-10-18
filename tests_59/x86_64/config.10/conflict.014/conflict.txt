@@ -1,0 +1,9 @@
+HP_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI_WMI [=n] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n)
+
+AD5593R: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+ACPI_REDUCED_HARDWARE_ONLY: n => yes
+    Direct dependencies:  ACPI [=y]
+

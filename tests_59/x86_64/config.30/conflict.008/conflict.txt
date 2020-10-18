@@ -1,0 +1,7 @@
+MIGRATION: y => no
+    Direct dependencies:  (NUMA [=y] || ARCH_ENABLE_MEMORY_HOTREMOVE [=n] || COMPACTION [=y] || CMA [=y]) && MMU [=y]
+    Reverse dependencies: COMPACTION [=y] && MMU [=y] || CMA [=y] && MMU [=y]
+
+MTD_HYPERBUS: n => mod
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+

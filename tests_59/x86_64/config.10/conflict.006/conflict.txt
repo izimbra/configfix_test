@@ -1,0 +1,7 @@
+AF_RXRPC: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: AFS_FS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=n]
+
+THERMAL_DEFAULT_GOV_STEP_WISE: n => yes
+    Direct dependencies:  <choice>
+

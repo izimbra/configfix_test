@@ -1,0 +1,4 @@
+ETHERNET: y => no
+    Direct dependencies:  NETDEVICES [=y] && NET [=y]
+    Reverse dependencies: SCSI_CXGB3_ISCSI [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && PCI [=y] && INET [=y] && (IPV6 [=y] || IPV6 [=y]=n) || SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=y] && SCSI [=y] && NET [=y] && PCI [=y] && (IPV6 [=y] || IPV6 [=y]=n) || SCSI_BNX2X_FCOE [=n] && SCSI_LOWLEVEL [=y] && SCSI [=y] && PCI [=y] && (IPV6 [=y] || IPV6 [=y]=n) && LIBFC [=y] && LIBFCOE [=y]
+

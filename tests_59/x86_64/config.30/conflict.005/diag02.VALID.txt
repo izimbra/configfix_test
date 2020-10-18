@@ -1,0 +1,2 @@
+EFI_BOOTLOADER_CONTROL => mod
+EFI_VARS => mod

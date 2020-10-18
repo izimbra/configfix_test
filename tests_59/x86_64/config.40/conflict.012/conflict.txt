@@ -1,0 +1,10 @@
+INPUT_PALMAS_PWRBUTTON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_PALMAS [=n]
+
+MXM_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n]
+    Reverse dependencies: DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] && ACPI [=y] && X86 [=y]
+
+B53_SPI_DRIVER: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && B53 [=n] && SPI [=n]
+

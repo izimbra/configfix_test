@@ -1,0 +1,7 @@
+TCP_CONG_CUBIC: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && TCP_CONG_ADVANCED [=n] || NET [=y] && INET [=n] && !TCP_CONG_ADVANCED [=n]
+
+RMI4_F12: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && RMI4_CORE [=n]
+    Reverse dependencies: HID_RMI [=n] && INPUT [=n] && HID [=n]
+

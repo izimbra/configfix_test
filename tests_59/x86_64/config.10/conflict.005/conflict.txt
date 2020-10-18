@@ -1,0 +1,3 @@
+AIO: y => no
+    Direct dependencies:  y
+

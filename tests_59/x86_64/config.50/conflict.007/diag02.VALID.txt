@@ -1,0 +1,7 @@
+SMC_DIAG => yes
+MFD_MADERA_SPI => yes
+TCP_CONG_ADVANCED => yes
+SMC => yes
+SPI => yes
+DEFAULT_RENO => yes
+MFD_MADERA => yes

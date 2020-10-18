@@ -1,0 +1,10 @@
+NET_DSA_TAG_SJA1105: n => mod
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_SJA1105 [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=n] && NET_DSA [=n] && SPI [=n]
+
+REGULATOR_S2MPA01: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_SEC_CORE [=m]
+
+SCTP_DEFAULT_COOKIE_HMAC_MD5: n => yes
+    Direct dependencies:  <choice>
+

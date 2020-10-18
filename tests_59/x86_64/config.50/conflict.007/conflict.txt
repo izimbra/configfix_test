@@ -1,0 +1,6 @@
+SMC_DIAG: n => yes
+    Direct dependencies:  NET [=y] && SMC [=n]
+
+MFD_MADERA_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n] && SPI_MASTER [=n]
+

@@ -1,0 +1,10 @@
+CHARGER_SBS => yes
+MOUSE_VSXXXAA => yes
+UIO_PCI_GENERIC => yes
+POWER_SUPPLY => yes
+INPUT_MOUSE => yes
+SERIO => yes
+PCI => yes
+UIO => yes
+PCI_GOMMCONFIG => yes
+PCI_MMCONFIG => yes

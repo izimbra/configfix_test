@@ -1,0 +1,10 @@
+FXOS8700_SPI => yes
+AFS_FS => yes
+SPI => yes
+IIO => yes
+NETWORK_FILESYSTEMS => yes
+NET => yes
+INET => yes
+DNS_RESOLVER => yes
+AF_RXRPC => yes
+KEYS => yes

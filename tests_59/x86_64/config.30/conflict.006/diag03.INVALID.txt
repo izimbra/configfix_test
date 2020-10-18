@@ -1,0 +1,10 @@
+ROCKCHIP_PHY => yes
+VIDEO_CS5345 => yes
+NETDEVICES => yes
+NET => yes
+PHYLIB => yes
+MDIO_DEVICE => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUPPORT_FILTER => yes
+VIDEO_DEV => yes
+MEDIA_RADIO_SUPPORT => yes

@@ -1,0 +1,3 @@
+TI_AM335X_ADC: n => yes
+    Direct dependencies:  IIO [=n] && MFD_TI_AM335X_TSCADC [=y] && HAS_DMA [=y]
+

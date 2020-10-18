@@ -1,0 +1,9 @@
+TCS3414 => yes
+SPI_AMD => yes
+CROS_EC_LIGHTBAR => mod
+IIO => yes
+IIO_KFIFO_BUF => yes
+SPI => yes
+MFD_CROS_EC_DEV => mod
+CROS_EC => yes
+CHROME_PLATFORMS => yes

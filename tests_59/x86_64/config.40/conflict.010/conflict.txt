@@ -1,0 +1,6 @@
+VIDEO_DEV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+FB_TFT_ILI9486: n => yes
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+

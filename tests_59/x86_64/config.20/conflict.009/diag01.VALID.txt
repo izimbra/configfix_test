@@ -1,0 +1,5 @@
+NET_CLS_FLOW => yes
+CHARGER_MAX77693 => yes
+NET => yes
+NET_SCHED => yes
+POWER_SUPPLY => yes

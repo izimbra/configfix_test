@@ -1,9 +1,4 @@
-NET_EMATCH_IPSET: m => yes
-    Direct dependencies:  NET [=y] && NET_SCHED [=y] && NET_EMATCH [=y] && IP_SET [=m]
-
-MMC_UNIPHIER: m => yes
-    Direct dependencies:  MMC [=m] && (ARCH_UNIPHIER || COMPILE_TEST [=y]) && OF [=y]
-
-MPU3050_I2C: n => mod
-    Direct dependencies:  IIO [=n] && INPUT_MPU3050!=y && INPUT_MPU3050!=m && I2C [=y]
+PNP: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && (ISA [=y] || ACPI [=y])
+    Reverse dependencies: ACPI [=y] && ARCH_SUPPORTS_ACPI [=y]
 

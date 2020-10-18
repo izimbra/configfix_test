@@ -1,0 +1,10 @@
+DEBUG_WW_MUTEX_SLOWPATH: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+AD5755: n => mod
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=n]
+
+ROMFS_FS: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=y] && (BLOCK [=n] || MTD [=n])
+

@@ -1,0 +1,9 @@
+IO_URING: y => no
+    Direct dependencies:  y
+
+DEBUG_FORCE_FUNCTION_ALIGN_32B: n => yes
+    Direct dependencies:  y
+
+FUTEX: y => no
+    Direct dependencies:  y
+

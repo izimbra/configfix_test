@@ -1,0 +1,3 @@
+BIG_KEYS: n => yes
+    Direct dependencies:  KEYS [=y] && TMPFS [=y] && CRYPTO_LIB_CHACHA20POLY1305 [=n]=y
+

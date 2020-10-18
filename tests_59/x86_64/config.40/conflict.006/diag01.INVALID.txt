@@ -1,0 +1,5 @@
+INFINIBAND_OPA_VNIC => mod
+STRICT_KERNEL_RWX => no
+NET => yes
+INET => yes
+INFINIBAND => mod

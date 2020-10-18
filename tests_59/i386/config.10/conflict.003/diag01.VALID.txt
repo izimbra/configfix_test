@@ -1,0 +1,2 @@
+MFD_MENF21BMC => yes
+I2C => yes

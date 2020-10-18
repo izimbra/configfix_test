@@ -1,0 +1,6 @@
+VL53L0X_I2C => yes
+TRACEPOINT_BENCHMARK => yes
+I2C => yes
+IIO => yes
+BRANCH_PROFILE_NONE => yes
+FTRACE => yes

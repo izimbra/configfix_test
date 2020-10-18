@@ -1,0 +1,5 @@
+NET_SCH_GRED => mod
+BACKLIGHT_AAT2870 => yes
+NET => yes
+NET_SCHED => yes
+MFD_AAT2870_CORE => yes

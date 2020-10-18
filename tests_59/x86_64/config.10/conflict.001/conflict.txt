@@ -1,0 +1,3 @@
+FB_TFT_RA8875: n => yes
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+

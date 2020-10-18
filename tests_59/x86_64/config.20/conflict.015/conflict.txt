@@ -1,0 +1,9 @@
+NET_DSA_MICROCHIP_KSZ9477_I2C: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA_MICROCHIP_KSZ9477 [=n] && I2C [=y]
+
+PNP_DEBUG_MESSAGES: n => yes
+    Direct dependencies:  PNP [=n]
+
+KEYS_REQUEST_CACHE: n => yes
+    Direct dependencies:  KEYS [=n]
+

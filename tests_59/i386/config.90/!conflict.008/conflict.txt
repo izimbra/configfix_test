@@ -1,6 +1,3 @@
-SCSI_LASI700: n => mod
-    Direct dependencies:  SCSI_LOWLEVEL [=y] && GSC && SCSI [=y]
-
-PMAC_BACKLIGHT_LEGACY: n => yes
-    Direct dependencies:  MACINTOSH_DRIVERS [=y] && PMAC_BACKLIGHT [=n] && (BROKEN [=n] || !PPC64)
+SND_SOC_INTEL_SOF_PCM512x_MACH: m => yes
+    Direct dependencies:  SOUND [=y] && !UML && SND [=m] && SND_SOC [=m] && SND_SOC_INTEL_MACH [=y] && (SND_SOC_SOF_HDA_LINK [=y] || SND_SOC_SOF_BAYTRAIL [=n]) && I2C [=y] && ACPI [=y] && (SND_SOC_SOF_HDA_AUDIO_CODEC [=y] && (MFD_INTEL_LPSS [=y] || COMPILE_TEST [=y]) || SND_SOC_SOF_BAYTRAIL [=n] && (X86_INTEL_LPSS [=y] || COMPILE_TEST [=y])) && SND_HDA_CODEC_HDMI [=m]
 

@@ -1,0 +1,5 @@
+BCM7XXX_PHY => yes
+NETDEVICES => yes
+NET => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

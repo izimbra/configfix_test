@@ -1,0 +1,7 @@
+TCP_CONG_CUBIC => yes
+RMI4_F12 => yes
+TCP_CONG_ADVANCED => yes
+INET => yes
+DEFAULT_CUBIC => yes
+RMI4_CORE => mod
+INPUT => yes

@@ -1,0 +1,7 @@
+NET_DSA_TAG_KSZ: n => yes
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_MICROCHIP_KSZ_COMMON [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n]
+
+MTD_PHYSMAP_GPIO_ADDR: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) && MTD_COMPLEX_MAPPINGS [=n]
+

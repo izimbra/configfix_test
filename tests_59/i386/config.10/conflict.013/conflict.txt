@@ -1,0 +1,9 @@
+CHARGER_SBS: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=y]
+
+MOUSE_VSXXXAA: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n]
+
+UIO_PCI_GENERIC: n => yes
+    Direct dependencies:  UIO [=n] && PCI [=n]
+

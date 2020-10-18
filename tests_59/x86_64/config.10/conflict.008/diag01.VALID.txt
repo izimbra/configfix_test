@@ -1,0 +1,6 @@
+LG_LAPTOP => yes
+DS4424 => yes
+ACPI_WMI => yes
+INPUT_SPARSEKMAP => yes
+I2C => yes
+IIO => yes

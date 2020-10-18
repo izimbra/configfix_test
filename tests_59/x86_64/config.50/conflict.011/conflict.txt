@@ -1,0 +1,9 @@
+REGULATOR_DA9062: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_DA9062 [=n]
+
+RTC_DRV_S35390A: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+RTC_DRV_DS1302: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n] && SPI [=n]
+

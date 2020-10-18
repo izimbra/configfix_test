@@ -1,0 +1,10 @@
+MICREL_KS8995MA: n => yes
+    Direct dependencies:  NETDEVICES [=y] && SPI [=n]
+
+HID: y => no
+    Direct dependencies:  INPUT [=y]
+    Reverse dependencies: BT_HIDP [=n] && NET [=y] && BT_BREDR [=n] && INPUT [=y] || USB_HID [=n] && USB [=y] && INPUT [=y] || I2C_HID [=y] && I2C [=y] && INPUT [=y] || INTEL_ISH_HID [=n] && INPUT [=y] && (X86_64 [=y] || COMPILE_TEST [=n]) && PCI [=y]
+
+BMI160_SPI: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+

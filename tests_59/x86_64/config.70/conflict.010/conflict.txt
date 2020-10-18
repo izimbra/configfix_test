@@ -1,0 +1,7 @@
+REGULATOR: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OLPC_EC [=n] || PINCTRL_PFC_SH73A0 [=y] && PINCTRL [=y] || TPS6105X [=m] && HAS_IOMEM [=y] && I2C [=y] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=y] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || SND_SOC_AMD_CZ_DA7219MX98357_MACH [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_AMD_ACP [=n] && I2C [=y] && GPIOLIB [=y] || MMC_MTK [=y] && MMC [=y] && HAS_DMA [=y]
+
+ADXL372_SPI: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+

@@ -1,0 +1,9 @@
+ADXRS450: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+TINYDRM_REPAPER: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+NET_SCH_HTB: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+

@@ -1,0 +1,4 @@
+HID: y => no
+    Direct dependencies:  INPUT [=y]
+    Reverse dependencies: BT_HIDP [=n] && NET [=y] && BT_BREDR [=n] && INPUT [=y] || USB_HID [=y] && USB [=y] && INPUT [=y] || I2C_HID [=n] && I2C [=y] && INPUT [=y] || INTEL_ISH_HID [=n] && INPUT [=y] && (X86_64 [=y] || COMPILE_TEST [=y]) && PCI [=y]
+

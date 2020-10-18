@@ -1,0 +1,10 @@
+PINCTRL_CEDARFORK: n => yes
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+ACPI_TOSHIBA: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=n] && ACPI_WMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && INPUT [=y] && (SERIO_I8042 [=y] || SERIO_I8042 [=y]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=y] || RFKILL [=y]=n) && IIO [=y]
+
+CPU_FREQ_GOV_PERFORMANCE: y => no
+    Direct dependencies:  CPU_FREQ [=y]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_PERFORMANCE [=y] && <choice> || CPU_FREQ_DEFAULT_GOV_ONDEMAND [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_CONSERVATIVE [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_SCHEDUTIL [=n] && <choice> && SMP [=y] || X86_INTEL_PSTATE [=y] && CPU_FREQ [=y] && X86 [=y]
+

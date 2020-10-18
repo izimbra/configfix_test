@@ -1,0 +1,3 @@
+TMP007 => yes
+FONT_8x16 => yes
+I2C => yes

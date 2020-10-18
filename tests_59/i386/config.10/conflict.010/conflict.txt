@@ -1,0 +1,6 @@
+VIDEO_BT866: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+USB_M66592: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && HAS_IOMEM [=y]
+

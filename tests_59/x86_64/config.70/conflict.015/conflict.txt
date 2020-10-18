@@ -1,0 +1,11 @@
+BLK_DEV_INITRD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BOOT_CONFIG [=y]
+
+MEDIA_TUNER_FC0011: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9035 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+AD5761: n => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+

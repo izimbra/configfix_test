@@ -1,0 +1,4 @@
+CPU_SUP_AMD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CPU_SUP_HYGON [=y]
+

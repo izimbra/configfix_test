@@ -1,0 +1,4 @@
+SENSORS_ADCXX => yes
+BT_HCIDTL1 => yes
+SPI => yes
+PCMCIA => yes

@@ -1,0 +1,8 @@
+VIDEO_ADV7842: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_COBALT [=n] && MEDIA_SUPPORT [=n] && PCI [=y] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_V4L2 [=n] && I2C [=y] && PCI_MSI [=y] && MTD_COMPLEX_MAPPINGS [=y] && (GPIOLIB [=y] && DRM_I2C_ADV7511 [=n]=n || COMPILE_TEST [=n]) && SND [=n] && MTD [=y]
+
+CRYPTO_CHACHA20: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y] || CRYPTO_ADIANTUM [=y] && CRYPTO [=y]
+

@@ -1,0 +1,6 @@
+NF_CONNTRACK_IRC: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+
+SENSORS_LIS3_I2C: n => mod
+    Direct dependencies:  I2C [=y] && INPUT [=n]
+

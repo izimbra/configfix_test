@@ -1,0 +1,2 @@
+MLX90632 => yes
+IIO => yes

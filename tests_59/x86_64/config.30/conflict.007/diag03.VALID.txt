@@ -1,0 +1,11 @@
+INET_ESP_OFFLOAD => mod
+TICK_CPU_ACCOUNTING => no
+INET_ESP => mod
+NET => yes
+INET => yes
+CRYPTO_DRBG_MENU => yes
+CRYPTO_CBC => mod
+CRYPTO_GCM => mod
+CRYPTO_HMAC => yes
+CRYPTO_ECHAINIV => yes
+CRYPTO_SEQIV => mod

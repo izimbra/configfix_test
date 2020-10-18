@@ -1,0 +1,2 @@
+ADXRS450 => mod
+SPI => yes

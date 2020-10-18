@@ -1,0 +1,6 @@
+NF_TABLES_IPV6 => yes
+TCP_CONG_ADVANCED => yes
+NF_TABLES => yes
+DEFAULT_CDG => yes
+TCP_CONG_CDG => yes
+NETFILTER => yes

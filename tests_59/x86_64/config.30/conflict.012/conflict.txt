@@ -1,0 +1,9 @@
+INET_UDP_DIAG: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && INET_DIAG [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+ICPLUS_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+TI_DAC082S085: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+

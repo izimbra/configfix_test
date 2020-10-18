@@ -1,0 +1,7 @@
+CRYPTO_ZSTD: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_ZSTD [=n] && <choice> || UBIFS_FS [=y] && MISC_FILESYSTEMS [=y] && MTD_UBI [=y] && UBIFS_FS_ZSTD [=y] || PSTORE_ZSTD_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=y]
+
+NFT_LIMIT: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=n]
+

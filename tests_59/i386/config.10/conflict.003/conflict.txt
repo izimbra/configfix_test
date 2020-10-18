@@ -1,0 +1,3 @@
+MFD_MENF21BMC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+

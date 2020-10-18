@@ -1,0 +1,2 @@
+CHARGER_ADP5061 => yes
+POWER_SUPPLY => yes

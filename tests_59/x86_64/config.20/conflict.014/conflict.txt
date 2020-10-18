@@ -1,0 +1,10 @@
+MTD_MAP_BANK_WIDTH_1: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_CFI_GEOMETRY [=n] && MTD [=n] && MTD_CFI_ADV_OPTIONS [=n] && !MTD_MAP_BANK_WIDTH_2 [=n] && !MTD_MAP_BANK_WIDTH_4 [=n] && !MTD_MAP_BANK_WIDTH_8 [=n] && !MTD_MAP_BANK_WIDTH_16 [=n] && !MTD_MAP_BANK_WIDTH_32 [=n]
+
+INPUT_DA9063_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+
+MMA7455_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

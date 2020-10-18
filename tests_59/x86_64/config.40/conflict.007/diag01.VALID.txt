@@ -1,0 +1,5 @@
+INPUT_AD714X_SPI => yes
+MFD_WCD934X => yes
+SPI => yes
+INPUT_AD714X => yes
+SLIMBUS => yes

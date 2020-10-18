@@ -1,0 +1,4 @@
+PERF_EVENTS: y => no
+    Direct dependencies:  HAVE_PERF_EVENTS [=y]
+    Reverse dependencies: X86 [=y] || KVM [=n] && VIRTUALIZATION [=y] && HAVE_KVM [=y] && HIGH_RES_TIMERS [=y] && NET [=y] && MULTIUSER [=y] && X86_LOCAL_APIC [=y]
+

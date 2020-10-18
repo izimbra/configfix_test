@@ -1,0 +1,4 @@
+BACKLIGHT_DA903X => yes
+BACKLIGHT_CLASS_DEVICE => yes
+I2C => yes
+PMIC_DA903X => yes

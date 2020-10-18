@@ -1,0 +1,6 @@
+TASKS_TRACE_RCU_READ_MB: n => yes
+    Direct dependencies:  RCU_EXPERT [=n]
+
+IPV6_SIT_6RD: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && IPV6_SIT [=n]
+

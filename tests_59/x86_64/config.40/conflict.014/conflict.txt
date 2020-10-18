@@ -1,0 +1,9 @@
+MTD_PCMCIA: n => mod
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && PCMCIA [=n] && MTD_COMPLEX_MAPPINGS [=n]
+
+I2C_MUX_MLXCPLD: n => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=m]
+
+BT_HS: n => yes
+    Direct dependencies:  NET [=n] && BT_BREDR [=n]
+

@@ -1,0 +1,7 @@
+ACPI_BUTTON: n => yes
+    Direct dependencies:  ACPI [=n] && INPUT [=y]
+    Reverse dependencies: DRM_I915 [=y] && HAS_IOMEM [=y] && DRM [=y] && X86 [=y] && PCI [=y] && ACPI [=n]
+
+VSOCKETS_LOOPBACK: n => yes
+    Direct dependencies:  NET [=y] && VSOCKETS [=n]
+

@@ -1,0 +1,3 @@
+IO_URING: y => no
+    Direct dependencies:  y
+

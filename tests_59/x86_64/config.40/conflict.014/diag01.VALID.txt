@@ -1,0 +1,16 @@
+MTD_PCMCIA => mod
+I2C_MUX_MLXCPLD => yes
+BT_HS => yes
+MTD => yes
+PCMCIA => yes
+MTD_CFI_ADV_OPTIONS => yes
+PCCARD => yes
+MTD_CFI_GEOMETRY => yes
+MTD_COMPLEX_MAPPINGS => yes
+MTD_CFI_I2 => yes
+MTD_MAP_BANK_WIDTH_4 => yes
+MTD_CFI_NOSWAP => yes
+I2C_MUX => yes
+BT_BREDR => yes
+NET => yes
+BT => mod

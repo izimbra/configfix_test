@@ -1,0 +1,6 @@
+BATTERY_MAX1721X => yes
+LEDS_LP3944 => yes
+POWER_SUPPLY => yes
+W1 => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes

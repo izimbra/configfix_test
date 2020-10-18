@@ -1,0 +1,6 @@
+CAN_CC770_ISA: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && CAN_CC770 [=n]
+
+RTC_DRV_RV3029C2: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && RTC_I2C_AND_SPI [=n]
+

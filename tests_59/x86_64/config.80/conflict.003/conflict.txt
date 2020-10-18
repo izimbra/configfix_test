@@ -1,0 +1,3 @@
+MARVELL_10G_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+

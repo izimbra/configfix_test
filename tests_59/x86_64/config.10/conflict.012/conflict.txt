@@ -1,0 +1,10 @@
+RTC_DRV_RX6110: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+RTC_DRV_RP5C01: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+
+SOFTLOCKUP_DETECTOR: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && !S390
+    Reverse dependencies: HARDLOCKUP_DETECTOR_PERF [=n]
+

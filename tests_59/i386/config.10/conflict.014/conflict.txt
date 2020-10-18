@@ -1,0 +1,9 @@
+CHARGER_MANAGER: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && REGULATOR [=n]
+
+BACKLIGHT_BD6107: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && I2C [=y]
+
+IPMI_DEVICE_INTERFACE: n => yes
+    Direct dependencies:  IPMI_HANDLER [=n]
+

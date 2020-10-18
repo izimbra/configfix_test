@@ -1,0 +1,7 @@
+IP_SET_HASH_NETNET: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+DEBUG_OBJECTS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+    Reverse dependencies: DRM_I915_SW_FENCE_DEBUG_OBJECTS [=n] && HAS_IOMEM [=y] && EXPERT [=n] && DRM_I915 [=n]
+

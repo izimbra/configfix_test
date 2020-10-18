@@ -1,0 +1,3 @@
+CRYPTO_USER_API_AEAD: n => mod
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+

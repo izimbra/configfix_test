@@ -1,0 +1,7 @@
+INV_MPU6050_I2C => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+IIO_BUFFER => yes
+I2C_MUX => yes
+IIO_TRIGGER => yes
+IIO_CONSUMERS_PER_TRIGGER => 1

@@ -1,0 +1,6 @@
+IP_DCCP: n => yes
+    Direct dependencies:  NET [=y] && INET [=n]
+
+SENSORS_NTC_THERMISTOR: m => yes
+    Direct dependencies:  HWMON [=y] && (!OF [=y] || IIO [=m]=n || IIO [=m]) && (THERMAL [=y] || !THERMAL_OF [=n])
+

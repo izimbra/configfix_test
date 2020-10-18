@@ -1,0 +1,6 @@
+NET_CLS_FLOW: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+CHARGER_MAX77693: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && MFD_MAX77693 [=y]
+

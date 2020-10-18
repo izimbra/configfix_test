@@ -1,0 +1,6 @@
+UNWINDER_ORC: y => no
+    Direct dependencies:  <choice> && X86_64 [=y]
+
+INTEL_BXTWC_PMIC_TMU: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && REGMAP [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_SOC_PMIC_BXTWC [=n]
+

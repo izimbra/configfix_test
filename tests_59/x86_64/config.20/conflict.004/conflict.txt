@@ -1,0 +1,3 @@
+UBSAN_MISC: n => yes
+    Direct dependencies:  UBSAN [=n]
+

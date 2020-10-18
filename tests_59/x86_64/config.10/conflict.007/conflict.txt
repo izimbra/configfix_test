@@ -1,0 +1,6 @@
+VL53L0X_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+TRACEPOINT_BENCHMARK: n => yes
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=n]
+

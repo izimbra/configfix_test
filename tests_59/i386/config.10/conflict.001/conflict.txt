@@ -1,0 +1,3 @@
+MCP4018: n => yes
+    Direct dependencies:  IIO [=y] && I2C [=n]
+

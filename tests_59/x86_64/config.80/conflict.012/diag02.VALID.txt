@@ -1,0 +1,14 @@
+CAN_C_CAN_PLATFORM => yes
+NET_VENDOR_REALTEK => yes
+NET_DSA_TAG_TRAILER => yes
+RAPIDIO_ENUM_BASIC => no
+MODULES => yes
+MODULE_SIG_KEY => nonempty
+CAN_C_CAN => yes
+ETHERNET => yes
+MODULE_SIG => yes
+MODULE_SIG_SHA512 => yes
+NETDEVICES => yes
+NET_DSA => yes
+PHYLIB => yes
+MDIO_DEVICE => yes

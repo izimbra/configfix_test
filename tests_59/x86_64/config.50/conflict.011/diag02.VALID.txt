@@ -1,0 +1,9 @@
+REGULATOR_DA9062 => yes
+RTC_DRV_S35390A => yes
+RTC_DRV_DS1302 => yes
+TCP_CONG_ADVANCED => yes
+TCP_CONG_VEGAS => yes
+MFD_DA9062 => yes
+RTC_CLASS => yes
+DEFAULT_VEGAS => yes
+SPI => yes

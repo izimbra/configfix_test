@@ -1,0 +1,2 @@
+CROS_EC_SENSORHUB => yes
+MFD_CROS_EC_DEV => yes

@@ -1,0 +1,8 @@
+CEPH_LIB_USE_DNS_RESOLVER => yes
+DHT11 => yes
+CEPH_LIB => yes
+NET => yes
+INET => yes
+DNS_RESOLVER => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

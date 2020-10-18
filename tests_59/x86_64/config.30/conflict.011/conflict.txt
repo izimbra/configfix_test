@@ -1,0 +1,10 @@
+HID_LOGITECH_HIDPP: n => mod
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_LOGITECH [=n]
+    Reverse dependencies: HID_LOGITECH_DJ [=n] && INPUT [=y] && HID [=n] && USB_HID [=n] && HIDRAW [=n] && HID_LOGITECH [=n]
+
+ADIS16203: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=y] && SPI [=n]
+
+AD5933: n => mod
+    Direct dependencies:  STAGING [=n] && IIO [=y] && I2C [=y]
+

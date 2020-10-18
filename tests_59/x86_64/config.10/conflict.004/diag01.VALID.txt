@@ -1,0 +1,2 @@
+RTC_DRV_DS2404 => yes
+RTC_CLASS => yes

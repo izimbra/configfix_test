@@ -1,0 +1,10 @@
+NETFILTER_NETLINK_LOG: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+    Reverse dependencies: NETFILTER_XT_TARGET_NFLOG [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n]
+
+NF_CT_NETLINK: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+
+NET_SCH_CAKE: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+

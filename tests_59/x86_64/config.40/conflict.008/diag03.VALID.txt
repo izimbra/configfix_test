@@ -1,0 +1,7 @@
+TASKS_TRACE_RCU_READ_MB => yes
+IPV6_SIT_6RD => yes
+RCU_EXPERT => yes
+IPV6 => mod
+IPV6_SIT => mod
+NET => yes
+INET => yes

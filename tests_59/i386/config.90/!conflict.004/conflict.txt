@@ -1,3 +1,3 @@
-SGI_MFD_IOC3: n => yes
-    Direct dependencies:  HAS_IOMEM [=y] && PCI [=y] && MIPS && 64BIT [=n]
+VMSPLIT_2G: n => no
+    Direct dependencies: <choice>
 

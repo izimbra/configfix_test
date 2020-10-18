@@ -1,0 +1,8 @@
+SMC_DIAG => yes
+MFD_MADERA_SPI => yes
+TCP_CONG_ADVANCED => yes
+SMC => yes
+SPI => yes
+TCP_CONG_HYBLA => yes
+MFD_MADERA => yes
+DEFAULT_HYBLA => yes

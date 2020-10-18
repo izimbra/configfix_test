@@ -1,0 +1,8 @@
+HID_LOGITECH_HIDPP => mod
+ADIS16203 => yes
+AD5933 => mod
+HID => mod
+HID_LOGITECH => mod
+LEDS_CLASS => mod
+SPI => yes
+STAGING => yes

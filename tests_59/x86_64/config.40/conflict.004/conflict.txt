@@ -1,0 +1,3 @@
+NET_CLS_TCINDEX: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+

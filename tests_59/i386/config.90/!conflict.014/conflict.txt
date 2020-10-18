@@ -1,9 +1,0 @@
-IP_NF_FILTER: m => yes
-    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && IP_NF_IPTABLES [=m]
-
-PROC_EVENTS: n => yes
-    Direct dependencies:  CONNECTOR [=m]=y
-
-BLK_DEV_RZ1000: m => yes
-    Direct dependencies:  IDE [=m] && PCI [=y] && X86 [=y]
-

@@ -1,0 +1,2 @@
+RTC_DRV_RV3028 => yes
+RTC_CLASS => yes

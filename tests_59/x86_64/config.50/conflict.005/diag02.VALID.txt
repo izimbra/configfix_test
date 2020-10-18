@@ -1,0 +1,6 @@
+NF_TABLES_IPV6 => yes
+TCP_CONG_ADVANCED => yes
+NF_TABLES => yes
+DEFAULT_BIC => yes
+TCP_CONG_BIC => yes
+NETFILTER => yes

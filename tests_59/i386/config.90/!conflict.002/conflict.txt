@@ -1,3 +1,1 @@
-MTD_NAND_STM32_FMC2: n => yes
-    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n] && (MACH_STM32MP157 || COMPILE_TEST [=y])
-
+SERIAL_SIRFSOC: n => mod

@@ -1,0 +1,3 @@
+SENSORS_VIA_CPUTEMP: m => yes
+    Direct dependencies:  HWMON [=m] && X86 [=y]
+

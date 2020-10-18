@@ -1,0 +1,10 @@
+IP_SET_LIST_SET: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_SET [=n]
+
+MEDIA_TUNER_MT20XX: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=n] && MEDIA_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+WLAN_VENDOR_RALINK: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n]
+

@@ -1,0 +1,2 @@
+INET => yes
+NET => yes

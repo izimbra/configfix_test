@@ -1,6 +1,0 @@
-VIDEO_ATMEL_ISI: m => yes
-    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=y] && V4L_PLATFORM_DRIVERS [=y] && VIDEO_V4L2 [=m] && OF [=y] && (ARCH_AT91 || COMPILE_TEST [=y])
-
-VIDEO_MT9P031: m => yes
-    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
-

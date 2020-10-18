@@ -1,0 +1,6 @@
+FB_TFT_RA8875 => yes
+SPI => yes
+FB_TFT => yes
+COMPILE_TEST => yes
+STAGING => yes
+BACKLIGHT_CLASS_DEVICE => yes

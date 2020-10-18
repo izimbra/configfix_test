@@ -1,0 +1,4 @@
+BCM7XXX_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: NET_DSA_BCM_SF2 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n] || BCMGENET [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y]
+

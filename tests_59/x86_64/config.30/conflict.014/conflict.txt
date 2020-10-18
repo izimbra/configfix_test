@@ -1,0 +1,9 @@
+CAIF_DEBUG: n => yes
+    Direct dependencies:  NET [=n] && CAIF [=n]
+
+SERIO_PARKBD: n => mod
+    Direct dependencies:  !UML && SERIO [=y] && PARPORT [=n]
+
+MAX1118: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+

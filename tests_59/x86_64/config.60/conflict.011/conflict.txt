@@ -1,0 +1,10 @@
+MEMBARRIER: y => no
+    Direct dependencies:  y
+    Reverse dependencies: RSEQ [=y] && HAVE_RSEQ [=y]
+
+NETFILTER_XT_TARGET_LOG: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n]
+
+IP_SET: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n]
+

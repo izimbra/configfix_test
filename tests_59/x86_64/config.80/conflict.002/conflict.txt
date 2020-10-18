@@ -1,0 +1,3 @@
+IR_SERIAL_TRANSMITTER: n => yes
+    Direct dependencies:  RC_CORE [=y] && RC_DEVICES [=n] && IR_SERIAL [=n]
+

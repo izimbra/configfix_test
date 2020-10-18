@@ -1,0 +1,8 @@
+NF_TABLES_IPV4: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n]
+    Reverse dependencies: NF_TABLES_INET [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n] && IPV6 [=y]
+
+STACK_VALIDATION: y => no
+    Direct dependencies:  HAVE_STACK_VALIDATION [=y]
+    Reverse dependencies: RETPOLINE [=y] && HAVE_STACK_VALIDATION [=y] || UNWINDER_ORC [=y] && <choice> && X86_64 [=y]
+

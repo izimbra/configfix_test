@@ -1,0 +1,15 @@
+CEPH_LIB_USE_DNS_RESOLVER => yes
+DHT11 => yes
+CEPH_LIB => mod
+NET => yes
+INET => yes
+DNS_RESOLVER => mod
+ADIS16480 => yes
+IIO => yes
+ADIS16136 => yes
+ADIS16201 => yes
+ADIS16260 => yes
+ADIS16400 => yes
+ADIS16475 => yes
+ADIS16460 => yes
+ADIS16209 => yes

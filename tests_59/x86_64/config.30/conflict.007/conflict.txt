@@ -1,0 +1,6 @@
+INET_ESP_OFFLOAD: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && INET_ESP [=n]
+
+TICK_CPU_ACCOUNTING: n => no
+    Direct dependencies:  <choice> && !S390 && !NO_HZ_FULL [=n]
+

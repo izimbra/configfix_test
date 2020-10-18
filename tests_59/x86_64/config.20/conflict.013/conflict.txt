@@ -1,0 +1,9 @@
+RTC_DRV_M48T35: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+
+INPUT_AD714X_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && INPUT_AD714X [=n] && I2C [=y]
+
+TI_ADS1015: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

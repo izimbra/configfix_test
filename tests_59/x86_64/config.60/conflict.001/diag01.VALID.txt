@@ -1,0 +1,3 @@
+NETFILTER_NETLINK_LOG => mod
+INET => yes
+NETFILTER => yes

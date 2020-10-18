@@ -1,0 +1,6 @@
+BATTERY_MAX1721X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && W1 [=n]
+
+LEDS_LP3944: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=y]
+

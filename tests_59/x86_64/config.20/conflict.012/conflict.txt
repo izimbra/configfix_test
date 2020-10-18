@@ -1,0 +1,10 @@
+FTRACE_SYSCALLS: n => yes
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_SYSCALL_TRACEPOINTS [=y]
+
+MTD_COMPLEX_MAPPINGS: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+    Reverse dependencies: MTD_HYPERBUS [=n] && MTD [=n] && HAS_IOMEM [=y] || MTD_MAP_BANK_WIDTH_32 [=n] && MTD [=n] && HAS_IOMEM [=y] || MTD_PHYSMAP_GEMINI [=n] && MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=n] && MFD_SYSCON [=n] || MTD_PHYSMAP_IXP4XX [=n] && MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=n] && ARM
+
+INTEL_PUNIT_IPC: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n]
+

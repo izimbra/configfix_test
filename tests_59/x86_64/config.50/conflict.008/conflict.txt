@@ -1,0 +1,7 @@
+NET_FOU: y => no
+    Direct dependencies:  NET [=y] && INET [=y]
+    Reverse dependencies: NET_FOU_IP_TUNNELS [=y] && NET [=y] && INET [=y] && (NET_IPIP [=y] || NET_IPGRE [=n] || IPV6_SIT [=y])
+
+SPI_XCOMM: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && I2C [=y]
+

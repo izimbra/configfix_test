@@ -1,0 +1,3 @@
+BACKLIGHT_DA903X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && PMIC_DA903X [=n]
+

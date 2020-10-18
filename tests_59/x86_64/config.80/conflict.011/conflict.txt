@@ -1,0 +1,10 @@
+SYSTEMPORT: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] && (NET_DSA [=n] || !NET_DSA [=n])
+
+NET_VENDOR_MARVELL: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (PCI [=y] || CPU_PXA168 || MV64X60 || PPC32 || PLAT_ORION || INET [=y] || COMPILE_TEST [=y])
+
+I2C_MUX: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: MEDIA_SUBDRV_AUTOSELECT [=y] && MEDIA_SUPPORT [=y] && HAS_IOMEM [=y] || DRM_SII902X [=n] && HAS_IOMEM [=y] && DRM [=y] && DRM_BRIDGE [=y] && OF [=y] || MPU3050_I2C [=n] && IIO [=y] && INPUT_MPU3050!=y && INPUT_MPU3050!=m && I2C [=y] || INV_MPU6050_I2C [=y] && IIO [=y] && I2C [=y]
+

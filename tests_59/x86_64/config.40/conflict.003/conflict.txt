@@ -1,0 +1,3 @@
+RTC_DRV_RV3028: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+

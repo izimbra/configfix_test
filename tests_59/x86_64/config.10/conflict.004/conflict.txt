@@ -1,0 +1,3 @@
+RTC_DRV_DS2404: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+

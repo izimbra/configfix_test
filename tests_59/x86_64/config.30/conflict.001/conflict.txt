@@ -1,0 +1,3 @@
+ADXRS450: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+

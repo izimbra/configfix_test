@@ -1,0 +1,6 @@
+AMD_MEM_ENCRYPT_ACTIVE_BY_DEFAULT: n => yes
+    Direct dependencies:  AMD_MEM_ENCRYPT [=n]
+
+NETFILTER_XT_MATCH_STATE: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n]
+

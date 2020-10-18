@@ -1,0 +1,6 @@
+ADXRS450 => mod
+TINYDRM_REPAPER => yes
+NET_SCH_HTB => yes
+SPI => yes
+NET => yes
+NET_SCHED => yes

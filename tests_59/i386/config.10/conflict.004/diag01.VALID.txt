@@ -1,0 +1,4 @@
+EROFS_FS => yes
+LIBCRC32C => yes
+CRYPTO_CRC32C => yes
+MISC_FILESYSTEMS => yes

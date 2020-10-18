@@ -1,0 +1,13 @@
+IP_VS_PROTO_AH => yes
+REGULATOR_ISL6271A => yes
+LEDS_TI_LMU_COMMON => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+MODULES => yes
+IP_VS_SH_TAB_BITS => 20
+IP_VS => mod
+IP_VS_MH_TAB_INDEX => 8
+IP_VS_TAB_BITS => 20
+REGULATOR => yes
+I2C => yes

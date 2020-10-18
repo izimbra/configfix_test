@@ -1,0 +1,3 @@
+EFI_BOOTLOADER_CONTROL: n => mod
+    Direct dependencies:  EFI [=y] && EFI_VARS [=n]
+

@@ -1,0 +1,3 @@
+LEDS_TRIGGER_ONESHOT: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+

@@ -1,0 +1,3 @@
+SMC_DIAG: n => yes
+    Direct dependencies:  NET [=y] && SMC [=n]
+

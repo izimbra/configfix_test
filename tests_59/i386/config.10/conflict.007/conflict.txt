@@ -1,0 +1,6 @@
+PCI_QUIRKS: n => yes
+    Direct dependencies:  PCI [=n]
+
+SCSI_UFSHCD_PLATFORM: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_UFSHCD [=n]
+

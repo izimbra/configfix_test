@@ -1,0 +1,6 @@
+MTD_NAND_ECC_SW_BCH => yes
+TCP_CONG_ADVANCED => yes
+TCP_CONG_BBR => yes
+DEFAULT_BBR => yes
+MTD_RAW_NAND => mod
+MODULES => yes

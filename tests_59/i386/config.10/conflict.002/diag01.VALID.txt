@@ -1,0 +1,4 @@
+LEDS_TRIGGER_ONESHOT => yes
+LEDS_TRIGGERS => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes

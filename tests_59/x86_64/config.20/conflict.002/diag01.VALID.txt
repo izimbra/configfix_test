@@ -1,0 +1,6 @@
+FB_TFT_HX8353D => yes
+SPI => yes
+FB_TFT => yes
+FB => yes
+STAGING => yes
+BACKLIGHT_CLASS_DEVICE => yes

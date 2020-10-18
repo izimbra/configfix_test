@@ -1,0 +1,9 @@
+IP_VS_PROTO_ESP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_VS [=n]
+
+IP_VS_DH: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_VS [=n]
+
+BCM54140_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n] && (HWMON [=y] || HWMON [=y]=n)
+

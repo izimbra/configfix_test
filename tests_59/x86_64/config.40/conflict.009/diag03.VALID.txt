@@ -1,0 +1,7 @@
+CAN_CC770_ISA => mod
+RTC_DRV_RV3029C2 => mod
+CAN => yes
+NET => yes
+CAN_CC770 => mod
+CAN_DEV => yes
+RTC_CLASS => yes

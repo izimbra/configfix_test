@@ -1,0 +1,15 @@
+ACPI_BUTTON => yes
+VSOCKETS_LOOPBACK => yes
+RAPIDIO_ENUM_BASIC => no
+MODULES => yes
+MODULE_SIG_KEY => nonempty
+SENSORS_LIS3_SPI => no
+MODULE_SIG => yes
+ACPI => yes
+MODULE_SIG_SHA224 => yes
+X86_INTEL_PSTATE => no
+ACPI_WMI => yes
+ACPI_VIDEO => yes
+PNP => yes
+MXM_WMI => yes
+VSOCKETS => yes

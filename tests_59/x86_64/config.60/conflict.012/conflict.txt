@@ -1,0 +1,10 @@
+EFI_RCI2_TABLE: n => yes
+    Direct dependencies:  EFI [=n] && (X86 [=y] || COMPILE_TEST [=y])
+
+PINCTRL_CEDARFORK: n => yes
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+VIDEO_ADV7842: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_COBALT [=n] && MEDIA_SUPPORT [=n] && PCI [=y] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_V4L2 [=n] && I2C [=y] && PCI_MSI [=y] && MTD_COMPLEX_MAPPINGS [=y] && (GPIOLIB [=y] && DRM_I2C_ADV7511 [=m]=n || COMPILE_TEST [=y]) && SND [=n] && MTD [=y]
+

@@ -1,0 +1,6 @@
+NF_CONNTRACK_IRC => mod
+SENSORS_LIS3_I2C => mod
+INET => yes
+NETFILTER => yes
+NF_CONNTRACK => mod
+INPUT => yes

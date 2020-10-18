@@ -1,0 +1,6 @@
+FIREWIRE_OHCI: n => yes
+    Direct dependencies:  (PCI [=n] || COMPILE_TEST [=n]) && PCI [=n] && FIREWIRE [=n] && MMU [=y]
+
+USB_STORAGE_USBAT: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && USB_STORAGE [=n]
+
