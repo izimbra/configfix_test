@@ -1,0 +1,10 @@
+SCSI_DH_HP_SW => yes
+VIDEO_M52790 => yes
+VIDEO_OV2659 => yes
+SRF08 => yes
+SCSI => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUBDRV_AUTOSELECT => no
+VIDEO_DEV => yes
+IIO => yes
+IIO_KFIFO_BUF => yes

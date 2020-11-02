@@ -1,0 +1,30 @@
+VIDEO_DEV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+MAX5481: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+DEBUG_PER_CPU_MAPS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && SMP [=n]
+
+IQS624_POS: n => yes
+    Direct dependencies:  IIO [=n] && (MFD_IQS62X [=n] || COMPILE_TEST [=y])
+
+KEYBOARD_STOWAWAY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n]
+
+KXSD9: n => yes
+    Direct dependencies:  IIO [=n]
+
+CUSE: n => yes
+    Direct dependencies:  FUSE_FS [=n]
+
+SENSORS_ADS7871: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=n]
+
+LTR501: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+VIDEO_THS8200: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+

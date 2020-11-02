@@ -1,0 +1,6 @@
+SPI_NXP_FLEXSPI => yes
+INPUT_AXP20X_PEK => yes
+TI_TLC4541 => yes
+SENSORS_MAX31722 => yes
+TI_ADC084S021 => yes
+SPI => yes

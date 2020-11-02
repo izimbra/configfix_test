@@ -1,0 +1,23 @@
+VIDEO_MT9T001: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+HID_PICOLCD_BACKLIGHT: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_PICOLCD [=n] && (HID_PICOLCD [=n]=BACKLIGHT_CLASS_DEVICE [=m] || BACKLIGHT_CLASS_DEVICE [=m]=y)
+
+ADIS16480: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+DVB_CX24116: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_DW2102 [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_USB_ANYSEE [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=n] && I2C [=y] && INPUT [=y] && SND [=n] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_CX88_DVB [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_CX88 [=n] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_DM1105 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && I2C_ALGOBIT [=y] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+CRYPTO_LIB_POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=m] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+
+VIDEO_OV9650: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+REGULATOR_PALMAS: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_PALMAS [=n]
+

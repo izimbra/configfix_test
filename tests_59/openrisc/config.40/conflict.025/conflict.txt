@@ -1,0 +1,15 @@
+IIO_SIMPLE_DUMMY_EVENTS: n => yes
+    Direct dependencies:  IIO [=n] && IIO_SIMPLE_DUMMY [=n]
+
+REGULATOR_MT6358: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=n]
+
+SENSORS_RM3100_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+RTC_DRV_PCF50633: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && MFD_PCF50633 [=n]
+
+SENSORS_MAX6642: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+

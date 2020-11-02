@@ -1,0 +1,29 @@
+TCM_PSCSI: n => yes
+    Direct dependencies:  TARGET_CORE [=n] && SCSI [=y]
+
+RTC_DRV_DS1553: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+
+RTC_DRV_PCF8583: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+FAULT_INJECTION: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+    Reverse dependencies: DRM_I915_SELFTEST [=n] && HAS_IOMEM [=y] && EXPERT [=n] && DRM_I915 [=n]
+
+HID_PICOLCD_LEDS: y => no
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_PICOLCD [=y] && (HID_PICOLCD [=y]=LEDS_CLASS [=y] || LEDS_CLASS [=y]=y)
+
+RTC_DRV_DS1511: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+
+TMPFS_XATTR: y => no
+    Direct dependencies:  TMPFS [=y]
+    Reverse dependencies: TMPFS_POSIX_ACL [=y] && TMPFS [=y]
+
+CPUSETS: n => yes
+    Direct dependencies:  CGROUPS [=y] && SMP [=n]
+
+SPI_ROCKCHIP: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+

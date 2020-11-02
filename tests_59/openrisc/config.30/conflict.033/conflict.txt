@@ -1,0 +1,22 @@
+TCG_TIS_I2C_NUVOTON: n => mod
+    Direct dependencies:  TCG_TPM [=n] && I2C [=y]
+
+POWER_RESET_RESTART: n => yes
+    Direct dependencies:  POWER_RESET [=n]
+
+INPUT_MATRIXKMAP: n => mod
+    Direct dependencies:  !UML && INPUT [=n]
+    Reverse dependencies: KEYBOARD_CLPS711X [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && OF_GPIO [=y] && (ARCH_CLPS711X || COMPILE_TEST [=n]) || KEYBOARD_EP93XX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (ARCH_EP93XX || COMPILE_TEST [=n]) || KEYBOARD_TCA8418 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && I2C [=y] || KEYBOARD_MATRIX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || KEYBOARD_LM8333 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && I2C [=y] || KEYBOARD_LPC32XX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_LPC32XX && OF [=y] || KEYBOARD_MAX7359 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && I2C [=y] || KEYBOARD_IMX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_MXC || KEYBOARD_NOMADIK [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (ARCH_NOMADIK || ARCH_U8500) || KEYBOARD_NSPIRE [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_NSPIRE && OF [=y] || KEYBOARD_TEGRA [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_TEGRA && OF [=y] || KEYBOARD_PXA27x [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (PXA27x || PXA3xx || ARCH_MMP) || KEYBOARD_PMIC8XXX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && MFD_PM8XXX [=n] || KEYBOARD_SAMSUNG [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && HAVE_CLK [=n] || KEYBOARD_ST_KEYSCAN [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (ARCH_STI || COMPILE_TEST [=n]) || KEYBOARD_STMPE [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && MFD_STMPE [=n] && OF [=y] || KEYBOARD_OMAP [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_OMAP1 || KEYBOARD_OMAP4 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (OF [=y] || ARCH_OMAP2PLUS) || KEYBOARD_SPEAR [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && PLAT_SPEAR || KEYBOARD_TC3589X [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && MFD_TC3589X [=n] || KEYBOARD_TWL4030 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && TWL4030_CORE [=y] || KEYBOARD_CROS_EC [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && CROS_EC [=n] || KEYBOARD_BCM [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && OF [=y] && HAVE_CLK [=n] || HT16K33 [=n] && AUXDISPLAY [=y] && FB [=n] && OF [=y] && I2C [=y] && INPUT [=n]
+
+INPUT_BMA150: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && I2C [=y]
+
+KEYBOARD_GPIO: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+RTC_DRV_RV3028: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+UDF_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+

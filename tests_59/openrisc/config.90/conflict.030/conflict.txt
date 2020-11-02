@@ -1,0 +1,19 @@
+DRM_PANEL_SONY_ACX424AKP: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+IIO_ST_MAGN_3AXIS: m => yes
+    Direct dependencies:  IIO [=m] && (I2C [=y] || SPI_MASTER [=y]) && SYSFS [=y]
+
+VIDEO_VIMC: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_TEST_SUPPORT [=n] && V4L_TEST_DRIVERS [=n] && VIDEO_DEV [=m] && VIDEO_V4L2 [=m]
+
+ADIS16480: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+IIO_TRIGGER: y => no
+    Direct dependencies:  IIO [=m]
+    Reverse dependencies: IIO_TRIGGERED_EVENT [=m] && IIO [=m] || IIO_TRIGGERED_BUFFER [=m] && IIO [=m] && IIO_BUFFER [=y] || AD7266 [=m] && IIO [=m] && SPI_MASTER [=y] || AD7768_1 [=m] && IIO [=m] && SPI [=y] || HID_SENSOR_IIO_TRIGGER [=m] && IIO [=m] && HID_SENSOR_HUB [=y] && HID_SENSOR_IIO_COMMON [=m] && IIO_BUFFER [=y] || IIO_SIMPLE_DUMMY_BUFFER [=y] && IIO [=m] && IIO_SIMPLE_DUMMY [=m]
+
+FXOS8700_I2C: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

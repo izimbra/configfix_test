@@ -1,0 +1,21 @@
+INV_ICM42600_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+DVB_TDA10023: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_TTUSB2 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_DW2102 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_ANYSEE [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_EM28XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_BUDGET_CI [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_BUDGET_CORE [=n] && I2C [=n] && RC_CORE [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_BUDGET_AV [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_BUDGET_CORE [=n] && I2C [=n] && VIDEO_DEV [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_MANTIS [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && MANTIS_CORE [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+CRYPTO_BLAKE2B: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=y] && BLOCK [=y]
+
+TI_DAC7612: n => yes
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=n] && GPIOLIB [=y]
+
+DHT11: n => yes
+    Direct dependencies:  IIO [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+VIDEO_TW9903: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=n] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

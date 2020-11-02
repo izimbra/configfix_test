@@ -1,0 +1,19 @@
+FB_SM501: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && MFD_SM501 [=n]
+
+SPI_MUX: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+MFD_DA9052_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+CRYPTO_RSA: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=n] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && PCI [=n] && PCI_MSI [=n] && (UACCE [=n] || UACCE [=n]=n) && (ARM64 || COMPILE_TEST [=n] && 64BIT) && ACPI || CRYPTO_DEV_FSL_CAAM_PKC_API [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && CRYPTO_DEV_FSL_CAAM [=n] && CRYPTO_DEV_FSL_CAAM_JR [=n] || CRYPTO_DEV_CCP_CRYPTO [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && CRYPTO_DEV_CCP [=n] && CRYPTO_DEV_CCP_DD [=n] && CRYPTO_DEV_SP_CCP [=n]
+
+LIST_KUNIT_TEST: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n] && KUNIT [=n]
+
+SENSORS_TMP102: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+

@@ -1,0 +1,18 @@
+ADXL372_SPI: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+VIDEO_BT819: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+DRM_SII902X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+RAID6_PQ_BENCHMARK: n => yes
+    Direct dependencies:  RAID6_PQ [=n]
+
+RAW_DRIVER: n => mod
+    Direct dependencies:  BLOCK [=n]
+
+SENSORS_TC74: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

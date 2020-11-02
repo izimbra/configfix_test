@@ -1,0 +1,30 @@
+JOYSTICK_SIDEWINDER: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n]
+
+TCM_PSCSI: n => yes
+    Direct dependencies:  TARGET_CORE [=n] && SCSI [=n]
+
+BACKTRACE_SELF_TEST: n => mod
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n] && DEBUG_KERNEL [=y]
+
+PINCTRL_MAX77620: n => mod
+    Direct dependencies:  PINCTRL [=n] && MFD_MAX77620 [=y] && OF [=y]
+
+VIDEO_DW9807_VCM: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+INPUT_DA9063_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && (MFD_DA9063 [=n] || MFD_DA9062 [=y])
+
+ALTERA_MBOX: n => yes
+    Direct dependencies:  MAILBOX [=n] && HAS_IOMEM [=y]
+
+CORE_DUMP_DEFAULT_ELF_HEADERS: n => yes
+    Direct dependencies:  BINFMT_ELF [=n] && ELF_CORE [=n]
+
+PANTHERLORD_FF: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && HID_PANTHERLORD [=n]
+
+SAMPLE_KFIFO: n => mod
+    Direct dependencies:  SAMPLES [=n] && m && MODULES [=y]
+

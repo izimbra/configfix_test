@@ -1,0 +1,29 @@
+MODULE_COMPRESS_XZ: y => no
+    Direct dependencies:  <choice>
+
+SENSORS_LTC2945: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+I2C_MUX_GPIO: m => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=m] && GPIOLIB [=y]
+
+SENSORS_IIO_HWMON: m => yes
+    Direct dependencies:  HWMON [=m] && IIO [=m]
+
+CRC16: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BT [=n] && NET [=n] && !S390 && (RFKILL [=n] || !RFKILL [=n]) || BATMAN_ADV_BLA [=n] && NET [=n] && BATMAN_ADV [=n] && INET [=n] || MKISS [=n] && NET [=n] && HAMRADIO [=n] && AX25 [=n] && TTY [=n] || LAN743X [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MICROCHIP [=n] && PCI [=n] || SGI_IOC3_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SGI [=n] && PCI [=n] && SGI_MFD_IOC3 [=n] || USB_NET_SMSC75XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_SMSC95XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || KEYBOARD_APPLESPI [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && ACPI && EFI && SPI [=y] && (X86 || COMPILE_TEST [=n]) && LEDS_CLASS [=y] || HMC_DRV [=n] && S390 || W1_SLAVE_DS2406 [=n] && W1 [=y] || W1_SLAVE_DS2423 [=n] && W1 [=y] || W1_SLAVE_DS2433_CRC [=n] && W1 [=y] && W1_SLAVE_DS2433 [=n] || W1_SLAVE_DS250X [=y] && W1 [=y] || W1_SLAVE_DS28E04 [=n] && W1 [=y] || W1_SLAVE_DS28E17 [=y] && W1 [=y] && I2C [=y] || SCD30_SERIAL [=n] && IIO [=m] && SCD30_CORE [=n] && SERIAL_DEV_BUS [=y] || EXT4_FS [=n] && BLOCK [=n] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=y] && MTD_UBI [=n] || CRYPTO_DEV_ATMEL_ECC [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && I2C [=y] || CRYPTO_DEV_ATMEL_SHA204A [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && I2C [=y]
+
+NETWORK_SECMARK: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: SECURITY_SELINUX [=n] && SECURITY_NETWORK [=n] && AUDIT [=n] && NET [=n] && INET [=n]
+
+HID_CYPRESS: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=m]
+
+CAN_M_CAN_TCAN4X5X: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && CAN_M_CAN [=n] && REGMAP_SPI [=y]
+
+TRIM_UNUSED_KSYMS: n => yes
+    Direct dependencies:  MODULES [=y] && !UNUSED_SYMBOLS [=y]
+

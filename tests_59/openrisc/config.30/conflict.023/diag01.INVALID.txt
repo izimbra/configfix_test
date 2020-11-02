@@ -1,0 +1,13 @@
+NLS_CODEPAGE_932 => yes
+RTC_DRV_RS5C372 => mod
+CRYPTO_PCRYPT => yes
+SPI_MUX => mod
+FONT_8x16 => yes
+NLS => yes
+NLS_DEFAULT => 
+RTC_CLASS => yes
+LOG_CPU_MAX_BUF_SHIFT => 1
+OPENRISC_HAVE_SHADOW_GPRS => yes
+SMP => yes
+NR_CPUS => 2
+SPI => yes

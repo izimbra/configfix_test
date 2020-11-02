@@ -1,0 +1,16 @@
+FSI_MASTER_ASPEED => mod
+TINYDRM_HX8357D => yes
+DVB_STV0288 => mod
+AD8801 => yes
+DVB_EC100 => mod
+FSI => mod
+DRM => yes
+MEDIA_DIGITAL_TV_SUPPORT => yes
+DVB_MAX_ADAPTERS => 255
+ADIS16203 => yes
+ADIS16480 => yes
+ADIS16201 => yes
+IIO => yes
+ADIS16260 => yes
+ADIS16240 => yes
+ADIS16209 => yes

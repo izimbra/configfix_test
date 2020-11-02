@@ -1,0 +1,8 @@
+KEYBOARD_OMAP4 => yes
+JOYSTICK_WARRIOR => yes
+SPI_SPIDEV => yes
+LCD_LTV350QV => yes
+INPUT_KEYBOARD => yes
+INPUT_JOYSTICK => yes
+SERIO => yes
+SPI => yes

@@ -1,0 +1,17 @@
+NLS_CODEPAGE_861 => yes
+RTC_DRV_DS1307 => mod
+TRUSTED_KEYS => yes
+SPI_GPIO => mod
+RAID6_PQ_BENCHMARK => yes
+I2C_EMEV2 => mod
+MAX30102 => yes
+NLS => yes
+NLS_DEFAULT => 
+RTC_CLASS => yes
+TCG_TPM => yes
+CRYPTO_SHA1 => yes
+SPI => yes
+SPI_BITBANG => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+IIO_BUFFER => yes

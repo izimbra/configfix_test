@@ -1,0 +1,13 @@
+SENSORS_LIS3_I2C: n => yes
+    Direct dependencies:  I2C [=y] && INPUT [=n]
+
+SCSI_SAS_ATTRS: n => mod
+    Direct dependencies:  SCSI [=n]
+    Reverse dependencies: SCSI_SAS_LIBSAS [=n] && SCSI [=n] || SCSI_HPSA [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_MPT3SAS [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_SMARTPQI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && !S390 || FUSION_SAS [=n] && FUSION [=n] && PCI [=n] && SCSI [=n]
+
+VIDEO_IMX219: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+AD7091R5: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

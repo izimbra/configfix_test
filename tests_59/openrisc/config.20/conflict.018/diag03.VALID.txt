@@ -1,0 +1,9 @@
+CAN_CALC_BITTIMING => yes
+SAMPLE_TRACE_PRINTK => no
+HSR => yes
+SENSORS_AXI_FAN_CONTROL => yes
+CAN => mod
+MODULES => yes
+NET => yes
+CAN_DEV => mod
+HWMON => yes

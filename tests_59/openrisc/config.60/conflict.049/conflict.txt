@@ -1,0 +1,32 @@
+SRF08: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SERIO: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: KEYBOARD_ATKBD [=y] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] || KEYBOARD_LKKBD [=m] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] || KEYBOARD_HIL [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && (GSC || HP300) || KEYBOARD_NEWTON [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] || KEYBOARD_STOWAWAY [=y] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] || KEYBOARD_SUNKBD [=m] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] || KEYBOARD_XTKBD [=y] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] || MOUSE_PS2 [=n] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || MOUSE_SERIAL [=y] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || MOUSE_VSXXXAA [=y] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || JOYSTICK_WARRIOR [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || JOYSTICK_MAGELLAN [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || JOYSTICK_SPACEORB [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || JOYSTICK_SPACEBALL [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || JOYSTICK_STINGER [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || JOYSTICK_TWIDJOY [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || JOYSTICK_ZHENHUA [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || JOYSTICK_FSIA6B [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] || TABLET_SERIAL_WACOM4 [=m] && !UML && INPUT [=y] && INPUT_TABLET [=y] || TOUCHSCREEN_DYNAPRO [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_HAMPSHIRE [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_EGALAX_SERIAL [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_FUJITSU [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_GUNZE [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_ELO [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_WACOM_W8001 [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_MTOUCH [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_INEXIO [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_PENMOUNT [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHRIGHT [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHWIN [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHIT213 [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TSC_SERIO [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || RMI4_F03_SERIO [=n] && !UML && INPUT [=y] && RMI4_CORE [=n] && RMI4_F03 [=n] || I2C_TAOS_EVM [=n] && I2C [=y] && HAS_IOMEM [=y] && TTY [=n] || USB_PULSE8_CEC [=n] && MEDIA_CEC_SUPPORT [=y] && USB_SUPPORT [=y] && TTY [=n] || USB_RAINSHADOW_CEC [=n] && MEDIA_CEC_SUPPORT [=y] && USB_SUPPORT [=y] && TTY [=n]
+
+SENSORS_ADM1021: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+INPUT_ATMEL_CAPTOUCH: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (OF [=y] || COMPILE_TEST [=n]) && I2C [=y]
+
+NVM_PBLK: n => yes
+    Direct dependencies:  NVM [=n]
+
+CFG80211_USE_KERNEL_REGDB_KEYS: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && CFG80211 [=n] && CFG80211_REQUIRE_SIGNED_REGDB [=n]
+
+CFG80211_REQUIRE_SIGNED_REGDB: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && CFG80211 [=n]
+
+DEBUG_RWSEMS: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+SCSI_DH: n => yes
+    Direct dependencies:  SCSI [=n]
+
+DRM_ETNAVIV: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && MMU [=y]
+

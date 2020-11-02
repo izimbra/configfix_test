@@ -1,0 +1,28 @@
+BMA400: m => yes
+    Direct dependencies:  IIO [=m]
+
+DRM_I2C_NXP_TDA998X: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_KMS_HELPER [=m] && I2C [=y]
+
+SI7020: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+MS5611: n => yes
+    Direct dependencies:  IIO [=m]
+
+TI_ADC108S102: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+REGULATOR: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OLPC_EC [=n] || PINCTRL_PFC_SH73A0 [=n] && PINCTRL [=n] || TPS6105X [=y] && HAS_IOMEM [=y] && I2C [=y] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=m] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=n]) && OF [=y] && COMMON_CLK [=n] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || SND_SOC_AMD_CZ_DA7219MX98357_MACH [=n] && SOUND [=m] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_AMD_ACP [=n] && I2C [=y] && GPIOLIB [=y] || MMC_MTK [=n] && MMC [=n] && HAS_DMA [=y]
+
+AD9523: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+VIDEO_MT9T001: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+DRM_PANEL_KINGDISPLAY_KD097D04: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+

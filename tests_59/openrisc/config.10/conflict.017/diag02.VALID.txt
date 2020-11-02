@@ -1,0 +1,14 @@
+HID_LED => yes
+UBSAN_MISC => yes
+VM_EVENT_COUNTERS => no
+BCACHE_DEBUG => yes
+HID => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes
+UBSAN => yes
+DEBUG_KERNEL => yes
+EXPERT => yes
+BCACHE => mod
+MD => yes
+MODULES => yes
+CRC64 => yes

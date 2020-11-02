@@ -1,0 +1,28 @@
+INPUT_PCF8574: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && I2C [=y]
+
+HID_NTI: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+IIO_SYSFS_TRIGGER: n => yes
+    Direct dependencies:  IIO [=n] && IIO_TRIGGER [=n] && SYSFS [=y]
+
+DM_SNAPSHOT: n => yes
+    Direct dependencies:  MD [=y] && BLK_DEV_DM [=n]
+
+KEYBOARD_TCA6416: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y]
+
+SENSORS_LM93: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+VIDEO_OV2640: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] && MEDIA_CAMERA_SUPPORT [=n]
+
+DRM_PANEL_LG_LB035Q02: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=n]
+
+RTC_DRV_DA9052: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && PMIC_DA9052 [=n]
+

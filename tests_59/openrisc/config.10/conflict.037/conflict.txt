@@ -1,0 +1,26 @@
+BCACHE_DEBUG: n => yes
+    Direct dependencies:  MD [=n] && BCACHE [=n]
+
+DRM_PANEL_ILITEK_ILI9881C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+CRYPTO_USER: n => yes
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+
+MFD_ROHM_BD71828: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y && OF [=y]
+
+EFI_PARTITION: y => no
+    Direct dependencies:  BLOCK [=y]
+
+MODULE_SRCVERSION_ALL: n => yes
+    Direct dependencies:  MODULES [=n]
+
+KEYBOARD_GPIO_POLLED: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y]
+    Reverse dependencies: PCENGINES_APU2 [=n] && X86 && X86_PLATFORM_DEVICES [=n] && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y] && LEDS_CLASS [=n]
+
+DVB_OR51132: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_CX88_DVB [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX88 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

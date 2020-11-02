@@ -1,0 +1,29 @@
+DVB_RTL2832: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && I2C_MUX [=y]
+    Reverse dependencies: DVB_USB_RTL28XXU [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && I2C_MUX [=y] || DVB_RTL2832_SDR [=n] && MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && I2C_MUX [=y] && VIDEO_V4L2 [=n] && MEDIA_SDR_SUPPORT [=n] && USB [=n]
+
+REGULATOR_TPS6524X: n => yes
+    Direct dependencies:  REGULATOR [=y] && SPI [=n]
+
+CRYPTO_RSA: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=n] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=n] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && PCI [=n] && PCI_MSI [=n] && (UACCE [=n] || UACCE [=n]=n) && (ARM64 || COMPILE_TEST [=n] && 64BIT) && ACPI || CRYPTO_DEV_FSL_CAAM_PKC_API [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && CRYPTO_DEV_FSL_CAAM [=n] && CRYPTO_DEV_FSL_CAAM_JR [=n] || CRYPTO_DEV_CCP_CRYPTO [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && CRYPTO_DEV_CCP [=n] && CRYPTO_DEV_CCP_DD [=n] && CRYPTO_DEV_SP_CCP [=n]
+
+TEST_BITFIELD: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+HID_A4TECH: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+GPIO_MAX732X_IRQ: n => mod
+    Direct dependencies:  GPIOLIB [=y] && I2C [=y] && GPIO_MAX732X [=n]=y
+
+SENSORS_LTC4215: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+RFKILL: n => mod
+    Direct dependencies:  NET [=n]
+
+RTC_DRV_DA9063: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && (MFD_DA9063 [=n] || MFD_DA9062 [=y])
+

@@ -1,0 +1,15 @@
+JOYSTICK_PSXPAD_SPI: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n] && SPI [=n]
+
+ZOPT2201: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+CHARGER_UCS1002: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=y] && OF [=y] && REGULATOR [=y]
+
+SENSORS_SMSC47B397: m => yes
+    Direct dependencies:  HWMON [=m] && !PPC
+
+KEYBOARD_MTK_PMIC: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && MFD_MT6397 [=n]
+

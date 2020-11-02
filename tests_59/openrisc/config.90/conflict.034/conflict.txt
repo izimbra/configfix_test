@@ -1,0 +1,22 @@
+GPIO_WM8994: m => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_WM8994 [=m]
+
+BMC150_MAGN_SPI: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+DRM_PANEL_SAMSUNG_S6E63J0X03: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+TINYDRM_ST7586: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+FB_VIRTUAL: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=m]
+
+DVB_MXL5XX: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_DDBRIDGE [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+BME680: m => yes
+    Direct dependencies:  IIO [=m] && (I2C [=y] || SPI [=y])
+

@@ -1,0 +1,25 @@
+APDS9300: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+MFD_AS3722: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y && OF [=y]
+
+ATLAS_EZO_SENSOR: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+DNS_RESOLVER: n => yes
+    Direct dependencies:  NET [=n] && KEYS [=y]
+    Reverse dependencies: CEPH_LIB_USE_DNS_RESOLVER [=n] && NET [=n] && CEPH_LIB [=n] || NFS_USE_KERNEL_DNS [=n] && NETWORK_FILESYSTEMS [=n] && NFS_V4 [=n] && !NFS_USE_LEGACY_DNS [=n] || CIFS_UPCALL [=n] && NETWORK_FILESYSTEMS [=n] && CIFS [=n] || CIFS_DFS_UPCALL [=n] && NETWORK_FILESYSTEMS [=n] && CIFS [=n] || AFS_FS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=n]
+
+IIO_ST_MAGN_3AXIS: n => yes
+    Direct dependencies:  IIO [=n] && (I2C [=n] || SPI_MASTER [=n]) && SYSFS [=y]
+
+LEDS_MC13783: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && MFD_MC13XXX [=n]
+
+JOYSTICK_WARRIOR: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+BLOCK: y => no
+    Direct dependencies:  y
+

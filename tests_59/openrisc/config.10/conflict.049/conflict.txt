@@ -1,0 +1,31 @@
+REGULATOR_MP8859: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+HID_LED: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+    Reverse dependencies: HID_THINGM [=n] && INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+
+SENSORS_GSC: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_GATEWORKS_GSC [=n]
+
+THERMAL_DEFAULT_GOV_USER_SPACE: n => yes
+    Direct dependencies:  <choice>
+
+IO_URING: y => no
+    Direct dependencies:  y
+
+REGULATOR_LTC3589: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+APDS9802ALS: n => yes
+    Direct dependencies:  I2C [=n]
+
+UDMABUF: n => yes
+    Direct dependencies:  DMA_SHARED_BUFFER [=n] && (MEMFD_CREATE [=y] || COMPILE_TEST [=n])
+
+ADF4350: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+VIDEO_S5C73M3: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && SPI [=n] && VIDEO_V4L2 [=n]
+

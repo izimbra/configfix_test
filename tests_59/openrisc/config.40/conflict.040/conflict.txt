@@ -1,0 +1,26 @@
+MMC_SDHCI_OF_ASPEED: n => yes
+    Direct dependencies:  MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=y] && OF_ADDRESS [=y]
+
+GENERIC_ADC_BATTERY: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && IIO [=n]
+
+HID_CMEDIA: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+TEST_STRING_HELPERS: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+MEDIA_TUNER_XC4000: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_DIB0700 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || MEDIA_TUNER [=n] && MEDIA_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+XILINX_XADC: n => yes
+    Direct dependencies:  IIO [=n] && HAS_IOMEM [=y]
+
+SYSTEM_TRUSTED_KEYRING: y => no
+    Direct dependencies:  CRYPTO [=y] && KEYS [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y]
+
+HID_NTI: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+

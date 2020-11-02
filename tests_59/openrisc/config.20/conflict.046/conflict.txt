@@ -1,0 +1,31 @@
+SCSI_SAS_ATTRS: y => no
+    Direct dependencies:  SCSI [=y]
+    Reverse dependencies: SCSI_SAS_LIBSAS [=y] && SCSI [=y] || SCSI_HPSA [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=y] || SCSI_MPT3SAS [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=y] || SCSI_SMARTPQI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=y] && !S390 || FUSION_SAS [=n] && FUSION [=n] && PCI [=n] && SCSI [=y]
+
+CHARGER_88PM860X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && MFD_88PM860X [=n] && BATTERY_88PM860X [=n]
+
+INPUT_ADXL34X_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && INPUT_ADXL34X [=n] && SPI [=y]
+
+LTC2471: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+TEST_STACKINIT: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=n] && MFD_DA9062 [=n]
+
+MB1232: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+REGULATOR_ACT8865: n => yes
+    Direct dependencies:  REGULATOR [=y] && I2C [=n] && POWER_SUPPLY [=n]
+
+HID_ACRUX: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+JOYSTICK_AS5011: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && I2C [=n]
+

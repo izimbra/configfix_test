@@ -1,0 +1,14 @@
+FB_MODE_HELPERS: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n]
+    Reverse dependencies: FB_CLPS711X [=n] && HAS_IOMEM [=y] && FB [=n] && (ARCH_CLPS711X || COMPILE_TEST [=n]) || FB_IMX [=n] && FB [=n] && HAVE_CLK [=n] && HAS_IOMEM [=y] && (ARCH_MXC || COMPILE_TEST [=n]) || FB_UVESA [=n] && HAS_IOMEM [=y] && FB [=n] && CONNECTOR [=n] || FB_ATMEL [=n] && FB [=n] && OF [=y] && HAVE_CLK [=n] && HAS_IOMEM [=y] && (HAVE_FB_ATMEL [=n] || COMPILE_TEST [=n]) || FB_NVIDIA [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_RIVA [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_I740 [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_I810 [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] && X86_32 && AGP_INTEL [=n] || FB_LE80578 [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] && X86 || FB_INTEL [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] && X86 && AGP_INTEL [=n] && EXPERT [=y] && !DRM_I915 [=n] || FB_RADEON [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_SAVAGE [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_NEOMAGIC [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_3DFX [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_TRIDENT [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] || FB_VT8500 [=n] && HAS_IOMEM [=y] && FB [=n]=y && ARM && ARCH_VT8500 || FB_WM8505 [=n] && FB [=n]=y && HAS_IOMEM [=y] && (ARCH_VT8500 || COMPILE_TEST [=n]) || FB_PXA [=n] && HAS_IOMEM [=y] && FB [=n] && ARCH_PXA && OF [=y] || FB_FSL_DIU [=n] && HAS_IOMEM [=y] && FB [=n] && FSL_SOC || FB_SMSCUFX [=n] && HAS_IOMEM [=y] && FB [=n] && USB [=n] || FB_UDL [=n] && HAS_IOMEM [=y] && FB [=n] && USB [=n] || FB_DA8XX [=n] && FB [=n] && HAVE_CLK [=n] && HAS_IOMEM [=y] && (ARCH_DAVINCI_DA8XX || SOC_AM33XX || COMPILE_TEST [=n]) || FB_SM750 [=n] && STAGING [=n] && FB [=n] && PCI [=n]
+
+IIO_BUFFER_CB: n => yes
+    Direct dependencies:  IIO [=n] && IIO_BUFFER [=n]
+    Reverse dependencies: TOUCHSCREEN_ADC [=n] && !UML && INPUT [=n] && INPUT_TOUCHSCREEN [=n] && IIO [=n] || SND_SOC_STM32_DFSDM [=n] && SOUND [=m] && !UML && SND [=n] && (ARCH_STM32 || COMPILE_TEST [=n]) && SND_SOC [=n] && STM32_DFSDM_ADC [=n] || LMP91000 [=n] && IIO [=n] && I2C [=y]
+
+RTC_DRV_BQ32K: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+VIDEO_RDACM20: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+

@@ -1,0 +1,34 @@
+CPCAP_ADC: n => yes
+    Direct dependencies:  IIO [=y] && MFD_CPCAP [=n]
+
+DEBUG_RT_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && RT_MUTEXES [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y]
+
+KEYBOARD_TCA6416: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y]
+
+SPI_NXP_FLEXSPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_LAYERSCAPE || HAS_IOMEM [=y])
+
+DRM_PANEL_TPO_TD043MTEA1: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && REGULATOR [=y] && SPI [=n]
+
+IIO_BUFFER_CB: y => no
+    Direct dependencies:  IIO [=y] && IIO_BUFFER [=y]
+    Reverse dependencies: TOUCHSCREEN_ADC [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] && IIO [=y] || SND_SOC_STM32_DFSDM [=n] && SOUND [=y] && !UML && SND [=y] && (ARCH_STM32 || COMPILE_TEST [=n]) && SND_SOC [=n] && STM32_DFSDM_ADC [=n] || LMP91000 [=y] && IIO [=y] && I2C [=y]
+
+LEDS_DAC124S085: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && SPI [=n]
+
+CRYPTO_CBC: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CEPH_LIB [=n] && NET [=n] && INET [=n] || XFRM_ESP [=n] && NET [=n] && INET [=n] || BLK_DEV_CRYPTOLOOP [=n] && BLK_DEV [=n] && BLK_DEV_LOOP [=n] || DM_CRYPT [=y] && MD [=y] && BLK_DEV_DM [=y] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || FS_ENCRYPTION_ALGS [=n] || ECRYPT_FS [=y] && MISC_FILESYSTEMS [=y] && KEYS [=y] && CRYPTO [=y] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || ENCRYPTED_KEYS [=y] && KEYS [=y] || CRYPTO_DEV_SUN8I_CE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=n] && PM || CRYPTO_DEV_SUN8I_SS [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=n] && PM || CRYPTO_DEV_PICOXCELL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=n]) && HAVE_CLK [=y] || CRYPTO_DEV_MXS_DCP [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC) || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+OF_DYNAMIC: y => no
+    Direct dependencies:  OF [=y]
+    Reverse dependencies: HOTPLUG_PCI_POWERNV [=n] && PCI [=n] && HOTPLUG_PCI [=n] && PPC_POWERNV && EEH || OF_OVERLAY [=y] && OF [=y] || I2C_DEMUX_PINCTRL [=y] && I2C [=y] && I2C_MUX [=y] && PINCTRL [=y] && OF [=y]
+
+KEYBOARD_QT2160: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y]
+

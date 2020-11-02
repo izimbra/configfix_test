@@ -1,0 +1,25 @@
+HID_A4TECH: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+IQS624_POS: n => yes
+    Direct dependencies:  IIO [=n] && (MFD_IQS62X [=n] || COMPILE_TEST [=y])
+
+DEBUG_PER_CPU_MAPS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && SMP [=n]
+
+SENSORS_SHTC1: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+TEST_BITFIELD: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+VIDEO_MT9M032: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+HID_PANTHERLORD: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+FRAME_POINTER: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && (M68K || UML || SUPERH) || ARCH_WANT_FRAME_POINTERS [=y]
+    Reverse dependencies: LATENCYTOP [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] && !MIPS && !PPC && !S390 && !MICROBLAZE && !ARM && !ARC && !X86 || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && !MIPS && !PPC && !ARM && !S390 && !MICROBLAZE && !ARC && !X86 || FAULT_INJECTION_STACKTRACE_FILTER [=n] && FAULT_INJECTION_DEBUG_FS [=n] && STACKTRACE_SUPPORT [=y] && !X86_64 && !MIPS && !PPC && !S390 && !MICROBLAZE && !ARM && !ARC && !X86
+

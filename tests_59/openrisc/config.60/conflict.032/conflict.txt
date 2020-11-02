@@ -1,0 +1,23 @@
+W1_SLAVE_DS2780: m => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2780 [=m] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+AFE4403: n => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+CACHEFILES: n => mod
+    Direct dependencies:  FSCACHE [=m] && BLOCK [=n]
+
+FPGA_DFL_AFU: n => mod
+    Direct dependencies:  FPGA [=n] && FPGA_DFL [=n]
+
+DRM_DW_HDMI_CEC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && DRM_DW_HDMI [=n]
+
+DVB_CX24110: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_BT8XX [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && PCI [=n] && I2C [=y] && VIDEO_BT848 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+AD5755: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+

@@ -1,0 +1,24 @@
+CAN_CC770_PLATFORM: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && CAN_CC770 [=n]
+
+DMARD09: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SENSORS_ADM1021: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+AD7192: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+HID_THINGM: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=m] && LEDS_CLASS [=y]
+
+GENERIC_ADC_THERMAL: m => yes
+    Direct dependencies:  THERMAL [=y] && IIO [=m]
+
+SENSORS_TMP108: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+FSI_NEW_DEV_NODE: n => yes
+    Direct dependencies:  FSI [=n]
+

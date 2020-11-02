@@ -1,0 +1,15 @@
+DRM_TOSHIBA_TC358764 => yes
+DRM_PANEL_SITRONIX_ST7701 => yes
+MCP3422 => yes
+CRC8 => no
+TCS3472 => yes
+DRM => yes
+FB => yes
+IIO => yes
+IIO_KFIFO_BUF => yes
+GPIO_MAX3191X => yes
+SPS30 => yes
+ICP10100 => yes
+SENSIRION_SGP30 => yes
+AD7280 => yes
+SCD30_I2C => yes

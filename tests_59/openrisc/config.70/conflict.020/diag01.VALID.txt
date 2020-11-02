@@ -1,0 +1,9 @@
+LEDS_88PM860X => yes
+TI_AM335X_ADC => yes
+CCS811 => yes
+REGULATOR_MT6323 => mod
+LEDS_CLASS => yes
+IIO_KFIFO_BUF => yes
+MFD_TI_AM335X_TSCADC => yes
+IIO => yes
+MFD_MT6397 => yes

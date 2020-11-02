@@ -1,0 +1,23 @@
+CAN_GRCAN: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && OF [=y] && HAS_DMA [=y]
+
+VSOCKETS_DIAG: n => yes
+    Direct dependencies:  NET [=n] && VSOCKETS [=n]
+
+CPCAP_ADC: n => yes
+    Direct dependencies:  IIO [=y] && MFD_CPCAP [=n]
+
+RMI4_F11: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+
+DRM_PANEL_SONY_ACX565AKM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+NVMEM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: USB4 [=n] && PCI [=n] || EEPROM_AT24 [=y] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=n] && SYSFS [=y] || EEPROM_93XX46 [=n] && SPI [=n] && SYSFS [=y] || RTC_NVMEM [=n] && RTC_CLASS [=y]
+
+STMPE_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_STMPE [=y] && SPI_MASTER [=n]
+

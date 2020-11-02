@@ -1,0 +1,19 @@
+PINCTRL_MCP23S08: n => yes
+    Direct dependencies:  PINCTRL [=y] && (SPI_MASTER [=n] || I2C [=n])
+
+RTC_DRV_PALMAS: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n] && MFD_PALMAS [=n]
+
+LTR501: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+DVB_OR51132: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_CX88_DVB [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX88 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+APDS9802ALS: n => yes
+    Direct dependencies:  I2C [=n]
+
+IPMI_WATCHDOG: n => yes
+    Direct dependencies:  IPMI_HANDLER [=n]
+

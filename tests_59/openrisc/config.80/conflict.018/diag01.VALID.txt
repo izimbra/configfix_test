@@ -1,0 +1,11 @@
+MMC_BLOCK => yes
+AD2S1200 => yes
+BATTERY_CPCAP => yes
+CAN_SJA1000 => yes
+MMC => yes
+MMC_BLOCK_MINORS => 256
+SPI => yes
+MFD_CPCAP => yes
+CAN => yes
+NET => yes
+CAN_DEV => yes

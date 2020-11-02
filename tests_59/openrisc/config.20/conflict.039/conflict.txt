@@ -1,0 +1,24 @@
+SENSORS_CORSAIR_CPRO: n => yes
+    Direct dependencies:  HWMON [=n] && HID [=n]
+
+HID_RMI: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+REGULATOR_FAN53555: n => yes
+    Direct dependencies:  REGULATOR [=y] && I2C [=n]
+
+RTC_DRV_MC13XXX: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && MFD_MC13XXX [=n]
+
+INPUT_MAX77650_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_MAX77650 [=n]
+
+SAMPLE_TRACE_PRINTK: n => no
+    Direct dependencies:  SAMPLES [=n] && EVENT_TRACING [=n] && m && MODULES [=n]
+
+MPL3115: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+SENSORS_ADT7410: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

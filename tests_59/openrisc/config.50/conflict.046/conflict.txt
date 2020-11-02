@@ -1,0 +1,33 @@
+SPI_TLE62X0: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && SYSFS [=y]
+
+RTC_DRV_MC13XXX: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && MFD_MC13XXX [=y]
+
+MMC_SDHCI_CADENCE: n => yes
+    Direct dependencies:  MMC [=y] && MMC_SDHCI_PLTFM [=n] && OF [=y]
+
+FIND_BIT_BENCHMARK: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+SENSORS_DME1737: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y] && !PPC
+
+VIDEO_SAA7127: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && VIDEO_V4L2 [=y] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=y] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=y] && PCI [=n] && I2C [=y] && RC_CORE [=y]
+
+W1_SLAVE_DS2780: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2780 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+SENSORS_GSC: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_GATEWORKS_GSC [=y]
+
+KEYBOARD_NEWTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n]
+
+IIO_TRIGGER: y => no
+    Direct dependencies:  IIO [=y]
+    Reverse dependencies: IIO_TRIGGERED_EVENT [=n] && IIO [=y] || IIO_TRIGGERED_BUFFER [=y] && IIO [=y] && IIO_BUFFER [=y] || AD7266 [=n] && IIO [=y] && SPI_MASTER [=n] || AD7768_1 [=n] && IIO [=y] && SPI [=n] || HID_SENSOR_IIO_TRIGGER [=y] && IIO [=y] && HID_SENSOR_HUB [=y] && HID_SENSOR_IIO_COMMON [=y] && IIO_BUFFER [=y] || IIO_SIMPLE_DUMMY_BUFFER [=n] && IIO [=y] && IIO_SIMPLE_DUMMY [=n]
+

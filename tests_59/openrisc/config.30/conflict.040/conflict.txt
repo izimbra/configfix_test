@@ -1,0 +1,25 @@
+CRYPTO_DEV_VIRTIO: n => yes
+    Direct dependencies:  CRYPTO [=y] && CRYPTO_HW [=n] && VIRTIO [=y]
+
+DRM_PANEL_NEC_NL8048HL11: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=n]
+
+CAN_FLEXCAN: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && OF [=y] && HAS_IOMEM [=y]
+
+SENSORS_W83793: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+VIDEO_IMX219: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+DVB_A8293: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=y] && INPUT [=n] && SND [=n] && RC_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+REGULATOR_BCM590XX: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_BCM590XX [=n]
+
+DVB_DEMUX_SECTION_LOSS_LOG: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && DVB_CORE [=n]
+

@@ -1,0 +1,30 @@
+SENSORS_ADM9240: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+INPUT_STPMIC1_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_STPMIC1 [=n]
+
+BACKLIGHT_88PM860X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_88PM860X [=n]
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+VIDEO_S5C73M3: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && SPI [=n] && VIDEO_V4L2 [=n]
+
+XZ_DEC_ARM: y => no
+    Direct dependencies:  XZ_DEC [=y]
+
+BMC150_ACCEL: n => yes
+    Direct dependencies:  IIO [=n]
+
+TEST_BLACKHOLE_DEV: n => no
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n] && m && MODULES [=n] && NET [=y]
+
+PINCTRL_MAX77620: n => yes
+    Direct dependencies:  PINCTRL [=n] && MFD_MAX77620 [=y] && OF [=y]
+
+SENSORS_MAX31790: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+

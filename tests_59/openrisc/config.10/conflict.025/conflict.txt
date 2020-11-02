@@ -1,0 +1,16 @@
+CONNECTOR: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: DM_LOG_USERSPACE [=n] && MD [=n] && DM_MIRROR [=n] && NET [=n]
+
+DEBUG_NOTIFIERS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+ADIS16400: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+MMC_SDHCI_F_SDH30: n => yes
+    Direct dependencies:  MMC [=n] && MMC_SDHCI_PLTFM [=n] && (OF [=y] || ACPI)
+
+DRM_SII902X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+

@@ -1,0 +1,16 @@
+DM_VERITY_VERIFY_ROOTHASH_SIG: n => yes
+    Direct dependencies:  MD [=n] && DM_VERITY [=n]
+
+LEDS_LM3697: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TI_LMU_COMMON [=n] && I2C [=y] && OF [=y]
+
+MEDIA_TUNER_QM1D1C0042: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_DVB [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_PT3 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+IIO_SIMPLE_DUMMY_EVENTS: n => yes
+    Direct dependencies:  IIO [=m] && IIO_SIMPLE_DUMMY [=n]
+
+RT_GROUP_SCHED: n => yes
+    Direct dependencies:  CGROUPS [=y] && CGROUP_SCHED [=n]
+

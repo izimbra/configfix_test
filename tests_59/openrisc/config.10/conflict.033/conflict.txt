@@ -1,0 +1,23 @@
+NLS_CODEPAGE_860: n => yes
+    Direct dependencies:  NLS [=n]
+
+RTC_DRV_M41T80_WDT: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n] && RTC_DRV_M41T80 [=n]
+
+VIDEO_OV2640: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] && MEDIA_CAMERA_SUPPORT [=n]
+
+MEDIA_TUNER_MXL5007T: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_AU0828 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && I2C [=n] && INPUT [=y] && DVB_CORE [=n] && USB [=n] && VIDEO_V4L2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_DIB0700 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_AF9015 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && I2C_MUX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_AF9035 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+THERMAL_NETLINK: n => yes
+    Direct dependencies:  THERMAL [=n] && NET [=n]
+
+TI_AM335X_ADC: n => yes
+    Direct dependencies:  IIO [=n] && MFD_TI_AM335X_TSCADC [=n] && HAS_DMA [=y]
+
+BACKLIGHT_LP855X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && I2C [=n] && PWM [=n]
+

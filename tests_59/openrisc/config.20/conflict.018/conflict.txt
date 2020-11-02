@@ -1,0 +1,12 @@
+CAN_CALC_BITTIMING: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n]
+
+SAMPLE_TRACE_PRINTK: n => no
+    Direct dependencies:  SAMPLES [=n] && EVENT_TRACING [=n] && m && MODULES [=n]
+
+HSR: n => yes
+    Direct dependencies:  NET [=n]
+
+SENSORS_AXI_FAN_CONTROL: n => yes
+    Direct dependencies:  HWMON [=n]
+

@@ -1,0 +1,12 @@
+LEDS_EL15203000 => yes
+CPCAP_ADC => yes
+MAX9611 => yes
+FXOS8700_I2C => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+IIO_BUFFER => yes
+IIO_TRIGGER => yes
+IIO_CONSUMERS_PER_TRIGGER => 0
+I2C => yes

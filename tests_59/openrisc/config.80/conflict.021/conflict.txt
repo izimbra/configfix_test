@@ -1,0 +1,17 @@
+MEDIA_TUNER_TDA9887: y => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=y] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=y] && MEDIA_SUPPORT [=y] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=n]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || MEDIA_TUNER_SIMPLE [=y] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=y] && I2C [=y]
+
+SPI_FSI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && FSI [=n]
+
+SPI_SPIDEV: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+MMC_SDHCI_PLTFM: n => yes
+    Direct dependencies:  MMC [=n] && MMC_SDHCI [=n]
+
+SPI_MEM: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+    Reverse dependencies: MTD_SPI_NOR [=n] && MTD [=y] && SPI_MASTER [=n] || MTD_SPI_NAND [=n] && MTD [=y] && SPI_MASTER [=n]
+

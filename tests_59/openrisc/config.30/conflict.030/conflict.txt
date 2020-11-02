@@ -1,0 +1,18 @@
+BATTERY_GOLDFISH: n => mod
+    Direct dependencies:  POWER_SUPPLY [=n] && (GOLDFISH [=n] || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+
+VIDEO_ADP1653: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+INPUT_EVDEV: n => mod
+    Direct dependencies:  !UML && INPUT [=n]
+
+HID_KYE: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+RTC_DRV_DS1307: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+VIDEO_MT9M111: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+

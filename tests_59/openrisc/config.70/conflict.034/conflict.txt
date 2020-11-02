@@ -1,0 +1,24 @@
+REGULATOR_PALMAS: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_PALMAS [=n]
+
+ITG3200: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRYPTO_CTR: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MAC802154 [=n] && NET [=y] && IEEE802154 [=y] || AIRO_CS [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_CISCO [=n] && CFG80211 [=m] && PCMCIA [=m] || CRYPTO_CCM [=m] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_DRBG_CTR [=y] && CRYPTO [=y] && CRYPTO_DRBG_MENU [=y] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_ARTPEC6 [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARM && (ARCH_ARTPEC || COMPILE_TEST [=n]) && OF [=y] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+VCNL4035: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+DVB_RTL2832: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y] && I2C_MUX [=y]
+    Reverse dependencies: DVB_USB_RTL28XXU [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=n] && I2C_MUX [=y] || DVB_RTL2832_SDR [=n] && MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y] && I2C_MUX [=y] && VIDEO_V4L2 [=m] && MEDIA_SDR_SUPPORT [=y] && USB [=n]
+
+VL6180: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SYSTEM_TRUSTED_KEYRING: y => no
+    Direct dependencies:  CRYPTO [=y] && KEYS [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y]
+

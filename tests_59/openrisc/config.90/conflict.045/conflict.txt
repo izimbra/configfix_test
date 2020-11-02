@@ -1,0 +1,28 @@
+BMG160: m => yes
+    Direct dependencies:  IIO [=m] && (I2C [=y] || SPI_MASTER [=y])
+
+DVB_S5H1432: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+
+LTR501: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+AL3010: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+DRM_PANEL_SEIKO_43WVF1G: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+VIDEO_AD9389B: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+MEDIA_TUNER_MXL301RF: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: DVB_PT3 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+MPL115_SPI: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+TRIM_UNUSED_KSYMS: n => yes
+    Direct dependencies:  MODULES [=y] && !UNUSED_SYMBOLS [=y]
+

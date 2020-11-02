@@ -1,0 +1,15 @@
+ALLOW_DEV_COREDUMP: y => no
+    Direct dependencies:  y
+
+SENSORS_TMP108: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+MFD_TPS65218: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && OF [=y]
+
+DRM_PANEL_SAMSUNG_S6E63M0: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+
+CM36651: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

@@ -1,0 +1,20 @@
+CRYPTO_JITTERENTROPY: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DRBG [=y] && CRYPTO [=y] && CRYPTO_DRBG_MENU [=y]
+
+TI_ADC081C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+REGULATOR_TPS65912: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_TPS65912 [=m]
+
+DVB_ASCOT2E: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_NETUP_UNIDVB [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=y] && SPI_MASTER [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+TINYDRM_ILI9486: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+CC_OPTIMIZE_FOR_SIZE: y => no
+    Direct dependencies:  <choice>
+

@@ -1,0 +1,26 @@
+SENSORS_AS370: n => yes
+    Direct dependencies:  HWMON [=n]
+
+MEDIA_TUNER_XC4000: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_DIB0700 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || MEDIA_TUNER [=n] && MEDIA_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && I2C [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+EEPROM_EE1004: n => yes
+    Direct dependencies:  I2C [=n] && SYSFS [=y]
+
+MEDIA_RADIO_SUPPORT: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+EXTCON_MAX14577: n => yes
+    Direct dependencies:  EXTCON [=n] && MFD_MAX14577 [=n]
+
+DVB_SP8870: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_AV7110 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=n] && VIDEO_DEV [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+SPI_CADENCE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+DRM_THINE_THC63LVD1024: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+

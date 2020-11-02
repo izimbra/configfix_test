@@ -1,0 +1,15 @@
+SPI_NXP_FLEXSPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_LAYERSCAPE || HAS_IOMEM [=y])
+
+INPUT_AXP20X_PEK: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_AXP20X [=n]
+
+TI_TLC4541: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+SENSORS_MAX31722: n => yes
+    Direct dependencies:  HWMON [=y] && SPI [=n]
+
+TI_ADC084S021: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+

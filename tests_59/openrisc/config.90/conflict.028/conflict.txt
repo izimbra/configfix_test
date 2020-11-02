@@ -1,0 +1,21 @@
+MEDIA_TUNER_MT20XX: m => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=m] && MEDIA_SUPPORT [=m] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+VIDEO_MT9M032: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+LEDS_AS3645A: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && I2C [=y] && LEDS_CLASS_FLASH [=y] && (V4L2_FLASH_LED_CLASS [=m] || !V4L2_FLASH_LED_CLASS [=m])
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => no
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+
+LOOPBACK_TARGET: m => yes
+    Direct dependencies:  TARGET_CORE [=y] && SCSI [=m]
+
+VIDEO_OV2640: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_EM28XX [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] && MEDIA_CAMERA_SUPPORT [=y]
+

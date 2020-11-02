@@ -1,0 +1,30 @@
+EXT4_KUNIT_TESTS: y => no
+    Direct dependencies:  BLOCK [=y] && KUNIT [=y]
+
+CAN_M_CAN_PLATFORM: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y] && CAN_M_CAN [=n]
+
+CAN_CC770: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+
+RMI4_F12: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+
+JFS_DEBUG: n => yes
+    Direct dependencies:  BLOCK [=y] && JFS_FS [=n]
+
+SENSORS_LTC2947_SPI: n => yes
+    Direct dependencies:  HWMON [=y] && SPI_MASTER [=n]
+
+THERMAL_GOV_FAIR_SHARE: y => no
+    Direct dependencies:  THERMAL [=y]
+    Reverse dependencies: THERMAL_DEFAULT_GOV_FAIR_SHARE [=y] && <choice>
+
+TI_ADC084S021: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+DEBUG_RT_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && RT_MUTEXES [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y]
+

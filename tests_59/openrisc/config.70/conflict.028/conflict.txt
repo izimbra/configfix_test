@@ -1,0 +1,20 @@
+ATA_SFF: n => yes
+    Direct dependencies:  ATA [=n]
+
+CONFIGFS_FS: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: TARGET_CORE [=y] && BLOCK [=y] || PCI_ENDPOINT_CONFIGFS [=n] && PCI [=n] && PCI_ENDPOINT [=n] || BLK_DEV_NULL_BLK [=y] && BLK_DEV [=y] || USB_LIBCOMPOSITE [=n] && USB_SUPPORT [=n] && USB_GADGET [=n] || IIO_CONFIGFS [=m] && IIO [=m] || STM [=y]
+
+TCG_TPM: y => mod
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: IMA [=y] && INTEGRITY [=y] && HAS_IOMEM [=y] && !UML
+
+MAC80211: m => yes
+    Direct dependencies:  NET [=y] && WIRELESS [=y] && CFG80211 [=m]
+
+AD5686_SPI: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+OF_FPGA_REGION: n => yes
+    Direct dependencies:  FPGA [=n] && OF [=y] && FPGA_REGION [=n]
+

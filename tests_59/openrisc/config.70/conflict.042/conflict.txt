@@ -1,0 +1,30 @@
+VIDEO_ADV7170: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+BMG160: m => yes
+    Direct dependencies:  IIO [=m] && (I2C [=y] || SPI_MASTER [=y])
+
+CONNECTOR: y => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: DM_LOG_USERSPACE [=m] && MD [=y] && DM_MIRROR [=m] && NET [=y]
+
+BLK_CMDLINE_PARSER: y => no
+    Direct dependencies:  BLOCK [=y]
+    Reverse dependencies: CMDLINE_PARTITION [=y] && BLOCK [=y]
+
+REGULATOR_WM8994: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_WM8994 [=n]
+
+VIDEO_TEA6420: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && PCI [=n] && VIDEO_V4L2 [=m] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+INPUT_MAX77693_HAPTIC: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_MAX77693 [=y] || MFD_MAX77843 [=n]) && PWM [=y]
+
+LEDS_PCA963X: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && I2C [=y]
+
+VIDEO_LM3646: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+

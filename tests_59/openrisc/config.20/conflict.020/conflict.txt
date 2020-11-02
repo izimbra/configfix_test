@@ -1,0 +1,12 @@
+LEDS_EL15203000: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && SPI [=y] && OF [=y]
+
+CPCAP_ADC: n => yes
+    Direct dependencies:  IIO [=n] && MFD_CPCAP [=y]
+
+MAX9611: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+FXOS8700_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

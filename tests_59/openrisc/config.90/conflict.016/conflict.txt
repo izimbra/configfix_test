@@ -1,0 +1,13 @@
+SD_ADC_MODULATOR: m => yes
+    Direct dependencies:  IIO [=m] && OF [=y]
+
+MAC80211_RC_DEFAULT_MINSTREL: y => no
+    Direct dependencies:  <choice> && MAC80211_RC_MINSTREL [=y]
+
+CRYPTO_RSA: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=n] && PCI_MSI [=n] && (UACCE [=y] || UACCE [=y]=n) && (ARM64 || COMPILE_TEST [=y] && 64BIT) && ACPI || CRYPTO_DEV_FSL_CAAM_PKC_API [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_FSL_CAAM [=n] && CRYPTO_DEV_FSL_CAAM_JR [=n] || CRYPTO_DEV_CCP_CRYPTO [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_CCP [=n] && CRYPTO_DEV_CCP_DD [=n] && CRYPTO_DEV_SP_CCP [=n]
+
+MEN_Z188_ADC: n => yes
+    Direct dependencies:  IIO [=m] && MCB [=n]
+

@@ -1,0 +1,12 @@
+ZSWAP_COMPRESSOR_DEFAULT_DEFLATE: n => yes
+    Direct dependencies:  <choice>
+
+DVB_MN88443X: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y]
+
+RTC_DRV_M41T94: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+MODULE_SRCVERSION_ALL: n => yes
+    Direct dependencies:  MODULES [=n]
+

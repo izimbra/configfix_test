@@ -1,0 +1,16 @@
+SPI_MUX: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+CAN_M_CAN_PLATFORM: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y] && CAN_M_CAN [=n]
+
+SYSTEM_TRUSTED_KEYRING: y => no
+    Direct dependencies:  CRYPTO [=y] && KEYS [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y]
+
+AD5791: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+MMC_SDHCI_OMAP: n => yes
+    Direct dependencies:  MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=y]
+

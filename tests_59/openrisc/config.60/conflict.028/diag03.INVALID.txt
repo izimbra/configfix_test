@@ -1,0 +1,17 @@
+ADXL372_SPI => yes
+VIDEO_BT819 => yes
+DRM_SII902X => yes
+RAID6_PQ_BENCHMARK => yes
+RAW_DRIVER => mod
+SENSORS_TC74 => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes
+DRM => yes
+I2C_MUX => yes
+BLOCK => yes
+MAX_RAW_DEVS => 1
+PARTITION_ADVANCED => yes
+KUNIT_ALL_TESTS => no
+HWMON => yes

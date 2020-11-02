@@ -1,0 +1,14 @@
+BLK_DEV_INITRD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BOOT_CONFIG [=y]
+
+VEML6070: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SCSI_CONSTANTS: n => yes
+    Direct dependencies:  SCSI [=n]
+
+XZ_DEC: y => no
+    Direct dependencies:  y
+    Reverse dependencies: FW_LOADER_COMPRESS [=y] && FW_LOADER [=y] || MLXFW [=n] && NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_MELLANOX [=n] || SQUASHFS_XZ [=y] && MISC_FILESYSTEMS [=y] && SQUASHFS [=m] || DECOMPRESS_XZ [=y]
+

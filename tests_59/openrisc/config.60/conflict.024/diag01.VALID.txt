@@ -1,0 +1,15 @@
+SENSORS_MAX6642 => yes
+MODULE_SIG_SHA256 => no
+SENSORS_LTC2947_I2C => yes
+TSL2772 => yes
+CRYPTO_STATS => yes
+HWMON => yes
+ADIS16480 => yes
+ADIS16203 => yes
+IIO => yes
+ADIS16201 => yes
+ADIS16260 => yes
+ADIS16240 => yes
+ADIS16209 => yes
+CRYPTO_USER => mod
+NET => yes

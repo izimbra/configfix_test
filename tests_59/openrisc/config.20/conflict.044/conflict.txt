@@ -1,0 +1,32 @@
+VIDEO_TEA6420: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && PCI [=n] && VIDEO_V4L2 [=n] && I2C [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+DVB_A8293: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_EM28XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=n] && INPUT [=y] && SND [=n] && RC_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+MUX_ADGS1408: n => yes
+    Direct dependencies:  MULTIPLEXER [=n] && SPI [=y]
+
+RTC_DRV_PCF8583: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+
+MUX_MMIO: n => yes
+    Direct dependencies:  MULTIPLEXER [=n] && (OF [=y] || COMPILE_TEST [=n])
+    Reverse dependencies: PHY_AM654_SERDES [=n] && (OF [=y] && ARCH_K3 || COMPILE_TEST [=n]) && COMMON_CLK [=n] || PHY_J721E_WIZ [=n] && (OF [=y] && ARCH_K3 || COMPILE_TEST [=n]) && HAS_IOMEM [=y] && OF_ADDRESS [=y] && COMMON_CLK [=n]
+
+DVB_TUNER_CX24113: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_B2C2_FLEXCOP [=n] && MEDIA_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n] && (DVB_B2C2_FLEXCOP_PCI [=n] || DVB_B2C2_FLEXCOP_USB [=n]) && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+VIDEO_ADV7393: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+
+DVB_ATBM8830: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_CXUSB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+HID_PICOLCD_BACKLIGHT: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_PICOLCD [=n] && (HID_PICOLCD [=n]=BACKLIGHT_CLASS_DEVICE [=n] || BACKLIGHT_CLASS_DEVICE [=n]=y)
+

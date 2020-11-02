@@ -1,0 +1,13 @@
+SCSI_DH_HP_SW: m => yes
+    Direct dependencies:  SCSI_DH [=y] && SCSI [=m]
+
+VIDEO_M52790: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=n] && I2C [=y] && RC_CORE [=m]
+
+VIDEO_OV2659: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y] && GPIOLIB [=y]
+
+SRF08: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

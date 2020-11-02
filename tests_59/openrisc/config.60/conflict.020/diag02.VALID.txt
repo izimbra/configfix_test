@@ -1,0 +1,16 @@
+AHCI_CEVA => yes
+BCACHE_ASYNC_REGISTRATION => yes
+DVB_TDA826X => mod
+MAX5481 => yes
+ATA => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+EXT4_KUNIT_TESTS => yes
+SCSI => yes
+EXT4_FS => yes
+BCACHE => yes
+MD => yes
+MEDIA_DIGITAL_TV_SUPPORT => yes
+DVB_MAX_ADAPTERS => 255
+IIO_KFIFO_BUF => yes
+IIO => yes

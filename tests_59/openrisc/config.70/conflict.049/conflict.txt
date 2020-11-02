@@ -1,0 +1,34 @@
+DVB_DIB9000: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+
+INV_MPU6050_I2C: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+HID: y => mod
+    Direct dependencies:  INPUT [=y]
+    Reverse dependencies: BT_HIDP [=n] && NET [=y] && BT_BREDR [=n] && INPUT [=y] || USB_HID [=n] && USB [=n] && INPUT [=y] || I2C_HID [=y] && I2C [=y] && INPUT [=y] || INTEL_ISH_HID [=n] && INPUT [=y] && (X86_64 || COMPILE_TEST [=n]) && PCI [=n]
+
+SCSI_SAS_ATTRS: n => mod
+    Direct dependencies:  SCSI [=n]
+    Reverse dependencies: SCSI_SAS_LIBSAS [=n] && SCSI [=n] || SCSI_HPSA [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_MPT3SAS [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_SMARTPQI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && !S390 || FUSION_SAS [=n] && FUSION [=n] && PCI [=n] && SCSI [=n]
+
+VIDEO_BT819: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+LEDS_MENF21BMC: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && MFD_MENF21BMC [=y]
+
+SI1145: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRYPTO_DH: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: KEY_DH_OPERATIONS [=y] && KEYS [=y] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=n] && PCI_MSI [=n] && (UACCE [=n] || UACCE [=n]=n) && (ARM64 || COMPILE_TEST [=n] && 64BIT) && ACPI
+
+OF: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OPENRISC [=y]
+
+BACKLIGHT_QCOM_WLED: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+

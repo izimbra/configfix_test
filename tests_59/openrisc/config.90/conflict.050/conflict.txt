@@ -1,0 +1,32 @@
+CRYPTO_MANAGER_EXTRA_TESTS: n => yes
+    Direct dependencies:  CRYPTO [=y] && DEBUG_KERNEL [=y] && !CRYPTO_MANAGER_DISABLE_TESTS [=y]
+
+RN5T618_ADC: n => mod
+    Direct dependencies:  IIO [=m] && MFD_RN5T618 [=n]
+
+VIDEO_ADP1653: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+IPMI_POWEROFF: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+DRM_ANALOGIX_ANX78XX: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y]
+
+DVB_TDA10048: m => no
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_PVRUSB2_DVB [=y] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_PVRUSB2 [=m] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_USB_TTUSB2 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=n] && I2C [=y] && INPUT [=y] && SND [=n] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_SAA7134_DVB [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_SAA7134 [=n] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_SAA7164 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+ATLAS_EZO_SENSOR: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+AXP20X_POWER: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_AXP20X [=y] && IIO [=m]
+
+VIDEO_SAA7127: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=n] && I2C [=y] && RC_CORE [=m]
+
+TRIM_UNUSED_KSYMS: n => yes
+    Direct dependencies:  MODULES [=y] && !UNUSED_SYMBOLS [=y]
+

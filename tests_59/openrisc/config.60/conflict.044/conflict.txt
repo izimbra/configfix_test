@@ -1,0 +1,29 @@
+MAX31856: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+ZSWAP_COMPRESSOR_DEFAULT_DEFLATE: n => yes
+    Direct dependencies:  <choice>
+
+DVB_DIB3000MB: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_DIBUSB_MB [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && (DVB_DIB3000MC [=n] || !DVB_DIB3000MC [=n])
+
+EXT4_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT4_FS [=n]
+    Reverse dependencies: EXT3_FS_POSIX_ACL [=n] && BLOCK [=n] && EXT3_FS [=n]
+
+NVM_PBLK: n => yes
+    Direct dependencies:  NVM [=n]
+
+SENSORS_MAX16065: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+CM3605: m => yes
+    Direct dependencies:  IIO [=m] && OF [=y]
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+CAN_GRCAN: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && OF [=y] && HAS_DMA [=y]
+

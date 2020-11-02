@@ -1,0 +1,21 @@
+JOYSTICK_A3D: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+VIDEO_S5C73M3: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && SPI [=y] && VIDEO_V4L2 [=n]
+
+VIDEO_SAA7185: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+
+CGROUP_RDMA: n => yes
+    Direct dependencies:  CGROUPS [=n]
+
+MFD_LM3533: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+MS5637: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+SENSORS_W83791D: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

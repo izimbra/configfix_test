@@ -1,0 +1,15 @@
+TI_TLC4541: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+PATA_OF_PLATFORM: n => yes
+    Direct dependencies:  ATA [=m] && ATA_SFF [=y] && PATA_PLATFORM [=m] && OF [=y]
+
+IPMI_POWEROFF: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+VIDEO_ADP1653: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+VIDEO_OV7251: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+

@@ -1,0 +1,14 @@
+TI_TLC4541 => yes
+PATA_OF_PLATFORM => yes
+IPMI_POWEROFF => yes
+VIDEO_ADP1653 => yes
+VIDEO_OV7251 => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+ATA => yes
+SCSI => yes
+PATA_PLATFORM => yes
+IPMI_HANDLER => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUBDRV_AUTOSELECT => no
+VIDEO_DEV => yes

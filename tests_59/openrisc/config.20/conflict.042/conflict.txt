@@ -1,0 +1,28 @@
+VIDEO_MT9P031: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+HID_TOPSEED: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+RFKILL: n => yes
+    Direct dependencies:  NET [=n]
+
+LEDS_LM3532: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=n]
+
+IIO_SIMPLE_DUMMY_BUFFER: n => yes
+    Direct dependencies:  IIO [=n] && IIO_SIMPLE_DUMMY [=n]
+
+HTU21: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+W1_SLAVE_SMEM: n => yes
+    Direct dependencies:  W1 [=n]
+
+DVB_AU8522_DTV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_AU0828 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && I2C [=n] && INPUT [=y] && DVB_CORE [=n] && USB [=n] && VIDEO_V4L2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+TEST_IDA: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+

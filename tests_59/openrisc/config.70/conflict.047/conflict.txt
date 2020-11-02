@@ -1,0 +1,31 @@
+BACKLIGHT_GPIO: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+MS5611: n => yes
+    Direct dependencies:  IIO [=m]
+
+CAN_M_CAN_PLATFORM: m => yes
+    Direct dependencies:  NET [=y] && CAN [=m] && CAN_DEV [=m] && HAS_IOMEM [=y] && CAN_M_CAN [=m]
+
+HID_THINGM: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && LEDS_CLASS [=m]
+
+LEDS_LM3642: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && I2C [=y]
+
+ADUX1020: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CCS811: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+AD7793: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+CONNECTOR: y => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: DM_LOG_USERSPACE [=m] && MD [=y] && DM_MIRROR [=m] && NET [=y]
+
+LEDS_BD2802: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && I2C [=y]
+

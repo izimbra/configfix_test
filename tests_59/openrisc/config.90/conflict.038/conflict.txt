@@ -1,0 +1,26 @@
+IPMI_SSIF: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+DRM_PANEL_ILITEK_ILI9881C: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+CRYPTO_ECDH: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BT [=m] && NET [=y] && !S390 && (RFKILL [=m] || !RFKILL [=m]) || CRYPTO_DEV_ATMEL_ECC [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && I2C [=y]
+
+RTC_DRV_88PM860X: n => mod
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_88PM860X [=n]
+
+NET_NSH: m => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: OPENVSWITCH [=m] && NET [=y] && INET [=y] && (!NF_CONNTRACK [=m] || NF_CONNTRACK [=m] && (!NF_DEFRAG_IPV6 [=y] || NF_DEFRAG_IPV6 [=y]) && (!NF_NAT [=m] || NF_NAT [=m]) && (!NETFILTER_CONNCOUNT [=m] || NETFILTER_CONNCOUNT [=m]))
+
+BMA400: n => yes
+    Direct dependencies:  IIO [=m]
+
+VIDEO_ADV748X: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y] && OF [=y]
+
+DRM_PANEL_LVDS: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+

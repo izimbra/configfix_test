@@ -1,0 +1,33 @@
+CXD2880_SPI_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && DVB_CORE [=m] && SPI [=y]
+
+VZ89X: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+VIDEO_OV5670: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+HP03: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+LEDS_88PM860X: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_88PM860X [=n]
+
+MEDIA_TUNER_MSI001: m => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && SPI [=y] && VIDEO_V4L2 [=m]
+    Reverse dependencies: USB_MSI2500 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && MEDIA_SDR_SUPPORT [=y] && VIDEO_V4L2 [=m] && SPI [=y]
+
+DVB_TDA665x: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_MANTIS [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && MANTIS_CORE [=n] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+OF_FPGA_REGION: m => yes
+    Direct dependencies:  FPGA [=m] && OF [=y] && FPGA_REGION [=m]
+
+TI_ADS7950: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y] && GPIOLIB [=y]
+
+VIDEO_M52790: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=n] && I2C [=y] && RC_CORE [=m]
+

@@ -1,0 +1,29 @@
+NVMEM_SYSFS: n => yes
+    Direct dependencies:  NVMEM [=n] && SYSFS [=y]
+    Reverse dependencies: EEPROM_AT24 [=n] && I2C [=n] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=n] && SYSFS [=y] || EEPROM_93XX46 [=n] && SPI [=n] && SYSFS [=y]
+
+SENSORS_SHT21: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+MEDIA_TUNER_QM1D1B0004: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=n]
+    Reverse dependencies: DVB_PT1 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+NL80211_TESTMODE: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && CFG80211 [=n]
+
+RMI4_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=n] && I2C [=n]
+
+LCD_LMS501KF03: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=n] && SPI [=n]
+
+DRM_SII902X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+BLK_DEV_DM: n => yes
+    Direct dependencies:  MD [=n] && (DAX [=n] || DAX [=n]=n)
+
+VIDEO_S5C73M3: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && SPI [=n] && VIDEO_V4L2 [=n]
+

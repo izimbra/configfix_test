@@ -1,0 +1,15 @@
+POSIX_TIMERS: y => no
+    Direct dependencies:  y
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => no
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+
+DVB_TUNER_CX24113: y => no
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y]
+    Reverse dependencies: DVB_B2C2_FLEXCOP [=y] && MEDIA_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y] && (DVB_B2C2_FLEXCOP_PCI [=n] || DVB_B2C2_FLEXCOP_USB [=y]) && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+KEYBOARD_GPIO_POLLED: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y]
+    Reverse dependencies: PCENGINES_APU2 [=n] && X86 && X86_PLATFORM_DEVICES [=n] && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y] && LEDS_CLASS [=y]
+

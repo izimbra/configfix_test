@@ -1,0 +1,8 @@
+SENSORS_NCT7802 => yes
+FXOS8700_I2C => yes
+RCU_EQS_DEBUG => yes
+IAQCORE => yes
+HWMON => yes
+I2C => yes
+IIO => yes
+DEBUG_KERNEL => yes

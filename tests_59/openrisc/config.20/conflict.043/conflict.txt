@@ -1,0 +1,27 @@
+SYSFS_DEPRECATED_V2: n => yes
+    Direct dependencies:  SYSFS [=y] && SYSFS_DEPRECATED [=n]
+
+VIDEO_AK7375: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+LEDS_CLASS_FLASH: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n]
+
+MFD_TPS65218: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && OF [=y]
+
+HID_A4TECH: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+MAC80211_MESSAGE_TRACING: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && MAC80211 [=n]
+
+SPI_FSI: n => yes
+    Direct dependencies:  SPI [=y] && SPI_MASTER [=y] && FSI [=n]
+
+MAG3110: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+BATTERY_CW2015: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=n]
+

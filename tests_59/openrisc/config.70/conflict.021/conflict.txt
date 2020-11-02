@@ -1,0 +1,16 @@
+DVB_MN88443X: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+
+VIDEO_TVP5150: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_EM28XX [=n] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+AXP288_ADC: n => yes
+    Direct dependencies:  IIO [=m] && MFD_AXP20X [=n]
+
+MAG3110: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+FB_S1D13XXX: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=m]
+

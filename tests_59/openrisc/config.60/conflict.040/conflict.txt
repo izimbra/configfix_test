@@ -1,0 +1,25 @@
+INPUT_RETU_PWRBUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_RETU [=m]
+
+FSI_MASTER_ASPEED: n => mod
+    Direct dependencies:  FSI [=n] && HAS_IOMEM [=y]
+
+DRM_I2C_CH7006: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_KMS_HELPER [=n] && I2C [=y]
+
+REISERFS_FS: n => mod
+    Direct dependencies:  BLOCK [=n]
+
+DVB_STB0899: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_PCTV452E [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_AZ6027 [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_BUDGET_CI [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_BUDGET_CORE [=n] && I2C [=y] && RC_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_BUDGET_AV [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_BUDGET_CORE [=n] && I2C [=y] && VIDEO_DEV [=m] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_MANTIS [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && MANTIS_CORE [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+QRTR: n => mod
+    Direct dependencies:  NET [=n]
+
+DRM_CDNS_DSI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+VL6180: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

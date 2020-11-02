@@ -1,0 +1,30 @@
+KEYBOARD_MAX7359: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y]
+
+MEDIA_TUNER_TDA18218: y => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=y] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9015 [=y] && USB [=y] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=y] && I2C_MUX [=y] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_USB_AF9035 [=n] && USB [=y] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+RTC_DRV_DS1347: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+DVB_OR51132: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y]
+    Reverse dependencies: VIDEO_CX88_DVB [=n] && MEDIA_SUPPORT [=y] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_CX88 [=n] && DVB_CORE [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+MPL115_SPI: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+MFD_DA9052_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+CXD2880_SPI_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && DVB_CORE [=y] && SPI [=n]
+
+CRYPTO_ECDH: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BT [=y] && NET [=y] && !S390 && (RFKILL [=y] || !RFKILL [=y]) || CRYPTO_DEV_ATMEL_ECC [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && I2C [=y]
+
+ZSWAP_COMPRESSOR_DEFAULT_DEFLATE: n => yes
+    Direct dependencies:  <choice>
+

@@ -1,0 +1,18 @@
+REGULATOR_MT6323: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=n]
+
+NAU7802: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+LMP91000: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+US5182D: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+NLS_CODEPAGE_850: n => yes
+    Direct dependencies:  NLS [=n]
+
+KEYBOARD_SAMSUNG: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && HAVE_CLK [=n]
+

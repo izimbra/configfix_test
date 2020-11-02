@@ -1,0 +1,31 @@
+LCD_TDO24M: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=y] && SPI_MASTER [=n]
+
+RTC_DRV_MAX6902: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && SPI_MASTER [=n]
+
+FB_GOLDFISH: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && (GOLDFISH [=n] || COMPILE_TEST [=n])
+
+CRYPTO_LIB_POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=y] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+
+LEDS_CPCAP: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_CPCAP [=n] && OF [=y]
+
+FAIL_MMC_REQUEST: n => yes
+    Direct dependencies:  FAULT_INJECTION_DEBUG_FS [=n] && MMC [=n]
+
+AXP288_ADC: n => yes
+    Direct dependencies:  IIO [=y] && MFD_AXP20X [=n]
+
+SPI_FSL_SPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && OF [=y]
+
+DECNET: n => yes
+    Direct dependencies:  NET [=n]
+
+DRM_PANEL_SAMSUNG_S6E63M0: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+

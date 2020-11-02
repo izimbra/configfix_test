@@ -1,0 +1,22 @@
+DM_LOG_USERSPACE: n => yes
+    Direct dependencies:  MD [=n] && DM_MIRROR [=n] && NET [=n]
+
+MQ_IOSCHED_KYBER: n => mod
+    Direct dependencies:  BLOCK [=n]
+
+HID_LCPOWER: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=m]
+
+MAILBOX_TEST: n => mod
+    Direct dependencies:  MAILBOX [=n] && OF [=y] && HAS_IOMEM [=y]
+
+CFG80211: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && (RFKILL [=n] || !RFKILL [=n])
+
+VIDEO_ADV748X: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y] && OF [=y]
+
+ISCSI_BOOT_SYSFS: n => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=n] && SCSI [=n]
+    Reverse dependencies: BE2ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || QEDI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && UIO [=m] && QED [=n]
+

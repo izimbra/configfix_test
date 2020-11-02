@@ -1,0 +1,29 @@
+COMMON_CLK_SI514: n => mod
+    Direct dependencies:  COMMON_CLK [=n] && I2C [=y] && OF [=y]
+
+PPS_CLIENT_GPIO: n => mod
+    Direct dependencies:  PPS [=n]
+
+FAIR_GROUP_SCHED: y => no
+    Direct dependencies:  CGROUPS [=y] && CGROUP_SCHED [=y]
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+
+HID_CMEDIA: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+IIO_KFIFO_BUF: n => mod
+    Direct dependencies:  IIO [=n] && IIO_BUFFER [=n]
+    Reverse dependencies: AD5933 [=n] && STAGING [=n] && IIO [=n] && I2C [=y] || IIO_TRIGGERED_BUFFER [=n] && IIO [=n] && IIO_BUFFER [=n] || SCA3000 [=n] && IIO [=n] && SPI [=n] || INA2XX_ADC [=n] && IIO [=n] && I2C [=y] && !SENSORS_INA2XX [=n] || TI_AM335X_ADC [=n] && IIO [=n] && MFD_TI_AM335X_TSCADC [=m] && HAS_DMA [=y] || IIO_SSP_SENSORS_COMMONS [=n] && IIO [=n] && IIO_SSP_SENSORHUB [=n] || IIO_SIMPLE_DUMMY_BUFFER [=n] && IIO [=n] && IIO_SIMPLE_DUMMY [=n] || MAX30100 [=n] && IIO [=n] && I2C [=y] || MAX30102 [=n] && IIO [=n] && I2C [=y] || IIO_ST_LSM6DSX [=n] && IIO [=n] && (I2C [=y] || SPI [=n] || I3C [=n]) || ACPI_ALS [=n] && IIO [=n] && ACPI || APDS9960 [=n] && IIO [=n] && I2C [=y] || ISL29501 [=n] && IIO [=n] && I2C [=y]
+
+SENSORS_LTC4260: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+MFD_WM8997: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_ARIZONA [=n]
+
+RTC_DRV_ABX80X: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+TI_ADS124S08: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n] && OF [=y]
+

@@ -1,0 +1,24 @@
+SENSORS_G760A: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+CRYPTO_NULL: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_AUTHENC [=n] && CRYPTO [=y] || CRYPTO_GCM [=n] && CRYPTO [=y] || CRYPTO_SEQIV [=y] && CRYPTO [=y] || CRYPTO_ECHAINIV [=n] && CRYPTO [=y] || CRYPTO_USER_API_AEAD [=n] && CRYPTO [=y] && NET [=n]
+
+AFE4403: n => yes
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=y]
+
+I2C_KEMPLD: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && MFD_KEMPLD [=y]
+
+DVB_ATBM8830: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_CXUSB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+PANTHERLORD_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_PANTHERLORD [=n]
+
+OF_DYNAMIC: n => yes
+    Direct dependencies:  OF [=y]
+    Reverse dependencies: HOTPLUG_PCI_POWERNV [=n] && PCI [=n] && HOTPLUG_PCI [=n] && PPC_POWERNV && EEH || OF_OVERLAY [=n] && OF [=y] || I2C_DEMUX_PINCTRL [=n] && I2C [=n] && I2C_MUX [=n] && PINCTRL [=n] && OF [=y]
+

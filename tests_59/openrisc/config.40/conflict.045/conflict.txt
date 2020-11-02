@@ -1,0 +1,28 @@
+I2C_STUB: n => no
+    Direct dependencies:  I2C [=y] && m && MODULES [=n]
+
+XZ_DEC: y => no
+    Direct dependencies:  y
+    Reverse dependencies: FW_LOADER_COMPRESS [=y] && FW_LOADER [=y] || MLXFW [=n] && NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_MELLANOX [=n] || SQUASHFS_XZ [=n] && MISC_FILESYSTEMS [=n] && SQUASHFS [=n] || DECOMPRESS_XZ [=n]
+
+PWM_IQS620A: n => yes
+    Direct dependencies:  PWM [=n] && (MFD_IQS62X [=n] || COMPILE_TEST [=y])
+
+LCD_LMS501KF03: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=y] && SPI [=n]
+
+EFI_PARTITION: y => no
+    Direct dependencies:  BLOCK [=y]
+
+HID_MONTEREY: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+RTC_DRV_MAX77686: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y] && (MFD_MAX77686 [=y] || MFD_MAX77620 [=y] || COMPILE_TEST [=y])
+
+XZ_DEC_POWERPC: y => no
+    Direct dependencies:  XZ_DEC [=y]
+
+KEYBOARD_QT1070: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y]
+

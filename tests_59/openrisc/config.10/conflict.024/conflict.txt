@@ -1,0 +1,15 @@
+I2C_KEMPLD: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && MFD_KEMPLD [=n]
+
+RTC_DRV_DS1390: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+SENSORS_LTC2947_SPI: n => yes
+    Direct dependencies:  HWMON [=n] && SPI_MASTER [=n]
+
+LEDS_USER: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n]
+
+LTC2497: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

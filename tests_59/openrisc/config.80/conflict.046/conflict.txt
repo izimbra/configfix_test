@@ -1,0 +1,34 @@
+SENSORS_LM70: n => yes
+    Direct dependencies:  HWMON [=y] && SPI_MASTER [=n]
+
+SAMPLE_RPMSG_CLIENT: n => no
+    Direct dependencies:  SAMPLES [=y] && RPMSG [=y] && m && MODULES [=n]
+
+KEYBOARD_STOWAWAY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n]
+
+CRYPTO_SM4: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_CCREE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+DRM_PANEL_SAMSUNG_LD9040: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && SPI [=n]
+
+W1_SLAVE_DS2781: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2781 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+FSI_NEW_DEV_NODE: n => yes
+    Direct dependencies:  FSI [=n]
+
+SPI_DEBUG: n => yes
+    Direct dependencies:  SPI [=n] && DEBUG_KERNEL [=y]
+
+TMPFS_XATTR: y => no
+    Direct dependencies:  TMPFS [=y]
+    Reverse dependencies: TMPFS_POSIX_ACL [=y] && TMPFS [=y]
+
+CRYPTO_CBC: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CEPH_LIB [=n] && NET [=n] && INET [=n] || XFRM_ESP [=n] && NET [=n] && INET [=n] || BLK_DEV_CRYPTOLOOP [=n] && BLK_DEV [=n] && BLK_DEV_LOOP [=n] || DM_CRYPT [=y] && MD [=y] && BLK_DEV_DM [=y] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || FS_ENCRYPTION_ALGS [=n] || ECRYPT_FS [=y] && MISC_FILESYSTEMS [=y] && KEYS [=y] && CRYPTO [=y] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || ENCRYPTED_KEYS [=y] && KEYS [=y] || CRYPTO_DEV_SUN8I_CE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=n] && PM || CRYPTO_DEV_SUN8I_SS [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=n] && PM || CRYPTO_DEV_PICOXCELL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=n]) && HAVE_CLK [=y] || CRYPTO_DEV_MXS_DCP [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC) || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+

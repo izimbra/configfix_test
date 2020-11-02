@@ -1,0 +1,35 @@
+GAMEPORT: y => mod
+    Direct dependencies:  !UML
+    Reverse dependencies: JOYSTICK_ANALOG [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_A3D [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_ADI [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && ADI [=n]!=m || JOYSTICK_COBRA [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GF2K [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GRIP [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GRIP_MP [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GUILLEMOT [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_INTERACT [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_SIDEWINDER [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_TMDC [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_JOYDUMP [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y]
+
+DVB_VES1X93: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_AV7110 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && VIDEO_DEV [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_BUDGET [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_BUDGET_CORE [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_BUDGET_PATCH [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_BUDGET_CORE [=n] && I2C [=y] && DVB_AV7110 [=n] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+MAG3110: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+RTC_DRV_DS17485: n => no
+    Direct dependencies:  <choice>
+
+DEBUG_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+VIDEO_S5C73M3: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && SPI [=y] && VIDEO_V4L2 [=m]
+
+DVB_L64781: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_AV7110 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && VIDEO_DEV [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_BUDGET [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_BUDGET_CORE [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+W1_SLAVE_DS2780: y => mod
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2780 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+PINCTRL_OCELOT: n => yes
+    Direct dependencies:  PINCTRL [=n] && OF [=y] && HAS_IOMEM [=y]
+
+ZSWAP_ZPOOL_DEFAULT_Z3FOLD: n => yes
+    Direct dependencies:  <choice>
+

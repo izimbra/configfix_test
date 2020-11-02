@@ -1,0 +1,7 @@
+VIDEO_SAA6752HS => yes
+RTC_DRV_EM3027 => yes
+INPUT_88PM860X_ONKEY => yes
+VIDEO_S5C73M3 => yes
+RTC_CLASS => yes
+MFD_88PM860X => yes
+SPI => yes

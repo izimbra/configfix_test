@@ -1,0 +1,23 @@
+ADIS16460: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+CRC32_SARWATE: n => no
+    Direct dependencies:  <choice>
+
+KEYBOARD_GPIO_POLLED: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y]
+    Reverse dependencies: PCENGINES_APU2 [=n] && X86 && X86_PLATFORM_DEVICES [=n] && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y] && LEDS_CLASS [=y]
+
+LEDS_CPCAP: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_CPCAP [=n] && OF [=y]
+
+GPIO_MOXTET: n => yes
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n] && MOXTET [=n]
+
+RFKILL: n => yes
+    Direct dependencies:  NET [=n]
+
+DEBUG_RT_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && RT_MUTEXES [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y]
+

@@ -1,0 +1,19 @@
+MFD_TI_LMU: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+DRM_PANEL_SONY_ACX424AKP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+MMC_CQHCI: n => yes
+    Direct dependencies:  MMC [=n] && HAS_DMA [=y]
+    Reverse dependencies: MMC_SDHCI_PCI [=n] && MMC [=n] && MMC_SDHCI [=n] && PCI [=n] || MMC_SDHCI_OF_ARASAN [=n] && MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=y] && COMMON_CLK [=n] || MMC_SDHCI_ESDHC_IMX [=n] && MMC [=n] && ARCH_MXC && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_TEGRA [=n] && MMC [=n] && ARCH_TEGRA && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_MSM [=n] && MMC [=n] && (ARCH_QCOM || ARM && COMPILE_TEST [=n]) && MMC_SDHCI_PLTFM [=n] || MMC_MTK [=n] && MMC [=n] && HAS_DMA [=y] || MMC_SDHCI_BRCMSTB [=n] && MMC [=n] && (ARCH_BRCMSTB || BMIPS_GENERIC) && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_AM654 [=n] && MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=y] && REGMAP_MMIO [=y]
+
+DRM_NXP_PTN3460: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+MMC_SDHCI_PLTFM: n => yes
+    Direct dependencies:  MMC [=n] && MMC_SDHCI [=n]
+
+HP206C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

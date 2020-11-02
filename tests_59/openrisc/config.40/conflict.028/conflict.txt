@@ -1,0 +1,19 @@
+MMC_BLOCK: n => yes
+    Direct dependencies:  MMC [=n] && BLOCK [=y]
+
+SENSORS_JC42: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+MEDIA_TUNER_MT20XX: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=n] && MEDIA_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+ADXL372_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+FXOS8700_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+CRYPTO_TEST: n => no
+    Direct dependencies:  CRYPTO [=y] && m && MODULES [=n]
+

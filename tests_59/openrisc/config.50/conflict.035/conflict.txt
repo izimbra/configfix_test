@@ -1,0 +1,21 @@
+VIDEO_TW9910: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && VIDEO_V4L2 [=y] && I2C [=y]
+
+MCP320X: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+KEYBOARD_GPIO: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+AD7292: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+SENSORS_LM95241: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+AD7923: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+TINYDRM_ILI9225: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+

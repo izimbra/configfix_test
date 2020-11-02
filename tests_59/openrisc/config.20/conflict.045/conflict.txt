@@ -1,0 +1,28 @@
+BLK_DEV_DM: n => yes
+    Direct dependencies:  MD [=n] && (DAX [=y] || DAX [=y]=n)
+
+MMC_GOLDFISH: n => yes
+    Direct dependencies:  MMC [=n] && (GOLDFISH [=y] || COMPILE_TEST [=n])
+
+SENSORS_APDS990X: n => yes
+    Direct dependencies:  I2C [=n]
+
+INV_ICM42600_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+MFD_PCF50633: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+MFD_MAX8907: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+DRM_NWL_MIPI_DSI: n => yes
+    Direct dependencies:  DRM_BRIDGE [=n] && DRM [=n] && COMMON_CLK [=n] && OF [=y] && HAS_IOMEM [=y]
+
+HID_LOGITECH_HIDPP: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_LOGITECH [=n]
+    Reverse dependencies: HID_LOGITECH_DJ [=n] && INPUT [=y] && HID [=n] && USB_HID [=n] && HIDRAW [=n] && HID_LOGITECH [=n]
+
+PWM_IQS620A: n => yes
+    Direct dependencies:  PWM [=n] && (MFD_IQS62X [=n] || COMPILE_TEST [=n])
+

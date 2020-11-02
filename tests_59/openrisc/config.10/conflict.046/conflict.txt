@@ -1,0 +1,32 @@
+CONNECTOR: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: DM_LOG_USERSPACE [=n] && MD [=n] && DM_MIRROR [=n] && NET [=n]
+
+GPIO_TPIC2810: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=n]
+
+CFG80211_REQUIRE_SIGNED_REGDB: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && CFG80211 [=n]
+
+VIDEO_UDA1342: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=n] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+HID_ZEROPLUS: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+LV0104CS: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+VIDEO_OV8856: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+NLS_ISO8859_4: n => yes
+    Direct dependencies:  NLS [=n]
+
+MAC80211_MESSAGE_TRACING: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && MAC80211 [=n]
+
+DRM_PANEL_VISIONOX_RM69299: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n]
+

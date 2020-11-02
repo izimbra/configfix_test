@@ -1,0 +1,19 @@
+AD2S1200: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+HID_MAYFLASH: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+INPUT_PCF8574: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && I2C [=n]
+
+RMI4_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=n] && I2C [=n]
+
+TCG_TIS: n => yes
+    Direct dependencies:  TCG_TPM [=n] && (X86 || OF [=y])
+    Reverse dependencies: IMA [=n] && INTEGRITY [=n] && TCG_TPM [=n] && X86
+
+GPIO_PCA953X_IRQ: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=n] && GPIO_PCA953X [=n]
+

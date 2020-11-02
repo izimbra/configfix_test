@@ -1,0 +1,32 @@
+SPI_MEM: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+    Reverse dependencies: MTD_SPI_NOR [=n] && MTD [=n] && SPI_MASTER [=n] || MTD_SPI_NAND [=n] && MTD [=n] && SPI_MASTER [=n]
+
+ADIS16080: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+BACKLIGHT_PWM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && PWM [=n]
+
+DVB_CX24120: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_B2C2_FLEXCOP [=n] && MEDIA_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && (DVB_B2C2_FLEXCOP_PCI [=n] || DVB_B2C2_FLEXCOP_USB [=n]) && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+SENSORS_W83793: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+SENSORS_LINEAGE: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+KEYBOARD_OMAP4: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && (OF [=y] || ARCH_OMAP2PLUS)
+
+CHARGER_PCF50633: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_PCF50633 [=n]
+
+SPI_AXI_SPI_ENGINE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+
+RTC_DRV_TEST: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+

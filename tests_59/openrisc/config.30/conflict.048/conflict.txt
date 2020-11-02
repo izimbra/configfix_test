@@ -1,0 +1,33 @@
+RTC_DRV_RX8025: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+SMS_SDIO_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && DVB_CORE [=n] && HAS_DMA [=y] && MMC [=m] && (!RC_CORE [=n] || RC_CORE [=n])
+
+SENSORS_POWR1220: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+DMARD10: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+INPUT_MATRIXKMAP: n => yes
+    Direct dependencies:  !UML && INPUT [=n]
+    Reverse dependencies: KEYBOARD_CLPS711X [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && OF_GPIO [=y] && (ARCH_CLPS711X || COMPILE_TEST [=n]) || KEYBOARD_EP93XX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (ARCH_EP93XX || COMPILE_TEST [=n]) || KEYBOARD_TCA8418 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && I2C [=y] || KEYBOARD_MATRIX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || KEYBOARD_LM8333 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && I2C [=y] || KEYBOARD_LPC32XX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_LPC32XX && OF [=y] || KEYBOARD_MAX7359 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && I2C [=y] || KEYBOARD_IMX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_MXC || KEYBOARD_NOMADIK [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (ARCH_NOMADIK || ARCH_U8500) || KEYBOARD_NSPIRE [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_NSPIRE && OF [=y] || KEYBOARD_TEGRA [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_TEGRA && OF [=y] || KEYBOARD_PXA27x [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (PXA27x || PXA3xx || ARCH_MMP) || KEYBOARD_PMIC8XXX [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && MFD_PM8XXX [=n] || KEYBOARD_SAMSUNG [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && HAVE_CLK [=n] || KEYBOARD_ST_KEYSCAN [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (ARCH_STI || COMPILE_TEST [=n]) || KEYBOARD_STMPE [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && MFD_STMPE [=n] && OF [=y] || KEYBOARD_OMAP [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && ARCH_OMAP1 || KEYBOARD_OMAP4 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && (OF [=y] || ARCH_OMAP2PLUS) || KEYBOARD_SPEAR [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && PLAT_SPEAR || KEYBOARD_TC3589X [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && MFD_TC3589X [=n] || KEYBOARD_TWL4030 [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && TWL4030_CORE [=y] || KEYBOARD_CROS_EC [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && CROS_EC [=n] || KEYBOARD_BCM [=n] && !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && OF [=y] && HAVE_CLK [=n] || HT16K33 [=n] && AUXDISPLAY [=y] && FB [=n] && OF [=y] && I2C [=y] && INPUT [=n]
+
+SPI_BITBANG: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+    Reverse dependencies: SPI_ATH79 [=n] && SPI [=n] && SPI_MASTER [=n] && (ATH79 || COMPILE_TEST [=n]) || SPI_AU1550 [=n] && SPI [=n] && SPI_MASTER [=n] && MIPS_ALCHEMY || SPI_BUTTERFLY [=n] && SPI [=n] && SPI_MASTER [=n] && PARPORT [=m] || SPI_DAVINCI [=n] && SPI [=n] && SPI_MASTER [=n] && (ARCH_DAVINCI || ARCH_KEYSTONE) || SPI_EFM32 [=n] && SPI [=n] && SPI_MASTER [=n] && OF [=y] && ARM && (ARCH_EFM32 || COMPILE_TEST [=n]) || SPI_GPIO [=n] && SPI [=n] && SPI_MASTER [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || SPI_IMX [=n] && SPI [=n] && SPI_MASTER [=n] && (ARCH_MXC || COMPILE_TEST [=n]) || SPI_LM70_LLP [=n] && SPI [=n] && SPI_MASTER [=n] && PARPORT [=m] || SPI_OC_TINY [=n] && SPI [=n] && SPI_MASTER [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || SPI_OMAP_UWIRE [=n] && SPI [=n] && SPI_MASTER [=n] && ARCH_OMAP1 || SPI_PPC4xx [=n] && SPI [=n] && SPI_MASTER [=n] && PPC32 && 4xx || SPI_S3C24XX [=n] && SPI [=n] && SPI_MASTER [=n] && ARCH_S3C24XX || SPI_SH_SCI [=n] && SPI [=n] && SPI_MASTER [=n] && SUPERH || SPI_SIRF [=n] && SPI [=n] && SPI_MASTER [=n] && SIRF_DMA [=n] || SPI_XILINX [=n] && SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y] || SPI_XTENSA_XTFPGA [=n] && SPI [=n] && SPI_MASTER [=n] && (XTENSA && XTENSA_PLATFORM_XTFPGA || COMPILE_TEST [=n])
+
+RMI4_F03: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && RMI4_CORE [=n]
+    Reverse dependencies: HID_RMI [=n] && INPUT [=n] && HID [=n]
+
+VIDEO_IMX290: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+DVB_PLATFORM_DRIVERS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n]
+
+NETWORK_PHY_TIMESTAMPING: n => yes
+    Direct dependencies:  NET [=n]
+

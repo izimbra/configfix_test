@@ -1,0 +1,15 @@
+SENSORS_MAX6642: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+MODULE_SIG_SHA256: n => no
+    Direct dependencies:  <choice>
+
+SENSORS_LTC2947_I2C: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+TSL2772: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRYPTO_STATS: n => yes
+    Direct dependencies:  CRYPTO [=y] && CRYPTO_USER [=n]
+

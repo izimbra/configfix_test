@@ -1,0 +1,12 @@
+CPUSETS: n => yes
+    Direct dependencies:  CGROUPS [=n] && SMP [=n]
+
+VSOCKETS: n => yes
+    Direct dependencies:  NET [=n]
+
+VIDEO_ADV_DEBUG: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+HID_MAGICMOUSE: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+

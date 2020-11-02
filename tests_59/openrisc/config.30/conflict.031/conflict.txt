@@ -1,0 +1,21 @@
+NLS_CODEPAGE_861: n => yes
+    Direct dependencies:  NLS [=n]
+
+RTC_DRV_DS1307: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+TRUSTED_KEYS: n => yes
+    Direct dependencies:  KEYS [=y] && TCG_TPM [=n]
+
+SPI_GPIO: n => mod
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+RAID6_PQ_BENCHMARK: n => yes
+    Direct dependencies:  RAID6_PQ [=n]
+
+I2C_EMEV2: n => mod
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && HAVE_CLK [=n]
+
+MAX30102: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

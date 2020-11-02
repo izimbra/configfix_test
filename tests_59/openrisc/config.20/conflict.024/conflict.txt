@@ -1,0 +1,18 @@
+DVB_DRX39XYJ: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_EM28XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+ADI_AXI_ADC: n => yes
+    Direct dependencies:  IIO [=n]
+    Reverse dependencies: AD9467 [=n] && IIO [=n] && SPI [=y]
+
+SENSORS_ADS7871: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=y]
+
+MODULE_FORCE_LOAD: n => yes
+    Direct dependencies:  MODULES [=n]
+
+VIDEO_SAA717X: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_V4L2 [=n] && PCI [=n] && I2C [=n] && RC_CORE [=n]
+

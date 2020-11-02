@@ -1,0 +1,28 @@
+REGULATOR_MAX77650: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MAX77650 [=n]
+
+ISCSI_BOOT_SYSFS: m => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI [=m]
+    Reverse dependencies: BE2ISCSI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && NET [=y] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && NET [=y] || QEDI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && UIO [=m] && QED [=n]
+
+PWM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: FB_SSD1307 [=m] && HAS_IOMEM [=y] && FB [=m] && I2C [=y] && OF [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+AL3010: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SCSI_ISCSI_ATTRS: m => no
+    Direct dependencies:  SCSI [=m] && NET [=y]
+    Reverse dependencies: ISCSI_TCP [=m] && SCSI_LOWLEVEL [=y] && SCSI [=m] && INET [=y] || SCSI_CXGB3_ISCSI [=n] && SCSI_LOWLEVEL [=y] && SCSI [=m] && PCI [=n] && INET [=y] && (IPV6 [=y] || IPV6 [=y]=n) || SCSI_CXGB4_ISCSI [=n] && SCSI_LOWLEVEL [=y] && SCSI [=m] && PCI [=n] && INET [=y] && (IPV6 [=y] || IPV6 [=y]=n) && ETHERNET [=y] || SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=y] && SCSI [=m] && NET [=y] && PCI [=n] && (IPV6 [=y] || IPV6 [=y]=n) || BE2ISCSI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && NET [=y] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && NET [=y] || QEDI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && UIO [=m] && QED [=n] || INFINIBAND_ISER [=m] && INFINIBAND [=m] && SCSI [=m] && INET [=y] && INFINIBAND_ADDR_TRANS [=y]
+
+JOYSTICK_IFORCE_232: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && JOYSTICK_IFORCE [=m] && SERIO [=y]
+
+MEDIA_TUNER_MT2063: m => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_AZ6007 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=n] && I2C [=y] && INPUT [=y] && SND [=n] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+IPMI_SSIF: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+

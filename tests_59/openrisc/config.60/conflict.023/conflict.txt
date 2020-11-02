@@ -1,0 +1,16 @@
+VSOCKETS_DIAG: n => yes
+    Direct dependencies:  NET [=n] && VSOCKETS [=n]
+
+CRYPTO_GHASH: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_GCM [=m] && CRYPTO [=y] || CRYPTO_DEV_VMX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && CRYPTO_DEV_VMX [=n]
+
+DRM_PANEL_RASPBERRYPI_TOUCHSCREEN: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && DRM_MIPI_DSI [=n]
+
+BACKLIGHT_88PM860X: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_88PM860X [=n]
+
+SWAP: n => yes
+    Direct dependencies:  MMU [=y] && BLOCK [=n] && !ARCH_NO_SWAP [=n]
+

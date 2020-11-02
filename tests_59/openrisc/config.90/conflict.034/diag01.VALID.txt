@@ -1,0 +1,15 @@
+GPIO_WM8994 => yes
+BMC150_MAGN_SPI => yes
+DRM_PANEL_SAMSUNG_S6E63J0X03 => yes
+TINYDRM_ST7586 => yes
+FB_VIRTUAL => yes
+DVB_MXL5XX => yes
+BME680 => yes
+MFD_WM8994 => yes
+IIO => yes
+IIO_KFIFO_BUF => yes
+FB => yes
+DRM => yes
+MEDIA_SUPPORT => yes
+I2C_MUX => yes
+VIDEO_DEV => yes

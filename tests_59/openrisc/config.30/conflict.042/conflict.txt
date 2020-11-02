@@ -1,0 +1,29 @@
+SENSORS_MCP3021: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+HP03: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+DVB_ZL10039: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_DW2102 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_SAA7134_DVB [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_SAA7134 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+LEDS_PCA9532: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && I2C [=y] && INPUT [=n]
+
+RTC_DRV_MAX8907: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y] && (MFD_MAX8907 [=n] || COMPILE_TEST [=n])
+
+SPI_TLE62X0: n => mod
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && SYSFS [=y]
+
+FIRMWARE_EDID: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n]
+
+VLAN_8021Q: n => mod
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: NET_DSA_TAG_8021Q [=n] && NET [=n] && NET_DSA [=n]
+
+SPI_XILINX: n => mod
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+

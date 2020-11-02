@@ -1,0 +1,11 @@
+MEDIA_TUNER_TDA9887 => no
+SPI_FSI => yes
+SPI_SPIDEV => yes
+MMC_SDHCI_PLTFM => yes
+SPI_MEM => yes
+MEDIA_TUNER_SIMPLE => no
+CRC4 => yes
+SPI => yes
+FSI => yes
+MMC => yes
+MMC_SDHCI => yes

@@ -1,0 +1,30 @@
+SDR_PLATFORM_DRIVERS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=n] && MEDIA_SDR_SUPPORT [=y]
+
+DEBUG_WW_MUTEX_SLOWPATH: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+VIDEO_OV2659: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y] && GPIOLIB [=y]
+
+OR1K_1200: y => no
+    Direct dependencies:  <choice>
+
+LEDS_LM3697: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TI_LMU_COMMON [=m] && I2C [=y] && OF [=y]
+
+MEDIA_TUNER_TUA9001: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9035 [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_USB_RTL28XXU [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=n] && I2C_MUX [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+IIO_SIMPLE_DUMMY_BUFFER: n => yes
+    Direct dependencies:  IIO [=m] && IIO_SIMPLE_DUMMY [=n]
+
+DVB_RTL2832: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y] && I2C_MUX [=y]
+    Reverse dependencies: DVB_USB_RTL28XXU [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=n] && I2C_MUX [=y] || DVB_RTL2832_SDR [=n] && MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y] && I2C_MUX [=y] && VIDEO_V4L2 [=m] && MEDIA_SDR_SUPPORT [=y] && USB [=n]
+
+CAN_VCAN: m => yes
+    Direct dependencies:  NET [=y] && CAN [=m]
+

@@ -1,0 +1,16 @@
+DRM_PANEL_RASPBERRYPI_TOUCHSCREEN: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && DRM_MIPI_DSI [=y]
+
+VCNL4035: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+REGULATOR_MAX77686: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MAX77686 [=m]
+
+MAX30102: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+EXTCON: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: CHARGER_MANAGER [=m] && POWER_SUPPLY [=y] && REGULATOR [=y] || USB_CHIPIDEA [=m] && USB_SUPPORT [=y] && (USB_EHCI_HCD [=y] && USB_GADGET [=y] || USB_EHCI_HCD [=y] && !USB_GADGET [=y] || !USB_EHCI_HCD [=y] && USB_GADGET [=y]) && HAS_DMA [=y] || USB_PHY [=y] && USB_SUPPORT [=y] || PHY_NS2_USB_DRD [=m] && OF [=y] && (ARCH_BCM_IPROC || COMPILE_TEST [=y]) || PHY_ROCKCHIP_TYPEC [=n] && OF [=y] && (ARCH_ROCKCHIP || COMPILE_TEST [=y])
+

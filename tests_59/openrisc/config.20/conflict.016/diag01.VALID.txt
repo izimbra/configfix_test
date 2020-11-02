@@ -1,0 +1,10 @@
+AD2S1200 => yes
+HID_MAYFLASH => yes
+INPUT_PCF8574 => yes
+RMI4_I2C => yes
+IIO => yes
+HID => yes
+INPUT_FF_MEMLESS => yes
+INPUT_MISC => yes
+I2C => yes
+RMI4_CORE => yes

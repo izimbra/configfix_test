@@ -1,0 +1,31 @@
+BPF_SYSCALL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: AF_KCM [=m] && NET [=y] && INET [=y]
+
+AD5755: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+MCP4018: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+RFKILL_GPIO: m => yes
+    Direct dependencies:  NET [=y] && RFKILL [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+ISCSI_BOOT_SYSFS: m => yes
+    Direct dependencies:  SCSI_LOWLEVEL [=y] && SCSI [=m]
+    Reverse dependencies: BE2ISCSI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && NET [=y] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && NET [=y] || QEDI [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] && UIO [=m] && QED [=n]
+
+IIO_BUFFER_CB: m => no
+    Direct dependencies:  IIO [=m] && IIO_BUFFER [=y]
+    Reverse dependencies: TOUCHSCREEN_ADC [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] && IIO [=m] || SND_SOC_STM32_DFSDM [=n] && SOUND [=n] && !UML && SND [=n] && (ARCH_STM32 || COMPILE_TEST [=y]) && SND_SOC [=n] && STM32_DFSDM_ADC [=m] || LMP91000 [=m] && IIO [=m] && I2C [=y]
+
+GPIO_MAX77650: n => mod
+    Direct dependencies:  GPIOLIB [=y] && MFD_MAX77650 [=n]
+
+SPARSE_IRQ: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OPENRISC [=y] || ATMEL_AIC_IRQ [=n] || ATMEL_AIC5_IRQ [=n] || FARADAY_FTINTC010 [=n] || IXP4XX_IRQ [=n] || CLPS711X_IRQCHIP [=n] && ARCH_CLPS711X
+
+MCP41010: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+

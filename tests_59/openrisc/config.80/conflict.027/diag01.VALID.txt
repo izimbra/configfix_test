@@ -1,0 +1,16 @@
+DEBUG_MUTEXES => no
+INPUT_CPCAP_PWRBUTTON => yes
+FB_MODE_HELPERS => no
+CAN_FLEXCAN => yes
+SPI_SC18IS602 => yes
+DEBUG_VM_RB => yes
+LOCK_STAT => no
+DEBUG_LOCK_ALLOC => no
+SPI => yes
+MFD_CPCAP => yes
+FB_UDL => no
+FB_SMSCUFX => no
+CAN => yes
+NET => yes
+CAN_DEV => yes
+DEBUG_VM => yes

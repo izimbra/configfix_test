@@ -1,0 +1,13 @@
+MAC80211_MESSAGE_TRACING: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && MAC80211 [=n]
+
+DEBUG_TEST_DRIVER_REMOVE: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+AK8975: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+    Reverse dependencies: AK09911 [=n] && IIO [=n] && I2C [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+BCACHE_DEBUG: n => yes
+    Direct dependencies:  MD [=n] && BCACHE [=n]
+

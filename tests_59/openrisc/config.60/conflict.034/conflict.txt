@@ -1,0 +1,23 @@
+INPUT_DRV2665_HAPTICS: n => mod
+    Direct dependencies:  !UML && INPUT_MISC [=n] && INPUT [=y] && I2C [=y]
+
+HID_LOGITECH: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=m] && LEDS_CLASS [=y]
+
+BATTERY_CPCAP: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_CPCAP [=m] && IIO [=m]
+
+CRC7: m => no
+    Direct dependencies:  y
+    Reverse dependencies: WILC1000_SPI [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_MICROCHIP [=n] && CFG80211 [=n] && INET [=n] && SPI [=y] || WL1251 [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_TI [=n] && MAC80211 [=n] || WLCORE_SPI [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_TI [=n] && WLCORE [=n] && SPI_MASTER [=y] && OF [=y] || MMC_SPI [=m] && MMC [=y] && SPI_MASTER [=y]
+
+CAN_M_CAN: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n]
+
+CAN_CC770: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+
+CRYPTO_JITTERENTROPY: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DRBG [=y] && CRYPTO [=y] && CRYPTO_DRBG_MENU [=y]
+

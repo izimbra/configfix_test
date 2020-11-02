@@ -1,0 +1,28 @@
+DVB_STV0288: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_DW2102 [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_USB_LME2510 [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=n] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || VIDEO_CX88_DVB [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_CX88 [=n] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_BUDGET_CI [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_BUDGET_CORE [=n] && I2C [=y] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_DM1105 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && I2C_ALGOBIT [=y] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+MMC_SPI: n => mod
+    Direct dependencies:  MMC [=n] && SPI_MASTER [=y]
+
+INPUT_ADXL34X: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n]
+
+VSOCKETS_LOOPBACK: n => mod
+    Direct dependencies:  NET [=y] && VSOCKETS [=n]
+
+VIDEO_DW9807_VCM: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+TSL2772: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+DEBUG_FS_ALLOW_NONE: n => no
+    Direct dependencies:  <choice>
+
+RMI4_SMB: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=m] && I2C [=y]
+

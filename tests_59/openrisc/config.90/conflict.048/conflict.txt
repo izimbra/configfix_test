@@ -1,0 +1,34 @@
+SENSORS_IIO_HWMON: m => yes
+    Direct dependencies:  HWMON [=y] && IIO [=m]
+
+VIDEO_TEA6420: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && PCI [=n] && VIDEO_V4L2 [=m] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+SENSORS_RM3100_I2C: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+BLK_DEV_INITRD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BOOT_CONFIG [=y]
+
+MAX30102: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+AD7266: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+IIO_SYSFS_TRIGGER: n => yes
+    Direct dependencies:  IIO [=m] && IIO_TRIGGER [=y] && SYSFS [=y]
+
+ADIS16400: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+W1_SLAVE_DS2781: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2781 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+SHMEM: y => no
+    Direct dependencies:  MMU [=y]
+    Reverse dependencies: DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=m] && X86 && PCI [=n] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=m] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=m] && HAS_IOMEM [=y] && DRM [=m] && MMU [=y]
+

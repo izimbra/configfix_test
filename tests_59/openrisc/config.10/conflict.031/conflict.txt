@@ -1,0 +1,22 @@
+TI_TLC4541: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+DVB_PLATFORM_DRIVERS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n]
+
+DRM_RCAR_DW_HDMI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && OF [=y]
+
+REGULATOR_MP8859: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+TI_ADC108S102: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+TEST_HEXDUMP: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+DVB_CX24116: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_DW2102 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_ANYSEE [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=n] && INPUT [=y] && SND [=n] && RC_CORE [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX88_DVB [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX88 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_DM1105 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=n] && I2C_ALGOBIT [=n] && RC_CORE [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

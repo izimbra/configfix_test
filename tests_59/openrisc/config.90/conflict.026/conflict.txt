@@ -1,0 +1,20 @@
+SD_ADC_MODULATOR: m => yes
+    Direct dependencies:  IIO [=m] && OF [=y]
+
+MAC80211_RC_DEFAULT_MINSTREL: y => no
+    Direct dependencies:  <choice> && MAC80211_RC_MINSTREL [=y]
+
+CRYPTO_RSA: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=n] && PCI_MSI [=n] && (UACCE [=y] || UACCE [=y]=n) && (ARM64 || COMPILE_TEST [=y] && 64BIT) && ACPI || CRYPTO_DEV_FSL_CAAM_PKC_API [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_FSL_CAAM [=n] && CRYPTO_DEV_FSL_CAAM_JR [=n] || CRYPTO_DEV_CCP_CRYPTO [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_CCP [=n] && CRYPTO_DEV_CCP_DD [=n] && CRYPTO_DEV_SP_CCP [=n]
+
+MEN_Z188_ADC: n => yes
+    Direct dependencies:  IIO [=m] && MCB [=n]
+
+ATLAS_EZO_SENSOR: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRC_CCITT: m => no
+    Direct dependencies:  y
+    Reverse dependencies: CAIF [=m] && NET [=y] || NFC_DIGITAL [=m] && NET [=y] && NFC [=m] || NFC_NCI_SPI [=m] && NET [=y] && NFC_NCI [=m] && SPI [=y] || NFC_SHDLC [=y] && NET [=y] && NFC_HCI [=m] || MAC802154 [=m] && NET [=y] && IEEE802154 [=y] || NETLABEL [=n] && NET [=y] && INET [=y] && SECURITY [=n] && IPV6 [=y] || BAYCOM_SER_FDX [=m] && NET [=y] && HAMRADIO [=y] && AX25 [=m] && !S390 || BAYCOM_SER_HDX [=m] && NET [=y] && HAMRADIO [=y] && AX25 [=m] && !S390 || BAYCOM_PAR [=m] && NET [=y] && HAMRADIO [=y] && PARPORT [=m] && AX25 [=m] || BAYCOM_EPP [=m] && NET [=y] && HAMRADIO [=y] && PARPORT [=m] && AX25 [=m] && !64BIT || NFC_FDP [=m] && NET [=y] && NFC [=m] && NFC_NCI [=m] || NFC_PN544 [=m] && NET [=y] && NFC [=m] || NFC_MICROREAD [=m] && NET [=y] && NFC [=m] || NFC_ST21NFCA [=m] && NET [=y] && NFC [=m] || VIA_VELOCITY [=m] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_VIA [=y] && (PCI [=n] || OF_ADDRESS [=y] && OF_IRQ [=y]) && HAS_DMA [=y] || PPP_ASYNC [=m] && NETDEVICES [=y] && TTY [=y] && PPP [=y] || P54_COMMON [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] && MAC80211 [=m] || RT2800PCI [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && PCI [=n] || RT2800USB [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && USB [=y] || MISDN_HDLC [=n] && ISDN [=n] && MISDN [=n]!=n || RAVE_SP_CORE [=m] && HAS_IOMEM [=y] && SERIAL_DEV_BUS [=m] || DRM_SUN6I_DSI [=n] && HAS_IOMEM [=y] && DRM_SUN4I [=n]
+

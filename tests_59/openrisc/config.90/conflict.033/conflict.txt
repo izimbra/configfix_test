@@ -1,0 +1,24 @@
+MAX5481: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+DVB_STV0367: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=n] && I2C [=y] && INPUT [=y] && SND [=n] && RC_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_NGENE [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_DDBRIDGE [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_C8SECTPFE [=n] && MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=y] && DVB_PLATFORM_DRIVERS [=y] && PINCTRL [=y] && DVB_CORE [=m] && I2C [=y] && (ARCH_STI || ARCH_MULTIPLATFORM || COMPILE_TEST [=y]) && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+CRYPTO_CRC32C: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: NVME_TCP [=n] && INET [=y] && BLK_DEV_NVME [=n] || ISCSI_TCP [=m] && SCSI_LOWLEVEL [=y] && SCSI [=m] && INET [=y] || ISCSI_TARGET [=m] && TARGET_CORE [=y] && INET [=y] || EXT4_FS [=m] && BLOCK [=y] || JBD2 [=y] && BLOCK [=y] || BTRFS_FS [=y] && BLOCK [=y] || LIBCRC32C [=y]
+
+XZ_DEC: y => no
+    Direct dependencies:  y
+    Reverse dependencies: FW_LOADER_COMPRESS [=y] && FW_LOADER [=y] || MLXFW [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_MELLANOX [=y] || SQUASHFS_XZ [=y] && MISC_FILESYSTEMS [=y] && SQUASHFS [=y] || DECOMPRESS_XZ [=y]
+
+SCD30_CORE: m => yes
+    Direct dependencies:  IIO [=m]
+
+ADXL372_I2C: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+VIDEO_AK881X: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+

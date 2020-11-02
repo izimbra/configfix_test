@@ -1,0 +1,21 @@
+DVB_AF9013: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y] && I2C_MUX [=y]
+    Reverse dependencies: DVB_USB_AF9015 [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=n] && I2C_MUX [=y]
+
+MMA9551: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+PINCTRL_DA9062: n => mod
+    Direct dependencies:  PINCTRL [=n] && MFD_DA9062 [=n]
+
+MEDIA_TUNER_TEA5761: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=m] && MEDIA_SUPPORT [=m] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y] && MEDIA_RADIO_SUPPORT [=y]
+
+CRYPTO_CCM: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MAC802154 [=n] && NET [=y] && IEEE802154 [=y] || LIB80211_CRYPT_CCMP [=n] && NET [=y] && WIRELESS [=y] || MAC80211 [=m] && NET [=y] && WIRELESS [=y] && CFG80211 [=m] || RTL8192U [=n] && STAGING [=y] && PCI [=n] && WLAN [=y] && USB [=n] && m && MODULES [=y] || RTLLIB_CRYPTO_CCMP [=m] && STAGING [=y] && RTLLIB [=m] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=n] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx || CRYPTO_DEV_NX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_NX [=n] && PPC_PSERIES && IBMVIO && !CPU_LITTLE_ENDIAN
+
+COMMON_CLK_MAX9485: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && I2C [=y]
+

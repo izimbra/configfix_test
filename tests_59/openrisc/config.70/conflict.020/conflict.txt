@@ -1,0 +1,12 @@
+LEDS_88PM860X: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && MFD_88PM860X [=y]
+
+TI_AM335X_ADC: n => yes
+    Direct dependencies:  IIO [=m] && MFD_TI_AM335X_TSCADC [=n] && HAS_DMA [=y]
+
+CCS811: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+REGULATOR_MT6323: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=n]
+

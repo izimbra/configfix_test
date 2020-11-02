@@ -1,0 +1,16 @@
+RCU_FAST_NO_HZ => yes
+MMC_SDHCI_PLTFM => yes
+KEYBOARD_STOWAWAY => yes
+AD2S1200 => yes
+TINYDRM_ILI9225 => yes
+GPIO_MAX77650 => yes
+SPI_BITBANG => yes
+FSI_MASTER_ASPEED => yes
+NTP_PPS => no
+MMC => yes
+MMC_SDHCI => yes
+INPUT_KEYBOARD => yes
+SPI => yes
+MFD_MAX77650 => yes
+CRC4 => yes
+FSI => yes

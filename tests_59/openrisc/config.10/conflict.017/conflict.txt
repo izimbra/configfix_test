@@ -1,0 +1,13 @@
+HID_LED: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+    Reverse dependencies: HID_THINGM [=n] && INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+
+UBSAN_MISC: n => yes
+    Direct dependencies:  UBSAN [=n]
+
+VM_EVENT_COUNTERS: y => no
+    Direct dependencies:  y
+
+BCACHE_DEBUG: n => yes
+    Direct dependencies:  MD [=n] && BCACHE [=n]
+

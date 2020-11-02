@@ -1,0 +1,25 @@
+RCU_FAST_NO_HZ: n => yes
+    Direct dependencies:  NO_HZ_COMMON [=n] && SMP [=y] && RCU_EXPERT [=y]
+
+MMC_SDHCI_PLTFM: n => yes
+    Direct dependencies:  MMC [=n] && MMC_SDHCI [=n]
+
+KEYBOARD_STOWAWAY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n]
+
+AD2S1200: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+TINYDRM_ILI9225: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+GPIO_MAX77650: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_MAX77650 [=n]
+
+SPI_BITBANG: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+    Reverse dependencies: SPI_ATH79 [=n] && SPI [=n] && SPI_MASTER [=n] && (ATH79 || COMPILE_TEST [=n]) || SPI_AU1550 [=n] && SPI [=n] && SPI_MASTER [=n] && MIPS_ALCHEMY || SPI_BUTTERFLY [=n] && SPI [=n] && SPI_MASTER [=n] && PARPORT [=y] || SPI_DAVINCI [=n] && SPI [=n] && SPI_MASTER [=n] && (ARCH_DAVINCI || ARCH_KEYSTONE) || SPI_EFM32 [=n] && SPI [=n] && SPI_MASTER [=n] && OF [=y] && ARM && (ARCH_EFM32 || COMPILE_TEST [=n]) || SPI_GPIO [=n] && SPI [=n] && SPI_MASTER [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || SPI_IMX [=n] && SPI [=n] && SPI_MASTER [=n] && (ARCH_MXC || COMPILE_TEST [=n]) || SPI_LM70_LLP [=n] && SPI [=n] && SPI_MASTER [=n] && PARPORT [=y] || SPI_OC_TINY [=n] && SPI [=n] && SPI_MASTER [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || SPI_OMAP_UWIRE [=n] && SPI [=n] && SPI_MASTER [=n] && ARCH_OMAP1 || SPI_PPC4xx [=n] && SPI [=n] && SPI_MASTER [=n] && PPC32 && 4xx || SPI_S3C24XX [=n] && SPI [=n] && SPI_MASTER [=n] && ARCH_S3C24XX || SPI_SH_SCI [=n] && SPI [=n] && SPI_MASTER [=n] && SUPERH || SPI_SIRF [=n] && SPI [=n] && SPI_MASTER [=n] && SIRF_DMA [=n] || SPI_XILINX [=n] && SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y] || SPI_XTENSA_XTFPGA [=n] && SPI [=n] && SPI_MASTER [=n] && (XTENSA && XTENSA_PLATFORM_XTFPGA || COMPILE_TEST [=n])
+
+FSI_MASTER_ASPEED: n => yes
+    Direct dependencies:  FSI [=n] && HAS_IOMEM [=y]
+

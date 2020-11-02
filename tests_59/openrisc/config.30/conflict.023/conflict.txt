@@ -1,0 +1,16 @@
+NLS_CODEPAGE_932: n => yes
+    Direct dependencies:  NLS [=n]
+
+RTC_DRV_RS5C372: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+CRYPTO_PCRYPT: n => yes
+    Direct dependencies:  CRYPTO [=y] && SMP [=n]
+
+SPI_MUX: n => mod
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+FONT_8x16: n => yes
+    Direct dependencies:  FONT_SUPPORT [=n]
+    Reverse dependencies: VIDEO_SOLO6X10 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=n] && PCI [=n] && VIDEO_DEV [=n] && SND [=n] && I2C [=y] || VIDEO_SOLO6X10 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_CAMERA_SUPPORT [=n] && PCI [=n] && VIDEO_DEV [=n] && SND [=n] && I2C [=y] || VIDEO_VIMC [=n] && MEDIA_SUPPORT [=n] && MEDIA_TEST_SUPPORT [=n] && V4L_TEST_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n] || VIDEO_VIVID [=n] && MEDIA_SUPPORT [=n] && MEDIA_TEST_SUPPORT [=n] && V4L_TEST_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n] && !SPARC32 && !SPARC64 && FB [=n] && HAS_DMA [=y] || FB_VGA16 [=n] && HAS_IOMEM [=y] && FB [=n] && (X86 || PPC) && FRAMEBUFFER_CONSOLE [=n] || FB_S3 [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] && FRAMEBUFFER_CONSOLE [=n] || FB_VT8623 [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] && FRAMEBUFFER_CONSOLE [=n] || FB_ARK [=n] && HAS_IOMEM [=y] && FB [=n] && PCI [=n] && FRAMEBUFFER_CONSOLE [=n] || USB_SISUSBVGA_CON [=n] && USB_SUPPORT [=n] && USB [=n] && VT [=n] || FONT_AUTOSELECT [=n] && FONT_SUPPORT [=n] && !FONT_8x8 [=n] && !FONT_6x11 [=n] && !FONT_7x14 [=n] && !FONT_PEARL_8x8 [=n] && !FONT_ACORN_8x8 [=n] && !FONT_MINI_4x6 [=n] && !FONT_6x10 [=n] && !FONT_SUN8x16 [=n] && !FONT_SUN12x22 [=n] && !FONT_10x18 [=n] && !FONT_TER16x32 [=n]
+

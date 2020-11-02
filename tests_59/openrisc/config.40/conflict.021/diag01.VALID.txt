@@ -1,0 +1,11 @@
+RTC_DRV_M41T80 => yes
+KEYBOARD_SUNKBD => yes
+TEST_STACKINIT => yes
+FB_SM501 => yes
+HP206C => yes
+RTC_CLASS => yes
+INPUT_KEYBOARD => yes
+SERIO => yes
+RUNTIME_TESTING_MENU => yes
+MFD_SM501 => yes
+IIO => yes

@@ -1,0 +1,29 @@
+MAILBOX_TEST: n => mod
+    Direct dependencies:  MAILBOX [=n] && OF [=y] && HAS_IOMEM [=y]
+
+SENSORS_LM93: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+DRM_PANEL_RASPBERRYPI_TOUCHSCREEN: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && DRM_MIPI_DSI [=n]
+
+SI7005: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+TI_DAC7612: n => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y] && GPIOLIB [=y]
+
+VIDEO_TW9906: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=m] && I2C [=y] && SND [=n] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+HW_RANDOM_CCTRNG: m => yes
+    Direct dependencies:  HW_RANDOM [=m] && HAS_IOMEM [=y] && OF [=y]
+
+VIDEO_TW9903: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=m] && I2C [=y] && SND [=n] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+REISERFS_FS_SECURITY: n => yes
+    Direct dependencies:  BLOCK [=n] && REISERFS_FS_XATTR [=n]
+

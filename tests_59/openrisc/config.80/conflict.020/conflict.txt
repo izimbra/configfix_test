@@ -1,0 +1,13 @@
+KEYBOARD_MAX7359: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y]
+
+KEYBOARD_OMAP4: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && (OF [=y] || ARCH_OMAP2PLUS)
+
+BMC150_MAGN_SPI: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+HID_LED: y => no
+    Direct dependencies:  INPUT [=y] && HID [=y] && LEDS_CLASS [=y]
+    Reverse dependencies: HID_THINGM [=y] && INPUT [=y] && HID [=y] && LEDS_CLASS [=y]
+

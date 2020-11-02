@@ -1,0 +1,22 @@
+HID_ITE: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+DEBUG_RWSEMS: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+TEST_PRINTF: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+MODULE_COMPRESS_XZ: n => yes
+    Direct dependencies:  <choice>
+
+I2C_DEMUX_PINCTRL: n => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=n] && PINCTRL [=n] && OF [=y]
+
+TI_DAC7612: n => yes
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=n] && GPIOLIB [=y]
+
+TI_ADS7950: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n] && GPIOLIB [=y]
+

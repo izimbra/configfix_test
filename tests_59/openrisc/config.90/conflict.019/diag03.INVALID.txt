@@ -1,0 +1,14 @@
+DVB_L64781 => yes
+DVB_STB6100 => yes
+AD7923 => yes
+BPF_SYSCALL => no
+MEDIA_SUPPORT => yes
+I2C_MUX => yes
+VIDEO_DEV => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+XDP_SOCKETS_DIAG => no
+CGROUP_BPF => no
+BPF_STREAM_PARSER => no
+XDP_SOCKETS => no
+AF_KCM => yes

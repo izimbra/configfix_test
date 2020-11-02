@@ -1,0 +1,16 @@
+VIDEO_IMX219: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+OR1K_1200: y => no
+    Direct dependencies:  <choice>
+
+RTC_DRV_DS1374: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+
+CONNECTOR: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: DM_LOG_USERSPACE [=n] && MD [=n] && DM_MIRROR [=n] && NET [=n]
+
+THERMAL_DEFAULT_GOV_USER_SPACE: n => yes
+    Direct dependencies:  <choice>
+

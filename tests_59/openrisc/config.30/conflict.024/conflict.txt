@@ -1,0 +1,17 @@
+PINCTRL_STMFX: n => mod
+    Direct dependencies:  PINCTRL [=n] && I2C [=y] && OF_GPIO [=y]
+
+PA12203001: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+RTC_DRV_RS5C372: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+SCSI_ISCSI_ATTRS: n => mod
+    Direct dependencies:  SCSI [=n] && NET [=n]
+    Reverse dependencies: ISCSI_TCP [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && INET [=n] || SCSI_CXGB3_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] && INET [=n] && (IPV6 [=n] || IPV6 [=n]=n) || SCSI_CXGB4_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] && INET [=n] && (IPV6 [=n] || IPV6 [=n]=n) && ETHERNET [=n] || SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && NET [=n] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) || BE2ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || QEDI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && UIO [=n] && QED [=n] || INFINIBAND_ISER [=n] && INFINIBAND [=n] && SCSI [=n] && INET [=n] && INFINIBAND_ADDR_TRANS [=n]
+
+I2C_MUX: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: MEDIA_SUBDRV_AUTOSELECT [=n] && MEDIA_SUPPORT [=n] && HAS_IOMEM [=y] || DRM_SII902X [=y] && HAS_IOMEM [=y] && DRM [=y] && DRM_BRIDGE [=y] && OF [=y] || MPU3050_I2C [=n] && IIO [=n] && INPUT_MPU3050!=y && INPUT_MPU3050!=m && I2C [=y] || INV_MPU6050_I2C [=n] && IIO [=n] && I2C [=y]
+

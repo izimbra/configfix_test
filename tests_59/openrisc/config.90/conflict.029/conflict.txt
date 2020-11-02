@@ -1,0 +1,20 @@
+MMC_SDHCI_OMAP: m => yes
+    Direct dependencies:  MMC [=y] && MMC_SDHCI_PLTFM [=m] && OF [=y]
+
+SCSI_SPI_ATTRS: m => yes
+    Direct dependencies:  SCSI [=m]
+    Reverse dependencies: SCSI_AHA152X [=n] && SCSI_LOWLEVEL [=y] && ISA && SCSI [=m] || SCSI_AIC7XXX [=n] && SCSI_LOWLEVEL [=y] && (PCI [=n] || EISA [=n]) && SCSI [=m] || SCSI_AIC79XX [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] || SCSI_DMX3191D [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] || SCSI_GENERIC_NCR5380 [=n] && SCSI_LOWLEVEL [=y] && ISA && SCSI [=m] && HAS_IOPORT_MAP [=n] || SCSI_LASI700 [=n] && SCSI_LOWLEVEL [=y] && GSC && SCSI [=m] || SCSI_SNI_53C710 [=n] && SCSI_LOWLEVEL [=y] && SNI_RM && SCSI [=m] || SCSI_SYM53C8XX_2 [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] || SCSI_ZALON [=n] && SCSI_LOWLEVEL [=y] && GSC && SCSI [=m] || SCSI_SIM710 [=n] && SCSI_LOWLEVEL [=y] && EISA [=n] && SCSI [=m] || SCSI_AM53C974 [=n] && SCSI_LOWLEVEL [=y] && PCI [=n] && SCSI [=m] || SCSI_ACORNSCSI_3 [=n] && SCSI_LOWLEVEL [=y] && ARCH_ACORN && SCSI [=m] || SCSI_CUMANA_1 [=n] && SCSI_LOWLEVEL [=y] && ARCH_ACORN && SCSI [=m] || SCSI_OAK1 [=n] && SCSI_LOWLEVEL [=y] && ARCH_ACORN && SCSI [=m] || JAZZ_ESP [=n] && SCSI_LOWLEVEL [=y] && MACH_JAZZ && SCSI [=m] || SCSI_A4000T [=n] && SCSI_LOWLEVEL [=y] && AMIGA && SCSI [=m] || SCSI_ZORRO7XX [=n] && SCSI_LOWLEVEL [=y] && ZORRO && SCSI [=m] || SCSI_ZORRO_ESP [=n] && SCSI_LOWLEVEL [=y] && ZORRO && SCSI [=m] || ATARI_SCSI [=n] && SCSI_LOWLEVEL [=y] && ATARI && SCSI [=m] || MAC_SCSI [=n] && SCSI_LOWLEVEL [=y] && MAC && SCSI [=m] || SCSI_MAC_ESP [=n] && SCSI_LOWLEVEL [=y] && MAC && SCSI [=m] || MVME147_SCSI [=n] && SCSI_LOWLEVEL [=y] && MVME147 && SCSI [=m]=y || MVME16x_SCSI [=n] && SCSI_LOWLEVEL [=y] && MVME16x && SCSI [=m] || BVME6000_SCSI [=n] && SCSI_LOWLEVEL [=y] && BVME6000 && SCSI [=m] || SUN3_SCSI [=n] && SCSI_LOWLEVEL [=y] && SUN3 && SCSI [=m] || SUN3X_ESP [=n] && SCSI_LOWLEVEL [=y] && SUN3X && SCSI [=m]=y || SCSI_SUNESP [=n] && SCSI_LOWLEVEL [=y] && SBUS && SCSI [=m] || PCMCIA_AHA152X [=n] && SCSI_LOWLEVEL [=y] && SCSI_LOWLEVEL_PCMCIA [=n] && SCSI [=m] && PCMCIA [=n] && m && MODULES [=y] || FUSION_SPI [=n] && FUSION [=n] && PCI [=n] && SCSI [=m]
+
+CAN_SJA1000_PLATFORM: m => yes
+    Direct dependencies:  NET [=y] && CAN [=y] && CAN_DEV [=y] && CAN_SJA1000 [=m]
+
+VIDEO_ADV748X: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y] && OF [=y]
+
+MMC_SDHCI_CADENCE: m => yes
+    Direct dependencies:  MMC [=y] && MMC_SDHCI_PLTFM [=m] && OF [=y]
+
+MEDIA_TUNER_QM1D1C0042: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_DVB [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_EM28XX [=m] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_PT3 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+

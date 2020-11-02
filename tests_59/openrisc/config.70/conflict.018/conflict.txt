@@ -1,0 +1,12 @@
+INPUT_CPCAP_PWRBUTTON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_CPCAP [=n]
+
+LEDS_BCM6328: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && HAS_IOMEM [=y] && OF [=y]
+
+LTC2485: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CFG80211_REQUIRE_SIGNED_REGDB: y => no
+    Direct dependencies:  NET [=y] && WIRELESS [=y] && CFG80211 [=m]
+

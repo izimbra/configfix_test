@@ -1,0 +1,17 @@
+CONNECTOR => yes
+DEBUG_NOTIFIERS => yes
+ADIS16400 => yes
+MMC_SDHCI_F_SDH30 => yes
+DRM_SII902X => yes
+NET => yes
+DEBUG_KERNEL => yes
+SPI => yes
+IIO => yes
+MMC => yes
+MMC_SDHCI => yes
+MMC_SDHCI_PLTFM => yes
+DRM => yes
+SYNC_FILE => yes
+I2C_ALGOBIT => yes
+I2C => yes
+I2C_MUX => yes

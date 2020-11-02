@@ -1,0 +1,15 @@
+CPCAP_ADC: n => yes
+    Direct dependencies:  IIO [=y] && MFD_CPCAP [=n]
+
+JOYSTICK_AS5011: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && I2C [=y]
+
+SENSORS_MC13783_ADC: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_MC13XXX [=y]
+
+SENSORS_ADM1029: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+SENSORS_CORSAIR_CPRO: n => yes
+    Direct dependencies:  HWMON [=n] && HID [=y]
+

@@ -1,0 +1,22 @@
+AD7124: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+SENSORS_AS370: n => yes
+    Direct dependencies:  HWMON [=m]
+
+SENSORS_W83L785TS: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+VIDEO_SONY_BTF_MPX: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=m] && I2C [=y] && SND [=n] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+DRM_TI_TFP410: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+GPIO_STMPE: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_STMPE [=n] && OF_GPIO [=y]
+
+W1_SLAVE_DS2408_READBACK: n => yes
+    Direct dependencies:  W1 [=y] && W1_SLAVE_DS2408 [=n]
+

@@ -1,0 +1,15 @@
+MEDIA_TUNER_TDA8290 => yes
+HID_KEYTOUCH => yes
+SENSORS_LM75 => yes
+MPL115_SPI => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUPPORT_FILTER => yes
+I2C => yes
+MEDIA_RADIO_SUPPORT => yes
+MEDIA_TUNER_TDA18271 => yes
+MEDIA_TUNER_TDA827X => yes
+VIDEO_DEV => yes
+HID => yes
+HWMON => yes
+SPI => yes
+IIO => yes

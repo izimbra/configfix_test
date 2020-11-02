@@ -1,0 +1,13 @@
+I2C_KEMPLD => yes
+RTC_DRV_DS1390 => yes
+SENSORS_LTC2947_SPI => yes
+LEDS_USER => yes
+LTC2497 => yes
+MFD_KEMPLD => yes
+I2C => yes
+SPI => yes
+RTC_CLASS => yes
+HWMON => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes
+IIO => yes

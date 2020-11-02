@@ -1,0 +1,27 @@
+MMC_SDHCI_OF_AT91: m => yes
+    Direct dependencies:  MMC [=y] && MMC_SDHCI_PLTFM [=m] && OF [=y] && HAVE_CLK [=y]
+
+LEDS_MAX77650: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_MAX77650 [=n]
+
+DRM_PANEL_SAMSUNG_S6E8AA0: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y]
+
+PAGE_EXTENSION: y => no
+    Direct dependencies:  y
+    Reverse dependencies: IDLE_PAGE_TRACKING [=y] && SYSFS [=y] && MMU [=y] && !64BIT || PAGE_OWNER [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y]
+
+AD7266: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+VIDEO_OV7670: m => no
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+    Reverse dependencies: VIDEO_CAFE_CCIC [=n] && MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=y] && V4L_PLATFORM_DRIVERS [=y] && PCI [=n] && I2C [=y] && VIDEO_V4L2 [=m] && COMMON_CLK [=y] || VIDEO_MMP_CAMERA [=m] && MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=y] && V4L_PLATFORM_DRIVERS [=y] && I2C [=y] && VIDEO_V4L2 [=m] && (ARCH_MMP || COMPILE_TEST [=y]) && COMMON_CLK [=y] || VIDEO_VIA_CAMERA [=n] && MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=y] && V4L_PLATFORM_DRIVERS [=y] && FB_VIA [=n] && VIDEO_V4L2 [=m]
+
+VIDEO_TW9903: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_DEV [=m] && I2C [=y] && SND [=n] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+OR1K_1200: y => no
+    Direct dependencies:  <choice>
+

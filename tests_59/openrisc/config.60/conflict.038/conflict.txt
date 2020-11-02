@@ -1,0 +1,26 @@
+RN5T618_ADC: m => yes
+    Direct dependencies:  IIO [=m] && MFD_RN5T618 [=m]
+
+VIDEO_ADV7343: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_DAVINCI_VPIF_DISPLAY [=n] && MEDIA_SUPPORT [=m] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_V4L2 [=m] && (ARCH_DAVINCI || COMPILE_TEST [=n]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+AD7124: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+FSI_MASTER_ASPEED: n => mod
+    Direct dependencies:  FSI [=n] && HAS_IOMEM [=y]
+
+W1_CON: n => yes
+    Direct dependencies:  W1 [=y] && CONNECTOR [=n]
+
+ZSWAP_ZPOOL_DEFAULT_Z3FOLD: n => yes
+    Direct dependencies:  <choice>
+
+DVB_STB6000: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_DW2102 [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX88_DVB [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX88 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_BUDGET_CI [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_BUDGET_CORE [=n] && I2C [=y] && RC_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_DM1105 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=y] && I2C_ALGOBIT [=y] && RC_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+FPGA_DFL_AFU: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_DFL [=n]
+

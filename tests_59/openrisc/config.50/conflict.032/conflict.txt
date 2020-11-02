@@ -1,0 +1,22 @@
+AD5791: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+MEDIA_TUNER_TEA5761: y => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=y] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=y] && MEDIA_SUPPORT [=y] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=y]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y] && MEDIA_RADIO_SUPPORT [=y]
+
+MMC_SDHCI_AM654: n => yes
+    Direct dependencies:  MMC [=y] && MMC_SDHCI_PLTFM [=n] && OF [=y] && REGMAP_MMIO [=y]
+
+SENSORS_LTC4260: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+LEDS_CR0014114: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && SPI [=n] && OF [=y]
+
+JOYSTICK_IFORCE_232: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && JOYSTICK_IFORCE [=n] && SERIO [=y]
+
+VIDEO_TLV320AIC23B: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && VIDEO_V4L2 [=y] && I2C [=y]
+

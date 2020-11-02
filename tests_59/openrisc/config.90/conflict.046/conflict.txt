@@ -1,0 +1,33 @@
+VIDEO_I2C: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+ASYMMETRIC_KEY_TYPE: y => no
+    Direct dependencies:  CRYPTO [=y] && KEYS [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+
+TI_DAC7311: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+I2C_MUX_PCA954x: m => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+TINYDRM_ST7735R: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+ST_UVIS25: m => yes
+    Direct dependencies:  IIO [=m] && (I2C [=y] || SPI [=y])
+
+LTC2632: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+SHMEM: y => no
+    Direct dependencies:  MMU [=y]
+    Reverse dependencies: DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=m] && X86 && PCI [=n] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=m] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=m] && HAS_IOMEM [=y] && DRM [=m] && MMU [=y]
+
+SPARSE_IRQ: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OPENRISC [=y] || ATMEL_AIC_IRQ [=n] || ATMEL_AIC5_IRQ [=n] || FARADAY_FTINTC010 [=n] || IXP4XX_IRQ [=n] || CLPS711X_IRQCHIP [=n] && ARCH_CLPS711X
+
+SENSIRION_SGP30: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

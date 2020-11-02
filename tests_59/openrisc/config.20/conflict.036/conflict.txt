@@ -1,0 +1,24 @@
+VIDEO_DW9807_VCM: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+SENSORS_RM3100_SPI: n => yes
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=y]
+
+MODULE_SIG_SHA256: n => yes
+    Direct dependencies:  <choice>
+
+SDR_PLATFORM_DRIVERS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && MEDIA_SDR_SUPPORT [=n]
+
+REGULATOR_WM8994: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_WM8994 [=n]
+
+HW_RANDOM_CCTRNG: n => yes
+    Direct dependencies:  HW_RANDOM [=n] && HAS_IOMEM [=y] && OF [=y]
+
+SENSORS_LM70: n => yes
+    Direct dependencies:  HWMON [=n] && SPI_MASTER [=y]
+
+MAC80211_RC_MINSTREL: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && MAC80211 [=n]!=n
+

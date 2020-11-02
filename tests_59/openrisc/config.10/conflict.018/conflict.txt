@@ -1,0 +1,12 @@
+US5182D: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+NLS_ASCII: n => yes
+    Direct dependencies:  NLS [=n]
+
+DM_INTEGRITY: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+MFD_88PM805: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+

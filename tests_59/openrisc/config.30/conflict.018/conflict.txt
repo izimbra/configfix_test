@@ -1,0 +1,12 @@
+CRC32_SARWATE: y => no
+    Direct dependencies:  <choice>
+
+VSOCKETS_LOOPBACK: n => yes
+    Direct dependencies:  NET [=n] && VSOCKETS [=n]
+
+CHARGER_UCS1002: n => mod
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=y] && OF [=y] && REGULATOR [=y]
+
+UDMABUF: n => yes
+    Direct dependencies:  DMA_SHARED_BUFFER [=y] && (MEMFD_CREATE [=n] || COMPILE_TEST [=n])
+

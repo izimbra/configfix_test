@@ -1,0 +1,17 @@
+CRYPTO_DRBG_MENU: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_RNG_DEFAULT [=m] && CRYPTO [=y]
+
+VIDEO_MT9M111: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+AXP20X_POWER: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_AXP20X [=n] && IIO [=m]
+
+CRYPTO_CCM: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MAC802154 [=n] && NET [=y] && IEEE802154 [=y] || LIB80211_CRYPT_CCMP [=n] && NET [=y] && WIRELESS [=y] || MAC80211 [=m] && NET [=y] && WIRELESS [=y] && CFG80211 [=m] || RTL8192U [=n] && STAGING [=y] && PCI [=n] && WLAN [=y] && USB [=n] && m && MODULES [=y] || RTLLIB_CRYPTO_CCMP [=m] && STAGING [=y] && RTLLIB [=m] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=n] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx || CRYPTO_DEV_NX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_NX [=n] && PPC_PSERIES && IBMVIO && !CPU_LITTLE_ENDIAN
+
+LEDS_PCA955X: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=m] && I2C [=y]
+

@@ -1,0 +1,18 @@
+SENSORS_NPCM7XX: n => yes
+    Direct dependencies:  HWMON [=n]
+
+INV_ICM42600_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+DEBUG_BLOCK_EXT_DEVT: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && BLOCK [=y]
+
+SCD30_CORE: n => yes
+    Direct dependencies:  IIO [=n]
+
+VIDEO_M5MOLS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+DRM_PANEL_SAMSUNG_LD9040: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=y]
+

@@ -1,0 +1,26 @@
+BMC150_ACCEL: n => yes
+    Direct dependencies:  IIO [=n]
+
+CRYPTO_DH: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: KEY_DH_OPERATIONS [=y] && KEYS [=y] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=n] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && PCI [=n] && PCI_MSI [=n] && (UACCE [=n] || UACCE [=n]=n) && (ARM64 || COMPILE_TEST [=y] && 64BIT) && ACPI
+
+VIDEO_RDACM20: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+RTC_DRV_PALMAS: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y] && MFD_PALMAS [=y]
+
+MMC_SPI: n => yes
+    Direct dependencies:  MMC [=n] && SPI_MASTER [=n]
+
+SENSORS_MENF21BMC_HWMON: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_MENF21BMC [=n]
+
+DVB_RTL2832: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && I2C_MUX [=n]
+    Reverse dependencies: DVB_USB_RTL28XXU [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && I2C_MUX [=n] || DVB_RTL2832_SDR [=n] && MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && I2C_MUX [=n] && VIDEO_V4L2 [=n] && MEDIA_SDR_SUPPORT [=n] && USB [=y]
+
+RTC_DRV_BQ32K: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+

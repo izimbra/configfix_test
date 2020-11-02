@@ -1,0 +1,24 @@
+EEPROM_MAX6875: n => yes
+    Direct dependencies:  I2C [=n]
+
+DRM_PANEL_SAMSUNG_S6E63J0X03: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+FAIL_MMC_REQUEST: n => yes
+    Direct dependencies:  FAULT_INJECTION_DEBUG_FS [=n] && MMC [=n]
+
+LCD_TDO24M: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=n] && SPI_MASTER [=y]
+
+SENSORS_SHT21: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+BACKLIGHT_QCOM_WLED: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+
+TPL0102: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+SENSORS_MAX197: n => yes
+    Direct dependencies:  HWMON [=n]
+

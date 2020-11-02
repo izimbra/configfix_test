@@ -1,0 +1,14 @@
+REISERFS_FS_SECURITY => yes
+I2C_FSI => yes
+GPIO_KEMPLD => yes
+MFD_ARIZONA_SPI => yes
+REGULATOR_HI6421 => yes
+W1_SLAVE_DS2780 => no
+SPI_ROCKCHIP => yes
+REISERFS_FS_XATTR => yes
+CRC4 => yes
+FSI => yes
+MFD_KEMPLD => yes
+SPI => yes
+MFD_HI6421_PMIC => yes
+BATTERY_DS2780 => no

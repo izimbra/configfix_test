@@ -1,0 +1,32 @@
+AD5686_SPI: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+BMI160_SPI: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+MS5611_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y] && MS5611 [=n]
+
+RTC_DRV_GOLDFISH: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && OF [=y] && HAS_IOMEM [=y] && (GOLDFISH [=n] || COMPILE_TEST [=y])
+
+TCG_TIS_SPI: n => yes
+    Direct dependencies:  TCG_TPM [=y] && SPI [=n]
+
+MEDIA_TUNER_TDA827X: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_M920X [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_TTUSB2 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_SAA7134_DVB [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_SAA7134 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_BUDGET_CI [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_BUDGET_CORE [=n] && I2C [=y] && RC_CORE [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || MEDIA_TUNER_TDA8290 [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+
+BTRFS_FS_RUN_SANITY_TESTS: n => yes
+    Direct dependencies:  BLOCK [=y] && BTRFS_FS [=n]
+
+FB: y => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: DRM_KMS_FB_HELPER [=y] && HAS_IOMEM [=y] && DRM_KMS_HELPER [=y] || DRM_VMWGFX [=n] && HAS_IOMEM [=y] && DRM [=y] && PCI [=n] && X86 && MMU [=y]
+
+MAX44000: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+LTC2496: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+

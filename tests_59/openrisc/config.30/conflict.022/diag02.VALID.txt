@@ -1,0 +1,13 @@
+JOYSTICK_PSXPAD_SPI => mod
+ZOPT2201 => mod
+CHARGER_UCS1002 => yes
+SENSORS_SMSC47B397 => yes
+KEYBOARD_MTK_PMIC => yes
+SPI => yes
+INPUT_JOYSTICK => yes
+INPUT => yes
+IIO => mod
+POWER_SUPPLY => yes
+HWMON => yes
+INPUT_KEYBOARD => yes
+MFD_MT6397 => yes

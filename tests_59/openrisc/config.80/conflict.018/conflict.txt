@@ -1,0 +1,12 @@
+MMC_BLOCK: n => yes
+    Direct dependencies:  MMC [=n] && BLOCK [=y]
+
+AD2S1200: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+BATTERY_CPCAP: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_CPCAP [=n] && IIO [=y]
+
+CAN_SJA1000: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+

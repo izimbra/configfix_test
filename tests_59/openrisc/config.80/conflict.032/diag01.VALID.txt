@@ -1,0 +1,14 @@
+ADIS16460 => yes
+CRC32_SARWATE => no
+KEYBOARD_GPIO_POLLED => yes
+LEDS_CPCAP => yes
+GPIO_MOXTET => yes
+RFKILL => yes
+DEBUG_RT_MUTEXES => no
+SPI => yes
+INPUT_KEYBOARD => yes
+MFD_CPCAP => yes
+MOXTET => yes
+NET => yes
+LOCK_STAT => no
+DEBUG_LOCK_ALLOC => no

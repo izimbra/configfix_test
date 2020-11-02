@@ -1,0 +1,21 @@
+DVB_DIB3000MC: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_DIB3000MC [=n] && USB [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB [=n]
+
+DS1803: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+AD7266: n => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+INPUT_TPS65218_PWRBUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_TPS65217 [=m] || MFD_TPS65218 [=y])
+
+VIDEO_SONY_BTF_MPX: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_DEV [=m] && I2C [=y] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+CRYPTO_BLAKE2B: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=m] && BLOCK [=y]
+

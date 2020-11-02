@@ -1,0 +1,17 @@
+MANAGER_SBS: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=y] && I2C_MUX [=m] && GPIOLIB [=y]
+
+CRC4: m => no
+    Direct dependencies:  y
+    Reverse dependencies: FSI [=m] && OF [=y] || FSI_MASTER_GPIO [=m] && FSI [=m] && GPIOLIB [=y]
+
+VF610_DAC: m => yes
+    Direct dependencies:  IIO [=m] && OF [=y] && HAS_IOMEM [=y]
+
+DVB_AU8522_V4L: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_AU0828_V4L2 [=y] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_AU0828 [=m] && (VIDEO_V4L2 [=m]=y || VIDEO_V4L2 [=m]=VIDEO_AU0828 [=m]) && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+VIDEO_OV5645: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && OF [=y] && I2C [=y] && VIDEO_V4L2 [=m]
+

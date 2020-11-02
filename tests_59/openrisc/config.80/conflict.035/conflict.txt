@@ -1,0 +1,22 @@
+REISERFS_FS_SECURITY: n => yes
+    Direct dependencies:  BLOCK [=y] && REISERFS_FS_XATTR [=n]
+
+I2C_FSI: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && FSI [=n]
+
+GPIO_KEMPLD: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_KEMPLD [=n]
+
+MFD_ARIZONA_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+REGULATOR_HI6421: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_HI6421_PMIC [=n] && OF [=y]
+
+W1_SLAVE_DS2780: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2780 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+SPI_ROCKCHIP: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+

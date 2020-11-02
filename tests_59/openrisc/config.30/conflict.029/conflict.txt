@@ -1,0 +1,18 @@
+SENSORS_MAX31790: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+MMC_SDHCI_OF_AT91: n => yes
+    Direct dependencies:  MMC [=m] && MMC_SDHCI_PLTFM [=n] && OF [=y] && HAVE_CLK [=n]
+
+INPUT_IQS269A: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && I2C [=y]
+
+KEYBOARD_TCA6416: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_KEYBOARD [=n] && I2C [=y]
+
+ISO9660_FS: n => mod
+    Direct dependencies:  BLOCK [=n]
+
+THERMAL_NETLINK: n => yes
+    Direct dependencies:  THERMAL [=y] && NET [=n]
+

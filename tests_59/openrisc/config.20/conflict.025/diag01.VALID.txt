@@ -1,0 +1,14 @@
+ALLOW_DEV_COREDUMP => no
+SENSORS_TMP108 => yes
+MFD_TPS65218 => yes
+DRM_PANEL_SAMSUNG_S6E63M0 => yes
+CM36651 => yes
+DEBUG_KERNEL => yes
+EXPERT => yes
+HWMON => yes
+I2C => yes
+BACKLIGHT_CLASS_DEVICE => yes
+I2C_ALGOBIT => yes
+SYNC_FILE => yes
+DRM => yes
+IIO => yes

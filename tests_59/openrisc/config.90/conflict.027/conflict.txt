@@ -1,0 +1,19 @@
+MMA9551: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+ADUX1020: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRYPTO_ECB: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BT [=m] && NET [=y] && !S390 && (RFKILL [=m] || !RFKILL [=m]) || LIBIPW [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=n] && CFG80211 [=m] || LIBIPW [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=n] && CFG80211 [=m] || HOSTAP [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || HOSTAP [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || FS_ENCRYPTION_ALGS [=m] || ECRYPT_FS [=y] && MISC_FILESYSTEMS [=y] && KEYS [=y] && CRYPTO [=y] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_XTS [=m] && CRYPTO [=y] || CRYPTO_DEV_SUN8I_CE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM || CRYPTO_DEV_SUN8I_SS [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM || CRYPTO_DEV_PICOXCELL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=y]) && HAVE_CLK [=y] || CRYPTO_DEV_SAHARA [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARCH_MXC && OF [=y] || CRYPTO_DEV_MXS_DCP [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC) || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=m] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+AD7793: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+PA12203001: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+THERMAL_DEFAULT_GOV_USER_SPACE: n => no
+    Direct dependencies:  <choice>
+

@@ -1,0 +1,22 @@
+PPS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PTP_1588_CLOCK [=y] && NET [=y] && POSIX_TIMERS [=y]
+
+IIO_SIMPLE_DUMMY_EVENTS: n => yes
+    Direct dependencies:  IIO [=y] && IIO_SIMPLE_DUMMY [=n]
+
+RCU_FAST_NO_HZ: n => yes
+    Direct dependencies:  NO_HZ_COMMON [=y] && SMP [=n] && RCU_EXPERT [=n]
+
+READABLE_ASM: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+RTC_DRV_DS1685_FAMILY: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+INPUT_88PM860X_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_88PM860X [=n]
+
+CXD2880_SPI_DRV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && DVB_CORE [=y] && SPI [=n]
+

@@ -1,0 +1,15 @@
+KEYBOARD_CAP11XX: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && OF [=y] && I2C [=y]
+
+PWM_IQS620A: n => yes
+    Direct dependencies:  PWM [=y] && (MFD_IQS62X [=n] || COMPILE_TEST [=n])
+
+JOYSTICK_SIDEWINDER: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+RTC_DRV_SD3078: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+DEBUG_VM: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+

@@ -1,0 +1,16 @@
+RTC_DRV_GOLDFISH: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && OF [=y] && HAS_IOMEM [=y] && (GOLDFISH [=n] || COMPILE_TEST [=n])
+
+BCACHE_DEBUG: n => yes
+    Direct dependencies:  MD [=y] && BCACHE [=n]
+
+MODULE_COMPRESS_XZ: n => yes
+    Direct dependencies:  <choice>
+
+KEYBOARD_LM8323: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y] && LEDS_CLASS [=y]
+
+FB_LITTLE_ENDIAN: n => no
+    Direct dependencies:  <choice>
+    Reverse dependencies: FB_MB862XX_LIME [=n] && <choice> && OF [=y] && PPC
+

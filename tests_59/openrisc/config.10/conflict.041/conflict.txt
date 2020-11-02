@@ -1,0 +1,29 @@
+LEDS_LM3533: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && MFD_LM3533 [=n]
+
+AD7291: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+DM_LOG_WRITES: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+RMI4_F03: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=n]
+    Reverse dependencies: HID_RMI [=n] && INPUT [=y] && HID [=n]
+
+LEDS_LM3532: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=n]
+
+DM_CACHE: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+THERMAL_GOV_USER_SPACE: n => yes
+    Direct dependencies:  THERMAL [=n]
+    Reverse dependencies: THERMAL_DEFAULT_GOV_USER_SPACE [=n] && <choice> || X86_PKG_TEMP_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86_THERMAL_VECTOR || INT340X_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86 && ACPI && PCI [=n]
+
+MMC_USDHI6ROL0: n => yes
+    Direct dependencies:  MMC [=n] && HAS_DMA [=y]
+
+SENSORS_SMSC47M1: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+

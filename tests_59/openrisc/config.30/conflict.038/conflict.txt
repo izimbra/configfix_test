@@ -1,0 +1,25 @@
+BLK_DEV_BSGLIB: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: SCSI_FC_ATTRS [=n] && SCSI [=n] && NET [=n] || SCSI_ISCSI_ATTRS [=n] && SCSI [=n] && NET [=n] || SCSI_SAS_ATTRS [=n] && SCSI [=n] || SCSI_SAS_LIBSAS [=n] && SCSI [=n] || SCSI_UFS_BSG [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_UFSHCD [=n]
+
+MFD_TPS65912_SPI: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+MMC_GOLDFISH: n => yes
+    Direct dependencies:  MMC [=m] && (GOLDFISH [=n] || COMPILE_TEST [=n])
+
+HID_COUGAR: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+DPS310: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+SENSORS_LTC2947_SPI: n => mod
+    Direct dependencies:  HWMON [=m] && SPI_MASTER [=n]
+
+RTC_DRV_RX4581: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+GPIO_PCA953X_IRQ: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=y] && GPIO_PCA953X [=n]
+

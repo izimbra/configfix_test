@@ -1,0 +1,16 @@
+VIDEO_SAA7127: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && VIDEO_V4L2 [=y] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=y] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=y] && PCI [=n] && I2C [=y] && RC_CORE [=y]
+
+SENSORS_LTC2947_I2C: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+PWM_IQS620A: n => yes
+    Direct dependencies:  PWM [=y] && (MFD_IQS62X [=n] || COMPILE_TEST [=n])
+
+TEST_STRSCPY: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+RTC_DRV_DS1390: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+

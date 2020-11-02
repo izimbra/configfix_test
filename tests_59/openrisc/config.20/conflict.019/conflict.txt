@@ -1,0 +1,12 @@
+SENSORS_NCT7802: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+FXOS8700_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+RCU_EQS_DEBUG: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+IAQCORE: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

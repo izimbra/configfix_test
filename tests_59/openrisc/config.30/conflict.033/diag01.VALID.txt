@@ -1,0 +1,17 @@
+TCG_TIS_I2C_NUVOTON => mod
+POWER_RESET_RESTART => yes
+INPUT_MATRIXKMAP => mod
+INPUT_BMA150 => mod
+KEYBOARD_GPIO => yes
+RTC_DRV_RV3028 => yes
+UDF_FS => yes
+TCG_TPM => yes
+POWER_RESET => yes
+INPUT => yes
+INPUT_MISC => yes
+INPUT_KEYBOARD => yes
+RTC_CLASS => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+NLS => yes
+NLS_DEFAULT => 

@@ -1,0 +1,12 @@
+NO_HZ_IDLE: y => no
+    Direct dependencies:  <choice> && !ARCH_USES_GETTIMEOFFSET [=n] && GENERIC_CLOCKEVENTS [=y]
+
+SCA3000: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+VIDEO_TVP7002: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+OPT3001: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

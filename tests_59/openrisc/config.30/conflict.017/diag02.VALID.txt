@@ -1,0 +1,12 @@
+MEDIA_TUNER_MXL5007T => mod
+AD2S90 => yes
+GPIO_PCA953X_IRQ => yes
+SENSORS_NCT6683 => yes
+MEDIA_SUPPORT => mod
+MEDIA_SUPPORT_FILTER => yes
+MEDIA_SDR_SUPPORT => yes
+VIDEO_DEV => mod
+SPI => yes
+IIO => yes
+GPIO_PCA953X => yes
+HWMON => yes

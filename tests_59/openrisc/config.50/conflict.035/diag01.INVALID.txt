@@ -1,0 +1,10 @@
+VIDEO_TW9910 => yes
+MCP320X => yes
+KEYBOARD_GPIO => yes
+AD7292 => yes
+SENSORS_LM95241 => yes
+AD7923 => yes
+TINYDRM_ILI9225 => yes
+SPI => yes
+INPUT_KEYBOARD => yes
+HWMON => yes

@@ -1,0 +1,15 @@
+RTC_DRV_M41T80: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+KEYBOARD_SUNKBD: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n]
+
+TEST_STACKINIT: n => yes
+    Direct dependencies:  RUNTIME_TESTING_MENU [=n]
+
+FB_SM501: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && MFD_SM501 [=n]
+
+HP206C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

@@ -1,0 +1,15 @@
+SENSORS_ADT7410: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+IAQCORE: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+DRM_PANEL_ARM_VERSATILE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && MFD_SYSCON [=y]
+
+SENSORS_ADT7411: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+LEDS_LM36274: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TI_LMU_COMMON [=n] && MFD_TI_LMU [=n]
+

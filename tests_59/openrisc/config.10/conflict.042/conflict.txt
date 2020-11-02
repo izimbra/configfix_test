@@ -1,0 +1,28 @@
+REGULATOR_FAN53555: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+REGULATOR_TPS6586X: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_TPS6586X [=n]
+
+COMMON_CLK_VC5: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && I2C [=n] && OF [=y]
+
+SENSORS_LTC4222: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+VIDEO_ADV_DEBUG: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+VIDEO_CS3308: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=n] && INPUT [=y] && SND [=n] && RC_CORE [=y]
+
+LEDS_LP3952: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=n] && GPIOLIB [=y]
+
+SIGNED_PE_FILE_VERIFICATION: n => yes
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=n] && PKCS7_MESSAGE_PARSER [=n]=y && SYSTEM_DATA_VERIFICATION [=n]
+
+REGULATOR_DA9210: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+

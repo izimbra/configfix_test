@@ -1,0 +1,18 @@
+SENSORS_TMP513: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+REGULATOR_MAX8649: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+VIDEO_DW9807_VCM: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+SENSORS_TMP102: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+REGULATOR_MPQ7920: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n] && OF [=y]
+
+BACKLIGHT_MAX8925: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && MFD_MAX8925 [=n]
+

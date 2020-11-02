@@ -1,0 +1,22 @@
+PATA_PLATFORM: m => yes
+    Direct dependencies:  ATA [=m] && ATA_SFF [=y] && (EXPERT [=y] || PPC || HAVE_PATA_PLATFORM [=n])
+
+FSI_MASTER_ASPEED: m => yes
+    Direct dependencies:  FSI [=m] && HAS_IOMEM [=y]
+
+DEVTMPFS_MOUNT: n => yes
+    Direct dependencies:  DEVTMPFS [=n]
+
+VIDEO_AD9389B: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+RFKILL_GPIO: m => yes
+    Direct dependencies:  NET [=y] && RFKILL [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+AK8975: m => no
+    Direct dependencies:  IIO [=m] && I2C [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: AK09911 [=m] && IIO [=m] && I2C [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+DRM_SIL_SII8620: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=y] && (RC_CORE [=m] || !RC_CORE [=m])
+

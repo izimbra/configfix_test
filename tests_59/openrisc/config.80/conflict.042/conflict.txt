@@ -1,0 +1,30 @@
+ASYMMETRIC_KEY_TYPE: y => no
+    Direct dependencies:  CRYPTO [=y] && KEYS [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+
+QRTR_TUN: n => yes
+    Direct dependencies:  NET [=n] && QRTR [=n]
+
+MAC80211_RC_MINSTREL: n => yes
+    Direct dependencies:  NET [=n] && WIRELESS [=n] && MAC80211 [=n]!=n
+
+CRYPTO_BLAKE2B: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=y] && BLOCK [=y]
+
+KEYBOARD_STOWAWAY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n]
+
+RMI4_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y] && SPI [=n]
+
+CAN_VCAN: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n]
+
+SAMPLE_RPMSG_CLIENT: n => no
+    Direct dependencies:  SAMPLES [=y] && RPMSG [=y] && m && MODULES [=n]
+
+RMI4_F12: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+

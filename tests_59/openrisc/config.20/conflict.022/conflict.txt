@@ -1,0 +1,15 @@
+CHARGER_SMB347: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=n]
+
+VIDEO_VICODEC: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_TEST_SUPPORT [=n] && V4L_TEST_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n]
+
+SENSORS_HMC5843_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+PINCTRL_STMFX: n => yes
+    Direct dependencies:  PINCTRL [=n] && I2C [=n] && OF_GPIO [=y]
+
+SPI_FSI: n => yes
+    Direct dependencies:  SPI [=y] && SPI_MASTER [=y] && FSI [=n]
+

@@ -1,0 +1,16 @@
+SENSORS_MAX31790 => yes
+MMC_SDHCI_OF_AT91 => yes
+INPUT_IQS269A => yes
+KEYBOARD_TCA6416 => yes
+ISO9660_FS => mod
+THERMAL_NETLINK => yes
+HWMON => yes
+MMC => yes
+MMC_SDHCI => yes
+MMC_SDHCI_PLTFM => yes
+INPUT_MISC => yes
+INPUT => yes
+INPUT_KEYBOARD => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+NET => yes

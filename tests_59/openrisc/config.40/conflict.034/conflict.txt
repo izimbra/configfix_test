@@ -1,0 +1,22 @@
+VIDEO_MT9P031: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+
+VCNL3020: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+HID_MONTEREY: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+SENSORS_LM95245: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+I2C_MUX_PCA9541: n => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=n]
+
+LTC2471: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+KEYBOARD_GPIO_POLLED: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y]
+    Reverse dependencies: PCENGINES_APU2 [=n] && X86 && X86_PLATFORM_DEVICES [=n] && INPUT [=y] && INPUT_KEYBOARD [=n] && GPIOLIB [=y] && LEDS_CLASS [=y]
+

@@ -1,0 +1,20 @@
+SENSORS_W83L785TS: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+DRM_PANEL_NEC_NL8048HL11: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && SPI [=y]
+
+CONNECTOR: n => mod
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: DM_LOG_USERSPACE [=n] && MD [=n] && DM_MIRROR [=n] && NET [=n]
+
+NVMEM_SYSFS: y => no
+    Direct dependencies:  NVMEM [=y] && SYSFS [=y]
+    Reverse dependencies: EEPROM_AT24 [=y] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=m] && SPI [=y] && SYSFS [=y] || EEPROM_93XX46 [=m] && SPI [=y] && SYSFS [=y]
+
+GAMEPORT_L4: n => yes
+    Direct dependencies:  !UML && GAMEPORT [=n]
+
+VIDEO_SR030PC30: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+

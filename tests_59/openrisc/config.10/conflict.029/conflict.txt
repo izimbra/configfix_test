@@ -1,0 +1,19 @@
+AD7124: n => yes
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=n]
+
+SIGNALFD: y => no
+    Direct dependencies:  y
+
+DVB_TUNER_CX24113: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_B2C2_FLEXCOP [=n] && MEDIA_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n] && (DVB_B2C2_FLEXCOP_PCI [=n] || DVB_B2C2_FLEXCOP_USB [=n]) && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+ALLOW_DEV_COREDUMP: y => no
+    Direct dependencies:  y
+
+EXTCON_MAX14577: n => yes
+    Direct dependencies:  EXTCON [=n] && MFD_MAX14577 [=n]
+
+KEYBOARD_CAP11XX: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && OF [=y] && I2C [=n]
+

@@ -1,0 +1,31 @@
+GPIO_MC33880: n => mod
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n]
+
+TI_ADS8344: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n] && OF [=y]
+
+DM_VERITY_VERIFY_ROOTHASH_SIG: n => yes
+    Direct dependencies:  MD [=n] && DM_VERITY [=n]
+
+NLS_CODEPAGE_860: n => yes
+    Direct dependencies:  NLS [=n]
+
+MEDIA_TUNER_MXL301RF: n => mod
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: DVB_PT3 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+SENSORS_ADT7410: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+EFI_PARTITION: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+TARGET_CORE: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+ADIS16130: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+INPUT_DRV260X_HAPTICS: n => yes
+    Direct dependencies:  !UML && INPUT_MISC [=n] && INPUT [=n] && I2C [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

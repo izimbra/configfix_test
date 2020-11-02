@@ -1,0 +1,32 @@
+MAX77620_THERMAL: n => yes
+    Direct dependencies:  THERMAL [=n] && MFD_MAX77620 [=n] && OF [=y]
+
+HZ_100: n => no
+    Direct dependencies:  <choice>
+
+VIDEO_TEA6415C: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && PCI [=n] && VIDEO_V4L2 [=n] && I2C [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+TRUSTED_KEYS: n => yes
+    Direct dependencies:  KEYS [=y] && TCG_TPM [=n]
+
+VIDEO_VIMC: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_TEST_SUPPORT [=n] && V4L_TEST_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n]
+
+HID_LOGITECH_HIDPP: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_LOGITECH [=n]
+    Reverse dependencies: HID_LOGITECH_DJ [=n] && INPUT [=y] && HID [=n] && USB_HID [=n] && HIDRAW [=n] && HID_LOGITECH [=n]
+
+RTC_DRV_BQ32K: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+
+VIDEO_MT9M111: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+SENSORS_ADM1031: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+REGULATOR_DA9211: n => yes
+    Direct dependencies:  REGULATOR [=y] && I2C [=n]
+

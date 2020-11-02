@@ -1,0 +1,17 @@
+INPUT_PALMAS_PWRBUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_PALMAS [=n]
+
+MFD_MAX77620: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y && (OF [=y] || COMPILE_TEST [=n])
+
+HID_AUREAL: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+DVB_MB86A20S: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: VIDEO_CX231XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX231XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_EM28XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=n] && INPUT [=y] && SND [=n] && RC_CORE [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+SCSI_ISCSI_ATTRS: n => yes
+    Direct dependencies:  SCSI [=n] && NET [=n]
+    Reverse dependencies: ISCSI_TCP [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && INET [=n] || SCSI_CXGB3_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] && INET [=n] && (IPV6 [=n] || IPV6 [=n]=n) || SCSI_CXGB4_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] && INET [=n] && (IPV6 [=n] || IPV6 [=n]=n) && ETHERNET [=n] || SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && NET [=n] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) || BE2ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && NET [=n] || QEDI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && UIO [=n] && QED [=n] || INFINIBAND_ISER [=n] && INFINIBAND [=n] && SCSI [=n] && INET [=n] && INFINIBAND_ADDR_TRANS [=n]
+

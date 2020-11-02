@@ -1,0 +1,13 @@
+REGULATOR_HI6421: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_HI6421_PMIC [=n] && OF [=y]
+
+CRYPTO_CRCT10DIF: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRC_T10DIF [=y]
+
+HZ_100: n => no
+    Direct dependencies:  <choice>
+
+FSI_NEW_DEV_NODE: n => yes
+    Direct dependencies:  FSI [=n]
+

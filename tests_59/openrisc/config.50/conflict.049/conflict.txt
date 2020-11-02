@@ -1,0 +1,31 @@
+REGULATOR_MAX77650: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MAX77650 [=n]
+
+SENSORS_SMSC47B397: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+DEBUG_LOCKING_API_SELFTESTS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+JOYSTICK_PSXPAD_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && SPI [=n]
+
+DVB_ASCOT2E: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y]
+    Reverse dependencies: DVB_NETUP_UNIDVB [=n] && MEDIA_SUPPORT [=y] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && VIDEO_DEV [=y] && PCI [=n] && I2C [=y] && SPI_MASTER [=n] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+BMC150_MAGN_SPI: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+DEBUG_MISC: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+CAN_HI311X: n => yes
+    Direct dependencies:  NET [=y] && CAN [=y] && CAN_DEV [=n] && SPI [=n] && HAS_DMA [=y]
+
+AFE4403: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+REGULATOR_TPS6586X: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_TPS6586X [=n]
+

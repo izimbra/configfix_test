@@ -1,0 +1,14 @@
+INPUT_KXTJ9: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && I2C [=y]
+
+SENSORS_AS370: n => yes
+    Direct dependencies:  HWMON [=n]
+
+DVB_LNBH25: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_NGENE [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_DDBRIDGE [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_NETUP_UNIDVB [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=y] && SPI_MASTER [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+RMI4_F12: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=n]
+    Reverse dependencies: HID_RMI [=n] && INPUT [=y] && HID [=n]
+

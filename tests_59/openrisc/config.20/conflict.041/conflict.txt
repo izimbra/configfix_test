@@ -1,0 +1,27 @@
+CAN_SOFTING: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+
+DVB_DUMMY_FE: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_TEST_SUPPORT [=n] && DVB_CORE [=n]
+
+CGROUP_CPUACCT: n => yes
+    Direct dependencies:  CGROUPS [=n]
+
+CAN_J1939: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n]
+
+TINYDRM_ILI9486: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+INPUT_GPIO_BEEPER: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+HID_A4TECH: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+DEBUG_MISC: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+LEDS_CPCAP: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && MFD_CPCAP [=y] && OF [=y]
+

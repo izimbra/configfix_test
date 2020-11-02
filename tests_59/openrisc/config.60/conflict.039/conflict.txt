@@ -1,0 +1,27 @@
+VIDEO_TEA6420: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && PCI [=n] && VIDEO_V4L2 [=m] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+DVB_LGDT3305: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_CX231XX_DVB [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX231XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_DIB0700 [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_MXL111SF [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_EM28XX_DVB [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_SAA7134_DVB [=n] && MEDIA_SUPPORT [=m] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_SAA7134 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+BMI160_SPI: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+SENSORS_ADT7462: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+INPUT_FF_MEMLESS: m => no
+    Direct dependencies:  !UML && INPUT [=y]
+    Reverse dependencies: JOYSTICK_GAMECON [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && PARPORT [=n] || JOYSTICK_XPAD_FF [=n] && !UML && INPUT_JOYSTICK [=n] && JOYSTICK_XPAD [=n] && INPUT [=y] || JOYSTICK_PSXPAD_SPI_FF [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && JOYSTICK_PSXPAD_SPI [=n] || INPUT_ARIZONA_HAPTICS [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_ARIZONA [=y] && SND_SOC [=n] || INPUT_PM8XXX_VIBRATOR [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_PM8XXX [=n] || MFD_SPMI_PMIC [=n]) || INPUT_MAX77693_HAPTIC [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_MAX77693 [=m] || MFD_MAX77843 [=n]) && PWM [=y] || INPUT_MAX8997_HAPTIC [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && PWM [=y] && MFD_MAX8997 [=n] || INPUT_GPIO_VIBRA [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || INPUT_REGULATOR_HAPTIC [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && REGULATOR [=y] || INPUT_TWL4030_VIBRA [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && TWL4030_CORE [=n] || INPUT_TWL6040_VIBRA [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && TWL6040_CORE [=y] || INPUT_PWM_VIBRA [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && PWM [=y] || INPUT_DRV260X_HAPTICS [=n] && !UML && INPUT_MISC [=n] && INPUT [=y] && I2C [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || INPUT_DRV2665_HAPTICS [=n] && !UML && INPUT_MISC [=n] && INPUT [=y] && I2C [=y] || INPUT_DRV2667_HAPTICS [=n] && !UML && INPUT_MISC [=n] && INPUT [=y] && I2C [=y] || INPUT_SC27XX_VIBRA [=n] && !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=n]) || HID_ACRUX_FF [=y] && INPUT [=y] && HID [=m] && HID_ACRUX [=m] || HID_BETOP_FF [=m] && INPUT [=y] && HID [=m] && USB_HID [=m] || HID_BIGBEN_FF [=n] && INPUT [=y] && HID [=m] && USB_HID [=m] && NEW_LEDS [=y] && LEDS_CLASS [=y] || DRAGONRISE_FF [=n] && INPUT [=y] && HID [=m] && HID_DRAGONRISE [=n] || HID_EMS_FF [=n] && INPUT [=y] && HID [=m] || HOLTEK_FF [=n] && INPUT [=y] && HID [=m] && HID_HOLTEK [=n] || LOGITECH_FF [=y] && INPUT [=y] && HID [=m] && HID_LOGITECH [=m] || LOGIRUMBLEPAD2_FF [=y] && INPUT [=y] && HID [=m] && HID_LOGITECH [=m] || LOGIG940_FF [=n] && INPUT [=y] && HID [=m] && HID_LOGITECH [=m] || LOGIWHEELS_FF [=y] && INPUT [=y] && HID [=m] && HID_LOGITECH [=m] || HID_MAYFLASH [=m] && INPUT [=y] && HID [=m] || HID_MICROSOFT [=n] && INPUT [=y] && HID [=m] || PANTHERLORD_FF [=y] && INPUT [=y] && HID [=m] && HID_PANTHERLORD [=m] || SONY_FF [=n] && INPUT [=y] && HID [=m] && HID_SONY [=m] || GREENASIA_FF [=y] && INPUT [=y] && HID [=m] && HID_GREENASIA [=m] || SMARTJOYPLUS_FF [=y] && INPUT [=y] && HID [=m] && HID_SMARTJOYPLUS [=m] || THRUSTMASTER_FF [=n] && INPUT [=y] && HID [=m] && HID_THRUSTMASTER [=n] || HID_WIIMOTE [=n] && INPUT [=y] && HID [=m] && LEDS_CLASS [=y] || ZEROPLUS_FF [=n] && INPUT [=y] && HID [=m] && HID_ZEROPLUS [=n]
+
+MANAGER_SBS: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=y] && I2C_MUX [=m] && GPIOLIB [=y]
+
+CAN_CC770_PLATFORM: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && CAN_CC770 [=n]
+
+FB_UVESA: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && CONNECTOR [=n]
+

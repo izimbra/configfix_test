@@ -1,0 +1,25 @@
+HID_LCPOWER: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+TI_ADS8344: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n] && OF [=y]
+
+CGROUP_SCHED: n => yes
+    Direct dependencies:  CGROUPS [=n]
+    Reverse dependencies: SCHED_AUTOGROUP [=n]
+
+LV0104CS: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+NET_9P: n => yes
+    Direct dependencies:  NET [=n]
+
+MFD_GATEWORKS_GSC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && OF [=y]
+
+MMC_SDHCI_AM654: n => yes
+    Direct dependencies:  MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=y] && REGMAP_MMIO [=y]
+
+MXC4005: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

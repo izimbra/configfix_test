@@ -1,0 +1,19 @@
+REGULATOR_MT6358: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=n]
+
+AD7766: m => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+VIDEO_OV2659: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y] && GPIOLIB [=y]
+
+CAN_CC770_PLATFORM: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && CAN_CC770 [=n]
+
+BLK_DEV_INITRD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BOOT_CONFIG [=y]
+
+DRM_SII902X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+

@@ -1,0 +1,15 @@
+TI_AM335X_ADC: n => yes
+    Direct dependencies:  IIO [=n] && MFD_TI_AM335X_TSCADC [=n] && HAS_DMA [=y]
+
+VIDEO_MEM2MEM_DEINTERLACE: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_MEM2MEM_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n] && HAS_DMA [=y]
+
+DRM_VKMS: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]
+
+REGULATOR_MP5416: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n] && OF [=y]
+
+TI_ADC084S021: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+

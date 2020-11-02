@@ -1,0 +1,8 @@
+CRC32_SARWATE => no
+VSOCKETS_LOOPBACK => yes
+CHARGER_UCS1002 => mod
+UDMABUF => yes
+CRC32_BIT => yes
+NET => yes
+VSOCKETS => yes
+POWER_SUPPLY => yes

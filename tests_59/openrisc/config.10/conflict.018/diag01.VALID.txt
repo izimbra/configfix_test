@@ -1,0 +1,11 @@
+US5182D => yes
+NLS_ASCII => yes
+DM_INTEGRITY => yes
+MFD_88PM805 => yes
+I2C => yes
+IIO => yes
+NLS => yes
+NLS_DEFAULT => nonempty
+BLK_DEV_DM => yes
+MD => yes
+BLK_DEV_INTEGRITY => yes

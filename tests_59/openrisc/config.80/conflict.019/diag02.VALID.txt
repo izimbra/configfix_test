@@ -1,0 +1,12 @@
+REGULATOR_HI6421 => yes
+CRYPTO_CRCT10DIF => no
+HZ_100 => no
+FSI_NEW_DEV_NODE => yes
+MFD_HI6421_PMIC => yes
+SCSI_DEBUG => no
+CRC_T10DIF => no
+NVME_TARGET_FC => no
+NVME_TARGET => no
+CRC4 => yes
+MODULES => yes
+FSI => mod

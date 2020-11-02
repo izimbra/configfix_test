@@ -1,0 +1,17 @@
+OF: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OPENRISC [=y]
+
+IIO_BUFFER_HW_CONSUMER: m => no
+    Direct dependencies:  IIO [=m] && IIO_BUFFER [=y]
+    Reverse dependencies: ADI_AXI_ADC [=m] && IIO [=m] || STM32_DFSDM_ADC [=n] && IIO [=m] && (ARCH_STM32 && OF [=y] || COMPILE_TEST [=n])
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+VIDEO_BT866: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+VIDEO_OV2685: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+

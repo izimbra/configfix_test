@@ -1,0 +1,15 @@
+SENSORS_W83L785TS => yes
+DRM_PANEL_NEC_NL8048HL11 => mod
+CONNECTOR => mod
+NVMEM_SYSFS => no
+GAMEPORT_L4 => yes
+VIDEO_SR030PC30 => yes
+HWMON => yes
+DRM => mod
+NET => yes
+EEPROM_93XX46 => yes
+EEPROM_AT25 => yes
+EEPROM_AT24 => no
+GAMEPORT => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

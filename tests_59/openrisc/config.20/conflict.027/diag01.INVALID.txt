@@ -1,0 +1,14 @@
+MFD_TI_LMU => yes
+DRM_PANEL_SONY_ACX424AKP => yes
+MMC_CQHCI => yes
+DRM_NXP_PTN3460 => yes
+MMC_SDHCI_PLTFM => yes
+HP206C => yes
+I2C => yes
+BACKLIGHT_CLASS_DEVICE => yes
+I2C_ALGOBIT => yes
+SYNC_FILE => yes
+DRM => yes
+MMC => yes
+MMC_SDHCI => yes
+IIO => yes

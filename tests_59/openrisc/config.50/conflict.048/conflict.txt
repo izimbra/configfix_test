@@ -1,0 +1,32 @@
+ELF_CORE: y => no
+    Direct dependencies:  COREDUMP [=y]
+
+RTC_DRV_DS1347: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+CAN_M_CAN_PLATFORM: n => yes
+    Direct dependencies:  NET [=y] && CAN [=y] && CAN_DEV [=n] && HAS_IOMEM [=y] && CAN_M_CAN [=n]
+
+TI_ADC0832: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+REGULATOR_MAX77650: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MAX77650 [=n]
+
+MODULE_COMPRESS_XZ: n => yes
+    Direct dependencies:  <choice>
+
+DRM_NWL_MIPI_DSI: n => yes
+    Direct dependencies:  DRM_BRIDGE [=y] && DRM [=y] && COMMON_CLK [=n] && OF [=y] && HAS_IOMEM [=y]
+
+IO_URING: y => no
+    Direct dependencies:  y
+
+KALLSYMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: KPROBES [=n] && MODULES [=n] && HAVE_KPROBES [=n] || LATENCYTOP [=n] && DEBUG_KERNEL [=n] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || DEBUG_KMEMLEAK [=n] && DEBUG_KERNEL [=n] && HAVE_DEBUG_KMEMLEAK [=n] || LOCKDEP [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y] || FUNCTION_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=n] || STACK_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=n] || FTRACE_SYSCALLS [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_SYSCALL_TRACEPOINTS [=n]
+
+DVB_AF9013: y => no
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=y] && I2C [=y] && I2C_MUX [=y]
+    Reverse dependencies: DVB_USB_AF9015 [=y] && USB [=y] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=y] && I2C_MUX [=y]
+

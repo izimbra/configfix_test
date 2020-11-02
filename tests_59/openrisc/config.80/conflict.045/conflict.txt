@@ -1,0 +1,29 @@
+KEYBOARD_MPR121: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && I2C [=y]
+
+DRM_PANEL_SITRONIX_ST7789V: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+PANTHERLORD_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_PANTHERLORD [=n]
+
+IIO_BUFFER_CB: y => no
+    Direct dependencies:  IIO [=y] && IIO_BUFFER [=y]
+    Reverse dependencies: TOUCHSCREEN_ADC [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] && IIO [=y] || SND_SOC_STM32_DFSDM [=n] && SOUND [=y] && !UML && SND [=y] && (ARCH_STM32 || COMPILE_TEST [=n]) && SND_SOC [=n] && STM32_DFSDM_ADC [=n] || LMP91000 [=y] && IIO [=y] && I2C [=y]
+
+CAN_SJA1000: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+
+REISERFS_FS_SECURITY: n => yes
+    Direct dependencies:  BLOCK [=y] && REISERFS_FS_XATTR [=n]
+
+AD7124: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+LCD_ILI922X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=y] && SPI [=n]
+
+CRYPTO_CHACHA20POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=n] || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+

@@ -1,0 +1,15 @@
+MMC_SDHCI_OF_DWCMSHC: n => yes
+    Direct dependencies:  MMC [=y] && MMC_SDHCI_PLTFM [=n] && OF [=y] && COMMON_CLK [=y]
+
+SENSORS_THMC50: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+SENSORS_GL518SM: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+TSL2772: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+INPUT_DRV260X_HAPTICS: n => mod
+    Direct dependencies:  !UML && INPUT_MISC [=n] && INPUT [=y] && I2C [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

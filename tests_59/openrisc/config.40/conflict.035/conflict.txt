@@ -1,0 +1,24 @@
+SENSORS_SMSC47M1: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+TCG_TPM: y => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: IMA [=y] && INTEGRITY [=y] && HAS_IOMEM [=y] && !UML
+
+LEDS_MENF21BMC: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_MENF21BMC [=n]
+
+SCSI_ISCSI_ATTRS: y => no
+    Direct dependencies:  SCSI [=y] && NET [=y]
+    Reverse dependencies: ISCSI_TCP [=n] && SCSI_LOWLEVEL [=n] && SCSI [=y] && INET [=y] || SCSI_CXGB3_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=y] && PCI [=n] && INET [=y] && (IPV6 [=n] || IPV6 [=n]=n) || SCSI_CXGB4_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=y] && PCI [=n] && INET [=y] && (IPV6 [=n] || IPV6 [=n]=n) && ETHERNET [=n] || SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=y] && NET [=y] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) || BE2ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=y] && NET [=y] || SCSI_QLA_ISCSI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=y] && NET [=y] || QEDI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=y] && UIO [=y] && QED [=n] || INFINIBAND_ISER [=y] && INFINIBAND [=y] && SCSI [=y] && INET [=y] && INFINIBAND_ADDR_TRANS [=y]
+
+ALTERA_MBOX: n => yes
+    Direct dependencies:  MAILBOX [=n] && HAS_IOMEM [=y]
+
+TI_ADS124S08: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n] && OF [=y]
+
+VIDEO_ADV7343: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_DAVINCI_VPIF_DISPLAY [=n] && MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && VIDEO_V4L2 [=n] && (ARCH_DAVINCI || COMPILE_TEST [=y]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

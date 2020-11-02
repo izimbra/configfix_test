@@ -1,0 +1,15 @@
+SENSORS_ADT7410 => yes
+IAQCORE => yes
+DRM_PANEL_ARM_VERSATILE => yes
+SENSORS_ADT7411 => yes
+LEDS_LM36274 => yes
+HWMON => yes
+I2C => yes
+IIO => yes
+I2C_ALGOBIT => yes
+SYNC_FILE => yes
+DRM => yes
+LEDS_TI_LMU_COMMON => yes
+MFD_TI_LMU => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes

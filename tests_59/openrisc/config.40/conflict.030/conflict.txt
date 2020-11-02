@@ -1,0 +1,19 @@
+MFD_MADERA_I2C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n] && I2C [=y]
+
+DRM_PANEL_NEC_NL8048HL11: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=n]
+
+ADUX1020: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+DVB_TUNER_DIB0090: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_DIB0700 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+MEN_Z188_ADC: n => yes
+    Direct dependencies:  IIO [=n] && MCB [=n]
+
+MCP4018: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

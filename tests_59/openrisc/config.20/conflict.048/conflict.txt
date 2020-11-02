@@ -1,0 +1,31 @@
+HDC100X: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+VIDEO_OV5670: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+APDS9802ALS: n => yes
+    Direct dependencies:  I2C [=n]
+
+CRYPTO_USER_API_AEAD: n => yes
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+
+I2C_PCA_PLATFORM: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y]
+
+DRM_PANEL_SITRONIX_ST7701: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+DRM_TOSHIBA_TC358768: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+MFD_TPS65086: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+VIDEO_OV7670: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+    Reverse dependencies: VIDEO_CAFE_CCIC [=n] && MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && PCI [=n] && I2C [=n] && VIDEO_V4L2 [=n] && COMMON_CLK [=n] || VIDEO_MMP_CAMERA [=n] && MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && I2C [=n] && VIDEO_V4L2 [=n] && (ARCH_MMP || COMPILE_TEST [=n]) && COMMON_CLK [=n] || VIDEO_VIA_CAMERA [=n] && MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_PLATFORM_DRIVERS [=n] && FB_VIA [=n] && VIDEO_V4L2 [=n]
+
+SENSORS_MAX31790: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

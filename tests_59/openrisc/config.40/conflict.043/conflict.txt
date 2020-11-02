@@ -1,0 +1,29 @@
+HID_CYPRESS: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+SI7020: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+CRYPTO: y => no
+    Direct dependencies:  y
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || BLK_INLINE_ENCRYPTION_FALLBACK [=y] && BLOCK [=y] && BLK_INLINE_ENCRYPTION [=y] || BT [=y] && NET [=y] && !S390 && (RFKILL [=n] || !RFKILL [=n]) || AF_RXRPC [=n] && NET [=y] && INET [=y] || RXKAD [=n] && NET [=y] && AF_RXRPC [=n] || CEPH_LIB [=y] && NET [=y] && INET [=y] || TLS [=n] && NET [=y] && INET [=y] || XFRM_ALGO [=y] && NET [=y] || IP_SCTP [=y] && NET [=y] && INET [=y] && (IPV6 [=n] || IPV6 [=n]=n) || TIPC_CRYPTO [=n] && NET [=y] && TIPC [=n] || MAC802154 [=n] && NET [=y] && IEEE802154 [=y] || XFRM_AH [=n] && NET [=y] && INET [=y] || XFRM_ESP [=y] && NET [=y] && INET [=y] || XFRM_IPCOMP [=y] && NET [=y] && INET [=y] || TCP_MD5SIG [=y] && NET [=y] && INET [=y] || MPTCP [=n] && NET [=y] && INET [=y] || MAC80211 [=y] && NET [=y] && WIRELESS [=y] && CFG80211 [=y] || NFC_S3FWRN5 [=n] && NET [=y] && NFC [=y] || USB4 [=n] && PCI [=n] || TEE [=n] && (HAVE_ARM_SMCCC || COMPILE_TEST [=y] || CPU_SUP_AMD) || BLK_DEV_CRYPTOLOOP [=n] && BLK_DEV [=n] && BLK_DEV_LOOP [=n] || BLK_DEV_RBD [=n] && BLK_DEV [=n] && INET [=y] && BLOCK [=y] || ISCSI_TCP [=n] && SCSI_LOWLEVEL [=n] && SCSI [=y] && INET [=y] || DM_CRYPT [=n] && MD [=y] && BLK_DEV_DM [=n] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || DM_VERITY [=n] && MD [=y] && BLK_DEV_DM [=n] || DM_INTEGRITY [=n] && MD [=y] && BLK_DEV_DM [=n] || ISCSI_TARGET [=n] && TARGET_CORE [=n] && INET [=y] || WIREGUARD [=n] && NETDEVICES [=y] && NET_CORE [=n] && NET [=y] && INET [=y] && (IPV6 [=n] || !IPV6 [=n]) || MACSEC [=n] && NETDEVICES [=y] && NET_CORE [=n] || PPP_MPPE [=n] && NETDEVICES [=y] && PPP [=n] || AIRO [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_CISCO [=n] && CFG80211 [=y] && ISA_DMA_API && (PCI [=n] || BROKEN [=n]) || AIRO_CS [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_CISCO [=n] && CFG80211 [=y] && PCMCIA [=n] || LIBIPW [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=n] && CFG80211 [=y] || HOSTAP [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || HERMES [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] && (PPC_PMAC || PCI [=n] || PCMCIA [=n]) && CFG80211 [=y] || TCG_TPM [=y] && HAS_IOMEM [=y] || RTL8192U [=n] && STAGING [=y] && PCI [=n] && WLAN [=y] && USB [=y] && m && MODULES [=n] || RTL8192E [=n] && STAGING [=y] && PCI [=n] && WLAN [=y] && RTLLIB [=n] && m && MODULES [=n] || FS_ENCRYPTION [=n] || FS_VERITY [=n] || EXT4_FS [=y] && BLOCK [=y] || JBD2 [=y] && BLOCK [=y] || BTRFS_FS [=n] && BLOCK [=y] || F2FS_FS [=n] && BLOCK [=y] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=n] && MTD_UBI [=n] && UBIFS_FS_ADVANCED_COMPR [=n] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=n] && MTD_UBI [=n] && UBIFS_FS_LZO [=n] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=n] && MTD_UBI [=n] && UBIFS_FS_ZLIB [=n] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=n] && MTD_UBI [=n] && UBIFS_FS_ZSTD [=n] || PSTORE [=n] && MISC_FILESYSTEMS [=n] && PSTORE_COMPRESS [=n] || CEPH_FS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=y] || CIFS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=y] || TRUSTED_KEYS [=n] && KEYS [=y] && TCG_TPM [=y] || ENCRYPTED_KEYS [=y] && KEYS [=y] || KEY_DH_OPERATIONS [=y] && KEYS [=y] || SECURITY_APPARMOR_HASH [=y] && SECURITY_APPARMOR [=y] || IMA [=y] && INTEGRITY [=y] || CRC_T10DIF [=y] || LIBCRC32C [=y] || SIGNATURE [=y] && KEYS [=y]
+
+HX711: n => yes
+    Direct dependencies:  IIO [=n] && GPIOLIB [=y]
+
+MFD_CPCAP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI [=n] && (OF [=y] || COMPILE_TEST [=y])
+
+DEBUG_RWSEMS: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+ZSWAP_COMPRESSOR_DEFAULT_DEFLATE: n => yes
+    Direct dependencies:  <choice>
+
+TINYDRM_ILI9225: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+VIDEO_ADV7393: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+

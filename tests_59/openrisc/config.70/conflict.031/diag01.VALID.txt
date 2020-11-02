@@ -1,0 +1,16 @@
+VIDEO_SAA711X => yes
+MEDIA_TUNER_FC0013 => yes
+VIDEO_IMX319 => yes
+SENSORS_DRIVETEMP => mod
+VIDEO_MT9T001 => yes
+MMA9551 => yes
+MMC_SDHCI_OF_ASPEED => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes
+ATA => mod
+SCSI => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+MMC => yes
+MMC_SDHCI => yes
+MMC_SDHCI_PLTFM => yes

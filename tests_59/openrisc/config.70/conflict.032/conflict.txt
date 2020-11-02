@@ -1,0 +1,21 @@
+LEDS_LM3697: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TI_LMU_COMMON [=m] && I2C [=y] && OF [=y]
+
+VIDEO_I2C: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+DRM_VKMS: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m]
+
+CAN_M_CAN_PLATFORM: m => yes
+    Direct dependencies:  NET [=y] && CAN [=m] && CAN_DEV [=m] && HAS_IOMEM [=y] && CAN_M_CAN [=m]
+
+VIDEO_OV9650: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+EXTCON_SM5502: n => mod
+    Direct dependencies:  EXTCON [=n] && I2C [=y]
+
+AD7298: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+

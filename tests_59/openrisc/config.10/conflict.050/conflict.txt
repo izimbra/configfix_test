@@ -1,0 +1,31 @@
+SENSORS_INA2XX: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+BMI160_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+DW_I3C_MASTER: n => yes
+    Direct dependencies:  I3C [=n] && HAS_IOMEM [=y] && !ALPHA && !PARISC
+
+DVB_DIB3000MB: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_DIBUSB_MB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && (DVB_DIB3000MC [=n] || !DVB_DIB3000MC [=n])
+
+NLS_CODEPAGE_1251: n => yes
+    Direct dependencies:  NLS [=n]
+
+DM_SNAPSHOT: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+LAPB: n => yes
+    Direct dependencies:  NET [=n]
+
+LEDS_IS31FL319X: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=n] && OF [=y]
+
+SDR_PLATFORM_DRIVERS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && MEDIA_SDR_SUPPORT [=n]
+
+VIDEO_IMX319: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+

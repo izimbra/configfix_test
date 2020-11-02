@@ -1,0 +1,25 @@
+DM_SWITCH: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+LEDS_AS3645A: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && I2C [=y] && LEDS_CLASS_FLASH [=n] && (V4L2_FLASH_LED_CLASS [=n] || !V4L2_FLASH_LED_CLASS [=n])
+
+CAN_MCP251X: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && SPI [=n] && HAS_DMA [=y]
+
+FPGA_REGION: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_BRIDGE [=n]
+    Reverse dependencies: FPGA_DFL [=n] && FPGA [=n]
+
+LEDS_MENF21BMC: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_MENF21BMC [=n]
+
+PINCTRL_PALMAS: n => mod
+    Direct dependencies:  PINCTRL [=n] && OF [=y] && MFD_PALMAS [=y]
+
+RTC_DRV_PCF85363: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+BCACHE_ASYNC_REGISTRATION: n => yes
+    Direct dependencies:  MD [=n] && BCACHE [=n]
+

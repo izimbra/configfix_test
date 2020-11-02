@@ -1,0 +1,31 @@
+SERIO_GPIO_PS2: n => mod
+    Direct dependencies:  !UML && SERIO [=n] && GPIOLIB [=y]
+
+DEBUG_PER_CPU_MAPS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && SMP [=n]
+
+SENSORS_MAX197: m => yes
+    Direct dependencies:  HWMON [=m]
+
+SENSORS_TC74: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+DVB_MT312: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y]
+    Reverse dependencies: DVB_B2C2_FLEXCOP [=n] && MEDIA_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && (DVB_B2C2_FLEXCOP_PCI [=n] || DVB_B2C2_FLEXCOP_USB [=n]) && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_DW2102 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_SAA7134_DVB [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_SAA7134 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+ADIS16400: n => mod
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+VIDEO_OV5640: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && OF [=y] && GPIOLIB [=y] && VIDEO_V4L2 [=n] && I2C [=y]
+
+DMADEVICES_DEBUG: n => yes
+    Direct dependencies:  DMADEVICES [=n]
+
+IIO_SW_TRIGGER: n => yes
+    Direct dependencies:  IIO [=n]
+
+LEDS_CPCAP: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_CPCAP [=n] && OF [=y]
+

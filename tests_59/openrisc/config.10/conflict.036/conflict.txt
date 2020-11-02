@@ -1,0 +1,24 @@
+VIDEO_NOON010PC30: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+BMC150_ACCEL: n => yes
+    Direct dependencies:  IIO [=n]
+
+MFD_MAX77686: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && (OF [=y] || COMPILE_TEST [=n])
+
+RTC_DRV_M48T86: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+HID_SUNPLUS: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+MFD_MAX14577: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+SENSORS_THMC50: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+DEBUG_LOCKING_API_SELFTESTS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+

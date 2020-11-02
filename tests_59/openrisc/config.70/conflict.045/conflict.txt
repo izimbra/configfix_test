@@ -1,0 +1,28 @@
+BCACHE_ASYNC_REGISTRATION: n => yes
+    Direct dependencies:  MD [=y] && BCACHE [=n]
+
+GPIO_STMPE: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_STMPE [=n] && OF_GPIO [=y]
+
+DRM_PANEL_SAMSUNG_S6E63J0X03: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+
+EXTCON_USB_GPIO: n => mod
+    Direct dependencies:  EXTCON [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+DRM_SII902X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=y]
+
+AD7793: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+SCSI_FC_ATTRS: n => mod
+    Direct dependencies:  SCSI [=n] && NET [=y]
+
+I2C_SMBUS: y => mod
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_I801 [=n] && I2C [=y] && HAS_IOMEM [=y] && PCI [=n] || I2C_THUNDERX [=n] && I2C [=y] && HAS_IOMEM [=y] && 64BIT && PCI [=n] && (ARM64 || COMPILE_TEST [=n]) || I2C_PARPORT [=y] && I2C [=y] && HAS_IOMEM [=y] && PARPORT [=y] || MANAGER_SBS [=y] && POWER_SUPPLY [=y] && I2C [=y] && I2C_MUX [=y] && GPIOLIB [=y]
+
+MMC_SDHCI_OF_ASPEED: n => mod
+    Direct dependencies:  MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=y] && OF_ADDRESS [=y]
+

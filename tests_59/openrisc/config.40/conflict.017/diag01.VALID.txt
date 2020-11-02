@@ -1,0 +1,10 @@
+HID_BELKIN => yes
+EPOLL => no
+AD9523 => yes
+BTRFS_FS_POSIX_ACL => yes
+HID => yes
+EXPERT => yes
+SPI => yes
+IIO => yes
+BTRFS_FS => yes
+CRYPTO_BLAKE2B => yes

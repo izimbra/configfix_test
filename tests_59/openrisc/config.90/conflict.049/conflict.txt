@@ -1,0 +1,35 @@
+DVB_AU8522_V4L: m => no
+    Direct dependencies:  MEDIA_SUPPORT [=m] && MEDIA_DIGITAL_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && DVB_CORE [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_AU0828_V4L2 [=y] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_AU0828 [=m] && (VIDEO_V4L2 [=m]=y || VIDEO_V4L2 [=m]=VIDEO_AU0828 [=m]) && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+VL6180: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRYPTO_CCM: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MAC802154 [=m] && NET [=y] && IEEE802154 [=y] || LIB80211_CRYPT_CCMP [=y] && NET [=y] && WIRELESS [=y] || MAC80211 [=m] && NET [=y] && WIRELESS [=y] && CFG80211 [=m] || RTL8192U [=n] && STAGING [=y] && PCI [=n] && WLAN [=y] && USB [=y] && m && MODULES [=y] || RTLLIB_CRYPTO_CCMP [=m] && STAGING [=y] && RTLLIB [=m] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx || CRYPTO_DEV_NX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_NX [=n] && PPC_PSERIES && IBMVIO && !CPU_LITTLE_ENDIAN
+
+VIDEO_MT9V011: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_CAMERA_SUPPORT [=y] || MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_EM28XX [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] && MEDIA_CAMERA_SUPPORT [=y]
+
+TRIM_UNUSED_KSYMS: n => yes
+    Direct dependencies:  MODULES [=y] && !UNUSED_SYMBOLS [=y]
+
+DRM_DEBUG_SELFTEST: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DEBUG_KERNEL [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+
+SI7020: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+DEFAULT_SECURITY_DAC: y => no
+    Direct dependencies:  <choice>
+
+VIDEO_OV6650: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && I2C [=y] && VIDEO_V4L2 [=m]
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => mod
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+

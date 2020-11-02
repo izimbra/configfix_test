@@ -1,0 +1,20 @@
+AD5791: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+OF_DYNAMIC: y => no
+    Direct dependencies:  OF [=y]
+    Reverse dependencies: HOTPLUG_PCI_POWERNV [=n] && PCI [=n] && HOTPLUG_PCI [=n] && PPC_POWERNV && EEH || OF_OVERLAY [=y] && OF [=y] || I2C_DEMUX_PINCTRL [=y] && I2C [=y] && I2C_MUX [=y] && PINCTRL [=y] && OF [=y]
+
+RTC_DRV_M41T93: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && SPI_MASTER [=n]
+
+MCP41010: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+LCD_LMS501KF03: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && LCD_CLASS_DEVICE [=y] && SPI [=n]
+
+EXT4_FS: y => no
+    Direct dependencies:  BLOCK [=y]
+    Reverse dependencies: EXT3_FS [=n] && BLOCK [=y] || EXT4_KUNIT_TESTS [=y] && BLOCK [=y] && KUNIT [=y]
+

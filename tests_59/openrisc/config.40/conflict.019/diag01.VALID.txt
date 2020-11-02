@@ -1,0 +1,8 @@
+LEDS_LM3697 => yes
+CM3605 => yes
+DM_ZERO => yes
+SPI_MUX => yes
+LEDS_TI_LMU_COMMON => yes
+IIO => yes
+BLK_DEV_DM => yes
+SPI => yes

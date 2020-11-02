@@ -1,0 +1,20 @@
+VIDEO_TDA7432: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_BT848 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_DEV [=n] && PCI [=n] && I2C [=y] && VIDEO_V4L2 [=n] && RC_CORE [=n] && MEDIA_RADIO_SUPPORT [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+CRYPTO_STATS: n => yes
+    Direct dependencies:  CRYPTO [=y] && CRYPTO_USER [=n]
+
+DM_ZERO: n => yes
+    Direct dependencies:  MD [=n] && BLK_DEV_DM [=n]
+
+CAN_VCAN: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n]
+
+MS5637: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+X509_CERTIFICATE_PARSER: y => no
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y] && ASYMMETRIC_PUBLIC_KEY_SUBTYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=n]
+

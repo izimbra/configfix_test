@@ -1,0 +1,12 @@
+INPUT_TPS65218_PWRBUTTON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_TPS65217 [=n] || MFD_TPS65218 [=n])
+
+INPUT_E3X0_BUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n]
+
+INPUT_ADXL34X: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n]
+
+VEML6070: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

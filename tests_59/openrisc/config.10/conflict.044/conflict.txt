@@ -1,0 +1,27 @@
+MFD_DA9062: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+VIDEO_IMX219: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+MAX9611: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+VIDEO_MT9T001: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && I2C [=n] && VIDEO_V4L2 [=n]
+
+HID_SMARTJOYPLUS: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+JOYSTICK_IFORCE_232: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && JOYSTICK_IFORCE [=n] && SERIO [=n]
+
+COMMON_CLK_MAX9485: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && I2C [=n]
+
+ADIS16480: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+NLS_CODEPAGE_865: n => yes
+    Direct dependencies:  NLS [=n]
+

@@ -1,0 +1,24 @@
+JOYSTICK_ADI: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n] && ADI [=n]!=m
+
+DVB_SI2168: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && I2C [=y] && I2C_MUX [=y]
+    Reverse dependencies: VIDEO_PVRUSB2_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_PVRUSB2 [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX231XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX231XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_CXUSB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_RTL28XXU [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && I2C_MUX [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_DVBSKY [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_EM28XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && DVB_CORE [=n] && VIDEO_DEV [=n] && PCI [=n] && I2C [=y] && INPUT [=n] && SND [=n] && RC_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_SMIPCIE [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=n] && I2C [=y] && RC_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+MMC_CQHCI: m => no
+    Direct dependencies:  MMC [=m] && HAS_DMA [=y]
+    Reverse dependencies: MMC_SDHCI_PCI [=n] && MMC [=m] && MMC_SDHCI [=n] && PCI [=n] || MMC_SDHCI_OF_ARASAN [=n] && MMC [=m] && MMC_SDHCI_PLTFM [=n] && OF [=y] && COMMON_CLK [=n] || MMC_SDHCI_ESDHC_IMX [=n] && MMC [=m] && ARCH_MXC && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_TEGRA [=n] && MMC [=m] && ARCH_TEGRA && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_MSM [=n] && MMC [=m] && (ARCH_QCOM || ARM && COMPILE_TEST [=n]) && MMC_SDHCI_PLTFM [=n] || MMC_MTK [=m] && MMC [=m] && HAS_DMA [=y] || MMC_SDHCI_BRCMSTB [=n] && MMC [=m] && (ARCH_BRCMSTB || BMIPS_GENERIC) && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_AM654 [=n] && MMC [=m] && MMC_SDHCI_PLTFM [=n] && OF [=y] && REGMAP_MMIO [=y]
+
+SPI_TLE62X0: n => mod
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && SYSFS [=y]
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => no
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=n]
+
+HID_CMEDIA: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+SENSORS_ADS7828: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

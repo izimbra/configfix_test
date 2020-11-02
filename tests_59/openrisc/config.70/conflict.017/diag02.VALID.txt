@@ -1,0 +1,9 @@
+NO_HZ_IDLE => no
+SCA3000 => yes
+VIDEO_TVP7002 => yes
+OPT3001 => yes
+HZ_PERIODIC => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+MEDIA_SUPPORT => yes
+VIDEO_DEV => yes

@@ -1,0 +1,10 @@
+VIDEO_SAA7127 => yes
+SENSORS_LTC2947_I2C => yes
+PWM_IQS620A => yes
+TEST_STRSCPY => yes
+RTC_DRV_DS1390 => yes
+HWMON => yes
+COMPILE_TEST => yes
+RUNTIME_TESTING_MENU => yes
+SPI => yes
+RTC_CLASS => yes

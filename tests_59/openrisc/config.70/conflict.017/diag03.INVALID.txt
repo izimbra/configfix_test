@@ -1,0 +1,13 @@
+NO_HZ_IDLE => no
+SCA3000 => yes
+VIDEO_TVP7002 => yes
+OPT3001 => yes
+TICK_CPU_ACCOUNTING => no
+NO_HZ_FULL => yes
+VIRT_CPU_ACCOUNTING_GEN => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+MEDIA_SUPPORT => yes
+CPU_ISOLATION => yes
+VIDEO_DEV => yes
+RCU_NOCB_CPU => yes

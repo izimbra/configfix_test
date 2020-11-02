@@ -1,0 +1,7 @@
+KEYBOARD_MAX7359 => yes
+KEYBOARD_OMAP4 => yes
+BMC150_MAGN_SPI => yes
+HID_LED => no
+INPUT_KEYBOARD => yes
+SPI => yes
+HID_THINGM => no

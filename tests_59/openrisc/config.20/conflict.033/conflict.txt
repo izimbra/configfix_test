@@ -1,0 +1,21 @@
+VSOCKETS: n => yes
+    Direct dependencies:  NET [=n]
+
+DEBUG_SG: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+TI_TLC4541: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=y]
+
+MAX30100: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+COMMON_CLK_VC5: n => yes
+    Direct dependencies:  COMMON_CLK [=n] && I2C [=n] && OF [=y]
+
+GPIO_PCA953X: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=n]
+
+BATTERY_DS2781: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && HAS_IOMEM [=y]
+
