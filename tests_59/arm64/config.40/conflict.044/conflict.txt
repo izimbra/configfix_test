@@ -1,0 +1,31 @@
+CORESIGHT_LINKS_AND_SINKS: y => no
+    Direct dependencies:  CORESIGHT [=y]
+    Reverse dependencies: CORESIGHT_SOURCE_ETM3X [=n] && CORESIGHT [=y] && !ARM64 [=y] || CORESIGHT_SOURCE_ETM4X [=y] && CORESIGHT [=y] && ARM64 [=y] || CORESIGHT_STM [=n] && CORESIGHT [=y] && (ARM && !CPU_32v3 && !CPU_32v4 && !CPU_32v4T || ARM64 [=y])
+
+W1_SLAVE_DS2781: n => yes
+    Direct dependencies:  W1 [=n]
+    Reverse dependencies: BATTERY_DS2781 [=n] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+W1_SLAVE_DS28E17: n => yes
+    Direct dependencies:  W1 [=n] && I2C [=n]
+
+CRYPTO_LIB_CHACHA: y => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=y] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=y])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=y] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=y] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=y]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+
+SPI_DLN2: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && MFD_DLN2 [=n]
+
+SYSC_R8A77980: n => yes
+    Direct dependencies:  SOC_RENESAS [=n]
+    Reverse dependencies: ARCH_R8A77980 [=n] && SOC_RENESAS [=n] && ARM64 [=y]
+
+GPIO_LP3943: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_LP3943 [=n]
+
+MTD_OTP: n => yes
+    Direct dependencies:  MTD [=n] && MTD_CFI_ADV_OPTIONS [=n]
+
+USB_G_HID: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+

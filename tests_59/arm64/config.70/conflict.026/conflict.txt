@@ -1,0 +1,19 @@
+SWAP: n => yes
+    Direct dependencies:  MMU [=y] && BLOCK [=n] && !ARCH_NO_SWAP [=n]
+
+MESON_SECURE_PM_DOMAINS: n => yes
+    Direct dependencies:  (ARCH_MESON [=y] || COMPILE_TEST [=y]) && MESON_SM [=n] && PM [=y] && OF [=y] && HAVE_ARM_SMCCC [=y]
+
+IR_ZX: n => mod
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && (ARCH_ZX [=y] || COMPILE_TEST [=y])
+
+DRM_PANEL_SITRONIX_ST7703: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=m]
+
+SERIO_LIBPS2: m => no
+    Direct dependencies:  !UML && SERIO [=y] && (SERIO_I8042 [=n] || SERIO_I8042 [=n]=n)
+    Reverse dependencies: KEYBOARD_ATKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || MOUSE_PS2 [=m] && !UML && INPUT [=y] && INPUT_MOUSE [=y]
+
+BLK_DEV_SD: n => yes
+    Direct dependencies:  SCSI [=n]
+

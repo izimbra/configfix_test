@@ -1,0 +1,18 @@
+COMMON_CLK_BM1880: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_BITMAIN [=n] || COMPILE_TEST [=n])
+
+DEFAULT_SECURITY_DAC: y => no
+    Direct dependencies:  <choice>
+
+SPI_CADENCE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+HIBERNATION: n => yes
+    Direct dependencies:  SWAP [=n] && ARCH_HIBERNATION_POSSIBLE [=y]
+
+BACKLIGHT_LED: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && LEDS_CLASS [=n] && OF [=y]
+
+IR_TOY: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && USB_ARCH_HAS_HCD [=n]
+

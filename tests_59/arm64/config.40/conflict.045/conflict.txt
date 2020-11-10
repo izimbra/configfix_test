@@ -1,0 +1,29 @@
+VIRTIO_MMIO_CMDLINE_DEVICES: n => yes
+    Direct dependencies:  VIRTIO_MENU [=n] && VIRTIO_MMIO [=n]
+
+DRM_PANEL_RAYDIUM_RM67191: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+HID_WIIMOTE: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+
+MFD_CS47L24: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_ARIZONA [=n]
+
+ZYNQMP_IPI_MBOX: n => yes
+    Direct dependencies:  MAILBOX [=y] && ARCH_ZYNQMP [=n] && OF [=y]
+    Reverse dependencies: ZYNQMP_POWER [=n] && PM [=y] && ZYNQMP_FIRMWARE [=n]
+
+UIO_PDRV_GENIRQ: n => yes
+    Direct dependencies:  UIO [=n]
+
+SPI_BCM2835AUX: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && ((ARCH_BCM2835 [=n] || ARCH_BRCMSTB [=n]) && GPIOLIB [=y] || COMPILE_TEST [=n])
+
+KEYS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=n] || AF_RXRPC [=n] && NET [=y] && INET [=y] || CEPH_LIB [=y] && NET [=y] && INET [=y] || FS_ENCRYPTION [=n] || UBIFS_FS_AUTHENTICATION [=n] && MISC_FILESYSTEMS [=n] && UBIFS_FS [=n] || NFS_V4 [=n] && NETWORK_FILESYSTEMS [=n] && NFS_FS [=n] || CIFS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=y] || INTEGRITY_SIGNATURE [=n] && INTEGRITY [=n] || EVM [=n] && INTEGRITY [=n]
+
+BACKLIGHT_ADP8870: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && I2C [=n]
+

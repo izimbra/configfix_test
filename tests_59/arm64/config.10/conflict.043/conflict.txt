@@ -1,0 +1,29 @@
+LEDS_TRIGGER_ONESHOT: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+
+XZ_DEC_POWERPC: n => yes
+    Direct dependencies:  XZ_DEC [=n]
+
+REGULATOR_ACT8865: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n] && POWER_SUPPLY [=y]
+
+DEBUG_BLOCK_EXT_DEVT: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && BLOCK [=y]
+
+USB_GADGET: n => yes
+    Direct dependencies:  USB_SUPPORT [=n]
+
+ARM64_MODULE_PLTS: n => yes
+    Direct dependencies:  MODULES [=n]
+    Reverse dependencies: RANDOMIZE_BASE [=n] && MODULES [=n] || ARM64_ERRATUM_843419 [=n] && MODULES [=n]
+
+GPIO_PISOSR: n => yes
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n]
+
+MFD_WM8994: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+    Reverse dependencies: SND_MMP_SOC_BROWNSTONE [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_MMP_SOC_SSPA [=n] && MACH_BROWNSTONE && I2C [=n] || SND_SOC_SAMSUNG_SMDK_WM8994 [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && I2C [=n]=y || SND_SOC_SMDK_WM8994_PCM [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && I2C [=n]=y || SND_SOC_LITTLEMILL [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && I2C [=n] && (MACH_WLF_CRAGG_6410 || COMPILE_TEST [=n]) || SND_SOC_ARNDALE [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_SAMSUNG [=n] && I2C [=n]
+
+HID_WACOM: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && USB_HID [=n]
+

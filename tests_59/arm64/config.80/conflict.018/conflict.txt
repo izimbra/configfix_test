@@ -1,0 +1,15 @@
+CLK_R8A77995: y => no
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=y]
+    Reverse dependencies: CLK_RENESAS [=y] && COMMON_CLK [=y] && ARCH_R8A77995 [=y]
+
+CRYPTO_CHACHA20POLY1305: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+GPIO_DLN2: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_DLN2 [=m]
+
+PARAVIRT: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PARAVIRT_TIME_ACCOUNTING [=y] || XEN [=n] && ARM64 [=y] && OF [=y] || HYPERV [=n] && X86 && ACPI [=n] && X86_LOCAL_APIC && HYPERVISOR_GUEST
+

@@ -1,0 +1,26 @@
+INPUT_CM109: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && USB_ARCH_HAS_HCD [=n]
+
+RTC_DRV_DS1672: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+
+MSM_GCC_8998: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: MSM_GPUCC_8998 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || MSM_MMCC_8998 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+I2C_SLAVE: n => yes
+    Direct dependencies:  I2C [=n]
+    Reverse dependencies: I2C_AT91_SLAVE_EXPERIMENTAL [=n] && I2C [=n] && HAS_IOMEM [=y] && I2C_AT91 [=n] || I2C_AXXIA [=n] && I2C [=n] && HAS_IOMEM [=y] && (ARCH_AXXIA || COMPILE_TEST [=n]) || I2C_BCM_IPROC [=n] && I2C [=n] && HAS_IOMEM [=y] && (ARCH_BCM_IPROC [=n] || COMPILE_TEST [=n]) || I2C_DESIGNWARE_SLAVE [=n] && I2C [=n] && HAS_IOMEM [=y] && I2C_DESIGNWARE_CORE [=n] || I2C_EMEV2 [=n] && I2C [=n] && HAS_IOMEM [=y] && HAVE_CLK [=y] || I2C_PXA_SLAVE [=n] && I2C [=n] && HAS_IOMEM [=y] && I2C_PXA [=n] && !X86_32 || I2C_STM32F7 [=n] && I2C [=n] && HAS_IOMEM [=y] && (ARCH_STM32 || COMPILE_TEST [=n]) || I2C_RCAR [=n] && I2C [=n] && HAS_IOMEM [=y] && (ARCH_RENESAS [=n] || COMPILE_TEST [=n])
+
+RMI4_SMB: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=n] && I2C [=n]
+
+LEDS_KTD2692: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS_FLASH [=n] && OF [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+MODULE_COMPRESS: n => yes
+    Direct dependencies:  MODULES [=n]
+
+MFD_TI_LMU: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+

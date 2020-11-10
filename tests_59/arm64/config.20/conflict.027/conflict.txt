@@ -1,0 +1,20 @@
+RAID_ATTRS: n => yes
+    Direct dependencies:  BLOCK [=n] && SCSI_MOD [=y]
+    Reverse dependencies: SCSI_MPT3SAS [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_SMARTPQI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && !S390 || SCSI_MYRB [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] || SCSI_MYRS [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] && (!CPU_BIG_ENDIAN [=y] || COMPILE_TEST [=n])
+
+HID_WIIMOTE: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && LEDS_CLASS [=n]
+
+IOMMU_IO_PGTABLE_LPAE: n => yes
+    Direct dependencies:  IOMMU_SUPPORT [=n] && (ARM || ARM64 [=y] || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n])
+    Reverse dependencies: DRM_PANFROST [=n] && HAS_IOMEM [=y] && DRM [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n]) && MMU [=y] || IPMMU_VMSA [=n] && IOMMU_SUPPORT [=n] && (ARCH_RENESAS [=n] || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n]) || ARM_SMMU [=n] && IOMMU_SUPPORT [=n] && (ARM64 [=y] || ARM || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n]) || ARM_SMMU_V3 [=n] && IOMMU_SUPPORT [=n] && ARM64 [=y] || QCOM_IOMMU [=n] && IOMMU_SUPPORT [=n] && (ARCH_QCOM [=y] || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n])
+
+DRM_MESON: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && OF [=y] && (ARM || ARM64 [=y]) && (ARCH_MESON [=n] || COMPILE_TEST [=n])
+
+LEDS_PCA963X: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=y]
+
+REGULATOR_MT6323: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_MT6397 [=n]
+

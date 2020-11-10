@@ -1,0 +1,20 @@
+USB_EHCI_HCD_PLATFORM: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m]
+    Reverse dependencies: USB_HCD_BCMA [=m] && USB_SUPPORT [=y] && USB [=y] && BCMA [=y] && USB_EHCI_HCD [=m] || USB_HCD_SSB [=y] && USB_SUPPORT [=y] && USB [=y] && SSB [=y] && USB_EHCI_HCD [=m] || USB_EHCI_HCD_STI [=m] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && (ARCH_STI || COMPILE_TEST [=y]) && OF [=y] || USB_CNS3XXX_EHCI [=y] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && (ARCH_CNS3XXX || COMPILE_TEST [=y]) || USB_OCTEON_EHCI [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && CAVIUM_OCTEON_SOC
+
+SAMPLE_VFIO_MDEV_MDPY_FB: n => mod
+    Direct dependencies:  SAMPLES [=n] && FB [=y] && m && MODULES [=y]
+
+SAMPLE_KFIFO: n => mod
+    Direct dependencies:  SAMPLES [=n] && m && MODULES [=y]
+
+DEVFREQ_GOV_SIMPLE_ONDEMAND: y => no
+    Direct dependencies:  PM_DEVFREQ [=y]
+    Reverse dependencies: SCSI_UFSHCD [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_DMA [=n] || DRM_LIMA [=m] && HAS_IOMEM [=y] && DRM [=m] && (ARM || ARM64 [=y] || COMPILE_TEST [=y]) && MMU [=y] && COMMON_CLK [=y] && OF [=y] || DRM_PANFROST [=n] && HAS_IOMEM [=y] && DRM [=m] && (ARM || ARM64 [=y] || COMPILE_TEST [=y] && !GENERIC_ATOMIC64 [=n]) && MMU [=y] || ARM_EXYNOS_BUS_DEVFREQ [=n] && PM_DEVFREQ [=y] && (ARCH_EXYNOS [=y] || COMPILE_TEST [=y]) || ARM_IMX8M_DDRC_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_MXC [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y]) || ARM_TEGRA20_DEVFREQ [=m] && PM_DEVFREQ [=y] && (TEGRA_MC [=y] && TEGRA20_EMC [=n] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || ARM_RK3399_DMC_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_ROCKCHIP [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y])
+
+DRM_PANEL_VISIONOX_RM69299: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y]
+
+NVDIMM_DAX: n => yes
+    Direct dependencies:  LIBNVDIMM [=n] && NVDIMM_PFN [=n]
+

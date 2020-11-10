@@ -1,0 +1,29 @@
+HZ_300: y => no
+    Direct dependencies:  <choice>
+
+USB_M66592: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && HAS_IOMEM [=y]
+
+MTD_COMPLEX_MAPPINGS: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+    Reverse dependencies: MTD_HYPERBUS [=n] && MTD [=n] && HAS_IOMEM [=y] || MTD_MAP_BANK_WIDTH_32 [=n] && MTD [=n] && HAS_IOMEM [=y] || MTD_PHYSMAP_GEMINI [=n] && MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=n] && MFD_SYSCON [=y] || MTD_PHYSMAP_IXP4XX [=n] && MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=n] && ARM
+
+SPI_ROCKCHIP: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+LEDS_MLXREG: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n]
+
+NLS_MAC_ICELAND: n => yes
+    Direct dependencies:  NLS [=n]
+
+USB_GPIO_VBUS: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) && (USB_GADGET [=n] || !USB_GADGET [=n])
+
+SC_GCC_7180: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: SC_DISPCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_LPASS_CORECC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_GPUCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_MSS_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_VIDEOCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+HID_UDRAW_PS3: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

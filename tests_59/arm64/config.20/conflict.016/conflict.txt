@@ -1,0 +1,14 @@
+KALLSYMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: KPROBES [=n] && MODULES [=n] && HAVE_KPROBES [=y] || LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=n] || DEBUG_KMEMLEAK [=y] && DEBUG_KERNEL [=y] && HAVE_DEBUG_KMEMLEAK [=y] || LOCKDEP [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || FUNCTION_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=y] || STACK_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=y] || FTRACE_SYSCALLS [=n] && TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_SYSCALL_TRACEPOINTS [=y]
+
+EXT4_FS_SECURITY: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT4_FS [=n]
+    Reverse dependencies: EXT3_FS_SECURITY [=n] && BLOCK [=n] && EXT3_FS [=n]
+
+LEDS_LP8860: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=y] && OF [=y]
+
+BOOT_PRINTK_DELAY: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && PRINTK [=n] && GENERIC_CALIBRATE_DELAY [=y]
+

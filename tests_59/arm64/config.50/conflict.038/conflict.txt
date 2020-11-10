@@ -1,0 +1,26 @@
+SOC_RENESAS: y => no
+    Direct dependencies:  y
+
+DRM_PANEL_LG_LG4573: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && SPI [=n]
+
+SENSORS_ADS7871: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=n]
+
+CHR_DEV_SG: n => yes
+    Direct dependencies:  SCSI [=n]
+
+SOC_BRCMSTB: y => no
+    Direct dependencies:  ARM || ARM64 [=y] || BMIPS_GENERIC || COMPILE_TEST [=y]
+    Reverse dependencies: PHY_BRCM_USB [=y] && (ARCH_BRCMSTB [=y] || COMPILE_TEST [=y]) && OF [=y]
+
+SAMPLE_CONFIGFS: n => no
+    Direct dependencies:  SAMPLES [=y] && CONFIGFS_FS [=y] && m && MODULES [=n]
+
+USB_MICROTEK: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && SCSI [=n]
+
+RESET_SIMPLE: y => no
+    Direct dependencies:  RESET_CONTROLLER [=y]
+    Reverse dependencies: CLK_BCM2711_DVP [=n] && (ARCH_BCM2835 [=y] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || RESET_SOCFPGA [=y] && RESET_CONTROLLER [=y] || RESET_SUNXI [=y] && RESET_CONTROLLER [=y] || RESET_UNIPHIER_GLUE [=n] && RESET_CONTROLLER [=y] && (ARCH_UNIPHIER [=y] || COMPILE_TEST [=y]) && OF [=y]
+

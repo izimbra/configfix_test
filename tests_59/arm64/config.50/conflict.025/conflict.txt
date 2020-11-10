@@ -1,0 +1,16 @@
+BOOT_PRINTK_DELAY: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && PRINTK [=n] && GENERIC_CALIBRATE_DELAY [=y]
+
+TINYDRM_MI0283QT: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+SDM_GCC_845: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: SDM_CAMCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_GPUCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_VIDEOCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_DISPCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_LPASSCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+INTEL_TH_STH: n => yes
+    Direct dependencies:  INTEL_TH [=n] && STM [=y]
+
+THERMAL_DEFAULT_GOV_USER_SPACE: y => no
+    Direct dependencies:  <choice>
+

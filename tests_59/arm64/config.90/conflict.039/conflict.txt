@@ -1,0 +1,28 @@
+CHARGER_MAX77693: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MAX77693 [=m]
+
+SENSORS_ADM1275: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+CROS_EC: m => no
+    Direct dependencies:  CHROME_PLATFORMS [=y] && (X86 || ARM || ARM64 [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: MFD_CROS_EC [=m] && (X86 || ARM || ARM64 [=y] || COMPILE_TEST [=y])
+
+EEPROM_93CX6: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: SCSI_WD719X [=y] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] || KS8851 [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_MICREL [=y] && SPI [=y] || KS8851_MLL [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_MICREL [=y] && HAS_IOMEM [=y] || AX88796_93CX6 [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_8390 [=y] && AX88796 [=m] || ADM8211 [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_ADMTEK [=y] && MAC80211 [=m] && PCI [=y] || RT2400PCI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && PCI [=y] || RT2500PCI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && PCI [=y] || RT61PCI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && PCI [=y] || RT2800PCI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && PCI [=y] || RTL8180 [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_REALTEK [=y] && MAC80211 [=m] && PCI [=y] || RTL8187 [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_REALTEK [=y] && MAC80211 [=m] && USB [=y]
+
+CRYPTO_CRYPTD: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_SIMD [=y] && CRYPTO [=y] || CRYPTO_GHASH_CLMUL_NI_INTEL [=n] && CRYPTO [=y] && X86 && 64BIT [=y]
+
+IPMI_POWEROFF: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+USB_WDM: m => no
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y]
+    Reverse dependencies: USB_NET_HUAWEI_CDC_NCM [=m] && NETDEVICES [=y] && USB_NET_DRIVERS [=m] && USB_USBNET [=m] || USB_NET_CDC_MBIM [=m] && NETDEVICES [=y] && USB_NET_DRIVERS [=m] && USB_USBNET [=m] || USB_NET_QMI_WWAN [=m] && NETDEVICES [=y] && USB_NET_DRIVERS [=m] && USB_USBNET [=m]
+
+INTEL_TH_GTH: n => mod
+    Direct dependencies:  INTEL_TH [=n]
+

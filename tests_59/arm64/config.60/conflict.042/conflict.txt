@@ -1,0 +1,28 @@
+DRM_PANEL_SONY_ACX565AKM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+USB_KBD: n => yes
+    Direct dependencies:  USB_HID [=n]!=y && EXPERT [=y] && USB [=y] && INPUT [=n]
+
+BLK_CGROUP: n => yes
+    Direct dependencies:  CGROUPS [=n] && BLOCK [=y]
+
+I2C_VERSATILE: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && (ARCH_MPS2 || ARCH_VERSATILE || ARCH_REALVIEW || ARCH_VEXPRESS [=n] || COMPILE_TEST [=n])
+
+JOYSTICK_ADI: n => no
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n] && ADI [=n]!=m
+
+DRM_PANEL_LEADTEK_LTK500HD1829: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+USB_EHCI_ROOT_HUB_TT: y => no
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y]
+    Reverse dependencies: USB_EHCI_FSL [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y] || USB_EHCI_MXC [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y] && (ARCH_MXC [=n] || COMPILE_TEST [=n]) || USB_EHCI_TEGRA [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y] && ARCH_TEGRA [=y] || USB_EHCI_MV [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y] && (ARCH_PXA || ARCH_MMP || COMPILE_TEST [=n]) || USB_CHIPIDEA_HOST [=y] && USB_SUPPORT [=y] && USB_CHIPIDEA [=y] && USB_EHCI_HCD [=y]
+
+HID_ELAN: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && LEDS_CLASS [=y] && USB_HID [=n]
+
+EDAC_XGENE: n => yes
+    Direct dependencies:  EDAC [=n] && (ARM64 [=y] || COMPILE_TEST [=n])
+

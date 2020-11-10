@@ -1,0 +1,24 @@
+BACKLIGHT_TPS65217: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m] && MFD_TPS65217 [=n]
+
+INFTL: n => mod
+    Direct dependencies:  MTD [=y] && BLOCK [=n]
+
+SDM_GCC_845: m => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+    Reverse dependencies: SDM_CAMCC_845 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SDM_GPUCC_845 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SDM_VIDEOCC_845 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SDM_DISPCC_845 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SDM_LPASSCC_845 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+MTD_NAND_HISI504: m => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && (ARCH_HISI [=n] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+DEVFREQ_GOV_PASSIVE: y => no
+    Direct dependencies:  PM_DEVFREQ [=y]
+    Reverse dependencies: ARM_EXYNOS_BUS_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_EXYNOS [=y] || COMPILE_TEST [=y])
+
+USB_DUMMY_HCD: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && (USB [=y]=y || USB [=y]=m && USB_GADGET [=n]=m)
+
+SERIO: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: KEYBOARD_ATKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_LKKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_HIL [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && (GSC || HP300) || KEYBOARD_NEWTON [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_STOWAWAY [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_SUNKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_XTKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || MOUSE_PS2 [=m] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || MOUSE_SERIAL [=y] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || MOUSE_VSXXXAA [=y] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || JOYSTICK_WARRIOR [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_MAGELLAN [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_SPACEORB [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_SPACEBALL [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_STINGER [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_TWIDJOY [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_ZHENHUA [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_FSIA6B [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || TABLET_SERIAL_WACOM4 [=n] && !UML && INPUT [=y] && INPUT_TABLET [=y] || TOUCHSCREEN_DYNAPRO [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_HAMPSHIRE [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_EGALAX_SERIAL [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_FUJITSU [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_GUNZE [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_ELO [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_WACOM_W8001 [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_MTOUCH [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_INEXIO [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_PENMOUNT [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHRIGHT [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHWIN [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHIT213 [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TSC_SERIO [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || RMI4_F03_SERIO [=y] && !UML && INPUT [=y] && RMI4_CORE [=y] && RMI4_F03 [=y] || I2C_TAOS_EVM [=m] && I2C [=y] && HAS_IOMEM [=y] && TTY [=y] || USB_PULSE8_CEC [=m] && MEDIA_CEC_SUPPORT [=y] && USB_SUPPORT [=y] && TTY [=y] || USB_RAINSHADOW_CEC [=m] && MEDIA_CEC_SUPPORT [=y] && USB_SUPPORT [=y] && TTY [=y]
+

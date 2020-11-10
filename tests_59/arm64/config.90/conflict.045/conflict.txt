@@ -1,0 +1,33 @@
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => no
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+
+MTD_QINFO_PROBE: m => yes
+    Direct dependencies:  MTD [=y] && MTD_LPDDR [=m]
+    Reverse dependencies: MTD_LPDDR [=m] && MTD [=y]
+
+OF_OVERLAY: y => no
+    Direct dependencies:  OF [=y]
+    Reverse dependencies: DRM_RCAR_LVDS [=m] && HAS_IOMEM [=y] && DRM [=y] && DRM_BRIDGE [=y] && OF [=y]
+
+REGULATOR_MC13783: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MC13XXX [=m]
+
+I2C_MUX: y => mod
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: MEDIA_SUBDRV_AUTOSELECT [=y] && MEDIA_SUPPORT [=m] && HAS_IOMEM [=y] || DRM_SII902X [=y] && HAS_IOMEM [=y] && DRM [=y] && DRM_BRIDGE [=y] && OF [=y] || MPU3050_I2C [=m] && IIO [=m] && INPUT_MPU3050!=y && INPUT_MPU3050!=m && I2C [=y] || INV_MPU6050_I2C [=m] && IIO [=m] && I2C [=y]
+
+PINCTRL_MESON_G12A: n => yes
+    Direct dependencies:  PINCTRL [=y] && PINCTRL_MESON [=n] && ARM64 [=y]
+
+BLK_DEV_BSG: y => yes
+    Direct dependencies:  BLOCK [=y]
+    Reverse dependencies: BLK_DEV_BSGLIB [=y] && BLOCK [=y]
+
+MMC_GOLDFISH: m => yes
+    Direct dependencies:  MMC [=m] && (GOLDFISH [=y] || COMPILE_TEST [=y])
+
+CRYPTO_STREEBOG: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_ECRDSA [=y] && CRYPTO [=y]
+

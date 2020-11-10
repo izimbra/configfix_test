@@ -1,0 +1,25 @@
+EXT4_FS: n => mod
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: EXT3_FS [=n] && BLOCK [=n] || EXT4_KUNIT_TESTS [=n] && BLOCK [=n] && KUNIT [=y]
+
+MFD_CROS_EC_DEV: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && CROS_EC [=y]
+    Reverse dependencies: MFD_CROS_EC [=m] && (X86 || ARM || ARM64 [=y] || COMPILE_TEST [=y])
+
+BLK_DEV_THROTTLING: n => yes
+    Direct dependencies:  BLOCK [=n] && BLK_CGROUP [=n]
+
+SPARSE_IRQ: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARM64 [=y] || ATMEL_AIC_IRQ [=n] || ATMEL_AIC5_IRQ [=n] || FARADAY_FTINTC010 [=n] || IXP4XX_IRQ [=n] || CLPS711X_IRQCHIP [=n] && ARCH_CLPS711X
+
+SC_GCC_7180: m => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+    Reverse dependencies: SC_DISPCC_7180 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_LPASS_CORECC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_GPUCC_7180 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_MSS_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_VIDEOCC_7180 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+CHARLCD_BL_OFF: n => no
+    Direct dependencies:  <choice>
+
+DRM_PANEL_OSD_OSD101T2587_53TS: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+

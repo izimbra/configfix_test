@@ -1,0 +1,12 @@
+SH_TIMER_TMU: n => yes
+    Direct dependencies:  GENERIC_CLOCKEVENTS [=y] && HAS_IOMEM [=y]
+
+DRM_PANEL_LEADTEK_LTK500HD1829: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+TMPFS_POSIX_ACL: n => yes
+    Direct dependencies:  TMPFS [=n]
+
+VFIO: n => yes
+    Direct dependencies:  IOMMU_API [=n]
+

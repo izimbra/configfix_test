@@ -1,0 +1,22 @@
+USB_DUMMY_HCD: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && (USB [=y]=y || USB [=y]=m && USB_GADGET [=n]=m)
+
+IR_STREAMZAP: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+MTD_NAND_DISKONCHIP_BBTWRITE: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && MTD_NAND_DISKONCHIP [=n]
+
+RMI4_F11: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+
+VIRTIO_BLK: n => yes
+    Direct dependencies:  BLK_DEV [=n] && VIRTIO [=y]
+
+XEN_GRANT_DMA_ALLOC: n => yes
+    Direct dependencies:  XEN [=n] && HAS_DMA [=y]
+
+FB_UDL: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=m] && USB [=y]
+

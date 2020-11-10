@@ -1,0 +1,24 @@
+DRM_PANEL_NOVATEK_NT39016: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+I2C_MUX_PCA954x: m => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+EXT4_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: EXT3_FS [=n] && BLOCK [=n] || EXT4_KUNIT_TESTS [=n] && BLOCK [=n] && KUNIT [=y]
+
+MSPRO_BLOCK: n => mod
+    Direct dependencies:  MEMSTICK [=y] && BLOCK [=n]
+
+I2C_ALGOPCA: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_PCA_PLATFORM [=y] && I2C [=y] && HAS_IOMEM [=y] || I2C_PCA_ISA [=n] && I2C [=y] && HAS_IOMEM [=y] && ISA
+
+MTD_RAW_NAND: n => yes
+    Direct dependencies:  MTD [=m]
+
+RESET_SIMPLE: y => no
+    Direct dependencies:  RESET_CONTROLLER [=y]
+    Reverse dependencies: CLK_BCM2711_DVP [=y] && (ARCH_BCM2835 [=y] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || RESET_SOCFPGA [=y] && RESET_CONTROLLER [=y] || RESET_SUNXI [=y] && RESET_CONTROLLER [=y] || RESET_UNIPHIER_GLUE [=y] && RESET_CONTROLLER [=y] && (ARCH_UNIPHIER [=y] || COMPILE_TEST [=y]) && OF [=y]
+

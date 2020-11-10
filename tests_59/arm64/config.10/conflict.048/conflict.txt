@@ -1,0 +1,30 @@
+SPI_FSL_SPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && OF [=y]
+
+LEDS_TRIGGER_DEFAULT_ON: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+
+PINCTRL_QCOM_SPMI_PMIC: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y] && SPMI [=n]
+
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+
+BATTERY_DS2782: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n]
+
+BACKLIGHT_MAX8925: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && MFD_MAX8925 [=n]
+
+LEDS_LM36274: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TI_LMU_COMMON [=n] && MFD_TI_LMU [=n]
+
+PHY_MESON_AXG_PCIE: n => yes
+    Direct dependencies:  OF [=y] && (ARCH_MESON [=n] || COMPILE_TEST [=n])
+
+BLK_DEV_NULL_BLK: n => yes
+    Direct dependencies:  BLK_DEV [=n]
+
+TIMERFD: y => no
+    Direct dependencies:  y
+

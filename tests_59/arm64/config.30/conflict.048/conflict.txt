@@ -1,0 +1,32 @@
+MQ_IOSCHED_DEADLINE: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: BLK_DEV_ZONED [=n] && BLOCK [=n]
+
+PINCTRL_SDM660: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y]
+
+BACKLIGHT_ARCXCNN: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && I2C [=n]
+
+MTD_PLATRAM: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+
+SPI_DEBUG: n => yes
+    Direct dependencies:  SPI [=n] && DEBUG_KERNEL [=y]
+
+PM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_MXC [=n] || ARCH_ROCKCHIP [=n] || ARCH_TEGRA [=y] || ARCH_VEXPRESS [=n] || PM_SLEEP [=n] && (SUSPEND [=n] || HIBERNATE_CALLBACKS [=n]) || ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=n] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=n] || ARCH_RCAR_GEN3 [=n] && SOC_RENESAS [=n] || ARCH_RMOBILE [=n] && SOC_RENESAS [=n] || ARCH_R7S72100 [=n] && SOC_RENESAS [=n] && ARM && ARCH_RENESAS [=n] || ARCH_R7S9210 [=n] && SOC_RENESAS [=n] && ARM && ARCH_RENESAS [=n]
+
+TYPEC: n => yes
+    Direct dependencies:  USB_SUPPORT [=n]
+
+RTC_DRV_XGENE: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y] && (ARCH_XGENE [=y] || COMPILE_TEST [=n])
+
+VFIO: n => yes
+    Direct dependencies:  IOMMU_API [=n]
+
+XEN_GRANT_DEV_ALLOC: n => yes
+    Direct dependencies:  XEN [=n]
+

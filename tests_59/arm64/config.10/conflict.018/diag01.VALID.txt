@@ -1,0 +1,8 @@
+DEBUG_DEVRES => yes
+CRYPTO_MANAGER => yes
+DEBUG_LOCKING_API_SELFTESTS => yes
+IPMI_SSIF => yes
+DEBUG_KERNEL => yes
+CRYPTO => yes
+IPMI_HANDLER => yes
+I2C => yes

@@ -1,0 +1,12 @@
+CONTEXT_TRACKING_FORCE: n => yes
+    Direct dependencies:  GENERIC_CLOCKEVENTS [=y] && CONTEXT_TRACKING [=n]
+
+HSI_CHAR: m => yes
+    Direct dependencies:  HSI [=m]
+
+HZ_300: n => no
+    Direct dependencies:  <choice>
+
+DRM_PARADE_PS8622: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=y]
+

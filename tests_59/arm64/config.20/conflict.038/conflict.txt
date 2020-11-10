@@ -1,0 +1,26 @@
+SYSFS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CONFIGFS_FS [=y]
+
+RD_LZO: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+
+SLUB_DEBUG: n => yes
+    Direct dependencies:  SLUB [=n] && SYSFS [=y]
+    Reverse dependencies: KASAN_GENERIC [=n] && <choice> && HAVE_ARCH_KASAN [=y] && CC_HAS_KASAN_GENERIC [=y] && (SLUB [=n] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=n] || KASAN_SW_TAGS [=n] && <choice> && HAVE_ARCH_KASAN_SW_TAGS [=y] && CC_HAS_KASAN_SW_TAGS [=n] && (SLUB [=n] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=n]
+
+RTC_DRV_MAX6902: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+CPU_LITTLE_ENDIAN: n => no
+    Direct dependencies:  <choice>
+
+MEMSTICK_UNSAFE_RESUME: n => yes
+    Direct dependencies:  MEMSTICK [=n]
+
+PWM_BRCMSTB: n => yes
+    Direct dependencies:  PWM [=n] && (ARCH_BRCMSTB [=n] || BMIPS_GENERIC || COMPILE_TEST [=n])
+
+LEDS_ADP5520: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && PMIC_ADP5520 [=n]
+

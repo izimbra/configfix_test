@@ -1,0 +1,21 @@
+CROS_EC_DEBUGFS: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n] && DEBUG_FS [=n]
+
+I2C_NOMADIK: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && ARM_AMBA [=y]
+
+MTD_DATAFLASH: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+LEDS_LM36274: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TI_LMU_COMMON [=n] && MFD_TI_LMU [=n]
+
+HD44780: n => yes
+    Direct dependencies:  AUXDISPLAY [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+MTD_BLOCK2MTD: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && BLOCK [=y]
+
+MOUSE_ELAN_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n] && I2C [=n]
+

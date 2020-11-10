@@ -1,0 +1,14 @@
+SAMPLE_VFIO_MDEV_MBOCHS => mod
+DRM_TI_TFP410 => mod
+HID_LOGITECH_HIDPP => yes
+JFS_STATISTICS => yes
+VFIO_MDEV_DEVICE => mod
+VFIO => mod
+VFIO_MDEV => mod
+SYNC_FILE => yes
+IMX_IPUV3_CORE => no
+HID_LOGITECH => yes
+JFS_FS => mod
+BLOCK => yes
+PARTITION_ADVANCED => yes
+DRM => mod

@@ -1,0 +1,30 @@
+SENSORS_MAX31722: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=n]
+
+USB_WDM: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n]
+    Reverse dependencies: USB_NET_HUAWEI_CDC_NCM [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_CDC_MBIM [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_QMI_WWAN [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n]
+
+PINCTRL_SX150X: n => yes
+    Direct dependencies:  PINCTRL [=y] && I2C [=n]=y
+
+NVME_HWMON: n => no
+    Direct dependencies:  NVME_CORE [=n]=y && HWMON [=n]=y || NVME_CORE [=n]=m && HWMON [=n]
+
+REGULATOR_MT6397: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_MT6397 [=n]
+
+SC_GCC_7180: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: SC_DISPCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_LPASS_CORECC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_GPUCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_MSS_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_VIDEOCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+PHY_QCOM_USB_HSIC: n => yes
+    Direct dependencies:  USB_ULPI_BUS [=n]
+
+CHARGER_BQ2515X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+MSM_GCC_8960: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: MSM_LCC_8960 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || MSM_MMCC_8960 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+

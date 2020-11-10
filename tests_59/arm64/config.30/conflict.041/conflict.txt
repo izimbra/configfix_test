@@ -1,0 +1,29 @@
+MTD_COMPLEX_MAPPINGS: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+    Reverse dependencies: MTD_HYPERBUS [=n] && MTD [=n] && HAS_IOMEM [=y] || MTD_MAP_BANK_WIDTH_32 [=n] && MTD [=n] && HAS_IOMEM [=y] || MTD_PHYSMAP_GEMINI [=n] && MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=n] && MFD_SYSCON [=y] || MTD_PHYSMAP_IXP4XX [=n] && MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=n] && ARM
+
+W1_SLAVE_DS2781: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2781 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+CHARGER_MANAGER: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && REGULATOR [=n]
+
+REGULATOR_HI655X: n => yes
+    Direct dependencies:  REGULATOR [=n] && (ARCH_HISI [=n] || COMPILE_TEST [=n]) && MFD_HI655X_PMIC [=n] && OF [=y]
+
+USB_HUB_USB251XB: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && I2C [=n]
+
+LEDS_AW2013: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=n] && OF [=y]
+
+HID_PLANTRONICS: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+MFD_MADERA_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=y] && SPI_MASTER [=n]
+
+MFD_TPS80031: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+

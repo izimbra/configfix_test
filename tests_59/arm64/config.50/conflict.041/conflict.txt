@@ -1,0 +1,32 @@
+USB_EHCI_ROOT_HUB_TT: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=n]
+    Reverse dependencies: USB_EHCI_FSL [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=n] || USB_EHCI_MXC [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=n] && (ARCH_MXC [=n] || COMPILE_TEST [=y]) || USB_EHCI_TEGRA [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=n] && ARCH_TEGRA [=y] || USB_EHCI_MV [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=n] && (ARCH_PXA || ARCH_MMP || COMPILE_TEST [=y]) || USB_CHIPIDEA_HOST [=n] && USB_SUPPORT [=y] && USB_CHIPIDEA [=n] && USB_EHCI_HCD [=n]
+
+DEBUG_BLOCK_EXT_DEVT: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && BLOCK [=n]
+
+SENSORS_DA9055: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_DA9055 [=y]
+
+MSM_GCC_8998: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: MSM_GPUCC_8998 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || MSM_MMCC_8998 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+SYSTEM_TRUSTED_KEYRING: n => yes
+    Direct dependencies:  CRYPTO [=y] && KEYS [=n] && ASYMMETRIC_KEY_TYPE [=n]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=n]
+
+RESET_SIMPLE: y => no
+    Direct dependencies:  RESET_CONTROLLER [=y]
+    Reverse dependencies: CLK_BCM2711_DVP [=n] && (ARCH_BCM2835 [=y] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || RESET_SOCFPGA [=y] && RESET_CONTROLLER [=y] || RESET_SUNXI [=y] && RESET_CONTROLLER [=y] || RESET_UNIPHIER_GLUE [=n] && RESET_CONTROLLER [=y] && (ARCH_UNIPHIER [=y] || COMPILE_TEST [=y]) && OF [=y]
+
+CGROUPS: y => yes
+    Direct dependencies:  y
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+
+HID_CP2112: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=y] && HIDRAW [=n] && I2C [=y] && GPIOLIB [=y]
+
+INPUT_DRV2665_HAPTICS: n => yes
+    Direct dependencies:  !UML && INPUT_MISC [=n] && INPUT [=y] && I2C [=y]
+

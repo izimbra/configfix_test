@@ -1,0 +1,27 @@
+LEDS_LM3532: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=y]
+
+XZ_DEC_POWERPC: n => yes
+    Direct dependencies:  XZ_DEC [=n]
+
+USB_EMI26: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n]
+
+IPQ_GCC_4019: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+USB_FOTG210_UDC: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && HAS_DMA [=y]
+
+SM_FTL: n => yes
+    Direct dependencies:  MTD [=n] && BLOCK [=n]
+
+REGULATOR_MC13783: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_MC13XXX [=n]
+
+USB_GPIO_VBUS: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) && (USB_GADGET [=n] || !USB_GADGET [=n])
+
+USB_R8A66597_HCD: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && HAS_IOMEM [=y]
+

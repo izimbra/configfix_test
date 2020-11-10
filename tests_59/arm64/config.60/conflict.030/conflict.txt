@@ -1,0 +1,20 @@
+USB_MASS_STORAGE: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && BLOCK [=y]
+
+MFD_STMFX: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=y] && (OF [=y] || COMPILE_TEST [=n])
+    Reverse dependencies: PINCTRL_STMFX [=y] && PINCTRL [=y] && I2C [=y] && OF_GPIO [=y]
+
+RTC_DRV_AS3722: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_AS3722 [=n]
+
+DRM_DEBUG_MM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]=y && STACKTRACE_SUPPORT [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n] && DRM [=n]=y
+
+FB_EFI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y]=y && !IA64 && EFI [=n]
+
+XEN_GRANT_DMA_ALLOC: n => yes
+    Direct dependencies:  XEN [=n] && HAS_DMA [=y]
+

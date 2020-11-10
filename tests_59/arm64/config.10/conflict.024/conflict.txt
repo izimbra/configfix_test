@@ -1,0 +1,15 @@
+SENSORS_LM87: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+UHID: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+COREDUMP: y => no
+    Direct dependencies:  y
+
+USB_TRANCEVIBRATOR: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n]
+
+SIGNALFD: y => no
+    Direct dependencies:  y
+

@@ -1,0 +1,20 @@
+LEDS_TRIGGER_ACTIVITY: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=n]
+
+PM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_MXC [=n] || ARCH_ROCKCHIP [=y] || ARCH_TEGRA [=y] || ARCH_VEXPRESS [=n] || PM_SLEEP [=n] && (SUSPEND [=n] || HIBERNATE_CALLBACKS [=n]) || ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN3 [=y] && SOC_RENESAS [=y] || ARCH_RMOBILE [=n] && SOC_RENESAS [=y] || ARCH_R7S72100 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS [=y] || ARCH_R7S9210 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS [=y]
+
+PWM_LP3943: n => yes
+    Direct dependencies:  PWM [=n] && MFD_LP3943 [=y]
+
+INDIRECT_PIO: y => no
+    Direct dependencies:  ARM64 [=y]
+    Reverse dependencies: HISILICON_LPC [=y] && (ARM64 [=y] && ARCH_HISI [=y] || COMPILE_TEST [=y] && !ALPHA && !HEXAGON && !PARISC && !C6X) && HAS_IOMEM [=y] && ARM64 [=y]
+
+MOUSE_SERIAL: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n]
+
+RD_XZ: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+

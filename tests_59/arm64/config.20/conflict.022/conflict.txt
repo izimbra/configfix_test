@@ -1,0 +1,16 @@
+MOUSE_CYAPA: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSE [=n] && I2C [=y]
+
+VIRTIO_BLK: n => yes
+    Direct dependencies:  BLK_DEV [=n] && VIRTIO [=n]
+
+RTC_DRV_PCF8563: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+RESET_BRCMSTB_RESCAL: n => yes
+    Direct dependencies:  RESET_CONTROLLER [=n] && HAS_IOMEM [=y]
+
+SM_GCC_8250: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: SM_GPUCC_8250 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+

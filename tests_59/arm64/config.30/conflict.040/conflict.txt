@@ -1,0 +1,26 @@
+USB_EHCI_HCD: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && HAS_DMA [=y] && HAS_IOMEM [=y]
+
+SC_GCC_7180: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: SC_DISPCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_LPASS_CORECC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_GPUCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_MSS_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SC_VIDEOCC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+MESON_SECURE_PM_DOMAINS: n => yes
+    Direct dependencies:  (ARCH_MESON [=y] || COMPILE_TEST [=n]) && MESON_SM [=n] && PM [=y] && OF [=y] && HAVE_ARM_SMCCC [=y]
+
+THERMAL_DEFAULT_GOV_USER_SPACE: n => yes
+    Direct dependencies:  <choice>
+
+HID_ZYDACRON: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+INPUT_GPIO_VIBRA: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+ZYNQMP_IPI_MBOX: n => yes
+    Direct dependencies:  MAILBOX [=y] && ARCH_ZYNQMP [=n] && OF [=y]
+    Reverse dependencies: ZYNQMP_POWER [=n] && PM [=y] && ZYNQMP_FIRMWARE [=n]
+
+PINCTRL_MSM8976: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y]
+

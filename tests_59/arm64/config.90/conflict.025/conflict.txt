@@ -1,0 +1,18 @@
+ARM64_4K_PAGES: n => no
+    Direct dependencies:  <choice>
+
+RTC_DRV_MAX8997: n => mod
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_MAX8997 [=n]
+
+USB_ULPI: y => no
+    Direct dependencies:  USB_SUPPORT [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: USB_TEGRA_PHY [=y] && USB_SUPPORT [=y] && (ARCH_TEGRA [=y] || COMPILE_TEST [=y])
+
+SM_GCC_8150: m => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: SM_GPUCC_8150 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+CRYPTO_BLAKE2B: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=y] && BLOCK [=y]
+

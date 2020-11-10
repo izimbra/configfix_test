@@ -1,0 +1,19 @@
+REGULATOR_TPS6507X: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=y]
+
+I2C_ARB_GPIO_CHALLENGE: n => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) && (OF [=y] || COMPILE_TEST [=n])
+
+SYSC_R8A77980: n => yes
+    Direct dependencies:  SOC_RENESAS [=n]
+    Reverse dependencies: ARCH_R8A77980 [=n] && SOC_RENESAS [=n] && ARM64 [=y]
+
+IR_IMON_RAW: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=n] && RC_CORE [=n]
+
+OF_PMEM: n => yes
+    Direct dependencies:  LIBNVDIMM [=n] && OF [=y]
+
+BATTERY_DA9150: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_DA9150 [=n]
+

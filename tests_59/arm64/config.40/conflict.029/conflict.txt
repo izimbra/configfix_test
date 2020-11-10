@@ -1,0 +1,18 @@
+GPIO_PCA9570: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=n]
+
+TMPFS_POSIX_ACL: n => yes
+    Direct dependencies:  TMPFS [=n]
+
+REGULATOR_QCOM_RPMH: n => yes
+    Direct dependencies:  REGULATOR [=n] && (QCOM_RPMH [=n] || COMPILE_TEST [=n])
+
+CORESIGHT_CATU: n => yes
+    Direct dependencies:  CORESIGHT [=y] && CORESIGHT_LINK_AND_SINK_TMC [=n]
+
+ALTERA_FREEZE_BRIDGE: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_BRIDGE [=n] && HAS_IOMEM [=y]
+
+SENSORS_LTC4151: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

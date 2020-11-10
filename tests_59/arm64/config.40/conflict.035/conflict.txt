@@ -1,0 +1,22 @@
+SOC_ZTE: n => yes
+    Direct dependencies:  ARCH_ZX [=n] || COMPILE_TEST [=n]
+
+FPGA_DFL_AFU: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_DFL [=n]
+
+DRM_HISI_KIRIN: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && OF [=y] && ARM64 [=y]
+
+DRM_PANEL_SHARP_LQ101R1SX01: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+INPUT: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: VT [=y] && TTY [=y] && !UML || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] && ACPI [=n] && X86 || DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=n] && X86 && PCI [=n] && ACPI [=n] || DRM_GMA500 [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && X86 && MMU [=y] && ACPI [=n]
+
+I2C_MUX_PCA954x: n => yes
+    Direct dependencies:  I2C [=n] && I2C_MUX [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+RTC_DRV_GOLDFISH: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && OF [=y] && HAS_IOMEM [=y] && (GOLDFISH [=n] || COMPILE_TEST [=n])
+

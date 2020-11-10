@@ -1,0 +1,15 @@
+CRYPTO_NULL: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_AUTHENC [=y] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_SEQIV [=y] && CRYPTO [=y] || CRYPTO_ECHAINIV [=y] && CRYPTO [=y] || CRYPTO_USER_API_AEAD [=y] && CRYPTO [=y] && NET [=y]
+
+ZONE_DEVICE: n => yes
+    Direct dependencies:  MEMORY_HOTPLUG [=y] && MEMORY_HOTREMOVE [=y] && SPARSEMEM_VMEMMAP [=n] && ARCH_HAS_PTE_DEVMAP [=y]
+
+OF: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARM64 [=y]
+
+CRYPTO_ZSTD: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_ZSTD [=n] && <choice> || UBIFS_FS [=y] && MISC_FILESYSTEMS [=y] && MTD_UBI [=y] && UBIFS_FS_ZSTD [=y] || PSTORE_ZSTD_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=m]
+

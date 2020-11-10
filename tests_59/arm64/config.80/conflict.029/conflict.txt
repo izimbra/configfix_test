@@ -1,0 +1,18 @@
+SAMPLE_VFIO_MDEV_MDPY_FB: n => mod
+    Direct dependencies:  SAMPLES [=n] && FB [=y] && m && MODULES [=y]
+
+ARM64_4K_PAGES: y => no
+    Direct dependencies:  <choice>
+
+SECURITY_LOCKDOWN_LSM: n => yes
+    Direct dependencies:  SECURITY [=n]
+
+RTC_DRV_DS1689: y => no
+    Direct dependencies:  <choice>
+
+DRM_PANEL_LEADTEK_LTK050H3146W: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+DRM_PANEL_SITRONIX_ST7703: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+

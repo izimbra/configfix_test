@@ -1,0 +1,21 @@
+SYSC_R8A774A1: y => no
+    Direct dependencies:  SOC_RENESAS [=y]
+    Reverse dependencies: ARCH_R8A774A1 [=y] && SOC_RENESAS [=y] && ARM64 [=y]
+
+QCOM_CLK_APCC_MSM8996: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] && ARM64 [=y]
+
+GAMEPORT: y => mod
+    Direct dependencies:  !UML
+    Reverse dependencies: JOYSTICK_ANALOG [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_A3D [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_ADI [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && ADI [=n]!=m || JOYSTICK_COBRA [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GF2K [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GRIP [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GRIP_MP [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GUILLEMOT [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_INTERACT [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_SIDEWINDER [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_TMDC [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_JOYDUMP [=m] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y]
+
+IR_STREAMZAP: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+STM: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: CORESIGHT_STM [=y] && CORESIGHT [=y] && (ARM && !CPU_32v3 && !CPU_32v4 && !CPU_32v4T || ARM64 [=y])
+
+EFI_PARTITION: n => yes
+    Direct dependencies:  BLOCK [=n]
+

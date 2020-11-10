@@ -1,0 +1,18 @@
+USB_RENESAS_USBHS_HCD: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_RENESAS_USBHS [=n]
+
+NOP_USB_XCEIV: m => no
+    Direct dependencies:  USB_SUPPORT [=y] && (USB_GADGET [=n] || !USB_GADGET [=n])
+    Reverse dependencies: USB_DWC2_PCI [=m] && USB_SUPPORT [=y] && USB_DWC2 [=y] && USB_PCI [=y] && (USB_GADGET [=n] || !USB_GADGET [=n])
+
+CRC7: m => no
+    Direct dependencies:  y
+    Reverse dependencies: WILC1000_SPI [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_MICROCHIP [=n] && CFG80211 [=m] && INET [=y] && SPI [=y] || WL1251 [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && MAC80211 [=n] || WLCORE_SPI [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && WLCORE [=n] && SPI_MASTER [=y] && OF [=y] || MMC_SPI [=m] && MMC [=m] && SPI_MASTER [=y]
+
+IR_ZX: n => mod
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && (ARCH_ZX [=y] || COMPILE_TEST [=y])
+
+RMI4_CORE: y => mod
+    Direct dependencies:  !UML && INPUT [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+

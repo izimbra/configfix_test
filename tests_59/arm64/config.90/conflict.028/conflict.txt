@@ -1,0 +1,22 @@
+EFI: n => yes
+    Direct dependencies:  OF [=y] && !CPU_BIG_ENDIAN [=y] && KERNEL_MODE_NEON [=y]
+
+CGROUP_SCHED: y => no
+    Direct dependencies:  CGROUPS [=y]
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+
+CRYPTO_BLAKE2B: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=y] && BLOCK [=y]
+
+EDAC_SYNOPSYS: m => yes
+    Direct dependencies:  EDAC [=m] && (ARCH_ZYNQ || ARCH_ZYNQMP [=y])
+
+CRYPTO_SHA3: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_SHA3_ARM64 [=y] && CRYPTO [=y] && ARM64_CRYPTO [=y] && KERNEL_MODE_NEON [=y] || CRYPTO_DEV_SAFEXCEL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+DEBUG_KERNEL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: EXPERT [=y]
+

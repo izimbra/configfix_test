@@ -1,0 +1,25 @@
+INPUT_RAVE_SP_PWRBUTTON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && RAVE_SP_CORE [=n]
+
+INPUT_PCAP: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && EZX_PCAP [=n]
+
+MAGIC_SYSRQ: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: KGDB_SERIAL_CONSOLE [=m] && KGDB [=y] && TTY [=y] && HW_CONSOLE [=y]
+
+DRM_PANEL_SHARP_LQ101R1SX01: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=m]
+
+DRM_TI_TPD12S015: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+IR_IMON: n => mod
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+USB_SNP_UDC_PLAT: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && OF [=y] && HAS_DMA [=y] && (EXTCON [=y] || EXTCON [=y]=n)
+
+VFIO_MDEV: n => yes
+    Direct dependencies:  VFIO [=n]
+

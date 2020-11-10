@@ -1,0 +1,30 @@
+SH_TIMER_TMU: n => yes
+    Direct dependencies:  GENERIC_CLOCKEVENTS [=y] && HAS_IOMEM [=y]
+
+DRM_PANEL_LEADTEK_LTK500HD1829: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+TMPFS_POSIX_ACL: n => yes
+    Direct dependencies:  TMPFS [=n]
+
+VFIO: n => yes
+    Direct dependencies:  IOMMU_API [=n]
+
+CROS_EC_DEBUGFS: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n] && DEBUG_FS [=n]
+
+SENSORS_DS620: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+PWRSEQ_SIMPLE: n => yes
+    Direct dependencies:  MMC [=n] && OF [=y]
+
+LEDS_TRIGGER_BACKLIGHT: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+
+MDM_LCC_9615: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+USB_SISUSBVGA: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && (USB_MUSB_HDRC [=n] || USB_EHCI_HCD [=n])
+

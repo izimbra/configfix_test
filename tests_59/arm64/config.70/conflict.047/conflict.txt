@@ -1,0 +1,35 @@
+IR_IMON_RAW: n => mod
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => mod
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=y] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=y]
+
+AUTOFS_FS: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: AUTOFS4_FS [=y]
+
+DEBUG_RT_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && RT_MUTEXES [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y]
+
+SDM_VIDEOCC_845: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+TINYDRM_HX8357D: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+MSM_GCC_8660: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+CRYPTO_CHACHA20: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y] || CRYPTO_ADIANTUM [=m] && CRYPTO [=y]
+
+CORESIGHT_LINKS_AND_SINKS: y => no
+    Direct dependencies:  CORESIGHT [=y]
+    Reverse dependencies: CORESIGHT_SOURCE_ETM3X [=n] && CORESIGHT [=y] && !ARM64 [=y] || CORESIGHT_SOURCE_ETM4X [=y] && CORESIGHT [=y] && ARM64 [=y] || CORESIGHT_STM [=y] && CORESIGHT [=y] && (ARM && !CPU_32v3 && !CPU_32v4 && !CPU_32v4T || ARM64 [=y])
+

@@ -1,0 +1,19 @@
+NVME_FC: n => yes
+    Direct dependencies:  BLOCK [=n] && HAS_DMA [=y]
+
+BACKLIGHT_DA903X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && PMIC_DA903X [=n]
+
+HID_THRUSTMASTER: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+ARM64_VA_BITS_48: n => no
+    Direct dependencies:  <choice>
+
+TINYDRM_ILI9486: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+NVMEM_SYSFS: y => no
+    Direct dependencies:  NVMEM [=y] && SYSFS [=y]
+    Reverse dependencies: EEPROM_AT24 [=y] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=n] && SYSFS [=y] || EEPROM_93XX46 [=n] && SPI [=n] && SYSFS [=y]
+

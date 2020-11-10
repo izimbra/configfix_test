@@ -1,0 +1,23 @@
+CRYPTO_POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y]
+
+HID_ZEROPLUS: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+JOYSTICK_ANALOG: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n]
+
+MTD_NAND_DISKONCHIP_PROBE_ADVANCED: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && MTD_NAND_DISKONCHIP [=n]
+
+VIRT_CPU_ACCOUNTING_GEN: n => no
+    Direct dependencies:  <choice> && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y] && GENERIC_CLOCKEVENTS [=y]
+    Reverse dependencies: NO_HZ_FULL [=n] && <choice> && !ARCH_USES_GETTIMEOFFSET [=n] && GENERIC_CLOCKEVENTS [=y] && SMP [=y] && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y]
+
+DRM_PANEL_SAMSUNG_S6E8AA0: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y]
+
+DEV_DAX_PMEM: n => yes
+    Direct dependencies:  DAX [=n] && LIBNVDIMM [=n] && NVDIMM_DAX [=n] && DEV_DAX [=n]
+

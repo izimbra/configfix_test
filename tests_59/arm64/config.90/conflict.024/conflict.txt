@@ -1,0 +1,19 @@
+IR_ZX: m => yes
+    Direct dependencies:  RC_DEVICES [=y] && RC_CORE [=m] && (ARCH_ZX [=y] || COMPILE_TEST [=y])
+
+PM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_MXC [=y] || ARCH_ROCKCHIP [=y] || ARCH_TEGRA [=y] || ARCH_VEXPRESS [=y] || PM_SLEEP [=y] && (SUSPEND [=y] || HIBERNATE_CALLBACKS [=y]) || ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN3 [=y] && SOC_RENESAS [=y] || ARCH_RMOBILE [=n] && SOC_RENESAS [=y] || ARCH_R7S72100 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS [=y] || ARCH_R7S9210 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS [=y]
+
+IOMMU_IO_PGTABLE_ARMV7S: y => no
+    Direct dependencies:  IOMMU_SUPPORT [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: MSM_IOMMU [=n] && IOMMU_SUPPORT [=y] && ARM && (ARCH_MSM8X60 || ARCH_MSM8960 || COMPILE_TEST [=y]) || MTK_IOMMU [=y] && IOMMU_SUPPORT [=y] && (ARCH_MEDIATEK [=y] || COMPILE_TEST [=y])
+
+MSM_GCC_8996: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: MSM_MMCC_8996 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+CRYPTO_CHACHA20POLY1305: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+

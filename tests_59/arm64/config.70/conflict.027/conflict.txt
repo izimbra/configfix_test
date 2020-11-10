@@ -1,0 +1,20 @@
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+
+INPUT: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: VT [=y] && TTY [=y] && !UML || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] && ACPI [=y] && X86 || DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=n] && X86 && PCI [=y] && ACPI [=y] || DRM_GMA500 [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && X86 && MMU [=y] && ACPI [=y]
+
+EXT3_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+CROS_EC_SPI: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && CROS_EC [=m] && SPI [=y]
+
+DEVFREQ_GOV_USERSPACE: m => no
+    Direct dependencies:  PM_DEVFREQ [=y]
+    Reverse dependencies: ARM_IMX_BUS_DEVFREQ [=m] && PM_DEVFREQ [=y] && (ARCH_MXC [=y] || COMPILE_TEST [=y]) || ARM_IMX8M_DDRC_DEVFREQ [=m] && PM_DEVFREQ [=y] && (ARCH_MXC [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y])
+
+GPIO_MADERA: m => yes
+    Direct dependencies:  GPIOLIB [=y] && PINCTRL_MADERA [=m]
+

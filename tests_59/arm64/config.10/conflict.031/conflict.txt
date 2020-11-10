@@ -1,0 +1,22 @@
+MFD_MAX8997: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+SC_LPASS_CORECC_7180: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+I2C_KEMPLD: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && MFD_KEMPLD [=n]
+
+PHY_BRCM_USB: n => yes
+    Direct dependencies:  (ARCH_BRCMSTB [=n] || COMPILE_TEST [=n]) && OF [=y]
+
+HI6220_MBOX: n => yes
+    Direct dependencies:  MAILBOX [=n] && (ARCH_HISI [=n] || COMPILE_TEST [=n]) && OF [=y]
+
+EXT4_FS_SECURITY: n => yes
+    Direct dependencies:  BLOCK [=y] && EXT4_FS [=n]
+    Reverse dependencies: EXT3_FS_SECURITY [=n] && BLOCK [=y] && EXT3_FS [=n]
+
+W1_SLAVE_DS2430: n => yes
+    Direct dependencies:  W1 [=n]
+

@@ -1,0 +1,32 @@
+EXT4_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT4_FS [=n]
+    Reverse dependencies: EXT3_FS_POSIX_ACL [=n] && BLOCK [=n] && EXT3_FS [=n]
+
+SENSORS_ADM1021: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+QCOM_CPR: n => yes
+    Direct dependencies:  POWER_AVS [=n] && HAS_IOMEM [=y]
+
+SENSORS_W83792D: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+INPUT_YEALINK: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && USB_ARCH_HAS_HCD [=y]
+
+INPUT_PCAP: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && EZX_PCAP [=n]
+
+DRM_PANEL_NOVATEK_NT39016: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+DEVFREQ_GOV_USERSPACE: y => no
+    Direct dependencies:  PM_DEVFREQ [=y]
+    Reverse dependencies: ARM_IMX_BUS_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_MXC [=n] || COMPILE_TEST [=y]) || ARM_IMX8M_DDRC_DEVFREQ [=n] && PM_DEVFREQ [=y] && (ARCH_MXC [=n] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y])
+
+MODULE_COMPRESS: n => yes
+    Direct dependencies:  MODULES [=n]
+
+JOYSTICK_TWIDJOY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+

@@ -1,0 +1,12 @@
+I2C_QCOM_CCI => yes
+LEDS_CR0014114 => yes
+VIRTIO_IOMMU => yes
+DRM_HDLCD => yes
+I2C => yes
+COMPILE_TEST => yes
+SPI => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes
+IOMMU_SUPPORT => yes
+I2C_ALGOBIT => yes
+DRM => yes

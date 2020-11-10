@@ -1,0 +1,18 @@
+CLK_RCAR_GEN3_CPG: y => no
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=y]
+    Reverse dependencies: CLK_R8A774A1 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A774B1 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A774C0 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A774E1 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A7795 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A77960 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A77961 [=n] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A77965 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A77970 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A77980 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A77990 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_R8A77995 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y]
+
+MTD_COMPLEX_MAPPINGS: y => no
+    Direct dependencies:  MTD [=m] && HAS_IOMEM [=y]
+    Reverse dependencies: MTD_HYPERBUS [=m] && MTD [=m] && HAS_IOMEM [=y] || MTD_MAP_BANK_WIDTH_32 [=n] && MTD [=m] && HAS_IOMEM [=y] || MTD_PHYSMAP_GEMINI [=y] && MTD [=m] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=y] && MFD_SYSCON [=y] || MTD_PHYSMAP_IXP4XX [=n] && MTD [=m] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=y] && ARM
+
+MEMSTICK_REALTEK_USB: m => yes
+    Direct dependencies:  MEMSTICK [=y] && MISC_RTSX_USB [=m]
+
+CRYPTO_CRCT10DIF: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRC_T10DIF [=m]
+
+BLK_DEV_NULL_BLK: n => yes
+    Direct dependencies:  BLK_DEV [=n]
+

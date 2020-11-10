@@ -1,0 +1,15 @@
+SPI_FSL_SPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && OF [=y]
+
+LEDS_TRIGGER_DEFAULT_ON: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+
+PINCTRL_QCOM_SPMI_PMIC: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y] && SPMI [=n]
+
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+
+BATTERY_DS2782: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n]
+

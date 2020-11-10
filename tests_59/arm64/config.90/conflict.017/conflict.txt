@@ -1,0 +1,15 @@
+EXPERT: y => no
+    Direct dependencies:  y
+    Reverse dependencies: EMBEDDED [=y]
+
+CROS_EC_DEBUGFS: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=m] && DEBUG_FS [=y]
+
+IOMMU_IO_PGTABLE_ARMV7S: y => no
+    Direct dependencies:  IOMMU_SUPPORT [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: MSM_IOMMU [=n] && IOMMU_SUPPORT [=y] && ARM && (ARCH_MSM8X60 || ARCH_MSM8960 || COMPILE_TEST [=y]) || MTK_IOMMU [=y] && IOMMU_SUPPORT [=y] && (ARCH_MEDIATEK [=y] || COMPILE_TEST [=y])
+
+MTD_COMPLEX_MAPPINGS: y => no
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y]
+    Reverse dependencies: MTD_HYPERBUS [=m] && MTD [=y] && HAS_IOMEM [=y] || MTD_MAP_BANK_WIDTH_32 [=y] && MTD [=y] && HAS_IOMEM [=y] || MTD_PHYSMAP_GEMINI [=y] && MTD [=y] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=y] && MFD_SYSCON [=y] || MTD_PHYSMAP_IXP4XX [=n] && MTD [=y] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=y] && ARM
+

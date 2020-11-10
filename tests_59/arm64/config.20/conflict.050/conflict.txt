@@ -1,0 +1,31 @@
+MTD_CFI_ADV_OPTIONS: n => yes
+    Direct dependencies:  MTD [=n] && MTD_GEN_PROBE [=n]
+
+SENSORS_LM70: n => yes
+    Direct dependencies:  HWMON [=y] && SPI_MASTER [=n]
+
+ND_BLK: n => yes
+    Direct dependencies:  LIBNVDIMM [=n]
+
+TINYDRM_MI0283QT: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+
+MEMSTICK_DEBUG: n => yes
+    Direct dependencies:  MEMSTICK [=n]
+
+RTC_DRV_XGENE: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y] && (ARCH_XGENE [=y] || COMPILE_TEST [=n])
+
+EDAC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && EDAC_SUPPORT [=y] && RAS [=n]
+
+SC_LPASS_CORECC_7180: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+SM_GCC_8150: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: SM_GPUCC_8150 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+BACKLIGHT_LM3630A: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && I2C [=y] && PWM [=n]
+

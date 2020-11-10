@@ -1,0 +1,32 @@
+MEDIA_CEC_RC: n => no
+    Direct dependencies:  CEC_CORE [=y] && RC_CORE [=n] && (CEC_CORE [=y]=m || RC_CORE [=n]=y)
+
+CRYPTO_CBC: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CEPH_LIB [=n] && NET [=n] && INET [=n] || XFRM_ESP [=n] && NET [=n] && INET [=n] || BLK_DEV_CRYPTOLOOP [=n] && BLK_DEV [=n] && BLK_DEV_LOOP [=n] || DM_CRYPT [=n] && MD [=n] && BLK_DEV_DM [=n] && (ENCRYPTED_KEYS [=n] || ENCRYPTED_KEYS [=n]=n) || FS_ENCRYPTION_ALGS [=n] || ECRYPT_FS [=n] && MISC_FILESYSTEMS [=y] && KEYS [=n] && CRYPTO [=y] && (ENCRYPTED_KEYS [=n] || ENCRYPTED_KEYS [=n]=n) || ENCRYPTED_KEYS [=n] && KEYS [=n] || CRYPTO_DEV_SUN8I_CE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_SUN8I_SS [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_PICOXCELL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=y]) && HAVE_CLK [=y] || CRYPTO_DEV_MXS_DCP [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC [=n]) || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+SENSORS_LM85: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+RD_ZSTD: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+
+OF_DYNAMIC: y => no
+    Direct dependencies:  OF [=y]
+    Reverse dependencies: HOTPLUG_PCI_POWERNV [=n] && PCI [=n] && HOTPLUG_PCI [=n] && PPC_POWERNV && EEH || OF_OVERLAY [=y] && OF [=y] || I2C_DEMUX_PINCTRL [=n] && I2C [=y] && I2C_MUX [=y] && PINCTRL [=y] && OF [=y]
+
+NO_HZ_IDLE: n => no
+    Direct dependencies:  <choice> && !ARCH_USES_GETTIMEOFFSET [=n] && GENERIC_CLOCKEVENTS [=y]
+
+BFQ_GROUP_IOSCHED: n => yes
+    Direct dependencies:  BLOCK [=n] && IOSCHED_BFQ [=n] && BLK_CGROUP [=n]
+
+DRM_PANEL_SAMSUNG_LD9040: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && SPI [=n]
+
+CRC32_SARWATE: y => no
+    Direct dependencies:  <choice>
+
+STACKPROTECTOR_STRONG: n => yes
+    Direct dependencies:  STACKPROTECTOR [=n] && y
+

@@ -1,0 +1,25 @@
+MTD_UBI_FASTMAP: n => yes
+    Direct dependencies:  MTD [=m] && MTD_UBI [=n]
+
+DRM_PANEL_VISIONOX_RM69299: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y]
+
+MEMSTICK_REALTEK_USB: m => yes
+    Direct dependencies:  MEMSTICK [=y] && MISC_RTSX_USB [=m]
+
+EXT4_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: EXT3_FS [=n] && BLOCK [=n] || EXT4_KUNIT_TESTS [=n] && BLOCK [=n] && KUNIT [=y]
+
+NUMA_BALANCING: n => yes
+    Direct dependencies:  ARCH_SUPPORTS_NUMA_BALANCING [=y] && !ARCH_WANT_NUMA_VARIABLE_LOCALITY [=n] && SMP [=y] && NUMA [=n] && MIGRATION [=y]
+
+HW_RANDOM_TPM: n => no
+    Direct dependencies:  TCG_TPM [=n] && HW_RANDOM [=m] && (TCG_TPM [=n]!=y || HW_RANDOM [=m]!=m)
+
+TINYDRM_MI0283QT: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+DRM_PANEL_SAMSUNG_LD9040: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && SPI [=y]
+

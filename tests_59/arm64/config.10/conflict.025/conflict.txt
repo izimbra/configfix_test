@@ -1,0 +1,16 @@
+MTD_CFI_GEOMETRY: n => yes
+    Direct dependencies:  MTD [=n] && MTD_CFI_ADV_OPTIONS [=n]
+
+JOYSTICK_TMDC: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+SHMEM: y => no
+    Direct dependencies:  MMU [=y]
+    Reverse dependencies: DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=n] && X86 && PCI [=n] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=n] && (ARCH_QCOM [=n] || SOC_IMX5 || ARM && COMPILE_TEST [=n]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=n] && HAS_IOMEM [=y] && DRM [=n] && MMU [=y]
+
+PLATFORM_MHU: n => yes
+    Direct dependencies:  MAILBOX [=n] && OF [=y] && HAS_IOMEM [=y]
+
+HID_PICOLCD_FB: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_PICOLCD [=n] && (HID_PICOLCD [=n]=FB [=n] || FB [=n]=y)
+

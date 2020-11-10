@@ -1,0 +1,14 @@
+CRYPTO_STREEBOG => no
+SENSORS_AD7418 => yes
+DRM_PANEL_SIMPLE => yes
+HID_SAMSUNG => yes
+CRYPTO_ECRDSA => no
+DEBUG_RT_MUTEXES => yes
+HWMON => yes
+I2C => yes
+BACKLIGHT_CLASS_DEVICE => yes
+I2C_ALGOBIT => yes
+SYNC_FILE => yes
+DRM => yes
+HID => yes
+INPUT => yes

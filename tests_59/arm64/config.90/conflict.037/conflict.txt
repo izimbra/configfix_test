@@ -1,0 +1,30 @@
+RTC_DRV_DS1689: n => no
+    Direct dependencies:  <choice>
+
+CRC8: y => no
+    Direct dependencies:  y
+    Reverse dependencies: QED [=n] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_QLOGIC [=n] && PCI [=y] || GPIO_MAX3191X [=n] && GPIOLIB [=y] && SPI_MASTER [=y] || SENSORS_SHT3x [=y] && HWMON [=y] && I2C [=y] || AD7280 [=m] && STAGING [=y] && IIO [=m] && SPI [=y] || SCD30_I2C [=m] && IIO [=m] && SCD30_CORE [=m] && I2C [=y] || SENSIRION_SGP30 [=m] && IIO [=m] && I2C [=y] || SPS30 [=m] && IIO [=m] && I2C [=y] || ICP10100 [=m] && IIO [=m] && I2C [=y]
+
+DEBUG_LOCK_ALLOC: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+CORESIGHT_LINKS_AND_SINKS: y => no
+    Direct dependencies:  CORESIGHT [=y]
+    Reverse dependencies: CORESIGHT_SOURCE_ETM3X [=n] && CORESIGHT [=y] && !ARM64 [=y] || CORESIGHT_SOURCE_ETM4X [=y] && CORESIGHT [=y] && ARM64 [=y] || CORESIGHT_STM [=y] && CORESIGHT [=y] && (ARM && !CPU_32v3 && !CPU_32v4 && !CPU_32v4T || ARM64 [=y])
+
+CRYPTO_SM3: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_SM3_ARM64_CE [=m] && CRYPTO [=y] && ARM64_CRYPTO [=y] && KERNEL_MODE_NEON [=y] || CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+I2C_ALGOPCA: m => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_PCA_PLATFORM [=m] && I2C [=y] && HAS_IOMEM [=y] || I2C_PCA_ISA [=n] && I2C [=y] && HAS_IOMEM [=y] && ISA
+
+SCSI_SRP_ATTRS: y => no
+    Direct dependencies:  SCSI [=y]
+    Reverse dependencies: SCSI_IBMVSCSI [=n] && SCSI_LOWLEVEL [=y] && SCSI [=y] && PPC_PSERIES || INFINIBAND_SRP [=m] && INFINIBAND [=m] && SCSI [=y] && INFINIBAND_ADDR_TRANS [=y]
+
+MMC_ARMMMCI: m => yes
+    Direct dependencies:  MMC [=m] && ARM_AMBA [=y]
+

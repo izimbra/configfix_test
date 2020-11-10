@@ -1,0 +1,23 @@
+GPIO_WM8350: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_WM8350 [=n]
+
+ALTERA_PR_IP_CORE: n => mod
+    Direct dependencies:  FPGA [=n]
+
+MS_BLOCK: n => mod
+    Direct dependencies:  MEMSTICK [=y] && BLOCK [=n]
+
+RMI4_F03: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+
+MTD_CFI_STAA: m => yes
+    Direct dependencies:  MTD [=m] && MTD_GEN_PROBE [=m]
+
+CRC_CCITT: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CAIF [=n] && NET [=y] || NFC_DIGITAL [=y] && NET [=y] && NFC [=y] || NFC_NCI_SPI [=n] && NET [=y] && NFC_NCI [=m] && SPI [=y] || NFC_SHDLC [=n] && NET [=y] && NFC_HCI [=y] || MAC802154 [=n] && NET [=y] && IEEE802154 [=y] || NETLABEL [=n] && NET [=y] && INET [=y] && SECURITY [=n] && IPV6 [=y] || BAYCOM_SER_FDX [=m] && NET [=y] && HAMRADIO [=y] && AX25 [=m] && !S390 || BAYCOM_SER_HDX [=m] && NET [=y] && HAMRADIO [=y] && AX25 [=m] && !S390 || BAYCOM_PAR [=m] && NET [=y] && HAMRADIO [=y] && PARPORT [=m] && AX25 [=m] || BAYCOM_EPP [=n] && NET [=y] && HAMRADIO [=y] && PARPORT [=m] && AX25 [=m] && !64BIT [=y] || NFC_FDP [=m] && NET [=y] && NFC [=y] && NFC_NCI [=m] || NFC_PN544 [=n] && NET [=y] && NFC [=y] || NFC_MICROREAD [=n] && NET [=y] && NFC [=y] || NFC_ST21NFCA [=n] && NET [=y] && NFC [=y] || VIA_VELOCITY [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_VIA [=y] && (PCI [=y] || OF_ADDRESS [=y] && OF_IRQ [=y]) && HAS_DMA [=y] || PPP_ASYNC [=y] && NETDEVICES [=y] && TTY [=y] && PPP [=y] || P54_COMMON [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_INTERSIL [=n] && MAC80211 [=n] || RT2800PCI [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && PCI [=y] || RT2800USB [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && USB [=y] || MISDN_HDLC [=m] && ISDN [=y] && MISDN [=m]!=n || RAVE_SP_CORE [=n] && HAS_IOMEM [=y] && SERIAL_DEV_BUS [=m] || DRM_SUN6I_DSI [=n] && HAS_IOMEM [=y] && DRM_SUN4I [=m]
+
+TINYDRM_HX8357D: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+

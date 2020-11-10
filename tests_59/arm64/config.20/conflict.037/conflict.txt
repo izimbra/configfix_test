@@ -1,0 +1,26 @@
+FTL: n => yes
+    Direct dependencies:  MTD [=n] && BLOCK [=n]
+
+SCSI_SPI_ATTRS: n => yes
+    Direct dependencies:  SCSI [=n]
+    Reverse dependencies: SCSI_AHA152X [=n] && SCSI_LOWLEVEL [=n] && ISA && SCSI [=n] || SCSI_AIC7XXX [=n] && SCSI_LOWLEVEL [=n] && (PCI [=n] || EISA [=n]) && SCSI [=n] || SCSI_AIC79XX [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_DMX3191D [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_GENERIC_NCR5380 [=n] && SCSI_LOWLEVEL [=n] && ISA && SCSI [=n] && HAS_IOPORT_MAP [=n] || SCSI_LASI700 [=n] && SCSI_LOWLEVEL [=n] && GSC && SCSI [=n] || SCSI_SNI_53C710 [=n] && SCSI_LOWLEVEL [=n] && SNI_RM && SCSI [=n] || SCSI_SYM53C8XX_2 [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_ZALON [=n] && SCSI_LOWLEVEL [=n] && GSC && SCSI [=n] || SCSI_SIM710 [=n] && SCSI_LOWLEVEL [=n] && EISA [=n] && SCSI [=n] || SCSI_AM53C974 [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_ACORNSCSI_3 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || SCSI_CUMANA_1 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || SCSI_OAK1 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || JAZZ_ESP [=n] && SCSI_LOWLEVEL [=n] && MACH_JAZZ && SCSI [=n] || SCSI_A4000T [=n] && SCSI_LOWLEVEL [=n] && AMIGA && SCSI [=n] || SCSI_ZORRO7XX [=n] && SCSI_LOWLEVEL [=n] && ZORRO && SCSI [=n] || SCSI_ZORRO_ESP [=n] && SCSI_LOWLEVEL [=n] && ZORRO && SCSI [=n] || ATARI_SCSI [=n] && SCSI_LOWLEVEL [=n] && ATARI && SCSI [=n] || MAC_SCSI [=n] && SCSI_LOWLEVEL [=n] && MAC && SCSI [=n] || SCSI_MAC_ESP [=n] && SCSI_LOWLEVEL [=n] && MAC && SCSI [=n] || MVME147_SCSI [=n] && SCSI_LOWLEVEL [=n] && MVME147 && SCSI [=n]=y || MVME16x_SCSI [=n] && SCSI_LOWLEVEL [=n] && MVME16x && SCSI [=n] || BVME6000_SCSI [=n] && SCSI_LOWLEVEL [=n] && BVME6000 && SCSI [=n] || SUN3_SCSI [=n] && SCSI_LOWLEVEL [=n] && SUN3 && SCSI [=n] || SUN3X_ESP [=n] && SCSI_LOWLEVEL [=n] && SUN3X && SCSI [=n]=y || SCSI_SUNESP [=n] && SCSI_LOWLEVEL [=n] && SBUS && SCSI [=n] || PCMCIA_AHA152X [=n] && SCSI_LOWLEVEL [=n] && SCSI_LOWLEVEL_PCMCIA [=n] && SCSI [=n] && PCMCIA [=n] && m && MODULES [=n] || FUSION_SPI [=n] && FUSION [=n] && PCI [=n] && SCSI [=n]
+
+RAW_DRIVER: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+HID_AUREAL: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+FAIR_GROUP_SCHED: n => yes
+    Direct dependencies:  CGROUPS [=n] && CGROUP_SCHED [=n]
+    Reverse dependencies: SCHED_AUTOGROUP [=n]
+
+USB_ZERO: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n]
+
+MSM_MMCC_8996: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+ALTERA_PR_IP_CORE: n => yes
+    Direct dependencies:  FPGA [=n]
+

@@ -1,0 +1,28 @@
+SPI_DEBUG: n => yes
+    Direct dependencies:  SPI [=n] && DEBUG_KERNEL [=y]
+
+GPIO_KEMPLD: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_KEMPLD [=n]
+
+I2C_CBUS_GPIO: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+NVMEM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: USB4 [=n] && PCI [=n] || EEPROM_AT24 [=n] && I2C [=n] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=n] && SYSFS [=y] || EEPROM_93XX46 [=n] && SPI [=n] && SYSFS [=y] || RTC_NVMEM [=y] && RTC_CLASS [=y]
+
+USB_ZERO: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+
+HID_CREATIVE_SB0540: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && USB_HID [=n]
+
+MEMORY_HOTREMOVE: n => yes
+    Direct dependencies:  MEMORY_HOTPLUG [=n] && ARCH_ENABLE_MEMORY_HOTREMOVE [=y] && MIGRATION [=y]
+
+REGULATOR_MAX8925: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_MAX8925 [=n]
+
+BACKLIGHT_QCOM_WLED: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+

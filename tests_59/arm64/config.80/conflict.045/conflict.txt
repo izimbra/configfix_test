@@ -1,0 +1,32 @@
+PREEMPT_NONE: n => no
+    Direct dependencies:  <choice>
+
+SDM_GCC_660: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+DRM_PANEL_NOVATEK_NT39016: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+DEBUG_WW_MUTEX_SLOWPATH: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+FPGA_REGION: n => mod
+    Direct dependencies:  FPGA [=n] && FPGA_BRIDGE [=n]
+    Reverse dependencies: FPGA_DFL [=n] && FPGA [=n]
+
+CRYPTO_DES: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SUN8I_CE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_SUN8I_SS [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_FSL_DPAA2_CAAM [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && FSL_MC_DPIO [=m] && NETDEVICES [=y] || CRYPTO_DEV_FSL_CAAM_CRYPTO_API_QI [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_FSL_CAAM [=m] && CRYPTO_DEV_FSL_CAAM_JR [=m] && FSL_DPAA [=n] && NET [=y]
+
+VIRT_CPU_ACCOUNTING_GEN: n => no
+    Direct dependencies:  <choice> && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y] && GENERIC_CLOCKEVENTS [=y]
+    Reverse dependencies: NO_HZ_FULL [=n] && <choice> && !ARCH_USES_GETTIMEOFFSET [=n] && GENERIC_CLOCKEVENTS [=y] && SMP [=y] && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y]
+
+DRM_PANEL_ASUS_Z00T_TM5P5_NT35596: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+SC_GCC_7180: m => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+    Reverse dependencies: SC_DISPCC_7180 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_LPASS_CORECC_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_GPUCC_7180 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_MSS_7180 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m] || SC_VIDEOCC_7180 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+

@@ -1,0 +1,22 @@
+USB_MASS_STORAGE: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && BLOCK [=n]
+
+I2C_MUX: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: MEDIA_SUBDRV_AUTOSELECT [=y] && MEDIA_SUPPORT [=y] && HAS_IOMEM [=y] || DRM_SII902X [=y] && HAS_IOMEM [=y] && DRM [=y] && DRM_BRIDGE [=y] && OF [=y] || MPU3050_I2C [=n] && IIO [=y] && INPUT_MPU3050!=y && INPUT_MPU3050!=m && I2C [=y] || INV_MPU6050_I2C [=y] && IIO [=y] && I2C [=y]
+
+RC_XBOX_DVD: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && USB_ARCH_HAS_HCD [=y]
+
+MTD_NAND_DISKONCHIP_BBTWRITE: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=y] && MTD_NAND_DISKONCHIP [=n]
+
+MTD_CFI_I8: n => yes
+    Direct dependencies:  MTD [=y]
+
+F2FS_FAULT_INJECTION: n => yes
+    Direct dependencies:  BLOCK [=n] && F2FS_FS [=n]
+
+NTFS_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+

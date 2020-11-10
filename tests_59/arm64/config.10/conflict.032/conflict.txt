@@ -1,0 +1,21 @@
+HID_SAMSUNG: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+RTC_DRV_DS3232: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && RTC_I2C_AND_SPI [=n]
+
+SYSTEM_BLACKLIST_KEYRING: n => yes
+    Direct dependencies:  CRYPTO [=n] && KEYS [=n]
+
+COMMON_CLK_VC5: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && I2C [=n] && OF [=y]
+
+PRINTK: y => no
+    Direct dependencies:  y
+
+GPIO_PCA953X_IRQ: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=n] && GPIO_PCA953X [=n]
+
+HID_MULTITOUCH: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+

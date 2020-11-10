@@ -1,0 +1,16 @@
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+
+CHARGER_MAX77693: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MAX77693 [=n]
+
+DRM_DEBUG_SELFTEST: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DEBUG_KERNEL [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+
+HID_LOGITECH_DJ: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n] && HIDRAW [=n] && HID_LOGITECH [=n]
+
+RC_XBOX_DVD: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && USB_ARCH_HAS_HCD [=n]
+

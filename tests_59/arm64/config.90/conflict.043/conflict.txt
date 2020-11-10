@@ -1,0 +1,30 @@
+COMMON_CLK_AXG_AUDIO: n => mod
+    Direct dependencies:  COMMON_CLK [=y] && ARCH_MESON [=n]
+
+W1_SLAVE_DS2780: m => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2780 [=m] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+MODULE_COMPRESS_XZ: n => no
+    Direct dependencies:  <choice>
+
+RTC_DRV_MAX8997: n => mod
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_MAX8997 [=n]
+
+BACKLIGHT_TPS65217: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_TPS65217 [=m]
+
+RMI4_F03: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+
+MDM_GCC_9615: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: MDM_LCC_9615 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+IPMI_WATCHDOG: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+CHARGER_88PM860X: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_88PM860X [=y] && BATTERY_88PM860X [=m]
+

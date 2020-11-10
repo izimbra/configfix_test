@@ -1,0 +1,26 @@
+MESON_CANVAS: n => yes
+    Direct dependencies:  ARCH_MESON [=n] || COMPILE_TEST [=n]
+    Reverse dependencies: DRM_MESON [=n] && HAS_IOMEM [=y] && DRM [=n] && OF [=y] && (ARM || ARM64 [=y]) && (ARCH_MESON [=n] || COMPILE_TEST [=n]) || VIDEO_MESON_VDEC [=n] && STAGING [=n] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=y] && VIDEO_DEV [=y] && VIDEO_V4L2 [=y] && HAS_DMA [=y] && (ARCH_MESON [=n] || COMPILE_TEST [=n])
+
+DRM_GM12U320: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && USB [=y]
+
+HID_CYPRESS: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+MTD_QINFO_PROBE: n => yes
+    Direct dependencies:  MTD [=n] && MTD_LPDDR [=n]
+    Reverse dependencies: MTD_LPDDR [=n] && MTD [=n]
+
+REGULATOR_MT6323: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=n]
+
+CGROUP_RDMA: n => yes
+    Direct dependencies:  CGROUPS [=n]
+
+ARCH_R8A77961: n => yes
+    Direct dependencies:  SOC_RENESAS [=n] && ARM64 [=y]
+
+I2C_STUB: n => no
+    Direct dependencies:  I2C [=y] && m && MODULES [=n]
+

@@ -1,0 +1,21 @@
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+BFQ_CGROUP_DEBUG: n => yes
+    Direct dependencies:  BLOCK [=y] && BFQ_GROUP_IOSCHED [=n]
+
+DRM_TI_TFP410: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+STACKPROTECTOR_STRONG: n => yes
+    Direct dependencies:  STACKPROTECTOR [=n] && y
+
+DRM_ANALOGIX_ANX78XX: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n]
+
+F2FS_STAT_FS: n => yes
+    Direct dependencies:  BLOCK [=y] && F2FS_FS [=n]
+
+DRM_PANEL_NOVATEK_NT39016: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+

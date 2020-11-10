@@ -1,0 +1,19 @@
+MEMORY_HOTPLUG: n => yes
+    Direct dependencies:  (SPARSEMEM [=n] || X86_64_ACPI_NUMA) && ARCH_ENABLE_MEMORY_HOTPLUG [=y] && (64BIT [=y] || BROKEN [=n])
+
+NVDIMM_PFN: n => yes
+    Direct dependencies:  LIBNVDIMM [=n] && ZONE_DEVICE [=n]
+
+I2C_PARPORT: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && PARPORT [=n]
+
+INPUT_88PM860X_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_88PM860X [=n]
+
+POWER_SUPPLY: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARM64 [=y] || ACPI_AC [=n] && ACPI [=n] || ACPI_BATTERY [=n] && ACPI [=n] || ACPI_SBS [=n] && ACPI [=n] && X86 || AB8500_CORE [=n] && HAS_IOMEM [=y] && ABX500_CORE [=n] && MFD_DB8500_PRCMU [=n] || DRM_RADEON [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] || HID_BATTERY_STRENGTH [=n] && INPUT [=y] && HID [=n] || HID_ASUS [=n] && INPUT [=y] && HID [=n] && USB_HID [=n] && LEDS_CLASS [=n] && (ASUS_WMI [=n] || ASUS_WMI [=n]=n) || HID_LOGITECH_HIDPP [=n] && INPUT [=y] && HID [=n] && HID_LOGITECH [=n] || HID_SONY [=n] && INPUT [=y] && HID [=n] && USB_HID [=n] && NEW_LEDS [=y] && LEDS_CLASS [=n] || HID_STEAM [=n] && INPUT [=y] && HID [=n] || HID_WACOM [=n] && INPUT [=y] && HID [=n] && USB_HID [=n] || HID_WIIMOTE [=n] && INPUT [=y] && HID [=n] && LEDS_CLASS [=n] || USB_CONN_GPIO [=n] && USB_SUPPORT [=y] && GPIOLIB [=y] || APPLE_MFI_FASTCHARGE [=y] && USB_SUPPORT [=y] && USB [=y] || TYPEC_TCPM [=n] && USB_SUPPORT [=y] && TYPEC [=y] && USB [=y] || DELL_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && DMI [=n] && BACKLIGHT_CLASS_DEVICE [=n] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=y] || RFKILL [=y]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n]
+
+IPQ_GCC_6018: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+

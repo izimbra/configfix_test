@@ -1,0 +1,20 @@
+DEFAULT_SECURITY_DAC: n => no
+    Direct dependencies:  <choice>
+
+IR_TOY: m => yes
+    Direct dependencies:  RC_DEVICES [=y] && RC_CORE [=m] && USB_ARCH_HAS_HCD [=y]
+
+MICROCHIP_TCB_CAPTURE: m => yes
+    Direct dependencies:  COUNTER [=m] && HAS_IOMEM [=y] && OF [=y]
+
+CRYPTO_MICHAEL_MIC: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || HOSTAP [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || HERMES [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] && (PPC_PMAC || PCI [=y] || PCMCIA [=m]) && CFG80211 [=m] || RTLLIB_CRYPTO_TKIP [=m] && STAGING [=y] && RTLLIB [=m]
+
+MMC_USHC: m => yes
+    Direct dependencies:  MMC [=m] && USB [=y]
+
+CRC_ITU_T: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: NFC_DIGITAL [=m] && NET [=y] && NFC [=m] || GENWQE [=n] && PCI [=y] && 64BIT [=y] || FIREWIRE [=y] && (PCI [=y] || COMPILE_TEST [=y]) || RT61PCI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && PCI [=y] || RT73USB [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && USB [=y] || MOUSE_CYAPA [=m] && !UML && INPUT [=y] && INPUT_MOUSE [=y] && I2C [=y] || TOUCHSCREEN_SIS_I2C [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] && I2C [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y]) || MMC_SPI [=m] && MMC [=m] && SPI_MASTER [=y] || UDF_FS [=m] && BLOCK [=y] || OMFS_FS [=m] && MISC_FILESYSTEMS [=y] && BLOCK [=y]
+

@@ -1,0 +1,31 @@
+USB_MV_U3D: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && HAS_DMA [=y]
+
+IOSCHED_BFQ: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+LEDS_IS31FL32XX: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=n] && I2C [=n] && OF [=y]
+
+DEBUG_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+STM_DUMMY: n => yes
+    Direct dependencies:  STM [=n]
+
+MTD_ABSENT: n => yes
+    Direct dependencies:  MTD [=n]
+
+REGULATOR_PV88060: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+HID_GOOGLE_HAMMER: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && USB_HID [=n] && LEDS_CLASS [=n] && CROS_EC [=y]
+
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+
+HID_MULTITOUCH: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+

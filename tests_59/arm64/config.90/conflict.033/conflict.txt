@@ -1,0 +1,26 @@
+ARM_TIMER_SP804: y => no
+    Direct dependencies:  GENERIC_CLOCKEVENTS [=y] && GENERIC_SCHED_CLOCK [=y] && CLKDEV_LOOKUP [=y]
+    Reverse dependencies: ARCH_BCM2835 [=y] || ARCH_HISI [=y]
+
+LEDS_TRIGGERS: y => no
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y]
+    Reverse dependencies: BT_LEDS [=y] && NET [=y] && BT [=m] && LEDS_CLASS [=y] || CAN_LEDS [=n] && NET [=y] && CAN [=y] && CAN_DEV [=m] && LEDS_CLASS [=y] && BROKEN [=n] || MAC80211_LEDS [=y] && NET [=y] && WIRELESS [=y] && MAC80211 [=m] && LEDS_CLASS [=y] || ADB_PMU_LED_DISK [=n] && MACINTOSH_DRIVERS [=n] && ADB_PMU_LED [=n] && LEDS_CLASS [=y] || IWLEGACY [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] || IWLWIFI_LEDS [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && IWLWIFI [=m] && (LEDS_CLASS [=y]=y || LEDS_CLASS [=y]=IWLWIFI [=m]) && (IWLMVM [=m] || IWLDVM [=m]) || SND_HDA_GENERIC [=m] && SOUND [=m] && !UML && SND [=m] && SND_HDA [=m] && SND_HDA_GENERIC_LEDS [=y] || HID_WACOM [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] || LEDS_COBALT_RAQ [=n] && NEW_LEDS [=y] && LEDS_CLASS [=y]=y && MIPS_COBALT || LEDS_SUNFIRE [=n] && NEW_LEDS [=y] && LEDS_CLASS [=y] && SPARC64 || HUAWEI_WMI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=y] || DELL_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && DMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=m] || RFKILL [=m]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n] || THINKPAD_ACPI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=m] || RFKILL [=m]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y] || SYSTEM76_ACPI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n]
+
+HID_LOGITECH_DJ: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && HIDRAW [=y] && HID_LOGITECH [=y]
+
+NOP_USB_XCEIV: y => no
+    Direct dependencies:  USB_SUPPORT [=y] && (USB_GADGET [=y] || !USB_GADGET [=y])
+    Reverse dependencies: USB_DWC2_PCI [=m] && USB_SUPPORT [=y] && USB_DWC2 [=y] && USB_PCI [=y] && (USB_GADGET [=y] || !USB_GADGET [=y])
+
+USB_EZUSB_FX2: y => no
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y]
+    Reverse dependencies: USB_SERIAL_WHITEHEAT [=m] && USB_SUPPORT [=y] && USB [=y] && USB_SERIAL [=y] || USB_SERIAL_KEYSPAN_PDA [=y] && USB_SUPPORT [=y] && USB [=y] && USB_SERIAL [=y] || USB_SERIAL_KEYSPAN [=n] && USB_SUPPORT [=y] && USB [=y] && USB_SERIAL [=y] || USB_SERIAL_XIRCOM [=y] && USB_SUPPORT [=y] && USB [=y] && USB_SERIAL [=y]
+
+SDM_GCC_845: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: SDM_CAMCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_GPUCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_VIDEOCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_DISPCC_845 [=m] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || SDM_LPASSCC_845 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+ARM64_PA_BITS_48: y => no
+    Direct dependencies:  <choice>
+

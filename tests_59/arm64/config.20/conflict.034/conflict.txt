@@ -1,0 +1,21 @@
+DRM_PANEL_NOVATEK_NT35510: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+
+HID_ELAN: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && LEDS_CLASS [=n] && USB_HID [=n]
+
+PARPORT_AX88796: n => yes
+    Direct dependencies:  PARPORT [=n]
+
+RTC_DRV_BRCMSTB: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y] && (ARCH_BRCMSTB [=n] || BMIPS_GENERIC || COMPILE_TEST [=n])
+
+PREEMPT_NONE: n => no
+    Direct dependencies:  <choice>
+
+I2C_DESIGNWARE_SLAVE: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && I2C_DESIGNWARE_CORE [=n]
+
+HID_PICOLCD: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

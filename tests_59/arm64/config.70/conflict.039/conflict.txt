@@ -1,0 +1,29 @@
+TCG_TPM: y => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: IMA [=y] && INTEGRITY [=y] && HAS_IOMEM [=y] && !UML
+
+CRYPTO_RSA: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=y] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=y] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_HISI_HPRE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=y] && PCI_MSI [=y] && (UACCE [=y] || UACCE [=y]=n) && (ARM64 [=y] || COMPILE_TEST [=y] && 64BIT [=y]) && ACPI [=y] || CRYPTO_DEV_FSL_CAAM_PKC_API [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_FSL_CAAM [=y] && CRYPTO_DEV_FSL_CAAM_JR [=y] || CRYPTO_DEV_CCP_CRYPTO [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_CCP [=y] && CRYPTO_DEV_CCP_DD [=y] && CRYPTO_DEV_SP_CCP [=y]
+
+DRM_TI_TPD12S015: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+LIBNVDIMM: n => yes
+    Direct dependencies:  PHYS_ADDR_T_64BIT [=y] && HAS_IOMEM [=y] && BLK_DEV [=n]
+    Reverse dependencies: ACPI_NFIT [=n] && ACPI [=y] && PHYS_ADDR_T_64BIT [=y] && BLK_DEV [=n] && ARCH_HAS_PMEM_API [=n]
+
+CRC7: m => no
+    Direct dependencies:  y
+    Reverse dependencies: WILC1000_SPI [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_MICROCHIP [=n] && CFG80211 [=m] && INET [=y] && SPI [=y] || WL1251 [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && MAC80211 [=n] || WLCORE_SPI [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && WLCORE [=n] && SPI_MASTER [=y] && OF [=y] || MMC_SPI [=m] && MMC [=m] && SPI_MASTER [=y]
+
+MMC_DW_BLUEFIELD: m => yes
+    Direct dependencies:  MMC [=m] && MMC_DW [=m]
+
+BLK_DEV_PMEM: n => yes
+    Direct dependencies:  LIBNVDIMM [=n]
+
+DEBUG_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+

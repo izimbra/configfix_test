@@ -1,0 +1,13 @@
+NVME_FC: n => yes
+    Direct dependencies:  BLOCK [=n] && HAS_DMA [=y]
+
+SCSI_CONSTANTS: n => yes
+    Direct dependencies:  SCSI [=n]
+
+TINYDRM_HX8357D: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+MQ_IOSCHED_DEADLINE: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: BLK_DEV_ZONED [=n] && BLOCK [=n]
+

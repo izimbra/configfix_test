@@ -1,0 +1,13 @@
+INPUT_SC27XX_VIBRA => yes
+XEN_BLKDEV_FRONTEND => yes
+IR_STREAMZAP => yes
+HID_PICOLCD => yes
+INPUT_MISC => yes
+ARCH_SPRD => yes
+INPUT => yes
+MFD_SC27XX_PMIC => yes
+INPUT_FF_MEMLESS => yes
+XEN => yes
+RC_CORE => yes
+RC_DEVICES => yes
+HID => yes

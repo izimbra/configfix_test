@@ -1,0 +1,19 @@
+CHARGER_UCS1002: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n] && OF [=y] && REGULATOR [=n]
+
+PINCTRL_AS3722: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_AS3722 [=n] && GPIOLIB [=y]
+
+DRM_VGEM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=n] && DRM_I915 [=n]
+
+XZ_DEC_ARM: n => yes
+    Direct dependencies:  XZ_DEC [=n]
+
+SPI_XCOMM: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && I2C [=n]
+
+VFIO: n => yes
+    Direct dependencies:  IOMMU_API [=n]
+

@@ -1,0 +1,10 @@
+SH_TIMER_TMU => yes
+DRM_PANEL_LEADTEK_LTK500HD1829 => yes
+TMPFS_POSIX_ACL => yes
+VFIO => yes
+BACKLIGHT_CLASS_DEVICE => yes
+DRM => yes
+I2C_ALGOBIT => yes
+I2C => yes
+TMPFS => yes
+TMPFS_XATTR => yes

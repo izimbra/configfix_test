@@ -1,0 +1,31 @@
+RD_XZ: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+
+REGULATOR_AS3722: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_AS3722 [=n]
+
+MMC_DW_HI3798CV200: n => yes
+    Direct dependencies:  MMC [=n] && MMC_DW [=n]
+
+HID_SPEEDLINK: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+PHY_RCAR_GEN3_USB3: n => yes
+    Direct dependencies:  ARCH_RENESAS [=n] || COMPILE_TEST [=n]
+
+EXPERT: y => no
+    Direct dependencies:  y
+    Reverse dependencies: EMBEDDED [=y]
+
+DEBUG_BUGVERBOSE: n => yes
+    Direct dependencies:  BUG [=n] && (GENERIC_BUG [=n] || HAVE_DEBUG_BUGVERBOSE [=y])
+
+MTD_CFI_I2: n => yes
+    Direct dependencies:  MTD [=n]
+
+MTD_PHYSMAP_COMPAT: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP [=n]
+
+MOUSE_CYAPA: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSE [=n] && I2C [=y]
+

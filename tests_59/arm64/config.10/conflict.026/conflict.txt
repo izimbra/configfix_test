@@ -1,0 +1,18 @@
+PHY_MAPPHONE_MDM6600: n => yes
+    Direct dependencies:  OF [=y] && USB_SUPPORT [=n] && GPIOLIB [=y]
+
+USB_EHSET_TEST_FIXTURE: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n]
+
+THERMAL_DEFAULT_GOV_USER_SPACE: n => yes
+    Direct dependencies:  <choice>
+
+MFD_MAX77843: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+PINCTRL_MSM8X74: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y]
+
+LEDS_LM36274: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TI_LMU_COMMON [=n] && MFD_TI_LMU [=n]
+

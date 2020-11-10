@@ -1,0 +1,25 @@
+ARM_PSCI_CPUIDLE_DOMAIN: n => yes
+    Direct dependencies:  CPU_IDLE [=n] && (ARM || ARM64 [=y]) && ARM_PSCI_CPUIDLE [=n] && PM_GENERIC_DOMAINS_OF [=y]
+
+USB_MV_U3D: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && HAS_DMA [=y]
+
+CLK_R8A77995: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=n]
+    Reverse dependencies: CLK_RENESAS [=n] && COMMON_CLK [=y] && ARCH_R8A77995 [=n]
+
+XEN_BLKDEV_BACKEND: n => yes
+    Direct dependencies:  BLK_DEV [=y] && XEN_BACKEND [=n]
+
+DRM_PANEL_LG_LB035Q02: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && SPI [=y]
+
+SENSORS_ADM1275: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+I2C_HID: n => yes
+    Direct dependencies:  I2C [=y] && INPUT [=n]
+
+SPRD_COMMON_CLK: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_SPRD [=n] || COMPILE_TEST [=n])
+

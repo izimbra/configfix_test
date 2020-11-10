@@ -1,0 +1,16 @@
+BFQ_CGROUP_DEBUG: n => yes
+    Direct dependencies:  BLOCK [=n] && BFQ_GROUP_IOSCHED [=n]
+
+PINCTRL_PFC_R8A774A1: n => yes
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=n] && PINCTRL [=y] && ARCH_R8A774A1 [=n]
+
+UHID: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+MTD_BLOCK2MTD: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && BLOCK [=n]
+
+SPI_BCM2835AUX: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && ((ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=n]) && GPIOLIB [=y] || COMPILE_TEST [=n])
+

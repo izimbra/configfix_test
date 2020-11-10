@@ -1,0 +1,13 @@
+EXT3_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT3_FS [=n]
+
+HWMON: y => mod
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: HABANA_AI [=y] && PCI [=y] && HAS_IOMEM [=y] || DRM_RADEON [=n] && HAS_IOMEM [=y] && DRM [=m] && PCI [=y] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=m] && PCI [=y] && MMU [=y] || EEEPC_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=y] && (RFKILL [=y] || RFKILL [=y]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && HOTPLUG_PCI [=y] && BACKLIGHT_CLASS_DEVICE [=y] || THINKPAD_ACPI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=y] || RFKILL [=y]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y] || CPU_HWMON [=n] && MIPS && MIPS_PLATFORM_DEVICES [=n] && MACH_LOONGSON64 || NTB_IDT [=n] && NTB [=n] && PCI [=y]
+
+DRM_PANEL_SONY_ACX565AKM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+USB_RENESAS_USBHS_UDC: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=y] && USB_RENESAS_USBHS [=m]
+

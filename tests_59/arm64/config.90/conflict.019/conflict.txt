@@ -1,0 +1,14 @@
+RTC_DRV_MC13XXX: m => yes
+    Direct dependencies:  RTC_CLASS [=y] && MFD_MC13XXX [=m]
+
+STRICT_KERNEL_RWX: y => no
+    Direct dependencies:  ARCH_HAS_STRICT_KERNEL_RWX [=y]
+
+MMC_DW_PLTFM: m => yes
+    Direct dependencies:  MMC [=m] && MMC_DW [=m]
+    Reverse dependencies: MMC_DW_BLUEFIELD [=m] && MMC [=m] && MMC_DW [=m] || MMC_DW_EXYNOS [=m] && MMC [=m] && MMC_DW [=m] || MMC_DW_HI3798CV200 [=m] && MMC [=m] && MMC_DW [=m] || MMC_DW_K3 [=m] && MMC [=m] && MMC_DW [=m] || MMC_DW_ROCKCHIP [=m] && MMC [=m] && MMC_DW [=m] && ARCH_ROCKCHIP [=y] || MMC_DW_ZX [=m] && MMC [=m] && MMC_DW [=m] && ARCH_ZX [=y]
+
+F2FS_FS_XATTR: y => no
+    Direct dependencies:  BLOCK [=y] && F2FS_FS [=y]
+    Reverse dependencies: F2FS_FS [=y] && BLOCK [=y] && FS_ENCRYPTION [=y]
+

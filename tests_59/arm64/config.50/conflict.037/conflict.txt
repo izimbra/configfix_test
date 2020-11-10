@@ -1,0 +1,28 @@
+INPUT_DA9052_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && PMIC_DA9052 [=n]
+
+ARM_TIMER_SP804: y => no
+    Direct dependencies:  GENERIC_CLOCKEVENTS [=y] && GENERIC_SCHED_CLOCK [=y] && CLKDEV_LOOKUP [=y]
+    Reverse dependencies: ARCH_BCM2835 [=y] || ARCH_HISI [=y]
+
+LOGO: n => yes
+    Direct dependencies:  FB [=n] || SGI_NEWPORT_CONSOLE [=n]
+
+MOUSE_SYNAPTICS_USB: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n] && USB_ARCH_HAS_HCD [=y]
+
+CGROUPS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+
+W1_SLAVE_DS2781: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2781 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+GPIO_MAX3191X: n => yes
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n]
+
+PINCTRL_BCM2835: y => no
+    Direct dependencies:  PINCTRL [=y] && OF [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: ARCH_BCM2835 [=y]
+

@@ -1,0 +1,13 @@
+MTD_NAND_DISKONCHIP: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && HAS_IOMEM [=y]
+
+VIRTIO_PMEM: n => yes
+    Direct dependencies:  VIRTIO_MENU [=y] && VIRTIO [=y] && LIBNVDIMM [=n]
+
+EXT4_FS_SECURITY: y => no
+    Direct dependencies:  BLOCK [=y] && EXT4_FS [=y]
+    Reverse dependencies: EXT3_FS_SECURITY [=y] && BLOCK [=y] && EXT3_FS [=y]
+
+INPUT_RAVE_SP_PWRBUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && RAVE_SP_CORE [=y]
+

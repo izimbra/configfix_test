@@ -1,0 +1,26 @@
+IR_MESON: n => mod
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && (ARCH_MESON [=y] || COMPILE_TEST [=y])
+
+RTC_DRV_DS1689: n => no
+    Direct dependencies:  <choice>
+
+MODULE_COMPRESS_XZ: y => no
+    Direct dependencies:  <choice>
+
+CRC7: m => no
+    Direct dependencies:  y
+    Reverse dependencies: WILC1000_SPI [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_MICROCHIP [=n] && CFG80211 [=m] && INET [=y] && SPI [=y] || WL1251 [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && MAC80211 [=n] || WLCORE_SPI [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && WLCORE [=n] && SPI_MASTER [=y] && OF [=y] || MMC_SPI [=m] && MMC [=m] && SPI_MASTER [=y]
+
+MTD_NAND_PLATFORM: m => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && HAS_IOMEM [=y]
+
+IR_IGUANA: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+MTD_BLOCK2MTD: n => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && BLOCK [=n]
+
+BOOT_CONFIG: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BOOTTIME_TRACING [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && TRACING [=y]
+

@@ -1,0 +1,26 @@
+CRYPTO_XTS: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: FS_ENCRYPTION_ALGS [=n] || CRYPTO_CAMELLIA_AESNI_AVX_X86_64 [=n] && X86 && 64BIT [=y] && CRYPTO [=y] || CRYPTO_CAST6_AVX_X86_64 [=n] && CRYPTO [=y] && X86 && 64BIT [=y] || CRYPTO_SERPENT_AVX_X86_64 [=n] && CRYPTO [=y] && X86 && 64BIT [=y] || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+TINYDRM_REPAPER: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+DRM_PANEL_OLIMEX_LCD_OLINUXINO: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && I2C [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+SYNC_FILE: y => no
+    Direct dependencies:  y
+    Reverse dependencies: DRM [=m] && HAS_IOMEM [=y] && (AGP [=n] || AGP [=n]=n) && !EMULATED_CMPXCHG && HAS_DMA [=y] || DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=m] && X86 && PCI [=y] || DRM_MSM [=m] && HAS_IOMEM [=y] && DRM [=m] && (ARCH_QCOM [=y] || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=m] || QCOM_OCMEM [=m]=n) || DRM_ETNAVIV [=n] && HAS_IOMEM [=y] && DRM [=m] && MMU [=y]
+
+USB_MASS_STORAGE: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=y] && BLOCK [=n]
+
+SAMPLE_VFIO_MDEV_MBOCHS: n => mod
+    Direct dependencies:  SAMPLES [=n] && VFIO_MDEV_DEVICE [=m] && m && MODULES [=y]
+
+DRM_PANEL_SHARP_LQ101R1SX01: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+MEMORY_HOTREMOVE: n => yes
+    Direct dependencies:  MEMORY_HOTPLUG [=n] && ARCH_ENABLE_MEMORY_HOTREMOVE [=y] && MIGRATION [=y]
+

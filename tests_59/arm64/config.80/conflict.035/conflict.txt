@@ -1,0 +1,24 @@
+DRM_PANEL_SONY_ACX565AKM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && GPIOLIB [=y] && OF [=y] && SPI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+CLK_RENESAS_CPG_MSSR: y => no
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=y]
+    Reverse dependencies: CLK_R7S9210 [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_RCAR_GEN2_CPG [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y] || CLK_RCAR_GEN3_CPG [=y] && COMMON_CLK [=y] && CLK_RENESAS [=y]
+
+CLK_R8A774C0: y => no
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=y]
+    Reverse dependencies: CLK_RENESAS [=y] && COMMON_CLK [=y] && ARCH_R8A774C0 [=y]
+
+NILFS2_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+CRYPTO_ZSTD: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_ZSTD [=n] && <choice> || UBIFS_FS [=n] && MISC_FILESYSTEMS [=y] && MTD_UBI [=n] && UBIFS_FS_ZSTD [=n] || PSTORE_ZSTD_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=m]
+
+MTD_OTP: n => yes
+    Direct dependencies:  MTD [=m] && MTD_CFI_ADV_OPTIONS [=n]
+
+JOYSTICK_TWIDJOY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+

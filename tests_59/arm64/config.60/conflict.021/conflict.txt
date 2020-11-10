@@ -1,0 +1,15 @@
+HW_RANDOM_TPM: n => no
+    Direct dependencies:  TCG_TPM [=n] && HW_RANDOM [=y] && (TCG_TPM [=n]!=y || HW_RANDOM [=y]!=m)
+
+MOUSE_CYAPA: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSE [=n] && I2C [=y]
+
+RD_LZO: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+
+INPUT_DRV2665_HAPTICS: n => yes
+    Direct dependencies:  !UML && INPUT_MISC [=n] && INPUT [=n] && I2C [=y]
+
+BLK_CGROUP: n => yes
+    Direct dependencies:  CGROUPS [=n] && BLOCK [=y]
+

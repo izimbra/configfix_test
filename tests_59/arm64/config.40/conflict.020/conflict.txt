@@ -1,0 +1,12 @@
+MTD_CFI_I2: n => yes
+    Direct dependencies:  MTD [=n]
+
+MTD_PHYSMAP_COMPAT: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP [=n]
+
+RC_ATI_REMOTE: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+COMMON_CLK_PWM: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && PWM [=n]
+

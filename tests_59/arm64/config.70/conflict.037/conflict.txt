@@ -1,0 +1,25 @@
+MTD_NAND_DISKONCHIP: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && HAS_IOMEM [=y]
+
+DRM_PANEL_SIMPLE: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+
+DRM_PANEL_OSD_OSD101T2587_53TS: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=m]
+
+MTD_NAND_HISI504: m => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && (ARCH_HISI [=n] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+MDM_GCC_9615: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+    Reverse dependencies: MDM_LCC_9615 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+PWRSEQ_EMMC: m => yes
+    Direct dependencies:  MMC [=m] && OF [=y]
+
+USB_MASS_STORAGE: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && BLOCK [=n]
+
+BACKLIGHT_ARCXCNN: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m] && I2C [=y]
+

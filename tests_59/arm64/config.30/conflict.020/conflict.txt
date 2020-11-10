@@ -1,0 +1,13 @@
+CRYPTO_STREEBOG: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_ECRDSA [=y] && CRYPTO [=y]
+
+SENSORS_AD7418: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+DRM_PANEL_SIMPLE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+
+HID_SAMSUNG: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

@@ -1,0 +1,13 @@
+MTD_REDBOOT_PARTS: n => yes
+    Direct dependencies:  MTD [=n]
+
+MTD_CFI_LE_BYTE_SWAP: n => yes
+    Direct dependencies:  <choice>
+
+MDM_GCC_9615: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: MDM_LCC_9615 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+MTD_CFI_INTELEXT: n => yes
+    Direct dependencies:  MTD [=n] && MTD_GEN_PROBE [=n]
+

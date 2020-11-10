@@ -1,0 +1,25 @@
+REGULATOR_TPS65912: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_TPS65912 [=n]
+
+EFIVAR_FS: n => yes
+    Direct dependencies:  EFI [=n]
+
+MTD_NAND_HISI504: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && (ARCH_HISI [=n] || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+
+MFD_MAX14577: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+HISILICON_LPC: n => yes
+    Direct dependencies:  (ARM64 [=y] && ARCH_HISI [=n] || COMPILE_TEST [=n] && !ALPHA && !HEXAGON && !PARISC && !C6X) && HAS_IOMEM [=y]
+
+REGULATOR_DA9055: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_DA9055 [=n]
+
+REGULATOR_MAX8660: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+COMMON_CLK: y => no
+    Direct dependencies:  !HAVE_LEGACY_CLK [=n]
+    Reverse dependencies: ARM64 [=y] || MFD_INTEL_LPSS [=n] && HAS_IOMEM [=y] || INTEL_ATOMISP [=n] && STAGING [=y] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=y] && X86 && EFI [=n] && PCI [=n] && ACPI [=n] || PMC_ATOM [=n] && X86 && PCI [=n]
+

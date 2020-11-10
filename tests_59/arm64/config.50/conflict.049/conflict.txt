@@ -1,0 +1,34 @@
+RAID_ATTRS: n => yes
+    Direct dependencies:  BLOCK [=n] && SCSI_MOD [=y]
+    Reverse dependencies: SCSI_MPT3SAS [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_SMARTPQI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && !S390 || SCSI_MYRB [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] || SCSI_MYRS [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] && (!CPU_BIG_ENDIAN [=n] || COMPILE_TEST [=y])
+
+CRYPTO_SHA3: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_SHA3_ARM64 [=n] && CRYPTO [=y] && ARM64_CRYPTO [=y] && KERNEL_MODE_NEON [=y] || CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=n] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+INPUT_ATMEL_CAPTOUCH: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (OF [=y] || COMPILE_TEST [=y]) && I2C [=y]
+
+SYSC_R8A77960: y => no
+    Direct dependencies:  SOC_RENESAS [=y]
+    Reverse dependencies: ARCH_R8A77960 [=y] && SOC_RENESAS [=y] && ARM64 [=y]
+
+SENSORS_NTC_THERMISTOR: n => yes
+    Direct dependencies:  HWMON [=n] && (!OF [=y] || IIO [=y]=n || IIO [=y]) && (THERMAL [=y] || !THERMAL_OF [=n])
+
+F2FS_FS_XATTR: n => yes
+    Direct dependencies:  BLOCK [=n] && F2FS_FS [=n]
+    Reverse dependencies: F2FS_FS [=n] && BLOCK [=n] && FS_ENCRYPTION [=n]
+
+SAMPLE_VFIO_MDEV_MDPY_FB: n => no
+    Direct dependencies:  SAMPLES [=y] && FB [=n] && m && MODULES [=n]
+
+SENSORS_W83L786NG: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+MOUSE_CYAPA: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n] && I2C [=y]
+
+USB_RENESAS_USBHS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_GADGET [=n] && (ARCH_RENESAS [=y] || SUPERH || COMPILE_TEST [=y]) && (EXTCON [=y] || !EXTCON [=y])
+

@@ -1,0 +1,13 @@
+I2C_ARB_GPIO_CHALLENGE: n => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y]) && (OF [=y] || COMPILE_TEST [=y])
+
+HZ_300: n => no
+    Direct dependencies:  <choice>
+
+USB_CHIPIDEA_IMX: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_CHIPIDEA [=m] && OF [=y]
+
+RAS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: MEMORY_FAILURE [=y] && MMU [=y] && ARCH_SUPPORTS_MEMORY_FAILURE [=y] || PCIEAER [=y] && PCI [=y] && PCIEPORTBUS [=y]
+

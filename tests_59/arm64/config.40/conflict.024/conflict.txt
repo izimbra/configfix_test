@@ -1,0 +1,15 @@
+I2C_PARPORT: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && PARPORT [=n]
+
+MDM_LCC_9615: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+USB_FUNCTIONFS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+
+SCSI_DH: n => yes
+    Direct dependencies:  SCSI [=n]
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_DA9062 [=n]
+

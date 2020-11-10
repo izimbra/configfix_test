@@ -1,0 +1,21 @@
+SENSORS_AD7314: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=n]
+
+USB_BDC_UDC: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && HAS_DMA [=y]
+
+RTC_DRV_ISL12026: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n] && (OF [=y] || COMPILE_TEST [=n])
+
+INPUT_YEALINK: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && USB_ARCH_HAS_HCD [=n]
+
+TAHVO_USB_HOST_BY_DEFAULT: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && TAHVO_USB [=n]
+
+EFI_TEST: n => yes
+    Direct dependencies:  EFI [=n]
+
+EEPROM_AT24: n => yes
+    Direct dependencies:  I2C [=n] && SYSFS [=y]
+

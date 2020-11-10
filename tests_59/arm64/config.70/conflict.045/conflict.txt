@@ -1,0 +1,30 @@
+RESET_SIMPLE: y => no
+    Direct dependencies:  RESET_CONTROLLER [=y]
+    Reverse dependencies: CLK_BCM2711_DVP [=m] && (ARCH_BCM2835 [=y] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || RESET_SOCFPGA [=y] && RESET_CONTROLLER [=y] || RESET_SUNXI [=y] && RESET_CONTROLLER [=y] || RESET_UNIPHIER_GLUE [=y] && RESET_CONTROLLER [=y] && (ARCH_UNIPHIER [=y] || COMPILE_TEST [=y]) && OF [=y]
+
+CHARGER_88PM860X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_88PM860X [=y] && BATTERY_88PM860X [=m]
+
+MMC_USDHI6ROL0: m => yes
+    Direct dependencies:  MMC [=m] && HAS_DMA [=y]
+
+PWM_LP3943: n => yes
+    Direct dependencies:  PWM [=y] && MFD_LP3943 [=n]
+
+BACKLIGHT_LED: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m] && LEDS_CLASS [=y] && OF [=y]
+
+MAILBOX: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_K3 [=y] || ACPI_CPPC_LIB [=y] && ACPI [=y] && ACPI_PROCESSOR [=y] || OMAP_REMOTEPROC [=n] && REMOTEPROC [=y] && (ARCH_OMAP4 || SOC_OMAP5 || SOC_DRA7XX) && OMAP_IOMMU [=y] || ST_REMOTEPROC [=n] && REMOTEPROC [=y] && ARCH_STI || STM32_RPROC [=n] && ARCH_STM32 && REMOTEPROC [=y] || TI_K3_DSP_REMOTEPROC [=m] && REMOTEPROC [=y] && ARCH_K3 [=y] || MTK_CMDQ [=n] && (ARCH_MEDIATEK [=n] || COMPILE_TEST [=y]) || ARCH_TEGRA_186_SOC [=n] && ARCH_TEGRA [=y] && ARM64 [=y] || ARCH_TEGRA_194_SOC [=y] && ARCH_TEGRA [=y] && ARM64 [=y] || ZYNQMP_POWER [=y] && PM [=y] && ZYNQMP_FIRMWARE [=y]
+
+USB_CHIPIDEA_IMX: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_CHIPIDEA [=n] && OF [=y]
+
+DRM_PANEL_SHARP_LS037V7DW01: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && REGULATOR [=y]
+
+DRM_DP_AUX_CHARDEV: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+

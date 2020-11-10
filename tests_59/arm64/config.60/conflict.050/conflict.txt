@@ -1,0 +1,34 @@
+CRYPTO_SM4: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_SM4_ARM64_CE [=y] && CRYPTO [=y] && ARM64_CRYPTO [=y] && KERNEL_MODE_NEON [=y] || CRYPTO_DEV_CCREE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+DRM_DEBUG_SELFTEST: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DEBUG_KERNEL [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+
+USB_KBD: n => yes
+    Direct dependencies:  USB_HID [=n]!=y && EXPERT [=y] && USB [=y] && INPUT [=n]
+
+RTC_DRV_MESON_VRTC: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && (ARCH_MESON [=n] || COMPILE_TEST [=n])
+
+MODULE_ALLOW_MISSING_NAMESPACE_IMPORTS: n => yes
+    Direct dependencies:  MODULES [=n]
+
+HID_CP2112: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n] && HIDRAW [=n] && I2C [=y] && GPIOLIB [=y]
+
+CRC_CCITT: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CAIF [=n] && NET [=n] || NFC_DIGITAL [=n] && NET [=n] && NFC [=n] || NFC_NCI_SPI [=n] && NET [=n] && NFC_NCI [=n] && SPI [=y] || NFC_SHDLC [=n] && NET [=n] && NFC_HCI [=n] || MAC802154 [=n] && NET [=n] && IEEE802154 [=n] || NETLABEL [=n] && NET [=n] && INET [=n] && SECURITY [=y] && IPV6 [=n] || BAYCOM_SER_FDX [=n] && NET [=n] && HAMRADIO [=n] && AX25 [=n] && !S390 || BAYCOM_SER_HDX [=n] && NET [=n] && HAMRADIO [=n] && AX25 [=n] && !S390 || BAYCOM_PAR [=n] && NET [=n] && HAMRADIO [=n] && PARPORT [=n] && AX25 [=n] || BAYCOM_EPP [=n] && NET [=n] && HAMRADIO [=n] && PARPORT [=n] && AX25 [=n] && !64BIT [=y] || NFC_FDP [=n] && NET [=n] && NFC [=n] && NFC_NCI [=n] || NFC_PN544 [=n] && NET [=n] && NFC [=n] || NFC_MICROREAD [=n] && NET [=n] && NFC [=n] || NFC_ST21NFCA [=n] && NET [=n] && NFC [=n] || VIA_VELOCITY [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_VIA [=n] && (PCI [=n] || OF_ADDRESS [=y] && OF_IRQ [=y]) && HAS_DMA [=y] || PPP_ASYNC [=n] && NETDEVICES [=n] && TTY [=n] && PPP [=n] || P54_COMMON [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_INTERSIL [=n] && MAC80211 [=n] || RT2800PCI [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && PCI [=n] || RT2800USB [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && USB [=y] || MISDN_HDLC [=n] && ISDN [=n] && MISDN [=n]!=n || RAVE_SP_CORE [=y] && HAS_IOMEM [=y] && SERIAL_DEV_BUS [=y] || DRM_SUN6I_DSI [=n] && HAS_IOMEM [=y] && DRM_SUN4I [=n]
+
+CRYPTO_TEST: n => no
+    Direct dependencies:  CRYPTO [=y] && m && MODULES [=n]
+
+EXT4_FS: y => no
+    Direct dependencies:  BLOCK [=y]
+    Reverse dependencies: EXT3_FS [=y] && BLOCK [=y] || EXT4_KUNIT_TESTS [=n] && BLOCK [=y] && KUNIT [=n]
+
+HID_U2FZERO: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n] && LEDS_CLASS [=y] && HW_RANDOM [=y]
+

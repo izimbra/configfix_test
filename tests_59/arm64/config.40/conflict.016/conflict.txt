@@ -1,0 +1,14 @@
+PKCS7_MESSAGE_PARSER: n => yes
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y] && X509_CERTIFICATE_PARSER [=n]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=n] || IMA_APPRAISE_MODSIG [=n] && INTEGRITY [=n] && IMA_APPRAISE [=n] && INTEGRITY_ASYMMETRIC_KEYS [=n]
+
+CHARLCD: n => yes
+    Direct dependencies:  y
+    Reverse dependencies: HD44780 [=n] && AUXDISPLAY [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || PARPORT_PANEL [=n] && AUXDISPLAY [=n] && PARPORT [=n]
+
+TPS65010: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && GPIOLIB [=y]
+
+HID_THINGM: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+

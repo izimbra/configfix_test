@@ -1,0 +1,16 @@
+HZ_300: y => no
+    Direct dependencies:  <choice>
+
+XZ_DEC: y => no
+    Direct dependencies:  y
+    Reverse dependencies: FW_LOADER_COMPRESS [=n] && FW_LOADER [=y] || MLXFW [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MELLANOX [=n] || SQUASHFS_XZ [=y] && MISC_FILESYSTEMS [=y] && SQUASHFS [=y] || DECOMPRESS_XZ [=n]
+
+DRM_TI_SN65DSI86: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+HID_NTRIG: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n]
+
+DRM_MESON_DW_HDMI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_MESON [=n]
+

@@ -1,0 +1,15 @@
+MFD_CS47L15 => yes
+HID_UDRAW_PS3 => yes
+SENSORS_AD7314 => yes
+INPUT_ATMEL_CAPTOUCH => yes
+PMIC_ADP5520 => yes
+TCP_CONG_ADVANCED => yes
+MODULES => yes
+HID => yes
+ARM64_MODULE_PLTS => yes
+DEFAULT_CUBIC => yes
+MFD_MADERA => mod
+HWMON => yes
+SPI => yes
+DEBUG_RT_MUTEXES => yes
+I2C => yes

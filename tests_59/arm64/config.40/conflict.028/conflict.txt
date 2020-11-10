@@ -1,0 +1,19 @@
+CLK_RENESAS: n => yes
+    Direct dependencies:  COMMON_CLK [=y]
+
+INPUT_MAX8925_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_MAX8925 [=n]
+
+MODULE_SRCVERSION_ALL: n => yes
+    Direct dependencies:  MODULES [=n]
+
+W1_SLAVE_DS2780: n => yes
+    Direct dependencies:  W1 [=n]
+    Reverse dependencies: BATTERY_DS2780 [=n] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+MMC_REALTEK_USB: n => yes
+    Direct dependencies:  MMC [=n] && MISC_RTSX_USB [=n]
+
+MTD_PHYSMAP: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && (MTD_CFI [=n] || MTD_JEDECPROBE [=n] || MTD_ROM [=n] || MTD_RAM [=n] || MTD_LPDDR [=n])
+

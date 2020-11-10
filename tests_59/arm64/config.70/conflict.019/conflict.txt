@@ -1,0 +1,12 @@
+USB_EHCI_FSL: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m]
+
+USB_MUSB_GADGET: n => yes
+    Direct dependencies:  <choice> && (USB_GADGET [=n]=y || USB_GADGET [=n]=USB_MUSB_HDRC [=m]) && HAS_DMA [=y]
+
+FPGA_DFL: n => yes
+    Direct dependencies:  FPGA [=n]
+
+DRM_PANEL_ARM_VERSATILE: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && MFD_SYSCON [=y]
+

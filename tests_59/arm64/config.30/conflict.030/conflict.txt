@@ -1,0 +1,18 @@
+IOMMU_IO_PGTABLE_LPAE_SELFTEST: n => yes
+    Direct dependencies:  IOMMU_SUPPORT [=n] && IOMMU_IO_PGTABLE_LPAE [=n]
+
+SENSORS_DS620: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+SENSORS_ADT7310: n => yes
+    Direct dependencies:  HWMON [=n] && SPI_MASTER [=n]
+
+REGULATOR_MT6358: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_MT6397 [=n]
+
+COMMON_CLK_HI3670: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_HISI [=n] || COMPILE_TEST [=n])
+
+RTC_DRV_PCF2123: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+

@@ -1,0 +1,25 @@
+BACKLIGHT_PWM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && PWM [=n]
+
+FPGA_MGR_ICE40_SPI: n => yes
+    Direct dependencies:  FPGA [=y] && OF [=y] && SPI [=n]
+
+SENSORS_W83L785TS: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+GPIO_BD70528: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_ROHM_BD70528 [=n]
+
+JFS_STATISTICS: n => yes
+    Direct dependencies:  BLOCK [=n] && JFS_FS [=n]
+
+CRYPTO_SHA512: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MODULE_SIG_SHA384 [=n] && <choice> || MODULE_SIG_SHA512 [=n] && <choice> || FS_ENCRYPTION_ALGS [=n] || CIFS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=n] || CRYPTO_SHA512_SSSE3 [=n] && CRYPTO [=y] && X86 && 64BIT [=y] || CRYPTO_SHA512_OCTEON [=n] && CRYPTO [=y] && CPU_CAVIUM_OCTEON || CRYPTO_SHA512_SPARC64 [=n] && CRYPTO [=y] && SPARC64 || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_MEDIATEK [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARM && ARCH_MEDIATEK [=n] || COMPILE_TEST [=y]) || CRYPTO_DEV_CHELSIO [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CHELSIO_T4 [=n] || CRYPTO_DEV_BCM_SPU [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARCH_BCM_IPROC [=y] && MAILBOX [=y] || CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=n] || COMPILE_TEST [=y]) && HAS_IOMEM [=y] || CRYPTO_DEV_ARTPEC6 [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARM && (ARCH_ARTPEC || COMPILE_TEST [=y]) && OF [=y] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_HISI_SEC2 [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=n] && PCI_MSI [=n] && (UACCE [=n] || UACCE [=n]=n) && (ARM64 [=y] || COMPILE_TEST [=y] && 64BIT [=y]) && ACPI [=n] || CRYPTO_DEV_SA2UL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_K3 [=n] || COMPILE_TEST [=y]) || CRYPTO_DEV_OMAP_SHAM [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && ARCH_OMAP2PLUS
+
+SCSI_CONSTANTS: n => yes
+    Direct dependencies:  SCSI [=n]
+
+MOUSE_APPLETOUCH: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n] && USB_ARCH_HAS_HCD [=y]
+

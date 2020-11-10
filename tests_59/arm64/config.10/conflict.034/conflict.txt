@@ -1,0 +1,22 @@
+USB_CONFIGFS_F_HID: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && USB_CONFIGFS [=n]
+
+SIGNALFD: y => no
+    Direct dependencies:  y
+
+RESET_QCOM_PDC: n => yes
+    Direct dependencies:  RESET_CONTROLLER [=n] && (ARCH_QCOM [=n] || COMPILE_TEST [=n])
+
+SENSORS_ADM1275: n => yes
+    Direct dependencies:  HWMON [=n] && PMBUS [=n]
+
+CLK_R8A77960: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=n]
+    Reverse dependencies: CLK_RENESAS [=n] && COMMON_CLK [=y] && ARCH_R8A77960 [=n]
+
+BLK_DEV_THROTTLING_LOW: n => yes
+    Direct dependencies:  BLOCK [=y] && BLK_DEV_THROTTLING [=n]
+
+PWM_ATMEL_HLCDC_PWM: n => yes
+    Direct dependencies:  PWM [=n] && MFD_ATMEL_HLCDC [=n] && HAVE_CLK [=y]
+

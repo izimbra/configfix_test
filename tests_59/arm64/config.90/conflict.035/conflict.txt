@@ -1,0 +1,24 @@
+GPIO_BD70528: m => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_ROHM_BD70528 [=m]
+
+DEBUG_LIST: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] || BUG_ON_DATA_CORRUPTION [=y]
+    Reverse dependencies: BUG_ON_DATA_CORRUPTION [=y]
+
+FPGA_DFL_AFU: n => mod
+    Direct dependencies:  FPGA [=n] && FPGA_DFL [=n]
+
+MMC_DW_BLUEFIELD: m => yes
+    Direct dependencies:  MMC [=m] && MMC_DW [=m]
+
+HID_U2FZERO: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && LEDS_CLASS [=y] && HW_RANDOM [=y]
+
+PM_DEVFREQ: y => no
+    Direct dependencies:  y
+    Reverse dependencies: SCSI_UFSHCD [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_DMA [=y] || DRM_LIMA [=y] && HAS_IOMEM [=y] && DRM [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y]) && MMU [=y] && COMMON_CLK [=y] && OF [=y] || DRM_PANFROST [=y] && HAS_IOMEM [=y] && DRM [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y] && !GENERIC_ATOMIC64 [=n]) && MMU [=y]
+
+CRYPTO_CHACHA20POLY1305: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+

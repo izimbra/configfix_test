@@ -1,0 +1,27 @@
+MTD_TESTS: n => no
+    Direct dependencies:  MTD [=n] && m && MODULES [=n]
+
+LEDS_TRIGGER_PANIC: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+
+ARM64_VA_BITS_48: n => no
+    Direct dependencies:  <choice>
+
+MODULE_FORCE_LOAD: n => yes
+    Direct dependencies:  MODULES [=n]
+
+PINCTRL_MESON_G12A: n => yes
+    Direct dependencies:  PINCTRL [=y] && PINCTRL_MESON [=n] && ARM64 [=y]
+
+RTC_DRV_TEST: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+JOLIET: n => yes
+    Direct dependencies:  BLOCK [=n] && ISO9660_FS [=n]
+
+RESET_SCMI: n => yes
+    Direct dependencies:  RESET_CONTROLLER [=n] && (ARM_SCMI_PROTOCOL [=n] || COMPILE_TEST [=n])
+
+FPGA_DFL: n => yes
+    Direct dependencies:  FPGA [=n]
+

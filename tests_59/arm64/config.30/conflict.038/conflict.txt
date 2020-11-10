@@ -1,0 +1,26 @@
+USB_OHCI_HCD_PLATFORM: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && USB_OHCI_HCD [=n]
+    Reverse dependencies: USB_BRCMSTB [=n] && USB_SUPPORT [=n] && USB [=n] && (ARCH_BRCMSTB [=n] && PHY_BRCM_USB [=n] || COMPILE_TEST [=n]) && USB_OHCI_HCD [=n] || USB_HCD_BCMA [=n] && USB_SUPPORT [=n] && USB [=n] && BCMA [=n] && USB_OHCI_HCD [=n] || USB_HCD_SSB [=n] && USB_SUPPORT [=n] && USB [=n] && SSB [=y] && USB_OHCI_HCD [=n] || USB_OHCI_HCD_STI [=n] && USB_SUPPORT [=n] && USB [=n] && USB_OHCI_HCD [=n] && (ARCH_STI || COMPILE_TEST [=n]) && OF [=y] || USB_OHCI_HCD_OMAP3 [=n] && USB_SUPPORT [=n] && USB [=n] && USB_OHCI_HCD [=n] && (ARCH_OMAP3 || ARCH_OMAP4 || SOC_OMAP5 || COMPILE_TEST [=n]) || USB_OHCI_HCD_SSB [=n] && USB_SUPPORT [=n] && USB [=n] && USB_OHCI_HCD [=n] && (SSB [=y]=y || SSB [=y]=USB_OHCI_HCD [=n]) || USB_OHCI_SH [=n] && USB_SUPPORT [=n] && USB [=n] && USB_OHCI_HCD [=n] && (SUPERH || COMPILE_TEST [=n]) || USB_CNS3XXX_OHCI [=n] && USB_SUPPORT [=n] && USB [=n] && USB_OHCI_HCD [=n] && (ARCH_CNS3XXX || COMPILE_TEST [=n]) || USB_OCTEON_OHCI [=n] && USB_SUPPORT [=n] && USB [=n] && USB_OHCI_HCD [=n] && CAVIUM_OCTEON_SOC
+
+LEDS_TRIGGER_BACKLIGHT: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+
+RTC_DEBUG: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+RTC_DRV_DS1672: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+
+SLUB_DEBUG: n => yes
+    Direct dependencies:  SLUB [=n] && SYSFS [=y]
+    Reverse dependencies: KASAN_GENERIC [=n] && <choice> && HAVE_ARCH_KASAN [=y] && CC_HAS_KASAN_GENERIC [=y] && (SLUB [=n] && SYSFS [=y] || SLAB [=y] && !DEBUG_SLAB [=y]) && SLUB [=n] || KASAN_SW_TAGS [=n] && <choice> && HAVE_ARCH_KASAN_SW_TAGS [=y] && CC_HAS_KASAN_SW_TAGS [=n] && (SLUB [=n] && SYSFS [=y] || SLAB [=y] && !DEBUG_SLAB [=y]) && SLUB [=n]
+
+DRM_PANEL_SHARP_LQ101R1SX01: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+PINCTRL_SM8250: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y]
+
+DEBUG_BUGVERBOSE: n => yes
+    Direct dependencies:  BUG [=n] && (GENERIC_BUG [=n] || HAVE_DEBUG_BUGVERBOSE [=y])
+

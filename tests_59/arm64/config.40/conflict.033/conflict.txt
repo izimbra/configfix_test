@@ -1,0 +1,22 @@
+CHARGER_BQ2415X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n]
+
+NVDIMM_DAX: n => yes
+    Direct dependencies:  LIBNVDIMM [=n] && NVDIMM_PFN [=n]
+
+VFIO_MDEV_DEVICE: n => yes
+    Direct dependencies:  VFIO [=n] && VFIO_MDEV [=n]
+
+INPUT_RK805_PWRKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_RK808 [=n]
+
+LEDS_MC13783: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=n] && MFD_MC13XXX [=n]
+
+HID_PICOLCD_FB: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_PICOLCD [=n] && (HID_PICOLCD [=n]=FB [=y] || FB [=y]=y)
+
+CHARLCD: n => yes
+    Direct dependencies:  y
+    Reverse dependencies: HD44780 [=n] && AUXDISPLAY [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || PARPORT_PANEL [=n] && AUXDISPLAY [=n] && PARPORT [=n]
+

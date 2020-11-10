@@ -1,0 +1,12 @@
+DRM_PANEL_NOVATEK_NT39016: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+LEDS_CLASS_FLASH: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=n]
+
+TYPEC_HD3SS3220: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && TYPEC [=y] && I2C [=n] && USB_ROLE_SWITCH [=n]
+
+MEDIA_CEC_RC: n => no
+    Direct dependencies:  CEC_CORE [=n] && RC_CORE [=n] && (CEC_CORE [=n]=m || RC_CORE [=n]=y)
+

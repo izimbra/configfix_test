@@ -1,0 +1,21 @@
+MFD_88PM800: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+W1_SLAVE_DS2413: n => yes
+    Direct dependencies:  W1 [=n]
+
+SPARSEMEM_MANUAL: n => no
+    Direct dependencies:  <choice> && ARCH_SPARSEMEM_ENABLE [=y]
+
+RTC_DRV_DS1374: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+
+I2C_RK3X: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && OF [=y] && COMMON_CLK [=y]
+
+USB_CONFIGFS_F_PRINTER: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && USB_CONFIGFS [=n]
+
+RTC_DRV_PCF2127: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && RTC_I2C_AND_SPI [=n]
+

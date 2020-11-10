@@ -1,0 +1,25 @@
+VIRTIO_BLK: n => yes
+    Direct dependencies:  BLK_DEV [=n] && VIRTIO [=n]
+
+RAID_ATTRS: n => yes
+    Direct dependencies:  BLOCK [=n] && SCSI_MOD [=y]
+    Reverse dependencies: SCSI_MPT3SAS [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_SMARTPQI [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] && !S390 || SCSI_MYRB [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] || SCSI_MYRS [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=n] && (!CPU_BIG_ENDIAN [=n] || COMPILE_TEST [=n])
+
+RTC_DRV_TPS80031: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n] && MFD_TPS80031 [=n]
+
+MTD_MTDRAM: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+
+BACKLIGHT_SKY81452: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && MFD_SKY81452 [=n]
+
+COMMON_CLK_VC5: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && I2C [=n] && OF [=y]
+
+SENSORS_ADM1025: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+DRM_PANEL_FEIXIN_K101_IM2BA02: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+

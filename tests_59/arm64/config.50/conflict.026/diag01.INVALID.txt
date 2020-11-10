@@ -1,0 +1,13 @@
+SENSORS_ADM1026 => yes
+PWM_MESON => yes
+F2FS_FS => yes
+SENSORS_TMP401 => yes
+GPIO_DA9052 => yes
+LEDS_TPS6105X => yes
+HWMON => yes
+PWM => yes
+BLOCK => yes
+EFI_PARTITION => yes
+MSDOS_PARTITION => yes
+REGULATOR_FIXED_VOLTAGE => yes
+TPS6105X => yes

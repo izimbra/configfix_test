@@ -1,0 +1,28 @@
+HIBERNATION: n => yes
+    Direct dependencies:  SWAP [=n] && ARCH_HIBERNATION_POSSIBLE [=y]
+
+BLK_DEV_NULL_BLK: n => yes
+    Direct dependencies:  BLK_DEV [=n]
+
+REGULATOR_DA9052: n => yes
+    Direct dependencies:  REGULATOR [=n] && PMIC_DA9052 [=n]
+
+AUTOFS_FS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: AUTOFS4_FS [=y]
+
+HID_UCLOGIC: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n]
+
+LEDS_TRIGGER_GPIO: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+IPQ_GCC_4019: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+RTC_DRV_DS3232: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && RTC_I2C_AND_SPI [=n]
+
+ARCH_R8A77960: n => yes
+    Direct dependencies:  SOC_RENESAS [=n] && ARM64 [=y]
+

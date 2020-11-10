@@ -1,0 +1,32 @@
+EFI_PARTITION: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+USB_CHIPIDEA: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && (USB_EHCI_HCD [=n] && USB_GADGET [=n] || USB_EHCI_HCD [=n] && !USB_GADGET [=n] || !USB_EHCI_HCD [=n] && USB_GADGET [=n]) && HAS_DMA [=y]
+
+TMPFS_XATTR: y => no
+    Direct dependencies:  TMPFS [=y]
+    Reverse dependencies: TMPFS_POSIX_ACL [=y] && TMPFS [=y]
+
+LEDS_TRIGGER_GPIO: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+INPUT_HISI_POWERKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (ARCH_HISI [=y] || COMPILE_TEST [=y])
+
+GPIO_DA9052: n => yes
+    Direct dependencies:  GPIOLIB [=y] && PMIC_DA9052 [=n]
+
+REGULATOR_TPS6105X: n => yes
+    Direct dependencies:  REGULATOR [=y] && TPS6105X [=n]
+
+INPUT_SC27XX_VIBRA: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=y])
+
+CRYPTO_842: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_842 [=n] && <choice> || PSTORE_842_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=y]
+
+EZX_PCAP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+

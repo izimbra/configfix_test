@@ -1,0 +1,25 @@
+MMC_DW_EXYNOS: m => yes
+    Direct dependencies:  MMC [=m] && MMC_DW [=m]
+
+HID_CP2112: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && HIDRAW [=y] && I2C [=y] && GPIOLIB [=y]
+
+DEBUG_LOCK_ALLOC: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+SENSORS_TPS53679: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+MMC_SH_MMCIF: n => yes
+    Direct dependencies:  MMC [=m] && (SUPERH || ARCH_RENESAS [=y] || COMPILE_TEST [=y])
+
+SENSORS_MAX20730: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+HID_WACOM: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m]
+
+EXT4_KUNIT_TESTS: m => yes
+    Direct dependencies:  BLOCK [=y] && KUNIT [=m]
+

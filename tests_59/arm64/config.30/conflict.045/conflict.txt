@@ -1,0 +1,30 @@
+SENSORS_W83795: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+DEBUG_SPINLOCK: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+USB_G_HID: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n]
+
+JFS_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+INPUT_YEALINK: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && USB_ARCH_HAS_HCD [=n]
+
+HID_GT683R: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && LEDS_CLASS [=n] && USB_HID [=n]
+
+SENSORS_W83627EHF: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+USB_EHCI_ROOT_HUB_TT: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && USB_EHCI_HCD [=n]
+    Reverse dependencies: USB_EHCI_FSL [=n] && USB_SUPPORT [=n] && USB [=n] && USB_EHCI_HCD [=n] || USB_EHCI_MXC [=n] && USB_SUPPORT [=n] && USB [=n] && USB_EHCI_HCD [=n] && (ARCH_MXC [=n] || COMPILE_TEST [=n]) || USB_EHCI_TEGRA [=n] && USB_SUPPORT [=n] && USB [=n] && USB_EHCI_HCD [=n] && ARCH_TEGRA [=y] || USB_EHCI_MV [=n] && USB_SUPPORT [=n] && USB [=n] && USB_EHCI_HCD [=n] && (ARCH_PXA || ARCH_MMP || COMPILE_TEST [=n]) || USB_CHIPIDEA_HOST [=n] && USB_SUPPORT [=n] && USB_CHIPIDEA [=n] && USB_EHCI_HCD [=n]
+
+SYSC_R8A774A1: n => yes
+    Direct dependencies:  SOC_RENESAS [=n]
+    Reverse dependencies: ARCH_R8A774A1 [=n] && SOC_RENESAS [=n] && ARM64 [=y]
+

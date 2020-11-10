@@ -1,0 +1,28 @@
+RC_DEVICES: n => yes
+    Direct dependencies:  RC_CORE [=n]
+
+ISO9660_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+SENSORS_MLXREG_FAN: n => yes
+    Direct dependencies:  HWMON [=n] && MELLANOX_PLATFORM [=n]
+
+SENSORS_W83L785TS: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+IR_TOY: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && USB_ARCH_HAS_HCD [=y]
+
+PRIME_NUMBERS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: DRM_DEBUG_SELFTEST [=y] && HAS_IOMEM [=y] && DRM [=y] && DEBUG_KERNEL [=y] || DRM_I915_SELFTEST [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+
+USB_MASS_STORAGE: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && BLOCK [=n]
+
+CHR_DEV_SG: n => yes
+    Direct dependencies:  SCSI [=n]
+
+SPI_AXI_SPI_ENGINE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+

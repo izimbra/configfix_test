@@ -1,0 +1,15 @@
+DEV_DAX: n => yes
+    Direct dependencies:  DAX [=n] && TRANSPARENT_HUGEPAGE [=y]
+
+SENSORS_BEL_PFE: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+HID_CREATIVE_SB0540: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n]
+
+USB_GADGETFS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+
+CGROUP_PIDS: n => yes
+    Direct dependencies:  CGROUPS [=n]
+

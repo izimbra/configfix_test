@@ -1,0 +1,25 @@
+SENSORS_LM92: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+SENSORS_JC42: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+DRM_PANEL_NOVATEK_NT39016: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+BATTERY_MAX17042: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n]
+
+MMC_MESON_MX_SDIO: n => yes
+    Direct dependencies:  MMC [=n] && (ARCH_MESON [=y] || COMPILE_TEST [=n]) && COMMON_CLK [=y] && OF_ADDRESS [=y]
+
+CROS_EC: y => no
+    Direct dependencies:  CHROME_PLATFORMS [=y] && (X86 || ARM || ARM64 [=y] || COMPILE_TEST [=n])
+    Reverse dependencies: MFD_CROS_EC [=y] && (X86 || ARM || ARM64 [=y] || COMPILE_TEST [=n])
+
+DEV_DAX_PMEM: n => yes
+    Direct dependencies:  DAX [=y] && LIBNVDIMM [=n] && NVDIMM_DAX [=n] && DEV_DAX [=n]
+
+MODULE_UNLOAD: n => yes
+    Direct dependencies:  MODULES [=n]
+

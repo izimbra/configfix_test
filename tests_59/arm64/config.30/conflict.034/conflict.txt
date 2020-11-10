@@ -1,0 +1,22 @@
+INPUT_CM109: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && USB_ARCH_HAS_HCD [=n]
+
+PINCTRL_BCM2835: y => no
+    Direct dependencies:  PINCTRL [=y] && OF [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=n] || COMPILE_TEST [=n])
+    Reverse dependencies: ARCH_BCM2835 [=y]
+
+INPUT_MC13783_PWRBUTTON: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && MFD_MC13XXX [=n]
+
+SPI_QCOM_GENI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && QCOM_GENI_SE [=n]
+
+REGULATOR_ACT8945A: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_ACT8945A [=n]
+
+RTC_DRV_MAX6902: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+PINCTRL_SH_PFC: n => yes
+    Direct dependencies:  PINCTRL [=y]
+

@@ -1,0 +1,12 @@
+BOOTPARAM_SOFTLOCKUP_PANIC: n => yes
+    Direct dependencies:  SOFTLOCKUP_DETECTOR [=n]
+
+REGULATOR_SY8106A: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=y] && (OF [=y] || COMPILE_TEST [=n])
+
+XZ_DEC_ARM: n => yes
+    Direct dependencies:  XZ_DEC [=n]
+
+MEMORY_HOTPLUG_DEFAULT_ONLINE: n => yes
+    Direct dependencies:  MEMORY_HOTPLUG [=n]
+

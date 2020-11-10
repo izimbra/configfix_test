@@ -1,0 +1,13 @@
+CHR_DEV_SG: n => yes
+    Direct dependencies:  SCSI [=n]
+
+SCSI_DH_EMC: n => yes
+    Direct dependencies:  SCSI_DH [=n] && SCSI [=n]
+
+PINCTRL_PFC_R8A77960: y => no
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=y] && PINCTRL [=y] && ARCH_R8A77960 [=y]
+
+PHY_QCOM_USB_HS: n => yes
+    Direct dependencies:  USB_ULPI_BUS [=n] && (EXTCON [=y] || !EXTCON [=y])
+

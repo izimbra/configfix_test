@@ -1,0 +1,15 @@
+SPI_SPIDEV: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+SPI_BCM2835AUX: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && ((ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=y]) && GPIOLIB [=y] || COMPILE_TEST [=y])
+
+SPI_QCOM_GENI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && QCOM_GENI_SE [=n]
+
+KEXEC: n => yes
+    Direct dependencies:  PM_SLEEP_SMP [=n]
+
+INPUT_ATI_REMOTE2: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && USB_ARCH_HAS_HCD [=y]
+

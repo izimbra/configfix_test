@@ -1,0 +1,26 @@
+RTC_DRV_TPS80031: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n] && MFD_TPS80031 [=n]
+
+BATTERY_GAUGE_LTC2941: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n]
+
+SENSORS_TSL2550: n => yes
+    Direct dependencies:  I2C [=n] && SYSFS [=y]
+
+MMC_DW_BLUEFIELD: n => yes
+    Direct dependencies:  MMC [=n] && MMC_DW [=n]
+
+DEVFREQ_GOV_SIMPLE_ONDEMAND: n => yes
+    Direct dependencies:  PM_DEVFREQ [=n]
+    Reverse dependencies: SCSI_UFSHCD [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_DMA [=n] || DRM_LIMA [=n] && HAS_IOMEM [=y] && DRM [=n] && (ARM || ARM64 [=y] || COMPILE_TEST [=n]) && MMU [=y] && COMMON_CLK [=y] && OF [=y] || DRM_PANFROST [=n] && HAS_IOMEM [=y] && DRM [=n] && (ARM || ARM64 [=y] || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n]) && MMU [=y] || ARM_EXYNOS_BUS_DEVFREQ [=n] && PM_DEVFREQ [=n] && (ARCH_EXYNOS [=y] || COMPILE_TEST [=n]) || ARM_IMX8M_DDRC_DEVFREQ [=n] && PM_DEVFREQ [=n] && (ARCH_MXC [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=n] && HAVE_ARM_SMCCC [=y]) || ARM_TEGRA20_DEVFREQ [=n] && PM_DEVFREQ [=n] && (TEGRA_MC [=n] && TEGRA20_EMC [=n] || COMPILE_TEST [=n]) && COMMON_CLK [=y] || ARM_RK3399_DMC_DEVFREQ [=n] && PM_DEVFREQ [=n] && (ARCH_ROCKCHIP [=n] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=n] && HAVE_ARM_SMCCC [=y])
+
+DRM_TIDSS: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && OF [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=n])
+
+HID_THINGM: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+
+FPGA_REGION: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_BRIDGE [=n]
+    Reverse dependencies: FPGA_DFL [=n] && FPGA [=n]
+

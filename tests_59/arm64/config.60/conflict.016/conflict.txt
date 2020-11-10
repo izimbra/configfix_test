@@ -1,0 +1,13 @@
+BACKLIGHT_88PM860X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_88PM860X [=n]
+
+RESET_MESON_AUDIO_ARB: n => yes
+    Direct dependencies:  RESET_CONTROLLER [=y] && (ARCH_MESON [=n] || COMPILE_TEST [=n])
+
+DRM_TOSHIBA_TC358764: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+VIRT_CPU_ACCOUNTING_GEN: n => no
+    Direct dependencies:  <choice> && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y] && GENERIC_CLOCKEVENTS [=y]
+    Reverse dependencies: NO_HZ_FULL [=n] && <choice> && !ARCH_USES_GETTIMEOFFSET [=n] && GENERIC_CLOCKEVENTS [=y] && SMP [=y] && HAVE_CONTEXT_TRACKING [=y] && HAVE_VIRT_CPU_ACCOUNTING_GEN [=y]
+

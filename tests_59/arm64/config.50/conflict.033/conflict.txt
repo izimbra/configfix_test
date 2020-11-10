@@ -1,0 +1,22 @@
+RD_LZ4: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+
+USB_MV_U3D: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && HAS_DMA [=y]
+
+SCSI: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: ATA [=n] && HAS_IOMEM [=y] && BLOCK [=n]
+
+USB_CHIPIDEA_IMX: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_CHIPIDEA [=n] && OF [=y]
+
+HD44780: n => yes
+    Direct dependencies:  AUXDISPLAY [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+SENSORS_NCT6775: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+CPU_LITTLE_ENDIAN: y => no
+    Direct dependencies:  <choice>
+

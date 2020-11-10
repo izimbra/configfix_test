@@ -1,0 +1,30 @@
+DRM_TIDSS: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && OF [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y])
+
+CROS_EC_I2C: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && CROS_EC [=m] && I2C [=y]
+
+KASAN_GENERIC: n => yes
+    Direct dependencies:  <choice> && HAVE_ARCH_KASAN [=y] && CC_HAS_KASAN_GENERIC [=y] && (SLUB [=n] && SYSFS [=y] || SLAB [=y] && !DEBUG_SLAB [=y])
+
+MAILBOX: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_K3 [=y] || ACPI_CPPC_LIB [=y] && ACPI [=y] && ACPI_PROCESSOR [=y] || OMAP_REMOTEPROC [=n] && REMOTEPROC [=y] && (ARCH_OMAP4 || SOC_OMAP5 || SOC_DRA7XX) && OMAP_IOMMU [=y] || ST_REMOTEPROC [=n] && REMOTEPROC [=y] && ARCH_STI || STM32_RPROC [=n] && ARCH_STM32 && REMOTEPROC [=y] || TI_K3_DSP_REMOTEPROC [=m] && REMOTEPROC [=y] && ARCH_K3 [=y] || MTK_CMDQ [=n] && (ARCH_MEDIATEK [=n] || COMPILE_TEST [=y]) || ARCH_TEGRA_186_SOC [=n] && ARCH_TEGRA [=y] && ARM64 [=y] || ARCH_TEGRA_194_SOC [=y] && ARCH_TEGRA [=y] && ARM64 [=y] || ZYNQMP_POWER [=y] && PM [=y] && ZYNQMP_FIRMWARE [=y]
+
+RAVE_SP_EEPROM: n => mod
+    Direct dependencies:  NVMEM [=y] && RAVE_SP_CORE [=n]
+
+POWER_RESET: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARM64 [=y]
+
+XEN_BACKEND: n => yes
+    Direct dependencies:  XEN [=n]
+
+KASAN_INLINE: n => yes
+    Direct dependencies:  <choice>
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => mod
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=y] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=y]
+

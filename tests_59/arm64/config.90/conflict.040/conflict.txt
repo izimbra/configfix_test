@@ -1,0 +1,29 @@
+PINCTRL_MESON_G12A: n => yes
+    Direct dependencies:  PINCTRL [=y] && PINCTRL_MESON [=n] && ARM64 [=y]
+
+DEVFREQ_GOV_SIMPLE_ONDEMAND: y => no
+    Direct dependencies:  PM_DEVFREQ [=y]
+    Reverse dependencies: SCSI_UFSHCD [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_DMA [=y] || DRM_LIMA [=y] && HAS_IOMEM [=y] && DRM [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y]) && MMU [=y] && COMMON_CLK [=y] && OF [=y] || DRM_PANFROST [=y] && HAS_IOMEM [=y] && DRM [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=y] && !GENERIC_ATOMIC64 [=n]) && MMU [=y] || ARM_EXYNOS_BUS_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_EXYNOS [=y] || COMPILE_TEST [=y]) || ARM_IMX8M_DDRC_DEVFREQ [=m] && PM_DEVFREQ [=y] && (ARCH_MXC [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y]) || ARM_TEGRA20_DEVFREQ [=y] && PM_DEVFREQ [=y] && (TEGRA_MC [=y] && TEGRA20_EMC [=n] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || ARM_RK3399_DMC_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_ROCKCHIP [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y])
+
+CRYPTO_CTS: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: FS_ENCRYPTION_ALGS [=y]
+
+PID_IN_CONTEXTIDR: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CORESIGHT_SOURCE_ETM4X [=y] && CORESIGHT [=y] && ARM64 [=y]
+
+MMC_CQHCI: m => yes
+    Direct dependencies:  MMC [=m] && HAS_DMA [=y]
+    Reverse dependencies: MMC_SDHCI_PCI [=m] && MMC [=m] && MMC_SDHCI [=m] && PCI [=y] || MMC_SDHCI_OF_ARASAN [=m] && MMC [=m] && MMC_SDHCI_PLTFM [=m] && OF [=y] && COMMON_CLK [=y] || MMC_SDHCI_ESDHC_IMX [=m] && MMC [=m] && ARCH_MXC [=y] && MMC_SDHCI_PLTFM [=m] || MMC_SDHCI_TEGRA [=m] && MMC [=m] && ARCH_TEGRA [=y] && MMC_SDHCI_PLTFM [=m] || MMC_SDHCI_MSM [=m] && MMC [=m] && (ARCH_QCOM [=y] || ARM && COMPILE_TEST [=y]) && MMC_SDHCI_PLTFM [=m] || MMC_MTK [=m] && MMC [=m] && HAS_DMA [=y] || MMC_SDHCI_BRCMSTB [=m] && MMC [=m] && (ARCH_BRCMSTB [=y] || BMIPS_GENERIC) && MMC_SDHCI_PLTFM [=m] || MMC_SDHCI_AM654 [=m] && MMC [=m] && MMC_SDHCI_PLTFM [=m] && OF [=y] && REGMAP_MMIO [=y]
+
+SENSORS_MAX34440: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+LEDS_KTD2692: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS_FLASH [=n] && OF [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+RST_RCAR: y => no
+    Direct dependencies:  SOC_RENESAS [=y]
+    Reverse dependencies: ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN3 [=y] && SOC_RENESAS [=y]
+

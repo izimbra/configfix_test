@@ -1,0 +1,30 @@
+MTD_NAND_ECC_SW_HAMMING_SMC: n => yes
+    Direct dependencies:  MTD [=n] && MTD_NAND_ECC_SW_HAMMING [=n]
+    Reverse dependencies: MTD_NAND_NDFC [=n] && MTD [=n] && MTD_RAW_NAND [=n] && 4xx
+
+GPIO_SIOX: n => yes
+    Direct dependencies:  GPIOLIB [=y] && HAS_IOMEM [=y] && SIOX [=n]
+
+PINCTRL_SH_PFC: n => yes
+    Direct dependencies:  PINCTRL [=y]
+
+I2C_MUX: n => yes
+    Direct dependencies:  I2C [=n]
+    Reverse dependencies: MEDIA_SUBDRV_AUTOSELECT [=n] && MEDIA_SUPPORT [=y] && HAS_IOMEM [=y] || DRM_SII902X [=n] && HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y] || MPU3050_I2C [=n] && IIO [=n] && INPUT_MPU3050!=y && INPUT_MPU3050!=m && I2C [=n] || INV_MPU6050_I2C [=n] && IIO [=n] && I2C [=n]
+
+MFD_SC27XX_PMIC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && (ARCH_SPRD [=n] || COMPILE_TEST [=n]) && SPI_MASTER [=n]
+
+USB_BDC_UDC: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && HAS_DMA [=y]
+
+HISI_THERMAL: n => yes
+    Direct dependencies:  THERMAL [=n] && (ARCH_HISI [=y] || COMPILE_TEST [=n]) && HAS_IOMEM [=y] && OF [=y]
+
+NLS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI [=n] && ARCH_SUPPORTS_ACPI [=n] || PCI_LABEL [=n] && PCI [=n] || SCSI_UFSHCD [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_DMA [=n] || USB [=y] && USB_SUPPORT [=y] && USB_ARCH_HAS_HCD [=y] || USB_GADGET [=n] && USB_SUPPORT [=y] || JFS_FS [=n] && BLOCK [=n] || F2FS_FS [=n] && BLOCK [=n] || JOLIET [=n] && BLOCK [=n] && ISO9660_FS [=n] || UDF_FS [=n] && BLOCK [=n] || FAT_FS [=n] && BLOCK [=n] || EXFAT_FS [=n] && BLOCK [=n] || NTFS_FS [=n] && BLOCK [=n] || HFS_FS [=n] && MISC_FILESYSTEMS [=n] && BLOCK [=n] || HFSPLUS_FS [=n] && MISC_FILESYSTEMS [=n] && BLOCK [=n] || BEFS_FS [=n] && MISC_FILESYSTEMS [=n] && BLOCK [=n] || VBOXSF_FS [=n] && MISC_FILESYSTEMS [=n] && X86 && VBOXGUEST [=n] || CIFS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=y]
+
+POWER_RESET_SC27XX: n => yes
+    Direct dependencies:  POWER_RESET [=y] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=n])
+

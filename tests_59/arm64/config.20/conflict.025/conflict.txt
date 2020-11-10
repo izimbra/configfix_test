@@ -1,0 +1,16 @@
+USB_HSIC_USB3503: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && I2C [=y]
+
+NLS_MAC_INUIT: n => yes
+    Direct dependencies:  NLS [=n]
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: n => yes
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=n]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=n] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+
+INPUT_IMS_PCU: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && USB [=n] && LEDS_CLASS [=n]
+
+USB_GADGET_DEBUG_FS: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && DEBUG_FS [=y]
+

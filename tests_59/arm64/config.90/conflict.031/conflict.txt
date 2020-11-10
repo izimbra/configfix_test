@@ -1,0 +1,24 @@
+THERMAL_DEFAULT_GOV_USER_SPACE: n => no
+    Direct dependencies:  <choice>
+
+LEDS_ADP5520: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && PMIC_ADP5520 [=n]
+
+RMI4_F03: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+
+PPS: m => no
+    Direct dependencies:  y
+    Reverse dependencies: PTP_1588_CLOCK [=m] && NET [=y] && POSIX_TIMERS [=y]
+
+RESET_SIMPLE: y => no
+    Direct dependencies:  RESET_CONTROLLER [=y]
+    Reverse dependencies: CLK_BCM2711_DVP [=y] && (ARCH_BCM2835 [=y] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || RESET_SOCFPGA [=y] && RESET_CONTROLLER [=y] || RESET_SUNXI [=y] && RESET_CONTROLLER [=y] || RESET_UNIPHIER_GLUE [=y] && RESET_CONTROLLER [=y] && (ARCH_UNIPHIER [=y] || COMPILE_TEST [=y]) && OF [=y]
+
+CHARGER_88PM860X: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_88PM860X [=y] && BATTERY_88PM860X [=m]
+
+LEDS_AAT1290: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS_FLASH [=n] && (V4L2_FLASH_LED_CLASS [=n] || !V4L2_FLASH_LED_CLASS [=n]) && (GPIOLIB [=y] || COMPILE_TEST [=y]) && OF [=y] && PINCTRL [=y]
+

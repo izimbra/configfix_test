@@ -1,0 +1,25 @@
+MSM_GCC_8660: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+GPIO_MADERA: n => yes
+    Direct dependencies:  GPIOLIB [=y] && PINCTRL_MADERA [=n]
+
+HD44780: n => yes
+    Direct dependencies:  AUXDISPLAY [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+MTD_NAND_MXIC: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && (HAS_IOMEM [=y] || COMPILE_TEST [=n])
+
+DEV_DAX_PMEM: n => yes
+    Direct dependencies:  DAX [=y] && LIBNVDIMM [=n] && NVDIMM_DAX [=n] && DEV_DAX [=n]
+
+SENSORS_ADT7410: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+CRYPTO_NULL: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_AUTHENC [=y] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_SEQIV [=y] && CRYPTO [=y] || CRYPTO_ECHAINIV [=y] && CRYPTO [=y] || CRYPTO_USER_API_AEAD [=y] && CRYPTO [=y] && NET [=y]
+
+MTD_CFI_LE_BYTE_SWAP: n => yes
+    Direct dependencies:  <choice>
+

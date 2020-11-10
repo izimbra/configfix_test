@@ -1,0 +1,17 @@
+EFI_GENERIC_STUB_INITRD_CMDLINE_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_STUB [=n] && (EFI_GENERIC_STUB [=n] || X86)
+
+ZYNQMP_IPI_MBOX: y => no
+    Direct dependencies:  MAILBOX [=y] && ARCH_ZYNQMP [=y] && OF [=y]
+    Reverse dependencies: ZYNQMP_POWER [=y] && PM [=y] && ZYNQMP_FIRMWARE [=y]
+
+SCSI_SPI_ATTRS: n => mod
+    Direct dependencies:  SCSI [=n]
+    Reverse dependencies: SCSI_AHA152X [=n] && SCSI_LOWLEVEL [=n] && ISA && SCSI [=n] || SCSI_AIC7XXX [=n] && SCSI_LOWLEVEL [=n] && (PCI [=y] || EISA [=n]) && SCSI [=n] || SCSI_AIC79XX [=n] && SCSI_LOWLEVEL [=n] && PCI [=y] && SCSI [=n] || SCSI_DMX3191D [=n] && SCSI_LOWLEVEL [=n] && PCI [=y] && SCSI [=n] || SCSI_GENERIC_NCR5380 [=n] && SCSI_LOWLEVEL [=n] && ISA && SCSI [=n] && HAS_IOPORT_MAP [=y] || SCSI_LASI700 [=n] && SCSI_LOWLEVEL [=n] && GSC && SCSI [=n] || SCSI_SNI_53C710 [=n] && SCSI_LOWLEVEL [=n] && SNI_RM && SCSI [=n] || SCSI_SYM53C8XX_2 [=n] && SCSI_LOWLEVEL [=n] && PCI [=y] && SCSI [=n] || SCSI_ZALON [=n] && SCSI_LOWLEVEL [=n] && GSC && SCSI [=n] || SCSI_SIM710 [=n] && SCSI_LOWLEVEL [=n] && EISA [=n] && SCSI [=n] || SCSI_AM53C974 [=n] && SCSI_LOWLEVEL [=n] && PCI [=y] && SCSI [=n] || SCSI_ACORNSCSI_3 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || SCSI_CUMANA_1 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || SCSI_OAK1 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || JAZZ_ESP [=n] && SCSI_LOWLEVEL [=n] && MACH_JAZZ && SCSI [=n] || SCSI_A4000T [=n] && SCSI_LOWLEVEL [=n] && AMIGA && SCSI [=n] || SCSI_ZORRO7XX [=n] && SCSI_LOWLEVEL [=n] && ZORRO && SCSI [=n] || SCSI_ZORRO_ESP [=n] && SCSI_LOWLEVEL [=n] && ZORRO && SCSI [=n] || ATARI_SCSI [=n] && SCSI_LOWLEVEL [=n] && ATARI && SCSI [=n] || MAC_SCSI [=n] && SCSI_LOWLEVEL [=n] && MAC && SCSI [=n] || SCSI_MAC_ESP [=n] && SCSI_LOWLEVEL [=n] && MAC && SCSI [=n] || MVME147_SCSI [=n] && SCSI_LOWLEVEL [=n] && MVME147 && SCSI [=n]=y || MVME16x_SCSI [=n] && SCSI_LOWLEVEL [=n] && MVME16x && SCSI [=n] || BVME6000_SCSI [=n] && SCSI_LOWLEVEL [=n] && BVME6000 && SCSI [=n] || SUN3_SCSI [=n] && SCSI_LOWLEVEL [=n] && SUN3 && SCSI [=n] || SUN3X_ESP [=n] && SCSI_LOWLEVEL [=n] && SUN3X && SCSI [=n]=y || SCSI_SUNESP [=n] && SCSI_LOWLEVEL [=n] && SBUS && SCSI [=n] || PCMCIA_AHA152X [=n] && SCSI_LOWLEVEL [=n] && SCSI_LOWLEVEL_PCMCIA [=n] && SCSI [=n] && PCMCIA [=n] && m && MODULES [=y] || FUSION_SPI [=n] && FUSION [=y] && PCI [=y] && SCSI [=n]
+
+BLK_DEV_THROTTLING: n => yes
+    Direct dependencies:  BLOCK [=n] && BLK_CGROUP [=n]
+
+LEDS_AS3645A: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && I2C [=y] && LEDS_CLASS_FLASH [=n] && (V4L2_FLASH_LED_CLASS [=n] || !V4L2_FLASH_LED_CLASS [=n])
+

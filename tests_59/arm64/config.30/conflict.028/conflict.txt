@@ -1,0 +1,19 @@
+DRM_KOMEDA: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && OF [=y] && COMMON_CLK [=y]
+
+TCG_TIS_SPI: n => yes
+    Direct dependencies:  TCG_TPM [=y] && SPI [=n]
+
+HID_THINGM: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && LEDS_CLASS [=n]
+
+LEDS_PWM: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && PWM [=y]
+
+EXT4_KUNIT_TESTS: n => yes
+    Direct dependencies:  BLOCK [=n] && KUNIT [=y]
+
+TMPFS: n => yes
+    Direct dependencies:  SHMEM [=n]
+    Reverse dependencies: DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=n] && X86 && PCI [=n] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=n] && (ARCH_QCOM [=n] || SOC_IMX5 || ARM && COMPILE_TEST [=n]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=n] && HAS_IOMEM [=y] && DRM [=n] && MMU [=y]
+

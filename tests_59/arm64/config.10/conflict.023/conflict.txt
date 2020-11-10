@@ -1,0 +1,15 @@
+DRM_PL111: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && (ARM || ARM64 [=y] || COMPILE_TEST [=n]) && COMMON_CLK [=y]
+
+SENSORS_MC13783_ADC: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_MC13XXX [=n]
+
+SIGNED_PE_FILE_VERIFICATION: n => yes
+    Direct dependencies:  CRYPTO [=n] && ASYMMETRIC_KEY_TYPE [=n] && PKCS7_MESSAGE_PARSER [=n]=y && SYSTEM_DATA_VERIFICATION [=n]
+
+QCOM_EBI2: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n])
+
+FPGA_DFL: n => yes
+    Direct dependencies:  FPGA [=n]
+

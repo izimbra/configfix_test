@@ -1,0 +1,35 @@
+RESET_SIMPLE: y => no
+    Direct dependencies:  RESET_CONTROLLER [=y]
+    Reverse dependencies: CLK_BCM2711_DVP [=y] && (ARCH_BCM2835 [=y] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || RESET_SOCFPGA [=y] && RESET_CONTROLLER [=y] || RESET_SUNXI [=y] && RESET_CONTROLLER [=y] || RESET_UNIPHIER_GLUE [=y] && RESET_CONTROLLER [=y] && (ARCH_UNIPHIER [=y] || COMPILE_TEST [=y]) && OF [=y]
+
+EFI_ARMSTUB_DTB_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_GENERIC_STUB [=n]
+
+FB_TILEBLITTING: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y]
+    Reverse dependencies: FB_MATROX [=m] && HAS_IOMEM [=y] && FB [=y] && PCI [=y] || FB_S3 [=y] && HAS_IOMEM [=y] && FB [=y] && PCI [=y] || FB_VT8623 [=m] && HAS_IOMEM [=y] && FB [=y] && PCI [=y] || FB_ARK [=y] && HAS_IOMEM [=y] && FB [=y] && PCI [=y]
+
+RESET_HISI: y => no
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: COMMON_CLK_HI3516CV300 [=m] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y]) || COMMON_CLK_HI3519 [=m] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y]) || COMMON_CLK_HI3798CV200 [=y] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y])
+
+I2C_ALGOBIT: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: CAN_PEAK_PCIEC [=y] && NET [=y] && CAN [=y] && CAN_DEV [=m] && CAN_SJA1000 [=m] && CAN_PEAK_PCI [=m] || IGB [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_INTEL [=y] && PCI [=y] || SFC_FALCON [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_SOLARFLARE [=y] && PCI [=y] || I2C_VIA [=m] && I2C [=y] && HAS_IOMEM [=y] && PCI [=y] || I2C_HYDRA [=n] && I2C [=y] && HAS_IOMEM [=y] && PCI [=y] && PPC_CHRP || I2C_GPIO [=m] && I2C [=y] && HAS_IOMEM [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y]) || I2C_SIMTEC [=m] && I2C [=y] && HAS_IOMEM [=y] || I2C_VERSATILE [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_MPS2 || ARCH_VERSATILE || ARCH_REALVIEW || ARCH_VEXPRESS [=y] || COMPILE_TEST [=y]) || I2C_PARPORT [=n] && I2C [=y] && HAS_IOMEM [=y] && PARPORT [=n] || I2C_ACORN [=n] && I2C [=y] && HAS_IOMEM [=y] && ARCH_ACORN || VIDEO_AU0828 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && I2C [=y] && INPUT [=y] && DVB_CORE [=m] && USB [=y] && VIDEO_V4L2 [=m] || VIDEO_IVTV [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=y] && I2C [=y] && RC_CORE [=m] || VIDEO_CX18 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_V4L2 [=m] && DVB_CORE [=m] && PCI [=y] && I2C [=y] && RC_CORE [=m] || VIDEO_CX23885 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=y] && I2C [=y] && INPUT [=y] && SND [=m] && RC_CORE [=m] || VIDEO_CX25821 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_DEV [=m] && PCI [=y] && I2C [=y] || VIDEO_CX88 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_DEV [=m] && PCI [=y] && I2C [=y] && RC_CORE [=m] || VIDEO_BT848 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_DEV [=m] && PCI [=y] && I2C [=y] && VIDEO_V4L2 [=m] && RC_CORE [=m] && MEDIA_RADIO_SUPPORT [=y] || VIDEO_SAA7164 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && DVB_CORE [=m] && VIDEO_DEV [=m] && PCI [=y] && I2C [=y] || VIDEO_COBALT [=n] && MEDIA_SUPPORT [=m] && PCI [=y] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_V4L2 [=m] && I2C [=y] && PCI_MSI [=y] && MTD_COMPLEX_MAPPINGS [=y] && (GPIOLIB [=y] && DRM_I2C_ADV7511 [=m]=n || COMPILE_TEST [=y]) && SND [=m] && MTD [=y] || DVB_PLUTO2 [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=y] && I2C [=y] || DVB_SMIPCIE [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_CORE [=m] && PCI [=y] && I2C [=y] && RC_CORE [=m] || DRM [=y] && HAS_IOMEM [=y] && (AGP [=n] || AGP [=n]=n) && !EMULATED_CMPXCHG && HAS_DMA [=y] || FB_DDC [=y] && HAS_IOMEM [=y] && FB [=y] || FB_CYBER2000_I2C [=n] && HAS_IOMEM [=y] && FB_CYBER2000 [=y] && I2C [=y] && ARCH_NETWINDER && (I2C [=y]=y || FB_CYBER2000 [=y]=m) || FB_VIA [=m] && HAS_IOMEM [=y] && FB [=y] && PCI [=y] && GPIOLIB [=y] && I2C [=y] && (X86 || COMPILE_TEST [=y]) || INFINIBAND_HFI1 [=n] && INFINIBAND [=m] && (INFINIBAND_USER_ACCESS [=m] || !INFINIBAND_USER_ACCESS [=m]) && X86_64 && INFINIBAND_RDMAVT [=n] && I2C [=y]
+
+THERMAL_DEFAULT_GOV_USER_SPACE: n => no
+    Direct dependencies:  <choice>
+
+IPMI_SSIF: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+CRYPTO_ECB: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BT [=m] && NET [=y] && !S390 && (RFKILL [=m] || !RFKILL [=m]) || LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || HOSTAP [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || HOSTAP [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || FS_ENCRYPTION_ALGS [=y] || ECRYPT_FS [=m] && MISC_FILESYSTEMS [=y] && KEYS [=y] && CRYPTO [=y] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_XTS [=y] && CRYPTO [=y] || CRYPTO_DEV_SUN8I_CE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_SUN8I_SS [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_PICOXCELL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=y]) && HAVE_CLK [=y] || CRYPTO_DEV_SAHARA [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && ARCH_MXC [=y] && OF [=y] || CRYPTO_DEV_MXS_DCP [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC [=y]) || CRYPTO_DEV_QCE_SKCIPHER [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=y] || CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+SOC_RENESAS: y => no
+    Direct dependencies:  y
+
+ALTERA_PR_IP_CORE: n => mod
+    Direct dependencies:  FPGA [=n]
+

@@ -1,0 +1,22 @@
+DRM_PARADE_PS8640: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+CLK_R8A77995: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=n]
+    Reverse dependencies: CLK_RENESAS [=n] && COMMON_CLK [=y] && ARCH_R8A77995 [=n]
+
+SENSORS_ASPEED: n => yes
+    Direct dependencies:  HWMON [=n]
+
+RTC_DRV_ABEOZ9: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+
+ARM_PSCI_CPUIDLE: n => yes
+    Direct dependencies:  CPU_IDLE [=n] && (ARM || ARM64 [=y]) && ARM_PSCI_FW [=y]
+
+USB_MICROTEK: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && SCSI [=n]
+
+REGULATOR_QCOM_LABIBB: n => yes
+    Direct dependencies:  REGULATOR [=n] && (SPMI [=n] || COMPILE_TEST [=n])
+

@@ -1,0 +1,14 @@
+SCSI_LOGGING: n => yes
+    Direct dependencies:  SCSI [=n]
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => no
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=y] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=y]
+
+MTD_CFI_I1: y => no
+    Direct dependencies:  MTD [=y]
+    Reverse dependencies: MTD_CFI_GEOMETRY [=n] && MTD [=y] && MTD_CFI_ADV_OPTIONS [=y] && !MTD_CFI_I2 [=y] && !MTD_CFI_I4 [=n] && !MTD_CFI_I8 [=n]
+
+HID_MCP2221: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && I2C [=y] && GPIOLIB [=y]
+

@@ -1,0 +1,16 @@
+BACKLIGHT_GPIO: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+FPGA_MGR_ICE40_SPI: n => mod
+    Direct dependencies:  FPGA [=n] && OF [=y] && SPI [=y]
+
+USB_EHCI_HCD_PLATFORM: m => no
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m]
+    Reverse dependencies: USB_HCD_BCMA [=n] && USB_SUPPORT [=y] && USB [=y] && BCMA [=n] && USB_EHCI_HCD [=m] || USB_HCD_SSB [=n] && USB_SUPPORT [=y] && USB [=y] && SSB [=y] && USB_EHCI_HCD [=m] || USB_EHCI_HCD_STI [=m] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && (ARCH_STI || COMPILE_TEST [=y]) && OF [=y] || USB_CNS3XXX_EHCI [=y] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && (ARCH_CNS3XXX || COMPILE_TEST [=y]) || USB_OCTEON_EHCI [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m] && CAVIUM_OCTEON_SOC
+
+INPUT_MAX8925_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_MAX8925 [=n]
+
+MTD_NAND_QCOM: m => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && (ARCH_QCOM [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+

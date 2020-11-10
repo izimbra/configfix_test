@@ -1,0 +1,15 @@
+CHR_DEV_SG => yes
+SCSI_DH_EMC => yes
+PINCTRL_PFC_R8A77960 => no
+PHY_QCOM_USB_HS => yes
+BLOCK => yes
+EFI_PARTITION => yes
+SCSI => yes
+SCSI_DH => yes
+PHY_RCAR_GEN3_PCIE => no
+MSDOS_PARTITION => yes
+USB_ULPI_BUS => yes
+RTC_DRV_SH => no
+PINCTRL_SH_PFC => no
+RENESAS_RPCIF => no
+ARCH_RENESAS => no

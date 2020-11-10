@@ -1,0 +1,13 @@
+HW_RANDOM_TPM => no
+MOUSE_CYAPA => yes
+RD_LZO => yes
+INPUT_DRV2665_HAPTICS => yes
+BLK_CGROUP => yes
+CRC_ITU_T => yes
+INPUT_MOUSE => yes
+INPUT => yes
+BLK_DEV_INITRD => yes
+INITRAMFS_SOURCE => 
+INPUT_MISC => yes
+INPUT_FF_MEMLESS => yes
+CGROUPS => yes

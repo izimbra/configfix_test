@@ -1,0 +1,32 @@
+SYSC_R8A77995: y => no
+    Direct dependencies:  SOC_RENESAS [=y]
+    Reverse dependencies: ARCH_R8A77995 [=y] && SOC_RENESAS [=y] && ARM64 [=y]
+
+PANEL: m => yes
+    Direct dependencies:  PARPORT [=m]
+
+SAMPLE_TRACE_EVENTS: n => mod
+    Direct dependencies:  SAMPLES [=n] && EVENT_TRACING [=y] && m && MODULES [=y]
+
+EXT4_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT4_FS [=n]
+    Reverse dependencies: EXT3_FS_POSIX_ACL [=n] && BLOCK [=n] && EXT3_FS [=n]
+
+SM_GPUCC_8150: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+REGULATOR_HI6421V530: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_HI6421_PMIC [=m] && OF [=y]
+
+MSM_MMCC_8996: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+BLK_WBT: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+SCSI_DH_ALUA: n => yes
+    Direct dependencies:  SCSI_DH [=n] && SCSI [=n]
+
+MSM_GPUCC_8998: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+

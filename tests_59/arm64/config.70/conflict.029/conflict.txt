@@ -1,0 +1,20 @@
+MMC_ARMMMCI: m => yes
+    Direct dependencies:  MMC [=m] && ARM_AMBA [=y]
+
+RESET_HISI: y => no
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_HISI [=n] || COMPILE_TEST [=y])
+    Reverse dependencies: COMMON_CLK_HI3516CV300 [=n] && COMMON_CLK [=y] && (ARCH_HISI [=n] || COMPILE_TEST [=y]) || COMMON_CLK_HI3519 [=y] && COMMON_CLK [=y] && (ARCH_HISI [=n] || COMPILE_TEST [=y]) || COMMON_CLK_HI3798CV200 [=n] && COMMON_CLK [=y] && (ARCH_HISI [=n] || COMPILE_TEST [=y])
+
+BACKLIGHT_CLASS_DEVICE: m => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: DRM_RADEON [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] && DRM_NOUVEAU_BACKLIGHT [=n] || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] && ACPI [=y] && X86 || DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=n] && X86 && PCI [=y] && ACPI [=y] || DRM_GMA500 [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && X86 && MMU [=y] && ACPI [=y] || DRM_SHMOBILE [=n] && HAS_IOMEM [=y] && DRM [=n] && ARM && (ARCH_SHMOBILE || COMPILE_TEST [=y]) || DRM_TILCDC [=n] && HAS_IOMEM [=y] && DRM [=n] && OF [=y] && ARM || DRM_FSL_DCU [=n] && HAS_IOMEM [=y] && DRM [=n] && OF [=y] && ARM && COMMON_CLK [=y] || TINYDRM_HX8357D [=n] && HAS_IOMEM [=y] && DRM [=n] && SPI [=y] || TINYDRM_ILI9341 [=n] && HAS_IOMEM [=y] && DRM [=n] && SPI [=y] || TINYDRM_ILI9486 [=n] && HAS_IOMEM [=y] && DRM [=n] && SPI [=y] || TINYDRM_MI0283QT [=n] && HAS_IOMEM [=y] && DRM [=n] && SPI [=y] || TINYDRM_ST7735R [=n] && HAS_IOMEM [=y] && DRM [=n] && SPI [=y] || DRM_PARADE_PS8622 [=n] && HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y] || FB_BACKLIGHT [=m] && HAS_IOMEM [=y] && FB [=m] || FB_MX3 [=n] && HAS_IOMEM [=y] && FB [=m] && MX3_IPU [=n] || USB_APPLEDISPLAY [=n] && USB_SUPPORT [=y] && USB [=y] || FB_OLPC_DCON [=n] && STAGING [=y] && OLPC && FB [=m] && I2C [=y] && GPIO_CS5535 [=n] && ACPI [=y] || SAMSUNG_Q10 [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=y] || ACPI_CMPC [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n)
+
+FB_SH_MOBILE_LCDC: m => yes
+    Direct dependencies:  FB [=m] && HAVE_CLK [=y] && HAS_IOMEM [=y] && (SUPERH || ARCH_RENESAS [=y] || COMPILE_TEST [=y])
+
+INPUT_MOUSEDEV_PSAUX: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSEDEV [=n]
+
+NVME_FC: n => yes
+    Direct dependencies:  BLOCK [=n] && HAS_DMA [=y]
+

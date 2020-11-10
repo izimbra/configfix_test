@@ -1,0 +1,18 @@
+SPI_MXIC: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n]
+
+MFD_BCM590XX: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+CLK_SP810: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_INTEGRATOR || ARCH_REALVIEW || ARCH_VERSATILE || ARCH_VEXPRESS [=n] || COMPILE_TEST [=n])
+
+MOUSE_ELAN_I2C_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSE [=n] && MOUSE_ELAN_I2C [=n]
+
+CHR_DEV_SCH: n => yes
+    Direct dependencies:  SCSI [=n]
+
+VIRTIO_MMIO_CMDLINE_DEVICES: n => yes
+    Direct dependencies:  VIRTIO_MENU [=y] && VIRTIO_MMIO [=n]
+

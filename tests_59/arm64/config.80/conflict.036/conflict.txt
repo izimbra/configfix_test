@@ -1,0 +1,26 @@
+HID_BETOP_FF: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m]
+
+CGROUPS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+
+BLK_WBT_MQ: n => yes
+    Direct dependencies:  BLOCK [=n] && BLK_WBT [=n]
+
+HID_NTRIG: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m]
+
+DRM_PARADE_PS8640: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=y]
+
+SDM_LPASSCC_845: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+SAMPLE_CONFIGFS: n => mod
+    Direct dependencies:  SAMPLES [=n] && CONFIGFS_FS [=y] && m && MODULES [=y]
+
+CGROUP_SCHED: y => no
+    Direct dependencies:  CGROUPS [=y]
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+

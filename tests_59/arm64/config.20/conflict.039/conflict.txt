@@ -1,0 +1,26 @@
+HID_MACALLY: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+CLK_R8A77980: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=n]
+    Reverse dependencies: CLK_RENESAS [=n] && COMMON_CLK [=y] && ARCH_R8A77980 [=n]
+
+SAMPLE_VFIO_MDEV_MTTY: n => no
+    Direct dependencies:  SAMPLES [=n] && VFIO_MDEV_DEVICE [=n] && m && MODULES [=n]
+
+CRYPTO_LIB_POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=y] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+
+SMARTJOYPLUS_FF: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && HID_SMARTJOYPLUS [=n]
+
+LEDS_TRIGGER_HEARTBEAT: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_TRIGGERS [=n]
+
+PWRSEQ_EMMC: n => yes
+    Direct dependencies:  MMC [=n] && OF [=y]
+
+TYPEC_FUSB302: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && TYPEC [=n] && TYPEC_TCPM [=n] && I2C [=y] && (EXTCON [=y] || !EXTCON [=y])
+

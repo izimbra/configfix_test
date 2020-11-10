@@ -1,0 +1,15 @@
+MFD_CS47L15: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n]
+
+HID_UDRAW_PS3: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+SENSORS_AD7314: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=n]
+
+INPUT_ATMEL_CAPTOUCH: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && (OF [=y] || COMPILE_TEST [=n]) && I2C [=n]
+
+PMIC_ADP5520: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+

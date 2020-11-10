@@ -1,0 +1,17 @@
+DRM_DW_HDMI_CEC => yes
+HID_AUREAL => yes
+GPIO_WM8350 => yes
+SPI_SPRD => yes
+FPGA_DFL_AFU => yes
+REGULATOR_BD718XX => yes
+LEDS_BD2802 => yes
+HID => yes
+INPUT => yes
+SPI => yes
+FPGA => yes
+FPGA_DFL => yes
+FPGA_REGION => yes
+FPGA_BRIDGE => yes
+REGULATOR => yes
+NEW_LEDS => yes
+LEDS_CLASS => yes

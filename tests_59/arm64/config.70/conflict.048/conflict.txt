@@ -1,0 +1,33 @@
+USB_CONFIGFS_F_FS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && USB_CONFIGFS [=n]
+
+IOSCHED_BFQ: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+LEDS_AS3645A: m => yes
+    Direct dependencies:  NEW_LEDS [=y] && I2C [=y] && LEDS_CLASS_FLASH [=m] && (V4L2_FLASH_LED_CLASS [=m] || !V4L2_FLASH_LED_CLASS [=m])
+
+CLK_R8A77980: y => no
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=y]
+    Reverse dependencies: CLK_RENESAS [=y] && COMMON_CLK [=y] && ARCH_R8A77980 [=y]
+
+AUTOFS_FS: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: AUTOFS4_FS [=y]
+
+DRM_PANEL_VISIONOX_RM69299: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n]
+
+GPIO_LP3943: n => mod
+    Direct dependencies:  GPIOLIB [=y] && MFD_LP3943 [=n]
+
+HID: y => no
+    Direct dependencies:  INPUT [=y]
+    Reverse dependencies: BT_HIDP [=n] && NET [=y] && BT_BREDR [=n] && INPUT [=y] || USB_HID [=m] && USB [=y] && INPUT [=y] || I2C_HID [=n] && I2C [=y] && INPUT [=y] || INTEL_ISH_HID [=m] && INPUT [=y] && (X86_64 || COMPILE_TEST [=y]) && PCI [=y]
+
+REGULATOR_MT6323: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=m]
+
+SOC_RENESAS: y => no
+    Direct dependencies:  y
+

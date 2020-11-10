@@ -1,0 +1,13 @@
+PWM_LP3943: n => yes
+    Direct dependencies:  PWM [=n] && MFD_LP3943 [=y]
+
+MODULE_ALLOW_MISSING_NAMESPACE_IMPORTS: n => yes
+    Direct dependencies:  MODULES [=n]
+
+I2C_ALGOPCA: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_PCA_PLATFORM [=y] && I2C [=y] && HAS_IOMEM [=y] || I2C_PCA_ISA [=n] && I2C [=y] && HAS_IOMEM [=y] && ISA
+
+INPUT_SC27XX_VIBRA: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=y])
+

@@ -1,0 +1,16 @@
+USB_FOTG210_UDC: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB_GADGET [=n] && HAS_DMA [=y]
+
+SM_GCC_8250: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: SM_GPUCC_8250 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+TYPEC_TCPM: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && TYPEC [=n] && USB [=n]
+
+MTD_ONENAND_2X_PROGRAM: n => yes
+    Direct dependencies:  MTD [=n] && MTD_ONENAND [=n]
+
+REGULATOR_VCTRL: n => yes
+    Direct dependencies:  REGULATOR [=n] && OF [=y]
+

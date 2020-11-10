@@ -1,0 +1,12 @@
+SDM_GPUCC_845: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+PRINTER: n => yes
+    Direct dependencies:  PARPORT [=n]
+
+INPUT_MOUSEDEV_PSAUX: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSEDEV [=n]
+
+MTD_CFI_LE_BYTE_SWAP: n => no
+    Direct dependencies:  <choice>
+

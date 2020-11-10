@@ -1,0 +1,10 @@
+SENSORS_INSPUR_IPSPS => yes
+XZ_DEC => mod
+SENSORS_PXE1610 => mod
+VFIO_NOIOMMU => yes
+RTC_DRV_AS3722 => mod
+PMBUS => yes
+FW_LOADER_COMPRESS => no
+RD_XZ => no
+VFIO => mod
+MFD_AS3722 => yes

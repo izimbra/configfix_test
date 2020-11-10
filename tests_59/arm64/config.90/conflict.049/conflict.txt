@@ -1,0 +1,38 @@
+HID_ELO: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m]
+
+PROC_CHILDREN: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CHECKPOINT_RESTORE [=y]
+
+PINCONF: y => no
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: GENERIC_PINCONF [=y] && PINCTRL [=y] || PINCTRL_AT91 [=n] && PINCTRL [=y] && OF [=y] && ARCH_AT91 || PINCTRL_AMD [=m] && PINCTRL [=y] && HAS_IOMEM [=y] && (ACPI [=n] || COMPILE_TEST [=y]) || PINCTRL_DA850_PUPD [=y] && PINCTRL [=y] && OF [=y] && (ARCH_DAVINCI_DA850 || COMPILE_TEST [=y]) || PINCTRL_LANTIQ [=n] && PINCTRL [=y] && LANTIQ || PINCTRL_OXNAS [=n] && PINCTRL [=y] && OF [=y] || PINCTRL_SIRF [=n] && PINCTRL [=y] && ARCH_SIRF || PINCTRL_SX150X [=y] && PINCTRL [=y] && I2C [=y]=y || PINCTRL_ST [=n] && PINCTRL [=y] && OF [=y] || PINCTRL_OWL [=y] && PINCTRL [=y] && (ARCH_ACTIONS [=y] || COMPILE_TEST [=y]) && OF [=y] || PINCTRL_ASPEED [=y] && PINCTRL [=y] && (ARCH_ASPEED || COMPILE_TEST [=y]) && OF [=y] && MFD_SYSCON [=y] || PINCTRL_BCM281XX [=y] && PINCTRL [=y] && OF [=y] && (ARCH_BCM_MOBILE || COMPILE_TEST [=y]) || PINCTRL_BCM2835 [=y] && PINCTRL [=y] && OF [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=y] || COMPILE_TEST [=y]) || PINCTRL_IPROC_GPIO [=y] && PINCTRL [=y] && OF_GPIO [=y] && (ARCH_BCM_IPROC [=y] || COMPILE_TEST [=y]) || PINCTRL_NSP_GPIO [=y] && PINCTRL [=y] && OF_GPIO [=y] && (ARCH_BCM_NSP || COMPILE_TEST [=y]) || PINCTRL_IMX1_CORE [=n] && PINCTRL [=y] || PINCTRL_MXS [=n] && PINCTRL [=y] || PINCTRL_MVEBU [=y] && PINCTRL [=y] || PINCTRL_ARMADA_37XX [=y] && PINCTRL [=y] || PINCTRL_NPCM7XX [=y] && PINCTRL [=y] && (ARCH_NPCM7XX || COMPILE_TEST [=y]) && OF [=y] || PINCTRL_SAMSUNG [=y] && PINCTRL [=y] && OF_GPIO [=y] || PINCTRL_SH_PFC [=y] && PINCTRL [=y] || PINCTRL_SPRD [=y] && PINCTRL [=y] || PINCTRL_TEGRA [=y] && PINCTRL [=y] || PINCTRL_TEGRA_XUSB [=y] && PINCTRL [=y] || PINCTRL_MESON [=n] && PINCTRL [=y] && ARCH_MESON [=n] && OF [=y] || PINCTRL_LOCHNAGAR [=m] && PINCTRL [=y] && MFD_LOCHNAGAR [=y] || PINCTRL_EQUILIBRIUM [=m] && PINCTRL [=y] && OF [=y] && HAS_IOMEM [=y] && (X86 || COMPILE_TEST [=y]) || PINCTRL_BAYTRAIL [=n] && PINCTRL [=y] && (X86 || COMPILE_TEST [=y]) && ACPI [=n] || PINCTRL_CHERRYVIEW [=n] && PINCTRL [=y] && (X86 || COMPILE_TEST [=y]) && ACPI [=n] || PINCTRL_LYNXPOINT [=n] && PINCTRL [=y] && (X86 || COMPILE_TEST [=y]) && ACPI [=n] || PINCTRL_MERRIFIELD [=n] && PINCTRL [=y] && (X86 || COMPILE_TEST [=y]) && X86_INTEL_MID || PINCTRL_INTEL [=n] && PINCTRL [=y] && (X86 || COMPILE_TEST [=y]) || PINCTRL_NOMADIK [=n] && PINCTRL [=y] && (ARCH_U8500 || ARCH_NOMADIK) && OF [=y] && GPIOLIB [=y] || PINCTRL_PXA [=y] && PINCTRL [=y] && (ARCH_PXA || COMPILE_TEST [=y]) || PINCTRL_MSM [=y] && PINCTRL [=y] && (ARCH_QCOM [=y] || COMPILE_TEST [=y]) || PINCTRL_QCOM_SPMI_PMIC [=m] && PINCTRL [=y] && (ARCH_QCOM [=y] || COMPILE_TEST [=y]) && GPIOLIB [=y] && OF [=y] && SPMI [=y] || PINCTRL_QCOM_SSBI_PMIC [=y] && PINCTRL [=y] && (ARCH_QCOM [=y] || COMPILE_TEST [=y]) && GPIOLIB [=y] && OF [=y]
+
+USB_ULPI_BUS: y => mod
+    Direct dependencies:  USB_SUPPORT [=y]
+    Reverse dependencies: USB_CHIPIDEA [=y] && USB_SUPPORT [=y] && (USB_EHCI_HCD [=n] && USB_GADGET [=y] || USB_EHCI_HCD [=n] && !USB_GADGET [=y] || !USB_EHCI_HCD [=n] && USB_GADGET [=y]) && HAS_DMA [=y]
+
+TCG_TIS_ST33ZP24_I2C: m => yes
+    Direct dependencies:  TCG_TPM [=m] && I2C [=y]
+
+USB_WDM: m => no
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y]
+    Reverse dependencies: USB_NET_HUAWEI_CDC_NCM [=m] && NETDEVICES [=y] && USB_NET_DRIVERS [=m] && USB_USBNET [=m] || USB_NET_CDC_MBIM [=m] && NETDEVICES [=y] && USB_NET_DRIVERS [=m] && USB_USBNET [=m] || USB_NET_QMI_WWAN [=m] && NETDEVICES [=y] && USB_NET_DRIVERS [=m] && USB_USBNET [=m]
+
+CRC7: m => no
+    Direct dependencies:  y
+    Reverse dependencies: WILC1000_SPI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_MICROCHIP [=y] && CFG80211 [=m] && INET [=y] && SPI [=y] || WL1251 [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && MAC80211 [=m] || WLCORE_SPI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_TI [=y] && WLCORE [=m] && SPI_MASTER [=y] && OF [=y] || MMC_SPI [=m] && MMC [=m] && SPI_MASTER [=y]
+
+LEDS_TRIGGERS: y => no
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y]
+    Reverse dependencies: BT_LEDS [=y] && NET [=y] && BT [=m] && LEDS_CLASS [=y] || CAN_LEDS [=n] && NET [=y] && CAN [=y] && CAN_DEV [=m] && LEDS_CLASS [=y] && BROKEN [=n] || MAC80211_LEDS [=y] && NET [=y] && WIRELESS [=y] && MAC80211 [=m] && LEDS_CLASS [=y] || ADB_PMU_LED_DISK [=n] && MACINTOSH_DRIVERS [=n] && ADB_PMU_LED [=n] && LEDS_CLASS [=y] || IWLEGACY [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] || IWLWIFI_LEDS [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && IWLWIFI [=m] && (LEDS_CLASS [=y]=y || LEDS_CLASS [=y]=IWLWIFI [=m]) && (IWLMVM [=m] || IWLDVM [=m]) || SND_HDA_GENERIC [=m] && SOUND [=m] && !UML && SND [=m] && SND_HDA [=m] && SND_HDA_GENERIC_LEDS [=y] || HID_WACOM [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] || LEDS_COBALT_RAQ [=n] && NEW_LEDS [=y] && LEDS_CLASS [=y]=y && MIPS_COBALT || LEDS_SUNFIRE [=n] && NEW_LEDS [=y] && LEDS_CLASS [=y] && SPARC64 || HUAWEI_WMI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=y] || DELL_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && DMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=m] || RFKILL [=m]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n] || THINKPAD_ACPI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=m] || RFKILL [=m]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y] || SYSTEM76_ACPI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n]
+
+PINCTRL_BCM2835: y => no
+    Direct dependencies:  PINCTRL [=y] && OF [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: ARCH_BCM2835 [=y]
+
+RESET_HISI: y => no
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: COMMON_CLK_HI3516CV300 [=m] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y]) || COMMON_CLK_HI3519 [=m] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y]) || COMMON_CLK_HI3798CV200 [=y] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=y])
+

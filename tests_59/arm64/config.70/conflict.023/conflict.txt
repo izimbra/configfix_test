@@ -1,0 +1,16 @@
+SENSORS_INSPUR_IPSPS: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+XZ_DEC: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: FW_LOADER_COMPRESS [=y] && FW_LOADER [=y] || MLXFW [=n] && NETDEVICES [=y] && ETHERNET [=n] && NET_VENDOR_MELLANOX [=n] || SQUASHFS_XZ [=n] && MISC_FILESYSTEMS [=y] && SQUASHFS [=n] || DECOMPRESS_XZ [=y]
+
+SENSORS_PXE1610: n => mod
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+VFIO_NOIOMMU: n => yes
+    Direct dependencies:  VFIO [=n]
+
+RTC_DRV_AS3722: n => mod
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_AS3722 [=n]
+

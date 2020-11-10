@@ -1,0 +1,22 @@
+MOUSE_PS2_TRACKPOINT: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MOUSE [=n] && MOUSE_PS2 [=n]
+
+USB_LEDS_TRIGGER_USBPORT: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && LEDS_TRIGGERS [=n]
+
+USB_BDC_UDC: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && HAS_DMA [=y]
+
+ARM64_PA_BITS_48: y => yes
+    Direct dependencies:  <choice>
+
+RC_ATI_REMOTE: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+MODULE_SIG_FORCE: n => yes
+    Direct dependencies:  MODULES [=n] && MODULE_SIG [=n]
+
+RMI4_F30: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=n]
+    Reverse dependencies: HID_RMI [=n] && INPUT [=y] && HID [=y]
+

@@ -1,0 +1,19 @@
+HID_CP2112: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && HIDRAW [=y] && I2C [=y] && GPIOLIB [=y]
+
+CRYPTO_GHASH: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_DEV_VMX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_VMX [=n]
+
+HID_GOOGLE_HAMMER: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && LEDS_CLASS [=y] && CROS_EC [=y]
+
+EXT3_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT3_FS [=n]
+
+STM_PROTO_SYS_T: n => mod
+    Direct dependencies:  STM [=n]
+
+RTC_DRV_DS1689: y => no
+    Direct dependencies:  <choice>
+

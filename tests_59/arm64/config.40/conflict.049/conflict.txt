@@ -1,0 +1,31 @@
+INPUT_ATMEL_CAPTOUCH: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && (OF [=y] || COMPILE_TEST [=n]) && I2C [=n]
+
+INPUT_DA9063_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+
+SENSORS_CORSAIR_CPRO: n => yes
+    Direct dependencies:  HWMON [=n] && HID [=n]
+
+MFD_CS47L15: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n]
+
+MMC_DW_PLTFM: n => yes
+    Direct dependencies:  MMC [=n] && MMC_DW [=n]
+    Reverse dependencies: MMC_DW_BLUEFIELD [=n] && MMC [=n] && MMC_DW [=n] || MMC_DW_EXYNOS [=n] && MMC [=n] && MMC_DW [=n] || MMC_DW_HI3798CV200 [=n] && MMC [=n] && MMC_DW [=n] || MMC_DW_K3 [=n] && MMC [=n] && MMC_DW [=n] || MMC_DW_ROCKCHIP [=n] && MMC [=n] && MMC_DW [=n] && ARCH_ROCKCHIP [=n] || MMC_DW_ZX [=n] && MMC [=n] && MMC_DW [=n] && ARCH_ZX [=n]
+
+INPUT_STPMIC1_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_STPMIC1 [=n]
+
+SENSORS_MLXREG_FAN: n => yes
+    Direct dependencies:  HWMON [=n] && MELLANOX_PLATFORM [=n]
+
+SENSORS_ADM1031: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+SENSORS_HIH6130: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+SPI_AXI_SPI_ENGINE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+

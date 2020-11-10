@@ -1,0 +1,15 @@
+INPUT_MC13783_PWRBUTTON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_MC13XXX [=n]
+
+USB_PXA27X: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && HAS_IOMEM [=y]
+
+USB_CHIPIDEA: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && (USB_EHCI_HCD [=m] && USB_GADGET [=n] || USB_EHCI_HCD [=m] && !USB_GADGET [=n] || !USB_EHCI_HCD [=m] && USB_GADGET [=n]) && HAS_DMA [=y]
+
+SC_GPUCC_7180: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+UBSAN_MISC: n => yes
+    Direct dependencies:  UBSAN [=n]
+

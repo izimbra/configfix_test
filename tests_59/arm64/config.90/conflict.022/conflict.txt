@@ -1,0 +1,17 @@
+INTEL_TH_STH: n => mod
+    Direct dependencies:  INTEL_TH [=n] && STM [=y]
+
+PINCTRL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_ACTIONS [=y] || ARCH_SUNXI [=y] || ARCH_BCM2835 [=y] || ARCH_BCM_IPROC [=y] || ARCH_BERLIN [=y] || ARCH_BRCMSTB [=y] || ARCH_EXYNOS [=y] || ARCH_SPARX5 [=y] || ARCH_HISI [=y] || ARCH_MEDIATEK [=y] || ARCH_MESON [=n] || ARCH_MVEBU [=y] || ARCH_QCOM [=y] || ARCH_RENESAS [=y] || ARCH_ROCKCHIP [=y] || ARCH_TEGRA [=y] || ARCH_UNIPHIER [=y] || ARCH_ZX [=y] || MFD_MADERA [=y] && HAS_IOMEM [=y]
+
+I2C_PARPORT: n => mod
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && PARPORT [=n]
+
+INPUT_CMA3000_I2C: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_CMA3000 [=n] && I2C [=y]
+
+SLUB_DEBUG: y => no
+    Direct dependencies:  SLUB [=y] && SYSFS [=y]
+    Reverse dependencies: KASAN_GENERIC [=y] && <choice> && HAVE_ARCH_KASAN [=y] && CC_HAS_KASAN_GENERIC [=y] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y] || KASAN_SW_TAGS [=n] && <choice> && HAVE_ARCH_KASAN_SW_TAGS [=y] && CC_HAS_KASAN_SW_TAGS [=n] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y]
+

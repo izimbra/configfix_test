@@ -1,0 +1,19 @@
+INPUT_CMA3000: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n]
+
+SCSI_DH: n => yes
+    Direct dependencies:  SCSI [=n]
+
+INPUT_88PM860X_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && MFD_88PM860X [=n]
+
+TCG_TIS_SPI_CR50: n => yes
+    Direct dependencies:  TCG_TPM [=n] && TCG_TIS_SPI [=n]
+
+CLK_RENESAS_DIV6: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=n]
+    Reverse dependencies: CLK_R8A73A4 [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n] || CLK_R8A7740 [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n] || CLK_SH73A0 [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n] || CLK_RENESAS_CPG_MSSR [=n] && COMMON_CLK [=y] && CLK_RENESAS [=n]
+
+GPIO_BD70528: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_ROHM_BD70528 [=n]
+

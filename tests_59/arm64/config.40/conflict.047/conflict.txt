@@ -1,0 +1,33 @@
+EDAC_XGENE: n => yes
+    Direct dependencies:  EDAC [=n] && (ARM64 [=y] || COMPILE_TEST [=n])
+
+RST_RCAR: n => yes
+    Direct dependencies:  SOC_RENESAS [=n]
+    Reverse dependencies: ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=n] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=n] || ARCH_RCAR_GEN3 [=n] && SOC_RENESAS [=n]
+
+SENSORS_EMC2103: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+MFD_TPS65912_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+MFD_MC13XXX_I2C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+MAGIC_SYSRQ: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: KGDB_SERIAL_CONSOLE [=y] && KGDB [=y] && TTY [=y] && HW_CONSOLE [=y]
+
+W1_SLAVE_DS250X: n => yes
+    Direct dependencies:  W1 [=n]
+
+EXT4_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT4_FS [=n]
+    Reverse dependencies: EXT3_FS_POSIX_ACL [=n] && BLOCK [=n] && EXT3_FS [=n]
+
+HID_ELO: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && USB_HID [=n]
+
+RTC_DRV_RV3028: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+

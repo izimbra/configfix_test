@@ -1,0 +1,14 @@
+MOUSE_CYAPA => yes
+VIRTIO_BLK => yes
+RTC_DRV_PCF8563 => yes
+RESET_BRCMSTB_RESCAL => yes
+SM_GCC_8250 => yes
+CRC_ITU_T => yes
+INPUT_MOUSE => yes
+INPUT => yes
+BLOCK => yes
+PARTITION_ADVANCED => yes
+BLK_DEV => yes
+RTC_CLASS => yes
+RESET_CONTROLLER => yes
+COMMON_CLK_QCOM => yes

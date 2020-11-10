@@ -1,0 +1,20 @@
+INPUT_HISI_POWERKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (ARCH_HISI [=y] || COMPILE_TEST [=y])
+
+FPGA_DFL_AFU: n => yes
+    Direct dependencies:  FPGA [=y] && FPGA_DFL [=n]
+
+PINCTRL_PFC_R8A77961: y => no
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=y] && PINCTRL [=y] && ARCH_R8A77961 [=y]
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_DA9062 [=n]
+
+SYSC_R8A77961: y => no
+    Direct dependencies:  SOC_RENESAS [=y]
+    Reverse dependencies: ARCH_R8A77961 [=y] && SOC_RENESAS [=y] && ARM64 [=y]
+
+SENSORS_SMSC47M1: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+

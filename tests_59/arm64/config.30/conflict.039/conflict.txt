@@ -1,0 +1,25 @@
+DA9062_THERMAL: n => yes
+    Direct dependencies:  THERMAL [=n] && (MFD_DA9062 [=n] || COMPILE_TEST [=n]) && OF [=y]
+
+USB_GPIO_VBUS: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) && (USB_GADGET [=n] || !USB_GADGET [=n])
+
+SDM_GCC_845: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: SDM_CAMCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SDM_GPUCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SDM_VIDEOCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SDM_DISPCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] || SDM_LPASSCC_845 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+I2C_DLN2: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && MFD_DLN2 [=n]
+
+XEN_FBDEV_FRONTEND: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && XEN [=n]
+
+DRM_TOSHIBA_TC358764: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+I2C_BRCMSTB: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=n] || BMIPS_GENERIC || ARCH_BCM_63XX || COMPILE_TEST [=n])
+
+PM_QOS_KUNIT_TEST: y => no
+    Direct dependencies:  KUNIT [=y]=y
+

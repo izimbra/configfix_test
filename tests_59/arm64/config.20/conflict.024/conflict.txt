@@ -1,0 +1,16 @@
+I2C_DESIGNWARE_SLAVE: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && I2C_DESIGNWARE_CORE [=n]
+
+EXT4_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: EXT3_FS [=n] && BLOCK [=n] || EXT4_KUNIT_TESTS [=n] && BLOCK [=n] && KUNIT [=n]
+
+PHY_TUSB1210: n => yes
+    Direct dependencies:  USB_ULPI_BUS [=n]
+
+SENSORS_WM8350: n => yes
+    Direct dependencies:  HWMON [=y] && MFD_WM8350 [=n]
+
+TINYDRM_ILI9341: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && SPI [=n]
+

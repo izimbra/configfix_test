@@ -1,0 +1,31 @@
+EFI_ARMSTUB_DTB_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_GENERIC_STUB [=n]
+
+PINCTRL_BCM2835: y => no
+    Direct dependencies:  PINCTRL [=y] && OF [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=n] || COMPILE_TEST [=n])
+    Reverse dependencies: ARCH_BCM2835 [=y]
+
+REGULATOR_MT6311: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+
+CRYPTO_RMD128: n => yes
+    Direct dependencies:  CRYPTO [=n]
+
+MTD_TESTS: n => no
+    Direct dependencies:  MTD [=n] && m && MODULES [=n]
+
+RTC_DRV_MESON_VRTC: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && (ARCH_MESON [=n] || COMPILE_TEST [=n])
+
+W1_SLAVE_DS2433_CRC: n => yes
+    Direct dependencies:  W1 [=n] && W1_SLAVE_DS2433 [=n]
+
+SENSORS_VEXPRESS: n => yes
+    Direct dependencies:  HWMON [=n] && VEXPRESS_CONFIG [=n]
+
+SENSORS_XGENE: n => yes
+    Direct dependencies:  HWMON [=n] && (XGENE_SLIMPRO_MBOX [=n] || PCC [=n])
+
+ICS932S401: n => yes
+    Direct dependencies:  I2C [=n]
+

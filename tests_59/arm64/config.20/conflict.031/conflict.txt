@@ -1,0 +1,21 @@
+DRM_DW_HDMI_CEC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_BRIDGE [=y] && DRM_DW_HDMI [=n]
+
+HID_AUREAL: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+GPIO_WM8350: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_WM8350 [=n]
+
+SPI_SPRD: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_SPRD [=y] || COMPILE_TEST [=n])
+
+FPGA_DFL_AFU: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_DFL [=n]
+
+REGULATOR_BD718XX: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_ROHM_BD718XX [=y]
+
+LEDS_BD2802: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=y]
+

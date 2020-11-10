@@ -1,0 +1,35 @@
+USB_DWC3_ULPI: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_DWC3 [=n] && (USB_ULPI_BUS [=y]=y || USB_ULPI_BUS [=y]=USB_DWC3 [=n])
+
+CLK_VEXPRESS_OSC: n => mod
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_INTEGRATOR || ARCH_REALVIEW || ARCH_VERSATILE || ARCH_VEXPRESS [=y] || COMPILE_TEST [=y]) && VEXPRESS_CONFIG [=n]
+
+PINCTRL_AS3722: m => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_AS3722 [=m] && GPIOLIB [=y]
+
+DRM_DEBUG_MM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m]=y && STACKTRACE_SUPPORT [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n] && DRM [=m]=y
+
+EFI_ARMSTUB_DTB_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_GENERIC_STUB [=n]
+
+PINCTRL_PFC_R8A77960: y => no
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=y] && PINCTRL [=y] && ARCH_R8A77960 [=y]
+
+XEN_FBDEV_FRONTEND: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && XEN [=n]
+
+KALLSYMS_ALL: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && KALLSYMS [=y]
+    Reverse dependencies: LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+EXT4_FS_SECURITY: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT4_FS [=n]
+    Reverse dependencies: EXT3_FS_SECURITY [=n] && BLOCK [=n] && EXT3_FS [=n]
+
+MAGIC_SYSRQ: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: KGDB_SERIAL_CONSOLE [=y] && KGDB [=y] && TTY [=y] && HW_CONSOLE [=y]
+

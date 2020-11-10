@@ -1,0 +1,22 @@
+MMC_CQHCI: y => no
+    Direct dependencies:  MMC [=y] && HAS_DMA [=y]
+    Reverse dependencies: MMC_SDHCI_PCI [=n] && MMC [=y] && MMC_SDHCI [=n] && PCI [=n] || MMC_SDHCI_OF_ARASAN [=n] && MMC [=y] && MMC_SDHCI_PLTFM [=n] && OF [=y] && COMMON_CLK [=y] || MMC_SDHCI_ESDHC_IMX [=n] && MMC [=y] && ARCH_MXC [=n] && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_TEGRA [=n] && MMC [=y] && ARCH_TEGRA [=y] && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_MSM [=n] && MMC [=y] && (ARCH_QCOM [=y] || ARM && COMPILE_TEST [=y]) && MMC_SDHCI_PLTFM [=n] || MMC_MTK [=y] && MMC [=y] && HAS_DMA [=y] || MMC_SDHCI_BRCMSTB [=n] && MMC [=y] && (ARCH_BRCMSTB [=y] || BMIPS_GENERIC) && MMC_SDHCI_PLTFM [=n] || MMC_SDHCI_AM654 [=n] && MMC [=y] && MMC_SDHCI_PLTFM [=n] && OF [=y] && REGMAP_MMIO [=y]
+
+SAMPLE_VFIO_MDEV_MBOCHS: n => no
+    Direct dependencies:  SAMPLES [=y] && VFIO_MDEV_DEVICE [=n] && m && MODULES [=n]
+
+TMPFS_XATTR: y => no
+    Direct dependencies:  TMPFS [=y]
+    Reverse dependencies: TMPFS_POSIX_ACL [=y] && TMPFS [=y]
+
+PINCTRL_MESON: n => yes
+    Direct dependencies:  PINCTRL [=y] && ARCH_MESON [=n] && OF [=y]
+    Reverse dependencies: ARCH_MESON [=n]
+
+CLK_R8A77961: y => no
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=y]
+    Reverse dependencies: CLK_RENESAS [=y] && COMMON_CLK [=y] && ARCH_R8A77961 [=y]
+
+SENSORS_ADS7871: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=n]
+

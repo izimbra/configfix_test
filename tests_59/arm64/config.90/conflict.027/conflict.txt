@@ -1,0 +1,23 @@
+SYSC_RCAR: y => no
+    Direct dependencies:  SOC_RENESAS [=y]
+    Reverse dependencies: SYSC_R8A7742 [=y] && SOC_RENESAS [=y] || SYSC_R8A7743 [=y] && SOC_RENESAS [=y] || SYSC_R8A7745 [=n] && SOC_RENESAS [=y] || SYSC_R8A77470 [=y] && SOC_RENESAS [=y] || SYSC_R8A774A1 [=y] && SOC_RENESAS [=y] || SYSC_R8A774B1 [=y] && SOC_RENESAS [=y] || SYSC_R8A774C0 [=y] && SOC_RENESAS [=y] || SYSC_R8A774E1 [=y] && SOC_RENESAS [=y] || SYSC_R8A7779 [=y] && SOC_RENESAS [=y] || SYSC_R8A7790 [=y] && SOC_RENESAS [=y] || SYSC_R8A7791 [=y] && SOC_RENESAS [=y] || SYSC_R8A7792 [=y] && SOC_RENESAS [=y] || SYSC_R8A7794 [=n] && SOC_RENESAS [=y] || SYSC_R8A7795 [=y] && SOC_RENESAS [=y] || SYSC_R8A77960 [=y] && SOC_RENESAS [=y] || SYSC_R8A77961 [=y] && SOC_RENESAS [=y] || SYSC_R8A77965 [=y] && SOC_RENESAS [=y] || SYSC_R8A77970 [=y] && SOC_RENESAS [=y] || SYSC_R8A77980 [=y] && SOC_RENESAS [=y] || SYSC_R8A77990 [=y] && SOC_RENESAS [=y] || SYSC_R8A77995 [=y] && SOC_RENESAS [=y]
+
+OF_DYNAMIC: y => no
+    Direct dependencies:  OF [=y]
+    Reverse dependencies: HOTPLUG_PCI_POWERNV [=n] && PCI [=y] && HOTPLUG_PCI [=n] && PPC_POWERNV && EEH || OF_OVERLAY [=y] && OF [=y] || I2C_DEMUX_PINCTRL [=m] && I2C [=y] && I2C_MUX [=y] && PINCTRL [=y] && OF [=y]
+
+MTD_CFI_LE_BYTE_SWAP: n => no
+    Direct dependencies:  <choice>
+
+CRYPTO_CCM: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MAC802154 [=m] && NET [=y] && IEEE802154 [=m] || LIB80211_CRYPT_CCMP [=y] && NET [=y] && WIRELESS [=y] || MAC80211 [=m] && NET [=y] && WIRELESS [=y] && CFG80211 [=m] || RTL8192U [=m] && STAGING [=y] && PCI [=y] && WLAN [=y] && USB [=y] && m && MODULES [=y] || RTLLIB_CRYPTO_CCMP [=m] && STAGING [=y] && RTLLIB [=m] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx || CRYPTO_DEV_NX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_NX [=n] && PPC_PSERIES && IBMVIO && !CPU_LITTLE_ENDIAN [=n]
+
+USB_OHCI_HCD_PLATFORM: y => no
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=y]
+    Reverse dependencies: USB_BRCMSTB [=y] && USB_SUPPORT [=y] && USB [=y] && (ARCH_BRCMSTB [=y] && PHY_BRCM_USB [=m] || COMPILE_TEST [=y]) && USB_OHCI_HCD [=y] || USB_HCD_BCMA [=m] && USB_SUPPORT [=y] && USB [=y] && BCMA [=m] && USB_OHCI_HCD [=y] || USB_HCD_SSB [=m] && USB_SUPPORT [=y] && USB [=y] && SSB [=m] && USB_OHCI_HCD [=y] || USB_OHCI_HCD_STI [=y] && USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=y] && (ARCH_STI || COMPILE_TEST [=y]) && OF [=y] || USB_OHCI_HCD_OMAP3 [=m] && USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=y] && (ARCH_OMAP3 || ARCH_OMAP4 || SOC_OMAP5 || COMPILE_TEST [=y]) || USB_OHCI_HCD_SSB [=n] && USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=y] && (SSB [=m]=y || SSB [=m]=USB_OHCI_HCD [=y]) || USB_OHCI_SH [=y] && USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=y] && (SUPERH || COMPILE_TEST [=y]) || USB_CNS3XXX_OHCI [=y] && USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=y] && (ARCH_CNS3XXX || COMPILE_TEST [=y]) || USB_OCTEON_OHCI [=n] && USB_SUPPORT [=y] && USB [=y] && USB_OHCI_HCD [=y] && CAVIUM_OCTEON_SOC
+
+ARM64_MODULE_PLTS: y => no
+    Direct dependencies:  MODULES [=y]
+    Reverse dependencies: RANDOMIZE_BASE [=y] && MODULES [=y] || ARM64_ERRATUM_843419 [=y] && MODULES [=y]
+

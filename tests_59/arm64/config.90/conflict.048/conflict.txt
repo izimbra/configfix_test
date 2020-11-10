@@ -1,0 +1,32 @@
+BOOT_CONFIG: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BOOTTIME_TRACING [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && TRACING [=y]
+
+FPGA_MGR_ICE40_SPI: n => yes
+    Direct dependencies:  FPGA [=n] && OF [=y] && SPI [=y]
+
+MODULE_SIG_SHA256: n => no
+    Direct dependencies:  <choice>
+
+PINCTRL_PFC_R8A774A1: y => no
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=y] && PINCTRL [=y] && ARCH_R8A774A1 [=y]
+
+IR_IMON_RAW: m => yes
+    Direct dependencies:  RC_DEVICES [=y] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=m]
+
+PPS_CLIENT_GPIO: m => yes
+    Direct dependencies:  PPS [=m]
+
+REGULATOR_MT6323: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=n]
+
+HSI_CHAR: n => yes
+    Direct dependencies:  HSI [=n]
+
+HID_U2FZERO: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && LEDS_CLASS [=y] && HW_RANDOM [=y]
+
+EFI: n => yes
+    Direct dependencies:  OF [=y] && !CPU_BIG_ENDIAN [=y] && KERNEL_MODE_NEON [=y]
+

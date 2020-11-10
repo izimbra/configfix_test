@@ -1,0 +1,32 @@
+CROS_EC_SENSORHUB: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=m]
+
+SCSI_SAS_ATTRS: y => no
+    Direct dependencies:  SCSI [=y]
+    Reverse dependencies: SCSI_SAS_LIBSAS [=y] && SCSI [=y] || SCSI_HPSA [=y] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] || SCSI_MPT3SAS [=m] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] || SCSI_SMARTPQI [=m] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] && !S390 || FUSION_SAS [=n] && FUSION [=y] && PCI [=y] && SCSI [=y]
+
+TCG_TIS: m => yes
+    Direct dependencies:  TCG_TPM [=m] && (X86 || OF [=y])
+    Reverse dependencies: IMA [=n] && INTEGRITY [=n] && TCG_TPM [=m] && X86
+
+EXT3_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=y] && EXT3_FS [=n]
+
+ASYMMETRIC_PUBLIC_KEY_SUBTYPE: y => mod
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=n] && INTEGRITY_SIGNATURE [=n]
+
+CRYPTO_GCM: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: TLS [=y] && NET [=y] && INET [=y] || TIPC_CRYPTO [=y] && NET [=y] && TIPC [=y] || XFRM_ESP [=m] && NET [=y] && INET [=y] || MAC80211 [=m] && NET [=y] && WIRELESS [=y] && CFG80211 [=m] || MACSEC [=m] && NETDEVICES [=y] && NET_CORE [=y] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx
+
+MFD_WM8994: m => no
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=y]
+    Reverse dependencies: SND_MMP_SOC_BROWNSTONE [=n] && SOUND [=m] && !UML && SND [=m] && SND_SOC [=m] && SND_MMP_SOC_SSPA [=n] && MACH_BROWNSTONE && I2C [=y] || SND_SOC_SAMSUNG_SMDK_WM8994 [=m] && SOUND [=m] && !UML && SND [=m] && SND_SOC [=m] && SND_SOC_SAMSUNG [=m] && I2C [=y]=y || SND_SOC_SMDK_WM8994_PCM [=m] && SOUND [=m] && !UML && SND [=m] && SND_SOC [=m] && SND_SOC_SAMSUNG [=m] && I2C [=y]=y || SND_SOC_LITTLEMILL [=n] && SOUND [=m] && !UML && SND [=m] && SND_SOC [=m] && SND_SOC_SAMSUNG [=m] && I2C [=y] && (MACH_WLF_CRAGG_6410 || COMPILE_TEST [=y]) || SND_SOC_ARNDALE [=m] && SOUND [=m] && !UML && SND [=m] && SND_SOC [=m] && SND_SOC_SAMSUNG [=m] && I2C [=y]
+
+IPMI_DEVICE_INTERFACE: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+ARM64_VA_BITS_48: n => no
+    Direct dependencies:  <choice>
+

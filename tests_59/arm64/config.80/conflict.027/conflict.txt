@@ -1,0 +1,20 @@
+INPUT_DA9063_ONKEY: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+
+PKCS7_MESSAGE_PARSER: y => mod
+    Direct dependencies:  CRYPTO [=y] && ASYMMETRIC_KEY_TYPE [=y] && X509_CERTIFICATE_PARSER [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || IMA_APPRAISE_MODSIG [=n] && INTEGRITY [=n] && IMA_APPRAISE [=n] && INTEGRITY_ASYMMETRIC_KEYS [=n]
+
+DEBUG_LIST: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] || BUG_ON_DATA_CORRUPTION [=y]
+    Reverse dependencies: BUG_ON_DATA_CORRUPTION [=y]
+
+MTD_MTDRAM: m => yes
+    Direct dependencies:  MTD [=m] && HAS_IOMEM [=y]
+
+JOYSTICK_GAMECON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && PARPORT [=m]
+
+MFD_CS47L85: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n]
+

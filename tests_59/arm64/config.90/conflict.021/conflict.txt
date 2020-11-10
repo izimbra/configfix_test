@@ -1,0 +1,17 @@
+LEDS_TRIGGER_AUDIO: y => no
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=y]
+    Reverse dependencies: SND_HDA_GENERIC [=m] && SOUND [=m] && !UML && SND [=m] && SND_HDA [=m] && SND_HDA_GENERIC_LEDS [=y] || HUAWEI_WMI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=y] || DELL_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && DMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=m] || RFKILL [=m]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n] || THINKPAD_ACPI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=m] || RFKILL [=m]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y]
+
+EFI_TEST: n => yes
+    Direct dependencies:  EFI [=n]
+
+MTD_QINFO_PROBE: m => yes
+    Direct dependencies:  MTD [=y] && MTD_LPDDR [=m]
+    Reverse dependencies: MTD_LPDDR [=m] && MTD [=y]
+
+IPMI_SSIF: m => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+FB_EFI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y]=y && !IA64 && EFI [=n]
+

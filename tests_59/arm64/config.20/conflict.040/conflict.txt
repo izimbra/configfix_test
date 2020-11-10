@@ -1,0 +1,24 @@
+CROS_EC_I2C: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && CROS_EC [=n] && I2C [=y]
+
+INPUT_MOUSEDEV_PSAUX: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSEDEV [=n]
+
+RTC_DRV_ISL12026: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y] && (OF [=y] || COMPILE_TEST [=n])
+
+LEDS_SPI_BYTE: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && SPI [=n] && OF [=y]
+
+NLS_CODEPAGE_866: n => yes
+    Direct dependencies:  NLS [=n]
+
+USB_MUSB_HDRC: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && (USB [=n] || USB_GADGET [=n]) && HAS_IOMEM [=y]
+
+HID_ZEROPLUS: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+RD_BZIP2: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+

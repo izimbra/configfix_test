@@ -1,0 +1,27 @@
+JOYSTICK_ANALOG: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+MTD_CFI_I2: y => no
+    Direct dependencies:  MTD [=y]
+
+USB_FUNCTIONFS_GENERIC: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && USB_FUNCTIONFS [=n]
+    Reverse dependencies: USB_FUNCTIONFS [=n] && USB_SUPPORT [=y] && USB_GADGET [=n] && !USB_FUNCTIONFS_ETH [=n] && !USB_FUNCTIONFS_RNDIS [=n]
+
+CONFIGFS_FS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_CONFIGFS [=n] && ACPI [=n] || TARGET_CORE [=n] && BLOCK [=n] || PCI_ENDPOINT_CONFIGFS [=n] && PCI [=n] && PCI_ENDPOINT [=n] || BLK_DEV_NULL_BLK [=n] && BLK_DEV [=n] || USB_LIBCOMPOSITE [=n] && USB_SUPPORT [=y] && USB_GADGET [=n] || IIO_CONFIGFS [=y] && IIO [=y] || STM [=y]
+
+DEBUG_LOCK_ALLOC: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+SENSORS_NTC_THERMISTOR: n => yes
+    Direct dependencies:  HWMON [=n] && (!OF [=y] || IIO [=y]=n || IIO [=y]) && (THERMAL [=y] || !THERMAL_OF [=n])
+
+USB_SNP_UDC_PLAT: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && OF [=y] && HAS_DMA [=y] && (EXTCON [=y] || EXTCON [=y]=n)
+
+DEFAULT_SECURITY_DAC: y => no
+    Direct dependencies:  <choice>
+

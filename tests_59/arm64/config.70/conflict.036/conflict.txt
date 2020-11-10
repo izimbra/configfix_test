@@ -1,0 +1,27 @@
+KALLSYMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: KPROBES [=n] && MODULES [=y] && HAVE_KPROBES [=y] || LATENCYTOP [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || DEBUG_KMEMLEAK [=n] && DEBUG_KERNEL [=y] && HAVE_DEBUG_KMEMLEAK [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || FUNCTION_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y] || STACK_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y] || FTRACE_SYSCALLS [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_SYSCALL_TRACEPOINTS [=y]
+
+BLK_DEV_THROTTLING_LOW: n => yes
+    Direct dependencies:  BLOCK [=n] && BLK_DEV_THROTTLING [=n]
+
+EXT3_FS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && EXT3_FS [=n]
+
+HID_CREATIVE_SB0540: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m]
+
+CRYPTO_XTS: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: FS_ENCRYPTION_ALGS [=m] || CRYPTO_CAMELLIA_AESNI_AVX_X86_64 [=n] && X86 && 64BIT [=y] && CRYPTO [=y] || CRYPTO_CAST6_AVX_X86_64 [=n] && CRYPTO [=y] && X86 && 64BIT [=y] || CRYPTO_SERPENT_AVX_X86_64 [=n] && CRYPTO [=y] && X86 && 64BIT [=y] || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+FPGA_REGION: n => yes
+    Direct dependencies:  FPGA [=n] && FPGA_BRIDGE [=n]
+    Reverse dependencies: FPGA_DFL [=n] && FPGA [=n]
+
+INFTL: n => mod
+    Direct dependencies:  MTD [=y] && BLOCK [=n]
+
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+

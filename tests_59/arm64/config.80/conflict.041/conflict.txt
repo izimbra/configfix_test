@@ -1,0 +1,28 @@
+EXT3_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+JOYSTICK_WARRIOR: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+MDM_LCC_9615: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+MTD_CFI_STAA: m => yes
+    Direct dependencies:  MTD [=m] && MTD_GEN_PROBE [=m]
+
+DRM_TI_TPD12S015: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=y]
+
+TINYDRM_ILI9225: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+STRICT_MODULE_RWX: y => no
+    Direct dependencies:  ARCH_HAS_STRICT_MODULE_RWX [=y] && MODULES [=y]
+
+MTD_NAND_QCOM: n => mod
+    Direct dependencies:  MTD [=m] && MTD_RAW_NAND [=n] && (ARCH_QCOM [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+CRYPTO_CBC: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CEPH_LIB [=n] && NET [=y] && INET [=y] || XFRM_ESP [=y] && NET [=y] && INET [=y] || BLK_DEV_CRYPTOLOOP [=n] && BLK_DEV [=n] && BLK_DEV_LOOP [=n] || DM_CRYPT [=n] && MD [=n] && BLK_DEV_DM [=n] && (ENCRYPTED_KEYS [=m] || ENCRYPTED_KEYS [=m]=n) || FS_ENCRYPTION_ALGS [=n] || ECRYPT_FS [=n] && MISC_FILESYSTEMS [=y] && KEYS [=y] && CRYPTO [=y] && (ENCRYPTED_KEYS [=m] || ENCRYPTED_KEYS [=m]=n) || ENCRYPTED_KEYS [=m] && KEYS [=y] || CRYPTO_DEV_SUN8I_CE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_SUN8I_SS [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_PICOXCELL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=y]) && HAVE_CLK [=y] || CRYPTO_DEV_MXS_DCP [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC [=y]) || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+

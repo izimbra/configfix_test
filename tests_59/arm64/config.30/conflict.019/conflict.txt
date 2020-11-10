@@ -1,0 +1,13 @@
+SYSC_RCAR: n => yes
+    Direct dependencies:  SOC_RENESAS [=n]
+    Reverse dependencies: SYSC_R8A7742 [=n] && SOC_RENESAS [=n] || SYSC_R8A7743 [=n] && SOC_RENESAS [=n] || SYSC_R8A7745 [=n] && SOC_RENESAS [=n] || SYSC_R8A77470 [=n] && SOC_RENESAS [=n] || SYSC_R8A774A1 [=n] && SOC_RENESAS [=n] || SYSC_R8A774B1 [=n] && SOC_RENESAS [=n] || SYSC_R8A774C0 [=n] && SOC_RENESAS [=n] || SYSC_R8A774E1 [=n] && SOC_RENESAS [=n] || SYSC_R8A7779 [=n] && SOC_RENESAS [=n] || SYSC_R8A7790 [=n] && SOC_RENESAS [=n] || SYSC_R8A7791 [=n] && SOC_RENESAS [=n] || SYSC_R8A7792 [=n] && SOC_RENESAS [=n] || SYSC_R8A7794 [=n] && SOC_RENESAS [=n] || SYSC_R8A7795 [=n] && SOC_RENESAS [=n] || SYSC_R8A77960 [=n] && SOC_RENESAS [=n] || SYSC_R8A77961 [=n] && SOC_RENESAS [=n] || SYSC_R8A77965 [=n] && SOC_RENESAS [=n] || SYSC_R8A77970 [=n] && SOC_RENESAS [=n] || SYSC_R8A77980 [=n] && SOC_RENESAS [=n] || SYSC_R8A77990 [=n] && SOC_RENESAS [=n] || SYSC_R8A77995 [=n] && SOC_RENESAS [=n]
+
+THRUSTMASTER_FF: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && HID_THRUSTMASTER [=n]
+
+BLK_DEV_SR: n => yes
+    Direct dependencies:  SCSI [=n] && BLK_DEV [=n]
+
+XEN_BLKDEV_FRONTEND: n => yes
+    Direct dependencies:  BLK_DEV [=n] && XEN [=n]
+

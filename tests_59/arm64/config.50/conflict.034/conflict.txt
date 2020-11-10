@@ -1,0 +1,22 @@
+LOCK_DOWN_KERNEL_FORCE_NONE: n => yes
+    Direct dependencies:  <choice>
+
+MSM_GCC_8998: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: MSM_GPUCC_8998 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] || MSM_MMCC_8998 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+
+INPUT_DRV2665_HAPTICS: n => yes
+    Direct dependencies:  !UML && INPUT_MISC [=n] && INPUT [=y] && I2C [=y]
+
+LEDS_AAT1290: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS_FLASH [=n] && (V4L2_FLASH_LED_CLASS [=n] || !V4L2_FLASH_LED_CLASS [=n]) && (GPIOLIB [=y] || COMPILE_TEST [=y]) && OF [=y] && PINCTRL [=y]
+
+XEN_BLKDEV_FRONTEND: n => yes
+    Direct dependencies:  BLK_DEV [=n] && XEN [=y]
+
+DEV_DAX: n => yes
+    Direct dependencies:  DAX [=n] && TRANSPARENT_HUGEPAGE [=n]
+
+REGULATOR_TPS65912: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_TPS65912 [=n]
+

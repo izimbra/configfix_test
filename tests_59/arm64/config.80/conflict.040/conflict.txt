@@ -1,0 +1,25 @@
+DRM_DISPLAY_CONNECTOR: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=y]
+
+USB_EHCI_FSL: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=m]
+
+XEN_DEV_EVTCHN: n => mod
+    Direct dependencies:  XEN [=n]
+
+REGULATOR_WM8994: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_WM8994 [=m]
+
+DRM_HISI_KIRIN: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && OF [=y] && ARM64 [=y]
+
+SLUB_DEBUG: y => no
+    Direct dependencies:  SLUB [=y] && SYSFS [=y]
+    Reverse dependencies: KASAN_GENERIC [=y] && <choice> && HAVE_ARCH_KASAN [=y] && CC_HAS_KASAN_GENERIC [=y] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y] || KASAN_SW_TAGS [=n] && <choice> && HAVE_ARCH_KASAN_SW_TAGS [=y] && CC_HAS_KASAN_SW_TAGS [=n] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y]
+
+PRINTER: m => yes
+    Direct dependencies:  PARPORT [=m]
+
+USB_RENESAS_USBHS_HCD: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_RENESAS_USBHS [=m]
+

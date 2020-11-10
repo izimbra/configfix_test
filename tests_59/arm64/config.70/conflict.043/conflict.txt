@@ -1,0 +1,29 @@
+MTD_QINFO_PROBE: y => no
+    Direct dependencies:  MTD [=y] && MTD_LPDDR [=y]
+    Reverse dependencies: MTD_LPDDR [=y] && MTD [=y]
+
+USB_CONFIGFS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+
+TINYDRM_ILI9225: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+MTD_NAND_DISKONCHIP: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && HAS_IOMEM [=y]
+
+DRM_RCAR_DW_HDMI: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && OF [=y]
+
+NOP_USB_XCEIV: m => no
+    Direct dependencies:  USB_SUPPORT [=y] && (USB_GADGET [=n] || !USB_GADGET [=n])
+    Reverse dependencies: USB_DWC2_PCI [=m] && USB_SUPPORT [=y] && USB_DWC2 [=y] && USB_PCI [=y] && (USB_GADGET [=n] || !USB_GADGET [=n])
+
+HW_RANDOM_HISI: n => mod
+    Direct dependencies:  HW_RANDOM [=y] && ARCH_HISI [=n]
+
+MMC_USDHI6ROL0: m => yes
+    Direct dependencies:  MMC [=m] && HAS_DMA [=y]
+
+DRM_LOAD_EDID_FIRMWARE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]
+

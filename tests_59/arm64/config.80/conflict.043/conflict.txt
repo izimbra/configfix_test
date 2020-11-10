@@ -1,0 +1,31 @@
+SYSC_R8A77960: y => no
+    Direct dependencies:  SOC_RENESAS [=y]
+    Reverse dependencies: ARCH_R8A77960 [=y] && SOC_RENESAS [=y] && ARM64 [=y]
+
+MODULE_SIG_SHA256: n => no
+    Direct dependencies:  <choice>
+
+IR_IMON: m => yes
+    Direct dependencies:  RC_DEVICES [=y] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=m]
+
+MTD_RAW_NAND: n => yes
+    Direct dependencies:  MTD [=m]
+
+LIBNVDIMM: n => yes
+    Direct dependencies:  PHYS_ADDR_T_64BIT [=y] && HAS_IOMEM [=y] && BLK_DEV [=n]
+    Reverse dependencies: ACPI_NFIT [=n] && ACPI [=n] && PHYS_ADDR_T_64BIT [=y] && BLK_DEV [=n] && ARCH_HAS_PMEM_API [=y]
+
+HID_LOGITECH_HIDPP: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_LOGITECH [=m]
+    Reverse dependencies: HID_LOGITECH_DJ [=n] && INPUT [=y] && HID [=y] && USB_HID [=m] && HIDRAW [=y] && HID_LOGITECH [=m]
+
+RTC_DRV_MAX8998: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_MAX8998 [=n]
+
+PINCTRL_MESON: y => no
+    Direct dependencies:  PINCTRL [=y] && ARCH_MESON [=y] && OF [=y]
+    Reverse dependencies: ARCH_MESON [=y]
+
+CHARLCD_BL_OFF: n => no
+    Direct dependencies:  <choice>
+

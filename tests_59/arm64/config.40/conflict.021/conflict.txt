@@ -1,0 +1,15 @@
+DRM_PANEL_ORISETECH_OTM8009A: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+DRM_TOSHIBA_TC358767: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+SENSORS_IT87: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+COMMON_CLK_MAX77686: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && (MFD_MAX77686 [=n] || MFD_MAX77620 [=n] || COMPILE_TEST [=n])
+
+MTD_RAW_NAND: n => yes
+    Direct dependencies:  MTD [=n]
+

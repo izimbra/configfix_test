@@ -1,0 +1,21 @@
+MODULE_FORCE_UNLOAD: n => yes
+    Direct dependencies:  MODULES [=n] && MODULE_UNLOAD [=n]
+
+SENSORS_IBMPEX: n => yes
+    Direct dependencies:  HWMON [=n] && IPMI_HANDLER [=n]
+
+DRM_PANEL_SONY_ACX424AKP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+XEN_BLKDEV_BACKEND: n => yes
+    Direct dependencies:  BLK_DEV [=n] && XEN_BACKEND [=n]
+
+TPS65010: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && GPIOLIB [=y]
+
+RTC_DRV_DS1689: n => yes
+    Direct dependencies:  <choice>
+
+DRM_PANEL_LEADTEK_LTK050H3146W: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+

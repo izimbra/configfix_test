@@ -1,0 +1,18 @@
+SENSORS_ADM1026: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+PWM_MESON: n => yes
+    Direct dependencies:  PWM [=n] && (ARCH_MESON [=n] || COMPILE_TEST [=y]) && COMMON_CLK [=y]
+
+F2FS_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+SENSORS_TMP401: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+GPIO_DA9052: n => yes
+    Direct dependencies:  GPIOLIB [=y] && PMIC_DA9052 [=n]
+
+LEDS_TPS6105X: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && TPS6105X [=n]
+

@@ -1,0 +1,23 @@
+IPQ_APSS_PLL: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: IPQ_APSS_6018 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] && (QCOM_APCS_IPC [=y] || COMPILE_TEST [=y])
+
+SENSORS_INSPUR_IPSPS: n => yes
+    Direct dependencies:  HWMON [=n] && PMBUS [=n]
+
+RD_ZSTD: n => yes
+    Direct dependencies:  BLK_DEV_INITRD [=n]
+
+MTD_SWAP: n => yes
+    Direct dependencies:  MTD [=y] && SWAP [=n]
+
+STRICT_KERNEL_RWX: y => no
+    Direct dependencies:  ARCH_HAS_STRICT_KERNEL_RWX [=y]
+
+PWM_LP3943: n => yes
+    Direct dependencies:  PWM [=n] && MFD_LP3943 [=y]
+
+CRYPTO_SM4: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_SM4_ARM64_CE [=y] && CRYPTO [=y] && ARM64_CRYPTO [=y] && KERNEL_MODE_NEON [=y] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+

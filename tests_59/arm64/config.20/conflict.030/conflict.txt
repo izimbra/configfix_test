@@ -1,0 +1,19 @@
+MTD_NAND_DISKONCHIP: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && HAS_IOMEM [=y]
+
+SWAP: n => yes
+    Direct dependencies:  MMU [=y] && BLOCK [=n] && !ARCH_NO_SWAP [=n]
+
+DRM_MESON_DW_HDMI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_MESON [=n]
+
+HID_MULTITOUCH: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+LEDS_SYSCON: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n]=y && MFD_SYSCON [=y] && OF [=y]
+
+RMI4_CORE: n => yes
+    Direct dependencies:  !UML && INPUT [=n]
+    Reverse dependencies: HID_RMI [=n] && INPUT [=n] && HID [=n]
+

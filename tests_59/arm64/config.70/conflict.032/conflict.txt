@@ -1,0 +1,23 @@
+USB_DWC3_QCOM: m => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_DWC3 [=m] && (ARCH_QCOM [=y] || COMPILE_TEST [=y]) && (EXTCON [=y] || !EXTCON [=y]) && (OF [=y] || ACPI [=y])
+
+DEBUG_WW_MUTEX_SLOWPATH: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+TINYDRM_MI0283QT: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+IPMI_DEVICE_INTERFACE: n => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+MSM_GCC_8660: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+DRM_I2C_NXP_TDA9950: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_KMS_HELPER [=n] && I2C [=y]
+
+KALLSYMS_ALL: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && KALLSYMS [=y]
+    Reverse dependencies: LATENCYTOP [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+

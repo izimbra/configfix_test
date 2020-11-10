@@ -1,0 +1,9 @@
+SPI_SPIDEV => yes
+SPI_BCM2835AUX => yes
+SPI_QCOM_GENI => yes
+KEXEC => yes
+INPUT_ATI_REMOTE2 => yes
+SPI => yes
+QCOM_GENI_SE => yes
+HOTPLUG_CPU => yes
+INPUT_MISC => yes

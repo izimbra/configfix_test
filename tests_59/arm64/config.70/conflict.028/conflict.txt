@@ -1,0 +1,21 @@
+MAILBOX: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_K3 [=y] || ACPI_CPPC_LIB [=y] && ACPI [=y] && ACPI_PROCESSOR [=y] || OMAP_REMOTEPROC [=n] && REMOTEPROC [=y] && (ARCH_OMAP4 || SOC_OMAP5 || SOC_DRA7XX) && OMAP_IOMMU [=y] || ST_REMOTEPROC [=n] && REMOTEPROC [=y] && ARCH_STI || STM32_RPROC [=n] && ARCH_STM32 && REMOTEPROC [=y] || TI_K3_DSP_REMOTEPROC [=m] && REMOTEPROC [=y] && ARCH_K3 [=y] || MTK_CMDQ [=n] && (ARCH_MEDIATEK [=n] || COMPILE_TEST [=y]) || ARCH_TEGRA_186_SOC [=n] && ARCH_TEGRA [=y] && ARM64 [=y] || ARCH_TEGRA_194_SOC [=y] && ARCH_TEGRA [=y] && ARM64 [=y] || ZYNQMP_POWER [=y] && PM [=y] && ZYNQMP_FIRMWARE [=y]
+
+TINYDRM_ST7586: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+HOTPLUG_CPU: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PM_SLEEP_SMP [=y] && SMP [=y] && (ARCH_SUSPEND_POSSIBLE [=y] || ARCH_HIBERNATION_POSSIBLE [=y]) && PM_SLEEP [=y]
+
+IPMI_DEVICE_INTERFACE: n => yes
+    Direct dependencies:  IPMI_HANDLER [=m]
+
+NVMEM_SYSFS: y => no
+    Direct dependencies:  NVMEM [=y] && SYSFS [=y]
+    Reverse dependencies: EEPROM_AT24 [=y] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=y] && SYSFS [=y] || EEPROM_93XX46 [=m] && SPI [=y] && SYSFS [=y]
+
+USB_CHIPIDEA_IMX: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_CHIPIDEA [=n] && OF [=y]
+

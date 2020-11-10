@@ -1,0 +1,19 @@
+INPUT_MOUSEDEV_PSAUX: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSEDEV [=n]
+
+SENSORS_ADM1031: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+SENSORS_LTC3815: n => yes
+    Direct dependencies:  HWMON [=n] && PMBUS [=n]
+
+PINCTRL_PFC_R8A77961: n => yes
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: PINCTRL_SH_PFC [=n] && PINCTRL [=y] && ARCH_R8A77961 [=n]
+
+MTD_CFI_INTELEXT: n => yes
+    Direct dependencies:  MTD [=n] && MTD_GEN_PROBE [=n]
+
+SENSORS_APDS990X: n => yes
+    Direct dependencies:  I2C [=n]
+

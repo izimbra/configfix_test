@@ -1,0 +1,21 @@
+EFI_TEST: n => yes
+    Direct dependencies:  EFI [=n]
+
+INPUT_MOUSEDEV: n => yes
+    Direct dependencies:  !UML && INPUT [=n]
+
+INPUT_DA9055_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && MFD_DA9055 [=n]
+
+USB_LED_TRIG: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && LEDS_CLASS [=n] && LEDS_TRIGGERS [=n]
+
+PPDEV: n => yes
+    Direct dependencies:  PARPORT [=n]
+
+PINCTRL_AS3722: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_AS3722 [=n] && GPIOLIB [=y]
+
+FS_VERITY_DEBUG: n => yes
+    Direct dependencies:  FS_VERITY [=n]
+

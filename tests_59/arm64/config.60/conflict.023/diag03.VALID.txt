@@ -1,0 +1,14 @@
+DEV_DAX => yes
+SENSORS_BEL_PFE => yes
+HID_CREATIVE_SB0540 => yes
+USB_GADGETFS => yes
+CGROUP_PIDS => yes
+DAX => yes
+PMBUS => yes
+USB_HID => yes
+HID => yes
+INPUT => yes
+USB_GADGET => yes
+USB_GADGET_STORAGE_NUM_BUFFERS => 256
+USB_GADGET_VBUS_DRAW => 2
+CGROUPS => yes

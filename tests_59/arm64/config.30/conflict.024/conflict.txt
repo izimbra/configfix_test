@@ -1,0 +1,15 @@
+RTC_DRV_DS1347: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+MFD_MP2629: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+DRM_I2C_CH7006: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_KMS_HELPER [=n] && I2C [=n]
+
+DRM_PANEL_ASUS_Z00T_TM5P5_NT35596: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+DRM_PANEL_LG_LB035Q02: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && SPI [=n]
+

@@ -1,0 +1,28 @@
+BRCMSTB_PM: n => yes
+    Direct dependencies:  SOC_BRCMSTB [=n] && PM [=y] && (ARCH_BRCMSTB [=n] || BMIPS_GENERIC)
+
+EXT4_KUNIT_TESTS: n => yes
+    Direct dependencies:  BLOCK [=y] && KUNIT [=n]
+
+MTD_NAND_GPIO: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+
+CHARGER_BQ24735: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && I2C [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+MSM_GCC_8660: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+CRYPTO_CTS: n => yes
+    Direct dependencies:  CRYPTO [=n]
+    Reverse dependencies: FS_ENCRYPTION_ALGS [=n]
+
+HID_WIIMOTE: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && LEDS_CLASS [=n]
+
+JOYSTICK_GRIP: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+SPI_MESON_SPIFC: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_MESON [=n] || COMPILE_TEST [=n])
+

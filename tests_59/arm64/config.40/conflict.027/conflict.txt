@@ -1,0 +1,18 @@
+SCSI_CONSTANTS: n => yes
+    Direct dependencies:  SCSI [=n]
+
+REGULATOR_VEXPRESS: n => yes
+    Direct dependencies:  REGULATOR [=n] && VEXPRESS_CONFIG [=n]
+
+USB_MICROTEK: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && SCSI [=n]
+
+GPIO_GW_PLD: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=n] && OF_GPIO [=y]
+
+BLK_DEV_RAM: n => yes
+    Direct dependencies:  BLK_DEV [=n]
+
+RTC_DRV_RV3028: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+

@@ -1,0 +1,21 @@
+OF_DYNAMIC: y => no
+    Direct dependencies:  OF [=y]
+    Reverse dependencies: HOTPLUG_PCI_POWERNV [=n] && PCI [=y] && HOTPLUG_PCI [=n] && PPC_POWERNV && EEH || OF_OVERLAY [=y] && OF [=y] || I2C_DEMUX_PINCTRL [=m] && I2C [=y] && I2C_MUX [=y] && PINCTRL [=y] && OF [=y]
+
+PID_IN_CONTEXTIDR: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CORESIGHT_SOURCE_ETM4X [=y] && CORESIGHT [=y] && ARM64 [=y]
+
+I2C_SLAVE: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_AT91_SLAVE_EXPERIMENTAL [=n] && I2C [=y] && HAS_IOMEM [=y] && I2C_AT91 [=n] || I2C_AXXIA [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_AXXIA || COMPILE_TEST [=y]) || I2C_BCM_IPROC [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_BCM_IPROC [=y] || COMPILE_TEST [=y]) || I2C_DESIGNWARE_SLAVE [=y] && I2C [=y] && HAS_IOMEM [=y] && I2C_DESIGNWARE_CORE [=y] || I2C_EMEV2 [=n] && I2C [=y] && HAS_IOMEM [=y] && HAVE_CLK [=y] || I2C_PXA_SLAVE [=y] && I2C [=y] && HAS_IOMEM [=y] && I2C_PXA [=m] && !X86_32 || I2C_STM32F7 [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_STM32 || COMPILE_TEST [=y]) || I2C_RCAR [=m] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_RENESAS [=y] || COMPILE_TEST [=y])
+
+IR_IGUANA: m => yes
+    Direct dependencies:  RC_DEVICES [=y] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=m]
+
+RTC_DRV_DS1689: n => no
+    Direct dependencies:  <choice>
+
+CRC32_SARWATE: y => no
+    Direct dependencies:  <choice>
+

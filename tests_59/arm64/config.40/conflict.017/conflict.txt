@@ -1,0 +1,13 @@
+FB_SSD1307: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && I2C [=n] && OF [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+TEST_LOCKUP: n => no
+    Direct dependencies:  m && MODULES [=n]
+
+THERMAL_GOV_USER_SPACE: n => yes
+    Direct dependencies:  THERMAL [=n]
+    Reverse dependencies: THERMAL_DEFAULT_GOV_USER_SPACE [=n] && <choice> || X86_PKG_TEMP_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86_THERMAL_VECTOR || INT340X_THERMAL [=n] && THERMAL [=n] && (X86 || X86_INTEL_QUARK || COMPILE_TEST [=n]) && X86 && ACPI [=n] && PCI [=n]
+
+REGULATOR_TPS6507X: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+

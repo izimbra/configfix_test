@@ -1,0 +1,17 @@
+DRM_PANEL_LEADTEK_LTK500HD1829: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+
+RTC_DRV_88PM80X: m => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_88PM800 [=m]
+
+PINCTRL_BCM2835: y => no
+    Direct dependencies:  PINCTRL [=y] && OF [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: ARCH_BCM2835 [=y]
+
+RAID_ATTRS: n => yes
+    Direct dependencies:  BLOCK [=n] && SCSI_MOD [=y]
+    Reverse dependencies: SCSI_MPT3SAS [=n] && SCSI_LOWLEVEL [=n] && PCI [=y] && SCSI [=n] || SCSI_SMARTPQI [=n] && SCSI_LOWLEVEL [=n] && PCI [=y] && SCSI [=n] && !S390 || SCSI_MYRB [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=y] || SCSI_MYRS [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && PCI [=y] && (!CPU_BIG_ENDIAN [=y] || COMPILE_TEST [=y])
+
+DRM_I2C_NXP_TDA9950: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_KMS_HELPER [=m] && I2C [=y]
+

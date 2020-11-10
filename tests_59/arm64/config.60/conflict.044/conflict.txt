@@ -1,0 +1,27 @@
+DRM_PANEL_SITRONIX_ST7701: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+HID_SENSOR_HUB: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && HAS_IOMEM [=y]
+
+CONTEXT_TRACKING_FORCE: n => yes
+    Direct dependencies:  GENERIC_CLOCKEVENTS [=y] && CONTEXT_TRACKING [=n]
+
+I2C_GPIO_FAULT_INJECTOR: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && I2C_GPIO [=n]
+
+MOUSE_SYNAPTICS_USB: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MOUSE [=n] && USB_ARCH_HAS_HCD [=y]
+
+DRM_PANEL_ILITEK_ILI9881C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+USB_MOUSE: n => yes
+    Direct dependencies:  USB_HID [=n]!=y && EXPERT [=y] && USB [=y] && INPUT [=n]
+
+HID_CP2112: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n] && HIDRAW [=n] && I2C [=y] && GPIOLIB [=y]
+
+LEDS_SC27XX_BLTC: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_SC27XX_PMIC [=n] && OF [=y]
+

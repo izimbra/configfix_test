@@ -1,0 +1,32 @@
+MTD_UBI: n => yes
+    Direct dependencies:  MTD [=m]
+
+DEVFREQ_GOV_SIMPLE_ONDEMAND: y => no
+    Direct dependencies:  PM_DEVFREQ [=y]
+    Reverse dependencies: SCSI_UFSHCD [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_DMA [=n] || DRM_LIMA [=m] && HAS_IOMEM [=y] && DRM [=m] && (ARM || ARM64 [=y] || COMPILE_TEST [=y]) && MMU [=y] && COMMON_CLK [=y] && OF [=y] || DRM_PANFROST [=n] && HAS_IOMEM [=y] && DRM [=m] && (ARM || ARM64 [=y] || COMPILE_TEST [=y] && !GENERIC_ATOMIC64 [=n]) && MMU [=y] || ARM_EXYNOS_BUS_DEVFREQ [=n] && PM_DEVFREQ [=y] && (ARCH_EXYNOS [=y] || COMPILE_TEST [=y]) || ARM_IMX8M_DDRC_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_MXC [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y]) || ARM_TEGRA20_DEVFREQ [=m] && PM_DEVFREQ [=y] && (TEGRA_MC [=y] && TEGRA20_EMC [=n] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || ARM_RK3399_DMC_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_ROCKCHIP [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y])
+
+SLUB_DEBUG: y => no
+    Direct dependencies:  SLUB [=y] && SYSFS [=y]
+    Reverse dependencies: KASAN_GENERIC [=y] && <choice> && HAVE_ARCH_KASAN [=y] && CC_HAS_KASAN_GENERIC [=y] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y] || KASAN_SW_TAGS [=n] && <choice> && HAVE_ARCH_KASAN_SW_TAGS [=y] && CC_HAS_KASAN_SW_TAGS [=n] && (SLUB [=y] && SYSFS [=y] || SLAB [=n] && !DEBUG_SLAB [=n]) && SLUB [=y]
+
+GPIO_TPS65218: m => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_TPS65218 [=m]
+
+SCSI_DH_EMC: n => mod
+    Direct dependencies:  SCSI_DH [=n] && SCSI [=n]
+
+SECURITY: n => yes
+    Direct dependencies:  SYSFS [=y] && MULTIUSER [=n]
+
+JOYSTICK_GUILLEMOT: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+CORESIGHT_CATU: n => yes
+    Direct dependencies:  CORESIGHT [=y] && CORESIGHT_LINK_AND_SINK_TMC [=n]
+
+SPI_QCOM_GENI: m => yes
+    Direct dependencies:  SPI [=y] && SPI_MASTER [=y] && QCOM_GENI_SE [=m]
+
+DRM_PANEL_SAMSUNG_S6E3HA2: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=y]
+

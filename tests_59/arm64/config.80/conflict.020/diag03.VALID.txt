@@ -1,0 +1,9 @@
+NVME_FC => yes
+SCSI_CONSTANTS => yes
+TINYDRM_HX8357D => yes
+MQ_IOSCHED_DEADLINE => yes
+BLOCK => yes
+EFI_PARTITION => yes
+SCSI => mod
+DRM => yes
+MSDOS_PARTITION => yes

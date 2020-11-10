@@ -1,0 +1,15 @@
+PINCTRL_MSM8916: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y]
+
+RTC_DRV_GOLDFISH: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && OF [=y] && HAS_IOMEM [=y] && (GOLDFISH [=n] || COMPILE_TEST [=n])
+
+DRM_PANEL_SIMPLE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+
+I2C_RK3X: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && OF [=y] && COMMON_CLK [=y]
+
+USB_MICROTEK: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n] && SCSI [=n]
+

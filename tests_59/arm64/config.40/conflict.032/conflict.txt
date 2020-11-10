@@ -1,0 +1,21 @@
+SENSORS_LTC2947_I2C: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+HID_CREATIVE_SB0540: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && USB_HID [=n]
+
+TINYDRM_REPAPER: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=n]
+
+VIRTIO_IOMMU: n => yes
+    Direct dependencies:  IOMMU_SUPPORT [=n] && VIRTIO [=n] && ARM64 [=y]
+
+SENSORS_LTC4215: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+LEDS_CR0014114: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=n] && SPI [=n] && OF [=y]
+
+SENSORS_MAX1668: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

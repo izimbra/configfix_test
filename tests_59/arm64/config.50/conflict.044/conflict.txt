@@ -1,0 +1,29 @@
+SENSORS_JC42: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+BLK_DEV_SD: n => yes
+    Direct dependencies:  SCSI [=n]
+
+HIBERNATION: n => yes
+    Direct dependencies:  SWAP [=n] && ARCH_HIBERNATION_POSSIBLE [=y]
+
+BATTERY_DA9052: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && PMIC_DA9052 [=n]
+
+CRC32_SARWATE: y => no
+    Direct dependencies:  <choice>
+
+SPI_DEBUG: n => yes
+    Direct dependencies:  SPI [=n] && DEBUG_KERNEL [=y]
+
+REGULATOR_DA9063: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_DA9063 [=n] && OF [=y]
+
+USB_ROLE_SWITCH: y => no
+    Direct dependencies:  USB_SUPPORT [=y]
+    Reverse dependencies: USB_CONN_GPIO [=y] && USB_SUPPORT [=y] && GPIOLIB [=y] || USB_CDNS3 [=n] && USB_SUPPORT [=y] && (USB [=y] || USB_GADGET [=n]) && HAS_DMA [=y] || USB_DWC3 [=y] && USB_SUPPORT [=y] && (USB [=y] || USB_GADGET [=n]) && HAS_DMA [=y] && USB_DWC3_DUAL_ROLE [=n] || USB_CHIPIDEA [=n] && USB_SUPPORT [=y] && (USB_EHCI_HCD [=n] && USB_GADGET [=n] || USB_EHCI_HCD [=n] && !USB_GADGET [=n] || !USB_EHCI_HCD [=n] && USB_GADGET [=n]) && HAS_DMA [=y] || USB_MTU3_DUAL_ROLE [=n] && <choice> && (USB [=y]=y || USB [=y]=USB_MTU3 [=n]) && (USB_GADGET [=n]=y || USB_GADGET [=n]=USB_MTU3 [=n]) && (EXTCON [=y]=y || EXTCON [=y]=USB_MTU3 [=n]) || USB_MUSB_JZ4740 [=n] && USB_SUPPORT [=y] && USB_MUSB_HDRC [=n] && OF [=y] && (MIPS || COMPILE_TEST [=y]) && USB_MUSB_GADGET [=n] && (USB [=y]=n || USB_OTG_DISABLE_EXTERNAL_HUB [=n]) || USB_MUSB_MEDIATEK [=n] && USB_SUPPORT [=y] && USB_MUSB_HDRC [=n] && (ARCH_MEDIATEK [=n] || COMPILE_TEST [=y]) && NOP_USB_XCEIV [=n] && GENERIC_PHY [=y] || USB_DWC3_MESON_G12A [=n] && USB_SUPPORT [=y] && USB_DWC3 [=y] && OF [=y] && COMMON_CLK [=y] && (ARCH_MESON [=n] || COMPILE_TEST [=y]) || USB_RENESAS_USB3 [=n] && USB_SUPPORT [=y] && USB_GADGET [=n] && (ARCH_RENESAS [=y] || COMPILE_TEST [=y]) && EXTCON [=y] || TYPEC_TCPM [=n] && USB_SUPPORT [=y] && TYPEC [=n] && USB [=y] || TYPEC_MUX_INTEL_PMC [=n] && USB_SUPPORT [=y] && TYPEC [=n] && INTEL_SCU_IPC [=n] || EXTCON_AXP288 [=n] && EXTCON [=y] && MFD_AXP20X [=y] && USB_SUPPORT [=y] && X86 && ACPI [=n]
+
+PINCTRL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARCH_ACTIONS [=y] || ARCH_SUNXI [=n] || ARCH_BCM2835 [=y] || ARCH_BCM_IPROC [=y] || ARCH_BERLIN [=n] || ARCH_BRCMSTB [=y] || ARCH_EXYNOS [=n] || ARCH_SPARX5 [=y] || ARCH_HISI [=y] || ARCH_MEDIATEK [=n] || ARCH_MESON [=n] || ARCH_MVEBU [=y] || ARCH_QCOM [=y] || ARCH_RENESAS [=y] || ARCH_ROCKCHIP [=y] || ARCH_TEGRA [=y] || ARCH_UNIPHIER [=y] || ARCH_ZX [=y] || MFD_MADERA [=y] && HAS_IOMEM [=y]
+

@@ -1,0 +1,24 @@
+ZYNQMP_IPI_MBOX: y => no
+    Direct dependencies:  MAILBOX [=y] && ARCH_ZYNQMP [=y] && OF [=y]
+    Reverse dependencies: ZYNQMP_POWER [=y] && PM [=y] && ZYNQMP_FIRMWARE [=y]
+
+TMPFS: y => no
+    Direct dependencies:  SHMEM [=y]
+    Reverse dependencies: DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=m] && X86 && PCI [=y] || DRM_MSM [=m] && HAS_IOMEM [=y] && DRM [=m] && (ARCH_QCOM [=y] || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=m] || QCOM_OCMEM [=m]=n) || DRM_ETNAVIV [=n] && HAS_IOMEM [=y] && DRM [=m] && MMU [=y]
+
+DRM_DEBUG_MM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m]=y && STACKTRACE_SUPPORT [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n] && DRM [=m]=y
+
+IR_MESON: m => yes
+    Direct dependencies:  RC_DEVICES [=y] && RC_CORE [=m] && (ARCH_MESON [=y] || COMPILE_TEST [=y])
+
+DRM_KOMEDA: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && OF [=y] && COMMON_CLK [=y]
+
+CRYPTO_FIPS: n => yes
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ANSI_CPRNG [=m] || CRYPTO_DRBG [=y]) && !CRYPTO_MANAGER_DISABLE_TESTS [=y] && (MODULE_SIG [=y] || !MODULES [=y])
+
+ISO9660_FS: n => mod
+    Direct dependencies:  BLOCK [=n]
+

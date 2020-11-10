@@ -1,0 +1,26 @@
+MTD_AFS_PARTS: n => yes
+    Direct dependencies:  MTD [=n] && (ARM || ARM64 [=y])
+
+DEBUG_BUGVERBOSE: n => yes
+    Direct dependencies:  BUG [=n] && (GENERIC_BUG [=n] || HAVE_DEBUG_BUGVERBOSE [=y])
+
+BLK_CGROUP_IOLATENCY: n => yes
+    Direct dependencies:  BLOCK [=n] && BLK_CGROUP [=n]
+
+PINCTRL_MSM8976: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y]
+
+BACKLIGHT_88PM860X: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && MFD_88PM860X [=n]
+
+MTD_RAM: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_PLATRAM [=n] && MTD [=n] && HAS_IOMEM [=y]
+
+I2C_CROS_EC_TUNNEL: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && CROS_EC [=n]
+    Reverse dependencies: SND_SOC_AMD_RV_RT5682_MACH [=n] && SOUND [=n] && !UML && SND [=n] && SND_SOC [=n] && SND_SOC_AMD_ACP3x [=n] && I2C [=n] && CROS_EC [=n]
+
+ARM64_USE_LSE_ATOMICS: n => yes
+    Direct dependencies:  JUMP_LABEL [=n]
+

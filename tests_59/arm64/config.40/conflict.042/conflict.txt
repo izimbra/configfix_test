@@ -1,0 +1,28 @@
+TINYDRM_MI0283QT: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=n]
+
+XZ_DEC_POWERPC: n => yes
+    Direct dependencies:  XZ_DEC [=n]
+
+I2C_CHARDEV: n => yes
+    Direct dependencies:  I2C [=n]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+
+SAMPLE_VFIO_MDEV_MBOCHS: n => no
+    Direct dependencies:  SAMPLES [=y] && VFIO_MDEV_DEVICE [=n] && m && MODULES [=n]
+
+SENSORS_LTC2947_I2C: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+PMIC_ADP5520: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+HID_ACCUTOUCH: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && USB_HID [=n]
+
+MODULE_SIG_SHA256: n => yes
+    Direct dependencies:  <choice>
+
+MMC_SH_MMCIF: n => yes
+    Direct dependencies:  MMC [=n] && (SUPERH || ARCH_RENESAS [=n] || COMPILE_TEST [=n])
+

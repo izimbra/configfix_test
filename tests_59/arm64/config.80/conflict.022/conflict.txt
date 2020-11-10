@@ -1,0 +1,17 @@
+PINCTRL_BCM2835: y => no
+    Direct dependencies:  PINCTRL [=y] && OF [=y] && (ARCH_BCM2835 [=y] || ARCH_BRCMSTB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: ARCH_BCM2835 [=y]
+
+SSB: y => no
+    Direct dependencies:  SSB_POSSIBLE [=y]
+    Reverse dependencies: B44 [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_BROADCOM [=y] && SSB_POSSIBLE [=y] && HAS_DMA [=y] || B43 [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_BROADCOM [=n] && (BCMA_POSSIBLE [=y] || SSB_POSSIBLE [=y]) && MAC80211 [=n] && HAS_DMA [=y] && B43_SSB [=n] || B43LEGACY [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_BROADCOM [=n] && SSB_POSSIBLE [=y] && MAC80211 [=n] && HAS_DMA [=y]
+
+MTD_NAND_HISI504: n => yes
+    Direct dependencies:  MTD [=m] && MTD_RAW_NAND [=n] && (ARCH_HISI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+XEN_BLKDEV_FRONTEND: n => yes
+    Direct dependencies:  BLK_DEV [=n] && XEN [=n]
+
+RTC_DRV_DA9063: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+

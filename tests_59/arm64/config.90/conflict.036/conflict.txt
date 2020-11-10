@@ -1,0 +1,27 @@
+HID_GT683R: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && LEDS_CLASS [=y] && USB_HID [=m]
+
+KASAN_INLINE: n => no
+    Direct dependencies:  <choice>
+
+HZ_300: n => no
+    Direct dependencies:  <choice>
+
+HOTPLUG_CPU: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PM_SLEEP_SMP [=y] && SMP [=y] && (ARCH_SUSPEND_POSSIBLE [=y] || ARCH_HIBERNATION_POSSIBLE [=y]) && PM_SLEEP [=y]
+
+RAID_ATTRS: y => no
+    Direct dependencies:  BLOCK [=y] && SCSI_MOD [=y]
+    Reverse dependencies: SCSI_MPT3SAS [=m] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] || SCSI_SMARTPQI [=m] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] && !S390 || SCSI_MYRB [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && PCI [=y] || SCSI_MYRS [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && PCI [=y] && (!CPU_BIG_ENDIAN [=y] || COMPILE_TEST [=y])
+
+USB_MUSB_GADGET: y => no
+    Direct dependencies:  <choice> && (USB_GADGET [=y]=y || USB_GADGET [=y]=USB_MUSB_HDRC [=m]) && HAS_DMA [=y]
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+DEBUG_RT_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && RT_MUTEXES [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y]
+

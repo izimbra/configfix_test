@@ -1,0 +1,19 @@
+HID_CYPRESS: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+JOYSTICK_GUILLEMOT: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n]
+
+DRM_PANEL_SAMSUNG_S6D16D0: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n]
+
+CHARGER_88PM860X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_88PM860X [=n] && BATTERY_88PM860X [=n]
+
+IPQ_APSS_PLL: y => no
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=y]
+    Reverse dependencies: IPQ_APSS_6018 [=y] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=y] && (QCOM_APCS_IPC [=y] || COMPILE_TEST [=n])
+
+CGROUP_DEBUG: n => yes
+    Direct dependencies:  CGROUPS [=n] && DEBUG_KERNEL [=y]
+

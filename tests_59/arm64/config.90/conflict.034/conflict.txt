@@ -1,0 +1,26 @@
+POWER_SUPPLY: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ARM64 [=y] || ACPI_AC [=n] && ACPI [=n] || ACPI_BATTERY [=n] && ACPI [=n] || ACPI_SBS [=n] && ACPI [=n] && X86 || AB8500_CORE [=n] && HAS_IOMEM [=y] && ABX500_CORE [=y] && MFD_DB8500_PRCMU [=n] || DRM_RADEON [=y] && HAS_IOMEM [=y] && DRM [=y] && PCI [=y] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=y] && PCI [=y] && MMU [=y] || DRM_NOUVEAU [=y] && HAS_IOMEM [=y] && DRM [=y] && PCI [=y] && MMU [=y] || HID_BATTERY_STRENGTH [=y] && INPUT [=y] && HID [=y] || HID_ASUS [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] && LEDS_CLASS [=y] && (ASUS_WMI [=n] || ASUS_WMI [=n]=n) || HID_LOGITECH_HIDPP [=y] && INPUT [=y] && HID [=y] && HID_LOGITECH [=y] || HID_SONY [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] && NEW_LEDS [=y] && LEDS_CLASS [=y] || HID_STEAM [=y] && INPUT [=y] && HID [=y] || HID_WACOM [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] || HID_WIIMOTE [=y] && INPUT [=y] && HID [=y] && LEDS_CLASS [=y] || USB_CONN_GPIO [=y] && USB_SUPPORT [=y] && GPIOLIB [=y] || APPLE_MFI_FASTCHARGE [=y] && USB_SUPPORT [=y] && USB [=y] || TYPEC_TCPM [=y] && USB_SUPPORT [=y] && TYPEC [=y] && USB [=y] || DELL_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && DMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=m] || RFKILL [=m]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n]
+
+HID_ELO: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m]
+
+BLK_DEV_BSGLIB: y => no
+    Direct dependencies:  BLOCK [=y]
+    Reverse dependencies: SCSI_FC_ATTRS [=n] && SCSI [=y] && NET [=y] || SCSI_ISCSI_ATTRS [=y] && SCSI [=y] && NET [=y] || SCSI_SAS_ATTRS [=y] && SCSI [=y] || SCSI_SAS_LIBSAS [=y] && SCSI [=y] || SCSI_UFS_BSG [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_UFSHCD [=y]
+
+MESON_CANVAS: m => no
+    Direct dependencies:  ARCH_MESON [=n] || COMPILE_TEST [=y]
+    Reverse dependencies: DRM_MESON [=m] && HAS_IOMEM [=y] && DRM [=y] && OF [=y] && (ARM || ARM64 [=y]) && (ARCH_MESON [=n] || COMPILE_TEST [=y]) || VIDEO_MESON_VDEC [=m] && STAGING [=y] && STAGING_MEDIA [=y] && MEDIA_SUPPORT [=m] && VIDEO_DEV [=m] && VIDEO_V4L2 [=m] && HAS_DMA [=y] && (ARCH_MESON [=n] || COMPILE_TEST [=y])
+
+MQ_IOSCHED_DEADLINE: y => mod
+    Direct dependencies:  BLOCK [=y]
+    Reverse dependencies: BLK_DEV_ZONED [=y] && BLOCK [=y]
+
+CRYPTO_STREEBOG: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_ECRDSA [=y] && CRYPTO [=y]
+
+LEDS_AAT1290: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS_FLASH [=n] && (V4L2_FLASH_LED_CLASS [=n] || !V4L2_FLASH_LED_CLASS [=n]) && (GPIOLIB [=y] || COMPILE_TEST [=y]) && OF [=y] && PINCTRL [=y]
+

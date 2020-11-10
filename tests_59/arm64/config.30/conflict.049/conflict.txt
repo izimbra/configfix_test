@@ -1,0 +1,31 @@
+SPI_XLP: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (CPU_XLP || ARCH_THUNDER2 [=n] || COMPILE_TEST [=n])
+
+RTC_DRV_DS3232: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && RTC_I2C_AND_SPI [=n]
+
+IR_IMON_RAW: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=n] && RC_CORE [=n]
+
+TCG_TIS_ST33ZP24_SPI: n => yes
+    Direct dependencies:  TCG_TPM [=y] && SPI [=n]
+
+I2C_HID: n => yes
+    Direct dependencies:  I2C [=n] && INPUT [=n]
+
+RESET_SCMI: n => yes
+    Direct dependencies:  RESET_CONTROLLER [=y] && (ARM_SCMI_PROTOCOL [=n] || COMPILE_TEST [=n])
+
+MQ_IOSCHED_DEADLINE: n => yes
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: BLK_DEV_ZONED [=n] && BLOCK [=n]
+
+MFD_WM8998: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_ARIZONA [=n]
+
+VFIO: n => yes
+    Direct dependencies:  IOMMU_API [=n]
+
+RTC_DRV_DS1553: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+

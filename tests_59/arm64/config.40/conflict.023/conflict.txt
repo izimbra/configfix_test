@@ -1,0 +1,17 @@
+NVMEM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: USB4 [=n] && PCI [=n] || EEPROM_AT24 [=n] && I2C [=n] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=n] && SYSFS [=y] || EEPROM_93XX46 [=n] && SPI [=n] && SYSFS [=y] || RTC_NVMEM [=y] && RTC_CLASS [=y]
+
+USB_BRCMSTB: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && (ARCH_BRCMSTB [=n] && PHY_BRCM_USB [=n] || COMPILE_TEST [=n])
+
+CRC16: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BT [=n] && NET [=y] && !S390 && (RFKILL [=y] || !RFKILL [=y]) || BATMAN_ADV_BLA [=y] && NET [=y] && BATMAN_ADV [=y] && INET [=y] || MKISS [=n] && NET [=y] && HAMRADIO [=y] && AX25 [=n] && TTY [=y] || LAN743X [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MICROCHIP [=n] && PCI [=n] || SGI_IOC3_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SGI [=n] && PCI [=n] && SGI_MFD_IOC3 [=n] || USB_NET_SMSC75XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_SMSC95XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || KEYBOARD_APPLESPI [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && ACPI [=n] && EFI [=n] && SPI [=n] && (X86 || COMPILE_TEST [=n]) && LEDS_CLASS [=n] || HMC_DRV [=n] && S390 || W1_SLAVE_DS2406 [=n] && W1 [=n] || W1_SLAVE_DS2423 [=n] && W1 [=n] || W1_SLAVE_DS2433_CRC [=n] && W1 [=n] && W1_SLAVE_DS2433 [=n] || W1_SLAVE_DS250X [=n] && W1 [=n] || W1_SLAVE_DS28E04 [=n] && W1 [=n] || W1_SLAVE_DS28E17 [=n] && W1 [=n] && I2C [=n] || SCD30_SERIAL [=n] && IIO [=n] && SCD30_CORE [=n] && SERIAL_DEV_BUS [=n] || EXT4_FS [=n] && BLOCK [=n] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=n] && MTD_UBI [=n] || CRYPTO_DEV_ATMEL_ECC [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && I2C [=n] || CRYPTO_DEV_ATMEL_SHA204A [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && I2C [=n]
+
+CHARGER_QCOM_SMBB: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && (MFD_SPMI_PMIC [=n] || COMPILE_TEST [=n]) && OF [=y] && EXTCON [=y] && REGULATOR [=n]
+
+BLK_DEV_NULL_BLK: n => yes
+    Direct dependencies:  BLK_DEV [=n]
+

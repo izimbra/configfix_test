@@ -1,0 +1,16 @@
+SAMPLE_VFIO_MDEV_MBOCHS: n => mod
+    Direct dependencies:  SAMPLES [=y] && VFIO_MDEV_DEVICE [=n] && m && MODULES [=y]
+
+DRM_TI_TFP410: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+HID_LOGITECH_HIDPP: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_LOGITECH [=m]
+    Reverse dependencies: HID_LOGITECH_DJ [=m] && INPUT [=y] && HID [=y] && USB_HID [=m] && HIDRAW [=y] && HID_LOGITECH [=m]
+
+JFS_STATISTICS: n => yes
+    Direct dependencies:  BLOCK [=n] && JFS_FS [=n]
+
+VFIO_MDEV_DEVICE: n => mod
+    Direct dependencies:  VFIO [=n] && VFIO_MDEV [=n]
+

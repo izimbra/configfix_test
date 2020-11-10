@@ -1,0 +1,12 @@
+INPUT_SC27XX_VIBRA: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=n])
+
+XEN_BLKDEV_FRONTEND: n => yes
+    Direct dependencies:  BLK_DEV [=y] && XEN [=n]
+
+IR_STREAMZAP: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && USB_ARCH_HAS_HCD [=y] && RC_CORE [=n]
+
+HID_PICOLCD: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

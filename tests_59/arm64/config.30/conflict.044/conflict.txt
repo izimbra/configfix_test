@@ -1,0 +1,27 @@
+SENSORS_MAX31722: n => yes
+    Direct dependencies:  HWMON [=n] && SPI [=n]
+
+MFD_VIPERBOARD: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && USB [=n]
+
+MSM_LCC_8960: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+CROS_EC_VBC: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=n] && OF [=y]
+
+TINYDRM_ILI9225: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=n]
+
+USB_IDMOUSE: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n]
+
+MFD_DA9052_I2C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+DRM_DISPLAY_CONNECTOR: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+CC_OPTIMIZE_FOR_SIZE: n => no
+    Direct dependencies:  <choice>
+

@@ -1,0 +1,30 @@
+SENSORS_W83795: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+INPUT_GPIO_ROTARY_ENCODER: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+CRC16: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BT [=n] && NET [=n] && !S390 && (RFKILL [=n] || !RFKILL [=n]) || BATMAN_ADV_BLA [=n] && NET [=n] && BATMAN_ADV [=n] && INET [=n] || MKISS [=n] && NET [=n] && HAMRADIO [=n] && AX25 [=n] && TTY [=n] || LAN743X [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MICROCHIP [=n] && PCI [=n] || SGI_IOC3_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SGI [=n] && PCI [=n] && SGI_MFD_IOC3 [=n] || USB_NET_SMSC75XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_SMSC95XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || KEYBOARD_APPLESPI [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && ACPI [=n] && EFI [=y] && SPI [=n] && (X86 || COMPILE_TEST [=y]) && LEDS_CLASS [=y] || HMC_DRV [=n] && S390 || W1_SLAVE_DS2406 [=n] && W1 [=y] || W1_SLAVE_DS2423 [=n] && W1 [=y] || W1_SLAVE_DS2433_CRC [=n] && W1 [=y] && W1_SLAVE_DS2433 [=n] || W1_SLAVE_DS250X [=y] && W1 [=y] || W1_SLAVE_DS28E04 [=y] && W1 [=y] || W1_SLAVE_DS28E17 [=y] && W1 [=y] && I2C [=y] || SCD30_SERIAL [=n] && IIO [=y] && SCD30_CORE [=n] && SERIAL_DEV_BUS [=y] || EXT4_FS [=n] && BLOCK [=n] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=y] && MTD_UBI [=n] || CRYPTO_DEV_ATMEL_ECC [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && I2C [=y] || CRYPTO_DEV_ATMEL_SHA204A [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && I2C [=y]
+
+W1_SLAVE_DS2433_CRC: n => yes
+    Direct dependencies:  W1 [=y] && W1_SLAVE_DS2433 [=n]
+
+CGROUP_SCHED: y => no
+    Direct dependencies:  CGROUPS [=y]
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+
+SENSORS_ARM_SCMI: n => yes
+    Direct dependencies:  HWMON [=n] && ARM_SCMI_PROTOCOL [=y] && (THERMAL [=y] || !THERMAL_OF [=n])
+
+STRICT_KERNEL_RWX: y => no
+    Direct dependencies:  ARCH_HAS_STRICT_KERNEL_RWX [=y]
+
+SCSI_SPI_ATTRS: n => yes
+    Direct dependencies:  SCSI [=n]
+    Reverse dependencies: SCSI_AHA152X [=n] && SCSI_LOWLEVEL [=n] && ISA && SCSI [=n] || SCSI_AIC7XXX [=n] && SCSI_LOWLEVEL [=n] && (PCI [=n] || EISA [=n]) && SCSI [=n] || SCSI_AIC79XX [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_DMX3191D [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_GENERIC_NCR5380 [=n] && SCSI_LOWLEVEL [=n] && ISA && SCSI [=n] && HAS_IOPORT_MAP [=n] || SCSI_LASI700 [=n] && SCSI_LOWLEVEL [=n] && GSC && SCSI [=n] || SCSI_SNI_53C710 [=n] && SCSI_LOWLEVEL [=n] && SNI_RM && SCSI [=n] || SCSI_SYM53C8XX_2 [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_ZALON [=n] && SCSI_LOWLEVEL [=n] && GSC && SCSI [=n] || SCSI_SIM710 [=n] && SCSI_LOWLEVEL [=n] && EISA [=n] && SCSI [=n] || SCSI_AM53C974 [=n] && SCSI_LOWLEVEL [=n] && PCI [=n] && SCSI [=n] || SCSI_ACORNSCSI_3 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || SCSI_CUMANA_1 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || SCSI_OAK1 [=n] && SCSI_LOWLEVEL [=n] && ARCH_ACORN && SCSI [=n] || JAZZ_ESP [=n] && SCSI_LOWLEVEL [=n] && MACH_JAZZ && SCSI [=n] || SCSI_A4000T [=n] && SCSI_LOWLEVEL [=n] && AMIGA && SCSI [=n] || SCSI_ZORRO7XX [=n] && SCSI_LOWLEVEL [=n] && ZORRO && SCSI [=n] || SCSI_ZORRO_ESP [=n] && SCSI_LOWLEVEL [=n] && ZORRO && SCSI [=n] || ATARI_SCSI [=n] && SCSI_LOWLEVEL [=n] && ATARI && SCSI [=n] || MAC_SCSI [=n] && SCSI_LOWLEVEL [=n] && MAC && SCSI [=n] || SCSI_MAC_ESP [=n] && SCSI_LOWLEVEL [=n] && MAC && SCSI [=n] || MVME147_SCSI [=n] && SCSI_LOWLEVEL [=n] && MVME147 && SCSI [=n]=y || MVME16x_SCSI [=n] && SCSI_LOWLEVEL [=n] && MVME16x && SCSI [=n] || BVME6000_SCSI [=n] && SCSI_LOWLEVEL [=n] && BVME6000 && SCSI [=n] || SUN3_SCSI [=n] && SCSI_LOWLEVEL [=n] && SUN3 && SCSI [=n] || SUN3X_ESP [=n] && SCSI_LOWLEVEL [=n] && SUN3X && SCSI [=n]=y || SCSI_SUNESP [=n] && SCSI_LOWLEVEL [=n] && SBUS && SCSI [=n] || PCMCIA_AHA152X [=n] && SCSI_LOWLEVEL [=n] && SCSI_LOWLEVEL_PCMCIA [=n] && SCSI [=n] && PCMCIA [=n] && m && MODULES [=n] || FUSION_SPI [=n] && FUSION [=n] && PCI [=n] && SCSI [=n]
+
+FB_VIRTUAL: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n]
+

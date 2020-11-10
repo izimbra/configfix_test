@@ -1,0 +1,12 @@
+PREEMPT_NONE: n => no
+    Direct dependencies:  <choice>
+
+FPGA_MGR_ICE40_SPI: n => mod
+    Direct dependencies:  FPGA [=n] && OF [=y] && SPI [=y]
+
+USB_DWC3_DUAL_ROLE: n => yes
+    Direct dependencies:  <choice> && (USB [=y]=y || USB [=y]=USB_DWC3 [=m]) && (USB_GADGET [=n]=y || USB_GADGET [=n]=USB_DWC3 [=m]) && (EXTCON [=y]=y || EXTCON [=y]=USB_DWC3 [=m])
+
+NTFS_DEBUG: n => yes
+    Direct dependencies:  BLOCK [=n] && NTFS_FS [=n]
+

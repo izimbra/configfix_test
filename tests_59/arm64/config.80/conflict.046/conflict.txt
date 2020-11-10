@@ -1,0 +1,32 @@
+USB_MICROTEK: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && SCSI [=n]
+
+JOYSTICK_ADI: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n] && ADI [=n]!=m
+
+DRM_TOSHIBA_TC358767: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && DRM_BRIDGE [=y] && OF [=y]
+
+SENSORS_XGENE: m => yes
+    Direct dependencies:  HWMON [=y] && (XGENE_SLIMPRO_MBOX [=m] || PCC [=n])
+
+LEDS_TRIGGER_AUDIO: m => no
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=y]
+    Reverse dependencies: SND_HDA_GENERIC [=m] && SOUND [=m] && !UML && SND [=m] && SND_HDA [=m] && SND_HDA_GENERIC_LEDS [=y] || HUAWEI_WMI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=y] || DELL_LAPTOP [=n] && X86 && X86_PLATFORM_DEVICES [=n] && DMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=y] || RFKILL [=y]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n] || THINKPAD_ACPI [=n] && X86 && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=y] || RFKILL [=y]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y]
+
+VIRTIO_MMIO_CMDLINE_DEVICES: n => yes
+    Direct dependencies:  VIRTIO_MENU [=n] && VIRTIO_MMIO [=n]
+
+JFS_POSIX_ACL: n => yes
+    Direct dependencies:  BLOCK [=n] && JFS_FS [=n]
+
+MSM_LCC_8960: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+MTD_MTDRAM: m => yes
+    Direct dependencies:  MTD [=m] && HAS_IOMEM [=y]
+
+MEMBARRIER: y => no
+    Direct dependencies:  y
+    Reverse dependencies: RSEQ [=y] && HAVE_RSEQ [=y]
+

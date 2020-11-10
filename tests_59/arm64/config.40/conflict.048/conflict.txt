@@ -1,0 +1,30 @@
+CDROM_PKTCDVD: n => yes
+    Direct dependencies:  BLK_DEV [=n] && !UML
+
+SENSORS_W83795: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+GPIO_SIOX: n => yes
+    Direct dependencies:  GPIOLIB [=y] && HAS_IOMEM [=y] && SIOX [=n]
+
+SENSORS_ADT7310: n => yes
+    Direct dependencies:  HWMON [=n] && SPI_MASTER [=n]
+
+REGULATOR_VEXPRESS: n => yes
+    Direct dependencies:  REGULATOR [=n] && VEXPRESS_CONFIG [=n]
+
+MDM_LCC_9615: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+
+RTC_DRV_MAX8998: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n] && MFD_MAX8998 [=n]
+
+TPS65010: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n] && GPIOLIB [=y]
+
+SPRD_EFUSE: n => yes
+    Direct dependencies:  NVMEM [=y] && (ARCH_SPRD [=n] || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+
+SENSORS_INA209: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+

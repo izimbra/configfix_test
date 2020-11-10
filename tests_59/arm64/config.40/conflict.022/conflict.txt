@@ -1,0 +1,16 @@
+JOYSTICK_GAMECON: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && PARPORT [=n]
+
+LIBNVDIMM: n => yes
+    Direct dependencies:  PHYS_ADDR_T_64BIT [=y] && HAS_IOMEM [=y] && BLK_DEV [=n]
+    Reverse dependencies: ACPI_NFIT [=n] && ACPI [=n] && PHYS_ADDR_T_64BIT [=y] && BLK_DEV [=n] && ARCH_HAS_PMEM_API [=y]
+
+SENSORS_MAX8688: n => yes
+    Direct dependencies:  HWMON [=n] && PMBUS [=n]
+
+MFD_WM8350_I2C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+POWER_RESET_SC27XX: n => yes
+    Direct dependencies:  POWER_RESET [=y] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=n])
+

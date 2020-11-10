@@ -1,0 +1,17 @@
+CHARGER_UCS1002 => yes
+PINCTRL_AS3722 => yes
+DRM_VGEM => yes
+XZ_DEC_ARM => yes
+SPI_XCOMM => yes
+VFIO => yes
+REGULATOR => yes
+I2C => yes
+MFD_AS3722 => yes
+I2C_ALGOBIT => yes
+DRM => yes
+MODULES => yes
+XZ_DEC => mod
+DEBUG_KERNEL => yes
+EXPERT => yes
+ARCH_MMAP_RND_BITS => 16
+SPI => yes

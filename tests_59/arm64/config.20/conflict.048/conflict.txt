@@ -1,0 +1,31 @@
+CGROUP_PERF: n => yes
+    Direct dependencies:  CGROUPS [=n] && PERF_EVENTS [=n]
+
+MSDOS_PARTITION: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+MMC_REALTEK_USB: n => yes
+    Direct dependencies:  MMC [=n] && MISC_RTSX_USB [=n]
+
+LATTICE_ECP3_CONFIG: n => yes
+    Direct dependencies:  SPI [=n] && SYSFS [=y]
+
+GPIO_BD70528: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_ROHM_BD70528 [=n]
+
+RTC_DRV_PCF8563: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+FRAME_POINTER: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && (M68K || UML || SUPERH) || ARCH_WANT_FRAME_POINTERS [=y]
+    Reverse dependencies: ARM64 [=y] || LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=n] && !MIPS && !PPC && !S390 && !MICROBLAZE && !ARM && !ARC && !X86 || LOCKDEP [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] && !MIPS && !PPC && !ARM && !S390 && !MICROBLAZE && !ARC && !X86 || FAULT_INJECTION_STACKTRACE_FILTER [=n] && FAULT_INJECTION_DEBUG_FS [=n] && STACKTRACE_SUPPORT [=y] && !X86_64 && !MIPS && !PPC && !S390 && !MICROBLAZE && !ARM && !ARC && !X86
+
+MMC_STM32_SDMMC: n => yes
+    Direct dependencies:  MMC [=n] && MMC_ARMMMCI [=n]
+
+BRCMSTB_PM: n => yes
+    Direct dependencies:  SOC_BRCMSTB [=n] && PM [=y] && (ARCH_BRCMSTB [=n] || BMIPS_GENERIC)
+
+USB_MUSB_GADGET: n => yes
+    Direct dependencies:  <choice> && (USB_GADGET [=n]=y || USB_GADGET [=n]=USB_MUSB_HDRC [=n]) && HAS_DMA [=y]
+

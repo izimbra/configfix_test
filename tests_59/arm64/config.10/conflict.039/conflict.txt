@@ -1,0 +1,24 @@
+MTD_ONENAND: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+
+MFD_MAX77843: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+MTD_CFI_STAA: n => yes
+    Direct dependencies:  MTD [=n] && MTD_GEN_PROBE [=n]
+
+PINCTRL_SC7180: n => yes
+    Direct dependencies:  PINCTRL [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=y]
+
+RTC_DRV_MC13XXX: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && MFD_MC13XXX [=n]
+
+W1_SLAVE_DS2423: n => yes
+    Direct dependencies:  W1 [=n]
+
+SENSORS_W83793: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+REGULATOR_QCOM_SPMI: n => yes
+    Direct dependencies:  REGULATOR [=n] && (SPMI [=n] || COMPILE_TEST [=n])
+

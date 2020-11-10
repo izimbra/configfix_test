@@ -1,0 +1,31 @@
+SYSTEM_TRUSTED_KEYRING: y => no
+    Direct dependencies:  CRYPTO [=y] && KEYS [=y] && ASYMMETRIC_KEY_TYPE [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y]
+
+DRM_PANEL_ARM_VERSATILE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && MFD_SYSCON [=y]
+
+BACKLIGHT_QCOM_WLED: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+
+MQ_IOSCHED_DEADLINE: n => mod
+    Direct dependencies:  BLOCK [=n]
+    Reverse dependencies: BLK_DEV_ZONED [=n] && BLOCK [=n]
+
+BLK_DEV_THROTTLING_LOW: n => yes
+    Direct dependencies:  BLOCK [=n] && BLK_DEV_THROTTLING [=n]
+
+USB_MUSB_GADGET: n => yes
+    Direct dependencies:  <choice> && (USB_GADGET [=n]=y || USB_GADGET [=n]=USB_MUSB_HDRC [=m]) && HAS_DMA [=y]
+
+DRM_TOSHIBA_TC358768: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+CLK_R8A77960: y => no
+    Direct dependencies:  COMMON_CLK [=y] && CLK_RENESAS [=y]
+    Reverse dependencies: CLK_RENESAS [=y] && COMMON_CLK [=y] && ARCH_R8A77960 [=y]
+
+SERIO_LIBPS2: m => no
+    Direct dependencies:  !UML && SERIO [=y] && (SERIO_I8042 [=n] || SERIO_I8042 [=n]=n)
+    Reverse dependencies: KEYBOARD_ATKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || MOUSE_PS2 [=m] && !UML && INPUT [=y] && INPUT_MOUSE [=y]
+

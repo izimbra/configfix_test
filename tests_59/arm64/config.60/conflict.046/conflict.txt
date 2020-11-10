@@ -1,0 +1,32 @@
+DRM_PANEL_TPO_TD043MTEA1: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && GPIOLIB [=y] && OF [=y] && REGULATOR [=y] && SPI [=y]
+
+USB_MOUSE: n => yes
+    Direct dependencies:  USB_HID [=n]!=y && EXPERT [=y] && USB [=y] && INPUT [=n]
+
+CGROUP_SCHED: n => yes
+    Direct dependencies:  CGROUPS [=n]
+    Reverse dependencies: SCHED_AUTOGROUP [=n]
+
+I2C_PARPORT: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && PARPORT [=n]
+
+JOYSTICK_GRIP: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n]
+
+DRM_PANEL_SAMSUNG_LD9040: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && SPI [=y]
+
+USB_EHCI_HCD_PLATFORM: y => no
+    Direct dependencies:  USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y]
+    Reverse dependencies: USB_HCD_BCMA [=n] && USB_SUPPORT [=y] && USB [=y] && BCMA [=n] && USB_EHCI_HCD [=y] || USB_HCD_SSB [=y] && USB_SUPPORT [=y] && USB [=y] && SSB [=y] && USB_EHCI_HCD [=y] || USB_EHCI_HCD_STI [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y] && (ARCH_STI || COMPILE_TEST [=n]) && OF [=y] || USB_CNS3XXX_EHCI [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y] && (ARCH_CNS3XXX || COMPILE_TEST [=n]) || USB_OCTEON_EHCI [=n] && USB_SUPPORT [=y] && USB [=y] && USB_EHCI_HCD [=y] && CAVIUM_OCTEON_SOC
+
+HID_ELO: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && USB_HID [=n]
+
+EDAC_QCOM: n => yes
+    Direct dependencies:  EDAC [=n] && ARCH_QCOM [=y] && QCOM_LLCC [=y]
+
+RTC_DRV_SC27XX: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=n])
+

@@ -1,0 +1,28 @@
+EXT3_FS: n => yes
+    Direct dependencies:  BLOCK [=n]
+
+W1_SLAVE_DS2408_READBACK: n => yes
+    Direct dependencies:  W1 [=y] && W1_SLAVE_DS2408 [=n]
+
+GPIO_ZYNQ: n => yes
+    Direct dependencies:  GPIOLIB [=y] && HAS_IOMEM [=y] && (ARCH_ZYNQ || ARCH_ZYNQMP [=n])
+
+CGROUPS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: SCHED_AUTOGROUP [=y]
+
+EXTCON_MAX14577: n => yes
+    Direct dependencies:  EXTCON [=y] && MFD_MAX14577 [=n]
+
+EDAC_LEGACY_SYSFS: n => yes
+    Direct dependencies:  EDAC [=n]
+
+SENSORS_LM83: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+MMC_DW_EXYNOS: n => yes
+    Direct dependencies:  MMC [=y] && MMC_DW [=n]
+
+SENSORS_ADM1025: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+

@@ -1,0 +1,21 @@
+DRM_PANEL_LEADTEK_LTK050H3146W: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+
+RTC_DRV_DS1286: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+
+VIRTIO_MMIO_CMDLINE_DEVICES: n => yes
+    Direct dependencies:  VIRTIO_MENU [=n] && VIRTIO_MMIO [=n]
+
+EFI_ARMSTUB_DTB_LOADER: n => yes
+    Direct dependencies:  EFI [=n] && EFI_GENERIC_STUB [=n]
+
+PWRSEQ_SIMPLE: n => yes
+    Direct dependencies:  MMC [=n] && OF [=y]
+
+NUMA_BALANCING: n => yes
+    Direct dependencies:  ARCH_SUPPORTS_NUMA_BALANCING [=y] && !ARCH_WANT_NUMA_VARIABLE_LOCALITY [=n] && SMP [=y] && NUMA [=n] && MIGRATION [=y]
+
+XGENE_PMU: n => yes
+    Direct dependencies:  PERF_EVENTS [=n] && ARCH_XGENE [=y]
+

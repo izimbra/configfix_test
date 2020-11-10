@@ -1,0 +1,23 @@
+PHY_TUSB1210: m => yes
+    Direct dependencies:  USB_ULPI_BUS [=m]
+
+DEBUG_SPINLOCK: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+FS_VERITY_DEBUG: n => yes
+    Direct dependencies:  FS_VERITY [=n]
+
+DEVFREQ_GOV_SIMPLE_ONDEMAND: y => no
+    Direct dependencies:  PM_DEVFREQ [=y]
+    Reverse dependencies: SCSI_UFSHCD [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_DMA [=n] || DRM_LIMA [=n] && HAS_IOMEM [=y] && DRM [=n] && (ARM || ARM64 [=y] || COMPILE_TEST [=y]) && MMU [=y] && COMMON_CLK [=y] && OF [=y] || DRM_PANFROST [=n] && HAS_IOMEM [=y] && DRM [=n] && (ARM || ARM64 [=y] || COMPILE_TEST [=y] && !GENERIC_ATOMIC64 [=n]) && MMU [=y] || ARM_EXYNOS_BUS_DEVFREQ [=y] && PM_DEVFREQ [=y] && (ARCH_EXYNOS [=y] || COMPILE_TEST [=y]) || ARM_IMX8M_DDRC_DEVFREQ [=m] && PM_DEVFREQ [=y] && (ARCH_MXC [=y] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y]) || ARM_TEGRA20_DEVFREQ [=m] && PM_DEVFREQ [=y] && (TEGRA_MC [=n] && TEGRA20_EMC [=n] || COMPILE_TEST [=y]) && COMMON_CLK [=y] || ARM_RK3399_DMC_DEVFREQ [=m] && PM_DEVFREQ [=y] && (ARCH_ROCKCHIP [=n] && HAVE_ARM_SMCCC [=y] || COMPILE_TEST [=y] && HAVE_ARM_SMCCC [=y])
+
+BACKLIGHT_TPS65217: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=m] && MFD_TPS65217 [=n]
+
+IR_MESON: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && (ARCH_MESON [=y] || COMPILE_TEST [=y])
+
+DRM_ANALOGIX_ANX6345: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+

@@ -1,0 +1,16 @@
+SPI_NXP_FLEXSPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_LAYERSCAPE [=n] || HAS_IOMEM [=y])
+
+SENSORS_W83L785TS: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+DRM_PANFROST: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && (ARM || ARM64 [=y] || COMPILE_TEST [=n] && !GENERIC_ATOMIC64 [=n]) && MMU [=y]
+
+IPQ_APSS_PLL: n => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=n]
+    Reverse dependencies: IPQ_APSS_6018 [=n] && COMMON_CLK [=y] && COMMON_CLK_QCOM [=n] && (QCOM_APCS_IPC [=n] || COMPILE_TEST [=n])
+
+LEDS_KTD2692: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS_FLASH [=n] && OF [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

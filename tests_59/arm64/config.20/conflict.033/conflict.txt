@@ -1,0 +1,22 @@
+SENSORS_WM8350: n => yes
+    Direct dependencies:  HWMON [=y] && MFD_WM8350 [=n]
+
+MTD_SWAP: n => yes
+    Direct dependencies:  MTD [=n] && SWAP [=n]
+
+MTD_CFI: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_HYPERBUS [=n] && MTD [=n] && HAS_IOMEM [=y]
+
+HID_APPLE: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+SENSORS_LIS3_I2C: n => yes
+    Direct dependencies:  I2C [=y] && INPUT [=n]
+
+MTD_CFI_I2: n => yes
+    Direct dependencies:  MTD [=n]
+
+DRM_PANEL_LEADTEK_LTK500HD1829: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DRM_PANEL [=y] && OF [=y] && DRM_MIPI_DSI [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+

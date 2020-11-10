@@ -1,0 +1,8 @@
+RTC_DRV_DS1689 => no
+INTEL_TH_GTH => yes
+PPDEV => yes
+FAIR_GROUP_SCHED => no
+INTEL_TH => yes
+PARPORT => yes
+SCHED_AUTOGROUP => no
+CFS_BANDWIDTH => no

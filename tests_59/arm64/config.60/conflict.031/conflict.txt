@@ -1,0 +1,23 @@
+MESON_SECURE_PM_DOMAINS: n => yes
+    Direct dependencies:  (ARCH_MESON [=n] || COMPILE_TEST [=n]) && MESON_SM [=n] && PM [=y] && OF [=y] && HAVE_ARM_SMCCC [=y]
+
+TINYDRM_ST7586: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+ZONE_DEVICE: n => yes
+    Direct dependencies:  MEMORY_HOTPLUG [=y] && MEMORY_HOTREMOVE [=n] && SPARSEMEM_VMEMMAP [=n] && ARCH_HAS_PTE_DEVMAP [=y]
+
+PINCTRL_MESON_A1: n => yes
+    Direct dependencies:  PINCTRL [=y] && PINCTRL_MESON [=n] && ARM64 [=y]
+
+RST_RCAR: n => yes
+    Direct dependencies:  SOC_RENESAS [=n]
+    Reverse dependencies: ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=n] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=n] || ARCH_RCAR_GEN3 [=n] && SOC_RENESAS [=n]
+
+RESET_HISI: y => no
+    Direct dependencies:  COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=n])
+    Reverse dependencies: COMMON_CLK_HI3516CV300 [=y] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=n]) || COMMON_CLK_HI3519 [=y] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=n]) || COMMON_CLK_HI3798CV200 [=n] && COMMON_CLK [=y] && (ARCH_HISI [=y] || COMPILE_TEST [=n])
+
+DRM_ANALOGIX_ANX6345: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+

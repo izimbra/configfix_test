@@ -1,0 +1,33 @@
+PPDEV: n => mod
+    Direct dependencies:  PARPORT [=n]
+
+CHARGER_MAX77693: n => mod
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MAX77693 [=n]
+
+GPIO_SYSCON: y => mod
+    Direct dependencies:  GPIOLIB [=y] && HAS_IOMEM [=y] && MFD_SYSCON [=y] && OF [=y]
+    Reverse dependencies: GPIO_SAMA5D2_PIOBU [=y] && GPIOLIB [=y] && HAS_IOMEM [=y] && MFD_SYSCON [=y] && OF_GPIO [=y]
+
+SC_LPASS_CORECC_7180: m => yes
+    Direct dependencies:  COMMON_CLK [=y] && COMMON_CLK_QCOM [=m]
+
+SCSI_DH_EMC: n => mod
+    Direct dependencies:  SCSI_DH [=n] && SCSI [=n]
+
+BLK_CGROUP_IOLATENCY: n => yes
+    Direct dependencies:  BLOCK [=n] && BLK_CGROUP [=n]
+
+USB_FUNCTIONFS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+
+USB_FUNCTIONFS_GENERIC: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && USB_FUNCTIONFS [=n]
+    Reverse dependencies: USB_FUNCTIONFS [=n] && USB_SUPPORT [=y] && USB_GADGET [=n] && !USB_FUNCTIONFS_ETH [=n] && !USB_FUNCTIONFS_RNDIS [=n]
+
+RMI4_F12: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: HID_RMI [=y] && INPUT [=y] && HID [=y]
+
+DRM_PANEL_OLIMEX_LCD_OLINUXINO: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && I2C [=y] && BACKLIGHT_CLASS_DEVICE [=m]
+

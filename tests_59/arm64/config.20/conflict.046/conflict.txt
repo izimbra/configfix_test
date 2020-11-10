@@ -1,0 +1,32 @@
+I2C_HID: n => yes
+    Direct dependencies:  I2C [=y] && INPUT [=n]
+
+RTC_DRV_88PM80X: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y] && MFD_88PM800 [=n]
+
+MMC_HSQ: n => yes
+    Direct dependencies:  MMC [=n]
+    Reverse dependencies: MMC_SDHCI_SPRD [=n] && MMC [=n] && ARCH_SPRD [=y] && MMC_SDHCI_PLTFM [=n]
+
+MMC_SH_MMCIF: n => yes
+    Direct dependencies:  MMC [=n] && (SUPERH || ARCH_RENESAS [=n] || COMPILE_TEST [=n])
+
+REGULATOR_VEXPRESS: n => yes
+    Direct dependencies:  REGULATOR [=n] && VEXPRESS_CONFIG [=n]
+
+BRCMSTB_PM: n => yes
+    Direct dependencies:  SOC_BRCMSTB [=n] && PM [=y] && (ARCH_BRCMSTB [=n] || BMIPS_GENERIC)
+
+MFD_CROS_EC_DEV: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && CROS_EC [=n]
+    Reverse dependencies: MFD_CROS_EC [=n] && (X86 || ARM || ARM64 [=y] || COMPILE_TEST [=n])
+
+CHARGER_ISP1704: n => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && USB_PHY [=n] && (USB_GADGET [=n] || !USB_GADGET [=n])
+
+USB_LINK_LAYER_TEST: n => yes
+    Direct dependencies:  USB_SUPPORT [=n] && USB [=n]
+
+LP_CONSOLE: n => yes
+    Direct dependencies:  PRINTER [=n]
+

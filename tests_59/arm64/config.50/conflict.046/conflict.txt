@@ -1,0 +1,30 @@
+BOOT_PRINTK_DELAY: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && PRINTK [=n] && GENERIC_CALIBRATE_DELAY [=y]
+
+LEDS_TRIGGER_CAMERA: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=n]
+
+JOLIET: n => yes
+    Direct dependencies:  BLOCK [=n] && ISO9660_FS [=n]
+
+SENSORS_WM8350: n => yes
+    Direct dependencies:  HWMON [=n] && MFD_WM8350 [=y]
+
+USB_SNP_UDC_PLAT: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && OF [=y] && HAS_DMA [=y] && (EXTCON [=y] || EXTCON [=y]=n)
+
+SENSORS_LTC2945: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+USB_GADGETFS: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n]
+
+RTC_DRV_AS3722: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=y] && MFD_AS3722 [=n]
+
+IR_ZX: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=n] && (ARCH_ZX [=y] || COMPILE_TEST [=y])
+
+TYPEC_FUSB302: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && TYPEC [=n] && TYPEC_TCPM [=n] && I2C [=y] && (EXTCON [=y] || !EXTCON [=y])
+

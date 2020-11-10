@@ -1,0 +1,24 @@
+PARPORT_AX88796: n => mod
+    Direct dependencies:  PARPORT [=n]
+
+FPGA_BRIDGE: n => mod
+    Direct dependencies:  FPGA [=n]
+    Reverse dependencies: FPGA_DFL [=n] && FPGA [=n]
+
+HID_MCP2221: m => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && USB_HID [=m] && I2C [=y] && GPIOLIB [=y]
+
+ARM64_SVE: n => yes
+    Direct dependencies:  !KVM [=y] || ARM64_VHE [=n]
+
+TMPFS_XATTR: y => no
+    Direct dependencies:  TMPFS [=y]
+    Reverse dependencies: TMPFS_POSIX_ACL [=y] && TMPFS [=y]
+
+ALTERA_FREEZE_BRIDGE: n => mod
+    Direct dependencies:  FPGA [=n] && FPGA_BRIDGE [=n] && HAS_IOMEM [=y]
+
+DAX: y => no
+    Direct dependencies:  y
+    Reverse dependencies: DAX_DRIVER [=y] || FS_DAX [=y] && BLOCK [=y] && MMU [=y] && !ARM && !MIPS && !SPARC
+

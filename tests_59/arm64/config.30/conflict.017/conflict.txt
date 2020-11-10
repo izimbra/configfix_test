@@ -1,0 +1,13 @@
+CRYPTO_LIB_CHACHA: y => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=y] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=n])
+
+SENSORS_ADM1029: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=n]
+
+DRM_PANEL_ILITEK_ILI9881C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_PANEL [=n] && OF [=y] && DRM_MIPI_DSI [=n] && BACKLIGHT_CLASS_DEVICE [=n]
+
+GREENASIA_FF: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && HID_GREENASIA [=n]
+

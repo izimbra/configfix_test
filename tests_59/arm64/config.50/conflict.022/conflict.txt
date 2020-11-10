@@ -1,0 +1,15 @@
+SCSI_LOGGING: n => yes
+    Direct dependencies:  SCSI [=n]
+
+INPUT_ATI_REMOTE2: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && USB_ARCH_HAS_HCD [=y]
+
+USB_CHIPIDEA_GENERIC: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_CHIPIDEA [=n]
+
+SENSORS_ADM1025: n => yes
+    Direct dependencies:  HWMON [=n] && I2C [=y]
+
+W1_SLAVE_DS2433_CRC: n => yes
+    Direct dependencies:  W1 [=y] && W1_SLAVE_DS2433 [=n]
+

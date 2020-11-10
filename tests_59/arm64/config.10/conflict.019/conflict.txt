@@ -1,0 +1,12 @@
+I2C_QCOM_CCI: n => yes
+    Direct dependencies:  I2C [=n] && HAS_IOMEM [=y] && (ARCH_QCOM [=n] || COMPILE_TEST [=n])
+
+LEDS_CR0014114: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && SPI [=n] && OF [=y]
+
+VIRTIO_IOMMU: n => yes
+    Direct dependencies:  IOMMU_SUPPORT [=n] && VIRTIO [=n] && ARM64 [=y]
+
+DRM_HDLCD: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && OF [=y] && (ARM || ARM64 [=y] || COMPILE_TEST [=n]) && COMMON_CLK [=y]
+

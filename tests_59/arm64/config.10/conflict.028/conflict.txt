@@ -1,0 +1,19 @@
+SENSORS_NCT6775: n => yes
+    Direct dependencies:  HWMON [=n] && !PPC
+
+REGULATOR_LM363X: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_TI_LMU [=n]
+
+RTC_DRV_ISL1208: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && I2C [=n]
+
+INPUT_MAX8925_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_MAX8925 [=n]
+
+RTC_DRV_DA9052: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && PMIC_DA9052 [=n]
+
+MTD_RAM: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_PLATRAM [=n] && MTD [=n] && HAS_IOMEM [=y]
+

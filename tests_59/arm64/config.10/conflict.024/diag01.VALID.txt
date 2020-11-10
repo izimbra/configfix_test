@@ -1,0 +1,15 @@
+SENSORS_LM87 => yes
+UHID => yes
+COREDUMP => no
+USB_TRANCEVIBRATOR => yes
+SIGNALFD => no
+HWMON => yes
+I2C => yes
+HID => yes
+DEBUG_KERNEL => yes
+EXPERT => yes
+ARCH_MMAP_RND_BITS => 16
+ELF_CORE => no
+USB_AUTOSUSPEND_DELAY => 1
+USB => yes
+USB_SUPPORT => yes

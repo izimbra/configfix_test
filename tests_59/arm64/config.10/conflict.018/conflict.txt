@@ -1,0 +1,13 @@
+DEBUG_DEVRES: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+CRYPTO_MANAGER: n => yes
+    Direct dependencies:  CRYPTO [=n]
+    Reverse dependencies: RXKAD [=n] && NET [=n] && AF_RXRPC [=n] || CRYPTO_USER [=n] && CRYPTO [=n] && NET [=n] || CRYPTO_PCRYPT [=n] && CRYPTO [=n] && SMP [=y] || CRYPTO_CRYPTD [=n] && CRYPTO [=n] || CRYPTO_AUTHENC [=n] && CRYPTO [=n] || CRYPTO_TEST [=n] && CRYPTO [=n] && m && MODULES [=n] || CRYPTO_RSA [=n] && CRYPTO [=n] || CRYPTO_CCM [=n] && CRYPTO [=n] || CRYPTO_GCM [=n] && CRYPTO [=n] || CRYPTO_CHACHA20POLY1305 [=n] && CRYPTO [=n] || CRYPTO_SEQIV [=n] && CRYPTO [=n] || CRYPTO_ECHAINIV [=n] && CRYPTO [=n] || CRYPTO_CBC [=n] && CRYPTO [=n] || CRYPTO_CFB [=n] && CRYPTO [=n] || CRYPTO_CTR [=n] && CRYPTO [=n] || CRYPTO_CTS [=n] && CRYPTO [=n] || CRYPTO_ECB [=n] && CRYPTO [=n] || CRYPTO_LRW [=n] && CRYPTO [=n] || CRYPTO_OFB [=n] && CRYPTO [=n] || CRYPTO_PCBC [=n] && CRYPTO [=n] || CRYPTO_XTS [=n] && CRYPTO [=n] || CRYPTO_KEYWRAP [=n] && CRYPTO [=n] || CRYPTO_ADIANTUM [=n] && CRYPTO [=n] || CRYPTO_CMAC [=n] && CRYPTO [=n] || CRYPTO_HMAC [=n] && CRYPTO [=n] || CRYPTO_XCBC [=n] && CRYPTO [=n] || CRYPTO_VMAC [=n] && CRYPTO [=n]
+
+DEBUG_LOCKING_API_SELFTESTS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+IPMI_SSIF: n => yes
+    Direct dependencies:  IPMI_HANDLER [=n]
+

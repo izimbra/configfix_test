@@ -1,0 +1,28 @@
+DRM_CDNS_DSI: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_BRIDGE [=n] && OF [=y]
+
+TINYDRM_ILI9341: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=y]
+
+SCSI_DH_HP_SW: n => mod
+    Direct dependencies:  SCSI_DH [=n] && SCSI [=n]
+
+USB_RENESAS_USBHS_UDC: n => mod
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && USB_RENESAS_USBHS [=n]
+
+SAMPLE_VFIO_MDEV_MTTY: n => mod
+    Direct dependencies:  SAMPLES [=y] && VFIO_MDEV_DEVICE [=n] && m && MODULES [=y]
+
+MMC_SH_MMCIF: m => yes
+    Direct dependencies:  MMC [=m] && (SUPERH || ARCH_RENESAS [=y] || COMPILE_TEST [=y])
+
+REGULATOR_MAX8925: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_MAX8925 [=n]
+
+PINCTRL_RK805: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_RK808 [=n]
+
+USB_FUNCTIONFS_GENERIC: n => yes
+    Direct dependencies:  USB_SUPPORT [=y] && USB_GADGET [=n] && USB_FUNCTIONFS [=n]
+    Reverse dependencies: USB_FUNCTIONFS [=n] && USB_SUPPORT [=y] && USB_GADGET [=n] && !USB_FUNCTIONFS_ETH [=n] && !USB_FUNCTIONFS_RNDIS [=n]
+

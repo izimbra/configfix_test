@@ -1,0 +1,8 @@
+GPIO_LP3943 => mod
+DRM_TOSHIBA_TC358768 => yes
+DRM_MXSFB => mod
+DRM_I2C_NXP_TDA9950 => mod
+MFD_LP3943 => mod
+SYNC_FILE => yes
+DRM => yes
+FB => yes
