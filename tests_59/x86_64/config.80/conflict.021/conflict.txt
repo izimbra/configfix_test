@@ -1,0 +1,17 @@
+WLAN_VENDOR_RSI: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n]
+
+ACPI_THERMAL: n => yes
+    Direct dependencies:  ACPI [=n] && ACPI_PROCESSOR [=n]
+
+EXTCON: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CHARGER_MANAGER [=y] && POWER_SUPPLY [=y] && REGULATOR [=y] || USB_CHIPIDEA [=y] && USB_SUPPORT [=y] && (USB_EHCI_HCD [=n] && USB_GADGET [=y] || USB_EHCI_HCD [=n] && !USB_GADGET [=y] || !USB_EHCI_HCD [=n] && USB_GADGET [=y]) && HAS_DMA [=y] || USB_PHY [=y] && USB_SUPPORT [=y] || PHY_NS2_USB_DRD [=y] && OF [=y] && (ARCH_BCM_IPROC || COMPILE_TEST [=y]) || PHY_ROCKCHIP_TYPEC [=n] && OF [=y] && (ARCH_ROCKCHIP || COMPILE_TEST [=y])
+
+DNS_RESOLVER: y => no
+    Direct dependencies:  NET [=y] && KEYS [=y]
+    Reverse dependencies: CEPH_LIB_USE_DNS_RESOLVER [=y] && NET [=y] && CEPH_LIB [=y] || NFS_USE_KERNEL_DNS [=n] && NETWORK_FILESYSTEMS [=y] && NFS_V4 [=n] && !NFS_USE_LEGACY_DNS [=n] || CIFS_UPCALL [=n] && NETWORK_FILESYSTEMS [=y] && CIFS [=n] || CIFS_DFS_UPCALL [=n] && NETWORK_FILESYSTEMS [=y] && CIFS [=n] || AFS_FS [=y] && NETWORK_FILESYSTEMS [=y] && INET [=y]
+
+INTEL_TELEMETRY: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && X86_64 [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_PUNIT_IPC [=y]
+

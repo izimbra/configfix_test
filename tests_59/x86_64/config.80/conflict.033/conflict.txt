@@ -1,0 +1,22 @@
+TMPFS: y => no
+    Direct dependencies:  SHMEM [=y]
+    Reverse dependencies: DRM_I915 [=y] && HAS_IOMEM [=y] && DRM [=y] && X86 [=y] && PCI [=y] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=y] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=y] && HAS_IOMEM [=y] && DRM [=y] && MMU [=y]
+
+ACPI_PROCESSOR_AGGREGATOR: n => yes
+    Direct dependencies:  ACPI [=n] && ACPI_PROCESSOR [=n] && X86 [=y]
+
+MFD_CS47L35: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n]
+
+IR_NUVOTON: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && (PNP [=n] || COMPILE_TEST [=y]) && RC_CORE [=y]
+
+CPU_FREQ_DEFAULT_GOV_PERFORMANCE: y => no
+    Direct dependencies:  <choice>
+
+PLIP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PARPORT [=y]
+
+NET_VENDOR_SOLARFLARE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+

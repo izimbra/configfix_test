@@ -1,0 +1,19 @@
+TI_DAC7612: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n] && GPIOLIB [=y]
+
+MAX5481: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+SENSORS_TMP421: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+NET_VENDOR_NATSEMI: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+NF_NAT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+    Reverse dependencies: NFT_NAT [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && (NF_TABLES_IPV4 [=n] || NF_TABLES_IPV6 [=n]) || IP_NF_NAT [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NF_CONNTRACK [=n] || IP6_NF_NAT [=n] && NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+IPV6_SIT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+

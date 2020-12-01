@@ -1,0 +1,15 @@
+CEPH_LIB_USE_DNS_RESOLVER: n => yes
+    Direct dependencies:  NET [=n] && CEPH_LIB [=n]
+
+JOYSTICK_SPACEORB: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+QSEMI_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+SENSORS_IBM_CFFPS: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n] && LEDS_CLASS [=y]
+
+JOYSTICK_STINGER: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+

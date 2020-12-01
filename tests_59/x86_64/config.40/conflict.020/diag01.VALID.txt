@@ -1,0 +1,10 @@
+AD7291 => mod
+FB_SM501 => yes
+NET_SWITCHDEV => yes
+MXM_WMI => yes
+IIO => mod
+MFD_SM501 => yes
+NET => yes
+INET => yes
+X86_PLATFORM_DEVICES => yes
+ACPI_WMI => yes

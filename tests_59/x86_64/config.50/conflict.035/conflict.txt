@@ -1,0 +1,23 @@
+VIDEO_SAA6752HS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_SAA7134 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_DEV [=n] && PCI [=y] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+IPV6: y => no
+    Direct dependencies:  NET [=y] && INET [=y]
+    Reverse dependencies: MPTCP_IPV6 [=y] && NET [=y] && INET [=y] && MPTCP [=y]
+
+DEBUG_FS_DISALLOW_MOUNT: n => no
+    Direct dependencies:  <choice>
+
+NETFILTER_XT_TARGET_NFLOG: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NETFILTER_XTABLES [=n]
+
+MAX5481: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+IP_VS_DEBUG: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_VS [=n]
+
+X86_UMIP: y => no
+    Direct dependencies:  y
+

@@ -1,0 +1,14 @@
+IP_VS_OVF => yes
+INPUT_ADXL34X_I2C => yes
+MTD_QINFO_PROBE => no
+INET_ESP_OFFLOAD => yes
+LEDS_GPIO => mod
+AD7746 => yes
+IP_VS => yes
+IP_VS_IPV6 => no
+NF_CONNTRACK => yes
+INPUT_ADXL34X => yes
+MTD_LPDDR => no
+INET_ESP => yes
+PCENGINES_APU2 => no
+STAGING => yes

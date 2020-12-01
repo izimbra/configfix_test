@@ -1,0 +1,33 @@
+TCG_TIS: n => yes
+    Direct dependencies:  TCG_TPM [=n] && (X86 [=y] || OF [=n])
+    Reverse dependencies: IMA [=n] && INTEGRITY [=n] && TCG_TPM [=n] && X86 [=y]
+
+INTEL_INT0002_VGPIO: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && GPIOLIB [=y] && ACPI [=n]
+
+CROS_EC_SYSFS: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n] && SYSFS [=y]
+
+CRC16: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BT [=n] && NET [=n] && !S390 && (RFKILL [=n] || !RFKILL [=n]) || BATMAN_ADV_BLA [=n] && NET [=n] && BATMAN_ADV [=n] && INET [=n] || MKISS [=n] && NET [=n] && HAMRADIO [=n] && AX25 [=n] && TTY [=y] || LAN743X [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MICROCHIP [=n] && PCI [=y] || SGI_IOC3_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SGI [=n] && PCI [=y] && SGI_MFD_IOC3 [=n] || USB_NET_SMSC75XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || USB_NET_SMSC95XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n] && USB_USBNET [=n] || KEYBOARD_APPLESPI [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && ACPI [=n] && EFI [=n] && SPI [=n] && (X86 [=y] || COMPILE_TEST [=n]) && LEDS_CLASS [=n] || HMC_DRV [=n] && S390 || W1_SLAVE_DS2406 [=n] && W1 [=n] || W1_SLAVE_DS2423 [=n] && W1 [=n] || W1_SLAVE_DS2433_CRC [=n] && W1 [=n] && W1_SLAVE_DS2433 [=n] || W1_SLAVE_DS250X [=n] && W1 [=n] || W1_SLAVE_DS28E04 [=n] && W1 [=n] || W1_SLAVE_DS28E17 [=n] && W1 [=n] && I2C [=y] || SCD30_SERIAL [=n] && IIO [=n] && SCD30_CORE [=n] && SERIAL_DEV_BUS [=n] || EXT4_FS [=n] && BLOCK [=y] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=n] && MTD_UBI [=n] || CRYPTO_DEV_ATMEL_ECC [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && I2C [=y] || CRYPTO_DEV_ATMEL_SHA204A [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && I2C [=y]
+
+BATTERY_AXP20X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && MFD_AXP20X [=n] && AXP20X_ADC [=n] && IIO [=n]
+
+QSEMI_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+CPU_IDLE_GOV_LADDER: n => yes
+    Direct dependencies:  CPU_IDLE [=n]
+    Reverse dependencies: CPU_IDLE [=n] && !NO_HZ [=y] && !NO_HZ_IDLE [=y]
+
+TERANETICS_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+PINCTRL_CANNONLAKE: n => yes
+    Direct dependencies:  PINCTRL [=n] && (X86 [=y] || COMPILE_TEST [=n]) && ACPI [=n]
+
+BAREUDP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=n] && (IPV6 [=n] || !IPV6 [=n])
+

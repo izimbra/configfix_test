@@ -1,0 +1,16 @@
+SENSORS_ASPEED: m => yes
+    Direct dependencies:  HWMON [=m]
+
+SENSORS_DELL_SMM: m => yes
+    Direct dependencies:  HWMON [=m] && X86 [=y]
+    Reverse dependencies: I8K [=n]
+
+SENSORS_AMC6821: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+RTC_DRV_DS1286: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+
+DEV_APPLETALK: n => yes
+    Direct dependencies:  NET [=n] && ATALK [=n]
+

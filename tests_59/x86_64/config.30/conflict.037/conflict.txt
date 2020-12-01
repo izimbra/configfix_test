@@ -1,0 +1,27 @@
+HW_RANDOM_BA431: n => yes
+    Direct dependencies:  HW_RANDOM [=n] && HAS_IOMEM [=y]
+
+NET_VENDOR_BROADCOM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (SSB_POSSIBLE [=y] && HAS_DMA [=y] || PCI [=n] || BCM63XX || SIBYTE_SB1xxx_SOC)
+    Reverse dependencies: SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=y] && SCSI [=y] && NET [=n] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) || SCSI_BNX2X_FCOE [=n] && SCSI_LOWLEVEL [=y] && SCSI [=y] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) && LIBFC [=n] && LIBFCOE [=n] || INFINIBAND_BNXT_RE [=n] && INFINIBAND [=n] && (INFINIBAND_USER_ACCESS [=n] || !INFINIBAND_USER_ACCESS [=n]) && 64BIT [=y] && ETHERNET [=n] && NETDEVICES [=n] && PCI [=n] && INET [=n] && DCB [=n]
+
+REGULATOR_AAT2870: n => mod
+    Direct dependencies:  REGULATOR [=n] && MFD_AAT2870_CORE [=n]
+
+NET_DSA_TAG_GSWIP: n => yes
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_LANTIQ_GSWIP [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n]
+
+MEDIA_TUNER_E4000: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+    Reverse dependencies: DVB_USB_RTL28XXU [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && I2C_MUX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] && VIDEO_V4L2 [=n]
+
+TI_TLC4541: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+SENSORS_NTC_THERMISTOR: n => yes
+    Direct dependencies:  HWMON [=m] && (!OF [=n] || IIO [=y]=n || IIO [=y]) && (THERMAL [=y] || !THERMAL_OF [=n])
+
+SENSORS_NCT6683: m => yes
+    Direct dependencies:  HWMON [=m] && !PPC
+

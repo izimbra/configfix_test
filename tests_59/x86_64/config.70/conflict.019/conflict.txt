@@ -1,0 +1,13 @@
+PSTORE_RAM: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=n] && PSTORE [=n] && HAS_IOMEM [=y]
+
+KALLSYMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: KPROBES [=y] && MODULES [=y] && HAVE_KPROBES [=y] || LATENCYTOP [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || DEBUG_KMEMLEAK [=y] && DEBUG_KERNEL [=y] && HAVE_DEBUG_KMEMLEAK [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || FUNCTION_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y] || STACK_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y] || FTRACE_SYSCALLS [=n] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_SYSCALL_TRACEPOINTS [=y]
+
+QSEMI_PHY: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+SENSORS_G762: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

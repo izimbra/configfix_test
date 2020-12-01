@@ -1,0 +1,13 @@
+W1_SLAVE_DS2431: n => yes
+    Direct dependencies:  W1 [=n]
+
+MFD_AS3711: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+MFD_CS47L35: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n]
+
+CPU_FREQ_GOV_USERSPACE: n => yes
+    Direct dependencies:  CPU_FREQ [=n]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_USERSPACE [=n] && <choice>
+

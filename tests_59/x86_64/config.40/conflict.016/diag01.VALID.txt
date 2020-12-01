@@ -1,0 +1,13 @@
+NET_VENDOR_TI => yes
+INET_ESP_OFFLOAD => yes
+I2C_MUX_LTC4306 => yes
+INFINIBAND => mod
+ETHERNET => yes
+NETDEVICES => yes
+PCI => yes
+NET => yes
+INET_ESP => yes
+INET => yes
+CRYPTO_AUTHENC => yes
+CRYPTO_ECHAINIV => yes
+I2C_MUX => yes

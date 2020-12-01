@@ -1,0 +1,13 @@
+ACPI_ALS => mod
+PINCTRL_SUNRISEPOINT => mod
+BACKLIGHT_PCF50633 => yes
+HID_ORTEK => mod
+ACPI => yes
+PNP => yes
+X86_PLATFORM_DEVICES => yes
+ACPI_WMI => yes
+MXM_WMI => yes
+ACPI_VIDEO => mod
+INPUT => yes
+MFD_PCF50633 => yes
+HID => mod

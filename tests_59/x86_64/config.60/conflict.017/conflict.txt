@@ -1,0 +1,12 @@
+MICREL_KS8995MA: n => yes
+    Direct dependencies:  NETDEVICES [=y] && SPI [=n]
+
+SPI_SIFIVE: n => mod
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+
+SENSORS_TPS53679: n => mod
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+MMA7455_SPI: n => mod
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=n]
+

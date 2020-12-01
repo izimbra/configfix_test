@@ -1,0 +1,30 @@
+INTEL_RST: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n]
+
+MPTCP: n => yes
+    Direct dependencies:  NET [=y] && INET [=n]
+    Reverse dependencies: MPTCP_KUNIT_TESTS [=n] && NET [=y] && INET [=n] && KUNIT [=n]
+
+FB_TFT_SSD1289: n => mod
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+MIGRATION: y => no
+    Direct dependencies:  (NUMA [=n] || ARCH_ENABLE_MEMORY_HOTREMOVE [=n] || COMPACTION [=y] || CMA [=y]) && MMU [=y]
+    Reverse dependencies: COMPACTION [=y] && MMU [=y] || CMA [=y] && MMU [=y]
+
+GPIO_TWL6040: n => yes
+    Direct dependencies:  GPIOLIB [=y] && TWL6040_CORE [=n]
+
+CRYPTO_CHACHA20POLY1305: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+BMC150_ACCEL: m => yes
+    Direct dependencies:  IIO [=m]
+
+CPU_FREQ_DEFAULT_GOV_PERFORMANCE: y => no
+    Direct dependencies:  <choice>
+
+NET_DSA_MT7530: n => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+

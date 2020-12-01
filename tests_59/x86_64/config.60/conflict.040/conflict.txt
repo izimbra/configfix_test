@@ -1,0 +1,24 @@
+BMC150_ACCEL: m => yes
+    Direct dependencies:  IIO [=m]
+
+MEMORY_HOTPLUG_DEFAULT_ONLINE: n => yes
+    Direct dependencies:  MEMORY_HOTPLUG [=n]
+
+AXP20X_ADC: m => yes
+    Direct dependencies:  IIO [=m] && MFD_AXP20X [=y]
+
+IIO_CROS_EC_SENSORS_CORE: n => mod
+    Direct dependencies:  IIO [=m] && SYSFS [=y] && CROS_EC_SENSORHUB [=n]
+
+HID_MICROSOFT: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+GOOGLE_VPD: n => yes
+    Direct dependencies:  GOOGLE_FIRMWARE [=n] && GOOGLE_COREBOOT_TABLE [=n]
+
+HID_WALTOP: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+ACPI_SBS: n => yes
+    Direct dependencies:  ACPI [=n] && X86 [=y]
+

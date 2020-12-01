@@ -1,0 +1,26 @@
+TRUSTED_KEYS: n => yes
+    Direct dependencies:  KEYS [=y] && TCG_TPM [=m]
+
+NET_CLS_U32: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+NETFILTER_NETLINK_LOG: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+    Reverse dependencies: NETFILTER_XT_TARGET_NFLOG [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n]
+
+AD7476: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+BATMAN_ADV: n => yes
+    Direct dependencies:  NET [=n]
+
+CRYPTO_LIB_CHACHA: y => mod
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=y] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y])
+
+HIST_TRIGGERS_DEBUG: n => yes
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=y] && HIST_TRIGGERS [=n]
+
+CRYPTO_USER_API_AEAD: n => yes
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+

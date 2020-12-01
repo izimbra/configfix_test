@@ -1,0 +1,12 @@
+CHARGER_MP2629: n => mod
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MP2629 [=n] && MP2629_ADC [=n] && IIO [=y]
+
+I2C_MULTI_INSTANTIATE: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && I2C [=y] && ACPI [=y]
+
+SENSORS_MAX1111: n => yes
+    Direct dependencies:  HWMON [=m] && SPI_MASTER [=n]
+
+HID_MAGICMOUSE: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+

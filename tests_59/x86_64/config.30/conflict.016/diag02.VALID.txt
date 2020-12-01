@@ -1,0 +1,17 @@
+INTEL_VBTN => yes
+IEEE802154_CA8210 => mod
+IPV6_SIT_6RD => yes
+RTC_DRV_TEST => yes
+X86_PLATFORM_DEVICES => yes
+INPUT_SPARSEKMAP => yes
+IEEE802154 => yes
+SPI => yes
+NETDEVICES => yes
+NET => yes
+MAC802154 => mod
+IEEE802154_DRIVERS => yes
+CRYPTO_CCM => mod
+IPV6 => yes
+IPV6_SIT => yes
+INET => yes
+RTC_CLASS => yes

@@ -1,0 +1,27 @@
+AD7766: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+RTC_NVMEM: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+EFI_RUNTIME_MAP: n => yes
+    Direct dependencies:  X86 [=y] && EFI [=n] && KEXEC_CORE [=y]
+
+PSTORE: y => no
+    Direct dependencies:  MISC_FILESYSTEMS [=y]
+    Reverse dependencies: ACPI_APEI [=y] && ACPI [=y] && HAVE_ACPI_APEI [=y]
+
+NF_DUP_NETDEV: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+    Reverse dependencies: NFT_DUP_NETDEV [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n] || NFT_FWD_NETDEV [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+
+ROMFS_BACKED_BY_MTD: y => no
+    Direct dependencies:  <choice> && (MTD [=y]=y || ROMFS_FS [=y]=m && MTD [=y])
+
+UNIX_DIAG: n => yes
+    Direct dependencies:  NET [=y] && UNIX [=n]
+
+POWER_SUPPLY: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_AC [=n] && ACPI [=y] || ACPI_BATTERY [=n] && ACPI [=y] || ACPI_SBS [=n] && ACPI [=y] && X86 [=y] || OLPC_XO1_SCI [=n] && X86_32 [=n] && OLPC [=n] && OLPC_XO1_PM [=n] && GPIO_CS5535 [=n]=y && INPUT [=y]=y || OLPC_XO15_SCI [=n] && X86_32 [=n] && OLPC [=n] && ACPI [=y] || AB8500_CORE [=n] && HAS_IOMEM [=y] && ABX500_CORE [=y] && MFD_DB8500_PRCMU [=n] || DRM_RADEON [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] || HID_BATTERY_STRENGTH [=n] && INPUT [=y] && HID [=y] || HID_ASUS [=n] && INPUT [=y] && HID [=y] && USB_HID [=n] && LEDS_CLASS [=y] && (ASUS_WMI [=n] || ASUS_WMI [=n]=n) || HID_LOGITECH_HIDPP [=n] && INPUT [=y] && HID [=y] && HID_LOGITECH [=y] || HID_SONY [=n] && INPUT [=y] && HID [=y] && USB_HID [=n] && NEW_LEDS [=y] && LEDS_CLASS [=y] || HID_STEAM [=n] && INPUT [=y] && HID [=y] || HID_WACOM [=n] && INPUT [=y] && HID [=y] && USB_HID [=n] || HID_WIIMOTE [=n] && INPUT [=y] && HID [=y] && LEDS_CLASS [=y] || USB_CONN_GPIO [=y] && USB_SUPPORT [=y] && GPIOLIB [=y] || APPLE_MFI_FASTCHARGE [=n] && USB_SUPPORT [=y] && USB [=y] || TYPEC_TCPM [=y] && USB_SUPPORT [=y] && TYPEC [=y] && USB [=y] || DELL_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && DMI [=y] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=y] || ACPI_VIDEO [=y]=n) && (RFKILL [=n] || RFKILL [=n]=n) && SERIO_I8042 [=y] && DELL_SMBIOS [=n]
+

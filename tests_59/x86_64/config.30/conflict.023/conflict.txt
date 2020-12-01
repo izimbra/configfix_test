@@ -1,0 +1,16 @@
+LEDS_PCA955X_GPIO: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_PCA955X [=n] && GPIOLIB [=y]
+
+CROS_EC_CHARDEV: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n]
+
+NET_SCHED: n => yes
+    Direct dependencies:  NET [=n]
+
+PACKET: n => mod
+    Direct dependencies:  NET [=n]
+
+NETFILTER_XT_TARGET_MASQUERADE: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_NAT [=n]
+    Reverse dependencies: IP_NF_TARGET_MASQUERADE [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && IP_NF_NAT [=n] || IP6_NF_TARGET_MASQUERADE [=n] && NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && IP6_NF_NAT [=n]
+

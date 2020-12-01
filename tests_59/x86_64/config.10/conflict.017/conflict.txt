@@ -1,0 +1,12 @@
+PREEMPT_NONE: y => no
+    Direct dependencies:  <choice>
+
+MTD_PCMCIA_ANONYMOUS: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && MTD_PCMCIA [=n]
+
+MFD_TPS65090: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]=y
+
+SENSORS_AD7414: n => yes
+    Direct dependencies:  HWMON [=y] && I2C [=n]
+

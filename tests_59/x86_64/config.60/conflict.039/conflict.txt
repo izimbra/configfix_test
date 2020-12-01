@@ -1,0 +1,24 @@
+ACPI_BATTERY: n => yes
+    Direct dependencies:  ACPI [=n]
+
+PANASONIC_LAPTOP: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && INPUT [=n] && ACPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+NETFILTER_XT_MATCH_STATE: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n]
+
+SPI_DEBUG: n => yes
+    Direct dependencies:  SPI [=n] && DEBUG_KERNEL [=y]
+
+ARCH_MEMORY_PROBE: n => yes
+    Direct dependencies:  X86_64 [=y] && MEMORY_HOTPLUG [=n]
+
+REGULATOR_WM8994: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_WM8994 [=n]
+
+VIDEO_VPX3220: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+TINYDRM_ST7735R: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=n]
+

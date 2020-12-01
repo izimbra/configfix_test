@@ -1,0 +1,22 @@
+RTC_DRV_R9701: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+VIDEO_TW9903: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=y] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+SCTP_DEFAULT_COOKIE_HMAC_MD5: n => yes
+    Direct dependencies:  <choice>
+
+LEDS_TRIGGER_PATTERN: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=n]
+
+CM3232: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+IR_SERIAL_TRANSMITTER: n => yes
+    Direct dependencies:  RC_CORE [=m] && RC_DEVICES [=n] && IR_SERIAL [=n]
+
+LEDS_DA9052: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && PMIC_DA9052 [=n]
+

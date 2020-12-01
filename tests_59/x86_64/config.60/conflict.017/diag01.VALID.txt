@@ -1,0 +1,6 @@
+MICREL_KS8995MA => yes
+SPI_SIFIVE => mod
+SENSORS_TPS53679 => mod
+MMA7455_SPI => mod
+SPI => yes
+PMBUS => mod

@@ -1,0 +1,13 @@
+PAGE_EXTENSION: y => no
+    Direct dependencies:  y
+    Reverse dependencies: IDLE_PAGE_TRACKING [=y] && SYSFS [=y] && MMU [=y] && !64BIT [=y] || PAGE_OWNER [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y]
+
+64BIT: y => no
+    Direct dependencies:  y
+
+INTEL_BXT_PMIC_THERMAL: n => yes
+    Direct dependencies:  THERMAL [=y] && (X86 [=y] || X86_INTEL_QUARK [=n] || COMPILE_TEST [=y]) && X86 [=y] && INTEL_SOC_PMIC_BXTWC [=n] && REGMAP [=y]
+
+WIMAX: m => yes
+    Direct dependencies:  NET [=y] && (RFKILL [=m] || !RFKILL [=m])
+

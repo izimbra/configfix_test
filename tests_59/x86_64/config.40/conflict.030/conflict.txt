@@ -1,0 +1,18 @@
+IIO_CROS_EC_SENSORS: n => mod
+    Direct dependencies:  IIO [=n] && IIO_CROS_EC_SENSORS_CORE [=n]
+
+NETFILTER_XT_MATCH_STATE: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n]
+
+SENSORS_ADCXX: n => mod
+    Direct dependencies:  HWMON [=y] && SPI_MASTER [=n]
+
+INPUT_CMA3000_I2C: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_CMA3000 [=m] && I2C [=y]
+
+SERIO_PARKBD: n => yes
+    Direct dependencies:  !UML && SERIO [=y] && PARPORT [=n]
+
+STACKPROTECTOR_STRONG: n => yes
+    Direct dependencies:  STACKPROTECTOR [=n] && y
+

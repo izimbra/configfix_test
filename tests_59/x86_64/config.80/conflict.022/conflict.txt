@@ -1,0 +1,16 @@
+PPPOL2TP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && L2TP [=y] && PPP [=n]
+
+TOSHIBA_BT_RFKILL: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=n] && (RFKILL [=y] || RFKILL [=y]=n)
+
+INTEL_BXTWC_PMIC_TMU: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && REGMAP [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_SOC_PMIC_BXTWC [=n]
+
+IIO_CROS_EC_SENSORS_CORE: n => yes
+    Direct dependencies:  IIO [=y] && SYSFS [=y] && CROS_EC_SENSORHUB [=n]
+
+FAULT_INJECTION: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: DRM_I915_SELFTEST [=y] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=y]
+

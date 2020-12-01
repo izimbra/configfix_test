@@ -1,0 +1,26 @@
+IP_VS_RR: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_VS [=n]
+
+NET_DSA_TAG_QCA: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_QCA8K [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=n]
+
+PCMCIA_XIRC2PS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_XIRCOM [=n] && PCMCIA [=n]
+
+GREYBUS_FIRMWARE: n => yes
+    Direct dependencies:  STAGING [=y] && GREYBUS [=n] && SPI [=n]
+
+HARDLOCKUP_DETECTOR: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && !S390 && (HAVE_HARDLOCKUP_DETECTOR_PERF [=y] || HAVE_HARDLOCKUP_DETECTOR_ARCH [=n])
+
+ARCH_CPUIDLE_HALTPOLL: n => yes
+    Direct dependencies:  HYPERVISOR_GUEST [=n]
+    Reverse dependencies: KVM_GUEST [=n] && HYPERVISOR_GUEST [=n] && PARAVIRT [=n]
+
+AD5755: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+FAULT_INJECTION_DEBUG_FS: n => yes
+    Direct dependencies:  FAULT_INJECTION [=n] && SYSFS [=y] && DEBUG_FS [=y]
+

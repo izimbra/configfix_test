@@ -1,0 +1,27 @@
+SCTP_COOKIE_HMAC_MD5: y => no
+    Direct dependencies:  NET [=y] && IP_SCTP [=y]
+    Reverse dependencies: SCTP_DEFAULT_COOKIE_HMAC_MD5 [=y] && <choice>
+
+ACPI_I2C_OPREGION: n => yes
+    Direct dependencies:  I2C [=y]=y && ACPI [=n]
+
+TCG_INFINEON: n => yes
+    Direct dependencies:  TCG_TPM [=n] && PNP [=n]
+
+IR_SERIAL_TRANSMITTER: n => yes
+    Direct dependencies:  RC_CORE [=y] && RC_DEVICES [=n] && IR_SERIAL [=n]
+
+PCMCIA_XIRC2PS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_XIRCOM [=n] && PCMCIA [=y]
+
+ACPI_PROCESSOR: n => yes
+    Direct dependencies:  ACPI [=n] && (X86 [=y] || IA64 || ARM64)
+    Reverse dependencies: X86_INTEL_PSTATE [=y] && CPU_FREQ [=y] && X86 [=y] && ACPI [=n]
+
+EQUALIZER: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+EXPORTFS_BLOCK_OPS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: NFSD_BLOCKLAYOUT [=y] && NETWORK_FILESYSTEMS [=y] && NFSD_V4 [=y] && BLOCK [=y] || NFSD_SCSILAYOUT [=y] && NETWORK_FILESYSTEMS [=y] && NFSD_V4 [=y] && BLOCK [=y]
+

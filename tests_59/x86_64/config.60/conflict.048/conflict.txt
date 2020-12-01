@@ -1,0 +1,32 @@
+CRYPTO_CHACHA20POLY1305: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+NF_REJECT_IPV4: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n]
+    Reverse dependencies: NFT_REJECT_IPV4 [=n] && NET [=y] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV4 [=n] || IP_NF_TARGET_REJECT [=n] && NET [=y] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && IP_NF_FILTER [=n]
+
+SURFACE_3_POWER_OPREGION: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && I2C [=y]
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_DA9062 [=n]
+
+SPI_DW_DMA: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && SPI_DESIGNWARE [=n]
+
+IP_SET_HASH_IP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_SET [=n]
+
+INPUT_GPIO_DECODER: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+EEPROM_AT25: n => yes
+    Direct dependencies:  SPI [=n] && SYSFS [=y]
+
+W1_SLAVE_DS2413: m => yes
+    Direct dependencies:  W1 [=m]
+
+WIREGUARD: n => yes
+    Direct dependencies:  NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=n] && (IPV6 [=n] || !IPV6 [=n])
+

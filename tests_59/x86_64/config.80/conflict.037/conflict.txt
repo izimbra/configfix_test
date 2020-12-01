@@ -1,0 +1,29 @@
+MIGRATION: y => no
+    Direct dependencies:  (NUMA [=n] || ARCH_ENABLE_MEMORY_HOTREMOVE [=y] || COMPACTION [=y] || CMA [=y]) && MMU [=y]
+    Reverse dependencies: COMPACTION [=y] && MMU [=y] || CMA [=y] && MMU [=y]
+
+CRYPTO_GCM: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: TLS [=y] && NET [=y] && INET [=y] || TIPC_CRYPTO [=n] && NET [=y] && TIPC [=n] || XFRM_ESP [=y] && NET [=y] && INET [=y] || MAC80211 [=n] && NET [=y] && WIRELESS [=y] && CFG80211 [=n] || MACSEC [=n] && NETDEVICES [=n] && NET_CORE [=n] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx
+
+NFT_LOG: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=n]
+
+THINKPAD_ACPI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=y] || RFKILL [=y]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y]
+
+SYNTH_EVENTS: y => no
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=y]
+    Reverse dependencies: HIST_TRIGGERS [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && ARCH_HAVE_NMI_SAFE_CMPXCHG [=y]
+
+NET_TEAM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+EXTCON: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CHARGER_MANAGER [=y] && POWER_SUPPLY [=y] && REGULATOR [=y] || USB_CHIPIDEA [=y] && USB_SUPPORT [=y] && (USB_EHCI_HCD [=n] && USB_GADGET [=y] || USB_EHCI_HCD [=n] && !USB_GADGET [=y] || !USB_EHCI_HCD [=n] && USB_GADGET [=y]) && HAS_DMA [=y] || USB_PHY [=y] && USB_SUPPORT [=y] || PHY_NS2_USB_DRD [=y] && OF [=y] && (ARCH_BCM_IPROC || COMPILE_TEST [=y]) || PHY_ROCKCHIP_TYPEC [=n] && OF [=y] && (ARCH_ROCKCHIP || COMPILE_TEST [=y])
+
+PRIME_NUMBERS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: DRM_DEBUG_SELFTEST [=y] && HAS_IOMEM [=y] && DRM [=y] && DEBUG_KERNEL [=y] || DRM_I915_SELFTEST [=y] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=y]
+

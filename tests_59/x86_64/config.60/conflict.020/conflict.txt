@@ -1,0 +1,12 @@
+ACPI_ALS: n => mod
+    Direct dependencies:  IIO [=m] && ACPI [=n]
+
+PINCTRL_SUNRISEPOINT: n => mod
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+BACKLIGHT_PCF50633: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_PCF50633 [=m]
+
+HID_ORTEK: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

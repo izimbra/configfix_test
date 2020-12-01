@@ -1,0 +1,27 @@
+SENSORS_ISL68137: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+TMPFS_XATTR: n => yes
+    Direct dependencies:  TMPFS [=n]
+    Reverse dependencies: TMPFS_POSIX_ACL [=n] && TMPFS [=n]
+
+RTC_DRV_RS5C372: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+
+RMI4_F55: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=n]
+    Reverse dependencies: RMI4_F54 [=n] && !UML && INPUT [=y] && RMI4_CORE [=n] && (VIDEO_V4L2 [=n]=y || RMI4_CORE [=n]=m && VIDEO_V4L2 [=n]=m)
+
+IPV6_OPTIMISTIC_DAD: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+NETFILTER_XT_MATCH_STATE: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n]
+
+SENSORS_RM3100_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+FIXED_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: OF_MDIO [=n] && OF [=n] && PHYLIB [=n] || NET_DSA_BCM_SF2 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n] || NET_DSA_LOOP [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_VITESSE_VSC73XX [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || BCMGENET [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] || BGMAC_BCMA [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && BCMA [=n] && BCMA_HOST_SOC [=n] && (BCM47XX || ARCH_BCM_5301X || COMPILE_TEST [=n]) || BGMAC_PLATFORM [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && (ARCH_BCM_IPROC || COMPILE_TEST [=n]) && OF [=n] || SYSTEMPORT [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] && (NET_DSA [=n] || !NET_DSA [=n]) || UCC_GETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && QUICC_ENGINE [=n] && PPC32 || GIANFAR [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && HAS_DMA [=y] || FSL_DPAA_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FSL_DPAA [=n] && FSL_FMAN [=n] || USB_LAN78XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n]
+

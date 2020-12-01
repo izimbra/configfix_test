@@ -1,0 +1,29 @@
+LEDS_REGULATOR: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && REGULATOR [=y]
+
+INTEL_TH_PTI: n => yes
+    Direct dependencies:  INTEL_TH [=n]
+
+TCG_INFINEON: n => yes
+    Direct dependencies:  TCG_TPM [=n] && PNP [=n]
+
+CROS_EC_DEBUGFS: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n] && DEBUG_FS [=y]
+
+NF_DUP_NETDEV: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+    Reverse dependencies: NFT_DUP_NETDEV [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n] || NFT_FWD_NETDEV [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+
+SCHED_TRACER: n => yes
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=n]
+
+DEBUG_MEMORY_INIT: y => no
+    Direct dependencies:  y
+
+MICROCHIP_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: USB_LAN78XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n]
+
+BME680: n => yes
+    Direct dependencies:  IIO [=n] && (I2C [=y] || SPI [=n])
+

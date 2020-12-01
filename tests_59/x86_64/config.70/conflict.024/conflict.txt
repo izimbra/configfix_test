@@ -1,0 +1,16 @@
+MPLS: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: OPENVSWITCH [=n] && NET [=n] && INET [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n] && (!NF_DEFRAG_IPV6 [=n] || NF_DEFRAG_IPV6 [=n]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=n] || NETFILTER_CONNCOUNT [=n]))
+
+GPIO_KEMPLD: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_KEMPLD [=m]
+
+NET_CLS_FLOW: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+AFE4403: n => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+LTC2497: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

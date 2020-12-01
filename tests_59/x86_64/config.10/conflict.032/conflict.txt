@@ -1,0 +1,22 @@
+HP206C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+HWLAT_TRACER: n => yes
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=n]
+
+INTEL_WMI_THUNDERBOLT: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI_WMI [=n]
+
+IIO_CROS_EC_SENSORS_LID_ANGLE: n => yes
+    Direct dependencies:  IIO [=n] && IIO_CROS_EC_SENSORS_CORE [=n]
+
+ACPI_PROCESSOR_AGGREGATOR: n => yes
+    Direct dependencies:  ACPI [=y] && ACPI_PROCESSOR [=n] && X86 [=y]
+
+NET_SCH_ETS: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+MEDIA_TUNER_MT2266: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=n]
+    Reverse dependencies: DVB_USB_DIB0700 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

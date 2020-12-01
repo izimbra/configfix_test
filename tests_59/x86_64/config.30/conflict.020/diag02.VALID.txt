@@ -1,0 +1,10 @@
+CHARGER_MP2629 => mod
+I2C_MULTI_INSTANTIATE => yes
+SENSORS_MAX1111 => yes
+HID_MAGICMOUSE => yes
+MFD_MP2629 => yes
+X86_PLATFORM_DEVICES => yes
+HWMON => yes
+SPI => yes
+HID => yes
+MP2629_ADC => yes

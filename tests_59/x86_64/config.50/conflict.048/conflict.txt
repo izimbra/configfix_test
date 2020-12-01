@@ -1,0 +1,33 @@
+MTD_NAND_ECC_SW_BCH: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n]
+
+TRANSPARENT_HUGEPAGE_ALWAYS: n => yes
+    Direct dependencies:  <choice>
+
+MTRR: y => no
+    Direct dependencies:  y
+
+CRYPTO_CBC: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CEPH_LIB [=y] && NET [=y] && INET [=y] || XFRM_ESP [=y] && NET [=y] && INET [=y] || BLK_DEV_CRYPTOLOOP [=n] && BLK_DEV [=n] && BLK_DEV_LOOP [=n] || DM_CRYPT [=n] && MD [=y] && BLK_DEV_DM [=y] && (ENCRYPTED_KEYS [=n] || ENCRYPTED_KEYS [=n]=n) || FS_ENCRYPTION_ALGS [=n] || ECRYPT_FS [=n] && MISC_FILESYSTEMS [=y] && KEYS [=y] && CRYPTO [=y] && (ENCRYPTED_KEYS [=n] || ENCRYPTED_KEYS [=n]=n) || ENCRYPTED_KEYS [=n] && KEYS [=y] || CRYPTO_DEV_SUN8I_CE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=n] && PM [=y] || CRYPTO_DEV_SUN8I_SS [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=n] && PM [=y] || CRYPTO_DEV_PICOXCELL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=n]) && HAVE_CLK [=y] || CRYPTO_DEV_MXS_DCP [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC) || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=n] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+SENSORS_ISL68137: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+EISA_VIRTUAL_ROOT: n => yes
+    Direct dependencies:  EISA [=n] && (ALPHA || X86 [=y])
+
+IP_VS_PROTO_SCTP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_VS [=n]
+
+IP_VS_DEBUG: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_VS [=n]
+
+AUTOFS_FS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: AUTOFS4_FS [=y]
+
+IIO_BUFFER_HW_CONSUMER: y => no
+    Direct dependencies:  IIO [=y] && IIO_BUFFER [=y]
+    Reverse dependencies: ADI_AXI_ADC [=y] && IIO [=y] || STM32_DFSDM_ADC [=n] && IIO [=y] && (ARCH_STM32 && OF [=n] || COMPILE_TEST [=n])
+

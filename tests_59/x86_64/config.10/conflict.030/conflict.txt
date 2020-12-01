@@ -1,0 +1,18 @@
+SENSORS_LM92: n => yes
+    Direct dependencies:  HWMON [=y] && I2C [=n]
+
+RTC_DRV_DS2404: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+VSOCKETS: n => yes
+    Direct dependencies:  NET [=n]
+
+REGULATOR_TPS65132: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n] && GPIOLIB [=n]
+
+CAN_HI311X: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && SPI [=n] && HAS_DMA [=y]
+
+REGULATOR_ISL9305: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=n]
+

@@ -1,0 +1,22 @@
+GPIO_TWL6040: n => yes
+    Direct dependencies:  GPIOLIB [=n] && TWL6040_CORE [=n]
+
+MCP320X: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+W1_SLAVE_DS2431: n => yes
+    Direct dependencies:  W1 [=n]
+
+AD7091R5: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+GOOGLE_COREBOOT_TABLE: n => yes
+    Direct dependencies:  GOOGLE_FIRMWARE [=n] && (ACPI [=y] || OF [=n])
+    Reverse dependencies: GOOGLE_COREBOOT_TABLE_ACPI [=n] && GOOGLE_FIRMWARE [=n] || GOOGLE_COREBOOT_TABLE_OF [=n] && GOOGLE_FIRMWARE [=n]
+
+NET_DROP_MONITOR: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && TRACEPOINTS [=n]
+
+IEEE802154_SOCKET: n => yes
+    Direct dependencies:  NET [=n] && IEEE802154 [=n]
+

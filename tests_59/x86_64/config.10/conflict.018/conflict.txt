@@ -1,0 +1,13 @@
+GOOGLE_COREBOOT_TABLE: n => yes
+    Direct dependencies:  GOOGLE_FIRMWARE [=n] && (ACPI [=y] || OF [=n])
+    Reverse dependencies: GOOGLE_COREBOOT_TABLE_ACPI [=n] && GOOGLE_FIRMWARE [=n] || GOOGLE_COREBOOT_TABLE_OF [=n] && GOOGLE_FIRMWARE [=n]
+
+IAQCORE: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+MB1232: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+NF_TABLES_NETDEV: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+

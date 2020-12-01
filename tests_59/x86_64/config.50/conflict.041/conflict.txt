@@ -1,0 +1,28 @@
+SAMSUNG_Q10: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y]
+
+WLAN_VENDOR_ATMEL: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n]
+
+SENSORS_MENF21BMC_HWMON: n => yes
+    Direct dependencies:  HWMON [=y] && MFD_MENF21BMC [=n]
+
+PTDUMP_DEBUGFS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && DEBUG_FS [=y] && GENERIC_PTDUMP [=y]
+
+IO_DELAY_UDELAY: n => no
+    Direct dependencies:  <choice>
+
+CPU_FREQ_GOV_PERFORMANCE: n => yes
+    Direct dependencies:  CPU_FREQ [=n]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_PERFORMANCE [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_ONDEMAND [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_CONSERVATIVE [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_SCHEDUTIL [=n] && <choice> && SMP [=y] || X86_INTEL_PSTATE [=n] && CPU_FREQ [=n] && X86 [=y]
+
+GPIO_104_IDI_48: n => yes
+    Direct dependencies:  GPIOLIB [=y] && X86 [=y] && PC104 [=n]
+
+SPI_DEBUG: n => yes
+    Direct dependencies:  SPI [=n] && DEBUG_KERNEL [=n]
+
+NFT_TUNNEL: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n]
+

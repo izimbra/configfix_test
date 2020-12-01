@@ -1,0 +1,22 @@
+PCF50633_GPIO: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_PCF50633 [=m]
+
+INPUT_SPARSEKMAP: n => yes
+    Direct dependencies:  !UML && INPUT [=n]
+    Reverse dependencies: INPUT_WISTRON_BTNS [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && X86_32 [=n] || INPUT_DM355EVM [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && MFD_DM355EVM_MSP [=n] || HUAWEI_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=n] || ACER_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && SERIO_I8042 [=n] && INPUT [=n] && (RFKILL [=n] || RFKILL [=n]=n) && ACPI_WMI [=n] || ASUS_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && INPUT [=n] && (RFKILL [=n] || RFKILL [=n]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) || ASUS_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && ACPI_BATTERY [=n] && INPUT [=n] && HWMON [=y] && BACKLIGHT_CLASS_DEVICE [=y] && (RFKILL [=n] || RFKILL [=n]=n) && HOTPLUG_PCI [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) || EEEPC_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=n] && (RFKILL [=n] || RFKILL [=n]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && HOTPLUG_PCI [=y] && BACKLIGHT_CLASS_DEVICE [=y] || DELL_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && DMI [=n] && INPUT [=n] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && DELL_SMBIOS [=n] || DELL_WMI_AIO [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=n] || FUJITSU_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) || HP_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=n] && (RFKILL [=n] || RFKILL [=n]=n) || IDEAPAD_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && RFKILL [=n] && INPUT [=n] && SERIO_I8042 [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (ACPI_WMI [=n] || ACPI_WMI [=n]=n) || INTEL_HID_EVENT [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=n] || INTEL_VBTN [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=n] || MSI_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && RFKILL [=n] && INPUT [=n] && SERIO_I8042 [=n] || MSI_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=n] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) || ACPI_TOSHIBA [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_WMI [=n] && BACKLIGHT_CLASS_DEVICE [=y] && INPUT [=n] && (SERIO_I8042 [=n] || SERIO_I8042 [=n]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=n] || RFKILL [=n]=n) && IIO [=m] || TOSHIBA_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=n] || LG_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && ACPI_WMI [=n] && INPUT [=n] || PANASONIC_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && INPUT [=n] && ACPI [=n] && BACKLIGHT_CLASS_DEVICE [=y] || TOPSTAR_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=n]
+
+REGULATOR_S2MPA01: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_SEC_CORE [=m]
+
+ATM_DRIVERS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ATM [=n]
+
+INFINIBAND_USER_MAD: n => mod
+    Direct dependencies:  INFINIBAND [=n]
+
+AD9834: n => mod
+    Direct dependencies:  STAGING [=y] && IIO [=m] && SPI [=n]
+
+EFI_VARS: n => mod
+    Direct dependencies:  EFI [=n]
+

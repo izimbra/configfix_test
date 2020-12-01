@@ -1,0 +1,25 @@
+GPIO_WM8994: n => yes
+    Direct dependencies:  GPIOLIB [=n] && MFD_WM8994 [=n]
+
+SENSORS_W83793: n => yes
+    Direct dependencies:  HWMON [=y] && I2C [=n]
+
+THERMAL_GOV_BANG_BANG: n => yes
+    Direct dependencies:  THERMAL [=n]
+    Reverse dependencies: ACERHDF [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=y] && THERMAL [=n]
+
+SUSPEND_FREEZER: n => yes
+    Direct dependencies:  SUSPEND [=n]
+
+NET_DSA_BCM_SF2: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n]
+
+RTC_DRV_DS1343: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+IP_VS_PROTO_ESP: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+RTC_DRV_DA9055: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && MFD_DA9055 [=n]
+

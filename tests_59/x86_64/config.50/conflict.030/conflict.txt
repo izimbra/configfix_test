@@ -1,0 +1,19 @@
+MDIO_DEVICE: y => no
+    Direct dependencies:  NETDEVICES [=y]
+    Reverse dependencies: PHYLIB [=y] && NETDEVICES [=y]
+
+MEDIA_CEC_RC: n => no
+    Direct dependencies:  CEC_CORE [=n] && RC_CORE [=y] && (CEC_CORE [=n]=m || RC_CORE [=y]=y)
+
+IIO_CROS_EC_SENSORS_CORE: n => yes
+    Direct dependencies:  IIO [=y] && SYSFS [=y] && CROS_EC_SENSORHUB [=n]
+
+VM_EVENT_COUNTERS: y => no
+    Direct dependencies:  y
+
+DEBUG_DEVRES: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+INTEL_MENLOW: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_THERMAL [=y]
+

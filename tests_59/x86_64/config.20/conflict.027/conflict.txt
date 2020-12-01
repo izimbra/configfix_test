@@ -1,0 +1,19 @@
+NET_DSA_SMSC_LAN9303_MDIO: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+CHARGER_SBS: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=y]
+
+VIDEO_SAA7127: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_V4L2 [=n] && PCI [=y] && I2C [=y] && RC_CORE [=y]
+
+W1_SLAVE_DS250X: n => yes
+    Direct dependencies:  W1 [=n]
+
+VIDEO_DEV: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+CROS_EC_DEBUGFS: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n] && DEBUG_FS [=y]
+

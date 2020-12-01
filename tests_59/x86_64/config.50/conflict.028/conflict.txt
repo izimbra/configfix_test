@@ -1,0 +1,19 @@
+CPU_IDLE: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_PROCESSOR_IDLE [=y] && ACPI [=y]
+
+NET_CLS_RSVP6: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+INTEL_TELEMETRY: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && X86_64 [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_PUNIT_IPC [=n]
+
+SPI_DW_DMA: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && SPI_DESIGNWARE [=n]
+
+DEBUG_NMI_SELFTEST: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && X86_LOCAL_APIC [=y]
+
+DEFAULT_SECURITY_DAC: y => no
+    Direct dependencies:  <choice>
+

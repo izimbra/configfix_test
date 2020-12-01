@@ -1,0 +1,31 @@
+PM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PM_SLEEP [=y] && (SUSPEND [=y] || HIBERNATE_CALLBACKS [=y]) || ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN3 [=n] && SOC_RENESAS [=y] || ARCH_RMOBILE [=n] && SOC_RENESAS [=y] || ARCH_R7S72100 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS || ARCH_R7S9210 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS
+
+CRYPTO_LIB_CURVE25519: m => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CURVE25519 [=y] || !CRYPTO_ARCH_HAVE_LIB_CURVE25519 [=y])
+    Reverse dependencies: WIREGUARD [=m] && NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=y] && (IPV6 [=y] || !IPV6 [=y])
+
+TINYDRM_ILI9486: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+GREYBUS_RAW: n => yes
+    Direct dependencies:  STAGING [=n] && GREYBUS [=y]
+
+CRYPTO_CRC32C_INTEL: y => no
+    Direct dependencies:  CRYPTO [=y] && X86 [=y]
+    Reverse dependencies: ISCSI_TARGET [=y] && TARGET_CORE [=y] && INET [=y] && X86 [=y]
+
+CRYPTO_SM4: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+VIDEO_AD9389B: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+FB_TFT_S6D02A1: n => yes
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+DRM_ETNAVIV: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && MMU [=y]
+

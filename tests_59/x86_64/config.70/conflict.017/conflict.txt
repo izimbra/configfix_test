@@ -1,0 +1,14 @@
+I2C_SLAVE: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_AT91_SLAVE_EXPERIMENTAL [=n] && I2C [=y] && HAS_IOMEM [=y] && I2C_AT91 [=m] || I2C_AXXIA [=n] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_AXXIA || COMPILE_TEST [=y]) || I2C_BCM_IPROC [=m] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_BCM_IPROC || COMPILE_TEST [=y]) || I2C_DESIGNWARE_SLAVE [=n] && I2C [=y] && HAS_IOMEM [=y] && I2C_DESIGNWARE_CORE [=y] || I2C_EMEV2 [=y] && I2C [=y] && HAS_IOMEM [=y] && HAVE_CLK [=y] || I2C_PXA_SLAVE [=n] && I2C [=y] && HAS_IOMEM [=y] && I2C_PXA [=n] && !X86_32 [=n] || I2C_STM32F7 [=m] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_STM32 || COMPILE_TEST [=y]) || I2C_RCAR [=m] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_RENESAS || COMPILE_TEST [=y])
+
+NF_DUP_NETDEV: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+    Reverse dependencies: NFT_DUP_NETDEV [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n] || NFT_FWD_NETDEV [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+
+MAC802154: n => mod
+    Direct dependencies:  NET [=n] && IEEE802154 [=n]
+
+CROS_EC_LIGHTBAR: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=m]
+

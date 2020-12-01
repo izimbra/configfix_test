@@ -1,0 +1,22 @@
+CODA_FS: n => mod
+    Direct dependencies:  NETWORK_FILESYSTEMS [=n] && INET [=n]
+
+IP_VS_PROTO_AH: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+MTD_MAP_BANK_WIDTH_4: y => no
+    Direct dependencies:  MTD [=y]
+
+IPV6_MROUTE_MULTIPLE_TABLES: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && IPV6_MROUTE [=n]
+
+PRINTER: n => yes
+    Direct dependencies:  PARPORT [=n]
+
+FIXED_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: OF_MDIO [=n] && OF [=y] && PHYLIB [=n] || NET_DSA_BCM_SF2 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n] || NET_DSA_LOOP [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_VITESSE_VSC73XX [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || BCMGENET [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] || BGMAC_BCMA [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && BCMA [=m] && BCMA_HOST_SOC [=y] && (BCM47XX || ARCH_BCM_5301X || COMPILE_TEST [=y]) || BGMAC_PLATFORM [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && (ARCH_BCM_IPROC || COMPILE_TEST [=y]) && OF [=y] || SYSTEMPORT [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] && (NET_DSA [=n] || !NET_DSA [=n]) || UCC_GETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && QUICC_ENGINE [=y] && PPC32 || GIANFAR [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && HAS_DMA [=y] || FSL_DPAA_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FSL_DPAA [=n] && FSL_FMAN [=n] || USB_LAN78XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n]
+
+ADT7316: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+

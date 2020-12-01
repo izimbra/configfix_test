@@ -1,0 +1,22 @@
+CRYPTO_MANAGER: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: RXKAD [=n] && NET [=n] && AF_RXRPC [=n] || CRYPTO_USER [=n] && CRYPTO [=y] && NET [=n] || CRYPTO_PCRYPT [=n] && CRYPTO [=y] && SMP [=y] || CRYPTO_CRYPTD [=y] && CRYPTO [=y] || CRYPTO_AUTHENC [=y] && CRYPTO [=y] || CRYPTO_TEST [=n] && CRYPTO [=y] && m && MODULES [=y] || CRYPTO_RSA [=n] && CRYPTO [=y] || CRYPTO_CCM [=n] && CRYPTO [=y] || CRYPTO_GCM [=n] && CRYPTO [=y] || CRYPTO_CHACHA20POLY1305 [=n] && CRYPTO [=y] || CRYPTO_SEQIV [=n] && CRYPTO [=y] || CRYPTO_ECHAINIV [=n] && CRYPTO [=y] || CRYPTO_CBC [=n] && CRYPTO [=y] || CRYPTO_CFB [=m] && CRYPTO [=y] || CRYPTO_CTR [=y] && CRYPTO [=y] || CRYPTO_CTS [=y] && CRYPTO [=y] || CRYPTO_ECB [=m] && CRYPTO [=y] || CRYPTO_LRW [=n] && CRYPTO [=y] || CRYPTO_OFB [=n] && CRYPTO [=y] || CRYPTO_PCBC [=n] && CRYPTO [=y] || CRYPTO_XTS [=m] && CRYPTO [=y] || CRYPTO_KEYWRAP [=m] && CRYPTO [=y] || CRYPTO_ADIANTUM [=n] && CRYPTO [=y] || CRYPTO_CMAC [=n] && CRYPTO [=y] || CRYPTO_HMAC [=n] && CRYPTO [=y] || CRYPTO_XCBC [=y] && CRYPTO [=y] || CRYPTO_VMAC [=n] && CRYPTO [=y]
+
+MCP3911: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+CAN_DEV: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n]
+
+SENSORS_ADT7475: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+SENSORS_LM70: n => yes
+    Direct dependencies:  HWMON [=m] && SPI_MASTER [=n]
+
+STACK_TRACER: n => yes
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=n] && HAVE_FUNCTION_TRACER [=y]
+
+NF_LOG_ARP: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+

@@ -1,0 +1,31 @@
+W1_SLAVE_DS2780: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2780 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+CRYPTO_LIB_POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=y] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=y] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=y]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y])
+
+ACPI_BGRT: n => yes
+    Direct dependencies:  ACPI [=n] && EFI [=n] && (X86 [=y] || ARM64)
+
+BONDING: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=y] && (IPV6 [=y] || IPV6 [=y]=n)
+
+FW_LOADER_USER_HELPER: y => no
+    Direct dependencies:  FW_LOADER [=y]
+    Reverse dependencies: LEDS_LP55XX_COMMON [=y] && NEW_LEDS [=y] && (LEDS_CLASS_MULTICOLOR [=n] || !LEDS_CLASS_MULTICOLOR [=n]) && OF [=y] && I2C [=y] || DELL_RBU [=y] && X86_PLATFORM_DEVICES [=y] && X86 [=y]
+
+CRYPTO_SHA512: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MODULE_SIG_SHA384 [=n] && <choice> || MODULE_SIG_SHA512 [=n] && <choice> || FS_ENCRYPTION_ALGS [=y] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_SHA512_SSSE3 [=y] && CRYPTO [=y] && X86 [=y] && 64BIT [=y] || CRYPTO_SHA512_OCTEON [=n] && CRYPTO [=y] && CPU_CAVIUM_OCTEON || CRYPTO_SHA512_SPARC64 [=n] && CRYPTO [=y] && SPARC64 || CRYPTO_DEV_QAT [=y] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_MEDIATEK [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARM && ARCH_MEDIATEK || COMPILE_TEST [=y]) || CRYPTO_DEV_CHELSIO [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CHELSIO_T4 [=n] || CRYPTO_DEV_BCM_SPU [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARCH_BCM_IPROC && MAILBOX [=y] || CRYPTO_DEV_SAFEXCEL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y] || CRYPTO_DEV_ARTPEC6 [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARM && (ARCH_ARTPEC || COMPILE_TEST [=y]) && OF [=y] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_HISI_SEC2 [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=y] && PCI_MSI [=y] && (UACCE [=y] || UACCE [=y]=n) && (ARM64 || COMPILE_TEST [=y] && 64BIT [=y]) && ACPI [=n] || CRYPTO_DEV_SA2UL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_K3 || COMPILE_TEST [=y]) || CRYPTO_DEV_OMAP_SHAM [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && ARCH_OMAP2PLUS
+
+GPIO_MADERA: n => yes
+    Direct dependencies:  GPIOLIB [=y] && PINCTRL_MADERA [=n]
+
+NET_VENDOR_WIZNET: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && HAS_IOMEM [=y]
+
+INTEL_BXTWC_PMIC_TMU: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && REGMAP [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_SOC_PMIC_BXTWC [=n]
+

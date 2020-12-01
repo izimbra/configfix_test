@@ -1,0 +1,16 @@
+W1_SLAVE_DS2405 => yes
+MPLS => yes
+HUAWEI_WMI => yes
+LTC2496 => yes
+SENSORS_FSCHMD => yes
+W1 => yes
+NET => yes
+POWER_SUPPLY => yes
+ACPI_WMI => yes
+ACPI_BATTERY => yes
+INPUT_SPARSEKMAP => yes
+LEDS_TRIGGER_AUDIO => yes
+LEDS_TRIGGERS => yes
+SPI => yes
+IIO => yes
+I2C => yes

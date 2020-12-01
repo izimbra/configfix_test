@@ -1,0 +1,32 @@
+VIDEO_TEA6415C: y => no
+    Direct dependencies:  MEDIA_SUPPORT [=y] && VIDEO_V4L2 [=y] && I2C [=y]
+    Reverse dependencies: VIDEO_MXB [=y] && MEDIA_SUPPORT [=y] && MEDIA_PCI_SUPPORT [=y] && MEDIA_ANALOG_TV_SUPPORT [=y] && PCI [=y] && VIDEO_V4L2 [=y] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+INTEL_MENLOW: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI_THERMAL [=n]
+
+INTEL_TH_PTI: n => yes
+    Direct dependencies:  INTEL_TH [=n]
+
+ACPI_APEI_ERST_DEBUG: n => yes
+    Direct dependencies:  ACPI [=n] && ACPI_APEI [=n]
+
+NET_DSA_MT7530: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+AQUANTIA_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+CRYPTO_SERPENT_AVX_X86_64: y => no
+    Direct dependencies:  CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+    Reverse dependencies: CRYPTO_SERPENT_AVX2_X86_64 [=y] && CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+
+NFT_NAT: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=n] && NF_CONNTRACK [=y] && (NF_TABLES_IPV4 [=n] || NF_TABLES_IPV6 [=n])
+
+PPP_DEFLATE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PPP [=n]
+
+NET_VENDOR_MICREL: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (HAS_IOMEM [=y] && DMA_ENGINE [=y] || SPI [=y] || PCI [=y] || HAS_IOMEM [=y])
+

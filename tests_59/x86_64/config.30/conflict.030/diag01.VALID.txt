@@ -1,0 +1,15 @@
+TI_DAC7612 => yes
+MAX5481 => mod
+SENSORS_TMP421 => yes
+NET_VENDOR_NATSEMI => yes
+NF_NAT => yes
+IPV6_SIT => yes
+SPI => yes
+HWMON => yes
+ETHERNET => yes
+NETDEVICES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+NF_CONNTRACK => yes
+IPV6 => yes

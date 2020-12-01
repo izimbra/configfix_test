@@ -1,0 +1,15 @@
+MAX1118: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+NFT_TUNNEL: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n]
+
+VIDEO_TC358743: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+RTC_DRV_DS1347: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+IP_SET_BITMAP_PORT: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_SET [=n]
+

@@ -1,0 +1,24 @@
+HID_LOGITECH_HIDPP: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_LOGITECH [=n]
+    Reverse dependencies: HID_LOGITECH_DJ [=n] && INPUT [=y] && HID [=y] && USB_HID [=n] && HIDRAW [=n] && HID_LOGITECH [=n]
+
+NF_NAT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+    Reverse dependencies: NFT_NAT [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && (NF_TABLES_IPV4 [=n] || NF_TABLES_IPV6 [=n]) || IP_NF_NAT [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NF_CONNTRACK [=n] || IP6_NF_NAT [=n] && NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+FIXED_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: OF_MDIO [=n] && OF [=n] && PHYLIB [=n] || NET_DSA_BCM_SF2 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n] || NET_DSA_LOOP [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_VITESSE_VSC73XX [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || BCMGENET [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] || BGMAC_BCMA [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && BCMA [=n] && BCMA_HOST_SOC [=n] && (BCM47XX || ARCH_BCM_5301X || COMPILE_TEST [=n]) || BGMAC_PLATFORM [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && (ARCH_BCM_IPROC || COMPILE_TEST [=n]) && OF [=n] || SYSTEMPORT [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] && (NET_DSA [=n] || !NET_DSA [=n]) || UCC_GETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && QUICC_ENGINE [=n] && PPC32 || GIANFAR [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && HAS_DMA [=y] || FSL_DPAA_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FSL_DPAA [=n] && FSL_FMAN [=n] || USB_LAN78XX [=n] && NETDEVICES [=n] && USB_NET_DRIVERS [=n]
+
+CHARGER_ADP5061: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && I2C [=y]
+
+MTD_RAW_NAND: n => yes
+    Direct dependencies:  MTD [=n]
+
+NFT_OBJREF: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+
+AD9834: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=n] && SPI [=n]
+

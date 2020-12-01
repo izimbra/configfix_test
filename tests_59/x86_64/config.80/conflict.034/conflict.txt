@@ -1,0 +1,23 @@
+PSTORE_LZ4HC_COMPRESS_DEFAULT: n => no
+    Direct dependencies:  <choice>
+
+PANASONIC_LAPTOP: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && INPUT [=y] && ACPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+MFD_CS47L15: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n]
+
+CROS_EC: y => no
+    Direct dependencies:  CHROME_PLATFORMS [=y] && (X86 [=y] || ARM || ARM64 || COMPILE_TEST [=y])
+    Reverse dependencies: MFD_CROS_EC [=y] && (X86 [=y] || ARM || ARM64 || COMPILE_TEST [=y])
+
+TRACER_SNAPSHOT: y => no
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=y]
+    Reverse dependencies: IRQSOFF_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && TRACE_IRQFLAGS_SUPPORT [=y] && !ARCH_USES_GETTIMEOFFSET [=n] || PREEMPT_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=y] && !ARCH_USES_GETTIMEOFFSET [=n] && PREEMPTION [=n] || SCHED_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=y]
+
+TCG_TIS_ST33ZP24_SPI: n => yes
+    Direct dependencies:  TCG_TPM [=n] && SPI [=y]
+
+COMPAT_VDSO: n => yes
+    Direct dependencies:  COMPAT_32 [=n]
+

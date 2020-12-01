@@ -1,0 +1,17 @@
+FB_TFT_ILI9341 => yes
+SENSORS_ISL29028 => yes
+NETFILTER_XT_TARGET_LOG => yes
+EISA_VIRTUAL_ROOT => yes
+ATM_MPOA => yes
+SPI => yes
+FB_TFT => yes
+BACKLIGHT_CLASS_DEVICE => yes
+IIO => yes
+NF_LOG_IPV4 => yes
+NETFILTER_XTABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+EISA => yes
+ATM_LANE => mod
+ATM => yes

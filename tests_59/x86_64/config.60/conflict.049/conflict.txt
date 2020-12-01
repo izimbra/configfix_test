@@ -1,0 +1,31 @@
+REGULATOR_TPS65086: n => mod
+    Direct dependencies:  REGULATOR [=y] && MFD_TPS65086 [=n]
+
+RC_MAP: n => yes
+    Direct dependencies:  RC_CORE [=n]
+
+INET_UDP_DIAG: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && INET_DIAG [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+ACPI_TABLE_UPGRADE: n => yes
+    Direct dependencies:  ACPI [=n] && BLK_DEV_INITRD [=y] && ARCH_HAS_ACPI_TABLE_UPGRADE [=n]
+
+GREYBUS_FIRMWARE: n => yes
+    Direct dependencies:  STAGING [=y] && GREYBUS [=y] && SPI [=n]
+
+PAGE_EXTENSION: y => no
+    Direct dependencies:  y
+    Reverse dependencies: IDLE_PAGE_TRACKING [=y] && SYSFS [=y] && MMU [=y] && !64BIT [=y] || PAGE_OWNER [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y]
+
+RC_DEVICES: n => yes
+    Direct dependencies:  RC_CORE [=n]
+
+PINCTRL_BAYTRAIL: n => yes
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+BIG_KEYS: n => yes
+    Direct dependencies:  KEYS [=y] && TMPFS [=y] && CRYPTO_LIB_CHACHA20POLY1305 [=n]=y
+
+RDMA_SIW: n => yes
+    Direct dependencies:  (INFINIBAND_USER_ACCESS [=n] || !INFINIBAND_USER_ACCESS [=n]) && INET [=n] && INFINIBAND [=n] && LIBCRC32C [=m]
+

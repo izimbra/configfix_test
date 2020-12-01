@@ -1,0 +1,17 @@
+CRYPTO_LIB_CHACHA: m => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=m] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=n] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=n]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=m] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=m])
+
+SENSORS_MENF21BMC_HWMON: m => yes
+    Direct dependencies:  HWMON [=m] && MFD_MENF21BMC [=m]
+
+NET_VENDOR_AMD: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (DIO || MACH_DECSTATION || MVME147 || ATARI || SUN3 || SUN3X || SBUS [=n] || PCI [=n] || ZORRO || ISA [=n] && ISA_DMA_API [=n] || ARM && ARCH_EBSA110 || ISA [=n] || EISA [=n] || PCMCIA [=n] || ARM64)
+
+AFS_DEBUG_CURSOR: n => yes
+    Direct dependencies:  NETWORK_FILESYSTEMS [=n] && AFS_FS [=n]
+
+CRYPTO_JITTERENTROPY: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DRBG [=y] && CRYPTO [=y] && CRYPTO_DRBG_MENU [=y]
+

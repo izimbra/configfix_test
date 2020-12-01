@@ -1,0 +1,16 @@
+VIDEO_TVP7002: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+LEDS_88PM860X: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_88PM860X [=n]
+
+SERIO_LIBPS2: y => no
+    Direct dependencies:  !UML && SERIO [=y] && (SERIO_I8042 [=y] || SERIO_I8042 [=y]=n)
+    Reverse dependencies: KEYBOARD_ATKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || MOUSE_PS2 [=y] && !UML && INPUT [=y] && INPUT_MOUSE [=y]
+
+CPU_SUP_ZHAOXIN: y => no
+    Direct dependencies:  y
+
+TI_ADS7950: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n] && GPIOLIB [=y]
+

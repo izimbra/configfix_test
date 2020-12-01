@@ -1,0 +1,20 @@
+NFT_FIB_IPV6: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV6 [=n]
+
+MEDIA_TUNER_MT2266: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_DIB0700 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+NET_CLS_TCINDEX: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+NET_SCH_TBF: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+DEBUG_WW_MUTEX_SLOWPATH: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y]
+
+RTC_DRV_DA9052: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && PMIC_DA9052 [=y]
+

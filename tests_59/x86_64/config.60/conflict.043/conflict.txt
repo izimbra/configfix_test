@@ -1,0 +1,29 @@
+NET_DSA_TAG_TRAILER: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_MV88E6060 [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+NFT_FIB_IPV6: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV6 [=n]
+
+FB_TFT_SSD1331: n => yes
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+BACKLIGHT_PCF50633: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_PCF50633 [=m]
+
+NFT_LIMIT: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+
+SPI_NXP_FLEXSPI: n => mod
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_LAYERSCAPE || HAS_IOMEM [=y])
+
+HID_ELECOM: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+NET_FOU: n => mod
+    Direct dependencies:  NET [=y] && INET [=n]
+    Reverse dependencies: NET_FOU_IP_TUNNELS [=n] && NET [=y] && INET [=n] && (NET_IPIP [=n] || NET_IPGRE [=n] || IPV6_SIT [=n])
+
+KVM_WERROR: n => yes
+    Direct dependencies:  VIRTUALIZATION [=n] && (X86_64 [=y] && !KASAN [=n] || !COMPILE_TEST [=y]) && EXPERT [=y]
+

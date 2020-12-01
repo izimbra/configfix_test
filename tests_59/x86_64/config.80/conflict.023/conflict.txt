@@ -1,0 +1,18 @@
+NET_NSH: y => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: OPENVSWITCH [=y] && NET [=y] && INET [=y] && (!NF_CONNTRACK [=y] || NF_CONNTRACK [=y] && (!NF_DEFRAG_IPV6 [=y] || NF_DEFRAG_IPV6 [=y]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=y] || NETFILTER_CONNCOUNT [=y]))
+
+IEEE802154_DRIVERS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && IEEE802154 [=y]
+
+CHROME_PLATFORMS: y => no
+    Direct dependencies:  X86 [=y] || ARM || ARM64 || COMPILE_TEST [=y]
+    Reverse dependencies: MFD_CROS_EC [=y] && (X86 [=y] || ARM || ARM64 || COMPILE_TEST [=y])
+
+MFD_MADERA_I2C: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n] && I2C [=y]
+
+NF_LOG_IPV4: y => no
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y]
+    Reverse dependencies: NETFILTER_XT_TARGET_LOG [=y] && NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=y]
+

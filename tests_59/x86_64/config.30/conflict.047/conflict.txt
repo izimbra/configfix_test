@@ -1,0 +1,32 @@
+RMI4_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y] && SPI [=n]
+
+FB_TFT_SSD1289: n => mod
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+MEDIA_TUNER_TEA5767: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: MEDIA_TUNER [=n] && MEDIA_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] && MEDIA_RADIO_SUPPORT [=n]
+
+IP_DCCP: n => mod
+    Direct dependencies:  NET [=n] && INET [=n]
+
+SENSORS_ADT7410: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+MTD_NAND_GPIO: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n]) && HAS_IOMEM [=y]
+
+NET_VENDOR_CIRRUS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (ISA [=n] || EISA [=n] || ARM || MAC)
+
+NET_DSA_MICROCHIP_KSZ9477: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+CHARLCD: n => yes
+    Direct dependencies:  y
+    Reverse dependencies: HD44780 [=n] && AUXDISPLAY [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || PARPORT_PANEL [=n] && AUXDISPLAY [=y] && PARPORT [=n]
+
+THERMAL_DEFAULT_GOV_STEP_WISE: n => no
+    Direct dependencies:  <choice>
+

@@ -1,0 +1,27 @@
+VIDEO_TDA9840: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && PCI [=y] && VIDEO_V4L2 [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+IP6_NF_IPTABLES: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && INET [=n] && IPV6 [=n]
+    Reverse dependencies: IP_VS_IPV6 [=n] && NET [=n] && NETFILTER [=n] && IP_VS [=n] && (IPV6 [=n]=y || IP_VS [=n]=IPV6 [=n])
+
+ASUS_WIRELESS: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=y]
+
+SMSC_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: SMSC9420 [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_SMSC [=n] && PCI [=y]
+
+GOOGLE_VPD: n => yes
+    Direct dependencies:  GOOGLE_FIRMWARE [=y] && GOOGLE_COREBOOT_TABLE [=n]
+
+ADIS16203: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=n] && SPI [=n]
+
+FB_SIMPLE: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n]=y
+
+NFT_LIMIT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+

@@ -1,0 +1,20 @@
+RELOCATABLE: y => no
+    Direct dependencies:  y
+    Reverse dependencies: EFI_STUB [=y] && EFI [=y] && !X86_USE_3DNOW [=n] && (y || X86_32 [=n])
+
+LTC2497: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+MAX1027: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+PING: m => yes
+    Direct dependencies:  IIO [=m] && GPIOLIB [=y]
+
+VIDEO_SAA7127: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=n] && I2C [=y] && RC_CORE [=y]
+
+CRYPTO_USER: n => yes
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+

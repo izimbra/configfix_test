@@ -1,0 +1,21 @@
+TINYDRM_ST7586: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+SMSC_PHY: y => no
+    Direct dependencies:  NETDEVICES [=y] && PHYLIB [=y]
+    Reverse dependencies: SMSC9420 [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_SMSC [=y] && PCI [=y]
+
+DMA_CMA: y => no
+    Direct dependencies:  HAVE_DMA_CONTIGUOUS [=y] && CMA [=y]
+    Reverse dependencies: DRM_ETNAVIV [=m] && HAS_IOMEM [=y] && DRM [=m] && MMU [=y] && HAVE_DMA_CONTIGUOUS [=y] || DRM_ASPEED_GFX [=m] && HAS_IOMEM [=y] && DRM [=m] && OF [=y] && (COMPILE_TEST [=y] || ARCH_ASPEED) && HAVE_DMA_CONTIGUOUS [=y] || FB_HYPERV [=n] && HAS_IOMEM [=y] && FB [=y] && HYPERV [=m] && HAVE_DMA_CONTIGUOUS [=y] && CMA [=y]
+
+TINYDRM_MI0283QT: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=y]
+
+PPP_DEFLATE: m => yes
+    Direct dependencies:  NETDEVICES [=y] && PPP [=m]
+
+CRYPTO_GHASH: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_DEV_VMX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_VMX [=n]
+

@@ -1,0 +1,17 @@
+BCM84881_PHY => mod
+NET_SB1000 => yes
+SENSORS_XDPE122 => yes
+PSTORE_LZ4HC_COMPRESS => yes
+ABP060MG => yes
+NET_FOU => mod
+NETDEVICES => yes
+NET => yes
+PHYLIB => yes
+MDIO_DEVICE => yes
+HWMON => yes
+PMBUS => yes
+MISC_FILESYSTEMS => yes
+PSTORE => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+INET => yes

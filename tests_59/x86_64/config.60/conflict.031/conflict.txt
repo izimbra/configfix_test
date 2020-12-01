@@ -1,0 +1,22 @@
+PREEMPT_NONE: n => no
+    Direct dependencies:  <choice>
+
+PRINTER: n => yes
+    Direct dependencies:  PARPORT [=m]
+
+MTD_JEDECPROBE: m => no
+    Direct dependencies:  MTD [=y]
+    Reverse dependencies: MTD_TS5500 [=m] && MTD [=y] && HAS_IOMEM [=y] && (TS5500 [=n] || COMPILE_TEST [=y])
+
+APDS9960: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+HID_KENSINGTON: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+DCDBAS: n => mod
+    Direct dependencies:  X86_PLATFORM_DEVICES [=n] && X86 [=y]
+
+IIO_CROS_EC_LIGHT_PROX: n => yes
+    Direct dependencies:  IIO [=m] && IIO_CROS_EC_SENSORS_CORE [=n]
+

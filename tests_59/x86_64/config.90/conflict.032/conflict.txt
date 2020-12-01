@@ -1,0 +1,26 @@
+NFT_DUP_IPV6: m => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && NF_TABLES [=y] && NF_TABLES_IPV6 [=y] && (!NF_CONNTRACK [=m] || NF_CONNTRACK [=m])
+
+NET_DSA_TAG_AR9331: m => no
+    Direct dependencies:  NET [=y] && NET_DSA [=m]
+    Reverse dependencies: NET_DSA_AR9331 [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m]
+
+PM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PM_SLEEP [=y] && (SUSPEND [=y] || HIBERNATE_CALLBACKS [=y]) || ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN3 [=n] && SOC_RENESAS [=y] || ARCH_RMOBILE [=n] && SOC_RENESAS [=y] || ARCH_R7S72100 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS || ARCH_R7S9210 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS
+
+X86_FEATURE_NAMES: y => no
+    Direct dependencies:  y
+    Reverse dependencies: X86 [=y] && PROC_FS [=y]
+
+NF_CT_NETLINK: m => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NF_CONNTRACK [=m]
+
+CRYPTO_LIB_CHACHA: m => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=m] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=m])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=m] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=m] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=m]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y])
+
+MEDIA_TUNER_R820T: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_CX231XX_DVB [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_CX231XX [=m] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=y] || DVB_USB_RTL28XXU [=n] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && I2C_MUX [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+

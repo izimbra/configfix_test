@@ -1,0 +1,15 @@
+B53_SPI_DRIVER: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && B53 [=n] && SPI [=n]
+
+TI_TLC4541: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+SCTP_DEFAULT_COOKIE_HMAC_MD5: n => yes
+    Direct dependencies:  <choice>
+
+KGDB_KDB: n => yes
+    Direct dependencies:  KGDB [=n]
+
+IP_SET_HASH_NETPORT: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+

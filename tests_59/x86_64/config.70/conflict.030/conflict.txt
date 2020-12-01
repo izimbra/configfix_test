@@ -1,0 +1,19 @@
+PA12203001: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+BATMAN_ADV_DEBUGFS: n => yes
+    Direct dependencies:  NET [=n] && BATMAN_ADV [=n] && DEBUG_FS [=y]
+
+IP_VS_MH: n => mod
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+SYSTEMPORT: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y] && (NET_DSA [=n] || !NET_DSA [=n])
+
+HP_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n)
+
+MPLS: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: OPENVSWITCH [=n] && NET [=n] && INET [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n] && (!NF_DEFRAG_IPV6 [=n] || NF_DEFRAG_IPV6 [=n]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=n] || NETFILTER_CONNCOUNT [=n]))
+

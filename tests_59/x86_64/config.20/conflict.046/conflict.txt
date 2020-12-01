@@ -1,0 +1,32 @@
+CHARGER_AXP20X: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && MFD_AXP20X [=n] && AXP20X_ADC [=n] && IIO [=n]
+
+ACPI_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n]
+    Reverse dependencies: DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] && ACPI [=n] && X86 [=y]
+
+INPUT_UINPUT: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n]
+
+PARAVIRT_TIME_ACCOUNTING: n => yes
+    Direct dependencies:  HYPERVISOR_GUEST [=y] && PARAVIRT [=n]
+
+PINCTRL_CEDARFORK: n => yes
+    Direct dependencies:  PINCTRL [=n] && (X86 [=y] || COMPILE_TEST [=n]) && ACPI [=n]
+
+W1_SLAVE_DS2430: n => yes
+    Direct dependencies:  W1 [=n]
+
+VIDEO_UPD64083: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_V4L2 [=n] && PCI [=y] && I2C [=y] && RC_CORE [=y]
+
+CM3232: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+BATMAN_ADV_DEBUGFS: n => yes
+    Direct dependencies:  NET [=n] && BATMAN_ADV [=n] && DEBUG_FS [=y]
+
+ROCKCHIP_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+

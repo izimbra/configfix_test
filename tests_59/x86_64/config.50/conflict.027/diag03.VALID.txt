@@ -1,0 +1,16 @@
+RTC_DRV_MSM6242 => yes
+IP_PNP_RARP => yes
+AD5770R => yes
+IP_SET_HASH_IPPORTIP => yes
+VORTEX => yes
+DEBUG_PINCTRL => yes
+TCP_CONG_ADVANCED => yes
+DEFAULT_RENO => yes
+RTC_CLASS => yes
+IP_PNP => yes
+SPI => yes
+NETFILTER => yes
+IP_SET => yes
+IP_SET_MAX => 2
+NET_VENDOR_3COM => yes
+DEBUG_KERNEL => yes

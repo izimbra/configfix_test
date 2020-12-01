@@ -1,0 +1,16 @@
+FW_LOADER_USER_HELPER: n => yes
+    Direct dependencies:  FW_LOADER [=n]
+    Reverse dependencies: LEDS_LP55XX_COMMON [=n] && NEW_LEDS [=y] && (LEDS_CLASS_MULTICOLOR [=n] || !LEDS_CLASS_MULTICOLOR [=n]) && OF [=n] && I2C [=y] || DELL_RBU [=n] && X86_PLATFORM_DEVICES [=n] && X86 [=y]
+
+NET_DSA_VITESSE_VSC73XX_PLATFORM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] && HAS_IOMEM [=y]
+
+REGULATOR_DA9052: n => mod
+    Direct dependencies:  REGULATOR [=y] && PMIC_DA9052 [=n]
+
+NFT_REJECT: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && (!NF_TABLES_INET [=n] || IPV6 [=n]!=m || m && MODULES [=y])
+
+BT_MRVL: n => yes
+    Direct dependencies:  NET [=n] && BT [=n]
+

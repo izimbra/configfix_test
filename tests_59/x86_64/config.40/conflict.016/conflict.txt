@@ -1,0 +1,12 @@
+NET_VENDOR_TI: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (PCI [=n] || EISA [=n] || AR7 || ARCH_DAVINCI || ARCH_OMAP2PLUS || ARCH_KEYSTONE || ARCH_K3)
+
+INET_ESP_OFFLOAD: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && INET_ESP [=n]
+
+I2C_MUX_LTC4306: m => yes
+    Direct dependencies:  I2C [=y] && I2C_MUX [=m]
+
+INFINIBAND: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && HAS_DMA [=y] && NET [=n] && INET [=n] && (m && MODULES [=y] || IPV6 [=n]!=m) && !ALPHA
+

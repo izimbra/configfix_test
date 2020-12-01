@@ -1,0 +1,29 @@
+TCG_VTPM_PROXY: n => mod
+    Direct dependencies:  TCG_TPM [=n]
+
+PPS_DEBUG: n => yes
+    Direct dependencies:  PPS [=n]
+
+GPIO_XRA1403: n => mod
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n]
+
+CAN_DEV: n => yes
+    Direct dependencies:  NET [=n] && CAN [=n]
+
+W1_SLAVE_DS2431: n => yes
+    Direct dependencies:  W1 [=n]
+
+REALTEK_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || R8169 [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_REALTEK [=n] && PCI [=n]
+
+NETFILTER_XT_NAT: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_NAT [=n]
+    Reverse dependencies: IP_NF_NAT [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NF_CONNTRACK [=n] || IP6_NF_NAT [=n] && NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+EPOLL: y => no
+    Direct dependencies:  y
+
+FB_TFT: n => yes
+    Direct dependencies:  STAGING [=n] && FB [=n] && SPI [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+

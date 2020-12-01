@@ -1,0 +1,13 @@
+REGULATOR_MT6358: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MT6397 [=n]
+
+COMMON_CLK: y => no
+    Direct dependencies:  !HAVE_LEGACY_CLK [=n]
+    Reverse dependencies: X86_INTEL_QUARK [=n] && X86_32 [=n] && X86_EXTENDED_PLATFORM [=n] && X86_PLATFORM_DEVICES [=n] && X86_TSC [=y] && PCI [=n] && PCI_GOANY [=n] && X86_IO_APIC [=y] || X86_INTEL_LPSS [=n] && X86 [=y] && ACPI [=y] && PCI [=n] || X86_AMD_PLATFORM_DEVICE [=y] && ACPI [=y] || MFD_INTEL_LPSS [=n] && HAS_IOMEM [=y] || INTEL_ATOMISP [=n] && STAGING [=y] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=n] && X86 [=y] && EFI [=n] && PCI [=n] && ACPI [=y] || PMC_ATOM [=n] && X86 [=y] && PCI [=n]
+
+DRM_I2C_CH7006: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DRM_KMS_HELPER [=n] && I2C [=y]
+
+GREYBUS_POWER: n => mod
+    Direct dependencies:  STAGING [=y] && GREYBUS [=n] && POWER_SUPPLY [=y]
+

@@ -1,0 +1,21 @@
+IP_SET_BITMAP_IP: m => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_SET [=m]
+
+CRYPTO_CRC32C: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: NVME_TCP [=m] && INET [=y] && BLK_DEV_NVME [=m] || ISCSI_TCP [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && INET [=y] || ISCSI_TARGET [=y] && TARGET_CORE [=y] && INET [=y] || EXT4_FS [=y] && BLOCK [=y] || JBD2 [=y] && BLOCK [=y] || BTRFS_FS [=m] && BLOCK [=y] || LIBCRC32C [=y]
+
+LEDS_GPIO: y => no
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: PCENGINES_APU2 [=y] && X86 [=y] && X86_PLATFORM_DEVICES [=y] && INPUT [=y] && INPUT_KEYBOARD [=y] && GPIOLIB [=y] && LEDS_CLASS [=y]
+
+AD5933: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=y] && I2C [=y]
+
+PPP: m => no
+    Direct dependencies:  NETDEVICES [=y]
+    Reverse dependencies: IPWIRELESS [=m] && PCMCIA [=m] && NETDEVICES [=y] && TTY [=y]
+
+VIDEO_VPX3220: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+

@@ -1,0 +1,25 @@
+IP_VS_PROTO_AH: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+CRYPTO_RSA: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: SYSTEM_DATA_VERIFICATION [=y] || INTEGRITY_ASYMMETRIC_KEYS [=n] && INTEGRITY [=y] && INTEGRITY_SIGNATURE [=n] || CRYPTO_DEV_QAT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=n] && PCI_MSI [=n] && (UACCE [=y] || UACCE [=y]=n) && (ARM64 || COMPILE_TEST [=y] && 64BIT [=y]) && ACPI [=y] || CRYPTO_DEV_FSL_CAAM_PKC_API [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_FSL_CAAM [=n] && CRYPTO_DEV_FSL_CAAM_JR [=n] || CRYPTO_DEV_CCP_CRYPTO [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_CCP [=n] && CRYPTO_DEV_CCP_DD [=n] && CRYPTO_DEV_SP_CCP [=n]
+
+IPV6_TUNNEL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+    Reverse dependencies: IPV6_VTI [=n] && NET [=n] && INET [=n] && IPV6 [=n] || IPV6_GRE [=n] && NET [=n] && INET [=n] && IPV6 [=n] && NET_IPGRE_DEMUX [=n] || IPV6_FOU_TUNNEL [=n] && NET [=n] && INET [=n] && IPV6 [=n]
+
+VIDEO_DEV: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m]
+
+NF_TABLES: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+
+CPU_IDLE: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_PROCESSOR_IDLE [=y] && ACPI [=y]
+
+PARPORT_PANEL: n => mod
+    Direct dependencies:  AUXDISPLAY [=y] && PARPORT [=n]
+    Reverse dependencies: PANEL [=n] && PARPORT [=n]
+

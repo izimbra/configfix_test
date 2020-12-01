@@ -1,0 +1,34 @@
+MAX1118: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+NET_DSA_TAG_BRCM_PREPEND: n => mod
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: B53 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+IP_VS_WLC: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+CRYPTO_CRC32C: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: NVME_TCP [=n] && INET [=n] && BLK_DEV_NVME [=n] || ISCSI_TCP [=n] && SCSI_LOWLEVEL [=n] && SCSI [=m] && INET [=n] || ISCSI_TARGET [=n] && TARGET_CORE [=y] && INET [=n] || EXT4_FS [=y] && BLOCK [=y] || JBD2 [=y] && BLOCK [=y] || BTRFS_FS [=y] && BLOCK [=y] || LIBCRC32C [=y]
+
+JOYSTICK_DB9: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && PARPORT [=n]
+
+IIO_BUFFER_HW_CONSUMER: m => yes
+    Direct dependencies:  IIO [=m] && IIO_BUFFER [=y]
+    Reverse dependencies: ADI_AXI_ADC [=m] && IIO [=m] || STM32_DFSDM_ADC [=m] && IIO [=m] && (ARCH_STM32 && OF [=y] || COMPILE_TEST [=y])
+
+CRYPTO_NULL: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_AUTHENC [=m] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_SEQIV [=m] && CRYPTO [=y] || CRYPTO_ECHAINIV [=y] && CRYPTO [=y] || CRYPTO_USER_API_AEAD [=n] && CRYPTO [=y] && NET [=n]
+
+I2C_PARPORT: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && PARPORT [=n]
+
+MTD_REDBOOT_PARTS_READONLY: n => yes
+    Direct dependencies:  MTD [=y] && MTD_REDBOOT_PARTS [=n]
+
+SENSORS_TPS53679: m => yes
+    Direct dependencies:  HWMON [=m] && PMBUS [=m]
+

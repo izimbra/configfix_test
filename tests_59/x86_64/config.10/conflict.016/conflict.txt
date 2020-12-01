@@ -1,0 +1,12 @@
+FB_TFT_RA8875: n => yes
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=n] && MFD_DA9062 [=n]
+
+RTC_DRV_DS1685_FAMILY: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+SENSORS_ADM1029: n => yes
+    Direct dependencies:  HWMON [=y] && I2C [=n]
+

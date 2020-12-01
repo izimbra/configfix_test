@@ -1,0 +1,15 @@
+AD2S1200 => yes
+IP_DCCP => mod
+BATMAN_ADV_TRACING => yes
+PREEMPT_NONE => no
+CRYPTO_MICHAEL_MIC => no
+CRYPTO_ARC4 => no
+SPI => yes
+IIO => yes
+INET => yes
+BATMAN_ADV => mod
+IPW2200_MONITOR => no
+IPW2200_RADIOTAP => no
+LIBIPW_DEBUG => no
+IPW2200 => yes
+IPW2200_DEBUG => no

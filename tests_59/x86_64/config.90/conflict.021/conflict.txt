@@ -1,0 +1,16 @@
+SERIO_PARKBD: n => yes
+    Direct dependencies:  !UML && SERIO [=y] && PARPORT [=n]
+
+GREYBUS_LOG: n => mod
+    Direct dependencies:  STAGING [=n] && GREYBUS [=y]
+
+INTEL_BXTWC_PMIC_TMU: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && REGMAP [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_SOC_PMIC_BXTWC [=n]
+
+GS_FPGABOOT: n => yes
+    Direct dependencies:  STAGING [=n]
+
+RMI4_F12: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=m]
+    Reverse dependencies: HID_RMI [=m] && INPUT [=y] && HID [=y]
+

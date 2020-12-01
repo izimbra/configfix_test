@@ -1,0 +1,24 @@
+HTU21: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+NETFILTER_XT_MATCH_CONNTRACK: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n]
+
+W1_SLAVE_DS250X: n => yes
+    Direct dependencies:  W1 [=m]
+
+SENSORS_MAX31790: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+ATALK: n => mod
+    Direct dependencies:  NET [=n]
+
+IAQCORE: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+NET_TEAM_MODE_BROADCAST: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && NET_TEAM [=n]
+
+CS89x0_PLATFORM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_CIRRUS [=n] && CS89x0 [=n]
+

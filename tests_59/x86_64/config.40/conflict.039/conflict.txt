@@ -1,0 +1,24 @@
+ACPI_HOTPLUG_MEMORY: n => yes
+    Direct dependencies:  ACPI [=y] && MEMORY_HOTPLUG [=n]
+
+INTEL_TELEMETRY: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && X86_64 [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_PUNIT_IPC [=n]
+
+TASKS_TRACE_RCU_READ_MB: n => yes
+    Direct dependencies:  RCU_EXPERT [=n]
+
+MAX9611: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+MEDIA_SUPPORT_FILTER: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+
+CAN_C_CAN: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n] && CAN_DEV [=n] && HAS_IOMEM [=y]
+
+NFT_FIB_IPV6: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV6 [=n]
+
+IPDDP: n => mod
+    Direct dependencies:  NET [=n] && DEV_APPLETALK [=n] && ATALK [=n]
+

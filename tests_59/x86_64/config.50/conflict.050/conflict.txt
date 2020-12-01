@@ -1,0 +1,34 @@
+GREYBUS_POWER: n => yes
+    Direct dependencies:  STAGING [=y] && GREYBUS [=n] && POWER_SUPPLY [=y]
+
+NET_DSA_TAG_GSWIP: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_LANTIQ_GSWIP [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && HAS_IOMEM [=y] && NET_DSA [=n]
+
+GPIO_104_IDI_48: n => yes
+    Direct dependencies:  GPIOLIB [=y] && X86 [=y] && PC104 [=n]
+
+NF_TPROXY_IPV6: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=n]
+    Reverse dependencies: NFT_TPROXY [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n] && (IPV6 [=y] || IPV6 [=y]=n) && NF_TABLES_IPV6 [=n] || NETFILTER_XT_TARGET_TPROXY [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n] && (IPV6 [=y] || IPV6 [=y]=n) && (IP6_NF_IPTABLES [=n] || IP6_NF_IPTABLES [=n]=n) && IP_NF_MANGLE [=n] && IP6_NF_IPTABLES [=n]
+
+NET_FOU: y => no
+    Direct dependencies:  NET [=y] && INET [=y]
+    Reverse dependencies: NET_FOU_IP_TUNNELS [=y] && NET [=y] && INET [=y] && (NET_IPIP [=y] || NET_IPGRE [=n] || IPV6_SIT [=y])
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_DA9062 [=n]
+
+REGULATOR_WM831X: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_WM831X [=n]
+
+MCP41010: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+EEPROM_93CX6: y => no
+    Direct dependencies:  y
+    Reverse dependencies: SCSI_WD719X [=y] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] || KS8851 [=n] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_MICREL [=y] && SPI [=n] || KS8851_MLL [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_MICREL [=y] && HAS_IOMEM [=y] || AX88796_93CX6 [=n] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_8390 [=n] && AX88796 [=n] || ADM8211 [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_ADMTEK [=n] && MAC80211 [=n] && PCI [=y] || RT2400PCI [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && PCI [=y] || RT2500PCI [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && PCI [=y] || RT61PCI [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && PCI [=y] || RT2800PCI [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_RALINK [=n] && RT2X00 [=n] && PCI [=y] || RTL8180 [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_REALTEK [=n] && MAC80211 [=n] && PCI [=y] || RTL8187 [=n] && NETDEVICES [=y] && WLAN [=n] && WLAN_VENDOR_REALTEK [=n] && MAC80211 [=n] && USB [=y]
+
+REGULATOR_TPS6586X: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_TPS6586X [=n]
+

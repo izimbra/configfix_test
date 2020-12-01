@@ -1,0 +1,16 @@
+TMP007: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+VIDEO_VP27SMPX: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=n] && I2C [=y] && RC_CORE [=y]
+
+WLAN: n => yes
+    Direct dependencies:  NETDEVICES [=n] && !S390 && NET [=n]
+
+SENSORS_W83792D: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+AD7091R5: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

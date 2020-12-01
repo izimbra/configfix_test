@@ -1,0 +1,15 @@
+MTD_ROM: n => yes
+    Direct dependencies:  MTD [=n]
+
+HID_WIIMOTE: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && LEDS_CLASS [=y]
+
+INET_IPCOMP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+
+LEDS_PCA955X_GPIO: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_PCA955X [=n] && GPIOLIB [=n]
+
+MEMORY_FAILURE: n => yes
+    Direct dependencies:  MMU [=y] && ARCH_SUPPORTS_MEMORY_FAILURE [=n]
+

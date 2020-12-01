@@ -1,0 +1,25 @@
+GOOGLE_COREBOOT_TABLE: n => yes
+    Direct dependencies:  GOOGLE_FIRMWARE [=n] && (ACPI [=y] || OF [=n])
+    Reverse dependencies: GOOGLE_COREBOOT_TABLE_ACPI [=n] && GOOGLE_FIRMWARE [=n] || GOOGLE_COREBOOT_TABLE_OF [=n] && GOOGLE_FIRMWARE [=n]
+
+VIDEO_TVP7002: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+HW_RANDOM_BA431: n => yes
+    Direct dependencies:  HW_RANDOM [=n] && HAS_IOMEM [=y]
+
+SENSORS_LM70: n => yes
+    Direct dependencies:  HWMON [=m] && SPI_MASTER [=n]
+
+NF_CONNTRACK_IRC: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+
+NF_LOG_ARP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+
+FB_TFT_S6D1121: n => mod
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+GPIO_MADERA: n => mod
+    Direct dependencies:  GPIOLIB [=y] && PINCTRL_MADERA [=n]
+

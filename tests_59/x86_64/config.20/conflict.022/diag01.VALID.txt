@@ -1,0 +1,13 @@
+PPP => yes
+RTC_DRV_MSM6242 => yes
+RTC_DRV_S35390A => yes
+NET_SB1000 => yes
+NET_SCH_SKBPRIO => yes
+NETDEVICES => yes
+NET => yes
+RTC_CLASS => yes
+ACPI => yes
+ACPI_CUSTOM_DSDT_FILE => nonempty
+PNP => yes
+SERIAL_8250_PNP => yes
+NET_SCHED => yes

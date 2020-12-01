@@ -1,0 +1,14 @@
+JSA1212 => yes
+CRYPTO_DH => no
+NET_DSA_TAG_GSWIP => yes
+GPIO_ADP5588_IRQ => yes
+IIO => yes
+CRYPTO_DEV_QAT_C62X => no
+NET_SWITCHDEV => yes
+NETDEVICES => yes
+NET => yes
+INET => yes
+NET_DSA => yes
+PHYLIB => yes
+MDIO_DEVICE => yes
+GPIO_ADP5588 => yes

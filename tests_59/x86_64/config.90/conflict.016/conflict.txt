@@ -1,0 +1,15 @@
+BCM7XXX_PHY: y => mod
+    Direct dependencies:  NETDEVICES [=y] && PHYLIB [=y]
+    Reverse dependencies: NET_DSA_BCM_SF2 [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && HAS_IOMEM [=y] && NET_DSA [=m] || BCMGENET [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_BROADCOM [=y] && HAS_IOMEM [=y]
+
+IP_SET_BITMAP_IP: m => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_SET [=m]
+
+CRYPTO_LIB_CHACHA: m => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=m] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=m])
+    Reverse dependencies: CRYPTO_LIB_CHACHA20POLY1305 [=m] && CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=m] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=m]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y])
+
+CRYPTO_JITTERENTROPY: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DRBG [=y] && CRYPTO [=y] && CRYPTO_DRBG_MENU [=y]
+

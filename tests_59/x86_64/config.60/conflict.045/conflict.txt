@@ -1,0 +1,30 @@
+NET_DSA_TAG_QCA: n => mod
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_QCA8K [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+INPUT_FF_MEMLESS: n => mod
+    Direct dependencies:  !UML && INPUT [=n]
+    Reverse dependencies: JOYSTICK_GAMECON [=n] && !UML && INPUT [=n] && INPUT_JOYSTICK [=n] && PARPORT [=m] || JOYSTICK_XPAD_FF [=n] && !UML && INPUT_JOYSTICK [=n] && JOYSTICK_XPAD [=n] && INPUT [=n] || JOYSTICK_PSXPAD_SPI_FF [=n] && !UML && INPUT [=n] && INPUT_JOYSTICK [=n] && JOYSTICK_PSXPAD_SPI [=n] || INPUT_ARIZONA_HAPTICS [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && MFD_ARIZONA [=y] && SND_SOC [=n] || INPUT_PM8XXX_VIBRATOR [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && (MFD_PM8XXX [=y] || MFD_SPMI_PMIC [=n]) || INPUT_MAX77693_HAPTIC [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && (MFD_MAX77693 [=m] || MFD_MAX77843 [=n]) && PWM [=y] || INPUT_MAX8997_HAPTIC [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && PWM [=y] && MFD_MAX8997 [=n] || INPUT_GPIO_VIBRA [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y]) || INPUT_REGULATOR_HAPTIC [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && REGULATOR [=y] || INPUT_TWL4030_VIBRA [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && TWL4030_CORE [=y] || INPUT_TWL6040_VIBRA [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && TWL6040_CORE [=n] || INPUT_PWM_VIBRA [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && PWM [=y] || INPUT_DRV260X_HAPTICS [=n] && !UML && INPUT_MISC [=n] && INPUT [=n] && I2C [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y]) || INPUT_DRV2665_HAPTICS [=n] && !UML && INPUT_MISC [=n] && INPUT [=n] && I2C [=y] || INPUT_DRV2667_HAPTICS [=n] && !UML && INPUT_MISC [=n] && INPUT [=n] && I2C [=y] || INPUT_SC27XX_VIBRA [=n] && !UML && INPUT [=n] && INPUT_MISC [=n] && (MFD_SC27XX_PMIC [=n] || COMPILE_TEST [=y]) || HID_ACRUX_FF [=n] && INPUT [=n] && HID [=n] && HID_ACRUX [=n] || HID_BETOP_FF [=n] && INPUT [=n] && HID [=n] && USB_HID [=n] || HID_BIGBEN_FF [=n] && INPUT [=n] && HID [=n] && USB_HID [=n] && NEW_LEDS [=y] && LEDS_CLASS [=y] || DRAGONRISE_FF [=n] && INPUT [=n] && HID [=n] && HID_DRAGONRISE [=n] || HID_EMS_FF [=n] && INPUT [=n] && HID [=n] || HOLTEK_FF [=n] && INPUT [=n] && HID [=n] && HID_HOLTEK [=n] || LOGITECH_FF [=n] && INPUT [=n] && HID [=n] && HID_LOGITECH [=n] || LOGIRUMBLEPAD2_FF [=n] && INPUT [=n] && HID [=n] && HID_LOGITECH [=n] || LOGIG940_FF [=n] && INPUT [=n] && HID [=n] && HID_LOGITECH [=n] || LOGIWHEELS_FF [=n] && INPUT [=n] && HID [=n] && HID_LOGITECH [=n] || HID_MAYFLASH [=n] && INPUT [=n] && HID [=n] || HID_MICROSOFT [=n] && INPUT [=n] && HID [=n] || PANTHERLORD_FF [=n] && INPUT [=n] && HID [=n] && HID_PANTHERLORD [=n] || SONY_FF [=n] && INPUT [=n] && HID [=n] && HID_SONY [=n] || GREENASIA_FF [=n] && INPUT [=n] && HID [=n] && HID_GREENASIA [=n] || SMARTJOYPLUS_FF [=n] && INPUT [=n] && HID [=n] && HID_SMARTJOYPLUS [=n] || THRUSTMASTER_FF [=n] && INPUT [=n] && HID [=n] && HID_THRUSTMASTER [=n] || HID_WIIMOTE [=n] && INPUT [=n] && HID [=n] && LEDS_CLASS [=y] || ZEROPLUS_FF [=n] && INPUT [=n] && HID [=n] && HID_ZEROPLUS [=n]
+
+JOYSTICK_SIDEWINDER: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n]
+
+NFT_LIMIT: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+
+SMC_DIAG: n => mod
+    Direct dependencies:  NET [=y] && SMC [=n]
+
+INET_DIAG_DESTROY: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && INET_DIAG [=n]
+
+WIREGUARD: n => yes
+    Direct dependencies:  NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=n] && (IPV6 [=n] || !IPV6 [=n])
+
+CRYPTO_SM4: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+MTD_CFI_I2: y => no
+    Direct dependencies:  MTD [=y]
+

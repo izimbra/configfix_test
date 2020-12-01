@@ -1,0 +1,32 @@
+LEDS_GPIO: y => no
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: PCENGINES_APU2 [=y] && X86 [=y] && X86_PLATFORM_DEVICES [=y] && INPUT [=y] && INPUT_KEYBOARD [=y] && GPIOLIB [=y] && LEDS_CLASS [=y]
+
+SOFTLOCKUP_DETECTOR: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && !S390
+    Reverse dependencies: HARDLOCKUP_DETECTOR_PERF [=y]
+
+EVENTFD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: HAVE_KVM_EVENTFD [=n] || MEMCG [=y] && CGROUPS [=y]
+
+CRYPTO_842: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_842 [=n] && <choice> || PSTORE_842_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=y]
+
+GPIO_ADP5520: n => yes
+    Direct dependencies:  GPIOLIB [=y] && PMIC_ADP5520 [=n]
+
+DUMMY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+WIZNET_W5300: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_WIZNET [=n] && HAS_IOMEM [=y]
+
+TMPFS: y => no
+    Direct dependencies:  SHMEM [=y]
+    Reverse dependencies: DRM_I915 [=y] && HAS_IOMEM [=y] && DRM [=y] && X86 [=y] && PCI [=y] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=y] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=y] && HAS_IOMEM [=y] && DRM [=y] && MMU [=y]
+
+B53_SRAB_DRIVER: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && B53 [=n] && HAS_IOMEM [=y] && (B53_SERDES [=n] || !B53_SERDES [=n])
+

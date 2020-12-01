@@ -1,0 +1,29 @@
+ADIS16203: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=n] && SPI [=n]
+
+VIDEO_TVP5150: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+MEMBARRIER: y => no
+    Direct dependencies:  y
+    Reverse dependencies: RSEQ [=y] && HAVE_RSEQ [=y]
+
+MTD_ICHXROM: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && X86 [=y] && MTD_JEDECPROBE [=n]
+
+RTC_DRV_DA9052: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && PMIC_DA9052 [=n]
+
+BT_HS: n => yes
+    Direct dependencies:  NET [=n] && BT_BREDR [=n]
+
+FB_IBM_GXT4500: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n]
+
+B53_SPI_DRIVER: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && B53 [=n] && SPI [=n]
+
+NF_LOG_NETDEV: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+

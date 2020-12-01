@@ -1,0 +1,28 @@
+PINCTRL_LYNXPOINT: n => yes
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+PAGE_EXTENSION: y => no
+    Direct dependencies:  y
+    Reverse dependencies: IDLE_PAGE_TRACKING [=y] && SYSFS [=y] && MMU [=y] && !64BIT [=y] || PAGE_OWNER [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y]
+
+DEBUG_SPINLOCK: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+HPET_TIMER: y => no
+    Direct dependencies:  y
+
+NF_DUP_NETDEV: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+    Reverse dependencies: NFT_DUP_NETDEV [=n] && NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n] || NFT_FWD_NETDEV [=n] && NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+
+W1_SLAVE_DS2780: y => no
+    Direct dependencies:  W1 [=y]
+    Reverse dependencies: BATTERY_DS2780 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+PANASONIC_LAPTOP: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && INPUT [=y] && ACPI [=n] && BACKLIGHT_CLASS_DEVICE [=y]
+
+LSI_ET1011C_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+

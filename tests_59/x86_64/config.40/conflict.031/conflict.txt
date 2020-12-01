@@ -1,0 +1,22 @@
+GENERIC_ADC_THERMAL: n => mod
+    Direct dependencies:  THERMAL [=n] && IIO [=n]
+
+EFI_CUSTOM_SSDT_OVERLAYS: n => yes
+    Direct dependencies:  EFI_VARS [=n] && ACPI [=y]
+
+NLS: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: ACPI [=y] && ARCH_SUPPORTS_ACPI [=y] || PCI_LABEL [=n] && PCI [=n] || SCSI_UFSHCD [=n] && SCSI_LOWLEVEL [=n] && SCSI [=n] && SCSI_DMA [=n] || USB [=n] && USB_SUPPORT [=n] && USB_ARCH_HAS_HCD [=n] || USB_GADGET [=n] && USB_SUPPORT [=n] || JFS_FS [=n] && BLOCK [=n] || F2FS_FS [=n] && BLOCK [=n] || JOLIET [=n] && BLOCK [=n] && ISO9660_FS [=n] || UDF_FS [=n] && BLOCK [=n] || FAT_FS [=n] && BLOCK [=n] || EXFAT_FS [=n] && BLOCK [=n] || NTFS_FS [=n] && BLOCK [=n] || HFS_FS [=n] && MISC_FILESYSTEMS [=y] && BLOCK [=n] || HFSPLUS_FS [=n] && MISC_FILESYSTEMS [=y] && BLOCK [=n] || BEFS_FS [=n] && MISC_FILESYSTEMS [=y] && BLOCK [=n] || VBOXSF_FS [=n] && MISC_FILESYSTEMS [=y] && X86 [=y] && VBOXGUEST [=n] || CIFS [=n] && NETWORK_FILESYSTEMS [=n] && INET [=n]
+
+MEMORY_HOTPLUG_DEFAULT_ONLINE: n => yes
+    Direct dependencies:  MEMORY_HOTPLUG [=n]
+
+AD7949: n => mod
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+IP_SET_BITMAP_PORT: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+FS_VERITY_DEBUG: n => yes
+    Direct dependencies:  FS_VERITY [=n]
+

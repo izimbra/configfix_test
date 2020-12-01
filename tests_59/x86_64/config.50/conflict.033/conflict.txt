@@ -1,0 +1,22 @@
+IP_VS_WRR: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_VS [=n]
+
+PROVE_LOCKING: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y]
+
+TI_ADC12138: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+LTC1660: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+FB_TFT_S6D02A1: n => yes
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+IIO_CROS_EC_SENSORS_CORE: n => yes
+    Direct dependencies:  IIO [=y] && SYSFS [=y] && CROS_EC_SENSORHUB [=n]
+
+THERMAL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_VIDEO [=y] && ACPI [=y] && X86 [=y] && BACKLIGHT_CLASS_DEVICE [=y] && INPUT [=y] || ACPI_CPU_FREQ_PSS [=y] && ACPI [=y] || ACPI_THERMAL [=y] && ACPI [=y] && ACPI_PROCESSOR [=y] || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] && ACPI [=y] && X86 [=y] || DRM_ETNAVIV [=n] && HAS_IOMEM [=y] && DRM [=n] && MMU [=y] && DRM_ETNAVIV_THERMAL [=n] || MMC_SDHCI_OMAP [=n] && MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=n] || INTEL_MENLOW [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_THERMAL [=y]
+

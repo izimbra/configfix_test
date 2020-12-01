@@ -1,0 +1,12 @@
+DRM_ETNAVIV: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && MMU [=y]
+
+INPUT_RETU_PWRBUTTON: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_MISC [=n] && MFD_RETU [=n]
+
+IP_VS_PROTO_SCTP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_VS [=n]
+
+LOGIG940_FF: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && HID_LOGITECH [=n]
+

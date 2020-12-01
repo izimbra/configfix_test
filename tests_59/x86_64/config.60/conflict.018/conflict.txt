@@ -1,0 +1,12 @@
+MFD_INTEL_LPSS_ACPI: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && X86 [=y] && ACPI [=n]
+
+SYSTEM76_ACPI: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n]
+
+VEML6070: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+EFI_VARS_PSTORE: n => mod
+    Direct dependencies:  EFI [=n] && EFI_VARS [=n] && PSTORE [=n]
+

@@ -1,0 +1,15 @@
+IPV6_SIT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+MICROCODE_OLD_INTERFACE: n => yes
+    Direct dependencies:  MICROCODE [=n]
+
+PANASONIC_LAPTOP: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && INPUT [=y] && ACPI [=y] && BACKLIGHT_CLASS_DEVICE [=n]
+
+NET_VENDOR_PENSANDO: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+RTC_DRV_RV8803: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+

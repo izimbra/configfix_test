@@ -1,0 +1,25 @@
+SENSORS_LM75: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+IPV6_MROUTE_MULTIPLE_TABLES: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && IPV6_MROUTE [=n]
+
+W1: m => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: BATTERY_DS2780 [=m] && POWER_SUPPLY [=y] && HAS_IOMEM [=y] || BATTERY_DS2781 [=m] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+GREYBUS_LOG: n => yes
+    Direct dependencies:  STAGING [=n] && GREYBUS [=n]
+
+NET_VENDOR_SOLARFLARE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+VIDEO_SAA7110: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+
+NFT_MASQ: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && NF_NAT [=n]
+
+AD5504: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+

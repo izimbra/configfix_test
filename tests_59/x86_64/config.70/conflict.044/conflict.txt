@@ -1,0 +1,27 @@
+NF_LOG_ARP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+
+SENSORS_TPS53679: m => yes
+    Direct dependencies:  HWMON [=m] && PMBUS [=m]
+
+LTC1660: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+NET_VENDOR_AQUANTIA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+IP_SET_HASH_NET: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+SENSORS_TMP102: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+NET_SCH_TBF: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+JFFS2_RTIME: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=n] && JFFS2_FS [=n]
+
+CS89x0_PLATFORM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_CIRRUS [=n] && CS89x0 [=n]
+

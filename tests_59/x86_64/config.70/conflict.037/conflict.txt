@@ -1,0 +1,24 @@
+MCP4922: m => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+IPDDP_ENCAP: n => yes
+    Direct dependencies:  NET [=n] && IPDDP [=n]
+
+INPUT_PCSPKR: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && PCSPKR_PLATFORM [=n]
+
+INV_ICM42600_I2C: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+PSTORE_FTRACE: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=n] && PSTORE [=n] && FUNCTION_TRACER [=y] && DEBUG_FS [=y]
+
+AD7606_IFACE_SPI: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+SENSORS_SMSC47M1: m => yes
+    Direct dependencies:  HWMON [=m] && !PPC
+
+DA280: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

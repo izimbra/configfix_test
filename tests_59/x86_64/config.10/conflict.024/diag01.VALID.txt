@@ -1,0 +1,11 @@
+PCMCIA => yes
+SPI_XCOMM => yes
+STK3310 => yes
+INPUT_MMA8450 => yes
+RTC_DRV_MAX6916 => yes
+PCCARD => yes
+SPI => yes
+I2C => yes
+IIO => yes
+INPUT_MISC => yes
+RTC_CLASS => yes

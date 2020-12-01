@@ -1,0 +1,24 @@
+DRM_FBDEV_LEAK_PHYS_SMEM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM_FBDEV_EMULATION [=n] && EXPERT [=n]
+
+BT_BNEP_PROTO_FILTER: n => yes
+    Direct dependencies:  NET [=y] && BT_BNEP [=n]
+
+SERIO: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: KEYBOARD_ATKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_LKKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_HIL [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] && (GSC || HP300) || KEYBOARD_NEWTON [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_STOWAWAY [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_SUNKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || KEYBOARD_XTKBD [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=n] || MOUSE_PS2 [=y] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || MOUSE_SERIAL [=n] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || MOUSE_VSXXXAA [=n] && !UML && INPUT [=y] && INPUT_MOUSE [=y] || JOYSTICK_WARRIOR [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_MAGELLAN [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_SPACEORB [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_SPACEBALL [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_STINGER [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_TWIDJOY [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_ZHENHUA [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_FSIA6B [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || TABLET_SERIAL_WACOM4 [=y] && !UML && INPUT [=y] && INPUT_TABLET [=y] || TOUCHSCREEN_DYNAPRO [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_HAMPSHIRE [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_EGALAX_SERIAL [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_FUJITSU [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_GUNZE [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_ELO [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_WACOM_W8001 [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_MTOUCH [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_INEXIO [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_PENMOUNT [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHRIGHT [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHWIN [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TOUCHIT213 [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || TOUCHSCREEN_TSC_SERIO [=y] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] || RMI4_F03_SERIO [=n] && !UML && INPUT [=y] && RMI4_CORE [=y] && RMI4_F03 [=n] || I2C_TAOS_EVM [=y] && I2C [=y] && HAS_IOMEM [=y] && TTY [=y] || USB_PULSE8_CEC [=n] && MEDIA_CEC_SUPPORT [=n] && USB_SUPPORT [=y] && TTY [=y] || USB_RAINSHADOW_CEC [=n] && MEDIA_CEC_SUPPORT [=n] && USB_SUPPORT [=y] && TTY [=y]
+
+MCP4922: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+RMI4_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y] && SPI [=n]
+
+NET_DSA_TAG_LAN9303: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_SMSC_LAN9303 [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=y]
+
+MISC_FILESYSTEMS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_APEI [=y] && ACPI [=y] && HAVE_ACPI_APEI [=y]
+

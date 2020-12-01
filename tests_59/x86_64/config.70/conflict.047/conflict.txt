@@ -1,0 +1,34 @@
+AD7266: n => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+FUNCTION_TRACER: y => no
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y]
+    Reverse dependencies: STACK_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && HAVE_FUNCTION_TRACER [=y]
+
+MTD_REDBOOT_PARTS_READONLY: n => yes
+    Direct dependencies:  MTD [=y] && MTD_REDBOOT_PARTS [=n]
+
+NET_IPVTI: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+SENSORS_W83795: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+CROS_EC_CHARDEV: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=m]
+
+MEDIA_TUNER_R820T: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_CX231XX_DVB [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y]) && VIDEO_CX231XX [=m] && DVB_CORE [=m] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_RTL28XXU [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && I2C_MUX [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+NET_CLS_RSVP6: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+IIO_BUFFER_CB: m => yes
+    Direct dependencies:  IIO [=m] && IIO_BUFFER [=y]
+    Reverse dependencies: TOUCHSCREEN_ADC [=m] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=y] && IIO [=m] || SND_SOC_STM32_DFSDM [=n] && SOUND [=n] && !UML && SND [=n] && (ARCH_STM32 || COMPILE_TEST [=y]) && SND_SOC [=n] && STM32_DFSDM_ADC [=m] || LMP91000 [=n] && IIO [=m] && I2C [=y]
+
+MEDIA_TUNER_TDA18218: m => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=y]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9015 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && I2C_MUX [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_USB_AF9035 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

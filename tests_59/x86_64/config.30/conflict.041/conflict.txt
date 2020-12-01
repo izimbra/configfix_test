@@ -1,0 +1,28 @@
+VM_EVENT_COUNTERS: y => no
+    Direct dependencies:  y
+
+RTC_DRV_V3020: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+NET_VENDOR_CORTINA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+CRYPTO_USER_API_RNG: n => mod
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+
+IEEE802154_NL802154_EXPERIMENTAL: n => yes
+    Direct dependencies:  NET [=n] && IEEE802154 [=n]
+
+MTD_MAP_BANK_WIDTH_2: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_HYPERBUS [=n] && MTD [=n] && HAS_IOMEM [=y]
+
+IP_SET_HASH_NETNET: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+SCD30_I2C: n => yes
+    Direct dependencies:  IIO [=y] && SCD30_CORE [=n] && I2C [=y]
+
+NET_VENDOR_CIRRUS: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (ISA [=n] || EISA [=n] || ARM || MAC)
+

@@ -1,0 +1,25 @@
+AD5360: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+IEEE802154_HWSIM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && IEEE802154_DRIVERS [=n] && MAC802154 [=n]
+
+NETFILTER_XT_TARGET_LOG: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n]
+
+KGDB_KDB: n => yes
+    Direct dependencies:  KGDB [=n]
+
+MFD_MADERA_I2C: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=m] && I2C [=y]
+
+NET_DSA_TAG_DSA: n => mod
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_MV88E6XXX [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+FB_TFT_ILI9481: n => yes
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+EFI_CUSTOM_SSDT_OVERLAYS: n => yes
+    Direct dependencies:  EFI_VARS [=n] && ACPI [=y]
+

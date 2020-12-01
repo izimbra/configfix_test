@@ -1,0 +1,13 @@
+DEFXX: n => yes
+    Direct dependencies:  NETDEVICES [=n] && FDDI [=n] && (PCI [=n] || EISA [=n] || TC)
+
+MEDIA_TUNER_FC0011: n => mod
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9035 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+LSI_ET1011C_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+CPU_SUP_CENTAUR: y => no
+    Direct dependencies:  y
+

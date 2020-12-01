@@ -1,0 +1,32 @@
+CHARGER_MP2629: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MP2629 [=y] && MP2629_ADC [=m] && IIO [=y]
+
+CRYPTO_CMAC: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BT [=m] && NET [=y] && !S390 && (RFKILL [=m] || !RFKILL [=m]) || MAC80211 [=m] && NET [=y] && WIRELESS [=y] && CFG80211 [=m] || CIFS [=m] && NETWORK_FILESYSTEMS [=y] && INET [=y]
+
+REALTEK_PHY: y => mod
+    Direct dependencies:  NETDEVICES [=y] && PHYLIB [=y]
+    Reverse dependencies: NET_DSA_REALTEK_SMI [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m] || R8169 [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_REALTEK [=y] && PCI [=y]
+
+VLAN_8021Q: m => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: NET_DSA_TAG_8021Q [=m] && NET [=y] && NET_DSA [=m]
+
+MICROSEMI_PHY: m => yes
+    Direct dependencies:  NETDEVICES [=y] && PHYLIB [=y] && (MACSEC [=m] || MACSEC [=m]=n)
+
+TOSHIBA_BT_RFKILL: m => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=y] && (RFKILL [=m] || RFKILL [=m]=n)
+
+INFINIBAND_OPA_VNIC: n => mod
+    Direct dependencies:  X86_64 [=y] && INFINIBAND [=n]
+
+TRACER_SNAPSHOT_PER_CPU_SWAP: y => no
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=y] && TRACER_SNAPSHOT [=y]
+    Reverse dependencies: IRQSOFF_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && TRACE_IRQFLAGS_SUPPORT [=y] && !ARCH_USES_GETTIMEOFFSET [=n] || PREEMPT_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=y] && !ARCH_USES_GETTIMEOFFSET [=n] && PREEMPTION [=n]
+
+PVH: y => no
+    Direct dependencies:  HYPERVISOR_GUEST [=y]
+    Reverse dependencies: XEN_PVH [=y] && HYPERVISOR_GUEST [=y] && XEN [=y] && XEN_PVHVM [=y] && ACPI [=y]
+

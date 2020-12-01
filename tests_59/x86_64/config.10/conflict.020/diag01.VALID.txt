@@ -1,0 +1,14 @@
+W1_SLAVE_DS2431 => yes
+MFD_AS3711 => yes
+MFD_CS47L35 => yes
+CPU_FREQ_GOV_USERSPACE => yes
+W1 => yes
+I2C => yes
+PINCTRL => yes
+MODULES => yes
+PINMUX => yes
+MFD_MADERA => mod
+PINCONF => yes
+CPU_FREQ => yes
+CPU_FREQ_DEFAULT_GOV_PERFORMANCE => yes
+CPU_FREQ_GOV_PERFORMANCE => yes

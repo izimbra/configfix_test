@@ -1,0 +1,29 @@
+NF_DUP_NETDEV: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+    Reverse dependencies: NFT_DUP_NETDEV [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n] || NFT_FWD_NETDEV [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_NETDEV [=n]
+
+HID_TOPSEED: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+NET_DSA_VITESSE_VSC73XX_PLATFORM: n => mod
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] && HAS_IOMEM [=y]
+
+ENCRYPTED_KEYS: n => yes
+    Direct dependencies:  KEYS [=n]
+    Reverse dependencies: EVM [=n] && INTEGRITY [=n]
+
+RTC_DRV_DA9063: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+
+INTEL_WMI_THUNDERBOLT: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n]
+
+RC_DEVICES: n => yes
+    Direct dependencies:  RC_CORE [=n]
+
+PPP_DEFLATE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PPP [=n]
+
+REGULATOR_LTC3589: n => yes
+    Direct dependencies:  REGULATOR [=n] && I2C [=y]
+

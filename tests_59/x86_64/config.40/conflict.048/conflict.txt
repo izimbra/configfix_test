@@ -1,0 +1,30 @@
+MTD_CFI_STAA: n => yes
+    Direct dependencies:  MTD [=n] && MTD_GEN_PROBE [=n]
+
+AD7292: n => mod
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+IPV6_PIMSM_V2: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && IPV6_MROUTE [=n]
+
+ATM_TCP: n => yes
+    Direct dependencies:  ATM_DRIVERS [=n] && NETDEVICES [=n] && ATM [=n] && INET [=n]
+
+SI1133: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+LTC2485: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+MTD_NAND_PLATFORM: n => mod
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && HAS_IOMEM [=y]
+
+KVM_WERROR: n => yes
+    Direct dependencies:  VIRTUALIZATION [=n] && (X86_64 [=y] && !KASAN [=n] || !COMPILE_TEST [=n]) && EXPERT [=y]
+
+JOYSTICK_ANALOG: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+INET6_ESPINTCP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && XFRM [=n] && INET6_ESP [=n]
+

@@ -1,0 +1,12 @@
+UNIX_DIAG: n => yes
+    Direct dependencies:  NET [=n] && UNIX [=n]
+
+IP_PNP_RARP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IP_PNP [=n]
+
+DEFXX_MMIO: n => yes
+    Direct dependencies:  NETDEVICES [=n] && FDDI [=n] && DEFXX [=n]
+
+AM2315: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

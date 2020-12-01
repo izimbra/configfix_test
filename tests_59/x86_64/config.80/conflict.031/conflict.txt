@@ -1,0 +1,26 @@
+SHMEM: y => no
+    Direct dependencies:  MMU [=y]
+    Reverse dependencies: DRM_I915 [=y] && HAS_IOMEM [=y] && DRM [=y] && X86 [=y] && PCI [=y] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=y] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=y]) && OF [=y] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=y] && HAS_IOMEM [=y] && DRM [=y] && MMU [=y]
+
+I2C_SLAVE: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_AT91_SLAVE_EXPERIMENTAL [=n] && I2C [=y] && HAS_IOMEM [=y] && I2C_AT91 [=n] || I2C_AXXIA [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_AXXIA || COMPILE_TEST [=y]) || I2C_BCM_IPROC [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_BCM_IPROC || COMPILE_TEST [=y]) || I2C_DESIGNWARE_SLAVE [=n] && I2C [=y] && HAS_IOMEM [=y] && I2C_DESIGNWARE_CORE [=y] || I2C_EMEV2 [=y] && I2C [=y] && HAS_IOMEM [=y] && HAVE_CLK [=y] || I2C_PXA_SLAVE [=n] && I2C [=y] && HAS_IOMEM [=y] && I2C_PXA [=n] && !X86_32 [=n] || I2C_STM32F7 [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_STM32 || COMPILE_TEST [=y]) || I2C_RCAR [=y] && I2C [=y] && HAS_IOMEM [=y] && (ARCH_RENESAS || COMPILE_TEST [=y])
+
+STACKPROTECTOR_STRONG: n => yes
+    Direct dependencies:  STACKPROTECTOR [=n] && y
+
+MTD_QINFO_PROBE: y => no
+    Direct dependencies:  MTD [=y] && MTD_LPDDR [=y]
+    Reverse dependencies: MTD_LPDDR [=y] && MTD [=y]
+
+DRM_DEBUG_SELFTEST: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y] && DEBUG_KERNEL [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=y] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=y]
+
+IIO_TRIGGER: y => no
+    Direct dependencies:  IIO [=y]
+    Reverse dependencies: IIO_TRIGGERED_EVENT [=y] && IIO [=y] || IIO_TRIGGERED_BUFFER [=y] && IIO [=y] && IIO_BUFFER [=y] || AD7266 [=y] && IIO [=y] && SPI_MASTER [=y] || AD7768_1 [=n] && IIO [=y] && SPI [=y] || HID_SENSOR_IIO_TRIGGER [=y] && IIO [=y] && HID_SENSOR_HUB [=y] && HID_SENSOR_IIO_COMMON [=y] && IIO_BUFFER [=y] || IIO_SIMPLE_DUMMY_BUFFER [=n] && IIO [=y] && IIO_SIMPLE_DUMMY [=n]
+
+V4L_MEM2MEM_DRIVERS: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_PLATFORM_SUPPORT [=n] && VIDEO_V4L2 [=y]
+

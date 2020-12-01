@@ -1,0 +1,30 @@
+SENSORS_ADT7470: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+BACKLIGHT_BD6107: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && I2C [=y]
+
+TI_ADC108S102: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+AXP288_FUEL_GAUGE: n => mod
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_AXP20X [=n] && IIO [=y]
+
+KEXEC_FILE: n => yes
+    Direct dependencies:  X86_64 [=y] && CRYPTO [=y]=y && CRYPTO_SHA256 [=m]=y
+
+NFT_DUP_IPV4: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV4 [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n])
+
+NET_TEAM_MODE_RANDOM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && NET_TEAM [=n]
+
+SENSORS_IBM_CFFPS: n => yes
+    Direct dependencies:  HWMON [=m] && PMBUS [=n] && LEDS_CLASS [=n]
+
+HID_ZEROPLUS: n => mod
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+HID_STEAM: n => mod
+    Direct dependencies:  INPUT [=y] && HID [=n]
+

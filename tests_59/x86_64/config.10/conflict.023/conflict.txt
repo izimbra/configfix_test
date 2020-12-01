@@ -1,0 +1,16 @@
+W1_SLAVE_DS2405: n => yes
+    Direct dependencies:  W1 [=n]
+
+MPLS: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: OPENVSWITCH [=n] && NET [=n] && INET [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n] && (!NF_DEFRAG_IPV6 [=n] || NF_DEFRAG_IPV6 [=n]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=n] || NETFILTER_CONNCOUNT [=n]))
+
+HUAWEI_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=y]
+
+LTC2496: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+SENSORS_FSCHMD: n => yes
+    Direct dependencies:  HWMON [=y] && X86 [=y] && I2C [=n]
+

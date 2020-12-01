@@ -1,0 +1,19 @@
+NET_SCH_ETF: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+EXTCON_SM5502: n => yes
+    Direct dependencies:  EXTCON [=n] && I2C [=y]
+
+NVMEM_SYSFS: y => no
+    Direct dependencies:  NVMEM [=y] && SYSFS [=y]
+    Reverse dependencies: EEPROM_AT24 [=m] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=n] && SYSFS [=y] || EEPROM_93XX46 [=n] && SPI [=n] && SYSFS [=y]
+
+BT_LE: n => yes
+    Direct dependencies:  NET [=n] && BT [=n]
+
+SENSORS_W83773G: n => mod
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+HW_RANDOM_VIA: n => mod
+    Direct dependencies:  HW_RANDOM [=n] && X86 [=y]
+

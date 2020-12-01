@@ -1,0 +1,28 @@
+BCM7XXX_PHY: y => no
+    Direct dependencies:  NETDEVICES [=y] && PHYLIB [=y]
+    Reverse dependencies: NET_DSA_BCM_SF2 [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && HAS_IOMEM [=y] && NET_DSA [=n] || BCMGENET [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_BROADCOM [=y] && HAS_IOMEM [=y]
+
+NET_FOU: y => no
+    Direct dependencies:  NET [=y] && INET [=y]
+    Reverse dependencies: NET_FOU_IP_TUNNELS [=y] && NET [=y] && INET [=y] && (NET_IPIP [=y] || NET_IPGRE [=n] || IPV6_SIT [=y])
+
+WLAN_VENDOR_MEDIATEK: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n]
+
+MEDIA_TUNER_E4000: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y] && VIDEO_V4L2 [=n]
+    Reverse dependencies: DVB_USB_RTL28XXU [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && I2C_MUX [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] && VIDEO_V4L2 [=n]
+
+MTD_CFI_I1: y => no
+    Direct dependencies:  MTD [=y]
+    Reverse dependencies: MTD_CFI_GEOMETRY [=n] && MTD [=y] && MTD_CFI_ADV_OPTIONS [=y] && !MTD_CFI_I2 [=y] && !MTD_CFI_I4 [=n] && !MTD_CFI_I8 [=n]
+
+VIDEO_BT856: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+IO_DELAY_UDELAY: n => no
+    Direct dependencies:  <choice>
+
+NET_DSA_SJA1105: n => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=n] && SPI [=n]
+

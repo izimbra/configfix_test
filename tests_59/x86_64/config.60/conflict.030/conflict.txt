@@ -1,0 +1,20 @@
+AD2S1200: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+
+IP_DCCP: n => mod
+    Direct dependencies:  NET [=y] && INET [=n]
+
+BATMAN_ADV_TRACING: n => yes
+    Direct dependencies:  NET [=y] && BATMAN_ADV [=n] && EVENT_TRACING [=y]
+
+PREEMPT_NONE: n => no
+    Direct dependencies:  <choice>
+
+CRYPTO_MICHAEL_MIC: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || HOSTAP [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=n] || HERMES [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=n] && (PPC_PMAC || PCI [=y] || PCMCIA [=m]) && CFG80211 [=m] || RTLLIB_CRYPTO_TKIP [=n] && STAGING [=y] && RTLLIB [=n]
+
+CRYPTO_ARC4: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || HOSTAP [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=n] || RTLLIB_CRYPTO_TKIP [=n] && STAGING [=y] && RTLLIB [=n] || RTLLIB_CRYPTO_WEP [=n] && STAGING [=y] && RTLLIB [=n]
+

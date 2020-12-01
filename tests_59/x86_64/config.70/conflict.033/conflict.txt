@@ -1,0 +1,22 @@
+MTD_MAP_BANK_WIDTH_2: y => no
+    Direct dependencies:  MTD [=y]
+    Reverse dependencies: MTD_HYPERBUS [=m] && MTD [=y] && HAS_IOMEM [=y]
+
+FB_TFT_ST7789V: n => yes
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+CROS_EC_LIGHTBAR: m => yes
+    Direct dependencies:  CHROME_PLATFORMS [=y] && MFD_CROS_EC_DEV [=m]
+
+GS_FPGABOOT: n => yes
+    Direct dependencies:  STAGING [=n]
+
+SENSORS_FSCHMD: m => yes
+    Direct dependencies:  HWMON [=m] && X86 [=y] && I2C [=y]
+
+IPV6_OPTIMISTIC_DAD: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+NET_VENDOR_HUAWEI: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+

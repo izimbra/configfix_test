@@ -1,0 +1,14 @@
+FB_TFT_RA8875 => yes
+TINYDRM_ILI9225 => yes
+SENSORS_LTC3815 => yes
+PCMCIA_RAYCS => yes
+TCP_CONG_ADVANCED => yes
+SPI => yes
+TCP_CONG_CDG => yes
+FB_TFT => yes
+DEFAULT_CDG => yes
+DRM => yes
+PMBUS => yes
+WLAN => yes
+PCMCIA => yes
+WIRELESS => yes

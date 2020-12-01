@@ -1,0 +1,14 @@
+VIDEO_TW9906: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=y] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+NET_DSA_TAG_KSZ: n => mod
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_MICROCHIP_KSZ_COMMON [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n]
+
+RTC_DRV_PCF85363: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+IP6_NF_MATCH_IPV6HEADER: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n]
+

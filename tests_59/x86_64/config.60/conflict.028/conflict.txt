@@ -1,0 +1,18 @@
+OPT3001: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+ASUS_WIRELESS: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=n]
+
+LEDS_TPS6105X: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && TPS6105X [=m]
+
+W1_SLAVE_DS2430: m => yes
+    Direct dependencies:  W1 [=m]
+
+AD5504: n => mod
+    Direct dependencies:  IIO [=m] && SPI [=n]
+
+INFINIBAND_ON_DEMAND_PAGING: n => yes
+    Direct dependencies:  INFINIBAND [=n] && INFINIBAND_USER_MEM [=n]
+

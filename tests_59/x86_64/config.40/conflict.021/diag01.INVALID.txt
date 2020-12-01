@@ -1,0 +1,17 @@
+STK8BA50 => mod
+RTC_DRV_MAX6916 => yes
+MTD_COMPLEX_MAPPINGS => yes
+I2C_ALGOBIT => no
+DMARD09 => mod
+IIO => yes
+IIO_BUFFER => yes
+IIO_TRIGGER => yes
+IIO_CONSUMERS_PER_TRIGGER => 1
+IIO_KFIFO_BUF => mod
+SPI => yes
+RTC_CLASS => yes
+MTD => mod
+MTD_CFI_ADV_OPTIONS => yes
+MTD_CFI_GEOMETRY => yes
+MTD_CFI_NOSWAP => yes
+I2C_SIMTEC => yes

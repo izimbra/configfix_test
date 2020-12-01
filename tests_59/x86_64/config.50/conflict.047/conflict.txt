@@ -1,0 +1,33 @@
+BUG: y => no
+    Direct dependencies:  y
+
+DRM_VGEM: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=n] && DRM_I915 [=n]
+
+THERMAL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_VIDEO [=y] && ACPI [=y] && X86 [=y] && BACKLIGHT_CLASS_DEVICE [=y] && INPUT [=y] || ACPI_CPU_FREQ_PSS [=y] && ACPI [=y] || ACPI_THERMAL [=y] && ACPI [=y] && ACPI_PROCESSOR [=y] || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] && ACPI [=y] && X86 [=y] || DRM_ETNAVIV [=n] && HAS_IOMEM [=y] && DRM [=n] && MMU [=y] && DRM_ETNAVIV_THERMAL [=n] || MMC_SDHCI_OMAP [=n] && MMC [=n] && MMC_SDHCI_PLTFM [=n] && OF [=n] || INTEL_MENLOW [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_THERMAL [=y]
+
+BACKLIGHT_ADP5520: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && PMIC_ADP5520 [=n]
+
+ADIS16240: n => yes
+    Direct dependencies:  STAGING [=y] && IIO [=y] && SPI [=n]
+
+ADIS16130: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+MTD_PHYSMAP_COMPAT: n => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && MTD_PHYSMAP [=n]
+
+IIO_TRIGGER: y => no
+    Direct dependencies:  IIO [=y]
+    Reverse dependencies: IIO_TRIGGERED_EVENT [=n] && IIO [=y] || IIO_TRIGGERED_BUFFER [=y] && IIO [=y] && IIO_BUFFER [=y] || AD7266 [=n] && IIO [=y] && SPI_MASTER [=n] || AD7768_1 [=n] && IIO [=y] && SPI [=n] || HID_SENSOR_IIO_TRIGGER [=y] && IIO [=y] && HID_SENSOR_HUB [=y] && HID_SENSOR_IIO_COMMON [=y] && IIO_BUFFER [=y] || IIO_SIMPLE_DUMMY_BUFFER [=n] && IIO [=y] && IIO_SIMPLE_DUMMY [=n]
+
+MTD_NAND_MXIC: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n] && (HAS_IOMEM [=y] || COMPILE_TEST [=n])
+
+RTC_DRV_DS1347: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+

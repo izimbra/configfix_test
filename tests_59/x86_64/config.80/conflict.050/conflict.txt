@@ -1,0 +1,32 @@
+TOSHIBA_BT_RFKILL: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=n] && (RFKILL [=y] || RFKILL [=y]=n)
+
+X86_ACPI_CPUFREQ: n => yes
+    Direct dependencies:  CPU_FREQ [=y] && X86 [=y] && ACPI_PROCESSOR [=n]
+
+CPU_FREQ_GOV_PERFORMANCE: y => no
+    Direct dependencies:  CPU_FREQ [=y]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_PERFORMANCE [=y] && <choice> || CPU_FREQ_DEFAULT_GOV_ONDEMAND [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_CONSERVATIVE [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_SCHEDUTIL [=n] && <choice> && SMP [=y] || X86_INTEL_PSTATE [=y] && CPU_FREQ [=y] && X86 [=y]
+
+HID: y => no
+    Direct dependencies:  INPUT [=y]
+    Reverse dependencies: BT_HIDP [=n] && NET [=y] && BT_BREDR [=n] && INPUT [=y] || USB_HID [=y] && USB [=y] && INPUT [=y] || I2C_HID [=n] && I2C [=y] && INPUT [=y] || INTEL_ISH_HID [=n] && INPUT [=y] && (X86_64 [=y] || COMPILE_TEST [=y]) && PCI [=y]
+
+DEFXX_MMIO: n => yes
+    Direct dependencies:  NETDEVICES [=n] && FDDI [=n] && DEFXX [=n]
+
+NET_TEAM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+STE10XP: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+IEEE802154_MCR20A: n => yes
+    Direct dependencies:  NETDEVICES [=n] && IEEE802154_DRIVERS [=n] && MAC802154 [=y] && SPI [=y]
+
+NET_VENDOR_INTEL: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+BONDING: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=y] && (IPV6 [=y] || IPV6 [=y]=n)
+

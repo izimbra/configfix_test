@@ -1,0 +1,19 @@
+IP_SET_HASH_IP: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+RTC_DRV_ABX80X: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+DEBUG_WW_MUTEX_SLOWPATH: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y]
+
+FS_VERITY_DEBUG: n => yes
+    Direct dependencies:  FS_VERITY [=n]
+
+RMNET: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_QUALCOMM [=n]
+
+SENSORS_G762: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

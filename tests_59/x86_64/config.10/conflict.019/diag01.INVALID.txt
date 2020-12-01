@@ -1,0 +1,14 @@
+NF_LOG_IPV6 => yes
+REGULATOR_TPS6586X => yes
+RTC_DRV_MAX6900 => yes
+NET_VENDOR_AMD => yes
+IPV6 => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+REGULATOR => yes
+I2C => yes
+MFD_TPS6586X => yes
+RTC_CLASS => yes
+ETHERNET => yes
+NETDEVICES => yes

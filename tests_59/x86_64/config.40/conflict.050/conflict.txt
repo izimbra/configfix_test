@@ -1,0 +1,30 @@
+TSL2772: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+WLAN: n => yes
+    Direct dependencies:  NETDEVICES [=n] && !S390 && NET [=n]
+
+AMD_PHY: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+HYPERV_BALLOON: n => mod
+    Direct dependencies:  HYPERV [=n]
+
+BMI160_SPI: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+MACSEC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+FS_VERITY_DEBUG: n => yes
+    Direct dependencies:  FS_VERITY [=n]
+
+QSEMI_PHY: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+AD2S90: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+PPPOE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PPP [=n]
+

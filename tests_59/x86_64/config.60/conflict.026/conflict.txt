@@ -1,0 +1,19 @@
+BACKLIGHT_PCF50633: m => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_PCF50633 [=m]
+
+I2C_SCMI: n => mod
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && ACPI [=n]
+
+AD5593R: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+NVMEM_SYSFS: y => no
+    Direct dependencies:  NVMEM [=y] && SYSFS [=y]
+    Reverse dependencies: EEPROM_AT24 [=y] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=n] && SPI [=n] && SYSFS [=y] || EEPROM_93XX46 [=n] && SPI [=n] && SYSFS [=y]
+
+REGULATOR_RT5033: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_RT5033 [=n]
+
+HID_MAGICMOUSE: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

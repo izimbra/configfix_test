@@ -1,0 +1,13 @@
+NF_LOG_IPV6: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n]
+    Reverse dependencies: NETFILTER_XT_TARGET_LOG [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && IP6_NF_IPTABLES [=n]
+
+REGULATOR_TPS6586X: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_TPS6586X [=n]
+
+RTC_DRV_MAX6900: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+
+NET_VENDOR_AMD: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (DIO || MACH_DECSTATION || MVME147 || ATARI || SUN3 || SUN3X || SBUS [=n] || PCI [=n] || ZORRO || ISA [=n] && ISA_DMA_API [=y] || ARM && ARCH_EBSA110 || ISA [=n] || EISA [=n] || PCMCIA [=n] || ARM64)
+

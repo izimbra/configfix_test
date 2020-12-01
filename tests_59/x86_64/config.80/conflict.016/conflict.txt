@@ -1,0 +1,13 @@
+MPLS: y => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: OPENVSWITCH [=y] && NET [=y] && INET [=y] && (!NF_CONNTRACK [=y] || NF_CONNTRACK [=y] && (!NF_DEFRAG_IPV6 [=y] || NF_DEFRAG_IPV6 [=y]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=y] || NETFILTER_CONNCOUNT [=y]))
+
+EFI_RUNTIME_MAP: n => yes
+    Direct dependencies:  X86 [=y] && EFI [=n] && KEXEC_CORE [=y]
+
+I2C_SCMI: n => yes
+    Direct dependencies:  I2C [=y] && HAS_IOMEM [=y] && ACPI [=n]
+
+BACKLIGHT_ADP5520: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && PMIC_ADP5520 [=n]
+

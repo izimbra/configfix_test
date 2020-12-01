@@ -1,0 +1,19 @@
+ACRN_GUEST: n => yes
+    Direct dependencies:  HYPERVISOR_GUEST [=n] && X86_64 [=y]
+
+NFT_DUP_IPV4: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV4 [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n])
+
+VIDEO_ADV7393: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+
+AD7292: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+BLK_DEV_INITRD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BOOT_CONFIG [=y]
+
+EZX_PCAP: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && SPI_MASTER [=n]
+

@@ -1,0 +1,13 @@
+DLM: n => yes
+    Direct dependencies:  INET [=n] && SYSFS [=y] && CONFIGFS_FS [=y] && (IPV6 [=n] || IPV6 [=n]=n)
+
+NET_DSA_MICROCHIP_KSZ9477_SPI: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA_MICROCHIP_KSZ9477 [=n] && SPI [=n]
+
+GENERIC_ADC_BATTERY: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && IIO [=n]
+
+VIDEO_TW9903: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=y] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

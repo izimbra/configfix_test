@@ -1,0 +1,11 @@
+BATTERY_BQ27XXX_HDQ => yes
+LEDS_CLASS => yes
+TCG_TIS_I2C_NUVOTON => yes
+IPV6 => yes
+POWER_SUPPLY => yes
+W1 => yes
+BATTERY_BQ27XXX => yes
+NEW_LEDS => yes
+TCG_TPM => yes
+NET => yes
+INET => yes

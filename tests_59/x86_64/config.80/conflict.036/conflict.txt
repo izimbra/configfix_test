@@ -1,0 +1,27 @@
+ACPI_CUSTOM_METHOD: n => yes
+    Direct dependencies:  ACPI [=n] && DEBUG_FS [=y]
+
+WIZNET_BUS_DIRECT: n => yes
+    Direct dependencies:  <choice>
+
+MSI_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI_WMI [=n] && INPUT [=y] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n)
+
+NET_DSA_TAG_BRCM: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: B53 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_BCM_SF2 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n]
+
+CPU_SUP_AMD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CPU_SUP_HYGON [=y]
+
+DELL_WMI_LED: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && LEDS_CLASS [=y] && ACPI_WMI [=n]
+
+NVMEM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: USB4 [=y] && PCI [=y] || EEPROM_AT24 [=y] && I2C [=y] && SYSFS [=y] || EEPROM_AT25 [=y] && SPI [=y] && SYSFS [=y] || EEPROM_93XX46 [=y] && SPI [=y] && SYSFS [=y] || RTC_NVMEM [=y] && RTC_CLASS [=y]
+
+LEDS_TPS6105X: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && TPS6105X [=n]
+

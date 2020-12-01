@@ -1,0 +1,12 @@
+RTC_DRV_PCF85363: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+SPI_SC18IS602: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && I2C [=y]
+
+GPIO_ADP5588_IRQ: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=y] && GPIO_ADP5588 [=n]=y
+
+VIDEO_THS8200: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+

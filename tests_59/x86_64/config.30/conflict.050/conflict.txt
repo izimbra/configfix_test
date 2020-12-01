@@ -1,0 +1,30 @@
+NET_TEAM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+IPV6_SIT: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+INFINIBAND: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && HAS_DMA [=y] && NET [=n] && INET [=n] && (m && MODULES [=y] || IPV6 [=n]!=m) && !ALPHA
+
+X86_ACPI_CPUFREQ: n => yes
+    Direct dependencies:  CPU_FREQ [=n] && X86 [=y] && ACPI_PROCESSOR [=n]
+
+SENSORS_W83795: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+NET_VENDOR_INTEL: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+LTC2983: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+HID_XINMO: n => mod
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+NET_SCH_PLUG: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+WIZNET_BUS_DIRECT: n => yes
+    Direct dependencies:  <choice>
+

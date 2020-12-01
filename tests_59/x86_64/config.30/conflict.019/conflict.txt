@@ -1,0 +1,13 @@
+COMMON_CLK: y => no
+    Direct dependencies:  !HAVE_LEGACY_CLK [=n]
+    Reverse dependencies: X86_INTEL_QUARK [=n] && X86_32 [=n] && X86_EXTENDED_PLATFORM [=n] && X86_PLATFORM_DEVICES [=n] && X86_TSC [=y] && PCI [=n] && PCI_GOANY [=n] && X86_IO_APIC [=y] || X86_INTEL_LPSS [=n] && X86 [=y] && ACPI [=y] && PCI [=n] || X86_AMD_PLATFORM_DEVICE [=n] && ACPI [=y] || MFD_INTEL_LPSS [=m] && HAS_IOMEM [=y] || INTEL_ATOMISP [=n] && STAGING [=n] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=n] && X86 [=y] && EFI [=y] && PCI [=n] && ACPI [=y] || PMC_ATOM [=n] && X86 [=y] && PCI [=n]
+
+HP_WIRELESS: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && INPUT [=y]
+
+NET_CLS_RSVP: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+X86_ACPI_CPUFREQ: n => mod
+    Direct dependencies:  CPU_FREQ [=n] && X86 [=y] && ACPI_PROCESSOR [=n]
+

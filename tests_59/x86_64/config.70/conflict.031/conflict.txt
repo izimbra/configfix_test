@@ -1,0 +1,23 @@
+IP_VS: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && (NF_CONNTRACK [=n] || NF_CONNTRACK [=n]=n)
+
+NET_CLS_BPF: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+NET_SCH_CAKE: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+INTEL_WMI_THUNDERBOLT: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n]
+
+GOOGLE_COREBOOT_TABLE: n => mod
+    Direct dependencies:  GOOGLE_FIRMWARE [=n] && (ACPI [=y] || OF [=y])
+    Reverse dependencies: GOOGLE_COREBOOT_TABLE_ACPI [=n] && GOOGLE_FIRMWARE [=n] || GOOGLE_COREBOOT_TABLE_OF [=n] && GOOGLE_FIRMWARE [=n]
+
+VZ89X: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+MTD_COMPLEX_MAPPINGS: y => no
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y]
+    Reverse dependencies: MTD_HYPERBUS [=m] && MTD [=y] && HAS_IOMEM [=y] || MTD_MAP_BANK_WIDTH_32 [=n] && MTD [=y] && HAS_IOMEM [=y] || MTD_PHYSMAP_GEMINI [=y] && MTD [=y] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=y] && MFD_SYSCON [=y] || MTD_PHYSMAP_IXP4XX [=n] && MTD [=y] && HAS_IOMEM [=y] && MTD_PHYSMAP_OF [=y] && ARM
+

@@ -1,0 +1,28 @@
+MDIO_MSCC_MIIM: n => mod
+    Direct dependencies:  NETDEVICES [=n] && MDIO_DEVICE [=n] && MDIO_BUS [=n] && HAS_IOMEM [=y]
+
+NET_SCH_ETF: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+VORTEX: n => mod
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_3COM [=n] && (PCI [=n] || EISA [=n]) && HAS_IOPORT_MAP [=y]
+
+LEDS_TRIGGER_PATTERN: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=n]
+
+IPV6_MROUTE_MULTIPLE_TABLES: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && IPV6_MROUTE [=n]
+
+MTD_CFI_AMDSTD: n => mod
+    Direct dependencies:  MTD [=n] && MTD_GEN_PROBE [=n]
+    Reverse dependencies: MTD_HYPERBUS [=n] && MTD [=n] && HAS_IOMEM [=y] || MTD_TS5500 [=n] && MTD [=n] && HAS_IOMEM [=y] && (TS5500 [=n] || COMPILE_TEST [=n])
+
+RTC_DRV_SD3078: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+EDD_OFF: n => yes
+    Direct dependencies:  EDD [=n]
+
+TCG_VTPM_PROXY: m => yes
+    Direct dependencies:  TCG_TPM [=m]
+

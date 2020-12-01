@@ -1,0 +1,16 @@
+PALMAS_GPADC: n => mod
+    Direct dependencies:  IIO [=m] && MFD_PALMAS [=n]
+
+KALLSYMS_ALL: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && KALLSYMS [=y]
+    Reverse dependencies: LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+MAC802154: m => yes
+    Direct dependencies:  NET [=y] && IEEE802154 [=m]
+
+NFT_DUP_IPV6: n => mod
+    Direct dependencies:  NET [=y] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV6 [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n])
+
+IP6_NF_FILTER: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n]
+

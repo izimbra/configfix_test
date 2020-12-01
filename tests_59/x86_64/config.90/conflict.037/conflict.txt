@@ -1,0 +1,27 @@
+NET_DSA_TAG_DSA: m => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=m]
+    Reverse dependencies: NET_DSA_MV88E6XXX [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m]
+
+REGULATOR_TPS6105X: m => yes
+    Direct dependencies:  REGULATOR [=y] && TPS6105X [=m]
+
+MDIO_XPCS: y => no
+    Direct dependencies:  NETDEVICES [=y] && MDIO_DEVICE [=y] && MDIO_BUS [=y]
+    Reverse dependencies: STMMAC_ETH [=m] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_STMICRO [=y] && HAS_IOMEM [=y] && HAS_DMA [=y]
+
+CRYPTO_ECB: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BT [=m] && NET [=y] && !S390 && (RFKILL [=m] || !RFKILL [=m]) || LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || HOSTAP [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || HOSTAP [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] || FS_ENCRYPTION_ALGS [=y] || ECRYPT_FS [=n] && MISC_FILESYSTEMS [=y] && KEYS [=y] && CRYPTO [=y] && (ENCRYPTED_KEYS [=y] || ENCRYPTED_KEYS [=y]=n) || CIFS [=m] && NETWORK_FILESYSTEMS [=y] && INET [=y] || CRYPTO_XTS [=y] && CRYPTO [=y] || CRYPTO_DEV_SUN8I_CE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_SUN8I_SS [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_ALLWINNER [=y] && PM [=y] || CRYPTO_DEV_PICOXCELL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_PICOXCELL || COMPILE_TEST [=y]) && HAVE_CLK [=y] || CRYPTO_DEV_SAHARA [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARCH_MXC && OF [=y] || CRYPTO_DEV_MXS_DCP [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && (ARCH_MXS || ARCH_MXC) || CRYPTO_DEV_QCE_SKCIPHER [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=y] || CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_AMLOGIC_GXL [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && HAS_IOMEM [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+SENSORS_XDPE122: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+FB_TFT_ILI9481: n => yes
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+IP_VS_LBLC: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_VS [=m]
+
+IIO_CROS_EC_SENSORS_LID_ANGLE: m => yes
+    Direct dependencies:  IIO [=y] && IIO_CROS_EC_SENSORS_CORE [=m]
+

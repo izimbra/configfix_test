@@ -1,0 +1,26 @@
+MEDIA_TUNER_TDA18212: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_ANYSEE [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || VIDEO_EM28XX_DVB [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && DVB_CORE [=n] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_NGENE [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=y] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_DDBRIDGE [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_CORE [=n] && PCI [=y] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n] || DVB_C8SECTPFE [=n] && MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && DVB_PLATFORM_DRIVERS [=n] && PINCTRL [=n] && DVB_CORE [=n] && I2C [=y] && (ARCH_STI || ARCH_MULTIPLATFORM || COMPILE_TEST [=n]) && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+CPU_FREQ_GOV_POWERSAVE: n => yes
+    Direct dependencies:  CPU_FREQ [=n]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_POWERSAVE [=n] && <choice>
+
+HX711: n => yes
+    Direct dependencies:  IIO [=n] && GPIOLIB [=y]
+
+MMA7660: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+INPUT_UINPUT: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n]
+
+NET_VENDOR_AMD: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (DIO || MACH_DECSTATION || MVME147 || ATARI || SUN3 || SUN3X || SBUS [=n] || PCI [=y] || ZORRO || ISA [=n] && ISA_DMA_API [=y] || ARM && ARCH_EBSA110 || ISA [=n] || EISA [=n] || PCMCIA [=n] || ARM64)
+
+TI_ADC081C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+TPL0102: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

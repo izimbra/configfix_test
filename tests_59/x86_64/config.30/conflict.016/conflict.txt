@@ -1,0 +1,12 @@
+INTEL_VBTN: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && INPUT [=y]
+
+IEEE802154_CA8210: n => mod
+    Direct dependencies:  NETDEVICES [=n] && IEEE802154_DRIVERS [=n] && MAC802154 [=n] && COMMON_CLK [=y] && SPI [=n]
+
+IPV6_SIT_6RD: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && IPV6_SIT [=n]
+
+RTC_DRV_TEST: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+

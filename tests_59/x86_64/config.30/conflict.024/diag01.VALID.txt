@@ -1,0 +1,9 @@
+SENSORS_ASPEED => yes
+SENSORS_DELL_SMM => yes
+SENSORS_AMC6821 => yes
+RTC_DRV_DS1286 => mod
+DEV_APPLETALK => yes
+HWMON => yes
+RTC_CLASS => yes
+NET => yes
+ATALK => yes

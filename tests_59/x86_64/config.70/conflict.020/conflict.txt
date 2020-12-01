@@ -1,0 +1,13 @@
+NET_DSA_REALTEK_SMI: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+IP_SET: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n]
+
+CRYPTO_CHACHA20: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=m] && CRYPTO [=y] || CRYPTO_ADIANTUM [=n] && CRYPTO [=y]
+
+SENSORS_MAX6639: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+

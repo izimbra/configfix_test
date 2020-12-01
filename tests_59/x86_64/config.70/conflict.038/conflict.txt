@@ -1,0 +1,26 @@
+VXLAN: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=n]
+
+IIO_BUFFER_HW_CONSUMER: m => no
+    Direct dependencies:  IIO [=m] && IIO_BUFFER [=y]
+    Reverse dependencies: ADI_AXI_ADC [=m] && IIO [=m] || STM32_DFSDM_ADC [=m] && IIO [=m] && (ARCH_STM32 && OF [=y] || COMPILE_TEST [=y])
+
+VIRTIO_NET: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && VIRTIO [=y]
+
+INPUT_ADXL34X_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_ADXL34X [=m] && SPI [=y]
+
+REALTEK_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+    Reverse dependencies: NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || R8169 [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_REALTEK [=n] && PCI [=n]
+
+REGULATOR_TPS6105X: n => yes
+    Direct dependencies:  REGULATOR [=y] && TPS6105X [=m]
+
+CAIF_DEBUG: n => yes
+    Direct dependencies:  NET [=n] && CAIF [=n]
+
+NET_SCH_SFB: n => mod
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+

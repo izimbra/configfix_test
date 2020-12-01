@@ -1,0 +1,30 @@
+INPUT_PCSPKR: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && PCSPKR_PLATFORM [=y]
+
+STK8312: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+JOYSTICK_ANALOG: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+
+INIT_STACK_NONE: y => no
+    Direct dependencies:  <choice>
+
+LTC2485: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+LTC2497: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+STX104: n => yes
+    Direct dependencies:  IIO [=n] && PC104 [=n] && X86 [=y]
+
+DEBUG_PAGE_REF: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && TRACEPOINTS [=n]
+
+NETFILTER_XT_MATCH_STATE: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n]
+
+TRUSTED_KEYS: n => yes
+    Direct dependencies:  KEYS [=n] && TCG_TPM [=n]
+

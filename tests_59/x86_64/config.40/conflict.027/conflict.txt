@@ -1,0 +1,20 @@
+NET_DSA_TAG_GSWIP: n => mod
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_LANTIQ_GSWIP [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n]
+
+INPUT_RETU_PWRBUTTON: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_RETU [=m]
+
+INPUT_MATRIXKMAP: m => no
+    Direct dependencies:  !UML && INPUT [=y]
+    Reverse dependencies: KEYBOARD_CLPS711X [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && OF_GPIO [=n] && (ARCH_CLPS711X || COMPILE_TEST [=n]) || KEYBOARD_EP93XX [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && (ARCH_EP93XX || COMPILE_TEST [=n]) || KEYBOARD_TCA8418 [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && I2C [=y] || KEYBOARD_MATRIX [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && (GPIOLIB [=y] || COMPILE_TEST [=n]) || KEYBOARD_LM8333 [=m] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && I2C [=y] || KEYBOARD_LPC32XX [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && ARCH_LPC32XX && OF [=n] || KEYBOARD_MAX7359 [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && I2C [=y] || KEYBOARD_IMX [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && ARCH_MXC || KEYBOARD_NOMADIK [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && (ARCH_NOMADIK || ARCH_U8500) || KEYBOARD_NSPIRE [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && ARCH_NSPIRE && OF [=n] || KEYBOARD_TEGRA [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && ARCH_TEGRA && OF [=n] || KEYBOARD_PXA27x [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && (PXA27x || PXA3xx || ARCH_MMP) || KEYBOARD_PMIC8XXX [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && MFD_PM8XXX [=n] || KEYBOARD_SAMSUNG [=m] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && HAVE_CLK [=y] || KEYBOARD_ST_KEYSCAN [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && (ARCH_STI || COMPILE_TEST [=n]) || KEYBOARD_STMPE [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && MFD_STMPE [=n] && OF [=n] || KEYBOARD_OMAP [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && ARCH_OMAP1 || KEYBOARD_OMAP4 [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && (OF [=n] || ARCH_OMAP2PLUS) || KEYBOARD_SPEAR [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && PLAT_SPEAR || KEYBOARD_TC3589X [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && MFD_TC3589X [=n] || KEYBOARD_TWL4030 [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && TWL4030_CORE [=n] || KEYBOARD_CROS_EC [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && CROS_EC [=n] || KEYBOARD_BCM [=n] && !UML && INPUT [=y] && INPUT_KEYBOARD [=y] && OF [=n] && HAVE_CLK [=y] || HT16K33 [=n] && AUXDISPLAY [=n] && FB [=y] && OF [=n] && I2C [=y] && INPUT [=y]
+
+MACSEC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+MSI_WMI: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=y] && BACKLIGHT_CLASS_DEVICE [=n] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n)
+
+EFI_RUNTIME_MAP: n => yes
+    Direct dependencies:  X86 [=y] && EFI [=n] && KEXEC_CORE [=y]
+

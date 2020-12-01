@@ -1,0 +1,12 @@
+DCDBAS: n => yes
+    Direct dependencies:  X86_PLATFORM_DEVICES [=n] && X86 [=y]
+
+SPI_AXI_SPI_ENGINE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+
+ADIS16203: n => yes
+    Direct dependencies:  STAGING [=y] && IIO [=n] && SPI [=n]
+
+GENERIC_ADC_BATTERY: n => mod
+    Direct dependencies:  POWER_SUPPLY [=y] && IIO [=n]
+

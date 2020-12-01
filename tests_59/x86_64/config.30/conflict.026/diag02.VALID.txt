@@ -1,0 +1,17 @@
+GPIO_TWL6040 => mod
+NATIONAL_PHY => yes
+NET_VENDOR_QUALCOMM => yes
+AD5791 => mod
+AD7292 => mod
+FB_TFT_ILI9325 => mod
+TWL6040_CORE => yes
+NETDEVICES => yes
+NET => yes
+PHYLIB => yes
+MDIO_DEVICE => yes
+ETHERNET => yes
+SPI => yes
+FB_TFT => mod
+FB => yes
+STAGING => yes
+BACKLIGHT_CLASS_DEVICE => mod

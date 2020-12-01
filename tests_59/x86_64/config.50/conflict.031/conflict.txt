@@ -1,0 +1,21 @@
+IEEE802154_CA8210: n => yes
+    Direct dependencies:  NETDEVICES [=y] && IEEE802154_DRIVERS [=n] && MAC802154 [=n] && COMMON_CLK [=y] && SPI [=n]
+
+PCMCIA_RAYCS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n] && PCMCIA [=n]
+
+NF_CONNTRACK_NETBIOS_NS: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NF_CONNTRACK [=n]
+
+BASE_FULL: y => no
+    Direct dependencies:  y
+
+FAULT_INJECTION_DEBUG_FS: n => yes
+    Direct dependencies:  FAULT_INJECTION [=n] && SYSFS [=y] && DEBUG_FS [=y]
+
+X86_INTEL_TSX_MODE_AUTO: n => no
+    Direct dependencies:  <choice>
+
+X86_UMIP: y => no
+    Direct dependencies:  y
+

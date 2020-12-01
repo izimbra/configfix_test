@@ -1,0 +1,17 @@
+GREYBUS_BOOTROM => yes
+SENSORS_MAX1111 => yes
+PPTP => mod
+AD5933 => yes
+PSTORE_LZO_COMPRESS => mod
+GREYBUS => yes
+STAGING => yes
+HWMON => yes
+NET_IPGRE_DEMUX => yes
+NETDEVICES => yes
+NET => yes
+INET => yes
+PPP => yes
+IIO_KFIFO_BUF => yes
+IIO => yes
+MISC_FILESYSTEMS => yes
+PSTORE => yes

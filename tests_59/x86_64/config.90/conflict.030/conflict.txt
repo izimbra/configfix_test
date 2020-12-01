@@ -1,0 +1,22 @@
+CRYPTO_SHA3: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+IEEE802154_ADF7242: n => mod
+    Direct dependencies:  NETDEVICES [=y] && IEEE802154_DRIVERS [=n] && MAC802154 [=n] && SPI [=y]
+
+FIELDBUS_DEV: n => yes
+    Direct dependencies:  STAGING [=n]
+
+VIDEO_UDA1342: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_DEV [=m] && I2C [=y] && SND [=m] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+MPLS: y => no
+    Direct dependencies:  NET [=y]
+    Reverse dependencies: OPENVSWITCH [=m] && NET [=y] && INET [=y] && (!NF_CONNTRACK [=m] || NF_CONNTRACK [=m] && (!NF_DEFRAG_IPV6 [=m] || NF_DEFRAG_IPV6 [=m]) && (!NF_NAT [=m] || NF_NAT [=m]) && (!NETFILTER_CONNCOUNT [=m] || NETFILTER_CONNCOUNT [=m]))
+
+ACPI_HED: y => mod
+    Direct dependencies:  ACPI [=y]
+    Reverse dependencies: ACPI_APEI_GHES [=y] && ACPI [=y] && ACPI_APEI [=y]
+

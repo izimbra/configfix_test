@@ -1,0 +1,19 @@
+BCM84881_PHY: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+NET_SB1000: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PNP [=y]
+
+SENSORS_XDPE122: m => yes
+    Direct dependencies:  HWMON [=m] && PMBUS [=m]
+
+PSTORE_LZ4HC_COMPRESS: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=n] && PSTORE [=n]
+
+ABP060MG: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+NET_FOU: n => mod
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: NET_FOU_IP_TUNNELS [=n] && NET [=n] && INET [=n] && (NET_IPIP [=n] || NET_IPGRE [=n] || IPV6_SIT [=n])
+

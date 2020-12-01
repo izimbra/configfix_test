@@ -1,0 +1,23 @@
+XILINX_GMII2RGMII: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+RTC_DRV_DA9055: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && MFD_DA9055 [=n]
+
+RTC_DRV_ABB5ZES3: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+REGULATOR_WM8400: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_WM8400 [=n]
+
+NF_TABLES_IPV4: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+    Reverse dependencies: NF_TABLES_INET [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && IPV6 [=n]
+
+GREENASIA_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n] && HID_GREENASIA [=n]
+
+VIDEO_TDA7432: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_BT848 [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_DEV [=n] && PCI [=n] && I2C [=y] && VIDEO_V4L2 [=n] && RC_CORE [=n] && MEDIA_RADIO_SUPPORT [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+

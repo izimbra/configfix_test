@@ -1,0 +1,29 @@
+CRYPTO_DEFLATE: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_DEFLATE [=n] && <choice> || XFRM_IPCOMP [=y] && NET [=y] && INET [=y] || UBIFS_FS [=y] && MISC_FILESYSTEMS [=y] && MTD_UBI [=y] && UBIFS_FS_ZLIB [=y] || PSTORE_DEFLATE_COMPRESS [=m] && MISC_FILESYSTEMS [=y] && PSTORE [=y]
+
+GREYBUS_FIRMWARE: n => yes
+    Direct dependencies:  STAGING [=n] && GREYBUS [=y] && SPI [=y]
+
+CAN_HI311X: n => yes
+    Direct dependencies:  NET [=y] && CAN [=n] && CAN_DEV [=n] && SPI [=y] && HAS_DMA [=y]
+
+NLS: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: ACPI [=y] && ARCH_SUPPORTS_ACPI [=y] || PCI_LABEL [=y] && PCI [=y] || SCSI_UFSHCD [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_DMA [=y] || USB [=y] && USB_SUPPORT [=y] && USB_ARCH_HAS_HCD [=y] || USB_GADGET [=y] && USB_SUPPORT [=y] || JFS_FS [=m] && BLOCK [=y] || F2FS_FS [=y] && BLOCK [=y] || JOLIET [=n] && BLOCK [=y] && ISO9660_FS [=y] || UDF_FS [=m] && BLOCK [=y] || FAT_FS [=y] && BLOCK [=y] || EXFAT_FS [=y] && BLOCK [=y] || NTFS_FS [=y] && BLOCK [=y] || HFS_FS [=y] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || HFSPLUS_FS [=m] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || BEFS_FS [=y] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || VBOXSF_FS [=m] && MISC_FILESYSTEMS [=y] && X86 [=y] && VBOXGUEST [=y] || CIFS [=m] && NETWORK_FILESYSTEMS [=y] && INET [=y]
+
+PACKING: y => no
+    Direct dependencies:  y
+    Reverse dependencies: NET_DSA_TAG_OCELOT [=m] && NET [=y] && NET_DSA [=m] || NET_DSA_TAG_SJA1105 [=m] && NET [=y] && NET_DSA [=m] || NET_DSA_SJA1105 [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m] && SPI [=y]
+
+CRYPTO_CTR: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: MAC802154 [=n] && NET [=y] && IEEE802154 [=y] || AIRO_CS [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_CISCO [=n] && CFG80211 [=m] && PCMCIA [=m] || CRYPTO_CCM [=y] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_DRBG_CTR [=y] && CRYPTO [=y] && CRYPTO_DRBG_MENU [=y] || CRYPTO_DEV_PPC4XX [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PPC && 4xx || CRYPTO_DEV_QCE_SKCIPHER [=y] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_QCE [=y] || CRYPTO_DEV_ARTPEC6 [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && ARM && (ARCH_ARTPEC || COMPILE_TEST [=y]) && OF [=y] || CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y] || CRYPTO_DEV_OMAP_AES [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_OMAP [=n] && (ARCH_OMAP2 || ARCH_OMAP3 || ARCH_OMAP2PLUS)
+
+IP_SET_HASH_IP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_SET [=m]
+
+SYSFS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CONFIGFS_FS [=y]
+

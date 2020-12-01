@@ -1,0 +1,7 @@
+DCDBAS => yes
+SPI_AXI_SPI_ENGINE => yes
+ADIS16203 => yes
+GENERIC_ADC_BATTERY => mod
+X86_PLATFORM_DEVICES => yes
+SPI => yes
+IIO => yes

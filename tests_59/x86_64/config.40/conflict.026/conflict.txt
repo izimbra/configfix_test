@@ -1,0 +1,19 @@
+CHARGER_MP2629: n => mod
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MP2629 [=n] && MP2629_ADC [=n] && IIO [=n]
+
+IPV6: n => mod
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: MPTCP_IPV6 [=n] && NET [=n] && INET [=n] && MPTCP [=n]
+
+BATMAN_ADV_TRACING: n => yes
+    Direct dependencies:  NET [=n] && BATMAN_ADV [=n] && EVENT_TRACING [=y]
+
+RTC_DRV_RV3029C2: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && RTC_I2C_AND_SPI [=n]
+
+ACPI_THERMAL: n => yes
+    Direct dependencies:  ACPI [=y] && ACPI_PROCESSOR [=n]
+
+PING: n => yes
+    Direct dependencies:  IIO [=n] && GPIOLIB [=y]
+

@@ -1,0 +1,18 @@
+GPIO_TWL6040: n => mod
+    Direct dependencies:  GPIOLIB [=y] && TWL6040_CORE [=n]
+
+NATIONAL_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+NET_VENDOR_QUALCOMM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+AD5791: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+AD7292: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+FB_TFT_ILI9325: n => mod
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+

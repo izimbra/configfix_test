@@ -1,0 +1,15 @@
+IP_VS_WLC: m => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_VS [=m]
+
+CRYPTO_CHACHA20: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y] || CRYPTO_ADIANTUM [=y] && CRYPTO [=y]
+
+CRYPTO_CURVE25519_X86: y => no
+    Direct dependencies:  CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+    Reverse dependencies: WIREGUARD [=m] && NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=y] && (IPV6 [=y] || !IPV6 [=y]) && X86 [=y] && 64BIT [=y]
+
+NET_DSA_TAG_MTK: m => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=m]
+    Reverse dependencies: NET_DSA_MT7530 [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m]
+

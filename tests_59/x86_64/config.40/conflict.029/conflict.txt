@@ -1,0 +1,18 @@
+WIMAX: n => mod
+    Direct dependencies:  NET [=n] && (RFKILL [=n] || !RFKILL [=n])
+
+NET_TEAM_MODE_RANDOM: n => mod
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && NET_TEAM [=n]
+
+HP_WIRELESS: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && INPUT [=y]
+
+REGULATOR_DA9052: n => mod
+    Direct dependencies:  REGULATOR [=y] && PMIC_DA9052 [=n]
+
+TOSHIBA_BT_RFKILL: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && (RFKILL [=n] || RFKILL [=n]=n)
+
+QSEMI_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+

@@ -1,0 +1,13 @@
+MTD_NAND_MXIC: n => mod
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n] && (HAS_IOMEM [=y] || COMPILE_TEST [=y])
+
+IP_SET_HASH_IP: n => mod
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+RELOCATABLE: y => no
+    Direct dependencies:  y
+    Reverse dependencies: EFI_STUB [=y] && EFI [=y] && !X86_USE_3DNOW [=n] && (y || X86_32 [=n])
+
+CIO_DAC: m => yes
+    Direct dependencies:  IIO [=m] && X86 [=y] && (ISA_BUS [=y] || PC104 [=y])
+

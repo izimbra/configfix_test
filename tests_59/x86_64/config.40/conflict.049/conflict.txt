@@ -1,0 +1,34 @@
+INPUT_PCF50633_PMU: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_PCF50633 [=n]
+
+CRYPTO_XTS: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: FS_ENCRYPTION_ALGS [=n] || CRYPTO_CAMELLIA_AESNI_AVX_X86_64 [=y] && X86 [=y] && 64BIT [=y] && CRYPTO [=y] || CRYPTO_CAST6_AVX_X86_64 [=n] && CRYPTO [=y] && X86 [=y] && 64BIT [=y] || CRYPTO_SERPENT_AVX_X86_64 [=m] && CRYPTO [=y] && X86 [=y] && 64BIT [=y] || CRYPTO_DEV_QCE_SKCIPHER [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && CRYPTO_DEV_QCE [=n] || CRYPTO_DEV_CCREE [=n] && CRYPTO [=y] && CRYPTO_HW [=n] && OF [=n] && HAS_DMA [=y]
+
+INFINIBAND_ON_DEMAND_PAGING: n => yes
+    Direct dependencies:  INFINIBAND [=n] && INFINIBAND_USER_MEM [=n]
+
+VIDEO_TW9906: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=y] && SND [=n] && USB [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+NET_DSA_TAG_BRCM: n => yes
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: B53 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] || NET_DSA_BCM_SF2 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n]
+
+INPUT_CMA3000_I2C: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_CMA3000 [=m] && I2C [=y]
+
+LEDS_MT6323: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && MFD_MT6397 [=n]
+
+PM_ADVANCED_DEBUG: n => yes
+    Direct dependencies:  PM_DEBUG [=n]
+
+MPTCP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: MPTCP_KUNIT_TESTS [=n] && NET [=n] && INET [=n] && KUNIT [=n]
+
+BATMAN_ADV_TRACING: n => yes
+    Direct dependencies:  NET [=n] && BATMAN_ADV [=n] && EVENT_TRACING [=y]
+

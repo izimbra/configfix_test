@@ -1,0 +1,13 @@
+RTC_DRV_R9701 => yes
+JOYSTICK_COBRA => yes
+LTC2496 => yes
+NET_IPIP => yes
+EISA_VIRTUAL_ROOT => yes
+SPI => yes
+RTC_CLASS => yes
+INPUT_JOYSTICK => yes
+GAMEPORT => yes
+IIO => yes
+NET => yes
+INET => yes
+EISA => yes

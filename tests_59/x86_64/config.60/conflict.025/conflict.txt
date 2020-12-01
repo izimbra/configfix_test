@@ -1,0 +1,17 @@
+MS5637: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+TINYDRM_REPAPER: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=m] && SPI [=n]
+
+CRYPTO_MICHAEL_MIC: m => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: LIBIPW [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTEL [=y] && PCI [=y] && CFG80211 [=m] || HOSTAP [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=n] || HERMES [=n] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=n] && (PPC_PMAC || PCI [=y] || PCMCIA [=m]) && CFG80211 [=m] || RTLLIB_CRYPTO_TKIP [=n] && STAGING [=y] && RTLLIB [=n]
+
+CRYPTO_MANAGER: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: RXKAD [=n] && NET [=y] && AF_RXRPC [=n] || CRYPTO_USER [=m] && CRYPTO [=y] && NET [=y] || CRYPTO_PCRYPT [=n] && CRYPTO [=y] && SMP [=n] || CRYPTO_CRYPTD [=y] && CRYPTO [=y] || CRYPTO_AUTHENC [=y] && CRYPTO [=y] || CRYPTO_TEST [=m] && CRYPTO [=y] && m && MODULES [=y] || CRYPTO_RSA [=y] && CRYPTO [=y] || CRYPTO_CCM [=y] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y] || CRYPTO_SEQIV [=y] && CRYPTO [=y] || CRYPTO_ECHAINIV [=n] && CRYPTO [=y] || CRYPTO_CBC [=y] && CRYPTO [=y] || CRYPTO_CFB [=n] && CRYPTO [=y] || CRYPTO_CTR [=y] && CRYPTO [=y] || CRYPTO_CTS [=y] && CRYPTO [=y] || CRYPTO_ECB [=y] && CRYPTO [=y] || CRYPTO_LRW [=y] && CRYPTO [=y] || CRYPTO_OFB [=y] && CRYPTO [=y] || CRYPTO_PCBC [=m] && CRYPTO [=y] || CRYPTO_XTS [=y] && CRYPTO [=y] || CRYPTO_KEYWRAP [=y] && CRYPTO [=y] || CRYPTO_ADIANTUM [=m] && CRYPTO [=y] || CRYPTO_CMAC [=y] && CRYPTO [=y] || CRYPTO_HMAC [=y] && CRYPTO [=y] || CRYPTO_XCBC [=m] && CRYPTO [=y] || CRYPTO_VMAC [=m] && CRYPTO [=y]
+
+VSOCKETS_LOOPBACK: n => mod
+    Direct dependencies:  NET [=y] && VSOCKETS [=n]
+

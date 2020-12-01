@@ -1,0 +1,22 @@
+DRM_DEBUG_SELFTEST: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && DEBUG_KERNEL [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+
+XFRM_SUB_POLICY: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && XFRM [=n]
+
+GREYBUS_RAW: n => mod
+    Direct dependencies:  STAGING [=y] && GREYBUS [=n]
+
+RTC_DRV_ISL12022: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+MTD_NAND_DISKONCHIP_BBTWRITE: n => yes
+    Direct dependencies:  MTD [=n] && MTD_RAW_NAND [=n] && MTD_NAND_DISKONCHIP [=n]
+
+W1_SLAVE_SMEM: n => yes
+    Direct dependencies:  W1 [=m]
+
+LEDS_TPS6105X: n => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && TPS6105X [=n]
+

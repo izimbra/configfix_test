@@ -1,0 +1,31 @@
+NF_TPROXY_IPV6: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=n]
+    Reverse dependencies: NFT_TPROXY [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NF_TABLES [=n] && (IPV6 [=y] || IPV6 [=y]=n) && NF_TABLES_IPV6 [=n] || NETFILTER_XT_TARGET_TPROXY [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NETFILTER_ADVANCED [=n] && (IPV6 [=y] || IPV6 [=y]=n) && (IP6_NF_IPTABLES [=n] || IP6_NF_IPTABLES [=n]=n) && IP_NF_MANGLE [=n] && IP6_NF_IPTABLES [=n]
+
+NLS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI [=y] && ARCH_SUPPORTS_ACPI [=y] || PCI_LABEL [=y] && PCI [=y] || SCSI_UFSHCD [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_DMA [=y] || USB [=y] && USB_SUPPORT [=y] && USB_ARCH_HAS_HCD [=y] || USB_GADGET [=n] && USB_SUPPORT [=y] || JFS_FS [=y] && BLOCK [=y] || F2FS_FS [=n] && BLOCK [=y] || JOLIET [=n] && BLOCK [=y] && ISO9660_FS [=n] || UDF_FS [=n] && BLOCK [=y] || FAT_FS [=n] && BLOCK [=y] || EXFAT_FS [=n] && BLOCK [=y] || NTFS_FS [=n] && BLOCK [=y] || HFS_FS [=y] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || HFSPLUS_FS [=y] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || BEFS_FS [=n] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || VBOXSF_FS [=y] && MISC_FILESYSTEMS [=y] && X86 [=y] && VBOXGUEST [=y] || CIFS [=n] && NETWORK_FILESYSTEMS [=y] && INET [=y]
+
+AD5449: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+BT_LE: n => yes
+    Direct dependencies:  NET [=y] && BT [=n]
+
+CRYPTO_LZO: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_LZO [=n] && <choice> || ZRAM [=n] && BLK_DEV [=n] && BLOCK [=y] && SYSFS [=y] && ZSMALLOC [=n] && CRYPTO [=y] || UBIFS_FS [=n] && MISC_FILESYSTEMS [=y] && MTD_UBI [=y] && UBIFS_FS_LZO [=n] || PSTORE_LZO_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=y]
+
+PPPOL2TP: n => yes
+    Direct dependencies:  NETDEVICES [=y] && L2TP [=y] && PPP [=n]
+
+DEBUG_KMEMLEAK_AUTO_SCAN: n => yes
+    Direct dependencies:  DEBUG_KMEMLEAK [=n]
+
+NETFILTER_XTABLES: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n]
+    Reverse dependencies: IP_NF_IPTABLES [=n] && NET [=y] && INET [=y] && NETFILTER [=n] || IP_NF_ARPTABLES [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && NETFILTER_ADVANCED [=n] || IP6_NF_IPTABLES [=n] && NET [=y] && NETFILTER [=n] && INET [=y] && IPV6 [=y]
+
+REGULATOR_PCAP: n => yes
+    Direct dependencies:  REGULATOR [=y] && EZX_PCAP [=n]
+

@@ -1,0 +1,21 @@
+KXCJK1013: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+PRINTER: n => yes
+    Direct dependencies:  PARPORT [=n]
+
+KGDB_KDB: n => yes
+    Direct dependencies:  KGDB [=n]
+
+XFRM_USER: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=n] && MFD_DA9062 [=n]
+
+INET_UDP_DIAG: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && INET_DIAG [=n] && (IPV6 [=n] || IPV6 [=n]=n)
+
+NFT_TUNNEL: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n]
+

@@ -1,0 +1,33 @@
+MTD_NAND_GPIO: m => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=m] && (GPIOLIB [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+CRYPTO_DRBG_MENU: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_RNG_DEFAULT [=y] && CRYPTO [=y]
+
+CRYPTO_XXHASH: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=m] && BLOCK [=y]
+
+DAX: y => yes
+    Direct dependencies:  y
+    Reverse dependencies: DAX_DRIVER [=y] || FS_DAX [=y] && BLOCK [=y] && MMU [=y] && !ARM && !MIPS && !SPARC
+
+TRACER_SNAPSHOT_PER_CPU_SWAP: y => no
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=y] && TRACER_SNAPSHOT [=y]
+    Reverse dependencies: IRQSOFF_TRACER [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && TRACE_IRQFLAGS_SUPPORT [=y] && !ARCH_USES_GETTIMEOFFSET [=n] || PREEMPT_TRACER [=n] && TRACING_SUPPORT [=y] && FTRACE [=y] && !ARCH_USES_GETTIMEOFFSET [=n] && PREEMPTION [=n]
+
+NET_DSA_SJA1105: m => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m] && SPI [=y]
+
+MDIO_DEVICE: y => no
+    Direct dependencies:  NETDEVICES [=y]
+    Reverse dependencies: PHYLIB [=y] && NETDEVICES [=y]
+
+INPUT_AD714X_I2C: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_AD714X [=m] && I2C [=y]
+
+CRC_CCITT: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: CAIF [=m] && NET [=y] || NFC_DIGITAL [=m] && NET [=y] && NFC [=m] || NFC_NCI_SPI [=m] && NET [=y] && NFC_NCI [=m] && SPI [=y] || NFC_SHDLC [=y] && NET [=y] && NFC_HCI [=m] || MAC802154 [=n] && NET [=y] && IEEE802154 [=y] || NETLABEL [=y] && NET [=y] && INET [=y] && SECURITY [=y] && IPV6 [=y] || BAYCOM_SER_FDX [=m] && NET [=y] && HAMRADIO [=y] && AX25 [=m] && !S390 || BAYCOM_SER_HDX [=m] && NET [=y] && HAMRADIO [=y] && AX25 [=m] && !S390 || BAYCOM_PAR [=n] && NET [=y] && HAMRADIO [=y] && PARPORT [=n] && AX25 [=m] || BAYCOM_EPP [=n] && NET [=y] && HAMRADIO [=y] && PARPORT [=n] && AX25 [=m] && !64BIT [=y] || NFC_FDP [=m] && NET [=y] && NFC [=m] && NFC_NCI [=m] || NFC_PN544 [=m] && NET [=y] && NFC [=m] || NFC_MICROREAD [=m] && NET [=y] && NFC [=m] || NFC_ST21NFCA [=m] && NET [=y] && NFC [=m] || VIA_VELOCITY [=y] && NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_VIA [=y] && (PCI [=y] || OF_ADDRESS [=y] && OF_IRQ [=y]) && HAS_DMA [=y] || PPP_ASYNC [=m] && NETDEVICES [=y] && TTY [=y] && PPP [=m] || P54_COMMON [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_INTERSIL [=y] && MAC80211 [=m] || RT2800PCI [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && PCI [=y] || RT2800USB [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_RALINK [=y] && RT2X00 [=m] && USB [=y] || MISDN_HDLC [=y] && ISDN [=y] && MISDN [=y]!=n || RAVE_SP_CORE [=n] && HAS_IOMEM [=y] && SERIAL_DEV_BUS [=m] || DRM_SUN6I_DSI [=n] && HAS_IOMEM [=y] && DRM_SUN4I [=n]
+

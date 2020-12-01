@@ -1,0 +1,16 @@
+FB_TFT_ILI9340: n => mod
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+IP6_NF_RAW: m => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && IP6_NF_IPTABLES [=m]
+
+INPUT_PCSPKR: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && PCSPKR_PLATFORM [=n]
+
+PROFILE_ALL_BRANCHES: n => yes
+    Direct dependencies:  <choice>
+
+PM: y => no
+    Direct dependencies:  y
+    Reverse dependencies: PM_SLEEP [=y] && (SUSPEND [=y] || HIBERNATE_CALLBACKS [=y]) || ARCH_RCAR_GEN1 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN2 [=n] && SOC_RENESAS [=y] || ARCH_RCAR_GEN3 [=n] && SOC_RENESAS [=y] || ARCH_RMOBILE [=n] && SOC_RENESAS [=y] || ARCH_R7S72100 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS || ARCH_R7S9210 [=n] && SOC_RENESAS [=y] && ARM && ARCH_RENESAS
+

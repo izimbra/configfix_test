@@ -1,0 +1,19 @@
+NET_SB1000: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PNP [=y]
+
+MTD_RAM: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_PLATRAM [=n] && MTD [=n] && HAS_IOMEM [=y]
+
+WIZNET_BUS_DIRECT: n => yes
+    Direct dependencies:  <choice>
+
+NFT_MASQ: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && NF_NAT [=n]
+
+NET_SCH_PRIO: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+JOYSTICK_WARRIOR: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=n]
+

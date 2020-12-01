@@ -1,0 +1,35 @@
+AD7280: n => mod
+    Direct dependencies:  STAGING [=n] && IIO [=y] && SPI [=y]
+
+CRYPTO_SERPENT: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_SERPENT_SSE2_X86_64 [=m] && CRYPTO [=y] && X86 [=y] && 64BIT [=y] || CRYPTO_SERPENT_SSE2_586 [=n] && CRYPTO [=y] && X86 [=y] && !64BIT [=y] || CRYPTO_SERPENT_AVX_X86_64 [=y] && CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+
+CRYPTO_GHASH: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_DEV_VMX_ENCRYPT [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && CRYPTO_DEV_VMX [=n]
+
+CRYPTO_LIB_CHACHA20POLY1305: m => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CHACHA [=m] || !CRYPTO_ARCH_HAVE_LIB_CHACHA [=m]) && (CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y] || !CRYPTO_ARCH_HAVE_LIB_POLY1305 [=y])
+    Reverse dependencies: WIREGUARD [=m] && NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=y] && (IPV6 [=y] || !IPV6 [=y])
+
+REGULATOR_TPS65086: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_TPS65086 [=m]
+
+CRYPTO_SHA3: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_SAFEXCEL [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && (OF [=y] || PCI [=y] || COMPILE_TEST [=y]) && HAS_IOMEM [=y]
+
+CEPH_LIB: y => mod
+    Direct dependencies:  NET [=y] && INET [=y]
+    Reverse dependencies: BLK_DEV_RBD [=y] && BLK_DEV [=y] && INET [=y] && BLOCK [=y] || CEPH_FS [=y] && NETWORK_FILESYSTEMS [=y] && INET [=y]
+
+DEFXX: m => yes
+    Direct dependencies:  NETDEVICES [=y] && FDDI [=m] && (PCI [=y] || EISA [=y] || TC)
+
+SMC_DIAG: n => mod
+    Direct dependencies:  NET [=y] && SMC [=n]
+
+NET_DSA_VITESSE_VSC73XX_PLATFORM: m => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m] && HAS_IOMEM [=y]
+

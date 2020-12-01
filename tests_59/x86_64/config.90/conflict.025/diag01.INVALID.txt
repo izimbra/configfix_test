@@ -1,0 +1,11 @@
+PPPOL2TP => yes
+REGULATOR_RT5033 => yes
+IP_SET_HASH_IP => yes
+CRYPTO_LIB_BLAKE2S => no
+SUSPEND_FREEZER => no
+L2TP => yes
+PPP => yes
+MFD_RT5033 => yes
+IP_SET => yes
+WIREGUARD => yes
+WIREGUARD_DEBUG => no

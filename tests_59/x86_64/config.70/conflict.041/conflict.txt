@@ -1,0 +1,32 @@
+PPP: n => yes
+    Direct dependencies:  NETDEVICES [=n]
+    Reverse dependencies: IPWIRELESS [=n] && PCMCIA [=n] && NETDEVICES [=n] && TTY [=y]
+
+PRIME_NUMBERS: m => no
+    Direct dependencies:  y
+    Reverse dependencies: DRM_DEBUG_SELFTEST [=m] && HAS_IOMEM [=y] && DRM [=y] && DEBUG_KERNEL [=y] || DRM_I915_SELFTEST [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n]
+
+GPIO_WM8994: n => mod
+    Direct dependencies:  GPIOLIB [=y] && MFD_WM8994 [=n]
+
+GPIO_TWL6040: n => yes
+    Direct dependencies:  GPIOLIB [=y] && TWL6040_CORE [=n]
+
+SYN_COOKIES: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: NFT_SYNPROXY [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n] || IP_NF_TARGET_SYNPROXY [=n] && NET [=n] && INET [=n] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n] || IP6_NF_TARGET_SYNPROXY [=n] && NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+NET_DSA_SMSC_LAN9303_MDIO: n => mod
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+VIDEO_TDA9840: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && PCI [=n] && VIDEO_V4L2 [=m] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+NET_NSH: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: OPENVSWITCH [=n] && NET [=n] && INET [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n] && (!NF_DEFRAG_IPV6 [=n] || NF_DEFRAG_IPV6 [=n]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=n] || NETFILTER_CONNCOUNT [=n]))
+
+NET_DSA_QCA8K: n => mod
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+

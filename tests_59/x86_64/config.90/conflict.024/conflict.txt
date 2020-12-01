@@ -1,0 +1,19 @@
+CRYPTO_BLAKE2B: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=m] && BLOCK [=y]
+
+CRYPTO_CTS: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: FS_ENCRYPTION_ALGS [=y]
+
+NETFILTER_XTABLES: m => no
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y]
+    Reverse dependencies: IP_NF_IPTABLES [=n] && NET [=y] && INET [=y] && NETFILTER [=y] || IP_NF_ARPTABLES [=m] && NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_ADVANCED [=y] || IP6_NF_IPTABLES [=m] && NET [=y] && NETFILTER [=y] && INET [=y] && IPV6 [=y]
+
+IP6_NF_MANGLE: m => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && IP6_NF_IPTABLES [=m]
+
+PARPORT_PANEL: n => yes
+    Direct dependencies:  AUXDISPLAY [=y] && PARPORT [=n]
+    Reverse dependencies: PANEL [=n] && PARPORT [=n]
+

@@ -1,0 +1,15 @@
+FB_TFT_ILI9341: n => yes
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+SENSORS_ISL29028: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+NETFILTER_XT_TARGET_LOG: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n]
+
+EISA_VIRTUAL_ROOT: n => yes
+    Direct dependencies:  EISA [=n] && (ALPHA || X86 [=y])
+
+ATM_MPOA: n => yes
+    Direct dependencies:  NET [=n] && ATM [=n] && INET [=n] && ATM_LANE [=n]!=n
+

@@ -1,0 +1,16 @@
+I2C_SLAVE => no
+NF_DUP_NETDEV => yes
+MAC802154 => mod
+CROS_EC_LIGHTBAR => yes
+I2C_BCM_IPROC => yes
+I2C_SLAVE_EEPROM => no
+I2C_RCAR => yes
+I2C_STM32F7 => yes
+I2C_EMEV2 => no
+NF_TABLES_NETDEV => yes
+NF_TABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes
+IEEE802154 => yes
+MFD_CROS_EC_DEV => yes

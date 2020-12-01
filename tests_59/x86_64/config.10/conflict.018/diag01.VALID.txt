@@ -1,0 +1,11 @@
+GOOGLE_COREBOOT_TABLE => yes
+IAQCORE => yes
+MB1232 => yes
+NF_TABLES_NETDEV => yes
+GOOGLE_FIRMWARE => yes
+I2C => yes
+IIO => yes
+NF_TABLES => yes
+NET => yes
+INET => yes
+NETFILTER => yes

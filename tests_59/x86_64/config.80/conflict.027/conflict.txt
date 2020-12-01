@@ -1,0 +1,21 @@
+PROC_CHILDREN: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CHECKPOINT_RESTORE [=y]
+
+INPUT_PCF50633_PMU: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && MFD_PCF50633 [=n]
+
+KALLSYMS_ALL: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && KALLSYMS [=y]
+    Reverse dependencies: LATENCYTOP [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+NET_DSA_TAG_DSA: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_MV88E6XXX [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+STRICT_KERNEL_RWX: y => no
+    Direct dependencies:  ARCH_HAS_STRICT_KERNEL_RWX [=y]
+
+NF_TABLES_NETDEV: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NF_TABLES [=n]
+

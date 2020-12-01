@@ -1,0 +1,22 @@
+INTEL_BXT_PMIC_THERMAL: n => mod
+    Direct dependencies:  THERMAL [=n] && (X86 [=y] || X86_INTEL_QUARK [=n] || COMPILE_TEST [=n]) && X86 [=y] && INTEL_SOC_PMIC_BXTWC [=n] && REGMAP [=y]
+
+I2C_SMBUS: y => no
+    Direct dependencies:  I2C [=y]
+    Reverse dependencies: I2C_I801 [=n] && I2C [=y] && HAS_IOMEM [=y] && PCI [=n] || I2C_THUNDERX [=n] && I2C [=y] && HAS_IOMEM [=y] && 64BIT [=y] && PCI [=n] && (ARM64 || COMPILE_TEST [=n]) || I2C_PARPORT [=n] && I2C [=y] && HAS_IOMEM [=y] && PARPORT [=n] || MANAGER_SBS [=m] && POWER_SUPPLY [=y] && I2C [=y] && I2C_MUX [=m] && GPIOLIB [=y]
+
+HP_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n)
+
+INV_MPU6050_I2C: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+PCMCIA_RAYCS: n => mod
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n] && PCMCIA [=n]
+
+BACKLIGHT_APPLE: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && X86 [=y] && ACPI [=y]
+
+INTEL_RST: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y]
+

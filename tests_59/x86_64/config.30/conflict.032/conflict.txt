@@ -1,0 +1,23 @@
+PCMCIA_LOAD_CIS: n => yes
+    Direct dependencies:  PCCARD [=n] && PCMCIA [=n]
+
+X86_P4_CLOCKMOD: n => yes
+    Direct dependencies:  CPU_FREQ [=n] && X86 [=y]
+
+MPTCP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: MPTCP_KUNIT_TESTS [=n] && NET [=n] && INET [=n] && KUNIT [=n]
+
+MDIO_BCM_UNIMAC: n => yes
+    Direct dependencies:  NETDEVICES [=n] && MDIO_DEVICE [=n] && MDIO_BUS [=n] && HAS_IOMEM [=y]
+    Reverse dependencies: NET_DSA_BCM_SF2 [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && HAS_IOMEM [=y] && NET_DSA [=n] || BCMGENET [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_BROADCOM [=n] && HAS_IOMEM [=y]
+
+MAX1118: n => mod
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+HID_STEAM: n => mod
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+INFINIBAND_ON_DEMAND_PAGING: n => yes
+    Direct dependencies:  INFINIBAND [=n] && INFINIBAND_USER_MEM [=n]
+

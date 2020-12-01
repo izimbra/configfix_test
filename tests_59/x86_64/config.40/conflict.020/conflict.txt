@@ -1,0 +1,14 @@
+AD7291: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+FB_SM501: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y] && MFD_SM501 [=n]
+
+NET_SWITCHDEV: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+    Reverse dependencies: NET_DSA [=n] && NET [=n] && HAVE_NET_DSA [=n] && (BRIDGE [=n] || BRIDGE [=n]=n)
+
+MXM_WMI: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n]
+    Reverse dependencies: DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] && ACPI [=y] && X86 [=y]
+

@@ -1,0 +1,28 @@
+SENSORS_W83792D: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+CRYPTO_SM3: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_DEV_CCREE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && OF [=y] && HAS_DMA [=y]
+
+GOOGLE_COREBOOT_TABLE: n => mod
+    Direct dependencies:  GOOGLE_FIRMWARE [=n] && (ACPI [=y] || OF [=y])
+    Reverse dependencies: GOOGLE_COREBOOT_TABLE_ACPI [=n] && GOOGLE_FIRMWARE [=n] || GOOGLE_COREBOOT_TABLE_OF [=n] && GOOGLE_FIRMWARE [=n]
+
+AMD_PHY: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+CEPH_FS: n => mod
+    Direct dependencies:  NETWORK_FILESYSTEMS [=n] && INET [=n]
+
+SENSORS_IBM_CFFPS: m => yes
+    Direct dependencies:  HWMON [=m] && PMBUS [=m] && LEDS_CLASS [=y]
+
+COMMON_CLK: y => no
+    Direct dependencies:  !HAVE_LEGACY_CLK [=n]
+    Reverse dependencies: X86_INTEL_QUARK [=n] && X86_32 [=n] && X86_EXTENDED_PLATFORM [=y] && X86_PLATFORM_DEVICES [=n] && X86_TSC [=y] && PCI [=n] && PCI_GOANY [=n] && X86_IO_APIC [=y] || X86_INTEL_LPSS [=n] && X86 [=y] && ACPI [=y] && PCI [=n] || X86_AMD_PLATFORM_DEVICE [=y] && ACPI [=y] || MFD_INTEL_LPSS [=y] && HAS_IOMEM [=y] || INTEL_ATOMISP [=n] && STAGING [=n] && STAGING_MEDIA [=n] && MEDIA_SUPPORT [=m] && X86 [=y] && EFI [=y] && PCI [=n] && ACPI [=y] || PMC_ATOM [=n] && X86 [=y] && PCI [=n]
+
+NET_VENDOR_BROADCOM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (SSB_POSSIBLE [=y] && HAS_DMA [=y] || PCI [=n] || BCM63XX || SIBYTE_SB1xxx_SOC)
+    Reverse dependencies: SCSI_BNX2_ISCSI [=n] && SCSI_LOWLEVEL [=n] && SCSI [=m] && NET [=n] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) || SCSI_BNX2X_FCOE [=n] && SCSI_LOWLEVEL [=n] && SCSI [=m] && PCI [=n] && (IPV6 [=n] || IPV6 [=n]=n) && LIBFC [=n] && LIBFCOE [=n] || INFINIBAND_BNXT_RE [=n] && INFINIBAND [=n] && (INFINIBAND_USER_ACCESS [=n] || !INFINIBAND_USER_ACCESS [=n]) && 64BIT [=y] && ETHERNET [=n] && NETDEVICES [=n] && PCI [=n] && INET [=n] && DCB [=n]
+

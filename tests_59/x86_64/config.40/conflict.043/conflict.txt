@@ -1,0 +1,28 @@
+MICREL_KS8995MA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && SPI [=n]
+
+W1_MASTER_SGI: n => yes
+    Direct dependencies:  W1 [=m]
+
+SAMSUNG_LAPTOP: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && (RFKILL [=n] || RFKILL [=n]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=n]
+
+RTC_SYSTOHC: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+TMPFS: n => yes
+    Direct dependencies:  SHMEM [=n]
+    Reverse dependencies: DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=n] && X86 [=y] && PCI [=n] || DRM_MSM [=n] && HAS_IOMEM [=y] && DRM [=n] && (ARCH_QCOM || SOC_IMX5 || ARM && COMPILE_TEST [=n]) && OF [=n] && COMMON_CLK [=y] && MMU [=y] && (QCOM_OCMEM [=n] || QCOM_OCMEM [=n]=n) || DRM_ETNAVIV [=n] && HAS_IOMEM [=y] && DRM [=n] && MMU [=y]
+
+IR_SERIAL: n => yes
+    Direct dependencies:  RC_DEVICES [=n] && RC_CORE [=m]
+
+PREEMPT_NONE: y => no
+    Direct dependencies:  <choice>
+
+INTEL_ATOMISP2_LED: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && GPIOLIB [=y] && LEDS_GPIO [=n]
+
+SPI_NXP_FLEXSPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_LAYERSCAPE || HAS_IOMEM [=y])
+

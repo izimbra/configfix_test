@@ -1,0 +1,21 @@
+XFRM_INTERFACE: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && XFRM [=n] && IPV6 [=n]
+
+SENSORS_AD7314: m => yes
+    Direct dependencies:  HWMON [=m] && SPI [=y]
+
+NET_VENDOR_SOLARFLARE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+BATMAN_ADV_SYSFS: n => yes
+    Direct dependencies:  NET [=n] && BATMAN_ADV [=n]
+
+LV0104CS: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+WLAN_VENDOR_QUANTENNA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n]
+
+IPV6_MROUTE_MULTIPLE_TABLES: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && IPV6_MROUTE [=n]
+

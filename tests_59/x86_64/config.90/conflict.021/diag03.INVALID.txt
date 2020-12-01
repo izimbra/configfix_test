@@ -1,0 +1,10 @@
+SERIO_PARKBD => yes
+GREYBUS_LOG => mod
+INTEL_BXTWC_PMIC_TMU => mod
+GS_FPGABOOT => yes
+RMI4_F12 => no
+PARPORT => yes
+STAGING => yes
+MFD_INTEL_PMC_BXT => mod
+INTEL_SOC_PMIC_BXTWC => mod
+HID_RMI => yes

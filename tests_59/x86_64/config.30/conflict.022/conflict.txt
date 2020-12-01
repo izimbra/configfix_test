@@ -1,0 +1,15 @@
+REGULATOR_TPS65086: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_TPS65086 [=n]
+
+FB_VIRTUAL: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=n]
+
+IP_SET_HASH_MAC: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+IP_VS_MH: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+INTEL_BXT_PMIC_THERMAL: n => yes
+    Direct dependencies:  THERMAL [=y] && (X86 [=y] || X86_INTEL_QUARK [=n] || COMPILE_TEST [=n]) && X86 [=y] && INTEL_SOC_PMIC_BXTWC [=n] && REGMAP [=y]
+

@@ -1,0 +1,31 @@
+CRYPTO_DH: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: KEY_DH_OPERATIONS [=y] && KEYS [=y] || CRYPTO_DEV_QAT [=y] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_HISI_HPRE [=n] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=y] && PCI_MSI [=y] && (UACCE [=y] || UACCE [=y]=n) && (ARM64 || COMPILE_TEST [=y] && 64BIT [=y]) && ACPI [=n]
+
+ALTERA_TSE: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && HAS_DMA [=y]
+
+MFD_CROS_EC_DEV: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && CROS_EC [=y]
+    Reverse dependencies: MFD_CROS_EC [=y] && (X86 [=y] || ARM || ARM64 || COMPILE_TEST [=y])
+
+IEEE802154_ADF7242: n => yes
+    Direct dependencies:  NETDEVICES [=n] && IEEE802154_DRIVERS [=n] && MAC802154 [=y] && SPI [=y]
+
+INTEL_TH_GTH: n => yes
+    Direct dependencies:  INTEL_TH [=n]
+
+QSEMI_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+EFI: n => yes
+    Direct dependencies:  ACPI [=n]
+
+CRYPTO_POLY1305: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y]
+
+PAGE_EXTENSION: y => no
+    Direct dependencies:  y
+    Reverse dependencies: IDLE_PAGE_TRACKING [=y] && SYSFS [=y] && MMU [=y] && !64BIT [=y] || PAGE_OWNER [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y]
+

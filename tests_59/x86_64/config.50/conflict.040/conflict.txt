@@ -1,0 +1,28 @@
+DEBUG_DEVRES: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+VIDEO_TW9906: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=y] && SND [=n] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+ACPI_REDUCED_HARDWARE_ONLY: n => yes
+    Direct dependencies:  ACPI [=y]
+
+CPU_FREQ_GOV_POWERSAVE: n => yes
+    Direct dependencies:  CPU_FREQ [=n]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_POWERSAVE [=n] && <choice>
+
+MFD_WM5102: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_ARIZONA [=n]
+
+PINMUX: y => no
+    Direct dependencies:  PINCTRL [=y]
+    Reverse dependencies: GENERIC_PINMUX_FUNCTIONS [=n] && PINCTRL [=y] || PINCTRL_ARTPEC6 [=n] && PINCTRL [=y] && MACH_ARTPEC6 || PINCTRL_AS3722 [=n] && PINCTRL [=y] && MFD_AS3722 [=n] && GPIOLIB [=y] || PINCTRL_AXP209 [=n] && PINCTRL [=y] && MFD_AXP20X [=y] && OF [=n] || PINCTRL_AT91 [=n] && PINCTRL [=y] && OF [=n] && ARCH_AT91 || PINCTRL_AT91PIO4 [=n] && PINCTRL [=y] && OF [=n] && (ARCH_AT91 || COMPILE_TEST [=n]) || PINCTRL_AMD [=y] && PINCTRL [=y] && HAS_IOMEM [=y] && (ACPI [=y] || COMPILE_TEST [=n]) || PINCTRL_BM1880 [=n] && PINCTRL [=y] && OF [=n] && (ARCH_BITMAIN || COMPILE_TEST [=n]) || PINCTRL_DIGICOLOR [=n] && PINCTRL [=y] && OF [=n] && (ARCH_DIGICOLOR || COMPILE_TEST [=n]) || PINCTRL_LANTIQ [=n] && PINCTRL [=y] && LANTIQ || PINCTRL_LPC18XX [=n] && PINCTRL [=y] && OF [=n] && (ARCH_LPC18XX || COMPILE_TEST [=n]) || PINCTRL_GEMINI [=n] && PINCTRL [=y] && ARCH_GEMINI || PINCTRL_OXNAS [=n] && PINCTRL [=y] && OF [=n] || PINCTRL_ROCKCHIP [=n] && PINCTRL [=y] || PINCTRL_SIRF [=n] && PINCTRL [=y] && ARCH_SIRF || PINCTRL_SX150X [=n] && PINCTRL [=y] && I2C [=y]=y || PINCTRL_PISTACHIO [=n] && PINCTRL [=y] && GPIOLIB [=y] || PINCTRL_ST [=n] && PINCTRL [=y] && OF [=n] || PINCTRL_U300 [=n] && PINCTRL [=y] && ARCH_U300 || PINCTRL_MAX77620 [=n] && PINCTRL [=y] && MFD_MAX77620 [=n] && OF [=n] || PINCTRL_PALMAS [=n] && PINCTRL [=y] && OF [=n] && MFD_PALMAS [=y] || PINCTRL_PIC32 [=n] && PINCTRL [=y] && OF [=n] && MACH_PIC32 || PINCTRL_ZYNQ [=n] && PINCTRL [=y] && ARCH_ZYNQ || PINCTRL_RK805 [=n] && PINCTRL [=y] && MFD_RK808 [=n] || PINCTRL_OWL [=n] && PINCTRL [=y] && (ARCH_ACTIONS || COMPILE_TEST [=n]) && OF [=n] || PINCTRL_ASPEED [=n] && PINCTRL [=y] && (ARCH_ASPEED || COMPILE_TEST [=n]) && OF [=n] && MFD_SYSCON [=n] || PINCTRL_BCM281XX [=n] && PINCTRL [=y] && OF [=n] && (ARCH_BCM_MOBILE || COMPILE_TEST [=n]) || PINCTRL_BCM2835 [=n] && PINCTRL [=y] && OF [=n] && (ARCH_BCM2835 || ARCH_BRCMSTB || COMPILE_TEST [=n]) || PINCTRL_CYGNUS_MUX [=n] && PINCTRL [=y] && (ARCH_BCM_CYGNUS || COMPILE_TEST [=n]) && OF [=n] || PINCTRL_NS [=n] && PINCTRL [=y] && OF [=n] && (ARCH_BCM_5301X || COMPILE_TEST [=n]) || PINCTRL_NS2_MUX [=n] && PINCTRL [=y] && OF [=n] && (ARCH_BCM_IPROC || COMPILE_TEST [=n]) || PINCTRL_NSP_MUX [=n] && PINCTRL [=y] && (ARCH_BCM_NSP || COMPILE_TEST [=n]) && OF [=n] || PINCTRL_IMX1_CORE [=n] && PINCTRL [=y] || PINCTRL_MXS [=n] && PINCTRL [=y] || PINCTRL_MVEBU [=n] && PINCTRL [=y] || PINCTRL_ARMADA_37XX [=n] && PINCTRL [=y] || PINCTRL_NPCM7XX [=n] && PINCTRL [=y] && (ARCH_NPCM7XX || COMPILE_TEST [=n]) && OF [=n] || PINCTRL_SAMSUNG [=n] && PINCTRL [=y] && OF_GPIO [=n] || PINCTRL_SH_PFC [=n] && PINCTRL [=y] || PINCTRL_SPRD [=n] && PINCTRL [=y] || PINCTRL_TEGRA [=n] && PINCTRL [=y] || PINCTRL_TEGRA_XUSB [=n] && PINCTRL [=y] || PINCTRL_UNIPHIER [=n] && PINCTRL [=y] && (ARCH_UNIPHIER || COMPILE_TEST [=n]) && OF [=n] && MFD_SYSCON [=n] || PINCTRL_ZX [=n] && PINCTRL [=y] || PINCTRL_MESON [=n] && PINCTRL [=y] && ARCH_MESON && OF [=n] || PINCTRL_LOCHNAGAR [=n] && PINCTRL [=y] && MFD_LOCHNAGAR [=n] || PINCTRL_MADERA [=n] && PINCTRL [=y] || PINCTRL_EQUILIBRIUM [=n] && PINCTRL [=y] && OF [=n] && HAS_IOMEM [=y] && (X86 [=y] || COMPILE_TEST [=n]) || PINCTRL_BERLIN [=n] && PINCTRL [=y] && (ARCH_BERLIN || COMPILE_TEST [=n]) || PINCTRL_BAYTRAIL [=n] && PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=n]) && ACPI [=y] || PINCTRL_CHERRYVIEW [=y] && PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=n]) && ACPI [=y] || PINCTRL_LYNXPOINT [=y] && PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=n]) && ACPI [=y] || PINCTRL_MERRIFIELD [=n] && PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=n]) && X86_INTEL_MID [=n] || PINCTRL_INTEL [=y] && PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=n]) || PINCTRL_NOMADIK [=n] && PINCTRL [=y] && (ARCH_U8500 || ARCH_NOMADIK) && OF [=n] && GPIOLIB [=y] || PINCTRL_PXA [=n] && PINCTRL [=y] && (ARCH_PXA || COMPILE_TEST [=n]) || PINCTRL_MSM [=n] && PINCTRL [=y] && (ARCH_QCOM || COMPILE_TEST [=n]) || PINCTRL_QCOM_SPMI_PMIC [=n] && PINCTRL [=y] && (ARCH_QCOM || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=n] && SPMI [=y] || PINCTRL_QCOM_SSBI_PMIC [=n] && PINCTRL [=y] && (ARCH_QCOM || COMPILE_TEST [=n]) && GPIOLIB [=y] && OF [=n] || PINCTRL_SPEAR [=n] && PINCTRL [=y] && PLAT_SPEAR && OF [=n] || PINCTRL_STM32 [=n] && PINCTRL [=y] && (ARCH_STM32 || COMPILE_TEST [=n]) && OF [=n] || PINCTRL_SUNXI [=n] && PINCTRL [=y] && ARCH_SUNXI || PINCTRL_WMT [=n] && PINCTRL [=y] && ARCH_VT8500 || PINCTRL_MTK [=n] && PINCTRL [=y] && (ARCH_MEDIATEK || COMPILE_TEST [=n]) && OF [=n] || PINCTRL_MTK_PARIS [=n] && PINCTRL [=y] && (ARCH_MEDIATEK || COMPILE_TEST [=n]) && OF [=n] || PINCTRL_RT2880 [=n] && STAGING [=y] && RALINK
+
+AD2S90: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+VIDEO_SAA717X: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_V4L2 [=n] && PCI [=y] && I2C [=y] && RC_CORE [=y]
+

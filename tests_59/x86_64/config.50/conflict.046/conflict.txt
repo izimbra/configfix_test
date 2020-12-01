@@ -1,0 +1,31 @@
+INTEL_WMI_THUNDERBOLT: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n]
+
+NET_CLS_FW: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+AD5761: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+CPU_FREQ_DEFAULT_GOV_PERFORMANCE: n => yes
+    Direct dependencies:  <choice>
+
+FB_EFI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && FB [=y]=y && !IA64 && EFI [=n]
+
+RTC_DRV_DS2404: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+NET_SCH_SFQ: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+IEEE802154_CA8210_DEBUGFS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && IEEE802154_CA8210 [=n] && DEBUG_FS [=y]
+
+NETFILTER_XT_NAT: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_NAT [=n]
+    Reverse dependencies: IP_NF_NAT [=n] && NET [=y] && INET [=y] && NETFILTER [=n] && IP_NF_IPTABLES [=n] && NF_CONNTRACK [=n] || IP6_NF_NAT [=n] && NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=n] && IP6_NF_IPTABLES [=n] && NF_CONNTRACK [=n] && NETFILTER_ADVANCED [=n]
+
+SPI_SIFIVE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+

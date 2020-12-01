@@ -1,0 +1,22 @@
+NF_CT_NETLINK: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_CONNTRACK [=n]
+
+HID_LENOVO: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+IP_VS_PROTO_AH: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_VS [=n]
+
+BT_HS: n => yes
+    Direct dependencies:  NET [=n] && BT_BREDR [=n]
+
+WIRELESS: n => yes
+    Direct dependencies:  NET [=n] && !S390
+    Reverse dependencies: WLAN [=n] && NETDEVICES [=n] && !S390 && NET [=n]
+
+RTC_DRV_PCF85063: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+
+CRYPTO_USER_API_AEAD: n => yes
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+

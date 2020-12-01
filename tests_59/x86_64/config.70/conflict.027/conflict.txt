@@ -1,0 +1,19 @@
+AFE4403: n => yes
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=y]
+
+NET_TEAM_MODE_RANDOM: n => mod
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && NET_TEAM [=n]
+
+REGULATOR_TPS6586X: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_TPS6586X [=n]
+
+X86_DECODER_SELFTEST: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=y] && INSTRUCTION_DECODER [=y] && !COMPILE_TEST [=y]
+
+IEEE802154_SOCKET: n => yes
+    Direct dependencies:  NET [=n] && IEEE802154 [=n]
+
+ARCH_CPUIDLE_HALTPOLL: y => no
+    Direct dependencies:  HYPERVISOR_GUEST [=y]
+    Reverse dependencies: KVM_GUEST [=y] && HYPERVISOR_GUEST [=y] && PARAVIRT [=y]
+

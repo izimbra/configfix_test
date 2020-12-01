@@ -1,0 +1,30 @@
+NET_CLS_FW: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n]
+
+ADIS16203: n => yes
+    Direct dependencies:  STAGING [=y] && IIO [=y] && SPI [=n]
+
+JFFS2_RTIME: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=y] && JFFS2_FS [=n]
+
+FAULT_INJECTION: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+    Reverse dependencies: DRM_I915_SELFTEST [=n] && HAS_IOMEM [=y] && EXPERT [=n] && DRM_I915 [=n]
+
+VM_EVENT_COUNTERS: y => no
+    Direct dependencies:  y
+
+GPIO_TWL6040: n => yes
+    Direct dependencies:  GPIOLIB [=y] && TWL6040_CORE [=n]
+
+NET_DSA_TAG_RTL4_A: n => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=n]
+
+MFD_MADERA_SPI: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_MADERA [=n] && SPI_MASTER [=n]
+
+CRYPTO_MANAGER: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: RXKAD [=n] && NET [=y] && AF_RXRPC [=n] || CRYPTO_USER [=y] && CRYPTO [=y] && NET [=y] || CRYPTO_PCRYPT [=n] && CRYPTO [=y] && SMP [=y] || CRYPTO_CRYPTD [=y] && CRYPTO [=y] || CRYPTO_AUTHENC [=y] && CRYPTO [=y] || CRYPTO_TEST [=n] && CRYPTO [=y] && m && MODULES [=n] || CRYPTO_RSA [=y] && CRYPTO [=y] || CRYPTO_CCM [=n] && CRYPTO [=y] || CRYPTO_GCM [=y] && CRYPTO [=y] || CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y] || CRYPTO_SEQIV [=y] && CRYPTO [=y] || CRYPTO_ECHAINIV [=y] && CRYPTO [=y] || CRYPTO_CBC [=y] && CRYPTO [=y] || CRYPTO_CFB [=n] && CRYPTO [=y] || CRYPTO_CTR [=y] && CRYPTO [=y] || CRYPTO_CTS [=n] && CRYPTO [=y] || CRYPTO_ECB [=y] && CRYPTO [=y] || CRYPTO_LRW [=n] && CRYPTO [=y] || CRYPTO_OFB [=n] && CRYPTO [=y] || CRYPTO_PCBC [=n] && CRYPTO [=y] || CRYPTO_XTS [=y] && CRYPTO [=y] || CRYPTO_KEYWRAP [=n] && CRYPTO [=y] || CRYPTO_ADIANTUM [=y] && CRYPTO [=y] || CRYPTO_CMAC [=n] && CRYPTO [=y] || CRYPTO_HMAC [=y] && CRYPTO [=y] || CRYPTO_XCBC [=y] && CRYPTO [=y] || CRYPTO_VMAC [=y] && CRYPTO [=y]
+

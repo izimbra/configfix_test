@@ -1,0 +1,15 @@
+MFD_INTEL_LPSS_ACPI => mod
+SYSTEM76_ACPI => mod
+VEML6070 => yes
+EFI_VARS_PSTORE => mod
+ACPI => yes
+PNP => yes
+X86_PLATFORM_DEVICES => yes
+ACPI_WMI => yes
+MXM_WMI => yes
+ACPI_VIDEO => mod
+INPUT => mod
+IIO => yes
+EFI => yes
+EFI_VARS => yes
+PSTORE => mod

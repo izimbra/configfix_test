@@ -1,0 +1,31 @@
+EFI_VARS: n => mod
+    Direct dependencies:  EFI [=n]
+
+BT_BNEP_PROTO_FILTER: n => yes
+    Direct dependencies:  NET [=y] && BT_BNEP [=n]
+
+IPDDP: n => yes
+    Direct dependencies:  NET [=y] && DEV_APPLETALK [=n] && ATALK [=n]
+
+INV_ICM42600_I2C: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+RMI4_F34: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && RMI4_CORE [=n]
+
+MTD_MAP_BANK_WIDTH_1: y => no
+    Direct dependencies:  MTD [=y]
+    Reverse dependencies: MTD_CFI_GEOMETRY [=n] && MTD [=y] && MTD_CFI_ADV_OPTIONS [=y] && !MTD_MAP_BANK_WIDTH_2 [=y] && !MTD_MAP_BANK_WIDTH_4 [=y] && !MTD_MAP_BANK_WIDTH_8 [=n] && !MTD_MAP_BANK_WIDTH_16 [=n] && !MTD_MAP_BANK_WIDTH_32 [=n]
+
+PINCTRL_SUNRISEPOINT: n => mod
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+IEEE802154_CA8210_DEBUGFS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && IEEE802154_CA8210 [=n] && DEBUG_FS [=y]
+
+SENSORS_LM25066: n => mod
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+BACKLIGHT_AS3711: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_AS3711 [=n]
+

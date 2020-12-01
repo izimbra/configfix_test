@@ -1,0 +1,29 @@
+DA311: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+MAX11100: n => mod
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=n]
+
+SCTP_COOKIE_HMAC_MD5: n => yes
+    Direct dependencies:  NET [=n] && IP_SCTP [=n]
+    Reverse dependencies: SCTP_DEFAULT_COOKIE_HMAC_MD5 [=n] && <choice>
+
+NFT_REJECT: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NF_TABLES [=n] && (!NF_TABLES_INET [=n] || IPV6 [=n]!=m || m && MODULES [=y])
+
+DEBUG_WW_MUTEX_SLOWPATH: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+GPIO_XRA1403: n => yes
+    Direct dependencies:  GPIOLIB [=y] && SPI_MASTER [=n]
+
+AMD_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+BACKLIGHT_ADP8860: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && I2C [=y]
+
+RTC_DRV_SD3078: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+

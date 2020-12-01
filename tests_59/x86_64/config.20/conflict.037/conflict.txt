@@ -1,0 +1,24 @@
+SLOB: n => yes
+    Direct dependencies:  <choice> && EXPERT [=n]
+
+EFI_DISABLE_PCI_DMA: n => yes
+    Direct dependencies:  EFI [=n]
+
+HD44780: n => yes
+    Direct dependencies:  AUXDISPLAY [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+LEDS_BLINKM: n => yes
+    Direct dependencies:  NEW_LEDS [=n] && LEDS_CLASS [=n] && I2C [=y]
+
+VM_EVENT_COUNTERS: y => no
+    Direct dependencies:  y
+
+IIO_CROS_EC_LIGHT_PROX: n => yes
+    Direct dependencies:  IIO [=n] && IIO_CROS_EC_SENSORS_CORE [=n]
+
+CROS_EC_DEBUGFS: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n] && DEBUG_FS [=y]
+
+RING_BUFFER_BENCHMARK: n => yes
+    Direct dependencies:  TRACING_SUPPORT [=y] && FTRACE [=n] && RING_BUFFER [=n]
+

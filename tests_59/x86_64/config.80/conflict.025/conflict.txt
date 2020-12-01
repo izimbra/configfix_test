@@ -1,0 +1,18 @@
+ACPI_BUTTON: n => yes
+    Direct dependencies:  ACPI [=n] && INPUT [=y]
+    Reverse dependencies: DRM_I915 [=y] && HAS_IOMEM [=y] && DRM [=y] && X86 [=y] && PCI [=y] && ACPI [=n]
+
+WLAN_VENDOR_QUANTENNA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n]
+
+DRM_DEBUG_MM: y => no
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=y]=y && STACKTRACE_SUPPORT [=y]
+    Reverse dependencies: DRM_I915_DEBUG [=y] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=y] && DRM [=y]=y
+
+NET_SB1000: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PNP [=n]
+
+LEDS_TRIGGER_AUDIO: y => no
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=y]
+    Reverse dependencies: SND_HDA_GENERIC [=y] && SOUND [=y] && !UML && SND [=y] && SND_HDA [=y] && SND_HDA_GENERIC_LEDS [=y] || HUAWEI_WMI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI_BATTERY [=n] && ACPI_WMI [=n] && INPUT [=y] || DELL_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=y] && DMI [=y] && BACKLIGHT_CLASS_DEVICE [=y] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=y] || RFKILL [=y]=n) && SERIO_I8042 [=y] && DELL_SMBIOS [=y] || THINKPAD_ACPI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=n] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=y] || RFKILL [=y]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && BACKLIGHT_CLASS_DEVICE [=y]
+

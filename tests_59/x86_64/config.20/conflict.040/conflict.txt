@@ -1,0 +1,26 @@
+HP_WIRELESS: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && INPUT [=y]
+
+ACPI_REDUCED_HARDWARE_ONLY: n => yes
+    Direct dependencies:  ACPI [=n]
+
+DPS310: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+GPIO_ADP5588_IRQ: n => yes
+    Direct dependencies:  GPIOLIB [=y] && I2C [=y] && GPIO_ADP5588 [=n]=y
+
+CRYPTO_USER: n => yes
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+
+TCG_INFINEON: n => yes
+    Direct dependencies:  TCG_TPM [=n] && PNP [=n]
+
+CPU_FREQ_GOV_PERFORMANCE: n => yes
+    Direct dependencies:  CPU_FREQ [=n]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_PERFORMANCE [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_ONDEMAND [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_CONSERVATIVE [=n] && <choice> || CPU_FREQ_DEFAULT_GOV_SCHEDUTIL [=n] && <choice> && SMP [=n] || X86_INTEL_PSTATE [=n] && CPU_FREQ [=n] && X86 [=y]
+
+INPUT: y => no
+    Direct dependencies:  !UML
+    Reverse dependencies: VT [=y] && TTY [=y] && !UML || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] && ACPI [=n] && X86 [=y] || DRM_I915 [=n] && HAS_IOMEM [=y] && DRM [=n] && X86 [=y] && PCI [=y] && ACPI [=n] || DRM_GMA500 [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && X86 [=y] && MMU [=y] && ACPI [=n]
+

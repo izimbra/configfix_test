@@ -1,0 +1,13 @@
+HPET_TIMER: y => no
+    Direct dependencies:  y
+
+RMI4_F55: y => no
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=y]
+    Reverse dependencies: RMI4_F54 [=y] && !UML && INPUT [=y] && RMI4_CORE [=y] && (VIDEO_V4L2 [=y]=y || RMI4_CORE [=y]=m && VIDEO_V4L2 [=y]=m)
+
+NET_TEAM_MODE_RANDOM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && NET_TEAM [=n]
+
+IP_VS_WRR: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_VS [=n]
+

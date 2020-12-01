@@ -1,0 +1,30 @@
+BT_BNEP_PROTO_FILTER: n => yes
+    Direct dependencies:  NET [=n] && BT_BNEP [=n]
+
+64BIT: y => no
+    Direct dependencies:  y
+
+RTC_DRV_PALMAS: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y] && MFD_PALMAS [=n]
+
+IPV6_MIP6: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n]
+
+RTC_DRV_DA9063: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && (MFD_DA9063 [=n] || MFD_DA9062 [=n])
+
+RTC_DRV_ISL1208: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+CHARLCD_BL_FLASH: n => yes
+    Direct dependencies:  <choice>
+
+ICPLUS_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+INTEL_SOC_PMIC_BXTWC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_INTEL_PMC_BXT [=n]
+
+AF_RXRPC_IPV6: n => no
+    Direct dependencies:  NET [=n] && (IPV6 [=n]=m && AF_RXRPC [=n]=m || IPV6 [=n]=y && AF_RXRPC [=n])
+

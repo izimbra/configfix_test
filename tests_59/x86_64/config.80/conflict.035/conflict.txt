@@ -1,0 +1,25 @@
+CRYPTO_BLAKE2B: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=y] && BLOCK [=y]
+
+TERANETICS_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+IIO_TRIGGER: y => no
+    Direct dependencies:  IIO [=y]
+    Reverse dependencies: IIO_TRIGGERED_EVENT [=y] && IIO [=y] || IIO_TRIGGERED_BUFFER [=y] && IIO [=y] && IIO_BUFFER [=y] || AD7266 [=y] && IIO [=y] && SPI_MASTER [=y] || AD7768_1 [=n] && IIO [=y] && SPI [=y] || HID_SENSOR_IIO_TRIGGER [=y] && IIO [=y] && HID_SENSOR_HUB [=y] && HID_SENSOR_IIO_COMMON [=y] && IIO_BUFFER [=y] || IIO_SIMPLE_DUMMY_BUFFER [=n] && IIO [=y] && IIO_SIMPLE_DUMMY [=n]
+
+RAS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: MEMORY_FAILURE [=y] && MMU [=y] && ARCH_SUPPORTS_MEMORY_FAILURE [=y] || PCIEAER [=n] && PCI [=y] && PCIEPORTBUS [=n]
+
+NETFILTER_XT_TARGET_REDIRECT: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=y] && NF_NAT [=n]
+    Reverse dependencies: IP_NF_TARGET_REDIRECT [=n] && NET [=y] && INET [=y] && NETFILTER [=y] && IP_NF_IPTABLES [=y] && IP_NF_NAT [=n] && NETFILTER_ADVANCED [=y]
+
+ACPI_CONFIGFS: n => yes
+    Direct dependencies:  ACPI [=n]
+
+NLMON: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+

@@ -1,0 +1,28 @@
+DEBUG_FORCE_WEAK_PER_CPU: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+CHARLCD_BL_FLASH: n => no
+    Direct dependencies:  <choice>
+
+DEFXX: n => yes
+    Direct dependencies:  NETDEVICES [=y] && FDDI [=n] && (PCI [=y] || EISA [=n] || TC)
+
+PERF_EVENTS: y => no
+    Direct dependencies:  HAVE_PERF_EVENTS [=y]
+    Reverse dependencies: X86 [=y] || KVM [=n] && VIRTUALIZATION [=y] && HAVE_KVM [=y] && HIGH_RES_TIMERS [=y] && NET [=y] && MULTIUSER [=y] && X86_LOCAL_APIC [=y]
+
+REGULATOR_MAX8907: n => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_MAX8907 [=n]
+
+NET_DSA_REALTEK_SMI: n => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=n]
+
+NET_DSA_MICROCHIP_KSZ9477_I2C: n => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA_MICROCHIP_KSZ9477 [=n] && I2C [=y]
+
+FB_TFT_ILI9341: n => yes
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+SLOB: n => yes
+    Direct dependencies:  <choice> && EXPERT [=n]
+

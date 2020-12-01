@@ -1,0 +1,15 @@
+RTC_DRV_PCF85363: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+AFE4404: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+NET_CLS_TCINDEX: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+LOGITECH_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_LOGITECH [=n]
+
+INTEL_BXTWC_PMIC_TMU: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && REGMAP [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_SOC_PMIC_BXTWC [=n]
+

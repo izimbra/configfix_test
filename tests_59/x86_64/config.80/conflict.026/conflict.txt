@@ -1,0 +1,20 @@
+VIDEO_MEM2MEM_DEINTERLACE: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=y] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_MEM2MEM_DRIVERS [=n] && VIDEO_DEV [=y] && VIDEO_V4L2 [=y] && HAS_DMA [=y]
+
+NET_VENDOR_AQUANTIA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n]
+
+ACPI_PROCESSOR: n => yes
+    Direct dependencies:  ACPI [=n] && (X86 [=y] || IA64 || ARM64)
+    Reverse dependencies: X86_INTEL_PSTATE [=y] && CPU_FREQ [=y] && X86 [=y] && ACPI [=n]
+
+CRYPTO_ECHAINIV: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: XFRM_ESP [=y] && NET [=y] && INET [=y]
+
+UIO_HV_GENERIC: n => yes
+    Direct dependencies:  UIO [=y] && HYPERV [=n]
+
+NET_DSA_AR9331: n => yes
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+

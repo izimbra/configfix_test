@@ -1,0 +1,28 @@
+HX711: n => mod
+    Direct dependencies:  IIO [=n] && GPIOLIB [=y]
+
+BAREUDP: n => mod
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=n] && (IPV6 [=n] || !IPV6 [=n])
+
+SPI_NXP_FLEXSPI: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && (ARCH_LAYERSCAPE || HAS_IOMEM [=y])
+
+MTD_CFI_I2: n => yes
+    Direct dependencies:  MTD [=n]
+
+VIDEO_TDA9840: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_MXB [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && PCI [=n] && VIDEO_V4L2 [=n] && I2C [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+KGDB_TESTS: n => yes
+    Direct dependencies:  KGDB [=n]
+
+MCP4922: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+BMC150_ACCEL: n => yes
+    Direct dependencies:  IIO [=n]
+
+MPL3115: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

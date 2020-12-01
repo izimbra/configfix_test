@@ -1,0 +1,25 @@
+NET_DSA_TAG_DSA: m => yes
+    Direct dependencies:  NET [=y] && NET_DSA [=m]
+    Reverse dependencies: NET_DSA_MV88E6XXX [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m]
+
+NLS: y => mod
+    Direct dependencies:  y
+    Reverse dependencies: ACPI [=y] && ARCH_SUPPORTS_ACPI [=y] || PCI_LABEL [=y] && PCI [=y] || SCSI_UFSHCD [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y] && SCSI_DMA [=y] || USB [=y] && USB_SUPPORT [=y] && USB_ARCH_HAS_HCD [=y] || USB_GADGET [=y] && USB_SUPPORT [=y] || JFS_FS [=m] && BLOCK [=y] || F2FS_FS [=y] && BLOCK [=y] || JOLIET [=n] && BLOCK [=y] && ISO9660_FS [=y] || UDF_FS [=m] && BLOCK [=y] || FAT_FS [=y] && BLOCK [=y] || EXFAT_FS [=y] && BLOCK [=y] || NTFS_FS [=y] && BLOCK [=y] || HFS_FS [=y] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || HFSPLUS_FS [=m] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || BEFS_FS [=y] && MISC_FILESYSTEMS [=y] && BLOCK [=y] || VBOXSF_FS [=m] && MISC_FILESYSTEMS [=y] && X86 [=y] && VBOXGUEST [=y] || CIFS [=m] && NETWORK_FILESYSTEMS [=y] && INET [=y]
+
+PPTP: m => yes
+    Direct dependencies:  NETDEVICES [=y] && PPP [=m] && NET_IPGRE_DEMUX [=m]
+
+COMPACTION: y => no
+    Direct dependencies:  MMU [=y]
+    Reverse dependencies: TRANSPARENT_HUGEPAGE [=y] && HAVE_ARCH_TRANSPARENT_HUGEPAGE [=y]
+
+FB_TFT_ILI9320: n => yes
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+NF_REJECT_IPV6: y => no
+    Direct dependencies:  NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y]
+    Reverse dependencies: NFT_REJECT_IPV6 [=y] && NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && NF_TABLES [=y] && NF_TABLES_IPV6 [=y] || IP6_NF_TARGET_REJECT [=m] && NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && IP6_NF_IPTABLES [=m] && IP6_NF_FILTER [=m]
+
+NET_DSA_MICROCHIP_KSZ9477_I2C: m => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA_MICROCHIP_KSZ9477 [=m] && I2C [=y]
+

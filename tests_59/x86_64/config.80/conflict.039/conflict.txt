@@ -1,0 +1,26 @@
+IO_DELAY_UDELAY: n => no
+    Direct dependencies:  <choice>
+
+NET_TEAM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n]
+
+DAVICOM_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+VIDEO_TW9903: y => no
+    Direct dependencies:  MEDIA_SUPPORT [=y] && VIDEO_V4L2 [=y] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=y] && MEDIA_SUPPORT [=y] && MEDIA_USB_SUPPORT [=y] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_DEV [=y] && I2C [=y] && SND [=y] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
+X86_SPEEDSTEP_CENTRINO: n => yes
+    Direct dependencies:  CPU_FREQ [=y] && X86 [=y] && (X86_32 [=n] || X86_64 [=y] && ACPI_PROCESSOR [=n])
+
+CRYPTO_DEFLATE: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_DEFLATE [=n] && <choice> || XFRM_IPCOMP [=y] && NET [=y] && INET [=y] || UBIFS_FS [=y] && MISC_FILESYSTEMS [=y] && MTD_UBI [=y] && UBIFS_FS_ZLIB [=y] || PSTORE_DEFLATE_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=y]
+
+MICREL_KS8995MA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && SPI [=y]
+
+INTEL_TELEMETRY: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && X86_64 [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_PUNIT_IPC [=y]
+

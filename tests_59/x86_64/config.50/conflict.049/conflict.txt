@@ -1,0 +1,33 @@
+REGULATOR_MAX8907: n => no
+    Direct dependencies:  REGULATOR [=y] && MFD_MAX8907 [=n]
+
+DEBUG_LOCKING_API_SELFTESTS: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+
+INPUT_AD714X_SPI: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_AD714X [=n] && SPI [=n]
+
+W1: y => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: BATTERY_DS2780 [=n] && POWER_SUPPLY [=y] && HAS_IOMEM [=y] || BATTERY_DS2781 [=y] && POWER_SUPPLY [=y] && HAS_IOMEM [=y]
+
+DEV_APPLETALK: n => yes
+    Direct dependencies:  NET [=y] && ATALK [=n]
+
+INTEL_TELEMETRY: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && X86_64 [=y] && MFD_INTEL_PMC_BXT [=n] && INTEL_PUNIT_IPC [=n]
+
+DEBUG_SPINLOCK: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y]
+
+CRC_T10DIF: y => no
+    Direct dependencies:  y
+    Reverse dependencies: BLK_DEV_INTEGRITY_T10 [=y] && BLOCK [=y] && BLK_DEV_INTEGRITY [=y] || TARGET_CORE [=y] && BLOCK [=y] || SCSI_LPFC [=n] && SCSI_LOWLEVEL [=y] && PCI [=y] && SCSI [=y] && CPU_FREQ [=n] && SCSI_FC_ATTRS [=y] && (NVME_TARGET_FC [=y] || NVME_TARGET_FC [=y]=n) && (NVME_FC [=n] || NVME_FC [=n]=n) || SCSI_DEBUG [=y] && SCSI_LOWLEVEL [=y] && SCSI [=y]
+
+ACPI_BGRT: n => yes
+    Direct dependencies:  ACPI [=y] && EFI [=n] && (X86 [=y] || ARM64)
+
+MEDIA_ANALOG_TV_SUPPORT: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n]
+

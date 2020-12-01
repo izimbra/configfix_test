@@ -1,0 +1,28 @@
+W1_SLAVE_SMEM: n => yes
+    Direct dependencies:  W1 [=n]
+
+INTEL_TH_MSU: n => yes
+    Direct dependencies:  INTEL_TH [=n]
+
+NET_VENDOR_3COM: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && (ISA [=n] || EISA [=n] || PCI [=n] || PCMCIA [=n])
+
+INPUT_DA9055_ONKEY: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && MFD_DA9055 [=n]
+
+MDIO_BITBANG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && MDIO_DEVICE [=n] && MDIO_BUS [=n]
+    Reverse dependencies: FS_ENET_MDIO_FCC [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FS_ENET [=n] && CPM2 || AX88796 [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && (ARM || MIPS || SUPERH || ZORRO || COMPILE_TEST [=n]) || SH_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_RENESAS [=n] && (ARCH_RENESAS || SUPERH || COMPILE_TEST [=n]) || RAVB [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_RENESAS [=n] && (ARCH_RENESAS || COMPILE_TEST [=n])
+
+INET_ESP_OFFLOAD: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && INET_ESP [=n]
+
+REGULATOR_TPS6586X: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_TPS6586X [=n]
+
+FUTEX: y => no
+    Direct dependencies:  y
+
+CROS_EC_DEBUGFS: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n] && DEBUG_FS [=y]
+

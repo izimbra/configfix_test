@@ -1,0 +1,16 @@
+RTC_DRV_WM831X: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && MFD_WM831X [=n]
+
+TRUSTED_KEYS: n => yes
+    Direct dependencies:  KEYS [=n] && TCG_TPM [=n]
+
+MXM_WMI: n => mod
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI_WMI [=n]
+    Reverse dependencies: DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=y] && PCI [=n] && MMU [=y] && ACPI [=y] && X86 [=y]
+
+BATTERY_DA9052: n => mod
+    Direct dependencies:  POWER_SUPPLY [=y] && PMIC_DA9052 [=n]
+
+DLM: n => yes
+    Direct dependencies:  INET [=n] && SYSFS [=y] && CONFIGFS_FS [=m] && (IPV6 [=n] || IPV6 [=n]=n)
+

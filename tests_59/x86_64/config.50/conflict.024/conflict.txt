@@ -1,0 +1,15 @@
+CAIF_USB: n => yes
+    Direct dependencies:  NET [=y] && CAIF [=n]
+
+MODIFY_LDT_SYSCALL: y => no
+    Direct dependencies:  y
+
+RTC_DRV_RV3029C2: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && RTC_I2C_AND_SPI [=n]
+
+MTD_NAND_DISKONCHIP_PROBE_HIGH: n => yes
+    Direct dependencies:  MTD [=y] && MTD_RAW_NAND [=n] && MTD_NAND_DISKONCHIP_PROBE_ADVANCED [=n]
+
+EDD_OFF: n => yes
+    Direct dependencies:  EDD [=n]
+

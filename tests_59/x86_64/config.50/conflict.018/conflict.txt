@@ -1,0 +1,12 @@
+FB_TFT_RA8875: n => yes
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+TINYDRM_ILI9225: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && DRM [=n] && SPI [=n]
+
+SENSORS_LTC3815: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=n]
+
+PCMCIA_RAYCS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && WLAN [=n] && PCMCIA [=n]
+

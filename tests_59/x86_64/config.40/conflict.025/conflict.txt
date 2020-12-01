@@ -1,0 +1,17 @@
+RTC_DRV_PCAP: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && EZX_PCAP [=n]
+
+INFINIBAND: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && HAS_DMA [=y] && NET [=n] && INET [=n] && (m && MODULES [=y] || IPV6 [=n]!=m) && !ALPHA
+
+IIO_BUFFER_CB: n => mod
+    Direct dependencies:  IIO [=n] && IIO_BUFFER [=n]
+    Reverse dependencies: TOUCHSCREEN_ADC [=n] && !UML && INPUT [=y] && INPUT_TOUCHSCREEN [=n] && IIO [=n] || SND_SOC_STM32_DFSDM [=n] && SOUND [=n] && !UML && SND [=n] && (ARCH_STM32 || COMPILE_TEST [=n]) && SND_SOC [=n] && STM32_DFSDM_ADC [=n] || LMP91000 [=n] && IIO [=n] && I2C [=y]
+
+NFT_DUP_IPV6: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && IPV6 [=n] && NETFILTER [=n] && NF_TABLES [=n] && NF_TABLES_IPV6 [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n])
+
+POWER_SUPPLY: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ACPI_AC [=m] && ACPI [=y] || ACPI_BATTERY [=n] && ACPI [=y] || ACPI_SBS [=y] && ACPI [=y] && X86 [=y] || OLPC_XO1_SCI [=n] && X86_32 [=n] && OLPC [=n] && OLPC_XO1_PM [=n] && GPIO_CS5535 [=n]=y && INPUT [=y]=y || OLPC_XO15_SCI [=n] && X86_32 [=n] && OLPC [=n] && ACPI [=y] || AB8500_CORE [=n] && HAS_IOMEM [=y] && ABX500_CORE [=y] && MFD_DB8500_PRCMU [=n] || DRM_RADEON [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] || DRM_NOUVEAU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=n] && MMU [=y] || HID_BATTERY_STRENGTH [=y] && INPUT [=y] && HID [=y] || HID_ASUS [=n] && INPUT [=y] && HID [=y] && USB_HID [=n] && LEDS_CLASS [=y] && (ASUS_WMI [=n] || ASUS_WMI [=n]=n) || HID_LOGITECH_HIDPP [=n] && INPUT [=y] && HID [=y] && HID_LOGITECH [=n] || HID_SONY [=n] && INPUT [=y] && HID [=y] && USB_HID [=n] && NEW_LEDS [=y] && LEDS_CLASS [=y] || HID_STEAM [=m] && INPUT [=y] && HID [=y] || HID_WACOM [=n] && INPUT [=y] && HID [=y] && USB_HID [=n] || HID_WIIMOTE [=y] && INPUT [=y] && HID [=y] && LEDS_CLASS [=y] || USB_CONN_GPIO [=n] && USB_SUPPORT [=n] && GPIOLIB [=y] || APPLE_MFI_FASTCHARGE [=n] && USB_SUPPORT [=n] && USB [=n] || TYPEC_TCPM [=n] && USB_SUPPORT [=n] && TYPEC [=n] && USB [=n] || DELL_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && DMI [=y] && BACKLIGHT_CLASS_DEVICE [=n] && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=n] || RFKILL [=n]=n) && SERIO_I8042 [=n] && DELL_SMBIOS [=n]
+

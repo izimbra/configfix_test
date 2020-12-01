@@ -1,0 +1,20 @@
+IP_VS_OVF: m => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_VS [=m]
+
+INPUT_ADXL34X_I2C: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_ADXL34X [=m] && I2C [=y]
+
+MTD_QINFO_PROBE: y => no
+    Direct dependencies:  MTD [=y] && MTD_LPDDR [=y]
+    Reverse dependencies: MTD_LPDDR [=y] && MTD [=y]
+
+INET_ESP_OFFLOAD: m => yes
+    Direct dependencies:  NET [=y] && INET [=y] && INET_ESP [=m]
+
+LEDS_GPIO: y => mod
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_CLASS [=y] && (GPIOLIB [=y] || COMPILE_TEST [=y])
+    Reverse dependencies: PCENGINES_APU2 [=y] && X86 [=y] && X86_PLATFORM_DEVICES [=y] && INPUT [=y] && INPUT_KEYBOARD [=y] && GPIOLIB [=y] && LEDS_CLASS [=y]
+
+AD7746: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=y] && I2C [=y]
+

@@ -1,0 +1,18 @@
+RTC_DRV_MSM6242: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+
+IP_PNP_RARP: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && IP_PNP [=n]
+
+AD5770R: n => yes
+    Direct dependencies:  IIO [=y] && SPI_MASTER [=n]
+
+IP_SET_HASH_IPPORTIP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_SET [=n]
+
+VORTEX: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_3COM [=n] && (PCI [=y] || EISA [=n]) && HAS_IOPORT_MAP [=y]
+
+DEBUG_PINCTRL: n => yes
+    Direct dependencies:  PINCTRL [=y] && DEBUG_KERNEL [=n]
+

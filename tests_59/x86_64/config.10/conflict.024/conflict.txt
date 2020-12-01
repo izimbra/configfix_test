@@ -1,0 +1,15 @@
+PCMCIA: n => yes
+    Direct dependencies:  PCCARD [=n]
+
+SPI_XCOMM: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && I2C [=n]
+
+STK3310: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+
+INPUT_MMA8450: n => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=n] && I2C [=n]
+
+RTC_DRV_MAX6916: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+

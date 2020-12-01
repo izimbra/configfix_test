@@ -1,0 +1,16 @@
+NET_SCH_ETF => mod
+EXTCON_SM5502 => yes
+NVMEM_SYSFS => no
+BT_LE => yes
+SENSORS_W83773G => mod
+HW_RANDOM_VIA => mod
+NET => yes
+NET_SCHED => yes
+EXTCON => yes
+EEPROM_AT24 => yes
+BT => mod
+CRYPTO_CMAC => mod
+CRYPTO_DRBG_MENU => yes
+CRYPTO_ECDH => mod
+CRC16 => yes
+HW_RANDOM => yes

@@ -1,0 +1,10 @@
+MPLS => yes
+GPIO_KEMPLD => yes
+NET_CLS_FLOW => mod
+AFE4403 => yes
+LTC2497 => yes
+NET => yes
+MFD_KEMPLD => yes
+NET_SCHED => yes
+IIO_KFIFO_BUF => yes
+IIO => yes

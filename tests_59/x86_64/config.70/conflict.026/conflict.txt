@@ -1,0 +1,19 @@
+MB1232: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+LSI_ET1011C_PHY: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+VIDEO_SAA717X: m => yes
+    Direct dependencies:  MEDIA_SUPPORT [=m] && VIDEO_V4L2 [=m] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=m] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=y] && VIDEO_V4L2 [=m] && PCI [=n] && I2C [=y] && RC_CORE [=y]
+
+MTD_PCMCIA: n => mod
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && PCMCIA [=n] && MTD_COMPLEX_MAPPINGS [=y]
+
+SENSORS_MAX31790: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+VXLAN: n => mod
+    Direct dependencies:  NETDEVICES [=n] && NET_CORE [=n] && INET [=n]
+

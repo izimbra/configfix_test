@@ -1,0 +1,24 @@
+LOCK_EVENT_COUNTS: n => yes
+    Direct dependencies:  DEBUG_FS [=n]
+
+FB_TFT_ILI9320: n => mod
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+
+EXTCON_MAX77693: n => yes
+    Direct dependencies:  EXTCON [=n] && MFD_MAX77693 [=n] && INPUT [=y]
+
+RTC_DRV_R9701: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+AF_KCM: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+
+MP2629_ADC: n => yes
+    Direct dependencies:  IIO [=y] && MFD_MP2629 [=n]
+
+RTC_DRV_EM3027: n => mod
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+FB_TFT_PCD8544: n => mod
+    Direct dependencies:  STAGING [=n] && FB_TFT [=n]
+

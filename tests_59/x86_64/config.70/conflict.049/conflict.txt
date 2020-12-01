@@ -1,0 +1,31 @@
+SENSORS_EMC6W201: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+ISL29125: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+NET_IPIP: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+
+CRYPTO_USER_API_AEAD: n => mod
+    Direct dependencies:  CRYPTO [=y] && NET [=n]
+
+ADXL372_SPI: n => yes
+    Direct dependencies:  IIO [=m] && SPI [=y]
+
+INET_DIAG: n => mod
+    Direct dependencies:  NET [=n] && INET [=n]
+
+NET_DSA_VITESSE_VSC73XX_PLATFORM: n => mod
+    Direct dependencies:  NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n] && HAS_IOMEM [=y]
+
+KS8842: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_MICREL [=n] && HAS_IOMEM [=y] && DMA_ENGINE [=n]
+
+FAILOVER: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: NET_FAILOVER [=n] && NETDEVICES [=n]
+
+NET_CLS_TCINDEX: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+

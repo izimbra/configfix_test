@@ -1,0 +1,18 @@
+RTC_DRV_RX4581: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+JFFS2_FS_SECURITY: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=y] && JFFS2_FS_XATTR [=n]
+
+NETFILTER_XT_MATCH_STATE: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n] && NF_CONNTRACK [=n]
+
+AD7091R5: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+STK8312: n => mod
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+INET: n => yes
+    Direct dependencies:  NET [=n]
+

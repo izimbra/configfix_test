@@ -1,0 +1,17 @@
+CRYPTO_TWOFISH_X86_64: m => no
+    Direct dependencies:  CRYPTO [=y] && (X86 [=y] || UML_X86) && 64BIT [=y]
+    Reverse dependencies: CRYPTO_TWOFISH_X86_64_3WAY [=m] && CRYPTO [=y] && X86 [=y] && 64BIT [=y] || CRYPTO_TWOFISH_AVX_X86_64 [=m] && CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+
+NET_DSA_TAG_BRCM_PREPEND: n => mod
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: B53 [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+MTD_PHYSMAP_GPIO_ADDR: n => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && MTD_PHYSMAP [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y]) && MTD_COMPLEX_MAPPINGS [=y]
+
+EISA_VLB_PRIMING: n => yes
+    Direct dependencies:  X86 [=y] && EISA [=n]
+
+SUSPEND_FREEZER: y => no
+    Direct dependencies:  SUSPEND [=y]
+

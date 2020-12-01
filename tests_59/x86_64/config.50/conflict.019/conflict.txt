@@ -1,0 +1,12 @@
+CLS_U32_MARK: n => yes
+    Direct dependencies:  NET [=y] && NET_SCHED [=n] && NET_CLS_U32 [=n]
+
+INTEL_SMARTCONNECT: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y]
+
+PCMCIA_XIRC2PS: n => yes
+    Direct dependencies:  NETDEVICES [=y] && ETHERNET [=y] && NET_VENDOR_XIRCOM [=n] && PCMCIA [=n]
+
+DCDBAS: n => yes
+    Direct dependencies:  X86_PLATFORM_DEVICES [=n] && X86 [=y]
+

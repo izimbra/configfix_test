@@ -1,0 +1,15 @@
+FB_TFT_S6D1121: n => mod
+    Direct dependencies:  STAGING [=y] && FB_TFT [=n]
+
+CMA_SIZE_SEL_MAX: y => no
+    Direct dependencies:  <choice>
+
+VIDEO_MEM2MEM_DEINTERLACE: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && V4L_MEM2MEM_DRIVERS [=n] && VIDEO_DEV [=n] && VIDEO_V4L2 [=n] && HAS_DMA [=y]
+
+MS5637: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+HID_LENOVO: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n]
+

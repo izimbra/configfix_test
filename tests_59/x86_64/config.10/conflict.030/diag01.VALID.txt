@@ -1,0 +1,15 @@
+SENSORS_LM92 => yes
+RTC_DRV_DS2404 => yes
+VSOCKETS => yes
+REGULATOR_TPS65132 => yes
+CAN_HI311X => yes
+REGULATOR_ISL9305 => yes
+I2C => yes
+RTC_CLASS => yes
+NET => yes
+GPIOLIB_FASTPATH_LIMIT => 512
+REGULATOR => yes
+GPIOLIB => yes
+CAN => yes
+SPI => yes
+CAN_DEV => yes

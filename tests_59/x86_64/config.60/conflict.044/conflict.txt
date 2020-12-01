@@ -1,0 +1,29 @@
+AD7280: n => mod
+    Direct dependencies:  STAGING [=y] && IIO [=m] && SPI [=n]
+
+HID_ACRUX: n => mod
+    Direct dependencies:  INPUT [=n] && HID [=n]
+
+PNP_DEBUG_MESSAGES: n => yes
+    Direct dependencies:  PNP [=n]
+
+RMI4_F34: n => yes
+    Direct dependencies:  !UML && INPUT [=n] && RMI4_CORE [=n]
+
+BACKLIGHT_AS3711: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_AS3711 [=n]
+
+RC_DEVICES: n => yes
+    Direct dependencies:  RC_CORE [=n]
+
+MTD_JEDECPROBE: m => no
+    Direct dependencies:  MTD [=y]
+    Reverse dependencies: MTD_TS5500 [=m] && MTD [=y] && HAS_IOMEM [=y] && (TS5500 [=n] || COMPILE_TEST [=y])
+
+JOYSTICK_STINGER: n => mod
+    Direct dependencies:  !UML && INPUT [=n] && INPUT_JOYSTICK [=n]
+
+NET_DSA_TAG_RTL4_A: n => mod
+    Direct dependencies:  NET [=y] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=y] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+

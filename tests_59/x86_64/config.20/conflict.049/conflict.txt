@@ -1,0 +1,32 @@
+SPI_DW_DMA: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && SPI_DESIGNWARE [=n]
+
+NET_CLS_RSVP: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+ADT7316: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=n] && (GPIOLIB [=y] || COMPILE_TEST [=n])
+
+SPI_DEBUG: n => yes
+    Direct dependencies:  SPI [=n] && DEBUG_KERNEL [=y]
+
+CROS_EC_LIGHTBAR: n => yes
+    Direct dependencies:  CHROME_PLATFORMS [=n] && MFD_CROS_EC_DEV [=n]
+
+RTC_DRV_EM3027: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=y]
+
+NET_DSA_TAG_RTL4_A: n => yes
+    Direct dependencies:  NET [=n] && NET_DSA [=n]
+    Reverse dependencies: NET_DSA_REALTEK_SMI [=n] && NETDEVICES [=n] && HAVE_NET_DSA [=n] && NET_DSA [=n]
+
+MMA7455_I2C: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+
+MTD_RAM: n => yes
+    Direct dependencies:  MTD [=n]
+    Reverse dependencies: MTD_PLATRAM [=n] && MTD [=n] && HAS_IOMEM [=y]
+
+GENERIC_CPU: y => no
+    Direct dependencies:  <choice> && X86_64 [=y]
+

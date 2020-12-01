@@ -1,0 +1,21 @@
+NETFILTER_XT_TARGET_MASQUERADE: n => yes
+    Direct dependencies:  NET [=y] && INET [=y] && NETFILTER [=y] && NETFILTER_XTABLES [=y] && NF_NAT [=n]
+    Reverse dependencies: IP_NF_TARGET_MASQUERADE [=n] && NET [=y] && INET [=y] && NETFILTER [=y] && IP_NF_IPTABLES [=y] && IP_NF_NAT [=n] || IP6_NF_TARGET_MASQUERADE [=n] && NET [=y] && INET [=y] && IPV6 [=y] && NETFILTER [=y] && IP6_NF_IPTABLES [=y] && IP6_NF_NAT [=n]
+
+CRC7: y => no
+    Direct dependencies:  y
+    Reverse dependencies: WILC1000_SPI [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_MICROCHIP [=n] && CFG80211 [=n] && INET [=y] && SPI [=y] || WL1251 [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_TI [=n] && MAC80211 [=n] || WLCORE_SPI [=n] && NETDEVICES [=n] && WLAN [=n] && WLAN_VENDOR_TI [=n] && WLCORE [=n] && SPI_MASTER [=y] && OF [=y] || MMC_SPI [=y] && MMC [=y] && SPI_MASTER [=y]
+
+MDIO_BITBANG: n => yes
+    Direct dependencies:  NETDEVICES [=n] && MDIO_DEVICE [=n] && MDIO_BUS [=n]
+    Reverse dependencies: FS_ENET_MDIO_FCC [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_FREESCALE [=n] && FS_ENET [=n] && CPM2 || AX88796 [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_8390 [=n] && (ARM || MIPS || SUPERH || ZORRO || COMPILE_TEST [=y]) || SH_ETH [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_RENESAS [=n] && (ARCH_RENESAS || SUPERH || COMPILE_TEST [=y]) || RAVB [=n] && NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_RENESAS [=n] && (ARCH_RENESAS || COMPILE_TEST [=y])
+
+PINCTRL_DENVERTON: n => yes
+    Direct dependencies:  PINCTRL [=y] && (X86 [=y] || COMPILE_TEST [=y]) && ACPI [=n]
+
+HPET_TIMER: y => no
+    Direct dependencies:  y
+
+IP_VS_PROTO_ESP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_VS [=n]
+

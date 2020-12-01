@@ -1,0 +1,23 @@
+X86_P4_CLOCKMOD: n => yes
+    Direct dependencies:  CPU_FREQ [=n] && X86 [=y]
+
+TI_ADC108S102: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+MTD_PHYSMAP_COMPAT: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y] && MTD_PHYSMAP [=n]
+
+VIDEO_SAA7127: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_IVTV [=n] && MEDIA_SUPPORT [=n] && MEDIA_PCI_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_V4L2 [=n] && PCI [=y] && I2C [=y] && RC_CORE [=y]
+
+ADXL372_SPI: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+CPU_FREQ_GOV_POWERSAVE: n => yes
+    Direct dependencies:  CPU_FREQ [=n]
+    Reverse dependencies: CPU_FREQ_DEFAULT_GOV_POWERSAVE [=n] && <choice>
+
+BACKLIGHT_PCF50633: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=n] && MFD_PCF50633 [=n]
+

@@ -1,0 +1,14 @@
+INPUT_CMA3000_I2C: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_MISC [=y] && INPUT_CMA3000 [=m] && I2C [=y]
+
+RELAY: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ATH9K_COMMON_SPECTRAL [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_ATH [=y] && (ATH9K_DEBUGFS [=y] || ATH9K_HTC_DEBUGFS [=y]) || ATH10K_SPECTRAL [=y] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_ATH [=y] && ATH10K_DEBUGFS [=y] || DRM_I915 [=m] && HAS_IOMEM [=y] && DRM [=m] && X86 [=y] && PCI [=y] || BLK_DEV_IO_TRACE [=y] && TRACING_SUPPORT [=y] && FTRACE [=y] && SYSFS [=y] && BLOCK [=y]
+
+PPPOL2TP: m => yes
+    Direct dependencies:  NETDEVICES [=y] && L2TP [=m] && PPP [=m]
+
+BPF_SYSCALL: y => no
+    Direct dependencies:  y
+    Reverse dependencies: AF_KCM [=m] && NET [=y] && INET [=y]
+

@@ -1,0 +1,19 @@
+MTD_HYPERBUS: n => yes
+    Direct dependencies:  MTD [=n] && HAS_IOMEM [=y]
+
+IIO_KFIFO_BUF: n => yes
+    Direct dependencies:  IIO [=n] && IIO_BUFFER [=n]
+    Reverse dependencies: AD5933 [=n] && STAGING [=n] && IIO [=n] && I2C [=y] || IIO_TRIGGERED_BUFFER [=n] && IIO [=n] && IIO_BUFFER [=n] || SCA3000 [=n] && IIO [=n] && SPI [=n] || INA2XX_ADC [=n] && IIO [=n] && I2C [=y] && !SENSORS_INA2XX [=n] || TI_AM335X_ADC [=n] && IIO [=n] && MFD_TI_AM335X_TSCADC [=n] && HAS_DMA [=y] || IIO_SSP_SENSORS_COMMONS [=n] && IIO [=n] && IIO_SSP_SENSORHUB [=n] || IIO_SIMPLE_DUMMY_BUFFER [=n] && IIO [=n] && IIO_SIMPLE_DUMMY [=n] || MAX30100 [=n] && IIO [=n] && I2C [=y] || MAX30102 [=n] && IIO [=n] && I2C [=y] || IIO_ST_LSM6DSX [=n] && IIO [=n] && (I2C [=y] || SPI [=n] || I3C [=n]) || ACPI_ALS [=n] && IIO [=n] && ACPI [=n] || APDS9960 [=n] && IIO [=n] && I2C [=y] || ISL29501 [=n] && IIO [=n] && I2C [=y]
+
+PSTORE_LZO_COMPRESS: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=n] && PSTORE [=n]
+
+ASHMEM: n => yes
+    Direct dependencies:  STAGING [=n] && ANDROID [=n] && SHMEM [=y]
+
+WLAN_VENDOR_QUANTENNA: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n]
+
+GPIO_PALMAS: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_PALMAS [=n]
+

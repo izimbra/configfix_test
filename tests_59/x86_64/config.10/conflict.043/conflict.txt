@@ -1,0 +1,27 @@
+SENSORS_ADT7475: n => yes
+    Direct dependencies:  HWMON [=y] && I2C [=n]
+
+RTC_DRV_PCF8523: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && I2C [=n]
+
+NET_SCH_SFB: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+REGULATOR_AXP20X: n => yes
+    Direct dependencies:  REGULATOR [=n] && MFD_AXP20X [=n]
+
+NET_CLS_TCINDEX: n => yes
+    Direct dependencies:  NET [=n] && NET_SCHED [=n]
+
+MFD_RT5033: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && I2C [=n]
+
+GREYBUS_RAW: n => yes
+    Direct dependencies:  STAGING [=n] && GREYBUS [=n]
+
+OVERLAY_FS_METACOPY: n => yes
+    Direct dependencies:  OVERLAY_FS [=n]
+
+VCNL4035: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=n]
+

@@ -1,0 +1,21 @@
+IPV6_MROUTE_MULTIPLE_TABLES: n => yes
+    Direct dependencies:  NET [=y] && INET [=n] && IPV6 [=n] && IPV6_MROUTE [=n]
+
+IEEE802154_ADF7242: n => yes
+    Direct dependencies:  NETDEVICES [=y] && IEEE802154_DRIVERS [=m] && MAC802154 [=m] && SPI [=n]
+
+DEBUG_FS_DISALLOW_MOUNT: y => no
+    Direct dependencies:  <choice>
+
+MTD_DATAFLASH: n => mod
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && SPI_MASTER [=n]
+
+BH1750: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SENSORS_RM3100_I2C: n => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+IP_VS_MH: n => mod
+    Direct dependencies:  NET [=y] && NETFILTER [=n] && IP_VS [=n]
+

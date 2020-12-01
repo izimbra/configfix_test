@@ -1,0 +1,25 @@
+XFRM_SUB_POLICY: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && XFRM [=n]
+
+TI_DAC7612: n => yes
+    Direct dependencies:  IIO [=n] && SPI_MASTER [=n] && GPIOLIB [=n]
+
+ECRYPT_FS_MESSAGING: n => yes
+    Direct dependencies:  MISC_FILESYSTEMS [=n] && ECRYPT_FS [=n]
+
+IP_SET_HASH_IPMAC: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+ALTERA_STAPL: n => yes
+    Direct dependencies:  I2C [=n]
+    Reverse dependencies: MEDIA_ALTERA_CI [=n] && MEDIA_SUPPORT [=n] && PCI [=n] && MEDIA_PCI_SUPPORT [=n] && (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_CX23885 [=n] && DVB_CORE [=n]
+
+INFINIBAND_USER_ACCESS: n => yes
+    Direct dependencies:  INFINIBAND [=n] && MMU [=y]
+
+MCP320X: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+SPI_AXI_SPI_ENGINE: n => yes
+    Direct dependencies:  SPI [=n] && SPI_MASTER [=n] && HAS_IOMEM [=y]
+

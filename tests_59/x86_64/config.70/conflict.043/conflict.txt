@@ -1,0 +1,27 @@
+AM2315: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+SENSORS_LM80: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+SENSORS_LM63: m => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+CC_OPTIMIZE_FOR_SIZE: n => no
+    Direct dependencies:  <choice>
+
+NET_VENDOR_I825XX: n => yes
+    Direct dependencies:  NETDEVICES [=n] && ETHERNET [=n] && NET_VENDOR_INTEL [=n]
+
+IP_SET_HASH_MAC: n => mod
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+BT_HCIDTL1: n => mod
+    Direct dependencies:  NET [=n] && BT [=n] && PCMCIA [=n]
+
+IP_VS: n => mod
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && (NF_CONNTRACK [=n] || NF_CONNTRACK [=n]=n)
+
+MFD_INTEL_PMC_BXT: n => mod
+    Direct dependencies:  HAS_IOMEM [=y] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y]
+

@@ -1,0 +1,32 @@
+CRYPTO_POLY1305_X86_64: y => no
+    Direct dependencies:  CRYPTO [=y] && X86 [=y] && 64BIT [=y]
+    Reverse dependencies: WIREGUARD [=m] && NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=y] && (IPV6 [=y] || !IPV6 [=y]) && X86 [=y] && 64BIT [=y]
+
+CRYPTO_ZSTD: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_ZSTD [=n] && <choice> || UBIFS_FS [=y] && MISC_FILESYSTEMS [=y] && MTD_UBI [=y] && UBIFS_FS_ZSTD [=y] || PSTORE_ZSTD_COMPRESS [=y] && MISC_FILESYSTEMS [=y] && PSTORE [=y]
+
+QUOTA: y => no
+    Direct dependencies:  y
+    Reverse dependencies: OCFS2_FS [=y] && BLOCK [=y] && INET [=y] && SYSFS [=y] && CONFIGFS_FS [=y]
+
+NET_DSA_REALTEK_SMI: m => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m]
+
+SENSORS_IRPS5401: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+DEBUG_MUTEXES: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y]
+    Reverse dependencies: PROVE_LOCKING [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || LOCK_STAT [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_WW_MUTEX_SLOWPATH [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y] || DEBUG_LOCK_ALLOC [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+BCMA: y => no
+    Direct dependencies:  BCMA_POSSIBLE [=y]
+    Reverse dependencies: PCIE_IPROC_BCMA [=n] && PCI [=y] && ARM && (ARCH_BCM_IPROC || COMPILE_TEST [=y]) || B43 [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_BROADCOM [=y] && (BCMA_POSSIBLE [=y] || SSB_POSSIBLE [=y]) && MAC80211 [=m] && HAS_DMA [=y] && B43_BCMA [=n] || BRCMSMAC [=m] && NETDEVICES [=y] && WLAN [=y] && WLAN_VENDOR_BROADCOM [=y] && MAC80211 [=m] && BCMA_POSSIBLE [=y]
+
+RMI4_SPI: m => yes
+    Direct dependencies:  !UML && INPUT [=y] && RMI4_CORE [=m] && SPI [=y]
+
+JOYSTICK_GAMECON: n => mod
+    Direct dependencies:  !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && PARPORT [=n]
+

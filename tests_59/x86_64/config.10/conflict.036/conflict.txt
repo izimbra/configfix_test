@@ -1,0 +1,26 @@
+MPLS: n => yes
+    Direct dependencies:  NET [=n]
+    Reverse dependencies: OPENVSWITCH [=n] && NET [=n] && INET [=n] && (!NF_CONNTRACK [=n] || NF_CONNTRACK [=n] && (!NF_DEFRAG_IPV6 [=n] || NF_DEFRAG_IPV6 [=n]) && (!NF_NAT [=n] || NF_NAT [=n]) && (!NETFILTER_CONNCOUNT [=n] || NETFILTER_CONNCOUNT [=n]))
+
+TCG_TIS: n => yes
+    Direct dependencies:  TCG_TPM [=n] && (X86 [=y] || OF [=n])
+    Reverse dependencies: IMA [=n] && INTEGRITY [=n] && TCG_TPM [=n] && X86 [=y]
+
+ADIS16260: n => yes
+    Direct dependencies:  IIO [=n] && SPI [=n]
+
+WLAN_VENDOR_ADMTEK: n => yes
+    Direct dependencies:  NETDEVICES [=n] && WLAN [=n]
+
+LEDS_TRIGGER_TRANSIENT: n => yes
+    Direct dependencies:  NEW_LEDS [=y] && LEDS_TRIGGERS [=n]
+
+ACPI_TOSHIBA: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=y] && ACPI [=y] && ACPI_WMI [=n] && BACKLIGHT_CLASS_DEVICE [=n] && INPUT [=y] && (SERIO_I8042 [=n] || SERIO_I8042 [=n]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n) && (RFKILL [=n] || RFKILL [=n]=n) && IIO [=n]
+
+RTC_DRV_PCF2123: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && SPI_MASTER [=n]
+
+SENSORS_LM83: n => yes
+    Direct dependencies:  HWMON [=y] && I2C [=n]
+

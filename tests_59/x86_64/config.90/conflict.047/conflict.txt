@@ -1,0 +1,35 @@
+CRYPTO_CHACHA20: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_CHACHA20POLY1305 [=y] && CRYPTO [=y] || CRYPTO_ADIANTUM [=y] && CRYPTO [=y]
+
+SENSORS_MAX20730: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+CPU_SUP_AMD: y => no
+    Direct dependencies:  y
+    Reverse dependencies: CPU_SUP_HYGON [=y]
+
+CRYPTO_DH: y => mod
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: KEY_DH_OPERATIONS [=y] && KEYS [=y] || CRYPTO_DEV_QAT [=y] && CRYPTO [=y] && CRYPTO_HW [=y] || CRYPTO_DEV_HISI_HPRE [=m] && CRYPTO [=y] && CRYPTO_HW [=y] && PCI [=y] && PCI_MSI [=y] && (UACCE [=m] || UACCE [=m]=n) && (ARM64 || COMPILE_TEST [=y] && 64BIT [=y]) && ACPI [=y]
+
+RTC_DRV_DA9055: n => yes
+    Direct dependencies:  RTC_CLASS [=y] && MFD_DA9055 [=n]
+
+NET_DSA_TAG_SJA1105: m => no
+    Direct dependencies:  NET [=y] && NET_DSA [=m]
+    Reverse dependencies: NET_DSA_SJA1105 [=m] && NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=m] && SPI [=y]
+
+CHARGER_MAX77693: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MAX77693 [=m]
+
+HID_ACRUX_FF: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=y] && HID_ACRUX [=n]
+
+GREYBUS_BOOTROM: n => yes
+    Direct dependencies:  STAGING [=n] && GREYBUS [=y]
+
+CRYPTO_DRBG_MENU: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: CRYPTO_RNG_DEFAULT [=y] && CRYPTO [=y]
+

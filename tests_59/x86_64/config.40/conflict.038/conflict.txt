@@ -1,0 +1,25 @@
+CAN_DEV: n => mod
+    Direct dependencies:  NET [=n] && CAN [=n]
+
+IIO_CROS_EC_SENSORS_LID_ANGLE: n => yes
+    Direct dependencies:  IIO [=n] && IIO_CROS_EC_SENSORS_CORE [=n]
+
+NETFILTER_XT_TARGET_LOG: n => yes
+    Direct dependencies:  NET [=n] && INET [=n] && NETFILTER [=n] && NETFILTER_XTABLES [=n]
+
+TCP_MD5SIG: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+
+AXP288_FUEL_GAUGE: n => mod
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_AXP20X [=n] && IIO [=n]
+
+MEDIA_TUNER_IT913X: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9035 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=n] && DVB_USB_V2 [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+DP83867_PHY: n => yes
+    Direct dependencies:  NETDEVICES [=n] && PHYLIB [=n]
+
+LV0104CS: n => yes
+    Direct dependencies:  IIO [=n] && I2C [=y]
+

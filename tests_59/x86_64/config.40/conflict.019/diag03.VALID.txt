@@ -1,0 +1,15 @@
+DEFXX => yes
+MEDIA_TUNER_FC0011 => mod
+LSI_ET1011C_PHY => yes
+CPU_SUP_CENTAUR => no
+NETDEVICES => yes
+FDDI => yes
+EISA => yes
+NET => yes
+MEDIA_SUPPORT => yes
+MEDIA_SUPPORT_FILTER => yes
+MEDIA_SDR_SUPPORT => yes
+PHYLIB => yes
+VIDEO_DEV => yes
+MDIO_DEVICE => yes
+PROCESSOR_SELECT => yes

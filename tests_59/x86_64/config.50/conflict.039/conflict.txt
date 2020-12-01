@@ -1,0 +1,28 @@
+RTC_DRV_DS2404: n => yes
+    Direct dependencies:  RTC_CLASS [=n]
+
+PINCTRL_DA9062: n => yes
+    Direct dependencies:  PINCTRL [=y] && MFD_DA9062 [=n]
+
+ADIS16260: n => yes
+    Direct dependencies:  IIO [=y] && SPI [=n]
+
+MEDIA_TUNER_MSI001: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && SPI [=n] && VIDEO_V4L2 [=n]
+    Reverse dependencies: USB_MSI2500 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_SDR_SUPPORT [=n] && VIDEO_V4L2 [=n] && SPI [=n]
+
+HWMON: y => no
+    Direct dependencies:  HAS_IOMEM [=y]
+    Reverse dependencies: I8K [=n] || HABANA_AI [=n] && PCI [=y] && HAS_IOMEM [=y] || DRM_RADEON [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] || DRM_AMDGPU [=n] && HAS_IOMEM [=y] && DRM [=n] && PCI [=y] && MMU [=y] || EEEPC_LAPTOP [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n) && (ACPI_VIDEO [=y] || ACPI_VIDEO [=y]=n) && HOTPLUG_PCI [=y] && BACKLIGHT_CLASS_DEVICE [=y] || THINKPAD_ACPI [=n] && X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && ACPI_BATTERY [=n] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n) && (ACPI_VIDEO [=y] || ACPI_VIDEO [=y]=n) && BACKLIGHT_CLASS_DEVICE [=y] || CPU_HWMON [=n] && MIPS && MIPS_PLATFORM_DEVICES [=n] && MACH_LOONGSON64 || NTB_IDT [=y] && NTB [=y] && PCI [=y]
+
+VIDEO_TVP5150: n => yes
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_EM28XX_V4L2 [=n] && USB [=y] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && (MEDIA_CAMERA_SUPPORT [=n] || MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n]) && VIDEO_EM28XX [=n] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+GAMEPORT: y => yes
+    Direct dependencies:  !UML
+    Reverse dependencies: JOYSTICK_ANALOG [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_A3D [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_ADI [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] && ADI [=n]!=m || JOYSTICK_COBRA [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GF2K [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GRIP [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GRIP_MP [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_GUILLEMOT [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_INTERACT [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_SIDEWINDER [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_TMDC [=y] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y] || JOYSTICK_JOYDUMP [=n] && !UML && INPUT [=y] && INPUT_JOYSTICK [=y]
+
+NET_DSA_SMSC_LAN9303_I2C: n => yes
+    Direct dependencies:  NETDEVICES [=y] && HAVE_NET_DSA [=y] && NET_DSA [=n] && I2C [=y]
+

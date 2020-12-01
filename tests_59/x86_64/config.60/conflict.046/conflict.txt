@@ -1,0 +1,33 @@
+TOSHIBA_BT_RFKILL: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=n] && (RFKILL [=n] || RFKILL [=n]=n)
+
+KALLSYMS_ALL: y => no
+    Direct dependencies:  DEBUG_KERNEL [=y] && KALLSYMS [=y]
+    Reverse dependencies: LATENCYTOP [=n] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] && PROC_FS [=y] || LOCKDEP [=y] && DEBUG_KERNEL [=y] && LOCK_DEBUGGING_SUPPORT [=y]
+
+BATMAN_ADV_DEBUGFS: n => yes
+    Direct dependencies:  NET [=y] && BATMAN_ADV [=n] && DEBUG_FS [=y]
+
+SENSORS_ACPI_POWER: n => yes
+    Direct dependencies:  HWMON [=y] && ACPI [=n]
+
+MTD_ONENAND_2X_PROGRAM: n => yes
+    Direct dependencies:  MTD [=y] && MTD_ONENAND [=n]
+
+DEBUG_FS: y => no
+    Direct dependencies:  y
+    Reverse dependencies: ZSMALLOC_STAT [=n] && ZSMALLOC [=y] || BCACHE_CLOSURES_DEBUG [=n] && MD [=n] && BCACHE [=n] || DVB_C8SECTPFE [=n] && MEDIA_SUPPORT [=n] && MEDIA_PLATFORM_SUPPORT [=n] && DVB_PLATFORM_DRIVERS [=n] && PINCTRL [=y] && DVB_CORE [=n] && I2C [=y] && (ARCH_STI || ARCH_MULTIPLATFORM || COMPILE_TEST [=y]) || DRM_I915_DEBUG [=n] && HAS_IOMEM [=y] && EXPERT [=y] && DRM_I915 [=n] || EDAC_DEBUG [=n] && EDAC [=m] || SUNRPC_DEBUG [=n] && NETWORK_FILESYSTEMS [=n] && SUNRPC [=n] && SYSCTL [=y] || PAGE_OWNER [=y] && DEBUG_KERNEL [=y] && STACKTRACE_SUPPORT [=y] || DEBUG_KMEMLEAK [=y] && DEBUG_KERNEL [=y] && HAVE_DEBUG_KMEMLEAK [=y] || BLK_DEV_IO_TRACE [=n] && TRACING_SUPPORT [=y] && FTRACE [=y] && SYSFS [=y] && BLOCK [=n] || PUNIT_ATOM_DEBUG [=y] && PCI [=y] || NOTIFIER_ERROR_INJECTION [=n] && DEBUG_KERNEL [=y] || FAIL_FUTEX [=y] && FAULT_INJECTION [=y] && FUTEX [=y] || KCOV [=n] && ARCH_HAS_KCOV [=n] && (CC_HAS_SANCOV_TRACE_PC [=y] || GCC_PLUGINS [=n])
+
+MXC4005: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+
+CRYPTO_DEFLATE: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: ZSWAP_COMPRESSOR_DEFAULT_DEFLATE [=n] && <choice> || XFRM_IPCOMP [=n] && NET [=y] && INET [=n] || UBIFS_FS [=y] && MISC_FILESYSTEMS [=y] && MTD_UBI [=y] && UBIFS_FS_ZLIB [=y] || PSTORE_DEFLATE_COMPRESS [=n] && MISC_FILESYSTEMS [=y] && PSTORE [=n]
+
+ACPI_I2C_OPREGION: n => yes
+    Direct dependencies:  I2C [=y]=y && ACPI [=n]
+
+W1_MASTER_DS1WM: n => yes
+    Direct dependencies:  W1 [=m]
+

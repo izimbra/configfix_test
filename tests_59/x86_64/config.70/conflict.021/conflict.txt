@@ -1,0 +1,15 @@
+GREYBUS_BOOTROM: n => yes
+    Direct dependencies:  STAGING [=n] && GREYBUS [=n]
+
+SENSORS_MAX1111: n => yes
+    Direct dependencies:  HWMON [=m] && SPI_MASTER [=y]
+
+PPTP: n => mod
+    Direct dependencies:  NETDEVICES [=n] && PPP [=n] && NET_IPGRE_DEMUX [=n]
+
+AD5933: n => yes
+    Direct dependencies:  STAGING [=n] && IIO [=m] && I2C [=y]
+
+PSTORE_LZO_COMPRESS: n => mod
+    Direct dependencies:  MISC_FILESYSTEMS [=n] && PSTORE [=n]
+

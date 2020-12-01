@@ -1,0 +1,21 @@
+INFINIBAND_ON_DEMAND_PAGING: n => yes
+    Direct dependencies:  INFINIBAND [=n] && INFINIBAND_USER_MEM [=n]
+
+IP_SET_HASH_IP: n => yes
+    Direct dependencies:  NET [=n] && NETFILTER [=n] && IP_SET [=n]
+
+TCP_MD5SIG: n => yes
+    Direct dependencies:  NET [=n] && INET [=n]
+
+PACKET: n => yes
+    Direct dependencies:  NET [=n]
+
+BATTERY_DS2780: n => yes
+    Direct dependencies:  POWER_SUPPLY [=n] && HAS_IOMEM [=y]
+
+COMPAT_VDSO: n => yes
+    Direct dependencies:  COMPAT_32 [=n]
+
+RTC_DRV_M48T35: n => yes
+    Direct dependencies:  RTC_CLASS [=n] && HAS_IOMEM [=y]
+

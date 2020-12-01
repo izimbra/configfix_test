@@ -1,0 +1,16 @@
+PPPOL2TP: m => yes
+    Direct dependencies:  NETDEVICES [=y] && L2TP [=m] && PPP [=m]
+
+REGULATOR_RT5033: m => yes
+    Direct dependencies:  REGULATOR [=y] && MFD_RT5033 [=m]
+
+IP_SET_HASH_IP: n => yes
+    Direct dependencies:  NET [=y] && NETFILTER [=y] && IP_SET [=m]
+
+CRYPTO_LIB_BLAKE2S: m => no
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_BLAKE2S [=m] || !CRYPTO_ARCH_HAVE_LIB_BLAKE2S [=m])
+    Reverse dependencies: WIREGUARD [=m] && NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=y] && (IPV6 [=y] || !IPV6 [=y])
+
+SUSPEND_FREEZER: y => no
+    Direct dependencies:  SUSPEND [=y]
+

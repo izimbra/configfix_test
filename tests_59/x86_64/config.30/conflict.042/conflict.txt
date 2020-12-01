@@ -1,0 +1,29 @@
+SENSORS_LM92: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+ASUS_LAPTOP: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && BACKLIGHT_CLASS_DEVICE [=n] && INPUT [=y] && (RFKILL [=n] || RFKILL [=n]=n) && (ACPI_VIDEO [=n] || ACPI_VIDEO [=n]=n)
+
+REGULATOR_PV88090: n => mod
+    Direct dependencies:  REGULATOR [=n] && I2C [=y]
+
+MEDIA_TUNER_MSI001: n => yes
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=n] || MEDIA_DIGITAL_TV_SUPPORT [=n] || MEDIA_RADIO_SUPPORT [=n] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=n] && SPI [=n] && VIDEO_V4L2 [=n]
+    Reverse dependencies: USB_MSI2500 [=n] && USB [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_SDR_SUPPORT [=n] && VIDEO_V4L2 [=n] && SPI [=n]
+
+HID_TOPSEED: n => yes
+    Direct dependencies:  INPUT [=y] && HID [=n]
+
+GPIO_MADERA: n => yes
+    Direct dependencies:  GPIOLIB [=y] && PINCTRL_MADERA [=n]
+
+VSOCKETS_LOOPBACK: n => yes
+    Direct dependencies:  NET [=n] && VSOCKETS [=n]
+
+DEBUG_RT_MUTEXES: n => yes
+    Direct dependencies:  DEBUG_KERNEL [=n] && RT_MUTEXES [=y]
+    Reverse dependencies: PROVE_LOCKING [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || LOCK_STAT [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y] || DEBUG_LOCK_ALLOC [=n] && DEBUG_KERNEL [=n] && LOCK_DEBUGGING_SUPPORT [=y] && RT_MUTEXES [=y]
+
+SENSORS_AMD_ENERGY: m => yes
+    Direct dependencies:  HWMON [=m] && X86 [=y]
+

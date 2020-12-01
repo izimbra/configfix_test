@@ -1,0 +1,20 @@
+VIDEO_TW9903: n => mod
+    Direct dependencies:  MEDIA_SUPPORT [=n] && VIDEO_V4L2 [=n] && I2C [=y]
+    Reverse dependencies: VIDEO_GO7007 [=n] && MEDIA_SUPPORT [=n] && MEDIA_USB_SUPPORT [=n] && MEDIA_ANALOG_TV_SUPPORT [=n] && VIDEO_DEV [=n] && I2C [=y] && SND [=n] && USB [=y] && MEDIA_SUBDRV_AUTOSELECT [=n]
+
+MTD_PHYSMAP_GPIO_ADDR: n => yes
+    Direct dependencies:  MTD [=y] && HAS_IOMEM [=y] && MTD_PHYSMAP [=n] && (GPIOLIB [=y] || COMPILE_TEST [=y]) && MTD_COMPLEX_MAPPINGS [=y]
+
+DRAGONRISE_FF: n => yes
+    Direct dependencies:  INPUT [=n] && HID [=n] && HID_DRAGONRISE [=n]
+
+AD5449: n => mod
+    Direct dependencies:  IIO [=m] && SPI_MASTER [=n]
+
+CRYPTO_LIB_CURVE25519: m => yes
+    Direct dependencies:  CRYPTO [=y] && (CRYPTO_ARCH_HAVE_LIB_CURVE25519 [=m] || !CRYPTO_ARCH_HAVE_LIB_CURVE25519 [=m])
+    Reverse dependencies: WIREGUARD [=n] && NETDEVICES [=y] && NET_CORE [=y] && NET [=y] && INET [=n] && (IPV6 [=n] || !IPV6 [=n])
+
+SERIO_ALTERA_PS2: n => yes
+    Direct dependencies:  !UML && SERIO [=n] && HAS_IOMEM [=y]
+

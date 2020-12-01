@@ -1,0 +1,13 @@
+ACER_WIRELESS: n => yes
+    Direct dependencies:  X86 [=y] && X86_PLATFORM_DEVICES [=n] && ACPI [=y] && INPUT [=y]
+
+SENSORS_MAX31730: n => yes
+    Direct dependencies:  HWMON [=m] && I2C [=y]
+
+GOOGLE_COREBOOT_TABLE: n => mod
+    Direct dependencies:  GOOGLE_FIRMWARE [=n] && (ACPI [=y] || OF [=y])
+    Reverse dependencies: GOOGLE_COREBOOT_TABLE_ACPI [=n] && GOOGLE_FIRMWARE [=n] || GOOGLE_COREBOOT_TABLE_OF [=n] && GOOGLE_FIRMWARE [=n]
+
+VL6180: m => yes
+    Direct dependencies:  IIO [=m] && I2C [=y]
+

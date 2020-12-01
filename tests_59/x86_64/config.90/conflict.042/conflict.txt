@@ -1,0 +1,29 @@
+BACKLIGHT_AAT2870: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && BACKLIGHT_CLASS_DEVICE [=y] && MFD_AAT2870_CORE [=n]
+
+CHARGER_MAX77693: m => yes
+    Direct dependencies:  POWER_SUPPLY [=y] && MFD_MAX77693 [=m]
+
+SENSORS_ISL68137: n => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+INTEL_SOC_PMIC_BXTWC: n => yes
+    Direct dependencies:  HAS_IOMEM [=y] && MFD_INTEL_PMC_BXT [=n]
+
+SENSORS_IR35221: m => yes
+    Direct dependencies:  HWMON [=y] && PMBUS [=m]
+
+GPIO_WM8994: n => yes
+    Direct dependencies:  GPIOLIB [=y] && MFD_WM8994 [=m]
+
+UNIX_DIAG: m => yes
+    Direct dependencies:  NET [=y] && UNIX [=m]
+
+CRYPTO_BLAKE2B: y => no
+    Direct dependencies:  CRYPTO [=y]
+    Reverse dependencies: BTRFS_FS [=m] && BLOCK [=y]
+
+MEDIA_TUNER_IT913X: m => no
+    Direct dependencies:  (MEDIA_ANALOG_TV_SUPPORT [=y] || MEDIA_DIGITAL_TV_SUPPORT [=y] || MEDIA_RADIO_SUPPORT [=y] || MEDIA_SDR_SUPPORT [=n]) && MEDIA_SUPPORT [=m] && I2C [=y]
+    Reverse dependencies: DVB_USB_AF9035 [=m] && USB [=y] && MEDIA_SUPPORT [=m] && MEDIA_USB_SUPPORT [=y] && I2C [=y] && MEDIA_DIGITAL_TV_SUPPORT [=y] && DVB_USB_V2 [=m] && MEDIA_SUBDRV_AUTOSELECT [=y]
+
